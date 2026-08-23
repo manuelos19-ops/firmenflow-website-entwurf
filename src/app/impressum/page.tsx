@@ -1,59 +1,101 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { LegalDraftNotice } from "@/components/legal/LegalDraftNotice";
+import { Container } from "@/components/ui/Container";
+import { legalContent } from "@/content/legal";
 
 export const metadata: Metadata = {
-  title: 'Impressum',
-  description: 'Impressum von Firmenflow – Manuel Landeck, Webdesign aus Wesel.',
-  robots: { index: true, follow: true },
+  title: "Impressum",
+  description: "Impressum von Firmenflow – Manuel Landeck, Webdesign aus Wesel.",
 };
 
-export default function Impressum() {
+export default function ImpressumPage() {
   return (
-    <main className="min-h-screen pt-32 pb-20">
-      <div className="max-w-3xl mx-auto px-6">
-        <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors mb-8 inline-block">← Zurück</Link>
-        
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Impressum</h1>
-        
-        <div className="prose prose-lg max-w-none text-muted [&_h2]:text-foreground [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_p]:leading-relaxed">
-          <h2>Angaben gemäß § 5 TMG</h2>
-          <p>
-            Manuel Landeck<br />
-            Firmenflow – Webdesign<br />
-            [Straße und Hausnummer]<br />
-            [PLZ] Wesel
-          </p>
+    <main id="main" className="pt-36 sm:pt-44 pb-28">
+      <Container className="max-w-3xl space-y-8">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-muted)] hover:text-[var(--color-plum)] transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Zurück zur Startseite</span>
+        </Link>
 
-          <h2>Kontakt</h2>
-          <p>
-            E-Mail: mail@firmenflow.de<br />
-            [Telefonnummer]
-          </p>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[var(--color-ink)]">
+          Impressum
+        </h1>
 
-          <h2>Umsatzsteuer-ID</h2>
-          <p>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-            [USt-IdNr. eintragen]
-          </p>
+        <LegalDraftNotice />
 
-          <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-          <p>
-            Manuel Landeck<br />
-            [Straße und Hausnummer]<br />
-            [PLZ] Wesel
-          </p>
+        <div className="bg-white rounded-[2rem] p-8 sm:p-12 border border-[var(--color-line)] shadow-sm space-y-8 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+          <section className="space-y-3">
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">Angaben gemäß § 5 TMG</h2>
+            <p>
+              {legalContent.legalName}
+              <br />
+              Firmenflow – Webdesign
+              <br />
+              {legalContent.street}
+              <br />
+              {legalContent.postalCode} {legalContent.city}
+            </p>
+          </section>
 
-          <h2>Streitschlichtung</h2>
-          <p>
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> https://ec.europa.eu/consumers/odr/</a>.
-            Unsere E-Mail-Adresse finden Sie oben im Impressum.
-          </p>
-          <p>
-            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-          </p>
+          <section className="space-y-3">
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">Kontakt</h2>
+            <p>
+              E-Mail:{" "}
+              <a href={`mailto:${legalContent.email}`} className="text-[var(--color-plum)] hover:underline">
+                {legalContent.email}
+              </a>
+              {legalContent.phone && (
+                <>
+                  <br />
+                  Telefon: {legalContent.phone}
+                </>
+              )}
+            </p>
+          </section>
+
+          {legalContent.vatId && (
+            <section className="space-y-3">
+              <h2 className="text-xl font-bold text-[var(--color-ink)]">Umsatzsteuer-ID</h2>
+              <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+                <br />
+                {legalContent.vatId}
+              </p>
+            </section>
+          )}
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <p>
+              {legalContent.legalName}
+              <br />
+              {legalContent.street}
+              <br />
+              {legalContent.postalCode} {legalContent.city}
+            </p>
+          </section>
+
+          <section className="space-y-3 pt-6 border-t border-[var(--color-line)] text-xs text-[var(--color-muted)]">
+            <p>
+              EU-Streitschlichtung: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-[var(--color-ink)]"
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              . Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
+          </section>
         </div>
-      </div>
+      </Container>
     </main>
   );
 }

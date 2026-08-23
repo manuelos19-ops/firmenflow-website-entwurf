@@ -1,86 +1,122 @@
-'use client';
+import Image from "next/image";
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Container } from "@/components/ui/Container";
+import { Marquee } from "@/components/motion/Marquee";
+import { Reveal } from "@/components/motion/Reveal";
+import { portraitAssets } from "@/content/assets";
+import { homeContent } from "@/content/site";
 
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import Button from '../ui/Button';
-import MagneticElement from '../ui/MagneticElement';
-import { HERO } from '../../lib/constants';
-
-// Pfeil-SVG für CTA
-const ArrowRight = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion || !containerRef.current) return;
-
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    const lines = containerRef.current.querySelectorAll('.hero-line');
-    const buttons = containerRef.current.querySelectorAll('.hero-cta');
-    const region = containerRef.current.querySelector('.hero-region');
-
-    tl.fromTo(lines[0], { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1 })
-      .fromTo(lines[1], { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, '-=0.7')
-      .fromTo(lines[2], { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, '-=0.5')
-      .fromTo(lines[3], { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, '-=0.6')
-      .fromTo(buttons, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, stagger: 0.15 }, '-=0.4')
-      .fromTo(region, { opacity: 0 }, { opacity: 1, duration: 0.8 }, '-=0.3');
-  }, []);
+export function Hero({ whatsappUrl }: { whatsappUrl: string | null }) {
+  const { hero } = homeContent;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div ref={containerRef} className="max-w-6xl mx-auto px-6 py-24 md:py-32">
-        {/* Kernversprechen */}
-        <div className="space-y-2 md:space-y-3">
-          <div className="overflow-hidden">
-            <h1 className="hero-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-              {HERO.line1}
-            </h1>
-          </div>
-          <div className="overflow-hidden">
-            <p className="hero-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-              {HERO.line2}
-            </p>
-          </div>
-          <div className="overflow-hidden pt-4">
-            <p className="hero-line text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic text-primary">
-              {HERO.line3}
-            </p>
-          </div>
-          <div className="overflow-hidden">
-            <p className="hero-line text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif italic text-primary">
-              {HERO.line4}
-            </p>
-          </div>
-        </div>
+    <section id="home" className="pt-32 sm:pt-40 lg:pt-44 pb-12 overflow-hidden">
+      <Container className="space-y-16 sm:space-y-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Text Content */}
+          <div className="lg:col-span-7 space-y-8">
+            <Reveal delay={0}>
+              <p className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs sm:text-sm font-semibold uppercase tracking-widest text-[var(--color-coral)]">
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+                {hero.eyebrow}
+              </p>
+            </Reveal>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-12">
-          <MagneticElement strength={0.15}>
-            <div className="hero-cta">
-              <Button href="#kontakt" variant="primary" size="lg" icon={<ArrowRight />}>
-                {HERO.ctaPrimary}
-              </Button>
+            <div className="space-y-3">
+              <Reveal delay={0.08}>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--color-ink)] leading-[1.1]">
+                  <span className="block">{hero.title[0]}</span>
+                  <span className="block text-[var(--color-plum)]">{hero.title[1]}</span>
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.16}>
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-editorial text-[var(--color-coral)] font-normal pt-2">
+                  {hero.accent}
+                </p>
+              </Reveal>
             </div>
-          </MagneticElement>
-          <div className="hero-cta">
-            <Button href="#leistungen" variant="secondary" size="lg">
-              {HERO.ctaSecondary}
-            </Button>
+
+            <Reveal delay={0.24}>
+              <p className="text-lg sm:text-xl text-[var(--color-muted)] leading-relaxed max-w-xl">
+                {hero.body}
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.32}>
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                {whatsappUrl && (
+                  <ButtonLink href={whatsappUrl} external variant="primary" size="lg">
+                    {hero.primaryCta}
+                  </ButtonLink>
+                )}
+                <ButtonLink href="#projektanfrage" variant="secondary" size="lg">
+                  {hero.secondaryCta}
+                </ButtonLink>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.36}>
+              <div className="flex items-center gap-6 pt-4 text-xs sm:text-sm font-medium text-[var(--color-muted)]">
+                <span>✓ Persönlich</span>
+                <span>✓ Direkt erreichbar</span>
+                <span>✓ Wesel & Niederrhein</span>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Hero Image */}
+          <div className="lg:col-span-5 relative">
+            <Reveal direction="image" delay={0.2}>
+              <div className="relative mx-auto max-w-md lg:max-w-none">
+                {/* Background decorative blob */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-[var(--color-plum)] to-[var(--color-coral)]/30 opacity-70 blur-2xl -z-10"
+                />
+
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl bg-[var(--color-plum)]">
+                  <Image
+                    src={portraitAssets.hero.src}
+                    alt={portraitAssets.hero.alt}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 42vw, 90vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-plum)]/40 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Badge on photo */}
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-[var(--color-line)] shadow-lg">
+                    <p className="text-sm font-bold text-[var(--color-ink)]">Direkt mit Manu</p>
+                    <p className="text-xs text-[var(--color-muted)]">Kein Agenturtheater · Webdesign für Wesel</p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
 
-        {/* Region */}
-        <p className="hero-region mt-16 text-sm text-muted tracking-widest uppercase">
-          {HERO.region}
-        </p>
-      </div>
+        {/* Marquee Ticker */}
+        <div className="pt-8">
+          <Marquee>
+            <span className="flex items-center gap-4">
+              <span>Websites</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+              <span>Relaunch</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+              <span>Google Business 360°</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+              <span>Wesel</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+              <span>Niederrhein</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+              <span>Direkter Draht</span>
+              <span className="text-[var(--color-coral)]">✦</span>
+            </span>
+          </Marquee>
+        </div>
+      </Container>
     </section>
   );
 }
