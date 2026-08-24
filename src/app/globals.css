@@ -238,7 +238,13 @@ img {
 }
 
 .marquee-track {
-  animation: marquee-scroll 25s linear infinite;
+  animation: marquee-scroll 10s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .marquee-track {
+    animation-duration: 15s;
+  }
 }
 
 .marquee-track:hover {

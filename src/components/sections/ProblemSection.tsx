@@ -17,16 +17,16 @@ export function ProblemSection() {
 
       if (isReduced) {
         gsap.set(overlayRef.current, { clipPath: "inset(0% 0% 0% 0%)" });
-        gsap.set(bodyRef.current, { autoAlpha: 1 });
+        gsap.set(bodyRef.current, { opacity: 1, y: 0 });
         return;
       }
 
+      // Smooth scroll-driven inking without dead space
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top top",
-          end: "+=150%",
-          pin: true,
+          start: "top 75%",
+          end: "bottom 65%",
           scrub: 1,
         },
       });
@@ -37,8 +37,8 @@ export function ProblemSection() {
         { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 1 }
       ).fromTo(
         bodyRef.current,
-        { autoAlpha: 0, y: 20 },
-        { autoAlpha: 1, y: 0, duration: 0.3 },
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.4 },
         "-=0.2"
       );
     },
@@ -48,16 +48,16 @@ export function ProblemSection() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center py-24 md:py-32 bg-[var(--color-paper)] overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-28 bg-[var(--color-paper)] overflow-hidden"
     >
       <Container className="flex flex-col items-center text-center max-w-5xl w-full">
-        <span className="text-sm font-semibold tracking-widest uppercase text-[var(--color-muted)] mb-8">
+        <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] mb-6 block">
           {homeContent.problem.eyebrow}
         </span>
 
         <h2
           ref={textRef}
-          className="relative text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[var(--color-muted)]/20 leading-[1.05] mb-12"
+          className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.08] mb-8"
         >
           {homeContent.problem.title}
           <span
@@ -71,7 +71,7 @@ export function ProblemSection() {
 
         <p
           ref={bodyRef}
-          className="text-lg md:text-xl text-[var(--color-muted)] max-w-2xl opacity-0"
+          className="text-base sm:text-lg md:text-xl text-[var(--color-muted)] max-w-2xl leading-relaxed"
         >
           {homeContent.problem.body}
         </p>
