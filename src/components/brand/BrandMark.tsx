@@ -19,7 +19,7 @@ export function BrandMark({ variant = "dark", className }: BrandMarkProps) {
     >
       <Image
         src={src}
-        width={752}
+        width={754}
         height={219}
         alt="Firmenflow – für deine Lokalpräsenz"
         priority
