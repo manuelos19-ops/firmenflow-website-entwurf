@@ -1,6 +1,49 @@
 @import "tailwindcss";
-@import "@fontsource-variable/instrument-sans";
 @import "@fontsource/instrument-serif/400-italic.css";
+
+/* Switzer Variable (Self-hosted) */
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/switzer/Switzer-Variable.woff2") format("woff2 supports variations"),
+       url("/fonts/switzer/Switzer-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/switzer/Switzer-VariableItalic.woff2") format("woff2 supports variations"),
+       url("/fonts/switzer/Switzer-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* Fallback static weights */
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/switzer/Switzer-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/switzer/Switzer-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/switzer/Switzer-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 :root {
   --color-paper: #fcfaf7;
@@ -11,7 +54,7 @@
   --color-coral-hover: #fa5d48;
   --color-muted: #746d76;
   --color-line: color-mix(in srgb, var(--color-plum) 16%, transparent);
-  --font-sans: "Instrument Sans Variable", system-ui, sans-serif;
+  --font-sans: "Switzer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --motion-lg: 760ms;
