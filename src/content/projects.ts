@@ -55,7 +55,7 @@ export const conceptProjects: readonly Project[] = [
     slug: "vincent-kaesekuchenbaeckerei",
     name: "Vincent – Café & Käsekuchenbäckerei",
     sector: "Café & Bäckerei",
-    region: "Nordrhein-Westfalen",
+    region: "Harz (Quedlinburg)",
     url: "https://kaesekuchenbaeckerei.vercel.app/",
     kind: "concept",
     badge: "Konzeptentwurf – noch nicht veröffentlicht",

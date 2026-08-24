@@ -91,7 +91,7 @@ export function SiteHeader() {
               size="default"
               className="text-xs sm:text-sm px-5 py-2.5 shadow-sm"
             >
-              Projekt anfragen
+              Lass uns sprechen
             </ButtonLink>
           </div>
 
@@ -169,7 +169,7 @@ export function SiteHeader() {
             className="w-full justify-center shadow-md shadow-[var(--color-coral)]/20"
             onClick={() => setIsOpen(false)}
           >
-            Projekt anfragen
+            Lass uns sprechen
           </ButtonLink>
           <p className="text-center text-xs text-[var(--color-muted)] font-medium">
             Direkt mit Manu · Wesel &amp; Niederrhein

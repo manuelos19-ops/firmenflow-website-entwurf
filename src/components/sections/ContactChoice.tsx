@@ -138,10 +138,10 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto">
           <div className="mb-6 text-center">
             <h3 className="text-2xl sm:text-3xl font-display text-white mb-2">
-              Projekt in 2 Minuten anfragen
+              Lass uns sprechen
             </h3>
             <p className="text-sm text-white/70">
-              Unverbindlich und geführt: Wähle deinen Projekttyp und deine Ziele.
+              Unverbindlich in 2 Minuten: Wähle deinen Projekttyp und deine Ziele.
             </p>
           </div>
 

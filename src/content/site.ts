@@ -5,7 +5,7 @@ export const homeContent = {
     accent: "Deine Website. Direkt mit Manu.",
     body: "Ich entwickle Websites für lokale Unternehmen, die gut aussehen, verständlich funktionieren und den direkten Weg zur Anfrage frei machen.",
     primaryCta: "WhatsApp an Manu",
-    secondaryCta: "Projekt in 2 Minuten anfragen",
+    secondaryCta: "Lass uns sprechen",
   },
   problem: {
     eyebrow: "Kommt dir bekannt vor?",
