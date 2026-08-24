@@ -1,6 +1,12 @@
 export const brandAssets = {
-  wordmark: "/brand/firmenflow-wordmark.svg",
-  mark: "/brand/firmenflow-mark.svg",
+  wordmark: "/brand/firmenflow-wordmark.png",
+  wordmarkLight: "/brand/firmenflow-wordmark-light.png",
+  wordmarkSvg: "/brand/firmenflow-wordmark.svg",
+  wordmarkLightSvg: "/brand/firmenflow-wordmark-light.svg",
+  mark: "/brand/firmenflow-mark.png",
+  markLight: "/brand/firmenflow-mark-light.png",
+  markSvg: "/brand/firmenflow-mark.svg",
+  markLightSvg: "/brand/firmenflow-mark-light.svg",
 } as const;
 
 export const portraitAssets = {

@@ -12,9 +12,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand & Slogan */}
           <div className="md:col-span-2 space-y-4">
-            <div className="brightness-0 invert">
-              <BrandMark />
-            </div>
+            <BrandMark variant="light" />
             <p className="font-editorial text-lg text-white/80">
               {siteIdentity.slogan}
             </p>

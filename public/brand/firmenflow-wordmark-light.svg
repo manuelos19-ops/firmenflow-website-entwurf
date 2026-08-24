@@ -15,25 +15,27 @@
         letter-spacing: 0.22em;
       }
     </style>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E8DEEE" />
+    </linearGradient>
   </defs>
 
-  <!-- Main Wordmark Text: Firmenflow -->
+  <!-- Main Wordmark Text: Firmenflow in Light/Pearl -->
   <g>
-    <!-- Base text in Deep Plum -->
-    <text x="35" y="92" class="brand-title" fill="#3B0D4F">
+    <text x="35" y="92" class="brand-title" fill="url(#textGrad)">
       F<tspan fill="transparent">i</tspan>rmenflow
     </text>
     
-    <!-- Letter 'i' base stem without the default dot -->
     <!-- Custom stem for i -->
-    <path d="M96 55 H108 V92 H96 Z" fill="#3B0D4F" />
-    <path d="M93 55 H111 V58 H93 Z" fill="#3B0D4F" />
-    <path d="M93 89 H111 V92 H93 Z" fill="#3B0D4F" />
+    <path d="M96 55 H108 V92 H96 Z" fill="url(#textGrad)" />
+    <path d="M93 55 H111 V58 H93 Z" fill="url(#textGrad)" />
+    <path d="M93 89 H111 V92 H93 Z" fill="url(#textGrad)" />
 
     <!-- Signature Coral Dot for the letter 'i' -->
     <circle cx="102" cy="44" r="8.5" fill="#FF705D" />
 
-    <!-- Signature Neon Magenta Wave Swash: loops from dot, over irmen, under flow -->
+    <!-- Signature Neon Magenta Wave Swash -->
     <path 
       d="M 108 43 C 130 36, 175 32, 210 46 C 240 58, 245 98, 290 106 C 340 115, 430 115, 535 90" 
       stroke="#FF2ED1" 
@@ -45,7 +47,7 @@
   </g>
 
   <!-- Tagline: für deine Lokalpräsenz -->
-  <text x="300" y="138" class="brand-sub" fill="#3B0D4F" text-anchor="middle">
+  <text x="300" y="138" class="brand-sub" fill="#FFFFFF" opacity="0.95" text-anchor="middle">
     für deine Lokalpräsenz
   </text>
 </svg>

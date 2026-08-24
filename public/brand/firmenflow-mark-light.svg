@@ -14,8 +14,8 @@
   <!-- Leading dot on the left -->
   <circle cx="52" cy="118" r="9" fill="#FF705D" />
 
-  <!-- Double ff -->
-  <text x="80" y="138" class="mark-text" fill="#3B0D4F">
+  <!-- Double ff in pearl white -->
+  <text x="80" y="138" class="mark-text" fill="#FFFFFF">
     ff
   </text>
 
