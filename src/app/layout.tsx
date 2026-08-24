@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
+import { GrainOverlay } from "@/components/effects/GrainOverlay";
+import { CustomCursor } from "@/components/effects/CustomCursor";
+import { ScrollProgress } from "@/components/effects/ScrollProgress";
 import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Firmenflow – Webdesign direkt mit Manu | Wesel & Niederrhein",
     description:
-      "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu. Persönliches Webdesign und Relaunches für Betriebe rund um Wesel und den Niederrhein.",
+      "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu.",
     locale: "de_DE",
     type: "website",
   },
@@ -29,14 +33,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de">
       <body className="min-h-screen flex flex-col">
-        <a className="skip-link" href="#main">
-          Zum Inhalt springen
-        </a>
-        <SiteHeader />
-        <div className="flex-1">{children}</div>
-        <SiteFooter />
+        <SmoothScrollProvider>
+          <a className="skip-link" href="#main">
+            Zum Inhalt springen
+          </a>
+          <ScrollProgress />
+          <CustomCursor />
+          <GrainOverlay />
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </SmoothScrollProvider>
         <noscript>
-          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}.word-reveal{transform:none!important}`}</style>
         </noscript>
       </body>
     </html>

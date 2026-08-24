@@ -1,94 +1,91 @@
-import { Check } from "lucide-react";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/motion/Reveal";
+"use client";
+
+import { useRef } from "react";
 import { homeContent } from "@/content/site";
+import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
+import { Container } from "@/components/ui/Container";
+import { cn } from "@/lib/cn";
 
 export function ServiceOverview() {
-  const { services } = homeContent;
+  const containerRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(
+    () => {
+      const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (isReduced) {
+        gsap.set(cardsRef.current, { autoAlpha: 1, y: 0 });
+        return;
+      }
+
+      cardsRef.current.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { autoAlpha: 0, y: 50, rotation: index % 2 === 0 ? -10 : 10 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            rotation: index % 2 === 0 ? -2 : 1.5,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      });
+    },
+    { scope: containerRef }
+  );
 
   return (
-    <section id="leistungen" className="py-24 sm:py-32">
-      <Container className="space-y-16 sm:space-y-20">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Leistungen"
-            title="Was ich für deinen Betrieb"
-            accent="konkret umsetze."
-            body="Kein anonymer Baukasten und keine unnötigen Extras. Du bekommst genau das, was für deine lokale Auffindbarkeit und neue Kundenanfragen zählt."
-            align="center"
-          />
-        </Reveal>
+    <section ref={containerRef} className="py-24 md:py-32 bg-[var(--color-paper)] relative overflow-hidden">
+      <Container>
+        <div className="mb-16 md:mb-24">
+          <span className="text-sm font-semibold tracking-widest uppercase text-[var(--color-muted)]">
+            Leistungen
+          </span>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-          {/* Card 1: Neue Website (Plum Theme) */}
-          <Reveal direction="left" className="h-full">
-            <div className="h-full bg-[var(--color-plum)] text-white p-8 sm:p-12 rounded-[2.5rem] shadow-xl flex flex-col justify-between space-y-8 relative overflow-hidden">
-              <div className="space-y-6">
-                <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-[var(--color-coral)]">
-                  Neuer Auftritt
-                </span>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
-                  {services[0].title}
+        <div className="flex flex-col gap-12 md:gap-24 relative max-w-4xl mx-auto">
+          {homeContent.services.map((service, index) => {
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                key={service.slug}
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
+                className={cn(
+                  "relative bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[var(--color-line)]/20",
+                  "transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:rotate-0 cursor-default",
+                  "w-full md:w-[85%]",
+                  isEven ? "self-start md:-rotate-2" : "self-end md:rotate-[1.5deg]"
+                )}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-ink)] mb-4">
+                  {service.title}
                 </h3>
-                <p className="text-white/80 leading-relaxed">
-                  {services[0].body}
+                <p className="text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
+                  {service.body}
                 </p>
-
-                <ul className="space-y-3 pt-4 border-t border-white/15 text-sm sm:text-base text-white/90">
-                  {services[0].points.map((point) => (
-                    <li key={point} className="flex items-center gap-3">
-                      <span className="w-5 h-5 rounded-full bg-[var(--color-coral)] flex items-center justify-center text-white shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </span>
-                      <span>{point}</span>
-                    </li>
+                <div className="flex flex-wrap gap-2">
+                  {service.points.map((point) => (
+                    <span
+                      key={point}
+                      className="inline-flex items-center rounded-full bg-[var(--color-paper)] px-4 py-1.5 text-sm font-medium text-[var(--color-ink)] border border-[var(--color-line)]/50"
+                    >
+                      {point}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
-
-              <div className="pt-4">
-                <ButtonLink href="/#projektanfrage" variant="primary" size="default">
-                  Neue Website anfragen
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Card 2: Relaunch (Light Theme) */}
-          <Reveal direction="right" className="h-full">
-            <div className="h-full bg-white p-8 sm:p-12 rounded-[2.5rem] border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-8">
-              <div className="space-y-6">
-                <span className="inline-block px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 text-xs font-semibold uppercase tracking-wider text-[var(--color-plum)]">
-                  Modernisierung
-                </span>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[var(--color-ink)] leading-tight">
-                  {services[1].title}
-                </h3>
-                <p className="text-[var(--color-muted)] leading-relaxed">
-                  {services[1].body}
-                </p>
-
-                <ul className="space-y-3 pt-4 border-t border-[var(--color-line)] text-sm sm:text-base text-[var(--color-ink)]">
-                  {services[1].points.map((point) => (
-                    <li key={point} className="flex items-center gap-3">
-                      <span className="w-5 h-5 rounded-full bg-[var(--color-plum)]/10 flex items-center justify-center text-[var(--color-plum)] shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pt-4">
-                <ButtonLink href="/#projektanfrage" variant="secondary" size="default">
-                  Relaunch anfragen
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
+            );
+          })}
         </div>
       </Container>
     </section>

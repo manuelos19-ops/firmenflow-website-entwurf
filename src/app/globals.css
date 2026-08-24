@@ -39,8 +39,20 @@
 }
 
 html {
-  scroll-behavior: smooth;
   background: var(--color-paper);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 body {
@@ -49,6 +61,16 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  cursor: default;
+}
+
+@media (pointer: fine) and (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"] {
+    cursor: none;
+  }
 }
 
 a {
@@ -87,6 +109,7 @@ img {
   text-wrap: balance;
 }
 
+/* Skip link */
 .skip-link {
   position: fixed;
   left: 1rem;
@@ -104,10 +127,57 @@ img {
   transform: translateY(0);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* Scroll progress bar (CSS scroll-driven animation) */
+@supports (animation-timeline: scroll()) {
+  @keyframes scroll-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
   }
+
+  .scroll-progress {
+    animation: scroll-progress linear both;
+    animation-timeline: scroll();
+  }
+}
+
+/* Marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Rotating badge */
+@keyframes rotate-badge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating-badge {
+  animation: rotate-badge 12s linear infinite;
+}
+
+/* Wave divider */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Word reveal SSR fallback */
+.word-reveal {
+  will-change: transform;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -115,5 +185,25 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+  }
+
+  .rotating-badge {
+    animation: none !important;
+  }
+
+  .scroll-progress {
+    transform: scaleX(1) !important;
+    animation: none !important;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+  a, button, [role="button"] {
+    cursor: auto !important;
   }
 }
