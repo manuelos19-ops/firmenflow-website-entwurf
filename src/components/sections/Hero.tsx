@@ -5,21 +5,22 @@ import Image from "next/image";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { MessageCircle, Sparkles, MapPin } from "lucide-react";
+import { Sparkles, MapPin } from "lucide-react";
 
 interface HeroProps {
   whatsappUrl: string | null;
 }
 
 const WORDS = [
-  { text: "Mehr", line: 1, colorClass: "text-[var(--color-ink)]", morphColor: "text-[var(--color-ink)]" },
-  { text: "Lokalpräsenz.", line: 1, colorClass: "text-[var(--color-ink)]", morphColor: "text-[var(--color-ink)]" },
-  { text: "Weniger", line: 2, colorClass: "text-[var(--color-plum)]", morphColor: "text-[var(--color-plum)]" },
-  { text: "Agenturtheater.", line: 2, colorClass: "text-[var(--color-plum)]", morphColor: "text-[var(--color-plum)]" },
+  { text: "Mehr", line: 1 },
+  { text: "Lokalpräsenz.", line: 1 },
+  { text: "Weniger", line: 2 },
+  { text: "Agenturtheater.", line: 2 },
 ];
 
 export function Hero({ whatsappUrl }: HeroProps) {
@@ -59,7 +60,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
         });
         setTimeout(typeNextChar, 40);
       } else {
-        // Current word finished typing -> trigger morph
         const finishedWordIdx = currentWord;
         setTimeout(() => {
           setMorphedWords((prev) => {
@@ -68,7 +68,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
             return next;
           });
 
-          // Move to next word after a short pause
           currentWord++;
           currentChar = 0;
           setActiveWordIndex(currentWord);
@@ -140,7 +139,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-[85vh] flex flex-col justify-between pt-28 pb-6 lg:pt-36 lg:pb-10 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden"
+      className="relative min-h-[85vh] flex flex-col justify-between pt-28 pb-4 lg:pt-36 lg:pb-8 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden"
     >
       <Container className="flex-grow flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 my-auto">
         
@@ -157,7 +156,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.06] tracking-tight mb-5 select-none">
             {/* Line 1: Mehr Lokalpräsenz. */}
             <span className="block mb-1 sm:mb-2">
-              {/* Word 0: Mehr */}
               <span 
                 className={cn(
                   "inline-block mr-2 sm:mr-3 transition-all duration-300",
@@ -166,13 +164,12 @@ export function Hero({ whatsappUrl }: HeroProps) {
                     : "font-editorial text-[var(--color-coral)] italic tracking-normal"
                 )}
               >
-                {typedWords[0] || (activeWordIndex === 0 ? "" : "")}
+                {typedWords[0]}
                 {activeWordIndex === 0 && !morphedWords[0] && (
                   <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-coral)] ml-0.5 animate-pulse align-middle" />
                 )}
               </span>
 
-              {/* Word 1: Lokalpräsenz. */}
               <span 
                 className={cn(
                   "inline-block transition-all duration-300",
@@ -188,9 +185,8 @@ export function Hero({ whatsappUrl }: HeroProps) {
               </span>
             </span>
 
-            {/* Line 2: Weniger Agenturtheater. (Pre-structured so mobile never breaks unexpectedly) */}
+            {/* Line 2: Weniger Agenturtheater. */}
             <span className="block">
-              {/* Word 2: Weniger */}
               <span 
                 className={cn(
                   "inline-block mr-2 sm:mr-3 transition-all duration-300",
@@ -205,7 +201,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 )}
               </span>
 
-              {/* Word 3: Agenturtheater. (Separate inline-block / block on very small screens to prevent mid-typing wrap) */}
               <span 
                 className={cn(
                   "inline-block transition-all duration-300",
@@ -239,12 +234,12 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 <ButtonLink 
                   href={whatsappUrl || "#"} 
                   external={Boolean(whatsappUrl)}
-                  variant="primary"
+                  variant="whatsapp"
                   size="lg"
-                  className="shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-6 py-3.5"
+                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-6 py-3.5"
                 >
-                  <MessageCircle className="w-5 h-5 mr-1" />
-                  {hero.primaryCta}
+                  <WhatsAppIcon className="w-5 h-5 text-white mr-1 shrink-0" />
+                  <span>{hero.primaryCta}</span>
                 </ButtonLink>
               </MagneticButton>
             </div>
@@ -311,23 +306,44 @@ export function Hero({ whatsappUrl }: HeroProps) {
         </div>
       </Container>
 
-      {/* Marquee Ticker at Bottom */}
-      <div className="mt-8 sm:mt-12 pt-4 pb-3 border-y border-[var(--color-line)] bg-white/50 backdrop-blur-sm overflow-hidden select-none">
-        <div className="marquee-track flex whitespace-nowrap gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-ink)]/75">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-8">
-              <span>Websites für lokale Unternehmen</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-              <span>100% Persönlich mit Manu</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]"></span>
-              <span>Wesel &amp; Niederrhein</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-              <span>Google Business 360°</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]"></span>
-              <span>Kein Agentur-Theater</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-            </div>
-          ))}
+      {/* 100% Mathematically Seamless Infinite Marquee */}
+      <div className="marquee-container mt-8 sm:mt-12 py-3.5 border-y border-[var(--color-line)] bg-white/50 backdrop-blur-sm overflow-hidden select-none w-full">
+        <div className="flex w-max">
+          {/* Track 1 */}
+          <div className="flex shrink-0 items-center gap-8 pr-8 animate-marquee text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-ink)]/75">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <span key={i} className="flex items-center gap-8">
+                <span>Websites für lokale Unternehmen</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+                <span>100% Persönlich mit Manu</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
+                <span>Wesel &amp; Niederrhein</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+                <span>Google Business 360°</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
+                <span>Kein Agentur-Theater</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+              </span>
+            ))}
+          </div>
+
+          {/* Track 2 (Exact Duplicate for 0-jump seamless infinite loop) */}
+          <div className="flex shrink-0 items-center gap-8 pr-8 animate-marquee text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-ink)]/75" aria-hidden="true">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <span key={i} className="flex items-center gap-8">
+                <span>Websites für lokale Unternehmen</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+                <span>100% Persönlich mit Manu</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
+                <span>Wesel &amp; Niederrhein</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+                <span>Google Business 360°</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
+                <span>Kein Agentur-Theater</span>
+                <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

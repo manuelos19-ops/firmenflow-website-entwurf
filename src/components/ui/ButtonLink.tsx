@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn";
 type ButtonLinkProps = {
   children: ReactNode;
   href?: string;
-  variant?: "primary" | "secondary" | "dark" | "ghost";
+  variant?: "primary" | "secondary" | "dark" | "ghost" | "whatsapp";
   size?: "default" | "lg";
   className?: string;
   external?: boolean;
@@ -30,7 +30,7 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   const baseStyles =
-    "group inline-flex items-center justify-center gap-2.5 font-medium tracking-tight rounded-full select-none transition-all duration-300 ease-out cursor-pointer";
+    "group inline-flex items-center justify-center gap-2.5 font-medium tracking-tight rounded-full select-none transition-all duration-300 ease-out cursor-pointer text-center";
 
   const variants = {
     primary:
@@ -39,11 +39,13 @@ export function ButtonLink({
       "bg-white text-[var(--color-ink)] hover:bg-[var(--color-paper)] border border-[var(--color-line)] active:scale-[0.98] shadow-sm hover:border-[var(--color-plum)]/30",
     dark: "bg-[var(--color-plum)] text-white hover:bg-[var(--color-plum-light)] active:scale-[0.98] shadow-md shadow-[var(--color-plum)]/20",
     ghost: "bg-transparent text-[var(--color-ink)] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
+    whatsapp:
+      "bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.98] shadow-md shadow-[#25D366]/25 hover:shadow-lg hover:shadow-[#25D366]/35 font-semibold",
   };
 
   const sizes = {
     default: "px-6 py-3.5 text-sm md:text-base",
-    lg: "px-8 py-4 text-base md:text-lg",
+    lg: "px-7 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base md:text-lg",
   };
 
   const classes = cn(baseStyles, variants[variant], sizes[size], disabled && "opacity-50 pointer-events-none", className);
@@ -51,7 +53,7 @@ export function ButtonLink({
   const arrow = showArrow ? (
     <span
       data-arrow
-      className="inline-flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+      className="inline-flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0"
     >
       <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
     </span>
@@ -61,14 +63,14 @@ export function ButtonLink({
     if (external) {
       return (
         <a href={href} target="_blank" rel="noreferrer" className={classes}>
-          <span>{children}</span>
+          <span className="inline-flex items-center gap-2">{children}</span>
           {arrow}
         </a>
       );
     }
     return (
       <Link href={href} className={classes}>
-        <span>{children}</span>
+        <span className="inline-flex items-center gap-2">{children}</span>
         {arrow}
       </Link>
     );
@@ -76,7 +78,7 @@ export function ButtonLink({
 
   return (
     <button type={type} disabled={disabled} onClick={onClick} className={classes} {...props}>
-      <span>{children}</span>
+      <span className="inline-flex items-center gap-2">{children}</span>
       {arrow}
     </button>
   );

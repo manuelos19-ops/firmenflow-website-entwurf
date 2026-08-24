@@ -8,8 +8,9 @@ import { homeContent } from "@/content/site";
 import { portraitAssets } from "@/content/assets";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
-import { MessageCircle, Mail, MapPin, Clock, Sparkles } from "lucide-react";
+import { MapPin, Clock, Sparkles } from "lucide-react";
 
 interface ContactChoiceProps {
   whatsappUrl: string | null;
@@ -81,8 +82,8 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           {/* WhatsApp Card */}
           <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-5">
-                <MessageCircle className="w-6 h-6" />
+              <div className="w-12 h-12 rounded-2xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center mb-5">
+                <WhatsAppIcon className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold font-sans text-white mb-2">Schnell via WhatsApp</h3>
               <p className="text-sm text-white/75 leading-relaxed mb-6">
@@ -95,10 +96,11 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                 <ButtonLink 
                   href={whatsappUrl} 
                   external={true}
-                  variant="primary"
-                  className="w-full justify-center bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/20"
+                  variant="whatsapp"
+                  className="w-full justify-center shadow-lg shadow-[#25D366]/25"
                 >
-                  WhatsApp öffnen
+                  <WhatsAppIcon className="w-5 h-5 text-white mr-1 shrink-0" />
+                  <span>WhatsApp öffnen</span>
                 </ButtonLink>
               </MagneticButton>
             ) : (

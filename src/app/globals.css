@@ -231,23 +231,24 @@ img {
   }
 }
 
-/* Marquee */
+/* Seamless Infinite Marquee */
 @keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
-.marquee-track {
-  animation: marquee-scroll 10s linear infinite;
+.animate-marquee {
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
 }
 
-@media (min-width: 768px) {
-  .marquee-track {
-    animation-duration: 15s;
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 14s;
   }
 }
 
-.marquee-track:hover {
+.marquee-container:hover .animate-marquee {
   animation-play-state: paused;
 }
 
