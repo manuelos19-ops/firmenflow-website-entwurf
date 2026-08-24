@@ -15,73 +15,71 @@ interface HeroProps {
   whatsappUrl: string | null;
 }
 
+const WORDS = [
+  { text: "Mehr", line: 1, colorClass: "text-[var(--color-ink)]", morphColor: "text-[var(--color-ink)]" },
+  { text: "Lokalpräsenz.", line: 1, colorClass: "text-[var(--color-ink)]", morphColor: "text-[var(--color-ink)]" },
+  { text: "Weniger", line: 2, colorClass: "text-[var(--color-plum)]", morphColor: "text-[var(--color-plum)]" },
+  { text: "Agenturtheater.", line: 2, colorClass: "text-[var(--color-plum)]", morphColor: "text-[var(--color-plum)]" },
+];
+
 export function Hero({ whatsappUrl }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { hero } = homeContent;
 
-  // Typographic typing & font-morphing state
-  const [line1Text, setLine1Text] = useState("");
-  const [line2Text, setLine2Text] = useState("");
-  const [line1Morphed, setLine1Morphed] = useState(false);
-  const [line2Morphed, setLine2Morphed] = useState(false);
-  const [isTypingDone, setIsTypingDone] = useState(false);
-
-  const fullLine1 = hero.title[0]; // "Mehr Lokalpräsenz."
-  const fullLine2 = hero.title[1]; // "Weniger Agenturtheater."
+  // Word-by-word typed text and morph state
+  const [typedWords, setTypedWords] = useState<string[]>(["", "", "", ""]);
+  const [morphedWords, setMorphedWords] = useState<boolean[]>([false, false, false, false]);
+  const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setLine1Text(fullLine1);
-      setLine2Text(fullLine2);
-      setLine1Morphed(true);
-      setLine2Morphed(true);
-      setIsTypingDone(true);
+      setTypedWords(WORDS.map((w) => w.text));
+      setMorphedWords([true, true, true, true]);
+      setActiveWordIndex(4);
       return;
     }
 
-    let l1Index = 0;
-    let l2Index = 0;
+    let currentWord = 0;
+    let currentChar = 0;
 
-    // Start typing line 1
-    const typeLine1 = () => {
-      const interval1 = setInterval(() => {
-        l1Index++;
-        setLine1Text(fullLine1.slice(0, l1Index));
+    const typeNextChar = () => {
+      if (currentWord >= WORDS.length) {
+        setActiveWordIndex(4);
+        return;
+      }
 
-        if (l1Index >= fullLine1.length) {
-          clearInterval(interval1);
-          // Morph line 1 to Atmosphere Grotesk after short pause
-          setTimeout(() => {
-            setLine1Morphed(true);
-            // Start line 2
-            setTimeout(typeLine2, 180);
-          }, 140);
-        }
-      }, 42);
+      const targetWord = WORDS[currentWord].text;
+
+      if (currentChar < targetWord.length) {
+        currentChar++;
+        setTypedWords((prev) => {
+          const next = [...prev];
+          next[currentWord] = targetWord.slice(0, currentChar);
+          return next;
+        });
+        setTimeout(typeNextChar, 40);
+      } else {
+        // Current word finished typing -> trigger morph
+        const finishedWordIdx = currentWord;
+        setTimeout(() => {
+          setMorphedWords((prev) => {
+            const next = [...prev];
+            next[finishedWordIdx] = true;
+            return next;
+          });
+
+          // Move to next word after a short pause
+          currentWord++;
+          currentChar = 0;
+          setActiveWordIndex(currentWord);
+          setTimeout(typeNextChar, 120);
+        }, 100);
+      }
     };
 
-    const typeLine2 = () => {
-      const interval2 = setInterval(() => {
-        l2Index++;
-        setLine2Text(fullLine2.slice(0, l2Index));
-
-        if (l2Index >= fullLine2.length) {
-          clearInterval(interval2);
-          // Morph line 2 to Atmosphere Grotesk
-          setTimeout(() => {
-            setLine2Morphed(true);
-            setIsTypingDone(true);
-          }, 140);
-        }
-      }, 38);
-    };
-
-    const initialTimeout = setTimeout(typeLine1, 200);
-
-    return () => {
-      clearTimeout(initialTimeout);
-    };
-  }, [fullLine1, fullLine2]);
+    const timer = setTimeout(typeNextChar, 250);
+    return () => clearTimeout(timer);
+  }, []);
 
   useGSAP(
     () => {
@@ -99,7 +97,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
       gsap.set(".hero-photo-wrap", { scale: 0.94, opacity: 0 });
       gsap.set(".hero-badge-float", { scale: 0, rotation: -45 });
 
-      // Choreographed entrance alongside the typing
+      // Choreographed entrance
       tl.to(".hero-eyebrow", {
         opacity: 1,
         y: 0,
@@ -155,36 +153,72 @@ export function Hero({ whatsappUrl }: HeroProps) {
             <span>{hero.eyebrow}</span>
           </div>
 
-          {/* Interactive Typing & Font-Morphing Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.04] tracking-tight mb-5 min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
-            {/* Line 1 */}
-            <span 
-              className={cn(
-                "block transition-all duration-500",
-                line1Morphed 
-                  ? "font-display text-[var(--color-ink)]" 
-                  : "font-editorial text-[var(--color-coral)] italic tracking-normal"
-              )}
-            >
-              {line1Text || "\u00A0"}
-              {!line1Morphed && (
-                <span className="inline-block w-[3px] h-[0.9em] bg-[var(--color-coral)] ml-1 animate-pulse align-middle" />
-              )}
+          {/* Stable, Jump-Free Headline with Word-by-Word Typing & Morphing */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.06] tracking-tight mb-5 select-none">
+            {/* Line 1: Mehr Lokalpräsenz. */}
+            <span className="block mb-1 sm:mb-2">
+              {/* Word 0: Mehr */}
+              <span 
+                className={cn(
+                  "inline-block mr-2 sm:mr-3 transition-all duration-300",
+                  morphedWords[0] 
+                    ? "font-display text-[var(--color-ink)]" 
+                    : "font-editorial text-[var(--color-coral)] italic tracking-normal"
+                )}
+              >
+                {typedWords[0] || (activeWordIndex === 0 ? "" : "")}
+                {activeWordIndex === 0 && !morphedWords[0] && (
+                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-coral)] ml-0.5 animate-pulse align-middle" />
+                )}
+              </span>
+
+              {/* Word 1: Lokalpräsenz. */}
+              <span 
+                className={cn(
+                  "inline-block transition-all duration-300",
+                  morphedWords[1] 
+                    ? "font-display text-[var(--color-ink)]" 
+                    : "font-editorial text-[var(--color-coral)] italic tracking-normal"
+                )}
+              >
+                {typedWords[1]}
+                {activeWordIndex === 1 && !morphedWords[1] && (
+                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-coral)] ml-0.5 animate-pulse align-middle" />
+                )}
+              </span>
             </span>
 
-            {/* Line 2 */}
-            <span 
-              className={cn(
-                "block transition-all duration-500",
-                line2Morphed 
-                  ? "font-display text-[var(--color-plum)]" 
-                  : "font-editorial text-[var(--color-plum-light)] italic tracking-normal"
-              )}
-            >
-              {line2Text || (line1Morphed && !line2Morphed ? "" : "")}
-              {line1Morphed && !line2Morphed && (
-                <span className="inline-block w-[3px] h-[0.9em] bg-[var(--color-plum)] ml-1 animate-pulse align-middle" />
-              )}
+            {/* Line 2: Weniger Agenturtheater. (Pre-structured so mobile never breaks unexpectedly) */}
+            <span className="block">
+              {/* Word 2: Weniger */}
+              <span 
+                className={cn(
+                  "inline-block mr-2 sm:mr-3 transition-all duration-300",
+                  morphedWords[2] 
+                    ? "font-display text-[var(--color-plum)]" 
+                    : "font-editorial text-[var(--color-plum-light)] italic tracking-normal"
+                )}
+              >
+                {typedWords[2]}
+                {activeWordIndex === 2 && !morphedWords[2] && (
+                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-plum)] ml-0.5 animate-pulse align-middle" />
+                )}
+              </span>
+
+              {/* Word 3: Agenturtheater. (Separate inline-block / block on very small screens to prevent mid-typing wrap) */}
+              <span 
+                className={cn(
+                  "inline-block transition-all duration-300",
+                  morphedWords[3] 
+                    ? "font-display text-[var(--color-plum)]" 
+                    : "font-editorial text-[var(--color-plum-light)] italic tracking-normal"
+                )}
+              >
+                {typedWords[3]}
+                {activeWordIndex === 3 && !morphedWords[3] && (
+                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-plum)] ml-0.5 animate-pulse align-middle" />
+                )}
+              </span>
             </span>
           </h1>
 
@@ -277,7 +311,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
         </div>
       </Container>
 
-      {/* Marquee Ticker at Bottom with fast, dynamic animation */}
+      {/* Marquee Ticker at Bottom */}
       <div className="mt-8 sm:mt-12 pt-4 pb-3 border-y border-[var(--color-line)] bg-white/50 backdrop-blur-sm overflow-hidden select-none">
         <div className="marquee-track flex whitespace-nowrap gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-ink)]/75">
           {Array.from({ length: 6 }).map((_, i) => (
