@@ -21,13 +21,15 @@ export function ProblemSection() {
         return;
       }
 
-      // Smooth scroll-driven inking without dead space
+      // Pinned stop-scroll animation: freezes viewport while text fills with ink
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 75%",
-          end: "bottom 65%",
+          start: "top top",
+          end: "+=120%",
+          pin: true,
           scrub: 1,
+          anticipatePin: 1,
         },
       });
 
@@ -37,9 +39,9 @@ export function ProblemSection() {
         { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 1 }
       ).fromTo(
         bodyRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.4 },
-        "-=0.2"
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+        "-=0.15"
       );
     },
     { scope: containerRef }
@@ -48,16 +50,16 @@ export function ProblemSection() {
   return (
     <section
       ref={containerRef}
-      className="relative py-16 sm:py-20 md:py-28 bg-[var(--color-paper)] overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center py-20 bg-[var(--color-paper)] overflow-hidden"
     >
-      <Container className="flex flex-col items-center text-center max-w-5xl w-full">
-        <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] mb-6 block">
+      <Container className="flex flex-col items-center text-center max-w-5xl w-full my-auto">
+        <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] mb-8 block">
           {homeContent.problem.eyebrow}
         </span>
 
         <h2
           ref={textRef}
-          className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.08] mb-8"
+          className="relative text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.06] mb-10"
         >
           {homeContent.problem.title}
           <span
