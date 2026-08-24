@@ -8,6 +8,7 @@ export type Project = {
   badge: string;
   summary: string;
   factsApproved: boolean;
+  image: string;
 };
 
 export const liveProjects: readonly Project[] = [
@@ -21,6 +22,7 @@ export const liveProjects: readonly Project[] = [
     badge: "Live-Website",
     summary: "Ein öffentlich erreichbarer Webauftritt für ein regionales Eiscafé. Weitere Projektaussagen werden erst nach Freigabe der tatsächlichen Rolle ergänzt.",
     factsApproved: false,
+    image: "/media/projects/eiscafe-orrico.webp",
   },
   {
     slug: "autotransport-alex",
@@ -32,6 +34,7 @@ export const liveProjects: readonly Project[] = [
     badge: "Live-Website",
     summary: "Ein öffentlich erreichbarer, kontaktorientierter Auftritt für eine Transportdienstleistung. Weitere Projektaussagen folgen nur nach Faktenfreigabe.",
     factsApproved: false,
+    image: "/media/projects/autotransport-alex.webp",
   },
 ] as const;
 
@@ -46,6 +49,7 @@ export const conceptProjects: readonly Project[] = [
     badge: "Konzeptentwurf – noch nicht veröffentlicht",
     summary: "Ein unveröffentlichter Gestaltungsvorschlag für einen regionalen Betrieb. Die Darstellung behauptet weder Auftrag noch Zusammenarbeit.",
     factsApproved: true,
+    image: "/media/projects/buescher-baeckerei.webp",
   },
   {
     slug: "vincent-kaesekuchenbaeckerei",
@@ -57,6 +61,7 @@ export const conceptProjects: readonly Project[] = [
     badge: "Konzeptentwurf – noch nicht veröffentlicht",
     summary: "Ein unveröffentlichter Websiteentwurf. Die Darstellung wird klar von echten Kundenprojekten getrennt.",
     factsApproved: true,
+    image: "/media/projects/vincent-kaesekuchen.webp",
   },
 ] as const;
 

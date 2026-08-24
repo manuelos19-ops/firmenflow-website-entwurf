@@ -159,10 +159,10 @@ export function Process() {
                     {step.number}
                   </div>
                   
-                  <h3 className="text-2xl md:text-3xl font-bold font-sans mb-4">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed">
+                  <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
                     {step.body}
                   </p>
                 </div>

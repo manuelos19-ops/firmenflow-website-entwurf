@@ -57,12 +57,12 @@ export function ProblemSection() {
 
         <h2
           ref={textRef}
-          className="relative text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-[var(--color-muted)]/15 leading-[1.1] mb-12"
+          className="relative text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[var(--color-muted)]/20 leading-[1.05] mb-12"
         >
           {homeContent.problem.title}
           <span
             ref={overlayRef}
-            className="absolute inset-0 text-[var(--color-ink)] [clip-path:inset(0%_100%_0%_0%)] z-10"
+            className="absolute inset-0 text-[var(--color-ink)] select-none pointer-events-none"
             aria-hidden="true"
           >
             {homeContent.problem.title}

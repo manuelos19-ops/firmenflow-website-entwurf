@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
 import { cn } from "@/lib/cn";
+import { MessageCircle, Sparkles, MapPin } from "lucide-react";
 
 interface HeroProps {
   whatsappUrl: string | null;
@@ -20,63 +21,66 @@ export function Hero({ whatsappUrl }: HeroProps) {
 
   useGSAP(
     () => {
-      if (prefersReducedMotion()) {
-        return; // Skip animations, elements are already visible by default
-      }
+      if (prefersReducedMotion()) return;
 
       const tl = gsap.timeline({
-        defaults: { ease: "power4.out" },
+        defaults: { ease: "power3.out" },
       });
 
-      // Initial state setup to avoid FOUC and ensure SSR visibility without JS
-      gsap.set(".word-inner", { y: "110%" });
-      gsap.set(".hero-eyebrow", { opacity: 0, x: -20 });
-      gsap.set(".hero-accent", { opacity: 0, y: 20 });
-      gsap.set(".hero-body", { opacity: 0, y: 20 });
-      gsap.set(".hero-ctas", { opacity: 0, y: 20 });
-      gsap.set(".hero-photo", { scale: 1.05, opacity: 0 });
+      // Initial state
+      gsap.set(".hero-eyebrow", { opacity: 0, y: -15 });
+      gsap.set(".hero-title-line", { opacity: 0, y: 35, skewY: 2 });
+      gsap.set(".hero-accent", { opacity: 0, scale: 0.95, y: 20 });
+      gsap.set(".hero-body", { opacity: 0, y: 25 });
+      gsap.set(".hero-cta-wrap", { opacity: 0, y: 20 });
+      gsap.set(".hero-photo-wrap", { scale: 0.94, opacity: 0 });
+      gsap.set(".hero-badge-float", { scale: 0, rotation: -45 });
 
-      // Eyebrow
-      tl.to(
-        ".hero-eyebrow",
-        { opacity: 1, x: 0, duration: 1, delay: 0.1 }
-      )
-      // Titles
-      .to(".word-line-0 .word-inner", {
-        y: "0%",
-        duration: 1,
-        stagger: 0.06,
-      }, "<0.1")
-      .to(".word-line-1 .word-inner", {
-        y: "0%",
-        duration: 1,
-        stagger: 0.06,
-      }, "<0.15")
-      // Accent
-      .to(".hero-accent", {
+      // Choreographed timeline
+      tl.to(".hero-eyebrow", {
         opacity: 1,
         y: 0,
         duration: 0.8,
-      }, ">-0.3")
-      // Body
+        delay: 0.1,
+      })
+      .to(".hero-title-line", {
+        opacity: 1,
+        y: 0,
+        skewY: 0,
+        stagger: 0.15,
+        duration: 1,
+        ease: "back.out(1.2)",
+      }, "-=0.4")
+      .to(".hero-accent", {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+      }, "-=0.5")
       .to(".hero-body", {
         opacity: 1,
         y: 0,
         duration: 0.8,
-      }, "<0.1")
-      // CTAs
-      .to(".hero-ctas", {
+      }, "-=0.4")
+      .to(".hero-cta-wrap", {
         opacity: 1,
         y: 0,
         duration: 0.8,
-      }, "<0.1")
-      // Photo
-      .to(".hero-photo", {
+        stagger: 0.1,
+      }, "-=0.4")
+      .to(".hero-photo-wrap", {
         scale: 1,
         opacity: 1,
-        duration: 1.5,
-      }, 0.2); // Start early alongside the rest
-
+        duration: 1.2,
+        ease: "power3.out",
+      }, 0.2)
+      .to(".hero-badge-float", {
+        scale: 1,
+        rotation: 0,
+        duration: 0.8,
+        ease: "back.out(1.6)",
+      }, "-=0.4");
     },
     { scope: containerRef }
   );
@@ -84,72 +88,74 @@ export function Hero({ whatsappUrl }: HeroProps) {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-screen flex flex-col pt-32 pb-16 lg:pt-40 lg:pb-24 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden"
+      className="relative min-h-[92vh] flex flex-col justify-between pt-32 pb-12 lg:pt-40 lg:pb-16 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden"
     >
-      <Container className="flex-grow flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <Container className="flex-grow flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 my-auto">
         
-        {/* Left Side: Content */}
-        <div className="flex-1 flex flex-col items-start w-full z-10">
-          <div className="hero-eyebrow flex items-center gap-4 mb-8">
-            <span className="w-8 h-[2px] bg-[var(--color-coral)]"></span>
-            <span className="text-sm font-medium tracking-wide uppercase text-[var(--color-muted)]">
-              {hero.eyebrow}
-            </span>
+        {/* Left Side: Copy */}
+        <div className="flex-1 flex flex-col items-start w-full z-10 max-w-2xl lg:max-w-none">
+          
+          {/* Eyebrow */}
+          <div className="hero-eyebrow inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-6">
+            <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+            <span>{hero.eyebrow}</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight leading-[1.05] mb-6">
-            {hero.title.map((line, lineIndex) => (
-              <span 
-                key={lineIndex} 
-                className={cn("block word-line-" + lineIndex, lineIndex > 0 && "mt-2")}
-              >
-                {line.split(" ").map((word, wordIndex) => (
-                  <span 
-                    key={wordIndex} 
-                    className="inline-block overflow-hidden mr-[0.3em] pb-1"
-                  >
-                    <span className="word-inner inline-block">
-                      {word}
-                    </span>
-                  </span>
-                ))}
-              </span>
-            ))}
+          {/* Punchy Title in Atmosphere Grotesk */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-display text-[var(--color-ink)] leading-[1.02] tracking-tight mb-5">
+            <span className="hero-title-line block text-[var(--color-ink)]">
+              {hero.title[0]}
+            </span>
+            <span className="hero-title-line block text-[var(--color-plum)]">
+              {hero.title[1]}
+            </span>
           </h1>
 
-          <div className="hero-accent text-3xl md:text-4xl font-editorial text-[var(--color-plum)] mb-6">
+          {/* Accent in Crimson Text Italic */}
+          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial text-[var(--color-coral)] mb-8">
             {hero.accent}
           </div>
 
-          <p className="hero-body text-lg md:text-xl text-[var(--color-muted)] max-w-xl mb-10 leading-relaxed">
+          {/* Body Text */}
+          <p className="hero-body text-base sm:text-lg md:text-xl text-[var(--color-muted)] max-w-xl leading-relaxed mb-12">
             {hero.body}
           </p>
 
-          <div className="hero-ctas flex flex-wrap items-center gap-6">
-            <MagneticButton>
-              <ButtonLink 
-                href={whatsappUrl || "#"} 
-                external={Boolean(whatsappUrl)}
-                variant="primary"
-              >
-                {hero.primaryCta}
-              </ButtonLink>
-            </MagneticButton>
+          {/* CTAs with generous margin */}
+          <div className="flex flex-wrap items-center gap-5">
+            <div className="hero-cta-wrap">
+              <MagneticButton>
+                <ButtonLink 
+                  href={whatsappUrl || "#"} 
+                  external={Boolean(whatsappUrl)}
+                  variant="primary"
+                  size="lg"
+                  className="shadow-lg shadow-[var(--color-coral)]/25"
+                >
+                  <MessageCircle className="w-5 h-5 mr-1" />
+                  {hero.primaryCta}
+                </ButtonLink>
+              </MagneticButton>
+            </div>
 
-            <MagneticButton>
-              <ButtonLink 
-                href="#projektanfrage" 
-                variant="secondary"
-              >
-                {hero.secondaryCta}
-              </ButtonLink>
-            </MagneticButton>
+            <div className="hero-cta-wrap">
+              <MagneticButton>
+                <ButtonLink 
+                  href="#projektanfrage" 
+                  variant="secondary"
+                  size="lg"
+                  className="hover:border-[var(--color-plum)]"
+                >
+                  {hero.secondaryCta}
+                </ButtonLink>
+              </MagneticButton>
+            </div>
           </div>
         </div>
 
-        {/* Right Side: Photo */}
-        <div className="flex-1 w-full relative mt-12 lg:mt-0 max-w-2xl lg:max-w-none mx-auto">
-          <div className="hero-photo relative aspect-[4/5] rounded-[2rem] overflow-hidden">
+        {/* Right Side: Portrait + Floating Badges */}
+        <div className="flex-1 w-full relative max-w-lg lg:max-w-none">
+          <div className="hero-photo-wrap relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
             <Image
               src={portraitAssets.hero.src}
               alt={portraitAssets.hero.alt}
@@ -158,66 +164,61 @@ export function Hero({ whatsappUrl }: HeroProps) {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+            
+            {/* Gradient bottom overlay on photo */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/50 via-transparent to-transparent" />
+            
+            <div className="absolute bottom-6 left-6 right-6 text-white text-sm font-medium backdrop-blur-md bg-black/30 p-4 rounded-2xl border border-white/20">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-bold text-white text-base">Manuel Landeck</p>
+                  <p className="text-white/80 text-xs">Webdesigner &amp; Entwickler aus Wesel</p>
+                </div>
+                <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
+              </div>
+            </div>
           </div>
-          
-          {/* Rotating Badge */}
-          <div className="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-32 h-32 md:w-40 md:h-40 z-20">
-            <div className="w-full h-full bg-[var(--color-paper)] rounded-full flex items-center justify-center p-2 shadow-xl">
-              <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
+
+          {/* Rotating Circular Badge */}
+          <div className="hero-badge-float absolute -top-6 -right-6 md:-right-8 w-28 h-28 md:w-32 md:h-32 rounded-full bg-[var(--color-plum)] text-white shadow-xl flex items-center justify-center p-2 z-20">
+            <div className="w-full h-full relative flex items-center justify-center rotating-badge">
+              <svg viewBox="0 0 100 100" className="w-full h-full">
                 <path
-                  id="textPath"
-                  d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+                  id="circlePath"
+                  d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                   fill="none"
                 />
-                <text className="text-[11.5px] uppercase font-bold tracking-widest fill-[var(--color-plum)]">
-                  <textPath href="#textPath" startOffset="0%">
-                    Wesel &amp; Niederrhein • Wesel &amp; Niederrhein •
+                <text className="text-[10.5px] uppercase font-bold tracking-[0.22em] fill-[var(--color-paper)]">
+                  <textPath href="#circlePath" startOffset="0%">
+                    WESEL • NIEDERRHEIN • MANU •
                   </textPath>
                 </text>
               </svg>
             </div>
+            <Sparkles className="w-6 h-6 text-[var(--color-coral)] absolute" />
           </div>
         </div>
       </Container>
 
-      {/* Marquee Ticker */}
-      <div className="mt-20 lg:mt-auto w-full border-y border-[var(--color-line)] py-4 overflow-hidden bg-white/50 backdrop-blur-sm group">
-        <div className="flex whitespace-nowrap animate-marquee group-hover:pause-animation">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="flex items-center gap-8 px-4 text-sm font-medium tracking-wider uppercase text-[var(--color-ink)]">
-              <span>Webdesign</span>
+      {/* Marquee Ticker at Bottom with generous spacing */}
+      <div className="mt-20 pt-8 pb-4 border-y border-[var(--color-line)] bg-white/40 backdrop-blur-sm overflow-hidden select-none">
+        <div className="marquee-track flex whitespace-nowrap gap-10 text-xs sm:text-sm font-bold uppercase tracking-widest text-[var(--color-ink)]/70">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-10">
+              <span>Websites für lokale Unternehmen</span>
               <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-              <span>Lokalpräsenz</span>
+              <span>100% Persönlich mit Manu</span>
+              <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]"></span>
+              <span>Wesel &amp; Niederrhein</span>
               <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-              <span>Relaunch</span>
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
-              <span>Google Business</span>
+              <span>Google Business 360°</span>
+              <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]"></span>
+              <span>Kein Agentur-Theater</span>
               <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]"></span>
             </div>
           ))}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-        .pause-animation {
-          animation-play-state: paused;
-        }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 12s linear infinite;
-        }
-      `}} />
     </section>
   );
 }

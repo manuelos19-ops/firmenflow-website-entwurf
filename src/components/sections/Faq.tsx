@@ -36,10 +36,15 @@ export function Faq() {
     <section ref={containerRef} className="py-24 md:py-32 bg-paper">
       <Container>
         <div className="max-w-3xl mx-auto">
-          <span className="text-coral font-semibold uppercase tracking-wider text-sm block mb-4 text-center">
-            Häufige Fragen
-          </span>
-          <div className="mt-12 flex flex-col gap-4">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] block mb-3">
+              Häufige Fragen
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)]">
+              Klartext vor dem Projektstart.
+            </h2>
+          </div>
+          <div className="flex flex-col gap-4">
             {faqItems.map((item, index) => {
               const isOpen = openIndex === index;
               

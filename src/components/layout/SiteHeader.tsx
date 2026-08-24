@@ -6,13 +6,15 @@ import { BrandMark } from "@/components/brand/BrandMark";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
+import { ArrowUpRight } from "lucide-react";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
+  { label: "Direkt mit Manu", href: "/#manu" },
+  { label: "Google Business", href: "/#google-pilot" },
   { label: "Projekte", href: "/#projekte" },
-  { label: "Über Manu", href: "/#manu" },
   { label: "Ablauf", href: "/#ablauf" },
-  { label: "Kontakt", href: "/#kontakt" },
+  { label: "FAQ", href: "/#faq" },
 ] as const;
 
 export function SiteHeader() {
@@ -23,7 +25,7 @@ export function SiteHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24);
+      setIsScrolled(window.scrollY > 20);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -57,56 +59,64 @@ export function SiteHeader() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[var(--color-paper)]/90 backdrop-blur-md py-3.5 border-b border-[var(--color-line)] shadow-sm"
-          : "bg-transparent py-5"
+          ? "bg-[var(--color-paper)]/90 backdrop-blur-lg py-3 border-b border-[var(--color-line)] shadow-sm"
+          : "bg-transparent py-4 sm:py-5"
       )}
     >
-      <Container className="flex items-center justify-between">
-        <BrandMark />
+      <Container className="flex items-center justify-between gap-4">
+        {/* Brand Wordmark */}
+        <div className="shrink-0">
+          <BrandMark />
+        </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Hauptnavigation">
+        <nav className="hidden xl:flex items-center gap-7" aria-label="Hauptnavigation">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-[var(--color-ink)]/80 hover:text-[var(--color-plum)] transition-colors duration-200"
+              className="text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] transition-colors duration-200"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-4">
-          <ButtonLink href="/#projektanfrage" variant="primary" size="default">
+        {/* Desktop CTA Button */}
+        <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <ButtonLink 
+            href="/#projektanfrage" 
+            variant="primary" 
+            size="default"
+            className="text-xs sm:text-sm px-5 py-2.5 shadow-sm"
+          >
             Projekt anfragen
           </ButtonLink>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile / Tablet Menu Toggle */}
         <button
           ref={toggleButtonRef}
           type="button"
           aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden relative z-50 p-2 text-[var(--color-ink)] hover:text-[var(--color-plum)] focus-visible:outline-none"
+          className="xl:hidden relative z-50 p-2.5 rounded-xl text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 focus-visible:outline-none"
         >
           <span className="sr-only">{isOpen ? "Menü schließen" : "Menü öffnen"}</span>
-          <div className="w-6 h-5 flex flex-col justify-between">
+          <div className="w-5 h-4 flex flex-col justify-between">
             <span
               className={cn(
-                "block h-0.5 w-full bg-current transform transition-transform duration-300",
-                isOpen && "translate-y-2 rotate-45"
+                "block h-0.5 w-full bg-current transform transition-transform duration-300 origin-center",
+                isOpen && "translate-y-1.5 rotate-45"
               )}
             />
             <span
-              className={cn("block h-0.5 w-full bg-current transition-opacity duration-300", isOpen && "opacity-0")}
+              className={cn("block h-0.5 w-full bg-current transition-opacity duration-200", isOpen && "opacity-0")}
             />
             <span
               className={cn(
-                "block h-0.5 w-full bg-current transform transition-transform duration-300",
+                "block h-0.5 w-full bg-current transform transition-transform duration-300 origin-center",
                 isOpen && "-translate-y-2 -rotate-45"
               )}
             />
@@ -118,36 +128,37 @@ export function SiteHeader() {
       <div
         ref={menuRef}
         className={cn(
-          "fixed inset-0 top-0 z-40 bg-[var(--color-paper)] flex flex-col justify-between px-6 pt-28 pb-12 transition-all duration-300 lg:hidden",
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          "fixed inset-x-4 top-20 z-40 bg-[var(--color-paper)] border border-[var(--color-line)] rounded-3xl shadow-2xl p-6 transition-all duration-300 xl:hidden",
+          isOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         )}
         aria-hidden={!isOpen}
       >
-        <nav className="flex flex-col gap-6">
+        <nav className="flex flex-col gap-3.5 mb-6">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors"
+              className="text-lg font-semibold text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors flex items-center justify-between py-1"
             >
-              {item.label}
+              <span>{item.label}</span>
+              <ArrowUpRight className="w-4 h-4 text-[var(--color-muted)]" />
             </Link>
           ))}
         </nav>
 
-        <div className="pt-8 border-t border-[var(--color-line)] space-y-4">
+        <div className="pt-4 border-t border-[var(--color-line)] space-y-3">
           <ButtonLink
             href="/#projektanfrage"
             variant="primary"
-            size="lg"
-            className="w-full"
+            size="default"
+            className="w-full justify-center"
             onClick={() => setIsOpen(false)}
           >
             Projekt anfragen
           </ButtonLink>
           <p className="text-center text-xs text-[var(--color-muted)]">
-            Direkt mit Manu · Wesel & Niederrhein
+            Direkt mit Manu · Wesel &amp; Niederrhein
           </p>
         </div>
       </div>
