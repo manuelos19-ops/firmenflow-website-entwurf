@@ -1,18 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { liveProjects, conceptProjects, type Project } from "@/content/projects";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { cn } from "@/lib/cn";
 import { 
   ChevronLeft, 
   ChevronRight, 
   ExternalLink, 
   Sparkles, 
-  RotateCw, 
   Pause, 
   Play,
   MapPin
@@ -25,6 +22,7 @@ export function ProjectsShowcase() {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
+  const hasMovedRef = useRef(false);
   const startXRef = useRef(0);
   const startRotationRef = useRef(0);
   const lastXRef = useRef(0);
@@ -35,7 +33,7 @@ export function ProjectsShowcase() {
   const [rotation, setRotation] = useState(0);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
-  const [radius, setRadius] = useState(360);
+  const [radius, setRadius] = useState(330);
 
   // Calculate active index based on rotation
   const normalizedRotation = ((rotation % 360) + 360) % 360;
@@ -47,11 +45,11 @@ export function ProjectsShowcase() {
     const updateRadius = () => {
       const w = window.innerWidth;
       if (w < 640) {
-        setRadius(230); // Mobile
+        setRadius(200); // Mobile
       } else if (w < 1024) {
-        setRadius(300); // Tablet
+        setRadius(260); // Tablet
       } else {
-        setRadius(380); // Desktop
+        setRadius(330); // Desktop
       }
     };
     updateRadius();
@@ -73,8 +71,8 @@ export function ProjectsShowcase() {
           setRotation((prev) => prev + velocityRef.current);
           velocityRef.current *= 0.92; // friction
         } else if (isAutoRotating && !isHovered) {
-          // Slow, smooth orbit rotation (approx 20s per full 360 turn)
-          setRotation((prev) => prev - 18 * delta);
+          // Smooth orbit rotation (approx 24s per 360 turn)
+          setRotation((prev) => prev - 15 * delta);
         }
       }
 
@@ -90,6 +88,7 @@ export function ProjectsShowcase() {
   // Pointer Drag Handlers (Mouse & Touch)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
+    hasMovedRef.current = false;
     startXRef.current = e.clientX;
     lastXRef.current = e.clientX;
     startRotationRef.current = rotation;
@@ -102,12 +101,16 @@ export function ProjectsShowcase() {
     const currentX = e.clientX;
     const deltaX = currentX - startXRef.current;
     
+    if (Math.abs(deltaX) > 4) {
+      hasMovedRef.current = true;
+    }
+
     // Track velocity
-    velocityRef.current = (currentX - lastXRef.current) * 0.4;
+    velocityRef.current = (currentX - lastXRef.current) * 0.35;
     lastXRef.current = currentX;
 
     // Update rotation
-    setRotation(startRotationRef.current + deltaX * 0.45);
+    setRotation(startRotationRef.current + deltaX * 0.42);
   };
 
   const handlePointerUp = (e: React.PointerEvent) => {
@@ -119,7 +122,6 @@ export function ProjectsShowcase() {
   // Rotate to specific project index
   const rotateToIndex = (targetIndex: number) => {
     const targetAngle = -(targetIndex * anglePerCard);
-    // Find shortest rotation path
     const currentAngle = rotation;
     const diff = ((targetAngle - currentAngle + 180) % 360) - 180;
     setRotation(currentAngle + diff);
@@ -133,33 +135,45 @@ export function ProjectsShowcase() {
     rotateToIndex((activeIndex - 1 + totalCards) % totalCards);
   };
 
+  // Card click handler: open tab if front card or rotate if side card
+  const handleCardClick = (project: Project, idx: number, isFront: boolean) => {
+    // If the user was dragging, don't trigger click action
+    if (hasMovedRef.current) return;
+
+    if (isFront || idx === activeIndex) {
+      window.open(project.url, "_blank", "noopener,noreferrer");
+    } else {
+      rotateToIndex(idx);
+    }
+  };
+
   return (
     <section 
       id="projekte" 
-      className="py-24 sm:py-32 md:py-40 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden relative"
+      className="py-20 sm:py-28 md:py-36 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Container>
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 md:mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
             3D Showcase · Echte Arbeiten &amp; Entwürfe
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4">
             Websites im 3D-Orbit.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder dem Finger, um die Seiten interaktiv zu erkunden.
+            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um die Website direkt in einem neuen Tab zu öffnen.
           </p>
         </div>
 
         {/* 3D Stage Viewport Container */}
         <div 
           ref={containerRef}
-          className="relative w-full h-[460px] sm:h-[540px] md:h-[620px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
-          style={{ perspective: "1300px" }}
+          className="relative w-full h-[400px] sm:h-[460px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
+          style={{ perspective: "1200px" }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
@@ -167,13 +181,13 @@ export function ProjectsShowcase() {
         >
           {/* Ambient center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-[var(--color-coral)]/10 blur-[90px] pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[var(--color-coral)]/10 blur-[80px] pointer-events-none"
             aria-hidden="true" 
           />
 
-          {/* 3D Rotating Cylinder Carousel */}
+          {/* 3D Rotating Cylinder Carousel (Slightly more compact cards) */}
           <div 
-            className="relative w-[280px] sm:w-[340px] md:w-[420px] h-[360px] sm:h-[420px] md:h-[480px] transition-transform duration-75 ease-out"
+            className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px] transition-transform duration-75 ease-out"
             style={{
               transformStyle: "preserve-3d",
               transform: `rotateY(${rotation}deg)`,
@@ -184,17 +198,16 @@ export function ProjectsShowcase() {
               // Angle relative to viewer (0 = front, 180 = back)
               const relAngle = ((cardBaseAngle + rotation) % 360 + 360) % 360;
               const isFront = relAngle < 45 || relAngle > 315;
-              const isBack = relAngle > 135 && relAngle < 225;
 
               return (
                 <div
                   key={project.slug}
-                  onClick={() => rotateToIndex(idx)}
+                  onClick={() => handleCardClick(project, idx, isFront)}
                   className={cn(
-                    "absolute inset-0 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
                     isFront 
-                      ? "border-[var(--color-coral)]/80 shadow-2xl shadow-[var(--color-coral)]/20 ring-4 ring-[var(--color-coral)]/10" 
-                      : "border-white/80 opacity-70 hover:opacity-100 shadow-xl"
+                      ? "border-[var(--color-coral)]/90 shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
+                      : "border-white/80 opacity-65 hover:opacity-100 shadow-lg"
                   )}
                   style={{
                     transformStyle: "preserve-3d",
@@ -204,41 +217,41 @@ export function ProjectsShowcase() {
                   }}
                 >
                   {/* Browser Mockup Top Bar */}
-                  <div className="bg-white/90 backdrop-blur-md px-4 py-2.5 border-b border-[var(--color-line)] flex items-center justify-between">
+                  <div className="bg-white/90 backdrop-blur-md px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-400/90 inline-block" />
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-400/90 inline-block" />
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/90 inline-block" />
                     </div>
-                    <div className="text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[140px] sm:max-w-[180px] px-2 py-0.5 bg-[var(--color-paper)] rounded-md border border-[var(--color-line)]/50">
+                    <div className="text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[130px] sm:max-w-[160px] px-2 py-0.5 bg-[var(--color-paper)] rounded-md border border-[var(--color-line)]/50">
                       {project.url.replace("https://", "").replace(/\/$/, "")}
                     </div>
                     <div className="w-4" />
                   </div>
 
                   {/* High-Res Preview Screenshot */}
-                  <div className="relative w-full h-[230px] sm:h-[280px] md:h-[330px] bg-slate-100 overflow-hidden">
+                  <div className="relative w-full h-[210px] sm:h-[250px] md:h-[290px] bg-slate-100 overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.name}
                       fill
                       priority={idx === 0}
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, 420px"
+                      sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
                     />
                     
                     {/* Dark gradient bottom fade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
 
                     {/* Badge Overlay */}
-                    <div className="absolute top-3 right-3 z-10">
+                    <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">
                           <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                           Live
                         </span>
                       ) : (
-                        <span className="inline-flex items-center px-3 py-1 text-xs font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md backdrop-blur-md">
+                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md backdrop-blur-md">
                           Konzept
                         </span>
                       )}
@@ -246,19 +259,19 @@ export function ProjectsShowcase() {
                   </div>
 
                   {/* Card Bottom Meta */}
-                  <div className="p-4 sm:p-5 bg-white/95 backdrop-blur-sm border-t border-[var(--color-line)] flex items-center justify-between">
+                  <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-[var(--color-line)] flex items-center justify-between">
                     <div className="min-w-0 pr-2">
-                      <h4 className="font-bold text-base sm:text-lg text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
+                      <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
                         {project.name}
                       </h4>
-                      <p className="text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5 truncate">
+                      <p className="text-[11px] sm:text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5 truncate">
                         <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
                         {project.region} · {project.sector}
                       </p>
                     </div>
 
-                    <div className="shrink-0 w-8 h-8 rounded-full bg-[var(--color-plum)]/5 group-hover:bg-[var(--color-coral)] group-hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all">
-                      <ExternalLink className="w-4 h-4" />
+                    <div className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 group-hover:bg-[var(--color-coral)] group-hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all">
+                      <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                   </div>
                 </div>
@@ -268,7 +281,7 @@ export function ProjectsShowcase() {
         </div>
 
         {/* 3D Orbit Controls & Active Project Summary Bar */}
-        <div className="max-w-3xl mx-auto mt-6 sm:mt-10 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div className="max-w-3xl mx-auto mt-6 sm:mt-8 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-[var(--color-line)]/60">
             <div>
               <div className="flex items-center gap-3 mb-1.5">
@@ -335,15 +348,18 @@ export function ProjectsShowcase() {
               {activeProject.summary}
             </p>
 
+            {/* High-Contrast Action Button with 100% White Text */}
             <div className="shrink-0 w-full sm:w-auto">
               <a
-                href={activeProject.kind === "live" ? `/projekte/${activeProject.slug}` : activeProject.url}
-                target={activeProject.kind === "live" ? undefined : "_blank"}
-                rel={activeProject.kind === "live" ? undefined : "noreferrer"}
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-plum)] hover:bg-[var(--color-coral)] text-white text-sm font-semibold transition-all shadow-md active:scale-95"
+                href={activeProject.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer"
               >
-                <span>{activeProject.kind === "live" ? "Projekt ansehen" : "Live-Demo öffnen"}</span>
-                <ExternalLink className="w-4 h-4" />
+                <span className="text-white font-bold">
+                  {activeProject.kind === "live" ? "Website in neuem Tab öffnen" : "Live-Demo in neuem Tab öffnen"}
+                </span>
+                <ExternalLink className="w-4 h-4 text-white shrink-0" />
               </a>
             </div>
           </div>
@@ -356,7 +372,7 @@ export function ProjectsShowcase() {
                 onClick={() => rotateToIndex(idx)}
                 aria-label={`Zu ${p.name} drehen`}
                 className={cn(
-                  "flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all",
+                  "flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer",
                   activeIndex === idx
                     ? "bg-[var(--color-coral)] text-white shadow-md shadow-[var(--color-coral)]/20 scale-105"
                     : "bg-[var(--color-paper)] text-[var(--color-muted)] hover:text-[var(--color-ink)] border border-[var(--color-line)]"
