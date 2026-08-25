@@ -5,8 +5,7 @@ import { homeContent } from "@/content/site";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles, ArrowRight } from "lucide-react";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles } from "lucide-react";
 
 export function ServiceOverview() {
   const containerRef = useRef<HTMLElement>(null);
@@ -15,26 +14,27 @@ export function ServiceOverview() {
   useGSAP(
     () => {
       const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (isReduced) {
-        gsap.set(cardsRef.current, { opacity: 1, y: 0 });
-        return;
-      }
+      if (isReduced) return;
 
       cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+        const targetRotation = index % 2 === 0 ? -1.5 : 1.5;
+        const startRotation = index % 2 === 0 ? -3.5 : 3.5;
+
+        // Snappy, early reveal so cards are instantly visible even on fast scrolling
         gsap.fromTo(
           card,
-          { opacity: 0, y: 50, rotation: index % 2 === 0 ? -4 : 4 },
+          { opacity: 0.2, y: 30, rotation: startRotation },
           {
             opacity: 1,
             y: 0,
-            rotation: index % 2 === 0 ? -1.5 : 1.5,
-            duration: 1,
-            ease: "power3.out",
+            rotation: targetRotation,
+            duration: 0.5,
+            ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 80%",
-              once: true,
+              start: "top 92%",
+              toggleActions: "play none none none",
             },
           }
         );
@@ -47,12 +47,13 @@ export function ServiceOverview() {
     <section 
       ref={containerRef} 
       id="leistungen" 
-      className="py-28 md:py-36 bg-[var(--color-paper)] relative overflow-hidden"
+      className="py-24 md:py-36 bg-[var(--color-paper)] relative overflow-hidden"
     >
       <Container>
-        <div className="mb-16 md:mb-24 max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] mb-3 block">
-            Klarer Fokus · Kein Agentur-Schnickschnack
+        <div className="mb-14 md:mb-20 max-w-3xl">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Klarer Fokus · Kein Agentur-Schnickschnack</span>
           </span>
           <h2 className="text-4xl md:text-6xl font-display text-[var(--color-ink)] leading-tight mb-4">
             Zwei Wege zur starken Lokalpräsenz.
@@ -62,7 +63,7 @@ export function ServiceOverview() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-16 md:gap-24 relative max-w-5xl mx-auto">
+        <div className="flex flex-col gap-12 md:gap-18 relative max-w-5xl mx-auto">
           {/* Card 1: Neue Website */}
           <div
             ref={(el) => {
@@ -71,7 +72,7 @@ export function ServiceOverview() {
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
               "transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:rotate-0",
-              "w-full md:w-[92%] self-start md:-rotate-1.5 overflow-hidden"
+              "w-full md:w-[94%] self-start md:-rotate-1.5 overflow-hidden"
             )}
           >
             {/* Visual Browser Mockup Bar */}
@@ -150,7 +151,7 @@ export function ServiceOverview() {
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
               "transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:rotate-0",
-              "w-full md:w-[92%] self-end md:rotate-1.5 overflow-hidden"
+              "w-full md:w-[94%] self-end md:rotate-1.5 overflow-hidden"
             )}
           >
             {/* Visual Browser Mockup Bar */}

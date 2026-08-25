@@ -5,9 +5,8 @@ import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
-import { portraitAssets } from "@/content/assets";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, CheckCircle2, MapPin, Sparkles } from "lucide-react";
+import { PhoneCall, Milestone, CheckCircle2, MapPin, Sparkles, ShieldCheck } from "lucide-react";
 
 const bentoItems = [
   {
@@ -55,14 +54,14 @@ export function DirectWithManu() {
 
       gsap.fromTo(
         cardsRef.current,
-        { opacity: 0, y: 30, scale: 0.95 },
+        { opacity: 0, y: 25, scale: 0.96 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          stagger: 0.12,
-          duration: 0.8,
-          ease: "back.out(1.4)",
+          stagger: 0.1,
+          duration: 0.6,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 75%",
@@ -78,12 +77,13 @@ export function DirectWithManu() {
     <section 
       ref={containerRef}
       id="manu"
-      className="py-28 md:py-36 bg-[var(--color-paper)] overflow-hidden relative"
+      className="py-24 md:py-36 bg-[var(--color-paper)] overflow-hidden relative border-t border-[var(--color-line)]/50"
     >
       <Container>
-        {/* Top Header & Intro */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16 md:mb-20">
-          <div className="lg:col-span-8 max-w-3xl">
+        {/* Editorial Split: Text on Left + Large Authentic Portrait on Right (Close & Prominent) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-16 md:mb-20">
+          {/* Text Left */}
+          <div className="lg:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{homeContent.direct.eyebrow}</span>
@@ -92,24 +92,52 @@ export function DirectWithManu() {
               Ein Ansprechpartner. <br />
               <span className="text-[var(--color-coral)] font-editorial">Keine stille Post.</span>
             </h2>
-            <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed">
+            <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed mb-8">
               {homeContent.direct.body}
             </p>
+
+            {/* Quick Trust Highlights */}
+            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-[var(--color-coral)]" />
+                <span>100% Inhabergeführt</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+                <MapPin className="w-4 h-4 text-emerald-600" />
+                <span>Wesel &amp; Niederrhein</span>
+              </div>
+            </div>
           </div>
 
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-tr from-[var(--color-coral)] via-[var(--color-plum)] to-[var(--color-coral)] shadow-2xl">
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white">
-                <Image
-                  src={portraitAssets.about.src}
-                  alt={portraitAssets.about.alt}
-                  fill
-                  className="object-cover"
-                  sizes="224px"
-                />
-              </div>
-              <div className="absolute -bottom-2 right-2 px-3.5 py-1 rounded-full bg-white text-[var(--color-ink)] text-xs font-bold shadow-md border border-[var(--color-line)]">
-                Manu Landeck
+          {/* Large Authentic Manu Photo Right (Moved closer to text, large & crisp) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md h-[440px] sm:h-[500px] md:h-[540px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+              <Image
+                src="/media/portraits/manu-green-door-vertical.webp"
+                alt="Manu Landeck – Webdesigner und Inhaber Firmenflow"
+                fill
+                priority
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 500px"
+              />
+
+              {/* Bottom Subtle Gradient for Text Contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
+
+              {/* Bottom Authentic Name & Location Badge */}
+              <div className="absolute bottom-5 left-5 right-5 z-10 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/60 flex items-center justify-between">
+                <div>
+                  <h4 className="text-base font-bold text-[var(--color-ink)] leading-tight">
+                    Manu Landeck
+                  </h4>
+                  <p className="text-xs text-[var(--color-coral)] font-semibold mt-0.5">
+                    Inhaber &amp; Webdesigner
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-[11px] font-medium text-[var(--color-muted)] bg-[var(--color-paper)] px-2.5 py-1 rounded-full border border-[var(--color-line)]">
+                  <MapPin className="w-3 h-3 text-[var(--color-coral)]" />
+                  <span>Wesel</span>
+                </div>
               </div>
             </div>
           </div>

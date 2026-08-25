@@ -109,19 +109,22 @@ export function StorySection() {
     () => {
       if (prefersReducedMotion()) return;
 
-      // Smooth staggered entrance for story cards
-      gsap.from(".story-card", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
+      // Snappy micro-glide without hiding cards
+      gsap.fromTo(
+        ".story-card",
+        { y: 20 },
+        {
+          y: 0,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 85%",
+            once: true,
+          },
+        }
+      );
     },
     { scope: containerRef }
   );
