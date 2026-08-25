@@ -85,7 +85,7 @@ export function ProjectsShowcase() {
     };
   }, [isAutoRotating, isHovered]);
 
-  // Pointer Drag Handlers (Mouse & Touch)
+  // Pointer Drag Handlers (without setPointerCapture to avoid blocking child clicks)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     hasMovedRef.current = false;
@@ -93,31 +93,35 @@ export function ProjectsShowcase() {
     lastXRef.current = e.clientX;
     startRotationRef.current = rotation;
     velocityRef.current = 0;
-    (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
   };
 
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isDraggingRef.current) return;
-    const currentX = e.clientX;
-    const deltaX = currentX - startXRef.current;
-    
-    if (Math.abs(deltaX) > 4) {
-      hasMovedRef.current = true;
-    }
+  useEffect(() => {
+    const handleGlobalPointerMove = (e: PointerEvent) => {
+      if (!isDraggingRef.current) return;
+      const currentX = e.clientX;
+      const deltaX = currentX - startXRef.current;
+      
+      if (Math.abs(deltaX) > 4) {
+        hasMovedRef.current = true;
+      }
 
-    // Track velocity
-    velocityRef.current = (currentX - lastXRef.current) * 0.35;
-    lastXRef.current = currentX;
+      velocityRef.current = (currentX - lastXRef.current) * 0.35;
+      lastXRef.current = currentX;
+      setRotation(startRotationRef.current + deltaX * 0.42);
+    };
 
-    // Update rotation
-    setRotation(startRotationRef.current + deltaX * 0.42);
-  };
+    const handleGlobalPointerUp = () => {
+      if (!isDraggingRef.current) return;
+      isDraggingRef.current = false;
+    };
 
-  const handlePointerUp = (e: React.PointerEvent) => {
-    if (!isDraggingRef.current) return;
-    isDraggingRef.current = false;
-    (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
-  };
+    window.addEventListener("pointermove", handleGlobalPointerMove);
+    window.addEventListener("pointerup", handleGlobalPointerUp);
+    return () => {
+      window.removeEventListener("pointermove", handleGlobalPointerMove);
+      window.removeEventListener("pointerup", handleGlobalPointerUp);
+    };
+  }, []);
 
   // Rotate to specific project index
   const rotateToIndex = (targetIndex: number) => {
@@ -136,11 +140,11 @@ export function ProjectsShowcase() {
   };
 
   // Card click handler: open tab if front card or rotate if side card
-  const handleCardClick = (project: Project, idx: number, isFront: boolean) => {
-    // If the user was dragging, don't trigger click action
+  const handleCardClick = (project: Project, idx: number, zDepth: number) => {
+    // If the user was dragging/swiping, don't trigger link
     if (hasMovedRef.current) return;
 
-    if (isFront || idx === activeIndex) {
+    if (zDepth > 0.55 || idx === activeIndex) {
       window.open(project.url, "_blank", "noopener,noreferrer");
     } else {
       rotateToIndex(idx);
@@ -165,7 +169,7 @@ export function ProjectsShowcase() {
             Websites im 3D-Orbit.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um die Website direkt in einem neuen Tab zu öffnen.
+            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Klicke auf die vordere Karte, um die Website direkt in einem neuen Tab zu öffnen.
           </p>
         </div>
 
@@ -175,9 +179,6 @@ export function ProjectsShowcase() {
           className="relative w-full h-[400px] sm:h-[460px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
           style={{ perspective: "1200px" }}
           onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
         >
           {/* Ambient center glow */}
           <div 
@@ -185,7 +186,7 @@ export function ProjectsShowcase() {
             aria-hidden="true" 
           />
 
-          {/* 3D Rotating Cylinder Carousel (Slightly more compact cards) */}
+          {/* 3D Rotating Cylinder Carousel */}
           <div 
             className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px] transition-transform duration-75 ease-out"
             style={{
@@ -195,14 +196,16 @@ export function ProjectsShowcase() {
           >
             {allProjects.map((project, idx) => {
               const cardBaseAngle = idx * anglePerCard;
-              // Angle relative to viewer (0 = front, 180 = back)
-              const relAngle = ((cardBaseAngle + rotation) % 360 + 360) % 360;
-              const isFront = relAngle < 45 || relAngle > 315;
+              const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
+              // zDepth: +1.0 = directly front, 0.0 = sides, -1.0 = back
+              const zDepth = Math.cos(currentAngleRad);
+              const zIndex = Math.round((zDepth + 1) * 50) + 1; // 1 (back) to 101 (front)
+              const isFront = zDepth > 0.55;
 
               return (
                 <div
                   key={project.slug}
-                  onClick={() => handleCardClick(project, idx, isFront)}
+                  onClick={() => handleCardClick(project, idx, zDepth)}
                   className={cn(
                     "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
                     isFront 
@@ -212,7 +215,9 @@ export function ProjectsShowcase() {
                   style={{
                     transformStyle: "preserve-3d",
                     transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px)`,
-                    backfaceVisibility: "visible",
+                    zIndex: zIndex,
+                    pointerEvents: zDepth < -0.2 ? "none" : "auto",
+                    backfaceVisibility: "hidden",
                     backgroundColor: "var(--color-paper)",
                   }}
                 >
@@ -270,9 +275,16 @@ export function ProjectsShowcase() {
                       </p>
                     </div>
 
-                    <div className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 group-hover:bg-[var(--color-coral)] group-hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      aria-label={`${project.name} in neuem Tab öffnen`}
+                      className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 hover:bg-[var(--color-coral)] hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
+                    >
                       <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </div>
+                    </a>
                   </div>
                 </div>
               );

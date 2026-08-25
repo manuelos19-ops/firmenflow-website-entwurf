@@ -87,12 +87,12 @@
 :root {
   --color-paper: #fcfaf7;
   --color-ink: #17131a;
-  --color-plum: #3b0d4f;
-  --color-plum-light: #52156d;
+  --color-plum: #482361;
+  --color-plum-light: #653683;
   --color-coral: #ff705d;
   --color-coral-hover: #fa5d48;
   --color-muted: #746d76;
-  --color-line: color-mix(in srgb, var(--color-plum) 16%, transparent);
+  --color-line: color-mix(in srgb, var(--color-plum) 14%, transparent);
   
   --font-display: "Atmosphere Grotesk", "Switzer", sans-serif;
   --font-sans: "Switzer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -103,7 +103,7 @@
   --motion-md: 560ms;
   --motion-sm: 200ms;
   --radius-card: 1.75rem;
-  --shadow-card: 0 1.5rem 4rem rgb(59 13 79 / 0.1);
+  --shadow-card: 0 1.5rem 4rem rgb(72 35 97 / 0.08);
 }
 
 @theme inline {

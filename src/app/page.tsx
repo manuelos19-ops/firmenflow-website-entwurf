@@ -5,9 +5,10 @@ import { Faq } from "@/components/sections/Faq";
 import { GoogleBusinessPilot } from "@/components/sections/GoogleBusinessPilot";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSection } from "@/components/sections/ProblemSection";
+import { StorySection } from "@/components/sections/StorySection";
+import { ServiceOverview } from "@/components/sections/ServiceOverview";
 import { Process } from "@/components/sections/Process";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
-import { ServiceOverview } from "@/components/sections/ServiceOverview";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
     <main id="main">
       <Hero whatsappUrl={whatsappUrl} />
       <ProblemSection />
+      <StorySection />
       <ServiceOverview />
       <DirectWithManu />
       <GoogleBusinessPilot />

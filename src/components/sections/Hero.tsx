@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { MagneticButton } from "@/components/effects/MagneticButton";
@@ -9,76 +9,15 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
-import { cn } from "@/lib/cn";
-import { Sparkles, MapPin } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface HeroProps {
   whatsappUrl: string | null;
 }
 
-const WORDS = [
-  { text: "Mehr", line: 1 },
-  { text: "Lokalpräsenz.", line: 1 },
-  { text: "Weniger", line: 2 },
-  { text: "Agenturtheater.", line: 2 },
-];
-
 export function Hero({ whatsappUrl }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { hero } = homeContent;
-
-  // Word-by-word typed text and morph state
-  const [typedWords, setTypedWords] = useState<string[]>(["", "", "", ""]);
-  const [morphedWords, setMorphedWords] = useState<boolean[]>([false, false, false, false]);
-  const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setTypedWords(WORDS.map((w) => w.text));
-      setMorphedWords([true, true, true, true]);
-      setActiveWordIndex(4);
-      return;
-    }
-
-    let currentWord = 0;
-    let currentChar = 0;
-
-    const typeNextChar = () => {
-      if (currentWord >= WORDS.length) {
-        setActiveWordIndex(4);
-        return;
-      }
-
-      const targetWord = WORDS[currentWord].text;
-
-      if (currentChar < targetWord.length) {
-        currentChar++;
-        setTypedWords((prev) => {
-          const next = [...prev];
-          next[currentWord] = targetWord.slice(0, currentChar);
-          return next;
-        });
-        setTimeout(typeNextChar, 40);
-      } else {
-        const finishedWordIdx = currentWord;
-        setTimeout(() => {
-          setMorphedWords((prev) => {
-            const next = [...prev];
-            next[finishedWordIdx] = true;
-            return next;
-          });
-
-          currentWord++;
-          currentChar = 0;
-          setActiveWordIndex(currentWord);
-          setTimeout(typeNextChar, 120);
-        }, 100);
-      }
-    };
-
-    const timer = setTimeout(typeNextChar, 250);
-    return () => clearTimeout(timer);
-  }, []);
 
   useGSAP(
     () => {
@@ -88,50 +27,50 @@ export function Hero({ whatsappUrl }: HeroProps) {
         defaults: { ease: "power3.out" },
       });
 
-      // Initial state for non-typing elements
-      gsap.set(".hero-eyebrow", { opacity: 0, y: -15 });
-      gsap.set(".hero-accent", { opacity: 0, scale: 0.95, y: 15 });
+      // Initial state
+      gsap.set(".hero-title-line", { opacity: 0, y: 35 });
+      gsap.set(".hero-accent", { opacity: 0, y: 20 });
       gsap.set(".hero-body", { opacity: 0, y: 20 });
       gsap.set(".hero-cta-wrap", { opacity: 0, y: 20 });
-      gsap.set(".hero-photo-wrap", { scale: 0.94, opacity: 0 });
+      gsap.set(".hero-photo-wrap", { scale: 0.95, opacity: 0 });
       gsap.set(".hero-badge-float", { scale: 0, rotation: -45 });
 
-      // Choreographed entrance
-      tl.to(".hero-eyebrow", {
+      // Smooth, calm cinematic entrance
+      tl.to(".hero-title-line", {
         opacity: 1,
         y: 0,
-        duration: 0.7,
+        duration: 0.9,
+        stagger: 0.15,
       })
       .to(".hero-photo-wrap", {
         scale: 1,
         opacity: 1,
-        duration: 1.2,
+        duration: 1.1,
         ease: "power3.out",
-      }, 0.1)
+      }, 0.15)
       .to(".hero-badge-float", {
         scale: 1,
         rotation: 0,
         duration: 0.8,
-        ease: "back.out(1.6)",
-      }, 0.5)
+        ease: "back.out(1.5)",
+      }, 0.4)
       .to(".hero-accent", {
         opacity: 1,
-        scale: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.7,
         ease: "power2.out",
-      }, 1.2)
+      }, 0.5)
       .to(".hero-body", {
         opacity: 1,
         y: 0,
-        duration: 0.8,
-      }, 1.4)
+        duration: 0.7,
+      }, 0.7)
       .to(".hero-cta-wrap", {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.7,
         stagger: 0.1,
-      }, 1.6);
+      }, 0.85);
     },
     { scope: containerRef }
   );
@@ -146,79 +85,20 @@ export function Hero({ whatsappUrl }: HeroProps) {
         {/* Left Side: Copy */}
         <div className="flex-1 flex flex-col items-start w-full z-10 max-w-2xl lg:max-w-none">
           
-          {/* Eyebrow */}
-          <div className="hero-eyebrow inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-5">
-            <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-            <span>{hero.eyebrow}</span>
-          </div>
-
-          {/* Stable, Jump-Free Headline with Word-by-Word Typing & Morphing */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.06] tracking-tight mb-5 select-none">
-            {/* Line 1: Mehr Lokalpräsenz. */}
-            <span className="block mb-1 sm:mb-2">
-              <span 
-                className={cn(
-                  "inline-block mr-2 sm:mr-3 transition-all duration-300",
-                  morphedWords[0] 
-                    ? "font-display text-[var(--color-ink)]" 
-                    : "font-editorial text-[var(--color-coral)] italic tracking-normal"
-                )}
-              >
-                {typedWords[0]}
-                {activeWordIndex === 0 && !morphedWords[0] && (
-                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-coral)] ml-0.5 animate-pulse align-middle" />
-                )}
-              </span>
-
-              <span 
-                className={cn(
-                  "inline-block transition-all duration-300",
-                  morphedWords[1] 
-                    ? "font-display text-[var(--color-ink)]" 
-                    : "font-editorial text-[var(--color-coral)] italic tracking-normal"
-                )}
-              >
-                {typedWords[1]}
-                {activeWordIndex === 1 && !morphedWords[1] && (
-                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-coral)] ml-0.5 animate-pulse align-middle" />
-                )}
-              </span>
+          {/* Calm, Stable, High-End Editorial Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight mb-6 select-none">
+            {/* Line 1 */}
+            <span className="hero-title-line block font-display font-extrabold text-[var(--color-ink)]">
+              Mehr Lokalpräsenz.
             </span>
-
-            {/* Line 2: Weniger Agenturtheater. */}
-            <span className="block">
-              <span 
-                className={cn(
-                  "inline-block mr-2 sm:mr-3 transition-all duration-300",
-                  morphedWords[2] 
-                    ? "font-display text-[var(--color-plum)]" 
-                    : "font-editorial text-[var(--color-plum-light)] italic tracking-normal"
-                )}
-              >
-                {typedWords[2]}
-                {activeWordIndex === 2 && !morphedWords[2] && (
-                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-plum)] ml-0.5 animate-pulse align-middle" />
-                )}
-              </span>
-
-              <span 
-                className={cn(
-                  "inline-block transition-all duration-300",
-                  morphedWords[3] 
-                    ? "font-display text-[var(--color-plum)]" 
-                    : "font-editorial text-[var(--color-plum-light)] italic tracking-normal"
-                )}
-              >
-                {typedWords[3]}
-                {activeWordIndex === 3 && !morphedWords[3] && (
-                  <span className="inline-block w-[3px] h-[0.85em] bg-[var(--color-plum)] ml-0.5 animate-pulse align-middle" />
-                )}
-              </span>
+            {/* Line 2 */}
+            <span className="hero-title-line block font-display font-extrabold text-[var(--color-plum)]">
+              Weniger <span className="font-editorial italic font-normal text-[var(--color-coral)]">Agenturtheater.</span>
             </span>
           </h1>
 
           {/* Accent in Crimson Text Italic */}
-          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial text-[var(--color-coral)] mb-6">
+          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial italic text-[var(--color-coral)] mb-6">
             {hero.accent}
           </div>
 
