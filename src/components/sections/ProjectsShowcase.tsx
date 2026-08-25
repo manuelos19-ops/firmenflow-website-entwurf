@@ -32,7 +32,7 @@ export function ProjectsShowcase() {
   // Rotation state
   const [rotation, setRotation] = useState(0);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
   const [radius, setRadius] = useState(330);
 
   // Calculate active index based on rotation
@@ -57,7 +57,7 @@ export function ProjectsShowcase() {
     return () => window.removeEventListener("resize", updateRadius);
   }, []);
 
-  // Continuous Auto-Rotation Loop
+  // Continuous Auto-Rotation Loop (Never stops completely, slows down slightly when a card is hovered)
   useEffect(() => {
     let lastTime = performance.now();
 
@@ -70,9 +70,10 @@ export function ProjectsShowcase() {
         if (Math.abs(velocityRef.current) > 0.05) {
           setRotation((prev) => prev + velocityRef.current);
           velocityRef.current *= 0.92; // friction
-        } else if (isAutoRotating && !isHovered) {
-          // Smooth orbit rotation (approx 24s per 360 turn)
-          setRotation((prev) => prev - 15 * delta);
+        } else if (isAutoRotating) {
+          // Slow down slightly to 4 deg/s on card hover, otherwise steady 14 deg/s
+          const currentSpeed = hoveredCardIndex !== null ? 4 : 14;
+          setRotation((prev) => prev - currentSpeed * delta);
         }
       }
 
@@ -83,7 +84,7 @@ export function ProjectsShowcase() {
     return () => {
       if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
     };
-  }, [isAutoRotating, isHovered]);
+  }, [isAutoRotating, hoveredCardIndex]);
 
   // Pointer Drag Handlers (without setPointerCapture to avoid blocking child clicks)
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -141,7 +142,6 @@ export function ProjectsShowcase() {
 
   // Card click handler: open tab if front card or rotate if side card
   const handleCardClick = (project: Project, idx: number, zDepth: number) => {
-    // If the user was dragging/swiping, don't trigger link
     if (hasMovedRef.current) return;
 
     if (zDepth > 0.55 || idx === activeIndex) {
@@ -155,8 +155,6 @@ export function ProjectsShowcase() {
     <section 
       id="projekte" 
       className="py-20 sm:py-28 md:py-36 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden relative"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <Container>
         {/* Section Header */}
@@ -206,6 +204,8 @@ export function ProjectsShowcase() {
                 <div
                   key={project.slug}
                   onClick={() => handleCardClick(project, idx, zDepth)}
+                  onMouseEnter={() => setHoveredCardIndex(idx)}
+                  onMouseLeave={() => setHoveredCardIndex(null)}
                   className={cn(
                     "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
                     isFront 

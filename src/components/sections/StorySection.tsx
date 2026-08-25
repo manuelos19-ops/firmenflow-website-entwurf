@@ -193,11 +193,12 @@ export function StorySection() {
                 )}
               >
                 {/* Visual Image Box with 3D Pixar Illustration */}
-                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <div className="relative w-full h-[260px] sm:h-[300px] md:h-[320px] overflow-hidden bg-slate-100 shrink-0">
                   <Image
                     src={step.image}
                     alt={step.imageAlt}
                     fill
+                    priority
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
