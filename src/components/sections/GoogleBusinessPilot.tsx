@@ -102,16 +102,16 @@ export function GoogleBusinessPilot() {
 
           {/* Huge Statement Title with Scroll-Fill Inking */}
           <h2 className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display leading-[1.06] mb-5 text-white/15">
-            Nicht nur gefunden werden. <br className="hidden sm:block" />
-            <span className="font-editorial italic">Auch richtig wirken.</span>
+            Gefunden werden und <br className="hidden sm:block" />
+            <span className="font-editorial italic">direkt Vertrauen aufbauen.</span>
             
             <span
               ref={overlayRef}
               className="absolute inset-0 text-white select-none pointer-events-none"
               aria-hidden="true"
             >
-              Nicht nur gefunden werden. <br className="hidden sm:block" />
-              <span className="font-editorial text-[var(--color-coral)] italic">Auch richtig wirken.</span>
+              Gefunden werden und <br className="hidden sm:block" />
+              <span className="font-editorial text-[var(--color-coral)] italic">direkt Vertrauen aufbauen.</span>
             </span>
           </h2>
 

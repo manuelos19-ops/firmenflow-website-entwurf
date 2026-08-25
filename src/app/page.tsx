@@ -22,12 +22,12 @@ export default function HomePage() {
       <Hero whatsappUrl={whatsappUrl} />
       <ProblemSection />
       <StorySection />
+      <ProjectsShowcase />
       <ServiceOverview />
       <DirectWithManu />
       <GoogleBusinessPilot />
-      <ProjectsShowcase />
-      <Process />
       <AboutManu />
+      <Process />
       <Faq />
       <ContactChoice whatsappUrl={whatsappUrl} />
     </main>
