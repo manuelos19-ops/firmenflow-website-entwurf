@@ -45,11 +45,11 @@ export function ProjectsShowcase() {
     const updateRadius = () => {
       const w = window.innerWidth;
       if (w < 640) {
-        setRadius(200); // Mobile
+        setRadius(210); // Mobile
       } else if (w < 1024) {
-        setRadius(260); // Tablet
+        setRadius(270); // Tablet
       } else {
-        setRadius(330); // Desktop
+        setRadius(340); // Desktop
       }
     };
     updateRadius();
@@ -57,7 +57,7 @@ export function ProjectsShowcase() {
     return () => window.removeEventListener("resize", updateRadius);
   }, []);
 
-  // Continuous Auto-Rotation Loop (Never stops completely, slows down slightly when a card is hovered)
+  // Continuous Auto-Rotation Loop
   useEffect(() => {
     let lastTime = performance.now();
 
@@ -71,7 +71,7 @@ export function ProjectsShowcase() {
           setRotation((prev) => prev + velocityRef.current);
           velocityRef.current *= 0.92; // friction
         } else if (isAutoRotating) {
-          // Slow down slightly to 4 deg/s on card hover, otherwise steady 14 deg/s
+          // Slow down slightly on card hover (4 deg/s), otherwise normal orbit (14 deg/s)
           const currentSpeed = hoveredCardIndex !== null ? 4 : 14;
           setRotation((prev) => prev - currentSpeed * delta);
         }
@@ -86,7 +86,7 @@ export function ProjectsShowcase() {
     };
   }, [isAutoRotating, hoveredCardIndex]);
 
-  // Pointer Drag Handlers (without setPointerCapture to avoid blocking child clicks)
+  // Pointer Drag Handlers (Mouse & Touch)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     hasMovedRef.current = false;
@@ -140,7 +140,7 @@ export function ProjectsShowcase() {
     rotateToIndex((activeIndex - 1 + totalCards) % totalCards);
   };
 
-  // Card click handler: open tab if front card or rotate if side card
+  // Card click handler: open tab if front card or rotate if side/back card
   const handleCardClick = (project: Project, idx: number, zDepth: number) => {
     if (hasMovedRef.current) return;
 
@@ -167,24 +167,49 @@ export function ProjectsShowcase() {
             Websites im 3D-Orbit.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Klicke auf die vordere Karte, um die Website direkt in einem neuen Tab zu öffnen.
+            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um das Projekt direkt in einem neuen Tab zu öffnen.
           </p>
         </div>
 
         {/* 3D Stage Viewport Container */}
         <div 
           ref={containerRef}
-          className="relative w-full h-[400px] sm:h-[460px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
-          style={{ perspective: "1200px" }}
+          className="relative w-full h-[430px] sm:h-[490px] md:h-[550px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
+          style={{ perspective: "1300px" }}
           onPointerDown={handlePointerDown}
         >
-          {/* Ambient center glow */}
+          {/* Visible 3D Orbit Center Axis & Glowing Pillar */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[var(--color-coral)]/10 blur-[80px] pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 h-32 sm:h-48 rounded-full bg-[var(--color-coral)]/15 blur-[60px] pointer-events-none"
             aria-hidden="true" 
           />
 
-          {/* 3D Rotating Cylinder Carousel */}
+          {/* 3D Orbit Ring Floor Indicator (Visible Rotation Orbit) */}
+          <div 
+            className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 pointer-events-none rounded-full border-2 border-dashed border-[var(--color-plum)]/20"
+            style={{
+              width: `${radius * 2.15}px`,
+              height: `${radius * 0.9}px`,
+              transform: "rotateX(72deg)",
+              boxShadow: "0 0 40px rgba(255, 112, 93, 0.12)",
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Central 3D Core Marker */}
+          <div 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center justify-center"
+            aria-hidden="true"
+          >
+            <div className="w-8 h-8 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 flex items-center justify-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-[var(--color-coral)] animate-ping" />
+            </div>
+            <span className="text-[10px] font-mono tracking-widest text-[var(--color-muted)] uppercase mt-2 opacity-60">
+              360° Orbit
+            </span>
+          </div>
+
+          {/* 3D Rotating Cylinder Carousel (360-Degree Full Visibility) */}
           <div 
             className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px] transition-transform duration-75 ease-out"
             style={{
@@ -199,6 +224,11 @@ export function ProjectsShowcase() {
               const zDepth = Math.cos(currentAngleRad);
               const zIndex = Math.round((zDepth + 1) * 50) + 1; // 1 (back) to 101 (front)
               const isFront = zDepth > 0.55;
+              const isBack = zDepth < -0.2;
+
+              // Scale & Opacity based on 3D depth for realistic 360-degree feel
+              const scale = 0.82 + (zDepth + 1) * 0.09; // 0.82 in back to 1.0 in front
+              const opacity = isFront ? 1 : isBack ? 0.75 : 0.88;
 
               return (
                 <div
@@ -209,15 +239,15 @@ export function ProjectsShowcase() {
                   className={cn(
                     "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
                     isFront 
-                      ? "border-[var(--color-coral)]/90 shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
-                      : "border-white/80 opacity-65 hover:opacity-100 shadow-lg"
+                      ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
+                      : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
                   )}
                   style={{
                     transformStyle: "preserve-3d",
-                    transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px)`,
+                    transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
                     zIndex: zIndex,
-                    pointerEvents: zDepth < -0.2 ? "none" : "auto",
-                    backfaceVisibility: "hidden",
+                    opacity: opacity,
+                    backfaceVisibility: "visible",
                     backgroundColor: "var(--color-paper)",
                   }}
                 >
