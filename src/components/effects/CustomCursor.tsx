@@ -1,111 +1,89 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
-import { gsap } from "@/lib/gsap";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function CustomCursor() {
-  const dotRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
-  const [cursorState, setCursorState] = useState<"default" | "link" | "cta">("default");
-  const [isMobile, setIsMobile] = useState(true);
-  const posRef = useRef({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicking, setIsClicking] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {
-    const mq = window.matchMedia("(pointer: fine) and (min-width: 1024px)");
-    setIsMobile(!mq.matches);
+    // Only enable on desktop pointer devices
+    if (typeof window === "undefined") return;
+    const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+    if (!isFinePointer) return;
 
-    const handler = (e: MediaQueryListEvent) => setIsMobile(!e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
-  useEffect(() => {
-    if (isMobile || !dotRef.current || !ringRef.current) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const dot = dotRef.current;
-    const ring = ringRef.current;
-    const xDot = gsap.quickTo(dot, "x", { duration: 0.15, ease: "power2.out" });
-    const yDot = gsap.quickTo(dot, "y", { duration: 0.15, ease: "power2.out" });
-    const xRing = gsap.quickTo(ring, "x", { duration: 0.35, ease: "power2.out" });
-    const yRing = gsap.quickTo(ring, "y", { duration: 0.35, ease: "power2.out" });
+    setIsEnabled(true);
 
     const handleMouseMove = (e: MouseEvent) => {
-      posRef.current = { x: e.clientX, y: e.clientY };
-      xDot(e.clientX);
-      yDot(e.clientY);
-      xRing(e.clientX);
-      yRing(e.clientY);
-    };
+      setPosition({ x: e.clientX, y: e.clientY });
+      if (!isVisible) setIsVisible(true);
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const closestLink = target.closest("a, button, [role='button'], [data-cursor='cta']");
-      if (closestLink) {
-        if (closestLink.hasAttribute("data-cursor")) {
-          setCursorState("cta");
-        } else {
-          setCursorState("link");
-        }
+      // Check if hovering interactive element
+      const target = e.target as HTMLElement | null;
+      if (target) {
+        const isInteractive = target.closest("a, button, [role='button'], input, textarea, select, .cursor-pointer, .cursor-grab");
+        setIsHovered(Boolean(isInteractive));
       }
     };
 
-    const handleMouseOut = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.closest("a, button, [role='button'], [data-cursor='cta']")) {
-        setCursorState("default");
-      }
-    };
+    const handleMouseDown = () => setIsClicking(true);
+    const handleMouseUp = () => setIsClicking(false);
+    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseEnter = () => setIsVisible(true);
 
-    window.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseover", handleMouseOver);
-    document.addEventListener("mouseout", handleMouseOut);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseover", handleMouseOver);
-      document.removeEventListener("mouseout", handleMouseOut);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mouseenter", handleMouseEnter);
     };
-  }, [isMobile]);
+  }, [isVisible]);
 
-  if (isMobile) return null;
-
-  const dotSize = cursorState === "default" ? 8 : 0;
-  const ringSize = cursorState === "default" ? 0 : cursorState === "link" ? 40 : 56;
-  const ringBorder = cursorState === "cta" ? "2px solid var(--color-coral)" : "1.5px solid var(--color-plum)";
+  if (!isEnabled || !isVisible) return null;
 
   return (
-    <>
-      {/* Dot */}
-      <div
-        ref={dotRef}
-        className="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full"
+    <div
+      className="fixed top-0 left-0 pointer-events-none z-[99999] transition-transform duration-75 ease-out select-none"
+      style={{
+        transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
+      }}
+      aria-hidden="true"
+    >
+      {/* Mini Firmenflow ff Mark following cursor */}
+      <div 
+        className="relative -top-2 -left-2 flex items-center justify-center transition-all duration-200"
         style={{
-          width: dotSize,
-          height: dotSize,
-          marginLeft: -dotSize / 2,
-          marginTop: -dotSize / 2,
-          background: "var(--color-ink)",
-          transition: "width 0.25s ease, height 0.25s ease, margin 0.25s ease, opacity 0.25s ease",
-          opacity: cursorState === "default" ? 1 : 0,
-          mixBlendMode: "difference",
+          transform: `scale(${isClicking ? 0.8 : isHovered ? 1.35 : 1})`,
         }}
-      />
-      {/* Ring */}
-      <div
-        ref={ringRef}
-        className="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full"
-        style={{
-          width: ringSize,
-          height: ringSize,
-          marginLeft: -ringSize / 2,
-          marginTop: -ringSize / 2,
-          border: ringBorder,
-          transition: "width 0.3s ease, height 0.3s ease, margin 0.3s ease, border 0.3s ease, opacity 0.3s ease",
-          opacity: cursorState === "default" ? 0 : 0.8,
-          backdropFilter: cursorState === "cta" ? "blur(4px)" : "none",
-        }}
-      />
-    </>
+      >
+        {/* Subtle glow on hover */}
+        <div 
+          className="absolute -inset-1 rounded-full bg-[var(--color-coral)]/30 blur-sm transition-opacity duration-200"
+          style={{ opacity: isHovered ? 1 : 0 }}
+        />
+
+        {/* 3D Ribbon Monogram Cursor Mark */}
+        <div className="relative w-5 h-5 rounded-full bg-white/95 shadow-md border border-[var(--color-plum)]/15 flex items-center justify-center p-0.5 backdrop-blur-sm">
+          <Image
+            src="/brand/firmenflow-mark.webp"
+            alt=""
+            width={20}
+            height={20}
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+    </div>
   );
 }

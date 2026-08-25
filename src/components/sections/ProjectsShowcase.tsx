@@ -196,17 +196,42 @@ export function ProjectsShowcase() {
             aria-hidden="true"
           />
 
-          {/* Central 3D Core Marker */}
+          {/* Central 3D Core with Firmenflow Logo & 360° Rotating Badge */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center justify-center"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center justify-center z-0"
             aria-hidden="true"
           >
-            <div className="w-8 h-8 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[var(--color-coral)] animate-ping" />
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+              {/* Ambient Glow */}
+              <div className="absolute inset-0 rounded-full bg-[var(--color-coral)]/20 blur-xl animate-pulse" />
+
+              {/* Rotating circular text */}
+              <div className="w-full h-full absolute inset-0 rotating-badge opacity-70">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <path
+                    id="orbitCenterPath"
+                    d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
+                    fill="none"
+                  />
+                  <text className="text-[10px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
+                    <textPath href="#orbitCenterPath" startOffset="0%">
+                      FIRMENFLOW • 360° •
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+
+              {/* 3D Ribbon Logo in center */}
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 shadow-md border border-white/60 flex items-center justify-center p-1.5 backdrop-blur-sm">
+                <Image
+                  src="/brand/firmenflow-mark.webp"
+                  alt="Firmenflow 360° Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
-            <span className="text-[10px] font-mono tracking-widest text-[var(--color-muted)] uppercase mt-2 opacity-60">
-              360° Orbit
-            </span>
           </div>
 
           {/* 3D Rotating Cylinder Carousel (360-Degree Full Visibility) */}

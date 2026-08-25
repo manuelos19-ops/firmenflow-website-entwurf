@@ -11,7 +11,6 @@ import {
   Sparkles, 
   ArrowRight, 
   CheckCircle2, 
-  MapPin, 
   Star,
   Users,
   SearchX,
@@ -45,11 +44,11 @@ const storySteps: StoryStep[] = [
     subtitle: "Online unsichtbar im Alltag",
     body: "Du stehst im Laden, gibst alles und lieferst erstklassige Qualität – doch potenzielle Kunden suchen auf dem Smartphone und laufen einfach vorbei, weil dein Betrieb digital nicht auffindbar ist.",
     image: "/media/story/story-1-unsichtbar.webp",
-    imageAlt: "Inhaber steht mit Schild vor seinem Laden, Passanten schauen auf Smartphones",
+    imageAlt: "Inhaber steht mit Schild 'Hier ist meine Bäckerei' vor seinem Laden, Passanten schauen auf Smartphones",
     icon: SearchX,
     badge: {
       icon: SearchX,
-      text: "0 Anfragen",
+      text: "0 Anfragen online",
       sub: "Kunden laufen vorbei",
     },
     highlights: [
@@ -70,8 +69,8 @@ const storySteps: StoryStep[] = [
     icon: Laptop,
     badge: {
       icon: Star,
-      text: "5.0 ★★★★★",
-      sub: "Google 360° & Webdesign",
+      text: "5.0 ★★★★★ Google 360°",
+      sub: "Modernes Webdesign",
     },
     highlights: [
       "Persönlicher Ansprechpartner (Manu)",
@@ -91,7 +90,7 @@ const storySteps: StoryStep[] = [
     icon: Users,
     badge: {
       icon: Users,
-      text: "Voller Laden",
+      text: "Voller Betrieb & Gäste",
       sub: "Echte Stammkunden",
     },
     highlights: [
@@ -174,7 +173,7 @@ export function StorySection() {
           </div>
         </div>
 
-        {/* 3 Story Cards Grid (Desktop: 3 Columns, Mobile: Stack with Highlights) */}
+        {/* 3 Story Cards Grid (All 3 100% fully visible with large, legible images) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8 items-stretch">
           {storySteps.map((step, idx) => {
             const isSelected = activeStep === idx;
@@ -188,27 +187,24 @@ export function StorySection() {
                 className={cn(
                   "story-card flex flex-col justify-between bg-white rounded-3xl border-2 transition-all duration-500 overflow-hidden shadow-xl group",
                   isSelected
-                    ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/15 scale-[1.02] ring-4 ring-[var(--color-coral)]/10"
-                    : "border-[var(--color-line)]/80 hover:border-[var(--color-plum)]/40 hover:shadow-2xl"
+                    ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/20 scale-[1.01] ring-4 ring-[var(--color-coral)]/10"
+                    : "border-[var(--color-line)] hover:border-[var(--color-plum)]/50 hover:shadow-2xl"
                 )}
               >
-                {/* Visual Image Box with 3D Pixar Illustration */}
-                <div className="relative w-full h-[260px] sm:h-[300px] md:h-[320px] overflow-hidden bg-slate-100 shrink-0">
+                {/* Visual Image Box: Generous height so signs and all characters are 100% visible & readable */}
+                <div className="relative w-full h-[360px] sm:h-[420px] md:h-[460px] overflow-hidden bg-[#e8e4df] shrink-0">
                   <Image
                     src={step.image}
                     alt={step.imageAlt}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   
-                  {/* Subtle top/bottom gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-60 group-hover:opacity-40 transition-opacity" />
-
-                  {/* Top Step Number Badge */}
+                  {/* Subtle top badge layer */}
                   <div className="absolute top-3.5 left-3.5 z-10">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-bold font-mono">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/30 text-white text-xs font-bold font-mono shadow-md">
                       {step.number}
                     </span>
                   </div>
@@ -217,45 +213,38 @@ export function StorySection() {
                   <div className="absolute top-3.5 right-3.5 z-10">
                     <span 
                       className={cn(
-                        "inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full backdrop-blur-md shadow-sm",
-                        step.tagVariant === "problem" && "bg-rose-500/90 text-white",
+                        "inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full backdrop-blur-md shadow-md",
+                        step.tagVariant === "problem" && "bg-rose-600/90 text-white",
                         step.tagVariant === "solution" && "bg-[var(--color-plum)]/90 text-white",
-                        step.tagVariant === "success" && "bg-emerald-500/90 text-white"
+                        step.tagVariant === "success" && "bg-emerald-600/90 text-white"
                       )}
                     >
                       <Icon className="w-3.5 h-3.5 shrink-0" />
                       {step.tag}
                     </span>
                   </div>
-
-                  {/* Floating Action Badge inside Image */}
-                  <div className="absolute bottom-3.5 left-3.5 right-3.5 z-10">
-                    <div className="bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/50 flex items-center gap-3">
-                      <div 
-                        className={cn(
-                          "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm",
-                          step.tagVariant === "problem" && "bg-rose-100 text-rose-600",
-                          step.tagVariant === "solution" && "bg-amber-100 text-amber-600",
-                          step.tagVariant === "success" && "bg-emerald-100 text-emerald-600"
-                        )}
-                      >
-                        <BadgeIcon className="w-4 h-4" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="text-xs font-bold text-[var(--color-ink)] truncate leading-tight">
-                          {step.badge.text}
-                        </p>
-                        <p className="text-[11px] text-[var(--color-muted)] truncate leading-tight mt-0.5">
-                          {step.badge.sub}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Card Content Description */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                   <div>
+                    {/* Status Pill Badge inside content (does not cover the photo) */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--color-paper)] border border-[var(--color-line)] mb-4">
+                      <div 
+                        className={cn(
+                          "w-6 h-6 rounded-lg flex items-center justify-center shrink-0",
+                          step.tagVariant === "problem" && "bg-rose-100 text-rose-600",
+                          step.tagVariant === "solution" && "bg-amber-100 text-amber-600",
+                          step.tagVariant === "success" && "bg-emerald-100 text-emerald-600"
+                        )}
+                      >
+                        <BadgeIcon className="w-3.5 h-3.5" />
+                      </div>
+                      <span className="text-xs font-bold text-[var(--color-ink)]">
+                        {step.badge.text}
+                      </span>
+                    </div>
+
                     <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-1 block">
                       {step.subtitle}
                     </span>
