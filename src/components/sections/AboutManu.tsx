@@ -2,93 +2,109 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
-import { portraitAssets } from "@/content/assets";
-import { cn } from "@/lib/cn";
+import { Sparkles, MapPin, ShieldCheck, HeartHandshake, Coffee } from "lucide-react";
 
 export function AboutManu() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
-    // Ken-Burns effect on scroll
-    if (imageRef.current) {
-      gsap.fromTo(
-        imageRef.current,
-        { scale: 1 },
-        {
-          scale: 1.05,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1,
-          },
-        }
-      );
-    }
-
-    // Text stagger reveal
-    if (textRef.current && textRef.current.children) {
-      gsap.from(textRef.current.children, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 85%",
-          once: true,
-        },
-      });
-    }
-  }, { scope: containerRef });
-
   const { about } = homeContent;
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 overflow-hidden bg-paper">
+    <section 
+      ref={containerRef} 
+      id="ueber-manu"
+      className="py-24 md:py-36 overflow-hidden bg-[var(--color-paper)] relative border-t border-[var(--color-line)]/50"
+    >
       <Container>
-        <div className="flex flex-col lg:flex-row items-center relative">
-          {/* Image Column */}
-          <div className="w-full lg:w-[60%] relative z-0">
-            <div 
-              className="relative aspect-[4/5] w-full overflow-hidden" 
-              style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }}
-            >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Authentic Nature Photo Column Left */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-md h-[460px] sm:h-[520px] md:h-[560px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
               <Image
-                ref={imageRef}
-                src={portraitAssets.about.src}
-                alt={portraitAssets.about.alt}
+                src="/media/portraits/manu-nature-seated.webp"
+                alt="Manu Landeck – Persönlicher Webdesigner aus Wesel"
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                priority
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 500px"
               />
+
+              {/* Bottom Subtle Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent opacity-80" />
+
+              {/* In-Photo Badge */}
+              <div className="absolute bottom-5 left-5 right-5 z-10 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/60 flex items-center justify-between">
+                <div>
+                  <h4 className="text-base font-bold text-[var(--color-ink)] leading-tight">
+                    Manu Landeck
+                  </h4>
+                  <p className="text-xs text-[var(--color-coral)] font-semibold mt-0.5">
+                    Gründer von Firmenflow
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-[11px] font-medium text-[var(--color-muted)] bg-[var(--color-paper)] px-2.5 py-1 rounded-full border border-[var(--color-line)]">
+                  <MapPin className="w-3 h-3 text-[var(--color-coral)]" />
+                  <span>Wesel &amp; Niederrhein</span>
+                </div>
+              </div>
             </div>
           </div>
           
-          {/* Text Content Column */}
-          <div 
-            ref={textRef}
-            className="w-full lg:w-[50%] lg:-ml-[10%] relative z-10 mt-12 lg:mt-0 bg-white p-8 md:p-14 shadow-xl rounded-2xl border border-line/20"
-          >
-            <span className="text-coral font-semibold uppercase tracking-wider text-sm block mb-4">
-              {about.eyebrow}
+          {/* Text Content Column Right */}
+          <div className="lg:col-span-7">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{about.eyebrow}</span>
             </span>
-            <h2 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-ink leading-tight mb-6">
-              {about.title}
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)] font-bold leading-[1.15] mb-6">
+              Websites mit <br />
+              <span className="text-[var(--color-coral)] font-editorial italic font-normal">persönlicher Verantwortung.</span>
             </h2>
-            <p className="text-muted text-lg leading-relaxed">
+
+            <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
               {about.body}
             </p>
+
+            {/* 3 Personal Principles */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-[var(--color-line)]">
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center mb-3">
+                  <HeartHandshake className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-[var(--color-ink)] mb-1">
+                  Auf Augenhöhe
+                </h4>
+                <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                  Kein Agentur-Fachchinesisch, sondern ehrliche Gespräche.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center mb-3">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-[var(--color-ink)] mb-1">
+                  100% Verlässlich
+                </h4>
+                <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                  Feste Absprachen, pünktliche Umsetzung und sauberer Code.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+                <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
+                  <Coffee className="w-4 h-4" />
+                </div>
+                <h4 className="text-sm font-bold text-[var(--color-ink)] mb-1">
+                  Vor Ort da
+                </h4>
+                <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                  Gerne auch persönlich bei dir vor Ort am Niederrhein.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

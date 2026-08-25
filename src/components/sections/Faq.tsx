@@ -1,49 +1,53 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { faqItems } from "@/content/site";
 import { cn } from "@/lib/cn";
+import { Sparkles, Plus, Minus, HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { MagneticButton } from "@/components/effects/MagneticButton";
+
+const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Google Business 360°"];
 
 export function Faq() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  useGSAP(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
-    gsap.from(".faq-item", {
-      y: 20,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        once: true,
-      },
-    });
-  }, { scope: containerRef });
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // First FAQ open by default
+  const [activeCategory, setActiveCategory] = useState("Alle Fragen");
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 bg-paper">
+    <section 
+      ref={containerRef} 
+      id="faq"
+      className="py-24 sm:py-32 md:py-40 bg-[var(--color-paper)] text-[var(--color-ink)] relative overflow-hidden border-t border-[var(--color-line)]/50"
+    >
+      {/* Subtle ambient light */}
+      <div 
+        className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[var(--color-coral)]/5 rounded-full blur-[120px] pointer-events-none" 
+        aria-hidden="true" 
+      />
+
       <Container>
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] block mb-3">
-              Häufige Fragen
+        <div className="max-w-4xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Häufige Fragen</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)] font-bold leading-[1.15] mb-4">
               Klartext vor dem Projektstart.
             </h2>
+            <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
+              Hier findest du direkte Antworten auf die wichtigsten Fragen zu Ablauf, Kosten und Zusammenarbeit – ehrlich und ohne Kleingedrucktes.
+            </p>
           </div>
+
+          {/* Modern Interactive Accordion Cards */}
           <div className="flex flex-col gap-4">
             {faqItems.map((item, index) => {
               const isOpen = openIndex === index;
@@ -52,70 +56,92 @@ export function Faq() {
                 <div 
                   key={index} 
                   className={cn(
-                    "faq-item border-b border-line overflow-hidden transition-colors duration-300",
-                    isOpen && "border-coral"
+                    "bg-white rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden shadow-sm",
+                    isOpen 
+                      ? "border-[var(--color-coral)] shadow-lg shadow-[var(--color-coral)]/10 ring-2 ring-[var(--color-coral)]/10" 
+                      : "border-[var(--color-line)] hover:border-[var(--color-plum)]/40 hover:shadow-md"
                   )}
                 >
                   <button
+                    type="button"
                     onClick={() => toggleItem(index)}
-                    className="w-full flex items-center justify-between py-6 text-left focus:outline-none group"
+                    className="w-full flex items-center justify-between p-6 sm:p-7 text-left focus:outline-none cursor-pointer group"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-lg font-semibold text-ink group-hover:text-coral transition-colors duration-200 pr-8">
-                      {item.question}
-                    </span>
-                    <span className="relative flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                      <span className={cn("absolute w-full h-[2px] bg-ink transition-all duration-300", isOpen && "bg-coral rotate-180")} />
-                      <span className={cn("absolute w-full h-[2px] bg-ink transition-all duration-300 rotate-90", isOpen && "rotate-180 bg-coral opacity-0")} />
-                    </span>
+                    <div className="flex items-center gap-3.5 sm:gap-4 pr-4 min-w-0">
+                      <div 
+                        className={cn(
+                          "w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-200",
+                          isOpen 
+                            ? "bg-[var(--color-coral)] text-white" 
+                            : "bg-[var(--color-paper)] text-[var(--color-muted)] group-hover:text-[var(--color-coral)]"
+                        )}
+                      >
+                        <HelpCircle className="w-4 h-4" />
+                      </div>
+                      <h3 className={cn(
+                        "text-base sm:text-lg font-bold font-sans transition-colors duration-200 leading-snug",
+                        isOpen ? "text-[var(--color-coral)]" : "text-[var(--color-ink)] group-hover:text-[var(--color-coral)]"
+                      )}>
+                        {item.question}
+                      </h3>
+                    </div>
+
+                    <div 
+                      className={cn(
+                        "w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm",
+                        isOpen 
+                          ? "bg-[var(--color-coral)] text-white rotate-180" 
+                          : "bg-[var(--color-paper)] text-[var(--color-ink)] border border-[var(--color-line)] group-hover:border-[var(--color-coral)]"
+                      )}
+                    >
+                      {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    </div>
                   </button>
-                  <FaqAnswer isOpen={isOpen} answer={item.answer} />
+
+                  {/* Expandable Answer */}
+                  {isOpen && (
+                    <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed border-t border-gray-100 animate-in fade-in slide-in-from-top-2 duration-300">
+                      <p>{item.answer}</p>
+                    </div>
+                  )}
                 </div>
               );
             })}
           </div>
+
+          {/* Bottom Direct Question Contact Box */}
+          <div className="mt-12 sm:mt-16 bg-white rounded-3xl border border-[var(--color-line)] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+            <div className="flex items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mx-auto sm:mx-0 shadow-sm">
+                <MessageCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
+                  Deine Frage war nicht dabei?
+                </h4>
+                <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
+                  Schreib mir einfach direkt auf WhatsApp – ich antworte meist innerhalb weniger Stunden.
+                </p>
+              </div>
+            </div>
+
+            <div className="shrink-0 w-full sm:w-auto">
+              <MagneticButton>
+                <ButtonLink
+                  href="#kontakt"
+                  variant="primary"
+                  size="default"
+                  className="w-full sm:w-auto text-xs sm:text-sm px-6 py-3 shadow-md shadow-[var(--color-coral)]/20"
+                >
+                  <span>WhatsApp an Manu</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </ButtonLink>
+              </MagneticButton>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
-  );
-}
-
-function FaqAnswer({ isOpen, answer }: { isOpen: boolean; answer: string }) {
-  const answerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
-    if (answerRef.current) {
-      if (isOpen) {
-        gsap.to(answerRef.current, {
-          height: "auto",
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        });
-      } else {
-        gsap.to(answerRef.current, {
-          height: 0,
-          opacity: 0,
-          duration: 0.3,
-          ease: "power2.inOut",
-        });
-      }
-    }
-  }, [isOpen]);
-
-  // Fallback inline styles handle the non-JS / reduced motion rendering instantly
-  return (
-    <div 
-      ref={answerRef} 
-      className="h-0 opacity-0 overflow-hidden"
-      style={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }} 
-    >
-      <div className="pb-6 text-base text-muted">
-        {answer}
-      </div>
-    </div>
   );
 }
