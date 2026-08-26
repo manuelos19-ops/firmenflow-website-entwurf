@@ -71,7 +71,7 @@ export function ProjectsShowcase() {
           setRotation((prev) => prev + velocityRef.current);
           velocityRef.current *= 0.92; // friction
         } else if (isAutoRotating) {
-          // Slow down slightly on card hover (4 deg/s), otherwise normal orbit (14 deg/s)
+          // Slow down slightly on card hover (4 deg/s on desktop), otherwise normal orbit (14 deg/s)
           const currentSpeed = hoveredCardIndex !== null ? 4 : 14;
           setRotation((prev) => prev - currentSpeed * delta);
         }
@@ -130,7 +130,7 @@ export function ProjectsShowcase() {
     };
   }, []);
 
-  // Dedicated Native Touch Handlers for Android Chrome
+  // Dedicated Native Touch Handlers for Mobile WebKit & Android Chrome
   const handleTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length !== 1) return;
     isDraggingRef.current = true;
@@ -213,52 +213,61 @@ export function ProjectsShowcase() {
         <div 
           ref={containerRef}
           className="relative w-full h-[430px] sm:h-[490px] md:h-[550px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none touch-pan-y"
-          style={{ perspective: "1300px", touchAction: "pan-y" }}
+          style={{ 
+            perspective: "1300px", 
+            WebkitPerspective: "1300px",
+            touchAction: "pan-y" 
+          }}
           onPointerDown={handlePointerDown}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchEnd}
         >
-          {/* Visible 3D Orbit Center Axis & Glowing Pillar */}
+          {/* Ambient 3D Orbit Center Glow */}
           <div 
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 h-48 sm:h-64 rounded-full bg-[var(--color-coral)]/15 blur-[70px] pointer-events-none"
             aria-hidden="true" 
           />
 
-          {/* Clean Glowing 3D Orbit Stage Floor (No dashed lines) */}
+          {/* Clean Glowing 3D Orbit Stage Floor */}
           <div 
             className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 pointer-events-none rounded-full bg-gradient-to-r from-[var(--color-coral)]/10 via-[var(--color-plum)]/20 to-[var(--color-coral)]/10 blur-xl"
             style={{
               width: `${radius * 2.2}px`,
               height: `${radius * 0.9}px`,
               transform: "rotateX(75deg)",
+              WebkitTransform: "rotateX(75deg)",
             }}
             aria-hidden="true"
           />
 
-          {/* 3D Rotating Cylinder Carousel (360-Degree Full Visibility) */}
+          {/* 3D Rotating Cylinder Carousel - Single Stable DOM Tree */}
           <div 
-            className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px] transition-transform duration-75 ease-out"
+            className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px]"
             style={{
               transformStyle: "preserve-3d",
+              WebkitTransformStyle: "preserve-3d",
               transform: `rotateY(${rotation}deg)`,
+              WebkitTransform: `rotateY(${rotation}deg)`,
+              willChange: "transform",
             }}
           >
-            {/* 1. Back Cards (zDepth < 0: physically behind center logo) */}
+            {/* Stable Single-Pass Card Render (Zero DOM destruction/remounting for silky Safari 60fps) */}
             {allProjects.map((project, idx) => {
               const cardBaseAngle = idx * anglePerCard;
               const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
-              const zDepth = Math.cos(currentAngleRad);
-              if (zDepth >= 0) return null;
+              const zDepth = Math.cos(currentAngleRad); // -1 (far back) to +1 (closest front)
 
               const scale = 0.82 + (zDepth + 1) * 0.09;
-              const opacity = zDepth < -0.2 ? 0.72 : 0.88;
-              const zIndex = Math.round((zDepth + 1) * 20) + 1; // 1 to 21
+              const isFront = zDepth > 0.55;
+              const opacity = zDepth < -0.2 ? 0.72 : 1;
+              // zIndex ranges from 1 (back) to 101 (front), with center core at 50
+              const zIndex = Math.round((zDepth + 1) * 50) + 1;
 
               return (
                 <div
-                  key={`back-${project.slug}`}
+                  key={project.slug}
                   onClick={() => handleCardClick(project, idx, zDepth)}
                   onMouseEnter={() => {
                     if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
@@ -266,18 +275,27 @@ export function ProjectsShowcase() {
                     }
                   }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
-                  className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group cursor-pointer border-2 border-white/85 hover:opacity-100 hover:border-[var(--color-coral)]/60"
+                  className={cn(
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none",
+                    isFront 
+                      ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
+                      : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
+                  )}
                   style={{
                     transformStyle: "preserve-3d",
+                    WebkitTransformStyle: "preserve-3d",
                     transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
+                    WebkitTransform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
                     zIndex: zIndex,
                     opacity: opacity,
-                    backfaceVisibility: "visible",
                     backgroundColor: "var(--color-paper)",
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
+                    willChange: "transform",
                   }}
                 >
                   {/* Browser Mockup Top Bar */}
-                  <div className="bg-white/90 backdrop-blur-md px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
+                  <div className="bg-white/95 px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
                     <div className="flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-red-400/90 inline-block" />
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-400/90 inline-block" />
@@ -304,12 +322,12 @@ export function ProjectsShowcase() {
 
                     <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md">
                           <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                           Live
                         </span>
                       ) : (
-                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md backdrop-blur-md">
+                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md">
                           Konzept
                         </span>
                       )}
@@ -317,7 +335,7 @@ export function ProjectsShowcase() {
                   </div>
 
                   {/* Card Bottom Meta */}
-                  <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-[var(--color-line)] flex items-center justify-between">
+                  <div className="p-3.5 sm:p-4 bg-white/95 border-t border-[var(--color-line)] flex items-center justify-between">
                     <div className="min-w-0 pr-2">
                       <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
                         {project.name}
@@ -343,11 +361,14 @@ export function ProjectsShowcase() {
               );
             })}
 
-            {/* 2. Central Floating FIRMENflow 360° Wordmark Core (Z-Index 35, always in middle) */}
+            {/* Central Floating FIRMENflow 360° Wordmark Core (Z-Index 50, strictly in middle of orbit) */}
             <div 
-              className="absolute inset-0 m-auto w-48 h-24 pointer-events-none flex flex-col items-center justify-center z-35 select-none"
+              className="absolute inset-0 m-auto w-48 h-24 pointer-events-none flex flex-col items-center justify-center select-none"
               style={{
                 transform: `rotateY(${-rotation}deg) translateZ(0px)`,
+                WebkitTransform: `rotateY(${-rotation}deg) translateZ(0px)`,
+                zIndex: 50,
+                willChange: "transform",
               }}
               aria-hidden="true"
             >
@@ -360,9 +381,9 @@ export function ProjectsShowcase() {
                 {/* Ambient Core Glow */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--color-coral)]/30 to-[var(--color-plum)]/30 blur-2xl animate-pulse" />
 
-                {/* Clean Wordmark + 360° Badge (Top logo mark removed) */}
+                {/* Clean Wordmark + 360° Badge */}
                 <div className="flex flex-col items-center gap-1.5">
-                  <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)] backdrop-blur-md">
+                  <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)]">
                     <span className="font-display font-black text-base sm:text-lg tracking-tight text-[var(--color-ink)]">FIRMEN</span>
                     <span className="font-editorial italic font-normal text-base sm:text-lg text-[var(--color-coral)]">flow</span>
                   </div>
@@ -372,109 +393,6 @@ export function ProjectsShowcase() {
                 </div>
               </div>
             </div>
-
-            {/* 3. Front Cards (zDepth >= 0: physically IN FRONT of central logo) */}
-            {allProjects.map((project, idx) => {
-              const cardBaseAngle = idx * anglePerCard;
-              const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
-              const zDepth = Math.cos(currentAngleRad);
-              if (zDepth < 0) return null;
-
-              const scale = 0.82 + (zDepth + 1) * 0.09;
-              const isFront = zDepth > 0.55;
-              const zIndex = Math.round(zDepth * 40) + 50; // 50 to 90 (Guaranteed in front of core)
-
-              return (
-                <div
-                  key={`front-${project.slug}`}
-                  onClick={() => handleCardClick(project, idx, zDepth)}
-                  onMouseEnter={() => {
-                    if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
-                      setHoveredCardIndex(idx);
-                    }
-                  }}
-                  onMouseLeave={() => setHoveredCardIndex(null)}
-                  className={cn(
-                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
-                    isFront 
-                      ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
-                      : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
-                  )}
-                  style={{
-                    transformStyle: "preserve-3d",
-                    transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
-                    zIndex: zIndex,
-                    opacity: 1,
-                    backfaceVisibility: "visible",
-                    backgroundColor: "var(--color-paper)",
-                  }}
-                >
-                  {/* Browser Mockup Top Bar */}
-                  <div className="bg-white/90 backdrop-blur-md px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-red-400/90 inline-block" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-amber-400/90 inline-block" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/90 inline-block" />
-                    </div>
-                    <div className="text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[130px] sm:max-w-[160px] px-2 py-0.5 bg-[var(--color-paper)] rounded-md border border-[var(--color-line)]/50">
-                      {project.url.replace("https://", "").replace(/\/$/, "")}
-                    </div>
-                    <div className="w-4" />
-                  </div>
-
-                  {/* High-Res Preview Screenshot */}
-                  <div className="relative w-full h-[210px] sm:h-[250px] md:h-[290px] bg-slate-100 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      fill
-                      priority={idx === 0}
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
-                    />
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
-
-                    <div className="absolute top-2.5 right-2.5 z-10">
-                      {project.kind === "live" ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                          Live
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md backdrop-blur-md">
-                          Konzept
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Card Bottom Meta */}
-                  <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-[var(--color-line)] flex items-center justify-between">
-                    <div className="min-w-0 pr-2">
-                      <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
-                        {project.name}
-                      </h4>
-                      <p className="text-[11px] sm:text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5 truncate">
-                        <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
-                        {project.region} · {project.sector}
-                      </p>
-                    </div>
-
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      aria-label={`${project.name} in neuem Tab öffnen`}
-                      className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 hover:bg-[var(--color-coral)] hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
 
