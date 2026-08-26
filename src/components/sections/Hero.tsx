@@ -144,19 +144,22 @@ export function Hero({ whatsappUrl }: HeroProps) {
             {/* Gradient bottom overlay on photo */}
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/50 via-transparent to-transparent" />
             
-            <div className="absolute bottom-5 left-5 right-5 text-white text-sm font-medium backdrop-blur-md bg-black/30 p-3.5 rounded-2xl border border-white/20">
+            <div className="absolute bottom-5 left-5 right-5 text-white text-sm font-medium backdrop-blur-md bg-black/40 p-3.5 rounded-2xl border border-white/20 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-bold text-white text-sm sm:text-base">Manuel Landeck</p>
+                  <p className="font-bold text-white text-sm sm:text-base tracking-tight">Manuel Landeck</p>
                   <p className="text-white/80 text-xs">Webdesigner &amp; Entwickler aus Wesel</p>
                 </div>
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[11px] font-semibold text-emerald-300 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 opacity-90" />
+                  <span>Online</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Rotating Circular Badge */}
-          <div className="hero-badge-float absolute -top-5 -right-5 md:-right-7 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-[var(--color-plum)] text-white shadow-xl flex items-center justify-center p-2 z-20">
+          {/* Modern Editorial Floating Rotating Badge (Frosted Pure White + Firmenflow Flow Mark) */}
+          <div className="hero-badge-float absolute -top-5 -right-5 md:-right-7 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-white/95 text-[var(--color-ink)] shadow-2xl border-2 border-[var(--color-line)] flex items-center justify-center p-2 z-20 backdrop-blur-md">
             <div className="w-full h-full relative flex items-center justify-center rotating-badge">
               <svg viewBox="0 0 100 100" className="w-full h-full">
                 <path
@@ -164,14 +167,21 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                   fill="none"
                 />
-                <text className="text-[10.5px] uppercase font-bold tracking-[0.22em] fill-[var(--color-paper)]">
+                <text className="text-[10px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
                   <textPath href="#circlePath" startOffset="0%">
-                    WESEL • NIEDERRHEIN • MANU •
+                    FIRMENFLOW · WEBDESIGN · WESEL · 
                   </textPath>
                 </text>
               </svg>
             </div>
-            <Sparkles className="w-5 h-5 text-[var(--color-coral)] absolute" />
+            {/* Elegant Custom Firmenflow Fluid Wave Center Mark (No off-brand star) */}
+            <div className="absolute w-8 h-8 rounded-full bg-gradient-to-tr from-[var(--color-plum)] to-[var(--color-plum-light)] flex items-center justify-center shadow-md">
+              <svg viewBox="0 0 24 24" className="w-4 h-4 text-[var(--color-coral)] fill-current" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" opacity="0" />
+                <path d="M4 12c2.5-3 5.5-3 8 0s5.5 3 8 0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="12" cy="7" r="1.8" fill="var(--color-coral)" />
+              </svg>
+            </div>
           </div>
         </div>
       </Container>

@@ -45,9 +45,9 @@ export function ProjectsShowcase() {
     const updateRadius = () => {
       const w = window.innerWidth;
       if (w < 640) {
-        setRadius(210); // Mobile
+        setRadius(195); // Mobile
       } else if (w < 1024) {
-        setRadius(270); // Tablet
+        setRadius(260); // Tablet
       } else {
         setRadius(340); // Desktop
       }
@@ -242,28 +242,29 @@ export function ProjectsShowcase() {
             aria-hidden="true"
           />
 
-          {/* 3D Rotating Cylinder Carousel - Single Stable DOM Tree */}
+          {/* 3D Rotating Stage with All 4 Visible Cards & Central Core */}
           <div 
             className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px]"
             style={{
               transformStyle: "preserve-3d",
               WebkitTransformStyle: "preserve-3d",
-              transform: `rotateY(${rotation}deg)`,
-              WebkitTransform: `rotateY(${rotation}deg)`,
-              willChange: "transform",
             }}
           >
-            {/* Stable Single-Pass Card Render (Zero DOM destruction/remounting for silky Safari 60fps) */}
+            {/* All 4 Cards: Permanently visible 360° orbiting around central logo */}
             {allProjects.map((project, idx) => {
               const cardBaseAngle = idx * anglePerCard;
               const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
-              const zDepth = Math.cos(currentAngleRad); // -1 (far back) to +1 (closest front)
+              
+              // True 3D Parametric Orbit Coordinates
+              const x = Math.sin(currentAngleRad) * radius;
+              const z = Math.cos(currentAngleRad) * radius; // -radius (back) to +radius (front)
+              const zDepth = z / radius; // -1 to +1
 
-              const scale = 0.82 + (zDepth + 1) * 0.09;
+              const scale = 0.78 + (zDepth + 1) * 0.11; // 0.78 (back) to 1.0 (front)
+              const opacity = 0.72 + (zDepth + 1) * 0.14; // 0.72 (back) to 1.0 (front)
               const isFront = zDepth > 0.55;
-              const opacity = zDepth < -0.2 ? 0.72 : 1;
-              // zIndex ranges from 1 (back) to 101 (front), with center core at 50
-              const zIndex = Math.round((zDepth + 1) * 50) + 1;
+              // Center logo is at zIndex 50. Back cards sit at 2..48, front cards sit at 52..98
+              const zIndex = Math.round((zDepth + 1) * 48) + 2;
 
               return (
                 <div
@@ -282,15 +283,11 @@ export function ProjectsShowcase() {
                       : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
                   )}
                   style={{
-                    transformStyle: "preserve-3d",
-                    WebkitTransformStyle: "preserve-3d",
-                    transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
-                    WebkitTransform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
+                    transform: `translate3d(${x}px, 0px, ${z}px) scale(${scale})`,
+                    WebkitTransform: `translate3d(${x}px, 0px, ${z}px) scale(${scale})`,
                     zIndex: zIndex,
                     opacity: opacity,
                     backgroundColor: "var(--color-paper)",
-                    backfaceVisibility: "hidden",
-                    WebkitBackfaceVisibility: "hidden",
                     willChange: "transform",
                   }}
                 >
@@ -365,8 +362,8 @@ export function ProjectsShowcase() {
             <div 
               className="absolute inset-0 m-auto w-48 h-24 pointer-events-none flex flex-col items-center justify-center select-none"
               style={{
-                transform: `rotateY(${-rotation}deg) translateZ(0px)`,
-                WebkitTransform: `rotateY(${-rotation}deg) translateZ(0px)`,
+                transform: "translate3d(0px, 0px, 0px)",
+                WebkitTransform: "translate3d(0px, 0px, 0px)",
                 zIndex: 50,
                 willChange: "transform",
               }}
@@ -478,26 +475,6 @@ export function ProjectsShowcase() {
                 <ExternalLink className="w-4 h-4 text-white shrink-0" />
               </a>
             </div>
-          </div>
-
-          {/* 4 Thumbnails / Quick Jump Dots */}
-          <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[var(--color-line)]/50">
-            {allProjects.map((p, idx) => (
-              <button
-                key={p.slug}
-                onClick={() => rotateToIndex(idx)}
-                aria-label={`Zu ${p.name} drehen`}
-                className={cn(
-                  "flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer",
-                  activeIndex === idx
-                    ? "bg-[var(--color-coral)] text-white shadow-md shadow-[var(--color-coral)]/20 scale-105"
-                    : "bg-[var(--color-paper)] text-[var(--color-muted)] hover:text-[var(--color-ink)] border border-[var(--color-line)]"
-                )}
-              >
-                <span className={cn("w-1.5 h-1.5 rounded-full", activeIndex === idx ? "bg-white" : "bg-[var(--color-muted)]")} />
-                <span>{p.name.split(" ")[0]}</span>
-              </button>
-            ))}
           </div>
         </div>
       </Container>

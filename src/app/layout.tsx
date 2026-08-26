@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import { GrainOverlay } from "@/components/effects/GrainOverlay";
 import { ScrollProgress } from "@/components/effects/ScrollProgress";
-import { GlobalParticleField } from "@/components/effects/GlobalParticleField";
+import { GlobalAmbientBackground } from "@/components/effects/GlobalAmbientBackground";
 import { SectionDotNav } from "@/components/navigation/SectionDotNav";
 import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             Zum Inhalt springen
           </a>
           <ScrollProgress />
-          <GlobalParticleField />
+          <GlobalAmbientBackground />
           <SectionDotNav />
           <GrainOverlay />
           <SiteHeader />

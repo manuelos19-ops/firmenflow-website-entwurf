@@ -238,13 +238,13 @@ img {
 }
 
 .animate-marquee {
-  animation: marquee-scroll 48s linear infinite;
+  animation: marquee-scroll 80s linear infinite;
   will-change: transform;
 }
 
 @media (max-width: 768px) {
   .animate-marquee {
-    animation-duration: 32s;
+    animation-duration: 95s;
   }
 }
 
