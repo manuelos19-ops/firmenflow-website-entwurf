@@ -13,10 +13,7 @@ export function SiteFooter() {
           {/* Brand & Slogan */}
           <div className="md:col-span-2 space-y-4">
             <BrandMark variant="light" />
-            <p className="font-editorial text-lg text-white/80">
-              {siteIdentity.slogan}
-            </p>
-            <p className="text-sm text-white/70 max-w-sm leading-relaxed">
+            <p className="text-sm text-white/70 max-w-sm leading-relaxed pt-1">
               Persönliches Webdesign und digitale Sichtbarkeit für lokale Unternehmen in Wesel, am Niederrhein und in NRW.
             </p>
           </div>
