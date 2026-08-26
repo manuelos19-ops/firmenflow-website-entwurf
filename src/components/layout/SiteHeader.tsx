@@ -60,7 +60,7 @@ export function SiteHeader() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isOpen || isScrolled
-            ? "bg-[var(--color-paper)]/95 backdrop-blur-md py-3 border-b border-[var(--color-line)] shadow-sm"
+            ? "bg-[var(--color-paper)]/85 backdrop-blur-xl backdrop-saturate-150 py-3 border-b border-[var(--color-line)] shadow-sm"
             : "bg-transparent py-4 sm:py-5"
         )}
       >
@@ -76,7 +76,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] transition-colors duration-200"
+                className="text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] active:scale-[0.96] transition-all duration-150"
               >
                 {item.label}
               </Link>

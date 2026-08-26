@@ -14,7 +14,7 @@ export function AboutManu() {
     <section 
       ref={containerRef} 
       id="ueber-manu"
-      className="py-24 md:py-36 overflow-hidden bg-[var(--color-paper)] relative border-t border-[var(--color-line)]/50"
+      className="py-24 md:py-36 overflow-hidden bg-transparent relative"
     >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -53,8 +53,8 @@ export function AboutManu() {
           
           {/* Text Content Column Right */}
           <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+              <Sparkles className="w-4 h-4" />
               <span>{about.eyebrow}</span>
             </span>
 
@@ -69,7 +69,7 @@ export function AboutManu() {
 
             {/* 3 Personal Principles */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-[var(--color-line)]">
-              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.03] hover:shadow-md hover:border-[var(--color-coral)]/30 active:scale-[0.98] cursor-pointer will-change-transform">
                 <div className="w-8 h-8 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center mb-3">
                   <HeartHandshake className="w-4 h-4" />
                 </div>
@@ -81,7 +81,7 @@ export function AboutManu() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.03] hover:shadow-md hover:border-[var(--color-plum)]/30 active:scale-[0.98] cursor-pointer will-change-transform">
                 <div className="w-8 h-8 rounded-xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center mb-3">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
@@ -93,7 +93,7 @@ export function AboutManu() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm">
+              <div className="p-4 rounded-2xl bg-white border border-[var(--color-line)]/60 shadow-sm transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.03] hover:shadow-md hover:border-emerald-200 active:scale-[0.98] cursor-pointer will-change-transform">
                 <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
                   <Coffee className="w-4 h-4" />
                 </div>
@@ -101,7 +101,7 @@ export function AboutManu() {
                   Vor Ort da
                 </h4>
                 <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                  Gerne auch persönlich bei dir vor Ort am Niederrhein.
+                  Aus Wesel, für den Niederrhein und persönlich erreichbar.
                 </p>
               </div>
             </div>

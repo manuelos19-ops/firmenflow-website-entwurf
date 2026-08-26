@@ -22,8 +22,8 @@ export function MagneticButton({ children, className = "", intensity = 0.35 }: P
       gsap.to(ref.current, {
         x: x * intensity,
         y: y * intensity,
-        duration: 0.4,
-        ease: "power2.out",
+        duration: 0.25,
+        ease: "power3.out",
       });
     },
     [intensity]
@@ -34,8 +34,8 @@ export function MagneticButton({ children, className = "", intensity = 0.35 }: P
     gsap.to(ref.current, {
       x: 0,
       y: 0,
-      duration: 0.6,
-      ease: "elastic.out(1, 0.4)",
+      duration: 0.45,
+      ease: "elastic.out(1.1, 0.45)",
     });
   }, []);
 

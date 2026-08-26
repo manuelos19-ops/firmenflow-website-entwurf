@@ -133,7 +133,7 @@ export function StorySection() {
     <section 
       ref={containerRef}
       id="story"
-      className="py-24 sm:py-32 md:py-40 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden relative border-t border-[var(--color-line)]/50"
+      className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] overflow-hidden relative"
     >
       {/* Background ambient glow */}
       <div 
@@ -144,8 +144,8 @@ export function StorySection() {
       <Container>
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
+            <Sparkles className="w-4 h-4 text-[var(--color-coral)]" />
             Die Firmenflow-Story
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
@@ -188,10 +188,10 @@ export function StorySection() {
                 key={step.number}
                 onMouseEnter={() => setActiveStep(idx)}
                 className={cn(
-                  "story-card flex flex-col justify-between bg-white rounded-3xl border-2 transition-all duration-500 overflow-hidden shadow-xl group",
+                  "story-card flex flex-col justify-between bg-white rounded-3xl border-2 transition-all duration-300 ease-[var(--ease-out)] overflow-hidden shadow-lg group hover:-translate-y-2 hover:scale-[1.015] hover:shadow-2xl active:scale-[0.99] cursor-pointer will-change-transform",
                   isSelected
-                    ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/20 scale-[1.01] ring-4 ring-[var(--color-coral)]/10"
-                    : "border-[var(--color-line)] hover:border-[var(--color-plum)]/50 hover:shadow-2xl"
+                    ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/20 ring-4 ring-[var(--color-coral)]/10"
+                    : "border-[var(--color-line)] hover:border-[var(--color-coral)]/50"
                 )}
               >
                 {/* Visual Image Box: Generous height so signs and all characters are 100% visible & readable */}
@@ -202,7 +202,7 @@ export function StorySection() {
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
                   />
                   
                   {/* Subtle top badge layer */}

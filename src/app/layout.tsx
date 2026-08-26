@@ -4,8 +4,9 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import { GrainOverlay } from "@/components/effects/GrainOverlay";
-import { CustomCursor } from "@/components/effects/CustomCursor";
 import { ScrollProgress } from "@/components/effects/ScrollProgress";
+import { GlobalParticleField } from "@/components/effects/GlobalParticleField";
+import { SectionDotNav } from "@/components/navigation/SectionDotNav";
 import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -38,10 +39,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             Zum Inhalt springen
           </a>
           <ScrollProgress />
-          <CustomCursor />
+          <GlobalParticleField />
+          <SectionDotNav />
           <GrainOverlay />
           <SiteHeader />
-          <div className="flex-1">{children}</div>
+          <div className="flex-1 relative z-10">{children}</div>
           <SiteFooter />
         </SmoothScrollProvider>
         <noscript>

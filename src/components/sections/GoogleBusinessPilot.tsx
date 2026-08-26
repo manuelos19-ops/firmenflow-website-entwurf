@@ -79,24 +79,13 @@ export function GoogleBusinessPilot() {
     <section 
       ref={containerRef}
       id="google-pilot"
-      className="relative min-h-screen flex flex-col justify-center bg-[var(--color-plum)] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center bg-gradient-to-b from-transparent via-[var(--color-plum)] via-15% to-[var(--color-plum)] text-white pt-36 pb-28 md:pt-44 md:pb-36 overflow-hidden"
     >
-      {/* Wave divider at top */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-10">
-        <svg 
-          viewBox="0 0 1200 120" 
-          preserveAspectRatio="none" 
-          className="w-full h-12 md:h-20 fill-[var(--color-paper)]"
-        >
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" />
-        </svg>
-      </div>
-
       <Container className="relative z-20 my-auto">
         {/* Intro with Stop-Scroll Text Inking */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4 border border-white/10">
-            <Search className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-6 border border-white/20 shadow-md backdrop-blur-md">
+            <Search className="w-4 h-4" />
             {homeContent.pilot.eyebrow}
           </span>
 
@@ -193,7 +182,7 @@ export function GoogleBusinessPilot() {
 
         {/* 3 Action Pillars */}
         <div ref={pillarsRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-10">
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between">
+          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
             <div>
               <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4">
                 <Search className="w-5 h-5" />
@@ -205,7 +194,7 @@ export function GoogleBusinessPilot() {
             </div>
           </div>
 
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between">
+          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
             <div>
               <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4">
                 <QrCode className="w-5 h-5" />
@@ -217,7 +206,7 @@ export function GoogleBusinessPilot() {
             </div>
           </div>
 
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between">
+          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
             <div>
               <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4">
                 <MessageSquareCheck className="w-5 h-5" />

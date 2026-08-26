@@ -23,7 +23,7 @@ export function Faq() {
     <section 
       ref={containerRef} 
       id="faq"
-      className="py-24 sm:py-32 md:py-40 bg-[var(--color-paper)] text-[var(--color-ink)] relative overflow-hidden border-t border-[var(--color-line)]/50"
+      className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] relative overflow-hidden"
     >
       {/* Subtle ambient light */}
       <div 
@@ -35,8 +35,8 @@ export function Faq() {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+              <Sparkles className="w-4 h-4" />
               <span>Häufige Fragen</span>
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)] font-bold leading-[1.15] mb-4">
@@ -56,10 +56,10 @@ export function Faq() {
                 <div 
                   key={index} 
                   className={cn(
-                    "bg-white rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden shadow-sm",
+                    "bg-white rounded-2xl sm:rounded-3xl border transition-all duration-300 ease-[var(--ease-out)] overflow-hidden shadow-sm hover:-translate-y-1 hover:scale-[1.01] hover:shadow-md active:scale-[0.99] will-change-transform",
                     isOpen 
                       ? "border-[var(--color-coral)] shadow-lg shadow-[var(--color-coral)]/10 ring-2 ring-[var(--color-coral)]/10" 
-                      : "border-[var(--color-line)] hover:border-[var(--color-plum)]/40 hover:shadow-md"
+                      : "border-[var(--color-line)] hover:border-[var(--color-coral)]/40"
                   )}
                 >
                   <button

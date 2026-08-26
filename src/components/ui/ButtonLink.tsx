@@ -30,17 +30,17 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   const baseStyles =
-    "group inline-flex items-center justify-center gap-2.5 font-medium tracking-tight rounded-full select-none transition-all duration-300 ease-out cursor-pointer text-center";
+    "group inline-flex items-center justify-center gap-2.5 font-medium tracking-tight rounded-full select-none transition-all duration-150 active:scale-[0.97] cursor-pointer text-center will-change-transform";
 
   const variants = {
     primary:
-      "bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] active:scale-[0.98] shadow-md shadow-[var(--color-coral)]/20 hover:shadow-lg hover:shadow-[var(--color-coral)]/30",
+      "bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] shadow-md shadow-[var(--color-coral)]/20 hover:shadow-lg hover:shadow-[var(--color-coral)]/30",
     secondary:
-      "bg-white text-[var(--color-ink)] hover:bg-[var(--color-paper)] border border-[var(--color-line)] active:scale-[0.98] shadow-sm hover:border-[var(--color-plum)]/30",
-    dark: "bg-[var(--color-plum)] text-white hover:bg-[var(--color-plum-light)] active:scale-[0.98] shadow-md shadow-[var(--color-plum)]/20",
+      "bg-white text-[var(--color-ink)] hover:bg-[var(--color-paper)] border border-[var(--color-line)] shadow-sm hover:border-[var(--color-plum)]/30",
+    dark: "bg-[var(--color-plum)] text-white hover:bg-[var(--color-plum-light)] shadow-md shadow-[var(--color-plum)]/20",
     ghost: "bg-transparent text-[var(--color-ink)] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
     whatsapp:
-      "bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.98] shadow-md shadow-[#25D366]/25 hover:shadow-lg hover:shadow-[#25D366]/35 font-semibold",
+      "bg-[#25D366] text-white hover:bg-[#20ba5a] shadow-md shadow-[#25D366]/25 hover:shadow-lg hover:shadow-[#25D366]/35 font-semibold",
   };
 
   const sizes = {

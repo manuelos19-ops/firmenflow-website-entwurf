@@ -154,7 +154,7 @@ export function ProjectsShowcase() {
   return (
     <section 
       id="projekte" 
-      className="py-20 sm:py-28 md:py-36 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden relative"
+      className="py-20 sm:py-28 md:py-36 bg-transparent text-[var(--color-ink)] overflow-hidden relative"
     >
       <Container>
         {/* Section Header */}
@@ -180,59 +180,20 @@ export function ProjectsShowcase() {
         >
           {/* Visible 3D Orbit Center Axis & Glowing Pillar */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 h-32 sm:h-48 rounded-full bg-[var(--color-coral)]/15 blur-[60px] pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 h-48 sm:h-64 rounded-full bg-[var(--color-coral)]/15 blur-[70px] pointer-events-none"
             aria-hidden="true" 
           />
 
-          {/* 3D Orbit Ring Floor Indicator (Visible Rotation Orbit) */}
+          {/* Clean Glowing 3D Orbit Stage Floor (No dashed lines) */}
           <div 
-            className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 pointer-events-none rounded-full border-2 border-dashed border-[var(--color-plum)]/20"
+            className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 pointer-events-none rounded-full bg-gradient-to-r from-[var(--color-coral)]/10 via-[var(--color-plum)]/20 to-[var(--color-coral)]/10 blur-xl"
             style={{
-              width: `${radius * 2.15}px`,
+              width: `${radius * 2.2}px`,
               height: `${radius * 0.9}px`,
-              transform: "rotateX(72deg)",
-              boxShadow: "0 0 40px rgba(255, 112, 93, 0.12)",
+              transform: "rotateX(75deg)",
             }}
             aria-hidden="true"
           />
-
-          {/* Central 3D Core with Firmenflow Logo & 360° Rotating Badge */}
-          <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center justify-center z-0"
-            aria-hidden="true"
-          >
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-              {/* Ambient Glow */}
-              <div className="absolute inset-0 rounded-full bg-[var(--color-coral)]/20 blur-xl animate-pulse" />
-
-              {/* Rotating circular text */}
-              <div className="w-full h-full absolute inset-0 rotating-badge opacity-70">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <path
-                    id="orbitCenterPath"
-                    d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
-                    fill="none"
-                  />
-                  <text className="text-[10px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
-                    <textPath href="#orbitCenterPath" startOffset="0%">
-                      FIRMENFLOW • 360° •
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-
-              {/* 3D Ribbon Logo in center */}
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 shadow-md border border-white/60 flex items-center justify-center p-1.5 backdrop-blur-sm">
-                <Image
-                  src="/brand/firmenflow-mark.webp"
-                  alt="Firmenflow 360° Logo"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* 3D Rotating Cylinder Carousel (360-Degree Full Visibility) */}
           <div 
@@ -242,31 +203,24 @@ export function ProjectsShowcase() {
               transform: `rotateY(${rotation}deg)`,
             }}
           >
+            {/* 1. Back Cards (zDepth < 0: physically behind center logo) */}
             {allProjects.map((project, idx) => {
               const cardBaseAngle = idx * anglePerCard;
               const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
-              // zDepth: +1.0 = directly front, 0.0 = sides, -1.0 = back
               const zDepth = Math.cos(currentAngleRad);
-              const zIndex = Math.round((zDepth + 1) * 50) + 1; // 1 (back) to 101 (front)
-              const isFront = zDepth > 0.55;
-              const isBack = zDepth < -0.2;
+              if (zDepth >= 0) return null;
 
-              // Scale & Opacity based on 3D depth for realistic 360-degree feel
-              const scale = 0.82 + (zDepth + 1) * 0.09; // 0.82 in back to 1.0 in front
-              const opacity = isFront ? 1 : isBack ? 0.75 : 0.88;
+              const scale = 0.82 + (zDepth + 1) * 0.09;
+              const opacity = zDepth < -0.2 ? 0.72 : 0.88;
+              const zIndex = Math.round((zDepth + 1) * 20) + 1; // 1 to 21
 
               return (
                 <div
-                  key={project.slug}
+                  key={`back-${project.slug}`}
                   onClick={() => handleCardClick(project, idx, zDepth)}
                   onMouseEnter={() => setHoveredCardIndex(idx)}
                   onMouseLeave={() => setHoveredCardIndex(null)}
-                  className={cn(
-                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
-                    isFront 
-                      ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
-                      : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
-                  )}
+                  className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group cursor-pointer border-2 border-white/85 hover:opacity-100 hover:border-[var(--color-coral)]/60"
                   style={{
                     transformStyle: "preserve-3d",
                     transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
@@ -300,10 +254,137 @@ export function ProjectsShowcase() {
                       sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
                     />
                     
-                    {/* Dark gradient bottom fade */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
 
-                    {/* Badge Overlay */}
+                    <div className="absolute top-2.5 right-2.5 z-10">
+                      {project.kind === "live" ? (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
+                          Live
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md backdrop-blur-md">
+                          Konzept
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Card Bottom Meta */}
+                  <div className="p-3.5 sm:p-4 bg-white/95 backdrop-blur-sm border-t border-[var(--color-line)] flex items-center justify-between">
+                    <div className="min-w-0 pr-2">
+                      <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
+                        {project.name}
+                      </h4>
+                      <p className="text-[11px] sm:text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5 truncate">
+                        <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
+                        {project.region} · {project.sector}
+                      </p>
+                    </div>
+
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      aria-label={`${project.name} in neuem Tab öffnen`}
+                      className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 hover:bg-[var(--color-coral)] hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* 2. Central Floating FIRMENflow 360° Wordmark Core (Z-Index 35, always in middle) */}
+            <div 
+              className="absolute inset-0 m-auto w-48 h-24 pointer-events-none flex flex-col items-center justify-center z-35 select-none"
+              style={{
+                transform: `rotateY(${-rotation}deg) translateZ(0px)`,
+              }}
+              aria-hidden="true"
+            >
+              <div 
+                className="relative flex flex-col items-center justify-center"
+                style={{
+                  animation: "float-orbit 4s ease-in-out infinite",
+                }}
+              >
+                {/* Ambient Core Glow */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--color-coral)]/30 to-[var(--color-plum)]/30 blur-2xl animate-pulse" />
+
+                {/* Clean Wordmark + 360° Badge (Top logo mark removed) */}
+                <div className="flex flex-col items-center gap-1.5">
+                  <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)] backdrop-blur-md">
+                    <span className="font-display font-black text-base sm:text-lg tracking-tight text-[var(--color-ink)]">FIRMEN</span>
+                    <span className="font-editorial italic font-normal text-base sm:text-lg text-[var(--color-coral)]">flow</span>
+                  </div>
+                  <span className="px-3.5 py-0.5 rounded-full bg-[var(--color-plum)] text-white text-[11px] font-bold font-mono tracking-widest uppercase shadow-lg">
+                    360° ORBIT
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Front Cards (zDepth >= 0: physically IN FRONT of central logo) */}
+            {allProjects.map((project, idx) => {
+              const cardBaseAngle = idx * anglePerCard;
+              const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
+              const zDepth = Math.cos(currentAngleRad);
+              if (zDepth < 0) return null;
+
+              const scale = 0.82 + (zDepth + 1) * 0.09;
+              const isFront = zDepth > 0.55;
+              const zIndex = Math.round(zDepth * 40) + 50; // 50 to 90 (Guaranteed in front of core)
+
+              return (
+                <div
+                  key={`front-${project.slug}`}
+                  onClick={() => handleCardClick(project, idx, zDepth)}
+                  onMouseEnter={() => setHoveredCardIndex(idx)}
+                  onMouseLeave={() => setHoveredCardIndex(null)}
+                  className={cn(
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",
+                    isFront 
+                      ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
+                      : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
+                  )}
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transform: `rotateY(${cardBaseAngle}deg) translateZ(${radius}px) scale(${scale})`,
+                    zIndex: zIndex,
+                    opacity: 1,
+                    backfaceVisibility: "visible",
+                    backgroundColor: "var(--color-paper)",
+                  }}
+                >
+                  {/* Browser Mockup Top Bar */}
+                  <div className="bg-white/90 backdrop-blur-md px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-400/90 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-400/90 inline-block" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/90 inline-block" />
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[130px] sm:max-w-[160px] px-2 py-0.5 bg-[var(--color-paper)] rounded-md border border-[var(--color-line)]/50">
+                      {project.url.replace("https://", "").replace(/\/$/, "")}
+                    </div>
+                    <div className="w-4" />
+                  </div>
+
+                  {/* High-Res Preview Screenshot */}
+                  <div className="relative w-full h-[210px] sm:h-[250px] md:h-[290px] bg-slate-100 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      priority={idx === 0}
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
+                    />
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+
                     <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md backdrop-blur-md">

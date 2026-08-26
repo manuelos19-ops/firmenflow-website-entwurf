@@ -23,54 +23,43 @@ export function Hero({ whatsappUrl }: HeroProps) {
     () => {
       if (prefersReducedMotion()) return;
 
-      const tl = gsap.timeline({
-        defaults: { ease: "power3.out" },
-      });
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
-      // Initial state
-      gsap.set(".hero-title-line", { opacity: 0, y: 35 });
-      gsap.set(".hero-accent", { opacity: 0, y: 20 });
-      gsap.set(".hero-body", { opacity: 0, y: 20 });
-      gsap.set(".hero-cta-wrap", { opacity: 0, y: 20 });
-      gsap.set(".hero-photo-wrap", { scale: 0.95, opacity: 0 });
-      gsap.set(".hero-badge-float", { scale: 0, rotation: -45 });
-
-      // Smooth, calm cinematic entrance
-      tl.to(".hero-title-line", {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        stagger: 0.15,
-      })
-      .to(".hero-photo-wrap", {
-        scale: 1,
-        opacity: 1,
-        duration: 1.1,
-        ease: "power3.out",
-      }, 0.15)
-      .to(".hero-badge-float", {
-        scale: 1,
-        rotation: 0,
-        duration: 0.8,
-        ease: "back.out(1.5)",
-      }, 0.4)
-      .to(".hero-accent", {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        ease: "power2.out",
-      }, 0.5)
-      .to(".hero-body", {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-      }, 0.7)
-      .to(".hero-cta-wrap", {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        stagger: 0.1,
-      }, 0.85);
+      tl.fromTo(
+        ".hero-title-line",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15 }
+      )
+        .fromTo(
+          ".hero-accent",
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          "-=0.3"
+        )
+        .fromTo(
+          ".hero-body",
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          "-=0.4"
+        )
+        .fromTo(
+          ".hero-cta-wrap",
+          { opacity: 0, scale: 0.95, y: 15 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.5, stagger: 0.1 },
+          "-=0.3"
+        )
+        .fromTo(
+          ".hero-photo-wrap",
+          { opacity: 0, scale: 0.96, y: 20 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: "power3.out" },
+          "-=0.8"
+        )
+        .fromTo(
+          ".hero-badge-float",
+          { opacity: 0, scale: 0, rotation: -30 },
+          { opacity: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.5)" },
+          "-=0.6"
+        );
     },
     { scope: containerRef }
   );
@@ -78,9 +67,10 @@ export function Hero({ whatsappUrl }: HeroProps) {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-[85vh] flex flex-col justify-between pt-28 pb-4 lg:pt-36 lg:pb-8 bg-[var(--color-paper)] text-[var(--color-ink)] overflow-hidden"
+      id="hero"
+      className="relative min-h-[85vh] flex flex-col justify-between pt-28 pb-4 lg:pt-36 lg:pb-8 bg-transparent text-[var(--color-ink)] overflow-hidden"
     >
-      <Container className="flex-grow flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 my-auto">
+      <Container className="relative z-10 flex-grow flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 my-auto">
         
         {/* Left Side: Copy */}
         <div className="flex-1 flex flex-col items-start w-full z-10 max-w-2xl lg:max-w-none">

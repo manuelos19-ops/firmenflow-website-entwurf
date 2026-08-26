@@ -50,10 +50,11 @@ export function ProblemSection() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center py-20 bg-[var(--color-paper)] overflow-hidden"
+      id="problem"
+      className="relative min-h-screen flex items-center justify-center py-20 bg-transparent overflow-hidden"
     >
       <Container className="flex flex-col items-center text-center max-w-5xl w-full my-auto">
-        <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-coral)] mb-8 block">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-sm sm:text-base font-bold text-[var(--color-coral)] tracking-wide mb-8 shadow-sm">
           {homeContent.problem.eyebrow}
         </span>
 

@@ -47,12 +47,12 @@ export function ServiceOverview() {
     <section 
       ref={containerRef} 
       id="leistungen" 
-      className="py-24 md:py-36 bg-[var(--color-paper)] relative overflow-hidden"
+      className="py-24 md:py-36 bg-transparent relative overflow-hidden"
     >
       <Container>
         <div className="mb-14 md:mb-20 max-w-3xl">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+            <Sparkles className="w-4 h-4" />
             <span>Klarer Fokus · Kein Agentur-Schnickschnack</span>
           </span>
           <h2 className="text-4xl md:text-6xl font-display text-[var(--color-ink)] leading-tight mb-4">
@@ -71,8 +71,8 @@ export function ServiceOverview() {
             }}
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
-              "transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:rotate-0",
-              "w-full md:w-[94%] self-start md:-rotate-1.5 overflow-hidden"
+              "transition-all duration-300 ease-[var(--ease-out)] hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.015] hover:rotate-0 active:scale-[0.99] cursor-pointer will-change-transform",
+              "w-full md:w-[94%] self-start md:-rotate-1.5 overflow-hidden group"
             )}
           >
             {/* Visual Browser Mockup Bar */}
@@ -93,7 +93,7 @@ export function ServiceOverview() {
 
             {/* Visual Feature Badges Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
                 <div className="w-9 h-9 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0">
                   <Smartphone className="w-5 h-5" />
                 </div>
@@ -103,7 +103,7 @@ export function ServiceOverview() {
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
                 <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                   <Zap className="w-5 h-5" />
                 </div>
@@ -113,7 +113,7 @@ export function ServiceOverview() {
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
                 <div className="w-9 h-9 rounded-xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center shrink-0">
                   <Sparkles className="w-5 h-5" />
                 </div>
@@ -150,8 +150,8 @@ export function ServiceOverview() {
             }}
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
-              "transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:rotate-0",
-              "w-full md:w-[94%] self-end md:rotate-1.5 overflow-hidden"
+              "transition-all duration-300 ease-[var(--ease-out)] hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.015] hover:rotate-0 active:scale-[0.99] cursor-pointer will-change-transform",
+              "w-full md:w-[94%] self-end md:rotate-1.5 overflow-hidden group"
             )}
           >
             {/* Visual Browser Mockup Bar */}
