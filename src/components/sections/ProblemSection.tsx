@@ -26,9 +26,9 @@ export function ProblemSection() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=120%",
+          end: "+=65%",
           pin: true,
-          scrub: 1,
+          scrub: 0.6,
           anticipatePin: 1,
         },
       });
@@ -39,7 +39,7 @@ export function ProblemSection() {
         { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 1 }
       ).fromTo(
         bodyRef.current,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 25 },
         { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
         "-=0.15"
       );

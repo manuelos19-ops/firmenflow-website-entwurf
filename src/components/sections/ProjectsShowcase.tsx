@@ -86,7 +86,7 @@ export function ProjectsShowcase() {
     };
   }, [isAutoRotating, hoveredCardIndex]);
 
-  // Pointer Drag Handlers (Mouse & Touch)
+  // Pointer & Touch Drag Handlers (Mouse & Touch on Android / iOS / Desktop)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     hasMovedRef.current = false;
@@ -94,6 +94,9 @@ export function ProjectsShowcase() {
     lastXRef.current = e.clientX;
     startRotationRef.current = rotation;
     velocityRef.current = 0;
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {}
   };
 
   useEffect(() => {
@@ -106,23 +109,58 @@ export function ProjectsShowcase() {
         hasMovedRef.current = true;
       }
 
-      velocityRef.current = (currentX - lastXRef.current) * 0.35;
+      velocityRef.current = (currentX - lastXRef.current) * 0.45;
       lastXRef.current = currentX;
-      setRotation(startRotationRef.current + deltaX * 0.42);
+      setRotation(startRotationRef.current + deltaX * 0.48);
     };
 
-    const handleGlobalPointerUp = () => {
+    const handleGlobalPointerEnd = () => {
       if (!isDraggingRef.current) return;
       isDraggingRef.current = false;
+      setHoveredCardIndex(null);
     };
 
     window.addEventListener("pointermove", handleGlobalPointerMove);
-    window.addEventListener("pointerup", handleGlobalPointerUp);
+    window.addEventListener("pointerup", handleGlobalPointerEnd);
+    window.addEventListener("pointercancel", handleGlobalPointerEnd);
     return () => {
       window.removeEventListener("pointermove", handleGlobalPointerMove);
-      window.removeEventListener("pointerup", handleGlobalPointerUp);
+      window.removeEventListener("pointerup", handleGlobalPointerEnd);
+      window.removeEventListener("pointercancel", handleGlobalPointerEnd);
     };
   }, []);
+
+  // Dedicated Native Touch Handlers for Android Chrome
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length !== 1) return;
+    isDraggingRef.current = true;
+    hasMovedRef.current = false;
+    const touch = e.touches[0];
+    startXRef.current = touch.clientX;
+    lastXRef.current = touch.clientX;
+    startRotationRef.current = rotation;
+    velocityRef.current = 0;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDraggingRef.current || e.touches.length !== 1) return;
+    const touch = e.touches[0];
+    const currentX = touch.clientX;
+    const deltaX = currentX - startXRef.current;
+    
+    if (Math.abs(deltaX) > 4) {
+      hasMovedRef.current = true;
+    }
+
+    velocityRef.current = (currentX - lastXRef.current) * 0.45;
+    lastXRef.current = currentX;
+    setRotation(startRotationRef.current + deltaX * 0.48);
+  };
+
+  const handleTouchEnd = () => {
+    isDraggingRef.current = false;
+    setHoveredCardIndex(null);
+  };
 
   // Rotate to specific project index
   const rotateToIndex = (targetIndex: number) => {
@@ -174,9 +212,13 @@ export function ProjectsShowcase() {
         {/* 3D Stage Viewport Container */}
         <div 
           ref={containerRef}
-          className="relative w-full h-[430px] sm:h-[490px] md:h-[550px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
-          style={{ perspective: "1300px" }}
+          className="relative w-full h-[430px] sm:h-[490px] md:h-[550px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none touch-pan-y"
+          style={{ perspective: "1300px", touchAction: "pan-y" }}
           onPointerDown={handlePointerDown}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchEnd}
         >
           {/* Visible 3D Orbit Center Axis & Glowing Pillar */}
           <div 
@@ -218,7 +260,11 @@ export function ProjectsShowcase() {
                 <div
                   key={`back-${project.slug}`}
                   onClick={() => handleCardClick(project, idx, zDepth)}
-                  onMouseEnter={() => setHoveredCardIndex(idx)}
+                  onMouseEnter={() => {
+                    if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
+                      setHoveredCardIndex(idx);
+                    }
+                  }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group cursor-pointer border-2 border-white/85 hover:opacity-100 hover:border-[var(--color-coral)]/60"
                   style={{
@@ -342,7 +388,11 @@ export function ProjectsShowcase() {
                 <div
                   key={`front-${project.slug}`}
                   onClick={() => handleCardClick(project, idx, zDepth)}
-                  onMouseEnter={() => setHoveredCardIndex(idx)}
+                  onMouseEnter={() => {
+                    if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
+                      setHoveredCardIndex(idx);
+                    }
+                  }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   className={cn(
                     "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 group cursor-pointer border-2",

@@ -34,9 +34,9 @@ export function GoogleBusinessPilot() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=140%",
+          end: "+=75%",
           pin: true,
-          scrub: 1,
+          scrub: 0.6,
           anticipatePin: 1,
         },
       });
