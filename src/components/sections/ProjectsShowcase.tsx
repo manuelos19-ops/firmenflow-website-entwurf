@@ -5,11 +5,11 @@ import Image from "next/image";
 import { liveProjects, conceptProjects, type Project } from "@/content/projects";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 import { 
   ChevronLeft, 
   ChevronRight, 
   ExternalLink, 
-  Sparkles, 
   Pause, 
   Play,
   MapPin
@@ -198,8 +198,8 @@ export function ProjectsShowcase() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 md:mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-            3D Showcase · Echte Arbeiten &amp; Entwürfe
+            <BrandIcon className="w-4 h-3.5" />
+            <span>3D Showcase · Echte Arbeiten &amp; Entwürfe</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4">
             Websites im 3D-Orbit.

@@ -10,7 +10,8 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
-import { MapPin, Clock, Sparkles } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 
 interface ContactChoiceProps {
   whatsappUrl: string | null;
@@ -51,9 +52,9 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
       <Container className="relative z-20">
         {/* Section Header */}
         <div className="contact-reveal text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-6 border border-white/20 shadow-md backdrop-blur-md">
-            <Sparkles className="w-4 h-4" />
-            {contact.eyebrow}
+          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 text-sm sm:text-base font-bold text-white mb-6 border border-white/20 shadow-md backdrop-blur-md">
+            <BrandIcon variant="light" className="w-4 h-3.5" />
+            <span>{contact.eyebrow}</span>
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display leading-[1.05] mb-6">
             Kurz schreiben oder direkt das <br className="hidden sm:block" />

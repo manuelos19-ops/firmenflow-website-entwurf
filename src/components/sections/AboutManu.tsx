@@ -4,7 +4,8 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
-import { Sparkles, MapPin, ShieldCheck, HeartHandshake, Coffee } from "lucide-react";
+import { MapPin, ShieldCheck, HeartHandshake, Coffee } from "lucide-react";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 
 export function AboutManu() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -53,8 +54,8 @@ export function AboutManu() {
           
           {/* Text Content Column Right */}
           <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
-              <Sparkles className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+              <BrandIcon className="w-4 h-3.5" />
               <span>{about.eyebrow}</span>
             </span>
 

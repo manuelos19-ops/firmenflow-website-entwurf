@@ -7,8 +7,8 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 import { 
-  Sparkles, 
   ArrowRight, 
   CheckCircle2, 
   Star,
@@ -144,9 +144,9 @@ export function StorySection() {
       <Container>
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
-            <Sparkles className="w-4 h-4 text-[var(--color-coral)]" />
-            Die Firmenflow-Story
+          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
+            <BrandIcon className="w-5 h-3.5" />
+            <span>Die Firmenflow-Story</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.

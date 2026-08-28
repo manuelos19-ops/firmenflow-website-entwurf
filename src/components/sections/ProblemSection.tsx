@@ -5,6 +5,8 @@ import { homeContent } from "@/content/site";
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 
+import { BrandIcon } from "@/components/brand/BrandIcon";
+
 export function ProblemSection() {
   const containerRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
@@ -54,8 +56,9 @@ export function ProblemSection() {
       className="relative min-h-screen flex items-center justify-center py-20 bg-transparent overflow-hidden"
     >
       <Container className="flex flex-col items-center text-center max-w-5xl w-full my-auto">
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-sm sm:text-base font-bold text-[var(--color-coral)] tracking-wide mb-8 shadow-sm">
-          {homeContent.problem.eyebrow}
+        <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-sm sm:text-base font-bold text-[var(--color-coral)] tracking-wide mb-8 shadow-sm">
+          <BrandIcon className="w-4 h-3.5" />
+          <span>{homeContent.problem.eyebrow}</span>
         </span>
 
         <h2

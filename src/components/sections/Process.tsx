@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 import { Container } from '@/components/ui/Container';
 import { homeContent } from '@/content/site';
-import { Sparkles } from 'lucide-react';
+import { BrandIcon } from '@/components/brand/BrandIcon';
 
 export function Process() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -106,9 +106,9 @@ export function Process() {
     <section ref={containerRef} id="ablauf" className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] relative overflow-hidden" data-component="process-timeline">
       <Container>
         <div className="mb-14 sm:mb-20 max-w-3xl">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
-            <Sparkles className="w-4 h-4 text-[var(--color-coral)]" />
-            Ablauf · In 4 klaren Schritten
+          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
+            <BrandIcon className="w-4 h-3.5" />
+            <span>Ablauf · In 4 klaren Schritten</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-[var(--color-ink)]">
             Der Weg zu deiner neuen Website.

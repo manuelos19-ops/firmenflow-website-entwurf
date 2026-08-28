@@ -6,6 +6,7 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
 import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles } from "lucide-react";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 
 export function ServiceOverview() {
   const containerRef = useRef<HTMLElement>(null);
@@ -51,8 +52,8 @@ export function ServiceOverview() {
     >
       <Container>
         <div className="mb-14 md:mb-20 max-w-3xl">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
-            <Sparkles className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+            <BrandIcon className="w-4 h-3.5" />
             <span>Klarer Fokus · Kein Agentur-Schnickschnack</span>
           </span>
           <h2 className="text-4xl md:text-6xl font-display text-[var(--color-ink)] leading-tight mb-4">

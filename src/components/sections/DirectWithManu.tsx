@@ -6,7 +6,8 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, CheckCircle2, MapPin, Sparkles, ShieldCheck } from "lucide-react";
+import { PhoneCall, Milestone, CheckCircle2, MapPin, ShieldCheck } from "lucide-react";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
   {
@@ -84,8 +85,8 @@ export function DirectWithManu() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-16 md:mb-20">
           {/* Text Left */}
           <div className="lg:col-span-7 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
-              <Sparkles className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+              <BrandIcon className="w-4 h-3.5" />
               <span>{homeContent.direct.eyebrow}</span>
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
