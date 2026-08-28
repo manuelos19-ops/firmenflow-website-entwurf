@@ -360,7 +360,7 @@ export function ProjectsShowcase() {
 
             {/* Central Floating FIRMENflow 360° Wordmark Core (Z-Index 50, strictly in middle of orbit) */}
             <div 
-              className="absolute inset-0 m-auto w-48 h-24 pointer-events-none flex flex-col items-center justify-center select-none"
+              className="absolute inset-0 m-auto w-52 h-32 pointer-events-none flex flex-col items-center justify-center select-none"
               style={{
                 transform: "translate3d(0px, 0px, 0px)",
                 WebkitTransform: "translate3d(0px, 0px, 0px)",
@@ -370,7 +370,7 @@ export function ProjectsShowcase() {
               aria-hidden="true"
             >
               <div 
-                className="relative flex flex-col items-center justify-center"
+                className="relative flex flex-col items-center justify-center gap-1.5"
                 style={{
                   animation: "float-orbit 4s ease-in-out infinite",
                 }}
@@ -378,13 +378,23 @@ export function ProjectsShowcase() {
                 {/* Ambient Core Glow */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--color-coral)]/30 to-[var(--color-plum)]/30 blur-2xl animate-pulse" />
 
+                {/* Official FF Icon Mark */}
+                <div className="relative w-12 h-7 drop-shadow-md">
+                  <Image
+                    src="/brand/firmenflow-mark.webp"
+                    alt="Firmenflow Logo Mark"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
                 {/* Clean Wordmark + 360° Badge */}
-                <div className="flex flex-col items-center gap-1.5">
+                <div className="flex flex-col items-center gap-1">
                   <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)]">
                     <span className="font-display font-black text-base sm:text-lg tracking-tight text-[var(--color-ink)]">FIRMEN</span>
                     <span className="font-editorial italic font-normal text-base sm:text-lg text-[var(--color-coral)]">flow</span>
                   </div>
-                  <span className="px-3.5 py-0.5 rounded-full bg-[var(--color-plum)] text-white text-[11px] font-bold font-mono tracking-widest uppercase shadow-lg">
+                  <span className="px-3 py-0.5 rounded-full bg-[var(--color-plum)] text-white text-[10px] sm:text-[11px] font-bold font-mono tracking-widest uppercase shadow-lg">
                     360° ORBIT
                   </span>
                 </div>

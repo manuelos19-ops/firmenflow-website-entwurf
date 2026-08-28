@@ -158,29 +158,31 @@ export function Hero({ whatsappUrl }: HeroProps) {
             </div>
           </div>
 
-          {/* Modern Editorial Floating Rotating Badge (Frosted Pure White + Firmenflow Flow Mark) */}
-          <div className="hero-badge-float absolute -top-5 -right-5 md:-right-7 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-white/95 text-[var(--color-ink)] shadow-2xl border-2 border-[var(--color-line)] flex items-center justify-center p-2 z-20 backdrop-blur-md">
+          {/* Modern Editorial Floating Rotating Badge (Frosted White + Legible Text + Official FF Mark) */}
+          <div className="hero-badge-float absolute -top-5 -right-5 md:-right-7 w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-white/95 text-[var(--color-ink)] shadow-2xl border-2 border-[var(--color-line)] flex items-center justify-center p-2 z-20 backdrop-blur-md">
             <div className="w-full h-full relative flex items-center justify-center rotating-badge">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
+              <svg viewBox="0 0 120 120" className="w-full h-full">
                 <path
                   id="circlePath"
-                  d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                  d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"
                   fill="none"
                 />
-                <text className="text-[10px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
+                <text className="text-[11.5px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
                   <textPath href="#circlePath" startOffset="0%">
-                    FIRMENFLOW · WEBDESIGN · WESEL · 
+                    FIRMENFLOW • WEBDESIGN • WESEL • 
                   </textPath>
                 </text>
               </svg>
             </div>
-            {/* Elegant Custom Firmenflow Fluid Wave Center Mark (No off-brand star) */}
-            <div className="absolute w-8 h-8 rounded-full bg-gradient-to-tr from-[var(--color-plum)] to-[var(--color-plum-light)] flex items-center justify-center shadow-md">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 text-[var(--color-coral)] fill-current" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" opacity="0" />
-                <path d="M4 12c2.5-3 5.5-3 8 0s5.5 3 8 0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                <circle cx="12" cy="7" r="1.8" fill="var(--color-coral)" />
-              </svg>
+            {/* Official Firmenflow FF Wave Center Mark */}
+            <div className="absolute w-12 h-8 sm:w-14 sm:h-9 flex items-center justify-center pointer-events-none">
+              <Image
+                src="/brand/firmenflow-mark.webp"
+                alt="Firmenflow Logo Mark"
+                width={52}
+                height={30}
+                className="object-contain drop-shadow-sm"
+              />
             </div>
           </div>
         </div>

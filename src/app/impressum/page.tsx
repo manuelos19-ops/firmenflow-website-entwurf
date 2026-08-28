@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { LegalDraftNotice } from "@/components/legal/LegalDraftNotice";
+import { ArrowLeft, Mail } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von Firmenflow – Manuel Landeck, Webdesign aus Wesel.",
+  description: "Impressum von Firmenflow – Manuel Landeck.",
 };
 
 export default function ImpressumPage() {
@@ -26,8 +25,6 @@ export default function ImpressumPage() {
           Impressum
         </h1>
 
-        <LegalDraftNotice />
-
         <div className="bg-white rounded-[2rem] p-8 sm:p-12 border border-[var(--color-line)] shadow-sm space-y-8 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">Angaben gemäß § 5 TMG</h2>
@@ -44,17 +41,16 @@ export default function ImpressumPage() {
 
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">Kontakt</h2>
-            <p>
-              E-Mail:{" "}
-              <a href={`mailto:${legalContent.email}`} className="text-[var(--color-plum)] hover:underline">
-                {legalContent.email}
-              </a>
-              {legalContent.phone && (
-                <>
-                  <br />
-                  Telefon: {legalContent.phone}
-                </>
-              )}
+            <div className="flex items-center gap-2">
+              <span className="text-[var(--color-ink)] font-medium">E-Mail:</span>
+              {/* Bot-geschützte, unklickbare E-Mail-Darstellung */}
+              <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
+                <Mail className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                <span>manu@firmenflow.de</span>
+              </span>
+            </div>
+            <p className="text-xs text-[var(--color-muted)]">
+              (Zum Schutz vor automatisiertem Spam nicht direkt verlinkt)
             </p>
           </section>
 

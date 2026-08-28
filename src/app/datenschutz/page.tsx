@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { LegalDraftNotice } from "@/components/legal/LegalDraftNotice";
+import { ArrowLeft, Mail } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
 
@@ -26,8 +25,6 @@ export default function DatenschutzPage() {
           Datenschutzerklärung
         </h1>
 
-        <LegalDraftNotice text={legalContent.privacyNotice} />
-
         <div className="bg-white rounded-[2rem] p-8 sm:p-12 border border-[var(--color-line)] shadow-sm space-y-8 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">1. Verantwortliche Stelle</h2>
@@ -39,12 +36,14 @@ export default function DatenschutzPage() {
               {legalContent.street}
               <br />
               {legalContent.postalCode} {legalContent.city}
-              <br />
-              E-Mail:{" "}
-              <a href={`mailto:${legalContent.email}`} className="text-[var(--color-plum)] hover:underline">
-                {legalContent.email}
-              </a>
             </p>
+            <div className="flex items-center gap-2 pt-1">
+              <span className="text-[var(--color-ink)] font-medium">E-Mail:</span>
+              <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
+                <Mail className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                <span>manu@firmenflow.de</span>
+              </span>
+            </div>
           </section>
 
           <section className="space-y-3">
