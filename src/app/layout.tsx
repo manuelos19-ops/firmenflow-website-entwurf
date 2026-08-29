@@ -9,6 +9,7 @@ import { GlobalAmbientBackground } from "@/components/effects/GlobalAmbientBackg
 import { SectionDotNav } from "@/components/navigation/SectionDotNav";
 import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <div className="flex-1 relative z-10">{children}</div>
           <SiteFooter />
         </SmoothScrollProvider>
+        <SpeedInsights />
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}.word-reveal{transform:none!important}`}</style>
         </noscript>
