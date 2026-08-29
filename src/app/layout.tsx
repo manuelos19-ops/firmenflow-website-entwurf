@@ -10,6 +10,7 @@ import { SectionDotNav } from "@/components/navigation/SectionDotNav";
 import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}.word-reveal{transform:none!important}`}</style>
         </noscript>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
