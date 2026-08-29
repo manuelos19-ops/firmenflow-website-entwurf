@@ -147,8 +147,8 @@ export function Hero({ whatsappUrl }: HeroProps) {
             <div className="absolute bottom-5 left-5 right-5 text-white text-sm font-medium backdrop-blur-md bg-black/40 p-3.5 rounded-2xl border border-white/20 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-bold text-white text-sm sm:text-base tracking-tight">Manuel Landeck</p>
-                  <p className="text-white/80 text-xs">Webdesigner &amp; Entwickler aus Wesel</p>
+                  <p className="font-bold text-white text-sm sm:text-base tracking-tight">Manu</p>
+                  <p className="text-white/80 text-xs">Gründer von Firmenflow · Wesel</p>
                 </div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[11px] font-semibold text-emerald-300 shadow-sm">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 opacity-90" />

@@ -388,15 +388,10 @@ export function ProjectsShowcase() {
                   />
                 </div>
 
-                {/* Clean Wordmark + 360° Badge */}
-                <div className="flex flex-col items-center gap-1">
-                  <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)]">
-                    <span className="font-display font-black text-base sm:text-lg tracking-tight text-[var(--color-ink)]">FIRMEN</span>
-                    <span className="font-editorial italic font-normal text-base sm:text-lg text-[var(--color-coral)]">flow</span>
-                  </div>
-                  <span className="px-3 py-0.5 rounded-full bg-[var(--color-plum)] text-white text-[10px] sm:text-[11px] font-bold font-mono tracking-widest uppercase shadow-lg">
-                    360° ORBIT
-                  </span>
+                {/* Clean Wordmark (No extra redundant 360 Orbit badge) */}
+                <div className="flex items-center gap-1 bg-white/95 px-4 py-1.5 rounded-full shadow-2xl border border-[var(--color-line)]">
+                  <span className="font-display font-black text-base sm:text-lg tracking-tight text-[var(--color-ink)]">FIRMEN</span>
+                  <span className="font-editorial italic font-normal text-base sm:text-lg text-[var(--color-coral)]">flow</span>
                 </div>
               </div>
             </div>

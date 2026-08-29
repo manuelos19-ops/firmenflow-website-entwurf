@@ -1,12 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
-import { homeContent } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, CheckCircle2, MapPin, ShieldCheck } from "lucide-react";
+import { PhoneCall, Milestone, ShieldCheck, MapPin, Sparkles, Layers } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
@@ -29,24 +28,18 @@ const bentoItems = [
   {
     title: "Ehrliche Einschätzung",
     desc: "Kein technisches Kauderwelsch, kein unnötiges Upselling – nur was deinem Betrieb wirklich hilft.",
-    icon: CheckCircle2,
+    icon: ShieldCheck,
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
     iconBg: "bg-emerald-100 text-emerald-700",
-  },
-  {
-    title: "Nah an Wesel & Niederrhein",
-    desc: "Vor Ort am Niederrhein verwurzelt. Wir sprechen die gleiche Sprache wie deine Kunden.",
-    icon: MapPin,
-    gradient: "from-violet-500/20 via-violet-500/5 to-transparent",
-    border: "border-violet-500/30 hover:border-violet-500",
-    iconBg: "bg-violet-100 text-violet-700",
   },
 ];
 
 export function DirectWithManu() {
   const containerRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useGSAP(
     () => {
@@ -60,7 +53,7 @@ export function DirectWithManu() {
           opacity: 1,
           y: 0,
           scale: 1,
-          stagger: 0.1,
+          stagger: 0.12,
           duration: 0.6,
           ease: "power3.out",
           scrollTrigger: {
@@ -81,71 +74,128 @@ export function DirectWithManu() {
       className="py-24 md:py-36 bg-transparent overflow-hidden relative"
     >
       <Container>
-        {/* Editorial Split: Text on Left + Large Authentic Portrait on Right (Close & Prominent) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-16 md:mb-20">
+        {/* Editorial Split: Text on Left + Interactive Dual-Card Photo Deck Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 md:mb-20">
+          
           {/* Text Left */}
           <div className="lg:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
               <BrandIcon className="w-4 h-3.5" />
-              <span>{homeContent.direct.eyebrow}</span>
+              <span>Direkt mit Manu</span>
             </div>
+            
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
               Ein Ansprechpartner. <br />
               <span className="text-[var(--color-coral)] font-editorial">Keine stille Post.</span>
             </h2>
-            <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed mb-8">
-              {homeContent.direct.body}
+            
+            <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed mb-6">
+              Du sprichst vom ersten Gedanken bis zur fertigen Website direkt mit mir. Keine wechselnden Projektmanager, keine anonymen Tickets und kein Agenturtheater – nenn mich einfach Manu.
+            </p>
+
+            <p className="text-base text-[var(--color-muted)] leading-relaxed mb-8">
+              Ich mag klare Gespräche, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Firmenflow ist bewusst persönlich aufgebaut: Du weißt immer genau, wer deine Website entwickelt und wer sich darum kümmert.
             </p>
 
             {/* Quick Trust Highlights */}
-            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-[var(--color-coral)]" />
-                <span>100% Inhabergeführt</span>
+            <div className="flex flex-wrap items-center gap-3.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+                <BrandIcon className="w-3.5 h-3" />
+                <span>Gründer von Firmenflow</span>
               </div>
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
-                <MapPin className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+                <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
                 <span>Wesel &amp; Niederrhein</span>
               </div>
             </div>
           </div>
 
-          {/* Large Authentic Manu Photo Right (Moved closer to text, large & crisp) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md h-[440px] sm:h-[500px] md:h-[540px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
-              <Image
-                src="/media/portraits/manu-green-door-vertical.webp"
-                alt="Manu Landeck – Webdesigner und Inhaber Firmenflow"
-                fill
-                priority
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 500px"
-              />
-
-              {/* Bottom Subtle Gradient for Text Contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
-
-              {/* Bottom Authentic Name & Location Badge */}
-              <div className="absolute bottom-5 left-5 right-5 z-10 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/60 flex items-center justify-between">
-                <div>
-                  <h4 className="text-base font-bold text-[var(--color-ink)] leading-tight">
-                    Manu Landeck
-                  </h4>
-                  <p className="text-xs text-[var(--color-coral)] font-semibold mt-0.5">
-                    Inhaber &amp; Webdesigner
-                  </p>
-                </div>
-                <div className="flex items-center gap-1 text-[11px] font-medium text-[var(--color-muted)] bg-[var(--color-paper)] px-2.5 py-1 rounded-full border border-[var(--color-line)]">
-                  <MapPin className="w-3 h-3 text-[var(--color-coral)]" />
-                  <span>Wesel</span>
+          {/* Interactive Dual-Card Photo Deck Right */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center pt-6 lg:pt-0">
+            <div 
+              className="relative w-[280px] sm:w-[320px] md:w-[350px] h-[390px] sm:h-[430px] md:h-[460px] cursor-pointer select-none group"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {/* Photo Card 1: Manu Nature Seated */}
+              <div
+                onClick={() => setActiveCardIndex(0)}
+                className={cn(
+                  "absolute inset-0 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform",
+                  activeCardIndex === 0
+                    ? "z-20 scale-100 ring-2 ring-black/5"
+                    : "z-10 scale-[0.96] opacity-90 hover:opacity-100"
+                )}
+                style={{
+                  transform: activeCardIndex === 0
+                    ? isHovered 
+                      ? "rotate(-6deg) translateX(-24px) translateY(-10px)" 
+                      : "rotate(-3deg) translateX(-6px)"
+                    : isHovered 
+                      ? "rotate(-10deg) translateX(-36px) translateY(8px)" 
+                      : "rotate(-4deg) translateX(-8px)",
+                }}
+              >
+                <Image
+                  src="/media/portraits/manu-nature-seated.webp"
+                  alt="Manu – Gründer von Firmenflow"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 280px, 350px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <p className="font-bold text-sm sm:text-base tracking-tight">Manu</p>
+                  <p className="text-white/80 text-xs">Gründer von Firmenflow</p>
                 </div>
               </div>
+
+              {/* Photo Card 2: Manu Modern Vertical Portrait */}
+              <div
+                onClick={() => setActiveCardIndex(1)}
+                className={cn(
+                  "absolute inset-0 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform",
+                  activeCardIndex === 1
+                    ? "z-20 scale-100 ring-2 ring-black/5"
+                    : "z-10 scale-[0.96] opacity-90 hover:opacity-100"
+                )}
+                style={{
+                  transform: activeCardIndex === 1
+                    ? isHovered 
+                      ? "rotate(6deg) translateX(24px) translateY(-10px)" 
+                      : "rotate(4deg) translateX(8px)"
+                    : isHovered 
+                      ? "rotate(10deg) translateX(36px) translateY(8px)" 
+                      : "rotate(5deg) translateX(12px)",
+                }}
+              >
+                <Image
+                  src="/media/portraits/manu-green-door-vertical.webp"
+                  alt="Manu – Webdesign & Entwicklung aus Wesel"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 280px, 350px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <p className="font-bold text-sm sm:text-base tracking-tight">Manu</p>
+                  <p className="text-white/80 text-xs">Wesel &amp; Niederrhein</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Subtle interactive tip */}
+            <div className="flex items-center gap-1.5 text-xs text-[var(--color-muted)] mt-5 select-none">
+              <Layers className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+              <span>Karten fächern auf Hover · Klicke zum Wechseln</span>
             </div>
           </div>
         </div>
 
-        {/* 4 Glowing Neon-Gradient Bento Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 3 Clean, Grounded Bento Value Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {bentoItems.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -160,7 +210,6 @@ export function DirectWithManu() {
                   item.border
                 )}
               >
-                {/* Subtle top gradient glow inside card */}
                 <div 
                   className={cn(
                     "absolute inset-0 rounded-3xl bg-gradient-to-b opacity-40 group-hover:opacity-80 transition-opacity pointer-events-none",

@@ -17,10 +17,9 @@ const sections: SectionItem[] = [
   { id: "leistungen", number: "05", label: "Leistungen" },
   { id: "manu", number: "06", label: "Direkt mit Manu" },
   { id: "google-pilot", number: "07", label: "Google 360°" },
-  { id: "ueber-manu", number: "08", label: "Über Manu" },
-  { id: "ablauf", number: "09", label: "Ablauf" },
-  { id: "faq", number: "10", label: "FAQ" },
-  { id: "kontakt", number: "11", label: "Anfrage" },
+  { id: "ablauf", number: "08", label: "Ablauf" },
+  { id: "faq", number: "09", label: "FAQ" },
+  { id: "kontakt", number: "10", label: "Anfrage" },
 ];
 
 export function SectionDotNav() {

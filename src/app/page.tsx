@@ -1,4 +1,3 @@
-import { AboutManu } from "@/components/sections/AboutManu";
 import { ContactChoice } from "@/components/sections/ContactChoice";
 import { DirectWithManu } from "@/components/sections/DirectWithManu";
 import { Faq } from "@/components/sections/Faq";
@@ -26,7 +25,6 @@ export default function HomePage() {
       <ServiceOverview />
       <DirectWithManu />
       <GoogleBusinessPilot />
-      <AboutManu />
       <Process />
       <Faq />
       <ContactChoice whatsappUrl={whatsappUrl} />
