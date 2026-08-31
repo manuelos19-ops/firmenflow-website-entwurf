@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, ShieldCheck, MapPin, Sparkles, Layers } from "lucide-react";
+import { PhoneCall, Milestone, ShieldCheck, MapPin } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
@@ -39,16 +39,7 @@ export function DirectWithManu() {
   const containerRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Automatic gentle card swap every 5 seconds (pauses on user hover)
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      setActiveCardIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isHovered]);
+  const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
 
   useGSAP(
     () => {
@@ -120,28 +111,26 @@ export function DirectWithManu() {
           </div>
 
           {/* Organic Floating Post-it / Polaroid Moodboard Canvas */}
-          <div 
-            className="lg:col-span-6 xl:col-span-5 flex flex-col items-center justify-center pt-4 lg:pt-0"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <div className="lg:col-span-6 xl:col-span-5 flex flex-col items-center justify-center pt-4 lg:pt-0">
             <div className="relative w-full max-w-[360px] sm:max-w-[420px] h-[360px] sm:h-[400px] select-none">
               
               {/* Polaroid 1: Manu Nature Seated (Left & Floating) */}
               <div
                 onClick={() => setActiveCardIndex(0)}
+                onMouseEnter={() => setHoveredCardIndex(0)}
+                onMouseLeave={() => setHoveredCardIndex(null)}
                 className={cn(
-                  "absolute top-2 left-2 sm:left-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform group",
-                  !isHovered && "animate-float-postit-1",
-                  activeCardIndex === 0 
-                    ? "z-20 scale-100 shadow-2xl ring-2 ring-[var(--color-coral)]/20" 
+                  "absolute top-2 left-2 sm:left-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-300 ease-[var(--ease-out)] will-change-transform group",
+                  hoveredCardIndex === null && "animate-float-postit-1",
+                  (activeCardIndex === 0 || hoveredCardIndex === 0)
+                    ? "z-30 scale-[1.06] shadow-2xl ring-2 ring-[var(--color-coral)]/30" 
                     : "z-10 scale-95 opacity-85 hover:opacity-100"
                 )}
                 style={{
-                  transform: isHovered 
-                    ? activeCardIndex === 0 
-                      ? "rotate(-3deg) translate(-10px, -6px) scale(1.04)" 
-                      : "rotate(-6deg) translate(-18px, 6px) scale(0.96)"
+                  transform: hoveredCardIndex === 0
+                    ? "rotate(-2deg) translate(-10px, -8px) scale(1.08)"
+                    : hoveredCardIndex === 1
+                    ? "rotate(-6deg) translate(-14px, 4px) scale(0.94)"
                     : undefined,
                 }}
               >
@@ -178,18 +167,20 @@ export function DirectWithManu() {
               {/* Polaroid 2: Manu Green Door Vertical (Right & Floating Counter-Rhythm) */}
               <div
                 onClick={() => setActiveCardIndex(1)}
+                onMouseEnter={() => setHoveredCardIndex(1)}
+                onMouseLeave={() => setHoveredCardIndex(null)}
                 className={cn(
-                  "absolute bottom-2 right-2 sm:right-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform group",
-                  !isHovered && "animate-float-postit-2",
-                  activeCardIndex === 1 
-                    ? "z-20 scale-100 shadow-2xl ring-2 ring-[var(--color-plum)]/20" 
+                  "absolute bottom-2 right-2 sm:right-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-300 ease-[var(--ease-out)] will-change-transform group",
+                  hoveredCardIndex === null && "animate-float-postit-2",
+                  (activeCardIndex === 1 || hoveredCardIndex === 1)
+                    ? "z-30 scale-[1.06] shadow-2xl ring-2 ring-[var(--color-plum)]/30" 
                     : "z-10 scale-95 opacity-85 hover:opacity-100"
                 )}
                 style={{
-                  transform: isHovered 
-                    ? activeCardIndex === 1 
-                      ? "rotate(3deg) translate(10px, -6px) scale(1.04)" 
-                      : "rotate(6deg) translate(18px, 6px) scale(0.96)"
+                  transform: hoveredCardIndex === 1
+                    ? "rotate(2deg) translate(10px, -8px) scale(1.08)"
+                    : hoveredCardIndex === 0
+                    ? "rotate(6deg) translate(14px, 4px) scale(0.94)"
                     : undefined,
                 }}
               >
@@ -223,12 +214,6 @@ export function DirectWithManu() {
                 </div>
               </div>
 
-            </div>
-
-            {/* Subtle Interactive Hint */}
-            <div className="flex items-center gap-2 text-xs text-[var(--color-muted)] mt-4 select-none">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
-              <span>Schwebende Schnappschüsse · Wechselt sanft automatisch</span>
             </div>
           </div>
         </div>
