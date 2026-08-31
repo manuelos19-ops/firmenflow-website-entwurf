@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, ShieldCheck, MapPin } from "lucide-react";
+import { PhoneCall, Milestone, ShieldCheck, MapPin, Camera } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
@@ -102,6 +102,10 @@ export function DirectWithManu() {
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
                 <BrandIcon className="w-3.5 h-3" />
                 <span>Gründer von Firmenflow</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+                <Camera className="w-3.5 h-3.5 text-purple-600" />
+                <span>Foto &amp; Video vor Ort</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
                 <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />

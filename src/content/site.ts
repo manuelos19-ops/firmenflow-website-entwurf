@@ -25,6 +25,12 @@ export const homeContent = {
       body: "Wir behalten, was bereits gut funktioniert, und werfen raus, was veraltet ist. Deine bestehenden Google-Rankings bleiben sicher erhalten, während der Auftritt komplett frisch, mobiloptimiert und kundenorientiert wird.",
       points: ["Bestandsanalyse & Relaunch", "Google-Rankings behalten", "Neue, klare Struktur", "Schlüsselfertig in 2–3 Wochen"],
     },
+    {
+      slug: "foto-video",
+      title: "Foto- & Videoaufnahmen vor Ort",
+      body: "Authentische Bilder statt künstlicher Stockfotos: Viele kleine Unternehmen haben keine guten oder veraltete Fotos. Ich komme mit professionellem Kamera- und Drohnen-Equipment direkt zu dir nach Wesel oder an den Niederrhein und erstelle lebendige Team-Portraits, Raumaufnahmen oder einen sympathischen Imagefilm für deinen Webauftritt.",
+      points: ["Team- & Mitarbeiter-Shootings", "Räumlichkeiten & Atmosphäre", "Kurzer Imagefilm & Video-Reels", "Direkt bei dir vor Ort"],
+    },
   ],
   direct: {
     eyebrow: "Direkt mit Manu",
@@ -89,8 +95,12 @@ export const faqItems = [
     answer: "100 % Planungssicherheit: Ein kompakter, lokaler Webauftritt startet meist im Bereich von 1.500 bis 2.500 Euro. Nach unserem ersten kurzen Kennenlernen nenne ich dir sofort einen verbindlichen Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
   },
   { 
+    question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
+    answer: "Ja, sehr gerne! Viele kleine Unternehmen haben veraltete oder gar keine passenden Bilder. Ich bringe professionelles Kamera- und Drohnen-Equipment mit und komme direkt bei dir in Wesel und Umgebung vorbei. Wir erstellen sympathische Teamfotos, Aufnahmen deiner Räume und deines Handwerks oder einen kurzen, wirkungsvollen Imagefilm für deine Website und Social Media." 
+  },
+  { 
     question: "Muss ich Texte und Fotos schon fertig vorbereitet haben?", 
-    answer: "Nein, überhaupt nicht! Wenn du bereits Fotos hast, nutzen wir diese gern. Wenn nicht, helfe ich dir bei der Bildauswahl und formuliere alle Texte schlüsselfertig für dich, abgestimmt auf dein Angebot und deine Zielgruppe." 
+    answer: "Nein, überhaupt nicht! Wenn du bereits Fotos hast, nutzen wir diese gern. Wenn nicht, mache ich die Fotos direkt bei dir vor Ort und formuliere alle Texte schlüsselfertig für dich, abgestimmt auf dein Angebot und deine Zielgruppe." 
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 

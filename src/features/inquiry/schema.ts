@@ -45,10 +45,11 @@ export const inquirySchema = z
           "modern-look",
           "clear-offer",
           "better-reviews",
+          "photo-video",
         ])
       )
       .min(1, "Bitte wähle mindestens ein Ziel aus.")
-      .max(5),
+      .max(6),
     goalDetails: z.string().trim().max(1_000, "Bitte fasse dein Anliegen in maximal 1.000 Zeichen zusammen."),
     timeframe: z.enum(["soon", "three-months", "six-months", "flexible"]),
     budget: z.enum(["under-2000", "2000-4000", "4000-plus", "not-sure"]),

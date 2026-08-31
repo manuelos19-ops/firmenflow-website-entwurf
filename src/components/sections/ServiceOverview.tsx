@@ -5,7 +5,7 @@ import { homeContent } from "@/content/site";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles } from "lucide-react";
+import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles, Camera, Video, Film, MapPin } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 export function ServiceOverview() {
@@ -19,8 +19,8 @@ export function ServiceOverview() {
 
       cardsRef.current.forEach((card, index) => {
         if (!card) return;
-        const targetRotation = index % 2 === 0 ? -1.5 : 1.5;
-        const startRotation = index % 2 === 0 ? -3.5 : 3.5;
+        const targetRotation = index === 0 ? -1.5 : index === 1 ? 1.5 : -1;
+        const startRotation = index === 0 ? -3.5 : index === 1 ? 3.5 : -3;
 
         // Snappy, early reveal so cards are instantly visible even on fast scrolling
         gsap.fromTo(
@@ -57,14 +57,14 @@ export function ServiceOverview() {
             <span>Klarer Fokus · Kein Agentur-Schnickschnack</span>
           </span>
           <h2 className="text-4xl md:text-6xl font-display text-[var(--color-ink)] leading-tight mb-4">
-            Zwei Wege zur starken Lokalpräsenz.
+            Alles aus einer Hand für deinen Betrieb.
           </h2>
           <p className="text-base md:text-lg text-[var(--color-muted)] leading-relaxed">
-            Ob Neuaufbau oder kontrollierter Relaunch: Jeder Betrieb erhält eine maßgeschneiderte Lösung, die Interessenten in zahlende Kunden verwandelt.
+            Ob Neuaufbau, Relaunch oder echte Foto- und Videoaufnahmen vor Ort: Jeder Betrieb erhält eine maßgeschneiderte Lösung, die Interessenten in Kunden verwandelt.
           </p>
         </div>
 
-        <div className="flex flex-col gap-12 md:gap-18 relative max-w-5xl mx-auto">
+        <div className="flex flex-col gap-12 md:gap-16 relative max-w-5xl mx-auto">
           {/* Card 1: Neue Website */}
           <div
             ref={(el) => {
@@ -73,7 +73,7 @@ export function ServiceOverview() {
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
               "transition-all duration-300 ease-[var(--ease-out)] hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.015] hover:rotate-0 active:scale-[0.99] cursor-pointer will-change-transform",
-              "w-full md:w-[94%] self-start md:-rotate-1.5 overflow-hidden group"
+              "w-full md:w-[96%] self-start md:-rotate-1.5 overflow-hidden group"
             )}
           >
             {/* Visual Browser Mockup Bar */}
@@ -152,7 +152,7 @@ export function ServiceOverview() {
             className={cn(
               "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
               "transition-all duration-300 ease-[var(--ease-out)] hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.015] hover:rotate-0 active:scale-[0.99] cursor-pointer will-change-transform",
-              "w-full md:w-[94%] self-end md:rotate-1.5 overflow-hidden group"
+              "w-full md:w-[96%] self-end md:rotate-1.5 overflow-hidden group"
             )}
           >
             {/* Visual Browser Mockup Bar */}
@@ -222,6 +222,85 @@ export function ServiceOverview() {
               ))}
             </div>
           </div>
+
+          {/* Card 3: Foto- & Videoaufnahmen vor Ort */}
+          <div
+            ref={(el) => {
+              cardsRef.current[2] = el;
+            }}
+            className={cn(
+              "relative bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl border border-[var(--color-line)]",
+              "transition-all duration-300 ease-[var(--ease-out)] hover:shadow-2xl hover:-translate-y-2.5 hover:scale-[1.015] hover:rotate-0 active:scale-[0.99] cursor-pointer will-change-transform",
+              "w-full md:w-[96%] self-start md:-rotate-1 overflow-hidden group"
+            )}
+          >
+            {/* Visual Camera Studio Bar */}
+            <div className="flex items-center justify-between pb-6 mb-8 border-b border-gray-100">
+              <div className="flex items-center gap-2">
+                <span className="w-3.5 h-3.5 rounded-full bg-rose-400" />
+                <span className="w-3.5 h-3.5 rounded-full bg-amber-400" />
+                <span className="w-3.5 h-3.5 rounded-full bg-emerald-400" />
+              </div>
+              <div className="px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-mono text-gray-500 flex items-center gap-2">
+                <Camera className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <span>Foto- &amp; Videoproduktion vor Ort</span>
+              </div>
+              <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
+                Zubuchbar
+              </span>
+            </div>
+
+            {/* Visual Feature Badges Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0">
+                  <Camera className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs text-[var(--color-muted)] font-medium">Fotoshoot</p>
+                  <p className="text-sm font-bold text-[var(--color-ink)]">Team &amp; Portraits</p>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                  <Video className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs text-[var(--color-muted)] font-medium">Video</p>
+                  <p className="text-sm font-bold text-[var(--color-ink)]">Imagefilm &amp; Reels</p>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs text-[var(--color-muted)] font-medium">Vor Ort</p>
+                  <p className="text-sm font-bold text-[var(--color-ink)]">Wesel &amp; Umgebung</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-4">
+              {homeContent.services[2].title}
+            </h3>
+            <p className="text-base sm:text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
+              {homeContent.services[2].body}
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-gray-100">
+              {homeContent.services[2].points.map((point) => (
+                <div key={point} className="flex items-center gap-2 text-sm font-semibold text-[var(--color-ink)]">
+                  <div className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                    <Check className="w-3 h-3 stroke-[3]" />
+                  </div>
+                  <span>{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Bottom Trust Guarantee Bar: No Text Stress & Fixed Price Guarantee */}
@@ -235,7 +314,7 @@ export function ServiceOverview() {
                 100 % Preissicherheit &amp; kein Text-Stress
               </h4>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                Du erhältst vor dem Start einen verbindlichen Festpreis. Alle Texte und Layouts formuliere ich schlüsselfertig für dich – ohne langes Vorlagen-Ausfüllen.
+                Du erhältst vor dem Start einen verbindlichen Festpreis. Alle Texte, Layouts und auf Wunsch Foto- &amp; Videoaufnahmen vor Ort erhältst du schlüsselfertig aus einer Hand.
               </p>
             </div>
           </div>
