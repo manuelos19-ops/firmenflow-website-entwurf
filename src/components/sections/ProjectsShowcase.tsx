@@ -321,11 +321,11 @@ export function ProjectsShowcase() {
                       {project.kind === "live" ? (
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md">
                           <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                          Live
+                          Live-Projekt
                         </span>
                       ) : (
-                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-medium bg-[var(--color-plum)] text-white rounded-full shadow-md">
-                          Konzept
+                        <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-semibold bg-[var(--color-plum)] text-white rounded-full shadow-md">
+                          Showcase
                         </span>
                       )}
                     </div>

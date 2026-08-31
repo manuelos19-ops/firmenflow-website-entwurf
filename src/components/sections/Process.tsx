@@ -110,9 +110,12 @@ export function Process() {
             <BrandIcon className="w-4 h-3.5" />
             <span>Ablauf · In 4 klaren Schritten</span>
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-[var(--color-ink)]">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-[var(--color-ink)] mb-4">
             Der Weg zu deiner neuen Website.
           </h2>
+          <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
+            Ohne monatelange Wartezeiten: In der Regel schlüsselfertig in 2 bis 3 Wochen online.
+          </p>
         </div>
 
         <div className="process-track relative flex max-w-4xl mx-auto">

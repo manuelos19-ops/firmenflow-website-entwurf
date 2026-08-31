@@ -223,6 +223,29 @@ export function ServiceOverview() {
             </div>
           </div>
         </div>
+
+        {/* Bottom Trust Guarantee Bar: No Text Stress & Fixed Price Guarantee */}
+        <div className="mt-12 sm:mt-16 max-w-4xl mx-auto p-6 sm:p-7 rounded-3xl bg-white/95 border border-[var(--color-line)] shadow-lg backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0 shadow-sm">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
+                100 % Preissicherheit &amp; kein Text-Stress
+              </h4>
+              <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
+                Du erhältst vor dem Start einen verbindlichen Festpreis. Alle Texte und Layouts formuliere ich schlüsselfertig für dich – ohne langes Vorlagen-Ausfüllen.
+              </p>
+            </div>
+          </div>
+          <div className="shrink-0 w-full sm:w-auto flex justify-start sm:justify-end">
+            <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm">
+              <Check className="w-4 h-4 text-emerald-600" />
+              <span>Festpreis-Garantie</span>
+            </span>
+          </div>
+        </div>
       </Container>
     </section>
   );
