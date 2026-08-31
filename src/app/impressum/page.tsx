@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Mail } from "lucide-react";
+import { ArrowLeft, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
 
 export const metadata: Metadata = {
   title: "Impressum",
   description: "Impressum von Firmenflow – Manuel Landeck.",
+  alternates: {
+    canonical: "/impressum",
+  },
 };
 
 export default function ImpressumPage() {
@@ -27,7 +30,7 @@ export default function ImpressumPage() {
 
         <div className="bg-white rounded-[2rem] p-8 sm:p-12 border border-[var(--color-line)] shadow-sm space-y-8 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">Angaben gemäß § 5 TMG</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</h2>
             <p>
               {legalContent.legalName}
               <br />
@@ -37,13 +40,18 @@ export default function ImpressumPage() {
               <br />
               {legalContent.postalCode} {legalContent.city}
             </p>
+            <div className="p-4 rounded-xl bg-[var(--color-paper)] border border-[var(--color-line)] text-xs sm:text-sm text-[var(--color-ink)] flex items-start gap-2.5">
+              <MapPin className="w-4 h-4 text-[var(--color-coral)] shrink-0 mt-0.5" />
+              <span>
+                <strong>Hinweis zum Servicegebiet:</strong> Rechtlicher Geschäftssitz ist Pulheim. Persönliche Vor-Ort-Betreuung und Termine für Kunden erfolgen direkt in Wesel, Dinslaken, Voerde, Moers und im gesamten Raum Niederrhein.
+              </span>
+            </div>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">Kontakt</h2>
             <div className="flex items-center gap-2">
               <span className="text-[var(--color-ink)] font-medium">E-Mail:</span>
-              {/* Bot-geschützte, unklickbare E-Mail-Darstellung */}
               <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
                 <span>manu@firmenflow.de</span>
@@ -66,7 +74,7 @@ export default function ImpressumPage() {
           )}
 
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p>
               {legalContent.legalName}
               <br />

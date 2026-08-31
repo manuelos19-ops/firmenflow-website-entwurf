@@ -150,7 +150,6 @@ export function DirectWithManu() {
                     src="/media/portraits/manu-nature-seated.webp"
                     alt="Manu – Gründer von Firmenflow"
                     fill
-                    priority
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="250px"
                   />
@@ -200,7 +199,6 @@ export function DirectWithManu() {
                     src="/media/portraits/manu-green-door-vertical.webp"
                     alt="Manu – Direkt mit Manu"
                     fill
-                    priority
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="250px"
                   />

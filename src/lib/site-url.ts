@@ -11,5 +11,9 @@ export function getSiteUrl(): URL {
     return new URL(`https://${process.env.VERCEL_URL}`);
   }
 
+  if (process.env.NODE_ENV === "production") {
+    return new URL("https://www.firmenflow.de");
+  }
+
   return new URL("http://localhost:3000");
 }

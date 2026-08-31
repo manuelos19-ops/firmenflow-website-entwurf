@@ -100,12 +100,24 @@ export function Faq() {
                     </div>
                   </button>
 
-                  {/* Expandable Answer */}
-                  {isOpen && (
-                    <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed border-t border-gray-100 animate-in fade-in slide-in-from-top-2 duration-300">
-                      <p>{item.answer}</p>
+                  {/* Expandable Answer (Always rendered in initial DOM for 100% SEO Crawlability) */}
+                  <div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
+                    className={cn(
+                      "grid transition-all duration-300 ease-[var(--ease-out)] border-gray-100",
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100 border-t"
+                        : "grid-rows-[0fr] opacity-0 border-t-0"
+                    )}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-4 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                        <p>{item.answer}</p>
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

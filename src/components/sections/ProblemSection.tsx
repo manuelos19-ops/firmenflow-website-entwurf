@@ -65,7 +65,10 @@ export function ProblemSection() {
           ref={textRef}
           className="relative text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.06] mb-10"
         >
-          {homeContent.problem.title}
+          <span className="sr-only">{homeContent.problem.title}</span>
+          <span aria-hidden="true" className="select-none">
+            {homeContent.problem.title}
+          </span>
           <span
             ref={overlayRef}
             className="absolute inset-0 text-[var(--color-ink)] select-none pointer-events-none"

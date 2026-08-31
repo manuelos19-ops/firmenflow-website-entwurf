@@ -7,6 +7,9 @@ import { legalContent } from "@/content/legal";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
   description: "Datenschutzerklärung von Firmenflow – Informationen zur Datenverarbeitung.",
+  alternates: {
+    canonical: "/datenschutz",
+  },
 };
 
 export default function DatenschutzPage() {
