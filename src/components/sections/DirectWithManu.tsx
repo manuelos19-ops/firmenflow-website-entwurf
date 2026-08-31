@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
@@ -41,6 +41,15 @@ export function DirectWithManu() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
+  // Automatic gentle card swap every 5 seconds (pauses on user hover)
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(() => {
+      setActiveCardIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
   useGSAP(
     () => {
       const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -74,11 +83,11 @@ export function DirectWithManu() {
       className="py-24 md:py-36 bg-transparent overflow-hidden relative"
     >
       <Container>
-        {/* Editorial Split: Text on Left + Interactive Dual-Card Photo Deck Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 md:mb-20">
+        {/* Editorial Split: Text on Left + Floating Post-it / Polaroid Cards on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center mb-16 md:mb-20">
           
           {/* Text Left */}
-          <div className="lg:col-span-7 max-w-2xl">
+          <div className="lg:col-span-6 xl:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
               <BrandIcon className="w-4 h-3.5" />
               <span>Direkt mit Manu</span>
@@ -98,7 +107,7 @@ export function DirectWithManu() {
             </p>
 
             {/* Quick Trust Highlights */}
-            <div className="flex flex-wrap items-center gap-3.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+            <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
                 <BrandIcon className="w-3.5 h-3" />
                 <span>Gründer von Firmenflow</span>
@@ -110,86 +119,116 @@ export function DirectWithManu() {
             </div>
           </div>
 
-          {/* Interactive Dual-Card Photo Deck Right */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center pt-6 lg:pt-0">
-            <div 
-              className="relative w-[280px] sm:w-[320px] md:w-[350px] h-[390px] sm:h-[430px] md:h-[460px] cursor-pointer select-none group"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              {/* Photo Card 1: Manu Nature Seated */}
+          {/* Organic Floating Post-it / Polaroid Moodboard Canvas */}
+          <div 
+            className="lg:col-span-6 xl:col-span-5 flex flex-col items-center justify-center pt-4 lg:pt-0"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <div className="relative w-full max-w-[360px] sm:max-w-[420px] h-[360px] sm:h-[400px] select-none">
+              
+              {/* Polaroid 1: Manu Nature Seated (Left & Floating) */}
               <div
                 onClick={() => setActiveCardIndex(0)}
                 className={cn(
-                  "absolute inset-0 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform",
-                  activeCardIndex === 0
-                    ? "z-20 scale-100 ring-2 ring-black/5"
-                    : "z-10 scale-[0.96] opacity-90 hover:opacity-100"
+                  "absolute top-2 left-2 sm:left-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform group",
+                  !isHovered && "animate-float-postit-1",
+                  activeCardIndex === 0 
+                    ? "z-20 scale-100 shadow-2xl ring-2 ring-[var(--color-coral)]/20" 
+                    : "z-10 scale-95 opacity-85 hover:opacity-100"
                 )}
                 style={{
-                  transform: activeCardIndex === 0
-                    ? isHovered 
-                      ? "rotate(-6deg) translateX(-24px) translateY(-10px)" 
-                      : "rotate(-3deg) translateX(-6px)"
-                    : isHovered 
-                      ? "rotate(-10deg) translateX(-36px) translateY(8px)" 
-                      : "rotate(-4deg) translateX(-8px)",
+                  transform: isHovered 
+                    ? activeCardIndex === 0 
+                      ? "rotate(-3deg) translate(-10px, -6px) scale(1.04)" 
+                      : "rotate(-6deg) translate(-18px, 6px) scale(0.96)"
+                    : undefined,
                 }}
               >
-                <Image
-                  src="/media/portraits/manu-nature-seated.webp"
-                  alt="Manu – Gründer von Firmenflow"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 280px, 350px"
+                {/* Washi Tape Accent Pin */}
+                <div 
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-amber-100/90 border border-amber-300/40 rounded-sm shadow-sm backdrop-blur-sm -rotate-2 pointer-events-none z-30" 
+                  aria-hidden="true"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <p className="font-bold text-sm sm:text-base tracking-tight">Manu</p>
-                  <p className="text-white/80 text-xs">Gründer von Firmenflow</p>
+
+                {/* Photo */}
+                <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden bg-stone-100">
+                  <Image
+                    src="/media/portraits/manu-nature-seated.webp"
+                    alt="Manu – Gründer von Firmenflow"
+                    fill
+                    priority
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    sizes="250px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                </div>
+
+                {/* Polaroid Caption Note */}
+                <div className="pt-2.5 px-1 flex items-center justify-between">
+                  <p className="font-editorial italic text-sm sm:text-base font-semibold text-[var(--color-ink)]">
+                    Manu Landeck
+                  </p>
+                  <span className="text-[10px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2 py-0.5 rounded-full">
+                    Wesel ☕
+                  </span>
                 </div>
               </div>
 
-              {/* Photo Card 2: Manu Modern Vertical Portrait */}
+              {/* Polaroid 2: Manu Green Door Vertical (Right & Floating Counter-Rhythm) */}
               <div
                 onClick={() => setActiveCardIndex(1)}
                 className={cn(
-                  "absolute inset-0 rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform",
-                  activeCardIndex === 1
-                    ? "z-20 scale-100 ring-2 ring-black/5"
-                    : "z-10 scale-[0.96] opacity-90 hover:opacity-100"
+                  "absolute bottom-2 right-2 sm:right-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-500 ease-[var(--ease-drawer)] will-change-transform group",
+                  !isHovered && "animate-float-postit-2",
+                  activeCardIndex === 1 
+                    ? "z-20 scale-100 shadow-2xl ring-2 ring-[var(--color-plum)]/20" 
+                    : "z-10 scale-95 opacity-85 hover:opacity-100"
                 )}
                 style={{
-                  transform: activeCardIndex === 1
-                    ? isHovered 
-                      ? "rotate(6deg) translateX(24px) translateY(-10px)" 
-                      : "rotate(4deg) translateX(8px)"
-                    : isHovered 
-                      ? "rotate(10deg) translateX(36px) translateY(8px)" 
-                      : "rotate(5deg) translateX(12px)",
+                  transform: isHovered 
+                    ? activeCardIndex === 1 
+                      ? "rotate(3deg) translate(10px, -6px) scale(1.04)" 
+                      : "rotate(6deg) translate(18px, 6px) scale(0.96)"
+                    : undefined,
                 }}
               >
-                <Image
-                  src="/media/portraits/manu-green-door-vertical.webp"
-                  alt="Manu – Webdesign & Entwicklung aus Wesel"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 280px, 350px"
+                {/* Washi Tape Accent Pin */}
+                <div 
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-rose-100/90 border border-rose-300/40 rounded-sm shadow-sm backdrop-blur-sm rotate-3 pointer-events-none z-30" 
+                  aria-hidden="true"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <p className="font-bold text-sm sm:text-base tracking-tight">Manu</p>
-                  <p className="text-white/80 text-xs">Wesel &amp; Niederrhein</p>
+
+                {/* Photo */}
+                <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden bg-stone-100">
+                  <Image
+                    src="/media/portraits/manu-green-door-vertical.webp"
+                    alt="Manu – Direkt mit Manu"
+                    fill
+                    priority
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    sizes="250px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                </div>
+
+                {/* Polaroid Caption Note */}
+                <div className="pt-2.5 px-1 flex items-center justify-between">
+                  <p className="font-editorial italic text-sm sm:text-base font-semibold text-[var(--color-ink)]">
+                    Gründer von Firmenflow
+                  </p>
+                  <span className="text-[10px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2 py-0.5 rounded-full">
+                    Persönlich ✨
+                  </span>
                 </div>
               </div>
+
             </div>
 
-            {/* Subtle interactive tip */}
-            <div className="flex items-center gap-1.5 text-xs text-[var(--color-muted)] mt-5 select-none">
-              <Layers className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-              <span>Karten fächern auf Hover · Klicke zum Wechseln</span>
+            {/* Subtle Interactive Hint */}
+            <div className="flex items-center gap-2 text-xs text-[var(--color-muted)] mt-4 select-none">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+              <span>Schwebende Schnappschüsse · Wechselt sanft automatisch</span>
             </div>
           </div>
         </div>

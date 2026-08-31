@@ -293,6 +293,33 @@ img {
   box-shadow: 0 0 35px -5px rgba(59, 13, 79, 0.4);
 }
 
+/* Organic Post-It / Polaroid Floating Animations */
+@keyframes float-postit-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-2deg);
+  }
+}
+
+@keyframes float-postit-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(11px) rotate(3deg);
+  }
+}
+
+.animate-float-postit-1 {
+  animation: float-postit-1 6s ease-in-out infinite;
+}
+
+.animate-float-postit-2 {
+  animation: float-postit-2 7s ease-in-out infinite 0.9s;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
