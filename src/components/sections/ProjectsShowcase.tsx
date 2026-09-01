@@ -205,7 +205,7 @@ export function ProjectsShowcase() {
             Websites im 3D-Orbit.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Vier ausgewählte Projekte drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um das Projekt direkt in einem neuen Tab zu öffnen.
+            Ausgewählte Live-Websites &amp; Web-Apps drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um das Projekt direkt in einem neuen Tab zu öffnen.
           </p>
         </div>
 
