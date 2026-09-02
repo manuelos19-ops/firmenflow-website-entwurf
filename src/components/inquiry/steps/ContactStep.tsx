@@ -52,12 +52,18 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
             value={data.name}
             onChange={(e) => onPatch({ name: e.target.value })}
             placeholder="z. B. Anna Beispiel"
-            className="w-full px-4 py-3.5 rounded-xl border border-[var(--color-line)] bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-coral)] focus:ring-2 focus:ring-[var(--color-coral)]/20 transition-all text-sm sm:text-base outline-none"
+            className={cn(
+              "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+              errors.name
+                ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
+                : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
+            )}
             aria-describedby={errors.name ? "name-error" : undefined}
           />
           {errors.name && (
-            <p id="name-error" className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-              {errors.name}
+            <p id="name-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+              <span>⚠️</span>
+              <span>{errors.name}</span>
             </p>
           )}
         </div>
@@ -66,28 +72,35 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)] mb-1.5">
-              E-Mail-Adresse
+              E-Mail-Adresse *
             </label>
             <input
               id="email"
               name="email"
               type="email"
+              required
               value={data.email}
               onChange={(e) => onPatch({ email: e.target.value })}
               placeholder="name@betrieb.de"
-              className="w-full px-4 py-3.5 rounded-xl border border-[var(--color-line)] bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-coral)] focus:ring-2 focus:ring-[var(--color-coral)]/20 transition-all text-sm sm:text-base outline-none"
+              className={cn(
+                "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+                errors.email
+                  ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
+                  : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
+              )}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
             {errors.email && (
-              <p id="email-error" className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-                {errors.email}
+              <p id="email-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+                <span>⚠️</span>
+                <span>{errors.email}</span>
               </p>
             )}
           </div>
 
           <div>
             <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)] mb-1.5">
-              Telefonnummer / WhatsApp
+              Telefonnummer / WhatsApp <span className="text-[var(--color-muted)] font-normal">(optional)</span>
             </label>
             <input
               id="phone"
@@ -96,12 +109,18 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
               value={data.phone}
               onChange={(e) => onPatch({ phone: e.target.value })}
               placeholder="0171 1234567"
-              className="w-full px-4 py-3.5 rounded-xl border border-[var(--color-line)] bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-coral)] focus:ring-2 focus:ring-[var(--color-coral)]/20 transition-all text-sm sm:text-base outline-none"
+              className={cn(
+                "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+                errors.phone
+                  ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
+                  : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
+              )}
               aria-describedby={errors.phone ? "phone-error" : undefined}
             />
             {errors.phone && (
-              <p id="phone-error" className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-                {errors.phone}
+              <p id="phone-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+                <span>⚠️</span>
+                <span>{errors.phone}</span>
               </p>
             )}
           </div>
@@ -140,14 +159,18 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
             })}
           </div>
           {errors.preferredContact && (
-            <p className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-              {errors.preferredContact}
+            <p className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+              <span>⚠️</span>
+              <span>{errors.preferredContact}</span>
             </p>
           )}
         </div>
 
         {/* Privacy Notice */}
-        <div className="pt-4 border-t border-[var(--color-line)]">
+        <div className={cn(
+          "pt-4 border-t transition-all",
+          errors.privacyAccepted ? "border-rose-300 bg-rose-50/40 p-3 rounded-xl" : "border-[var(--color-line)]"
+        )}>
           <label className="flex items-start gap-3 cursor-pointer">
             <input
               type="checkbox"
@@ -167,8 +190,9 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
             </span>
           </label>
           {errors.privacyAccepted && (
-            <p id="privacy-error" className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-              {errors.privacyAccepted}
+            <p id="privacy-error" className="text-xs font-semibold text-rose-600 mt-2 flex items-center gap-1" role="alert">
+              <span>⚠️</span>
+              <span>{errors.privacyAccepted}</span>
             </p>
           )}
         </div>

@@ -55,9 +55,13 @@ export const inquirySchema = z
     name: z
       .string()
       .trim()
-      .min(2, "Bitte gib deinen Namen an.")
+      .min(2, "Bitte gib deinen Vor- und Nachnamen an.")
       .max(120, "Der Name ist zu lang."),
-    email: optionalEmail,
+    email: z
+      .string()
+      .trim()
+      .min(1, "Bitte gib deine E-Mail-Adresse an.")
+      .email("Bitte gib eine gültige E-Mail-Adresse ein (z. B. name@betrieb.de)."),
     phone: optionalPhone,
     preferredContact: z.enum(["email", "phone", "whatsapp"]),
     privacyAccepted: z.literal(true, {
@@ -66,25 +70,11 @@ export const inquirySchema = z
     company: z.string().max(0, "Spam erkannt."), // Honeypot
   })
   .superRefine((value, context) => {
-    if (!value.email && !value.phone) {
+    if (["phone", "whatsapp"].includes(value.preferredContact) && (!value.phone || value.phone.trim().length < 6)) {
       context.addIssue({
         code: "custom",
-        path: ["email"],
-        message: "Bitte gib eine E-Mail-Adresse oder Telefonnummer an.",
-      });
-    }
-    if (value.preferredContact === "email" && !value.email) {
-      context.addIssue({
-        code: "custom",
-        path: ["preferredContact"],
-        message: "Für Rückmeldung per E-Mail fehlt deine E-Mail-Adresse.",
-      });
-    }
-    if (["phone", "whatsapp"].includes(value.preferredContact) && !value.phone) {
-      context.addIssue({
-        code: "custom",
-        path: ["preferredContact"],
-        message: "Für diesen Rückweg fehlt deine Telefonnummer.",
+        path: ["phone"],
+        message: "Für den gewählten Rückweg per Telefon/WhatsApp wird deine Telefonnummer benötigt.",
       });
     }
   });

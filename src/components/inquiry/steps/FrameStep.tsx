@@ -56,6 +56,12 @@ export function FrameStep({ data, errors, onPatch }: StepProps) {
             );
           })}
         </div>
+        {errors.timeframe && (
+          <p className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+            <span>⚠️</span>
+            <span>{errors.timeframe}</span>
+          </p>
+        )}
       </div>
     </fieldset>
   );

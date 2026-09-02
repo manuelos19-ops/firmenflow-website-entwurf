@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useReducer, useState } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
+import { useEffect, useReducer, useRef, useState } from "react";
+import { ArrowLeft, ArrowRight, CheckCircle2, RefreshCw, AlertCircle } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { initialInquiryState, inquiryReducer } from "@/features/inquiry/reducer";
 import { inquirySchema, type InquiryPayload } from "@/features/inquiry/schema";
@@ -15,6 +15,9 @@ import { ProjectTypeStep } from "./steps/ProjectTypeStep";
 export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null }) {
   const [state, dispatch] = useReducer(inquiryReducer, undefined, initialInquiryState);
   const [enhanced, setEnhanced] = useState(false);
+  const formTopRef = useRef<HTMLDivElement>(null);
+  const errorSummaryRef = useRef<HTMLDivElement>(null);
+  const isFirstMount = useRef(true);
 
   useEffect(() => {
     setEnhanced(true);
@@ -46,47 +49,77 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
     } catch {}
   }, [state.data, enhanced]);
 
+  // Smooth scroll to top of form on step change & release button focus (fixes Android Chrome jumping down)
+  useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+
+    if (typeof document !== "undefined" && document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
+    if (formTopRef.current) {
+      const navOffset = 90;
+      const top = formTopRef.current.getBoundingClientRect().top + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: "smooth",
+      });
+    }
+  }, [state.step]);
+
   const validateCurrentStep = (): boolean => {
     const errors: Record<string, string> = {};
 
     if (state.step === 0) {
       if (!state.data.projectType) {
-        errors.projectType = "Bitte wähle eine Projektart aus.";
+        errors.projectType = "Vorhaben: Bitte wähle dein wichtigstes Vorhaben aus.";
       }
     } else if (state.step === 1) {
       if (!state.data.businessName || state.data.businessName.trim().length < 2) {
-        errors.businessName = "Bitte gib den Namen deines Betriebs an.";
+        errors.businessName = "Betrieb: Bitte gib den Namen deines Betriebs an.";
       }
       if (!state.data.industry || state.data.industry.trim().length < 2) {
-        errors.industry = "Bitte nenne deine Branche.";
+        errors.industry = "Branche: Bitte nenne deine Branche.";
       }
       if (!state.data.place || state.data.place.trim().length < 2) {
-        errors.place = "Bitte nenne deinen Standort (z. B. Wesel).";
+        errors.place = "Standort: Bitte nenne deinen Ort (z. B. Wesel).";
       }
     } else if (state.step === 2) {
       if (!state.data.goals || state.data.goals.length === 0) {
-        errors.goals = "Bitte wähle mindestens ein Ziel aus.";
+        errors.goals = "Ziele: Bitte wähle mindestens ein Ziel aus.";
+      }
+    } else if (state.step === 3) {
+      if (!state.data.timeframe) {
+        errors.timeframe = "Zeitrahmen: Bitte wähle einen gewünschten Zeitrahmen aus.";
       }
     } else if (state.step === 4) {
       if (!state.data.name || state.data.name.trim().length < 2) {
-        errors.name = "Bitte gib deinen Namen an.";
+        errors.name = "Name: Bitte gib deinen Vor- und Nachnamen an.";
       }
-      if (!state.data.email && !state.data.phone) {
-        errors.email = "Bitte gib eine E-Mail-Adresse oder Telefonnummer an.";
+      if (!state.data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.data.email.trim())) {
+        errors.email = "E-Mail-Adresse: Bitte gib eine gültige E-Mail-Adresse an (z. B. name@betrieb.de).";
       }
-      if (state.data.preferredContact === "email" && !state.data.email) {
-        errors.preferredContact = "Für Rückmeldung per E-Mail fehlt deine E-Mail-Adresse.";
+      if (["phone", "whatsapp"].includes(state.data.preferredContact) && (!state.data.phone || state.data.phone.trim().length < 6)) {
+        errors.phone = "Telefonnummer: Für den gewählten Kontaktweg per Telefon/WhatsApp wird deine Telefonnummer benötigt.";
       }
-      if (["phone", "whatsapp"].includes(state.data.preferredContact) && !state.data.phone) {
-        errors.preferredContact = "Für diesen Rückweg fehlt deine Telefonnummer.";
+      if (!state.data.preferredContact) {
+        errors.preferredContact = "Rückmeldekanal: Bitte wähle deinen bevorzugten Kontaktweg.";
       }
       if (!state.data.privacyAccepted) {
-        errors.privacyAccepted = "Bitte bestätige den Datenschutzhinweis.";
+        errors.privacyAccepted = "Datenschutz: Bitte bestätige die Datenschutzerklärung vor dem Absenden.";
       }
     }
 
     if (Object.keys(errors).length > 0) {
       dispatch({ type: "errors", value: errors });
+      setTimeout(() => {
+        if (errorSummaryRef.current) {
+          errorSummaryRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }, 50);
       return false;
     }
 
@@ -117,6 +150,11 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
         if (path) fieldErrors[String(path)] = issue.message;
       });
       dispatch({ type: "errors", value: fieldErrors });
+      setTimeout(() => {
+        if (errorSummaryRef.current) {
+          errorSummaryRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }, 50);
       return;
     }
 
@@ -173,7 +211,12 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
   }
 
   return (
-    <div className="bg-white rounded-[2.5rem] p-6 sm:p-10 md:p-14 border border-[var(--color-line)] shadow-xl">
+    <div 
+      ref={formTopRef}
+      id="projektanfrage"
+      style={{ overflowAnchor: "none" }}
+      className="bg-white rounded-[2.5rem] p-6 sm:p-10 md:p-14 border border-[var(--color-line)] shadow-xl scroll-mt-24"
+    >
       <form action="/api/inquiry" method="post" onSubmit={handleSubmit} className="space-y-8">
         {enhanced && <InquiryProgress step={state.step} />}
 
@@ -236,6 +279,30 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             />
           )}
         </div>
+
+        {/* Prominente Fehlermeldung direkt über den Buttons */}
+        {Object.keys(state.fieldErrors).length > 0 && (
+          <div
+            ref={errorSummaryRef}
+            role="alert"
+            aria-live="assertive"
+            className="p-4 sm:p-5 rounded-2xl bg-rose-50 border-2 border-rose-300 text-rose-900 shadow-sm space-y-2 animate-in fade-in duration-200"
+          >
+            <div className="flex items-center gap-2.5 font-bold text-sm sm:text-base text-rose-800">
+              <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+              <span>
+                {state.step === 4
+                  ? "Bitte prüfe vor dem Absenden noch folgende Angaben:"
+                  : "Bitte prüfe noch folgende Angaben, um fortzufahren:"}
+              </span>
+            </div>
+            <ul className="list-disc list-inside space-y-1 text-xs sm:text-sm text-rose-700 pl-1 font-medium">
+              {Object.entries(state.fieldErrors).map(([field, msg]) => (
+                <li key={field}>{msg}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Navigation Buttons */}
         {enhanced ? (
