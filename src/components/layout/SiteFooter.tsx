@@ -30,6 +30,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/google-business-360" className="hover:text-white transition-colors">
+                  Google Business 360°
+                </Link>
+              </li>
+              <li>
                 <Link href="/#projekte" className="hover:text-white transition-colors">
                   Projekte
                 </Link>

@@ -41,15 +41,15 @@ export const homeContent = {
   pilot: {
     eyebrow: "Google Business 360°",
     title: "Gefunden werden und direkt Vertrauen aufbauen.",
-    body: "Wer lokal nach einem Café, Handwerker oder Dienstleister sucht, schaut zuerst auf Google Maps und die Bewertungen. Ich optimiere deinen Brancheneintrag von Grund auf, gebe dir smarte QR-Karten für echte 5-Sterne-Bewertungen und sorge dafür, dass dein Betrieb vor Ort sofort heraussticht.",
+    body: "Wer lokal nach einem Betrieb sucht, entscheidet oft direkt bei Google. Ich optimiere dein Unternehmensprofil, übernehme das professionelle Bewertungsmanagement und mache das Feedback deiner Kunden als wertvolle Erkenntnisse für deinen Betrieb nutzbar.",
     modules: [
       "Google-Unternehmensprofil komplett optimieren",
-      "Echte 5-Sterne-Bewertungen per NFC & QR-Code",
-      "Persönliche Antwort-Vorlagen für Kundenfeedback",
-      "Lokaler Sichtbarkeits-Check",
-      "Monatliche Auswertung der Kundenstimmen",
+      "Laufendes Bewertungsmanagement (echte Antworten)",
+      "Systematischer Prozess für neue Kundenbewertungen",
+      "Customer Insights & monatlicher Feedback-Report",
+      "Frühwarnsystem für betriebliche Schwachstellen",
     ],
-    cta: "Google 360° anfragen",
+    cta: "Google-Präsenz prüfen lassen",
   },
   process: [
     { 
@@ -112,7 +112,7 @@ export const faqItems = [
   },
   { 
     question: "Was genau beinhaltet Google Business 360°?", 
-    answer: "Ich richte dein Google-Maps-Profil professionell und vollständig ein, hinterlege alle Leistungen und Öffnungszeiten und gebe dir physische QR-Code-Karten an die Hand, mit denen deine zufriedenen Kunden unkompliziert echte 5-Sterne-Bewertungen abgeben können." 
+    answer: "Vom professionellen Aufbau deines Google-Unternehmensprofils über das laufende Beantworten von Rezensionen bis zur monatlichen Analyse deines Kundenfeedbacks: Ich sorge dafür, dass dein Betrieb auf Google Maps top dasteht, Kunden dir vertrauen und du aus Bewertungen konkrete Erkenntnisse für dein Unternehmen gewinnst." 
   },
   { 
     question: "Mit wem spreche ich während des Projekts?", 

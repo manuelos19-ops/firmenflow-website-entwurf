@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
-import { Star, MapPin, Search, QrCode, MessageSquareCheck, TrendingUp, CheckCircle } from "lucide-react";
+import { Star, MapPin, Search, MessageSquareCheck, TrendingUp, CheckCircle, LineChart, Sparkles } from "lucide-react";
 
 export function GoogleBusinessPilot() {
   const containerRef = useRef<HTMLElement>(null);
@@ -149,37 +149,37 @@ export function GoogleBusinessPilot() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
             <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center gap-3">
               <div className="w-7 h-7 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                <TrendingUp className="w-3.5 h-3.5" />
+                <MapPin className="w-3.5 h-3.5" />
               </div>
               <div>
-                <p className="text-[11px] text-emerald-800 font-medium">Sichtbarkeit</p>
-                <p className="text-xs sm:text-sm font-bold text-emerald-950">+140% lokale Aufrufe</p>
+                <p className="text-[11px] text-emerald-800 font-medium">Lokale Sichtbarkeit</p>
+                <p className="text-xs sm:text-sm font-bold text-emerald-950">Vollständiges Maps-Profil</p>
               </div>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-100 flex items-center gap-3">
               <div className="w-7 h-7 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
-                <QrCode className="w-3.5 h-3.5" />
+                <MessageSquareCheck className="w-3.5 h-3.5" />
               </div>
               <div>
-                <p className="text-[11px] text-blue-800 font-medium">Kunden-Feedback</p>
-                <p className="text-xs sm:text-sm font-bold text-blue-950">Echte QR-Karten</p>
+                <p className="text-[11px] text-blue-800 font-medium">Bewertungsmanagement</p>
+                <p className="text-xs sm:text-sm font-bold text-blue-950">Individuelle Antworten</p>
               </div>
             </div>
 
             <div className="p-3.5 rounded-2xl bg-purple-50 border border-purple-100 flex items-center gap-3">
               <div className="w-7 h-7 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0">
-                <MessageSquareCheck className="w-3.5 h-3.5" />
+                <LineChart className="w-3.5 h-3.5" />
               </div>
               <div>
-                <p className="text-[11px] text-purple-800 font-medium">Antwort-Quote</p>
-                <p className="text-xs sm:text-sm font-bold text-purple-950">100% persönlich</p>
+                <p className="text-[11px] text-purple-800 font-medium">Customer Insights</p>
+                <p className="text-xs sm:text-sm font-bold text-purple-950">Monatliche Auswertung</p>
               </div>
             </div>
           </div>
 
           <div className="p-3.5 rounded-2xl bg-gray-50 border border-gray-100 text-xs text-gray-700 italic">
-            „Durch die Optimierung unseres Google-Profils und die QR-Karten rufen heute jede Woche neue Kunden direkt aus der Umgebung an.“
+            „Google-Bewertungen sind mehr als Marketing – sie sind dein direkter Blick in die echte Zufriedenheit deiner Kunden.“
           </div>
         </div>
 
@@ -190,9 +190,9 @@ export function GoogleBusinessPilot() {
               <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4">
                 <Search className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">1. Audit &amp; Profil-Schliff</h3>
+              <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil-Schliff &amp; Sichtbarkeit</h3>
               <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                Prüfung aller Angaben, Kategorien, Fotos und Wettbewerber. Beseitigung typischer Fehler, die Sichtbarkeit kosten.
+                Prüfung aller Angaben, Kategorien, Fotos und Leistungen. Ein vollständiger Auftritt, der bei lokalen Suchanfragen überzeugt.
               </p>
             </div>
           </div>
@@ -200,11 +200,11 @@ export function GoogleBusinessPilot() {
           <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
             <div>
               <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4">
-                <QrCode className="w-5 h-5" />
+                <Star className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">2. Echter Bewertungs-Flow</h3>
+              <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungsaufbau &amp; Betreuung</h3>
               <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                QR-Code Aufsteller und Vorlagen für dein Geschäft – damit zufriedene Kunden mühelos 5 Sterne hinterlassen.
+                Neue Rezensionen zeitnah und passend beantwortet. Plus ein praxistauglicher Prozess, damit zufriedene Kunden gerne bewerten.
               </p>
             </div>
           </div>
@@ -212,28 +212,39 @@ export function GoogleBusinessPilot() {
           <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
             <div>
               <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4">
-                <MessageSquareCheck className="w-5 h-5" />
+                <LineChart className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">3. Antwort- &amp; Voice-Service</h3>
+              <h3 className="text-lg font-bold font-sans text-white mb-2">3. Insights &amp; Frühwarnsystem</h3>
               <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                Persönliche, professionelle Reaktionen auf alle Bewertungen und monatliche Auswertung der Kundenstimmen.
+                Wiederkehrendes Lob und Kritik im monatlichen Feedback-Report sichtbar machen – für fundierte betriebliche Entscheidungen.
               </p>
             </div>
           </div>
         </div>
 
-        {/* CTA & Disclaimer */}
+        {/* CTA & More Info Link */}
         <div className="flex flex-col items-center space-y-4">
-          <MagneticButton>
-            <ButtonLink 
-              href="#projektanfrage" 
-              variant="primary"
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <MagneticButton>
+              <ButtonLink 
+                href="#projektanfrage" 
+                variant="primary"
+                size="lg"
+                className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-7 py-3.5"
+              >
+                {homeContent.pilot.cta}
+              </ButtonLink>
+            </MagneticButton>
+
+            <ButtonLink
+              href="/google-business-360"
+              variant="ghost"
               size="lg"
-              className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-7 py-3.5"
+              className="text-white hover:text-[var(--color-coral)] hover:bg-white/10 text-sm sm:text-base border border-white/20 px-6 py-3.5"
             >
-              {homeContent.pilot.cta}
+              <span>Alle Details &amp; Leistungen ansehen →</span>
             </ButtonLink>
-          </MagneticButton>
+          </div>
           
           <p className="text-xs text-white/50 max-w-lg text-center leading-relaxed">
             Streng richtlinienkonform nach Google-Richtlinien. Keine gekauften Bewertungen, keine gefälschten Stimmen, keine Ranking-Garantien.

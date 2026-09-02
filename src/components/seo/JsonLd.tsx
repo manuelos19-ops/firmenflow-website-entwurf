@@ -78,7 +78,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Google Business 360°",
             description:
-              "Optimierung des Google-Unternehmensprofils und Aufbau echter 5-Sterne-Bewertungen per QR-Code.",
+              "Optimierung des Google-Unternehmensprofils, professionelles Bewertungsmanagement und laufende Kundenfeedback-Analyse.",
           },
         },
         {
