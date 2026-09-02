@@ -15,6 +15,7 @@ const navigation = [
   { label: "Projekte", href: "/#projekte" },
   { label: "Ablauf", href: "/#ablauf" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Kontakt", href: "/#kontakt" },
 ] as const;
 
 export function SiteHeader() {
