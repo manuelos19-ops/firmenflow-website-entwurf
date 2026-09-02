@@ -23,7 +23,7 @@ export const homeContent = {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
       body: "Ich behalte, was bereits gut funktioniert, und modernisiere, was veraltet ist. Deine bestehenden Google-Rankings bleiben sicher erhalten, während der Auftritt komplett frisch, mobiloptimiert und kundenorientiert wird.",
-      points: ["Bestandsanalyse & Relaunch", "Google-Rankings behalten", "Neue, klare Struktur", "Schlüsselfertig in 2–3 Wochen"],
+      points: ["Bestandsanalyse & Relaunch", "Google-Rankings behalten", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
     },
     {
       slug: "foto-video",
@@ -59,17 +59,17 @@ export const homeContent = {
     },
     { 
       number: "02", 
-      title: "Struktur & Design-Entwurf (Woche 1)", 
+      title: "Struktur & Design-Entwurf", 
       body: "Ich erstelle die Seitenstruktur und den ersten interaktiven Entwurf. Du siehst genau, wie die Seite auf dem Smartphone wirkt, bevor alles final gebaut wird." 
     },
     { 
       number: "03", 
-      title: "Umsetzung & Texterstellung (Woche 2)", 
+      title: "Umsetzung & Texterstellung", 
       body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website zügig und datenschutzkonform." 
     },
     { 
       number: "04", 
-      title: "Schlüsselfertig online (Woche 3)", 
+      title: "Schlüsselfertig online", 
       body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." 
     },
   ],
@@ -104,7 +104,7 @@ export const faqItems = [
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 
-    answer: "In der Regel ist deine neue Website innerhalb von 2 bis 3 Wochen komplett fertig und online. Bei eiligen Projekten oder kleineren Relaunches kann es nach Absprache auch zügiger gehen." 
+    answer: "Das richtet sich flexibel nach deinen Anforderungen und geht ohne träge Agenturschleifen: Viele Websites sind schon nach 1 bis 2 Wochen schlüsselfertig online. Wenn es bei dir eilt (z. B. wegen einer Neueröffnung oder Kampagne), können wir das Projekt nach Absprache auch kurzfristig vorziehen." 
   },
   { 
     question: "Kannst du meine alte Website überarbeiten?", 

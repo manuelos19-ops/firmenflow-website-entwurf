@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Briefcase, Camera, Handshake, MapPin } from "lucide-react";
+import { Briefcase, Camera, Handshake, PhoneCall, MessageSquare } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
@@ -89,27 +89,27 @@ export function DirectWithManu() {
               <span className="text-[var(--color-coral)] font-editorial">Keine stille Post.</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed mb-6">
+            <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-5">
               Du sprichst vom ersten Gedanken bis zur fertigen Website immer persönlich mit mir. Keine wechselnden Projektmanager, keine anonymen Tickets und kein Agenturtheater – nenn mich einfach Manu.
             </p>
 
-            <p className="text-base text-[var(--color-muted)] leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
               Ich mag klare Gespräche, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Firmenflow ist bewusst persönlich aufgebaut: Du weißt immer genau, wer deine Website entwickelt und wer sich darum kümmert.
             </p>
 
-            {/* Quick Trust Highlights */}
-            <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+            {/* Quick Trust Highlights - Option A */}
+            <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
-                <BrandIcon className="w-3.5 h-3" />
-                <span>Gründer von Firmenflow</span>
+                <PhoneCall className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <span>Direkter Draht via WhatsApp &amp; Telefon</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
-                <Camera className="w-3.5 h-3.5 text-purple-600" />
-                <span>Foto &amp; Video vor Ort</span>
+                <MessageSquare className="w-3.5 h-3.5 text-[var(--color-plum)]" />
+                <span>Kein Agentur-Fachchinesisch</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
-                <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-                <span>Wesel &amp; Niederrhein</span>
+                <Handshake className="w-3.5 h-3.5 text-emerald-600" />
+                <span>100 % persönliche Verantwortung</span>
               </div>
             </div>
           </div>
@@ -157,13 +157,12 @@ export function DirectWithManu() {
                 </div>
 
                 {/* Polaroid Caption Note */}
-                <div className="pt-3 px-1 flex flex-col gap-1.5">
+                <div className="pt-3 px-1 flex flex-col gap-2">
                   <p className="font-editorial italic text-xs sm:text-sm font-semibold text-[var(--color-ink)] leading-snug">
                     „Eine gute Website muss nicht kompliziert sein – sie muss funktionieren.“
                   </p>
-                  <div className="flex items-center justify-between pt-1 border-t border-stone-100">
-                    <span className="text-[11px] font-medium text-[var(--color-muted)]">Manu Landeck</span>
-                    <span className="text-[9px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2 py-0.5 rounded-full">
+                  <div className="flex items-center justify-center pt-1.5 border-t border-stone-100">
+                    <span className="text-[10px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2.5 py-0.5 rounded-full">
                       Auf Augenhöhe ☕
                     </span>
                   </div>
@@ -209,14 +208,13 @@ export function DirectWithManu() {
                 </div>
 
                 {/* Polaroid Caption Note */}
-                <div className="pt-3 px-1 flex flex-col gap-1.5">
+                <div className="pt-3 px-1 flex flex-col gap-2">
                   <p className="font-editorial italic text-xs sm:text-sm font-semibold text-[var(--color-ink)] leading-snug">
                     „Ich denke wie ein Unternehmer: Klare Absprachen, echter Nutzen, kein Blabla.“
                   </p>
-                  <div className="flex items-center justify-between pt-1 border-t border-stone-100">
-                    <span className="text-[11px] font-medium text-[var(--color-muted)]">Gründer Firmenflow</span>
-                    <span className="text-[9px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2 py-0.5 rounded-full">
-                      Handschlag ✨
+                  <div className="flex items-center justify-center pt-1.5 border-t border-stone-100">
+                    <span className="text-[10px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2.5 py-0.5 rounded-full">
+                      Handschlagqualität ✨
                     </span>
                   </div>
                 </div>
