@@ -114,16 +114,23 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
           <input
             id="currentWebsite"
             name="currentWebsite"
-            type="url"
+            type="text"
+            inputMode="url"
             value={data.currentWebsite}
             onChange={(e) => onPatch({ currentWebsite: e.target.value })}
-            placeholder="https://deine-aktuelle-seite.de"
-            className="w-full px-4 py-3.5 rounded-xl border border-[var(--color-line)] bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-coral)] focus:ring-2 focus:ring-[var(--color-coral)]/20 transition-all text-sm sm:text-base outline-none"
+            placeholder="z. B. deine-aktuelle-seite.de"
+            className={cn(
+              "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+              errors.currentWebsite
+                ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
+                : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
+            )}
             aria-describedby={errors.currentWebsite ? "currentWebsite-error" : undefined}
           />
           {errors.currentWebsite && (
-            <p id="currentWebsite-error" className="text-xs font-semibold text-rose-600 mt-1" role="alert">
-              {errors.currentWebsite}
+            <p id="currentWebsite-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+              <span>⚠️</span>
+              <span>{errors.currentWebsite}</span>
             </p>
           )}
         </div>

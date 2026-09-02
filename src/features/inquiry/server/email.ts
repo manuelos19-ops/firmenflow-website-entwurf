@@ -14,7 +14,7 @@ const projectTypeLabels: Record<string, string> = {
   "new-site": "Neue Website (Erstauftritt oder Neugestaltung)",
   "relaunch": "Relaunch & Überarbeitung der bestehenden Website",
   "google-business": "Google Business & lokale Sichtbarkeit stärken",
-  "photo-video": "Foto- & Videoaufnahmen vor Ort",
+  "photo-video": "Foto- & Videoaufnahmen",
 };
 
 const goalLabels: Record<string, string> = {
@@ -23,7 +23,7 @@ const goalLabels: Record<string, string> = {
   "modern-look": "Zeitgemäßes & modernes Design",
   "clear-offer": "Leistungen verständlich auf den Punkt bringen",
   "better-reviews": "Google Bewertungen & Vertrauen stärken",
-  "photo-video": "Authentische Foto- & Videoaufnahmen vor Ort",
+  "photo-video": "Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)",
 };
 
 const timeframeLabels: Record<string, string> = {

@@ -1,14 +1,24 @@
 import { z } from "zod";
 
-const optionalUrl = z.union([
-  z.literal(""),
-  z.string().url("Bitte gib eine vollständige URL ein (z. B. https://dein-betrieb.de)."),
-]);
-
-const optionalEmail = z.union([
-  z.literal(""),
-  z.string().email("Bitte prüfe deine E-Mail-Adresse."),
-]);
+const optionalWebsite = z
+  .string()
+  .trim()
+  .transform((val) => {
+    if (!val) return "";
+    return /^https?:\/\//i.test(val) ? val : `https://${val}`;
+  })
+  .refine(
+    (val) => {
+      if (!val) return true;
+      try {
+        const url = new URL(val);
+        return url.hostname.includes(".");
+      } catch {
+        return false;
+      }
+    },
+    { message: "Bitte prüfe deine Webadresse (z. B. dein-betrieb.de)." }
+  );
 
 const optionalPhone = z.union([
   z.literal(""),
@@ -36,7 +46,7 @@ export const inquirySchema = z
       .trim()
       .min(2, "Bitte nenne deinen Standort (z. B. Wesel).")
       .max(100, "Der Ort ist zu lang."),
-    currentWebsite: optionalUrl,
+    currentWebsite: optionalWebsite,
     goals: z
       .array(
         z.enum([
