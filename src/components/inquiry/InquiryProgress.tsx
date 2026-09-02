@@ -1,5 +1,5 @@
 export function InquiryProgress({ step }: { step: number }) {
-  const steps = ["Vorhaben", "Betrieb", "Ziele", "Rahmen", "Kontakt"];
+  const steps = ["Vorhaben", "Betrieb", "Ziele", "Zeitrahmen", "Kontakt"];
 
   return (
     <div className="space-y-3">

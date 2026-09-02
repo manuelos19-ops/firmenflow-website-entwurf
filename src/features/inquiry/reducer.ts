@@ -31,7 +31,6 @@ export function initialInquiryState(projectType?: InquiryDraft["projectType"]): 
       goals: [],
       goalDetails: "",
       timeframe: "flexible",
-      budget: "not-sure",
       name: "",
       email: "",
       phone: "",
