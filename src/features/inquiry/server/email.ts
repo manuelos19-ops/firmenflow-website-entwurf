@@ -9,9 +9,39 @@ export type InquiryMailer = {
   send(payload: InquiryPayload): Promise<MailResult>;
 };
 
+// Deutsche Bezeichnungen für das E-Mail-Template und CRM
+const projectTypeLabels: Record<string, string> = {
+  "new-site": "Neue Website (Erstauftritt oder Neugestaltung)",
+  "relaunch": "Relaunch & Überarbeitung der bestehenden Website",
+  "google-business": "Google Business & lokale Sichtbarkeit stärken",
+  "photo-video": "Foto- & Videoaufnahmen vor Ort",
+};
+
+const goalLabels: Record<string, string> = {
+  "more-inquiries": "Mehr Kundenanfragen gewinnen",
+  "better-local-presence": "Bessere Sichtbarkeit am Niederrhein & regional",
+  "modern-look": "Zeitgemäßes & modernes Design",
+  "clear-offer": "Leistungen verständlich auf den Punkt bringen",
+  "better-reviews": "Google Bewertungen & Vertrauen stärken",
+  "photo-video": "Authentische Foto- & Videoaufnahmen vor Ort",
+};
+
+const timeframeLabels: Record<string, string> = {
+  "soon": "So schnell wie möglich",
+  "three-months": "In den nächsten 1–3 Monaten",
+  "six-months": "In 3–6 Monaten",
+  "flexible": "Flexibel / Erstmal orientieren",
+};
+
+const contactPreferenceLabels: Record<string, string> = {
+  "email": "E-Mail",
+  "phone": "Telefonischer Rückruf",
+  "whatsapp": "WhatsApp Nachricht",
+};
+
 export const resendInquiryMailer: InquiryMailer = {
   async send(payload: InquiryPayload): Promise<MailResult> {
-    const toEmail = process.env.INQUIRY_TO_EMAIL || "manu@firmenflow.de";
+    const toEmail = process.env.INQUIRY_TO_EMAIL || "anfrage@firmenflow.de";
     const fromEmail = process.env.INQUIRY_FROM_EMAIL || "manu@firmenflow.de";
     const brevoApiKey = process.env.BREVO_API_KEY;
     const resendApiKey = process.env.RESEND_API_KEY;
@@ -19,6 +49,13 @@ export const resendInquiryMailer: InquiryMailer = {
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
     const smtpPort = Number(process.env.SMTP_PORT) || 465;
+
+    // Deutsche Klartext-Werte
+    const projectTypeGerman = projectTypeLabels[payload.projectType] || payload.projectType;
+    const goalsGermanList = payload.goals.map((g) => goalLabels[g] || g);
+    const goalsGermanFormatted = goalsGermanList.join(", ");
+    const timeframeGerman = timeframeLabels[payload.timeframe] || payload.timeframe;
+    const preferredContactGerman = contactPreferenceLabels[payload.preferredContact] || payload.preferredContact;
 
     const subject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName} (${payload.place})`;
 
@@ -34,13 +71,13 @@ export const resendInquiryMailer: InquiryMailer = {
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Branche:</td><td style="padding: 10px 0;">${escapeHtml(payload.industry)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Standort:</td><td style="padding: 10px 0;">${escapeHtml(payload.place)}</td></tr>
           ${payload.currentWebsite ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Website:</td><td style="padding: 10px 0;"><a href="${escapeHtml(payload.currentWebsite)}" style="color: #FF705D; text-decoration: none;">${escapeHtml(payload.currentWebsite)}</a></td></tr>` : ""}
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Vorhaben:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.projectType)}</td></tr>
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ziele:</td><td style="padding: 10px 0;">${escapeHtml(payload.goals.join(", "))}</td></tr>
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Zeitrahmen:</td><td style="padding: 10px 0;">${escapeHtml(payload.timeframe)}</td></tr>
+          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Vorhaben:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(projectTypeGerman)}</td></tr>
+          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ziele:</td><td style="padding: 10px 0;">${escapeHtml(goalsGermanFormatted)}</td></tr>
+          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Zeitrahmen:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(timeframeGerman)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ansprechpartner:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.name)}</td></tr>
           ${payload.email ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">E-Mail:</td><td style="padding: 10px 0;"><a href="mailto:${escapeHtml(payload.email)}" style="color: #FF705D; text-decoration: none; font-weight: bold;">${escapeHtml(payload.email)}</a></td></tr>` : ""}
           ${payload.phone ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Telefon:</td><td style="padding: 10px 0;"><a href="tel:${escapeHtml(payload.phone)}" style="color: #17131A; text-decoration: none; font-weight: bold;">${escapeHtml(payload.phone)}</a></td></tr>` : ""}
-          <tr><td style="padding: 10px 0; font-weight: bold; color: #653683;">Wunsch-Kontakt:</td><td style="padding: 10px 0;">${escapeHtml(payload.preferredContact)}</td></tr>
+          <tr><td style="padding: 10px 0; font-weight: bold; color: #653683;">Wunsch-Kontakt:</td><td style="padding: 10px 0; font-weight: bold; color: #3B0D4F;">${escapeHtml(preferredContactGerman)}</td></tr>
         </table>
 
         ${
@@ -64,14 +101,14 @@ Neue Firmenflow Projektanfrage:
 Betrieb: ${payload.businessName}
 Branche: ${payload.industry}
 Standort: ${payload.place}
-${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Vorhaben: ${payload.projectType}
-Ziele: ${payload.goals.join(", ")}
-Zeitrahmen: ${payload.timeframe}
+${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Vorhaben: ${projectTypeGerman}
+Ziele: ${goalsGermanFormatted}
+Zeitrahmen: ${timeframeGerman}
 
 Kontaktdaten:
 -------------
 Name: ${payload.name}
-${payload.email ? `E-Mail: ${payload.email}\n` : ""}${payload.phone ? `Telefon: ${payload.phone}\n` : ""}Wunsch-Kontaktweg: ${payload.preferredContact}
+${payload.email ? `E-Mail: ${payload.email}\n` : ""}${payload.phone ? `Telefon: ${payload.phone}\n` : ""}Wunsch-Kontaktweg: ${preferredContactGerman}
 
 ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : ""}Anfrage-ID: ${payload.submissionId}
     `.trim();
@@ -140,6 +177,10 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                   BRANCHE: payload.industry,
                   ORT: payload.place,
                   TELEFON: payload.phone || "",
+                  PROJEKTART: projectTypeGerman,
+                  ZIELE: goalsGermanFormatted,
+                  ZEITRAHMEN: timeframeGerman,
+                  KONTAKTWEG: preferredContactGerman,
                 },
                 listIds: listIds,
                 updateEnabled: true,
@@ -167,7 +208,7 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                 <div style="background-color: #FFFFFF; padding: 16px 20px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 20px;">
                   <strong style="color: #653683; font-size: 14px; display: block; margin-bottom: 8px;">Wie es jetzt weitergeht:</strong>
                   <p style="margin: 0; font-size: 14px; color: #17131A;">
-                    Ich melde mich innerhalb der nächsten <strong>24 Stunden</strong> persönlich bei dir über deinen gewünschten Kontaktweg (${escapeHtml(payload.preferredContact)}), um kurz die nächsten Schritte zu besprechen.
+                    Ich melde mich innerhalb der nächsten <strong>24 Stunden</strong> persönlich bei dir über deinen gewünschten Kontaktweg (${escapeHtml(preferredContactGerman)}), um kurz die nächsten Schritte zu besprechen.
                   </p>
                 </div>
 
