@@ -23,14 +23,14 @@ export function ProblemSection() {
         return;
       }
 
-      // Pinned stop-scroll animation: freezes viewport while text fills with ink
+      // Snappy pinned stop-scroll animation: freezes viewport briefly while text fills with ink
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=65%",
+          end: "+=32%",
           pin: true,
-          scrub: 0.6,
+          scrub: 0.35,
           anticipatePin: 1,
         },
       });
@@ -41,7 +41,7 @@ export function ProblemSection() {
         { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 1 }
       ).fromTo(
         bodyRef.current,
-        { opacity: 0, y: 25 },
+        { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
         "-=0.15"
       );
@@ -53,7 +53,7 @@ export function ProblemSection() {
     <section
       ref={containerRef}
       id="problem"
-      className="relative min-h-screen flex items-center justify-center py-20 bg-transparent overflow-hidden"
+      className="relative min-h-[75vh] md:min-h-screen flex items-center justify-center py-12 md:py-16 bg-transparent overflow-hidden"
     >
       <Container className="flex flex-col items-center text-center max-w-5xl w-full my-auto">
         <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-sm sm:text-base font-bold text-[var(--color-coral)] tracking-wide mb-8 shadow-sm">

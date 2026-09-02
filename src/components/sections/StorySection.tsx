@@ -133,7 +133,7 @@ export function StorySection() {
     <section 
       ref={containerRef}
       id="story"
-      className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] overflow-hidden relative"
+      className="pt-8 sm:pt-12 md:pt-16 pb-24 sm:pb-32 bg-transparent text-[var(--color-ink)] overflow-hidden relative"
     >
       {/* Background ambient glow */}
       <div 
@@ -143,7 +143,7 @@ export function StorySection() {
 
       <Container>
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-5 h-3.5" />
             <span>Die Firmenflow-Story</span>
@@ -154,26 +154,6 @@ export function StorySection() {
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
             Drei Schritte, wie aus stiller Qualität echte digitale Anziehungskraft wird – ohne Fachchinesisch, direkt auf den Punkt gebracht.
           </p>
-
-          {/* Quick Jump Step Navigation (Pills) */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8 flex-wrap">
-            {storySteps.map((step, idx) => (
-              <button
-                key={step.number}
-                type="button"
-                onClick={() => setActiveStep(idx)}
-                className={cn(
-                  "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer",
-                  activeStep === idx
-                    ? "bg-[var(--color-plum)] text-white shadow-md shadow-[var(--color-plum)]/20 scale-105"
-                    : "bg-white text-[var(--color-muted)] hover:text-[var(--color-ink)] border border-[var(--color-line)]"
-                )}
-              >
-                <span className="text-[11px] opacity-75">{step.number}</span>
-                <span>{step.tag}</span>
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* 3 Story Cards Grid (All 3 100% fully visible with large, legible images) */}
@@ -194,21 +174,24 @@ export function StorySection() {
                     : "border-[var(--color-line)] hover:border-[var(--color-coral)]/50"
                 )}
               >
-                {/* Visual Image Box: Generous height so signs and all characters are 100% visible & readable */}
-                <div className="relative w-full h-[360px] sm:h-[420px] md:h-[460px] overflow-hidden bg-[#e8e4df] shrink-0">
+                {/* Visual Image Box: Optimized 4:5 aspect ratio on mobile so baker sign and characters are 100% visible */}
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:h-[460px] overflow-hidden bg-[#e8e4df] shrink-0">
                   <Image
                     src={step.image}
                     alt={step.imageAlt}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover object-top transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]"
+                    className={cn(
+                      "object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]",
+                      idx === 0 ? "object-[center_35%]" : "object-center"
+                    )}
                   />
                   
-                  {/* Subtle top badge layer */}
+                  {/* Subtle top badge layer with Akt label */}
                   <div className="absolute top-3.5 left-3.5 z-10">
-                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/30 text-white text-xs font-bold font-mono shadow-md">
-                      {step.number}
+                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-black/55 backdrop-blur-md border border-white/30 text-white text-xs font-bold font-mono shadow-md">
+                      Akt {step.number}
                     </span>
                   </div>
 
