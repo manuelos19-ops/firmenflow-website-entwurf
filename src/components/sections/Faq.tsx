@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { faqItems } from "@/content/site";
 import { cn } from "@/lib/cn";
@@ -68,7 +69,7 @@ export function Faq() {
                   <button
                     type="button"
                     onClick={() => toggleItem(index)}
-                    className="w-full flex items-center justify-between p-6 sm:p-7 text-left focus:outline-none cursor-pointer group"
+                    className="w-full flex items-center justify-between p-6 sm:p-7 text-left focus:outline-none cursor-pointer group select-text"
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center gap-3.5 sm:gap-4 pr-4 min-w-0">
@@ -83,7 +84,7 @@ export function Faq() {
                         <HelpCircle className="w-4 h-4" />
                       </div>
                       <h3 className={cn(
-                        "text-base sm:text-lg font-bold font-sans transition-colors duration-200 leading-snug",
+                        "text-base sm:text-lg font-bold font-sans transition-colors duration-200 leading-snug select-text",
                         isOpen ? "text-[var(--color-coral)]" : "text-[var(--color-ink)] group-hover:text-[var(--color-coral)]"
                       )}>
                         {item.question}
@@ -115,8 +116,19 @@ export function Faq() {
                     )}
                   >
                     <div className="overflow-hidden">
-                      <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-4 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                      <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-4 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed select-text space-y-3">
                         <p>{item.answer}</p>
+                        {"link" in item && item.link && (
+                          <div className="pt-2">
+                            <Link
+                              href={item.link.href}
+                              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors group/link"
+                            >
+                              <span>{item.link.text}</span>
+                              <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
