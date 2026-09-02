@@ -92,7 +92,7 @@ export const faqItems = [
   },
   { 
     question: "Was kostet eine Website bei Firmenflow?", 
-    answer: "100 % Planungssicherheit: Ein kompakter, lokaler Webauftritt startet meist im Bereich von 1.500 bis 2.500 Euro. Nach dem ersten kurzen Kennenlernen nenne ich dir sofort einen verbindlichen Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
+    answer: "100 % transparent und ohne Agenturaufschläge: Eine kompakte digitale Web-Visitenkarte für kleinere Vorhaben startet bereits ab 490 Euro. Ein schlüsselfertiger, mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt fair im bezahlbaren Rahmen – weit unter dem, was klassische Agenturen verlangen. Nach unserem kurzen Kennenlernen nenne ich dir sofort einen garantierten Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
   },
   { 
     question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
