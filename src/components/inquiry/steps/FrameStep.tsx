@@ -8,7 +8,7 @@ type StepProps = {
 };
 
 const timeframes = [
-  { value: "soon", label: "So schnell wie möglich" },
+  { value: "soon", label: "Möglichst zeitnah" },
   { value: "three-months", label: "In den nächsten 1–3 Monaten" },
   { value: "six-months", label: "In 3–6 Monaten" },
   { value: "flexible", label: "Flexibel / Erstmal orientieren" },

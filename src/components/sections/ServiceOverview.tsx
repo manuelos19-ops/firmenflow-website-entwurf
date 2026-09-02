@@ -110,7 +110,7 @@ export function ServiceOverview() {
                 </div>
                 <div>
                   <p className="text-xs text-[var(--color-muted)] font-medium">Ladezeit</p>
-                  <p className="text-sm font-bold text-[var(--color-ink)]">&lt; 0.5s Turbo</p>
+                  <p className="text-sm font-bold text-[var(--color-ink)]">Kurze Ladezeit</p>
                 </div>
               </div>
 

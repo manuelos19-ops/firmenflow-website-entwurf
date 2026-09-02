@@ -27,7 +27,7 @@ const goalLabels: Record<string, string> = {
 };
 
 const timeframeLabels: Record<string, string> = {
-  "soon": "So schnell wie möglich",
+  "soon": "Möglichst zeitnah",
   "three-months": "In den nächsten 1–3 Monaten",
   "six-months": "In 3–6 Monaten",
   "flexible": "Flexibel / Erstmal orientieren",

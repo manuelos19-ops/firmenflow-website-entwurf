@@ -60,7 +60,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Neue Website von Grund auf",
             description:
-              "Maßgeschneiderte, blitzschnelle Website für lokale Betriebe inklusive Textierung und Smartphone-Optimierung.",
+              "Maßgeschneiderte, moderne Website für lokale Betriebe inklusive Textierung und Smartphone-Optimierung.",
           },
         },
         {

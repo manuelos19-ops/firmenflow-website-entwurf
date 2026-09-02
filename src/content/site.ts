@@ -16,7 +16,7 @@ export const homeContent = {
     {
       slug: "neue-website",
       title: "Neue Website von Grund auf",
-      body: "Für Betriebe, die noch keine oder eine veraltete Seite haben. Du musst keine Texte vorbereiten: Nach einem 30-Minuten-Gespräch schreibe und strukturiere ich alle Inhalte schlüsselfertig für dich – inklusive blitzschneller Ladezeit auf dem Smartphone.",
+      body: "Für Betriebe, die noch keine oder eine veraltete Seite haben. Du musst keine Texte vorbereiten: Nach einem 30-Minuten-Gespräch schreibe und strukturiere ich alle Inhalte schlüsselfertig für dich – inklusive kurzer Ladezeiten auf dem Smartphone.",
       points: ["Kein Text-Stress für dich", "Modernes, klares Design", "Optimiert fürs Smartphone", "Transparenter Festpreis"],
     },
     {
@@ -65,7 +65,7 @@ export const homeContent = {
     { 
       number: "03", 
       title: "Umsetzung & Texterstellung (Woche 2)", 
-      body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website blitzschnell und datenschutzkonform." 
+      body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website zügig und datenschutzkonform." 
     },
     { 
       number: "04", 
@@ -104,7 +104,7 @@ export const faqItems = [
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 
-    answer: "In der Regel ist deine neue Website innerhalb von 2 bis 3 Wochen komplett fertig und online. Bei eiligen Projekten oder kleineren Relaunches kann es nach Absprache sogar noch schneller gehen." 
+    answer: "In der Regel ist deine neue Website innerhalb von 2 bis 3 Wochen komplett fertig und online. Bei eiligen Projekten oder kleineren Relaunches kann es nach Absprache auch zügiger gehen." 
   },
   { 
     question: "Kannst du meine alte Website überarbeiten?", 
@@ -112,7 +112,7 @@ export const faqItems = [
   },
   { 
     question: "Was genau beinhaltet Google Business 360°?", 
-    answer: "Ich richte dein Google-Maps-Profil professionell und vollständig ein, hinterlege alle Leistungen und Öffnungszeiten und gebe dir physische QR-Code-Karten an die Hand, mit denen deine zufriedenen Kunden in Sekunden echte 5-Sterne-Bewertungen abgeben können." 
+    answer: "Ich richte dein Google-Maps-Profil professionell und vollständig ein, hinterlege alle Leistungen und Öffnungszeiten und gebe dir physische QR-Code-Karten an die Hand, mit denen deine zufriedenen Kunden unkompliziert echte 5-Sterne-Bewertungen abgeben können." 
   },
   { 
     question: "Mit wem spreche ich während des Projekts?", 

@@ -172,12 +172,12 @@ export default async function ProjectPage({
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
               <Smartphone className="w-6 h-6 text-[var(--color-coral)] mb-2" />
               <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Mobile First</h3>
-              <p className="text-xs text-[var(--color-muted)] mt-1">Perfekt lesbar auf allen Smartphones.</p>
+              <p className="text-xs text-[var(--color-muted)] mt-1">Klar lesbar auf allen Smartphones.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
               <Zap className="w-6 h-6 text-emerald-600 mb-2" />
-              <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">High Speed</h3>
+              <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Schnelle Ladezeit</h3>
               <p className="text-xs text-[var(--color-muted)] mt-1">Optimierte Ladezeiten &amp; Bildkomprimierung.</p>
             </div>
 
