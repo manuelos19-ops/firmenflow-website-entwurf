@@ -8,6 +8,8 @@ import { Plus, Minus, HelpCircle, MessageCircle, ArrowRight } from "lucide-react
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Google Business 360°"];
 
@@ -134,7 +136,7 @@ export function Faq() {
                   Deine Frage war nicht dabei?
                 </h4>
                 <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                  Schreib mir einfach direkt auf WhatsApp – ich antworte meist innerhalb weniger Stunden.
+                  Schreib mir einfach persönlich auf WhatsApp – ich antworte meist innerhalb weniger Stunden.
                 </p>
               </div>
             </div>
@@ -142,13 +144,14 @@ export function Faq() {
             <div className="shrink-0 w-full sm:w-auto">
               <MagneticButton>
                 <ButtonLink
-                  href="#kontakt"
-                  variant="primary"
+                  href={buildWhatsAppUrl()}
+                  external={true}
+                  variant="whatsapp"
                   size="default"
-                  className="w-full sm:w-auto text-xs sm:text-sm px-6 py-3 shadow-md shadow-[var(--color-coral)]/20"
+                  className="w-full sm:w-auto text-xs sm:text-sm px-6 py-3 shadow-md shadow-[#25D366]/25"
                 >
+                  <WhatsAppIcon className="w-4 h-4 text-white mr-1.5 shrink-0" />
                   <span>WhatsApp an Manu</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
                 </ButtonLink>
               </MagneticButton>
             </div>
