@@ -299,7 +299,7 @@ img {
     transform: translateY(0px) rotate(-4deg);
   }
   50% {
-    transform: translateY(-9px) rotate(-2deg);
+    transform: translateY(-6px) rotate(-2deg);
   }
 }
 
@@ -308,7 +308,7 @@ img {
     transform: translateY(0px) rotate(5deg);
   }
   50% {
-    transform: translateY(11px) rotate(3deg);
+    transform: translateY(-6px) rotate(3deg);
   }
 }
 

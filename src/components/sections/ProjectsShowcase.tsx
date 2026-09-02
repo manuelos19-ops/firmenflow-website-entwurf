@@ -398,10 +398,10 @@ export function ProjectsShowcase() {
           </div>
         </div>
 
-        {/* 3D Orbit Controls & Active Project Summary Bar */}
-        <div className="max-w-3xl mx-auto mt-6 sm:mt-8 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl">
+        {/* 3D Orbit Controls & Active Project Summary Bar - Fixed height to prevent any layout shift during auto-rotation */}
+        <div className="max-w-3xl mx-auto mt-6 sm:mt-8 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl min-h-[220px] sm:min-h-[196px] flex flex-col justify-between">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-[var(--color-line)]/60">
-            <div>
+            <div className="min-h-[72px] flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-1.5">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">
                   Projekt {activeIndex + 1} von {totalCards}
@@ -416,7 +416,7 @@ export function ProjectsShowcase() {
                   </span>
                 )}
               </div>
-              <h3 className="text-2xl sm:text-3xl font-display text-[var(--color-ink)] font-bold">
+              <h3 className="text-2xl sm:text-3xl font-display text-[var(--color-ink)] font-bold truncate max-w-[270px] sm:max-w-md">
                 {activeProject.name}
               </h3>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-1">
@@ -461,8 +461,8 @@ export function ProjectsShowcase() {
             </div>
           </div>
 
-          <div className="pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-lg">
+          <div className="pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 min-h-[56px]">
+            <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-lg min-h-[42px] flex items-center">
               {activeProject.summary}
             </p>
 

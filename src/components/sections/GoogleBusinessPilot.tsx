@@ -29,14 +29,14 @@ export function GoogleBusinessPilot() {
 
       const pillars = pillarsRef.current?.querySelectorAll(".pillar-card");
 
-      // Pinned Scroll-Stop Animation with Choreographed Inking & Element Reveal
+      // Snappy Pinned Scroll-Stop Animation: no dead scroll, releases immediately when all elements are revealed
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=75%",
+          end: "+=32%",
           pin: true,
-          scrub: 0.6,
+          scrub: 0.35,
           anticipatePin: 1,
         },
       });
@@ -45,30 +45,30 @@ export function GoogleBusinessPilot() {
       tl.fromTo(
         overlayRef.current,
         { clipPath: "inset(0% 100% 0% 0%)" },
-        { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 0.45 }
+        { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 0.5 }
       )
       // 2. Body text fade in
       .fromTo(
         bodyRef.current,
-        { opacity: 0, y: 25 },
-        { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" },
-        "-=0.1"
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
+        "-=0.2"
       )
       // 3. Mockup card scale in
       .fromTo(
         mockupRef.current,
-        { opacity: 0, y: 40, scale: 0.94 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "power3.out" },
-        "-=0.1"
+        { opacity: 0, y: 30, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "power2.out" },
+        "-=0.15"
       );
 
       // 4. 3 Action pillars stagger in
       if (pillars?.length) {
         tl.fromTo(
           pillars,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, stagger: 0.08, duration: 0.3, ease: "power2.out" },
-          "-=0.15"
+          { opacity: 0, y: 25 },
+          { opacity: 1, y: 0, stagger: 0.1, duration: 0.35, ease: "power2.out" },
+          "-=0.2"
         );
       }
     },
