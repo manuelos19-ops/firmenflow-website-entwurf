@@ -195,13 +195,13 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
                 <div style="background-color: #3B0D4F; padding: 22px 24px; border-radius: 12px; margin-bottom: 24px;">
                   <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold; letter-spacing: -0.01em;">Deine Anfrage ist angekommen! ☕</h1>
-                  <p style="color: #FCFAF7; opacity: 0.85; margin: 4px 0 0 0; font-size: 13px;">Firmenflow · Direkt mit Manu</p>
+                  <p style="color: #FCFAF7; opacity: 0.85; margin: 4px 0 0 0; font-size: 13px;">Firmenflow · Persönlich mit Manu</p>
                 </div>
 
                 <p style="font-size: 16px; margin-bottom: 16px;">Hi ${escapeHtml(payload.name)},</p>
                 
                 <p style="font-size: 15px; color: #4A454E; margin-bottom: 18px; line-height: 1.6;">
-                  vielen Dank für deine Anfrage zu <strong>${escapeHtml(payload.businessName)}</strong>! Ich habe alle Details erhalten und schaue mir dein Vorhaben persönlich an.
+                  vielen Dank für deine Anfrage${payload.businessName ? ` zu <strong>${escapeHtml(payload.businessName)}</strong>` : ""}! Ich habe alle Details erhalten und schaue mir dein Vorhaben persönlich an.
                 </p>
 
                 <div style="background-color: #FFFFFF; padding: 18px 20px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 22px;">

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
-export const alt = "Firmenflow – für deine Lokalpräsenz. Direkt mit Manu.";
+export const alt = "Firmenflow – für deine Lokalpräsenz. Persönlich mit Manu.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,7 +36,7 @@ export default async function Image() {
             <div style={{ display: "flex", color: "#3B0D4F" }}>Weniger Agenturtheater.</div>
           </div>
           <div style={{ display: "flex", fontSize: 36, color: "#FF705D", fontStyle: "italic" }}>
-            Deine Website. Direkt mit Manu.
+            Deine Website. Persönlich mit Manu.
           </div>
         </div>
 

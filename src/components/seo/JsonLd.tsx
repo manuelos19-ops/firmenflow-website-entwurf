@@ -99,7 +99,7 @@ export function JsonLd() {
     "@type": "WebSite",
     "@id": `${baseUrl}/#website`,
     url: baseUrl,
-    name: "Firmenflow – Webdesign direkt mit Manu",
+    name: "Firmenflow – Webdesign persönlich mit Manu",
     publisher: {
       "@id": `${baseUrl}/#organization`,
     },

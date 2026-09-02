@@ -2,7 +2,7 @@ export const homeContent = {
   hero: {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
-    accent: "Deine Website. Direkt mit Manu.",
+    accent: "Deine Website. Persönlich mit Manu.",
     body: "Ich baue Websites für lokale Betriebe. Schnell auf dem Smartphone, einfach zu bedienen und so aufgebaut, dass Kunden direkt anrufen oder eine Nachricht schreiben.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Lass uns sprechen",
@@ -16,7 +16,7 @@ export const homeContent = {
     {
       slug: "neue-website",
       title: "Neue Website von Grund auf",
-      body: "Für Betriebe, die noch keine oder eine veraltete Seite haben. Du musst keine Texte vorbereiten: Nach einem 30-Minuten-Gespräch schreibe und strukturiere ich alle Inhalte schlüsselfertig für dich – inklusive kurzer Ladezeiten auf dem Smartphone.",
+      body: "Für Betriebe, die noch keine oder eine veraltete Seite haben: Nach einem kurzen 15-Minuten-Gespräch schreibe und strukturiere ich alle Inhalte schlüsselfertig für dich – inklusive kurzer Ladezeiten auf dem Smartphone.",
       points: ["Kein Text-Stress für dich", "Modernes, klares Design", "Optimiert fürs Smartphone", "Transparenter Festpreis"],
     },
     {
@@ -33,9 +33,9 @@ export const homeContent = {
     },
   ],
   direct: {
-    eyebrow: "Direkt mit Manu",
+    eyebrow: "Persönlich mit Manu",
     title: "Ein Ansprechpartner. Keine stille Post.",
-    body: "Du sprichst vom ersten Gedanken bis zur fertigen Website immer direkt mit mir. Keine wechselnden Projektmanager, keine Ticket-Warteschleifen und kein Agenturtheater – nenn mich einfach Manu.",
+    body: "Du sprichst vom ersten Gedanken bis zur fertigen Website immer persönlich mit mir. Keine wechselnden Projektmanager, keine Ticket-Warteschleifen und kein Agenturtheater – nenn mich einfach Manu.",
     points: ["Persönlich erreichbar", "Feste Absprachen", "Ehrliche Beratung", "Vor Ort am Niederrhein"],
   },
   pilot: {
@@ -116,6 +116,6 @@ export const faqItems = [
   },
   { 
     question: "Mit wem spreche ich während des Projekts?", 
-    answer: "Immer direkt mit mir (Manu). Du hast meine Handynummer, erreichst mich per WhatsApp oder Anruf und landest bei keinem anonymen Callcenter oder Praktikanten." 
+    answer: "Immer persönlich mit mir (Manu). Du hast meine Handynummer, erreichst mich per WhatsApp oder Anruf und landest bei keinem anonymen Callcenter oder Praktikanten." 
   },
 ] as const;

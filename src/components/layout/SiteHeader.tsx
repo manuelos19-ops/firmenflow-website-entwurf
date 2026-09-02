@@ -10,7 +10,7 @@ import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
-  { label: "Direkt mit Manu", href: "/#manu" },
+  { label: "Persönlich mit Manu", href: "/#manu" },
   { label: "Google Business", href: "/#google-pilot" },
   { label: "Projekte", href: "/#projekte" },
   { label: "Ablauf", href: "/#ablauf" },
@@ -173,7 +173,7 @@ export function SiteHeader() {
             Lass uns sprechen
           </ButtonLink>
           <p className="text-center text-xs text-[var(--color-muted)] font-medium">
-            Direkt mit Manu · Wesel &amp; Niederrhein
+            Persönlich mit Manu · Wesel &amp; Niederrhein
           </p>
         </div>
       </div>

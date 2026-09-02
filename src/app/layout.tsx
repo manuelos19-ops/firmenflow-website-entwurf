@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: "Firmenflow – Webdesign direkt mit Manu | Wesel & Niederrhein",
+    default: "Firmenflow – Webdesign persönlich mit Manu | Wesel & Niederrhein",
     template: "%s | Firmenflow",
   },
   description:
-    "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu. Persönliches Webdesign, Relaunch und Foto/Video vor Ort für Betriebe in Wesel und am Niederrhein.",
+    "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu. Persönliches Webdesign, Relaunch und Foto/Video vor Ort für Betriebe in Wesel und am Niederrhein.",
   icons: {
     icon: brandAssets.mark,
   },
   openGraph: {
-    title: "Firmenflow – Webdesign direkt mit Manu | Wesel & Niederrhein",
+    title: "Firmenflow – Webdesign persönlich mit Manu | Wesel & Niederrhein",
     description:
-      "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu.",
+      "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.",
     locale: "de_DE",
     type: "website",
   },

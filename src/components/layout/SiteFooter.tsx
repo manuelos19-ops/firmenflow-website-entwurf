@@ -82,7 +82,7 @@ export function SiteFooter() {
           <p>
             © {currentYear} {siteIdentity.legalName}. Alle Rechte vorbehalten.
           </p>
-          <p>Direkt mit Manu · Wesel & Niederrhein</p>
+          <p>Persönlich mit Manu · Wesel & Niederrhein</p>
         </div>
       </Container>
     </footer>

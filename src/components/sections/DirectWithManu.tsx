@@ -81,7 +81,7 @@ export function DirectWithManu() {
           <div className="lg:col-span-6 xl:col-span-7 max-w-2xl">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
               <BrandIcon className="w-4 h-3.5" />
-              <span>Direkt mit Manu</span>
+              <span>Persönlich mit Manu</span>
             </div>
             
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
@@ -90,7 +90,7 @@ export function DirectWithManu() {
             </h2>
             
             <p className="text-lg md:text-xl text-[var(--color-muted)] leading-relaxed mb-6">
-              Du sprichst vom ersten Gedanken bis zur fertigen Website direkt mit mir. Keine wechselnden Projektmanager, keine anonymen Tickets und kein Agenturtheater – nenn mich einfach Manu.
+              Du sprichst vom ersten Gedanken bis zur fertigen Website immer persönlich mit mir. Keine wechselnden Projektmanager, keine anonymen Tickets und kein Agenturtheater – nenn mich einfach Manu.
             </p>
 
             <p className="text-base text-[var(--color-muted)] leading-relaxed mb-8">
@@ -197,7 +197,7 @@ export function DirectWithManu() {
                 <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden bg-stone-100">
                   <Image
                     src="/media/portraits/manu-green-door-vertical.webp"
-                    alt="Manu – Direkt mit Manu"
+                    alt="Manu – Persönlich mit Manu"
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="250px"

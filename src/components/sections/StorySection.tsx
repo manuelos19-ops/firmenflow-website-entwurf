@@ -287,7 +287,7 @@ export function StorySection() {
             Bereit für Schritt 2 &amp; 3 bei deinem Betrieb?
           </p>
           <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-            Lass uns unverbindlich prüfen, was deiner Website oder deinem Google-Auftritt fehlt – direkt mit Manu, auf Augenhöhe.
+            Lass uns unverbindlich prüfen, was deiner Website oder deinem Google-Auftritt fehlt – persönlich mit Manu, auf Augenhöhe.
           </p>
 
           <div className="inline-block">

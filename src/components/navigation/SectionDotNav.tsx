@@ -15,7 +15,7 @@ const sections: SectionItem[] = [
   { id: "story", number: "03", label: "3-Akt Story" },
   { id: "projekte", number: "04", label: "3D-Orbit" },
   { id: "leistungen", number: "05", label: "Leistungen" },
-  { id: "manu", number: "06", label: "Direkt mit Manu" },
+  { id: "manu", number: "06", label: "Persönlich mit Manu" },
   { id: "google-pilot", number: "07", label: "Google 360°" },
   { id: "ablauf", number: "08", label: "Ablauf" },
   { id: "faq", number: "09", label: "FAQ" },
