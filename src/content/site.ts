@@ -55,7 +55,7 @@ export const homeContent = {
     { 
       number: "01", 
       title: "Kostenfreies Kennenlernen (ca. 15 Min.)", 
-      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee unverbindlich und kostenfrei, was dein Betrieb anbietet, wen du erreichen willst und was dir wichtig ist. Du musst dafür nichts vorbereiten." 
+      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." 
     },
     { 
       number: "02", 
