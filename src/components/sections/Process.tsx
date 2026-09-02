@@ -12,7 +12,7 @@ export function Process() {
 
   // Use process steps from site content, with fallback
   const processSteps = homeContent?.process || [
-    { number: "01", title: "Kennenlernen", body: "Ich kläre mit dir, was dein Betrieb anbietet..." },
+    { number: "01", title: "Kostenfreies Kennenlernen (ca. 15 Min.)", body: "Ich bespreche mit dir unverbindlich und kostenfrei, was dein Betrieb anbietet..." },
     { number: "02", title: "Richtung", body: "Du bekommst eine klare Struktur..." },
     { number: "03", title: "Umsetzung", body: "Ich baue, teste und zeige dir..." },
     { number: "04", title: "Sauber online", body: "Nach deiner Freigabe..." },

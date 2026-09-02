@@ -54,8 +54,8 @@ export const homeContent = {
   process: [
     { 
       number: "01", 
-      title: "Kurzes Kennenlernen (ca. 30 Min.)", 
-      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee, was dein Betrieb anbietet, wen du erreichen willst und was dir wichtig ist. Du musst dafür nichts vorbereiten." 
+      title: "Kostenfreies Kennenlernen (ca. 15 Min.)", 
+      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee unverbindlich und kostenfrei, was dein Betrieb anbietet, wen du erreichen willst und was dir wichtig ist. Du musst dafür nichts vorbereiten." 
     },
     { 
       number: "02", 

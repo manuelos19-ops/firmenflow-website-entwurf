@@ -21,16 +21,15 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
         {/* Business Name */}
         <div>
           <label htmlFor="businessName" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)] mb-1.5">
-            Name deines Betriebs / dein Name *
+            Name deines Betriebs <span className="text-[var(--color-muted)] font-normal">(optional)</span>
           </label>
           <input
             id="businessName"
             name="businessName"
             type="text"
-            required
             value={data.businessName}
             onChange={(e) => onPatch({ businessName: e.target.value })}
-            placeholder="z. B. Bäckerei Müller, Schreinerei Schmidt oder Anna Beispiel"
+            placeholder="z. B. Bäckerei Müller oder Schreinerei Schmidt"
             className={cn(
               "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
               errors.businessName

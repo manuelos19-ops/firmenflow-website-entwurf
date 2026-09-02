@@ -57,7 +57,7 @@ export const resendInquiryMailer: InquiryMailer = {
     const timeframeGerman = timeframeLabels[payload.timeframe] || payload.timeframe;
     const preferredContactGerman = contactPreferenceLabels[payload.preferredContact] || payload.preferredContact;
 
-    const subject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName} (${payload.place})`;
+    const subject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName ? `${payload.businessName} (${payload.place})` : `${payload.name} (${payload.place})`}`;
 
     const internalHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
@@ -67,7 +67,7 @@ export const resendInquiryMailer: InquiryMailer = {
         </div>
 
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 15px;">
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; width: 140px; color: #653683;">Betrieb:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(payload.businessName)}</td></tr>
+          ${payload.businessName ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; width: 140px; color: #653683;">Betrieb:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(payload.businessName)}</td></tr>` : ""}
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Branche:</td><td style="padding: 10px 0;">${escapeHtml(payload.industry)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Standort:</td><td style="padding: 10px 0;">${escapeHtml(payload.place)}</td></tr>
           ${payload.currentWebsite ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Website:</td><td style="padding: 10px 0;"><a href="${escapeHtml(payload.currentWebsite)}" style="color: #FF705D; text-decoration: none;">${escapeHtml(payload.currentWebsite)}</a></td></tr>` : ""}
@@ -98,8 +98,7 @@ export const resendInquiryMailer: InquiryMailer = {
     const internalText = `
 Neue Firmenflow Projektanfrage:
 ================================
-Betrieb: ${payload.businessName}
-Branche: ${payload.industry}
+${payload.businessName ? `Betrieb: ${payload.businessName}\n` : ""}Branche: ${payload.industry}
 Standort: ${payload.place}
 ${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Vorhaben: ${projectTypeGerman}
 Ziele: ${goalsGermanFormatted}
