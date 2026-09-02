@@ -12,7 +12,7 @@ const goalOptions = [
   { value: "better-local-presence", label: "Bessere Auffindbarkeit bei Google in der Region" },
   { value: "modern-look", label: "Moderner, vertrauenswürdiger Auftritt für meinen Betrieb" },
   { value: "clear-offer", label: "Leistungen und Angebote verständlicher darstellen" },
-  { value: "photo-video", label: "Fotos & Imagefilm vor Ort (Team, Räumlichkeiten, Drohnenaufnahmen)" },
+  { value: "photo-video", label: "Fotos & Imagefilm vor Ort (Team, Räumlichkeiten & Betrieb)" },
   { value: "better-reviews", label: "Echtes Bewertungsmanagement & Google-Reputation" },
 ] as const;
 

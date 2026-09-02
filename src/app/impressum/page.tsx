@@ -95,7 +95,7 @@ export default function ImpressumPage() {
               >
                 https://ec.europa.eu/consumers/odr/
               </a>
-              . Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+              . Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </section>
         </div>

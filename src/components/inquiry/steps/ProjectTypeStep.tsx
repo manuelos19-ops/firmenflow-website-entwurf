@@ -36,7 +36,7 @@ export function ProjectTypeStep({ data, errors, onPatch }: StepProps) {
         Was ist dein wichtigstes Vorhaben?
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
-        Wähle den passenden Schwerpunkt. Wir klären Details im persönlichen Gespräch.
+        Wähle den passenden Schwerpunkt. Alle Details kläre ich direkt im persönlichen Gespräch mit dir.
       </p>
 
       {errors.projectType && (

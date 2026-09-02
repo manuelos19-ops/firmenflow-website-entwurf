@@ -22,13 +22,13 @@ export const homeContent = {
     {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
-      body: "Wir behalten, was bereits gut funktioniert, und werfen raus, was veraltet ist. Deine bestehenden Google-Rankings bleiben sicher erhalten, während der Auftritt komplett frisch, mobiloptimiert und kundenorientiert wird.",
+      body: "Ich behalte, was bereits gut funktioniert, und modernisiere, was veraltet ist. Deine bestehenden Google-Rankings bleiben sicher erhalten, während der Auftritt komplett frisch, mobiloptimiert und kundenorientiert wird.",
       points: ["Bestandsanalyse & Relaunch", "Google-Rankings behalten", "Neue, klare Struktur", "Schlüsselfertig in 2–3 Wochen"],
     },
     {
       slug: "foto-video",
       title: "Foto- & Videoaufnahmen vor Ort",
-      body: "Authentische Bilder statt künstlicher Stockfotos: Viele kleine Unternehmen haben keine guten oder veraltete Fotos. Ich komme mit professionellem Kamera- und Drohnen-Equipment direkt zu dir nach Wesel oder an den Niederrhein und erstelle lebendige Team-Portraits, Raumaufnahmen oder einen sympathischen Imagefilm für deinen Webauftritt.",
+      body: "Authentische Bilder statt künstlicher Stockfotos: Viele kleine Unternehmen haben keine guten oder veraltete Fotos. Ich komme mit professionellem Foto- und Video-Equipment direkt zu dir nach Wesel oder an den Niederrhein und erstelle lebendige Team-Portraits, Raumaufnahmen oder einen sympathischen Imagefilm für deinen Webauftritt.",
       points: ["Team- & Mitarbeiter-Shootings", "Räumlichkeiten & Atmosphäre", "Kurzer Imagefilm & Video-Reels", "Direkt bei dir vor Ort"],
     },
   ],
@@ -55,7 +55,7 @@ export const homeContent = {
     { 
       number: "01", 
       title: "Kurzes Kennenlernen (ca. 30 Min.)", 
-      body: "Wir besprechen am Telefon oder bei einem Kaffee, was dein Betrieb anbietet, wen du erreichen willst und was dir wichtig ist. Du musst dafür nichts vorbereiten." 
+      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee, was dein Betrieb anbietet, wen du erreichen willst und was dir wichtig ist. Du musst dafür nichts vorbereiten." 
     },
     { 
       number: "02", 
@@ -70,7 +70,7 @@ export const homeContent = {
     { 
       number: "04", 
       title: "Schlüsselfertig online (Woche 3)", 
-      body: "Nach deiner finalen Freigabe schalten wir die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." 
+      body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." 
     },
   ],
   about: {
@@ -92,15 +92,15 @@ export const faqItems = [
   },
   { 
     question: "Was kostet eine Website bei Firmenflow?", 
-    answer: "100 % Planungssicherheit: Ein kompakter, lokaler Webauftritt startet meist im Bereich von 1.500 bis 2.500 Euro. Nach unserem ersten kurzen Kennenlernen nenne ich dir sofort einen verbindlichen Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
+    answer: "100 % Planungssicherheit: Ein kompakter, lokaler Webauftritt startet meist im Bereich von 1.500 bis 2.500 Euro. Nach dem ersten kurzen Kennenlernen nenne ich dir sofort einen verbindlichen Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
   },
   { 
     question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
-    answer: "Ja, sehr gerne! Viele kleine Unternehmen haben veraltete oder gar keine passenden Bilder. Ich bringe professionelles Kamera- und Drohnen-Equipment mit und komme direkt bei dir in Wesel und Umgebung vorbei. Wir erstellen sympathische Teamfotos, Aufnahmen deiner Räume und deines Handwerks oder einen kurzen, wirkungsvollen Imagefilm für deine Website und Social Media." 
+    answer: "Ja, sehr gerne! Viele kleine Unternehmen haben veraltete oder gar keine passenden Bilder. Ich bringe professionelles Foto- und Video-Equipment mit und komme direkt bei dir in Wesel und Umgebung vorbei. Ich erstelle sympathische Teamfotos, Aufnahmen deiner Räume und deines Handwerks oder einen kurzen, wirkungsvollen Imagefilm für deine Website und Social Media." 
   },
   { 
     question: "Muss ich Texte und Fotos schon fertig vorbereitet haben?", 
-    answer: "Nein, überhaupt nicht! Wenn du bereits Fotos hast, nutzen wir diese gern. Wenn nicht, mache ich die Fotos direkt bei dir vor Ort und formuliere alle Texte schlüsselfertig für dich, abgestimmt auf dein Angebot und deine Zielgruppe." 
+    answer: "Nein, überhaupt nicht! Wenn du bereits Fotos hast, übernehme ich diese gern. Wenn nicht, mache ich die Fotos direkt bei dir vor Ort und formuliere alle Texte schlüsselfertig für dich, abgestimmt auf dein Angebot und deine Zielgruppe." 
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 
@@ -108,7 +108,7 @@ export const faqItems = [
   },
   { 
     question: "Kannst du meine alte Website überarbeiten?", 
-    answer: "Ja, genau dafür ist der Relaunch da. Wir prüfen gemeinsam, welche Inhalte und Google-Rankings erhalten bleiben sollen, und modernisieren Design, mobile Ladezeit und Struktur komplett." 
+    answer: "Ja, genau dafür ist der Relaunch da. Ich prüfe gemeinsam mit dir, welche Inhalte und Google-Rankings erhalten bleiben sollen, und modernisiere Design, mobile Ladezeit und Struktur komplett." 
   },
   { 
     question: "Was genau beinhaltet Google Business 360°?", 

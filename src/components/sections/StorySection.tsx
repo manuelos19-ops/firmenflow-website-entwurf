@@ -63,7 +63,7 @@ const storySteps: StoryStep[] = [
     tagVariant: "solution",
     title: "Gemeinsam am Tisch: Website & Google 360°.",
     subtitle: "Direkt, ehrlich und ohne Fachchinesisch",
-    body: "Wir setzen uns zusammen, bringen dein echtes Angebot auf den Punkt und bauen einen schnellen, modernen Auftritt mit klarem Fokus auf Google Maps und direkte Kundenanfragen.",
+    body: "Ich setze mich mit dir zusammen, bringe dein echtes Angebot auf den Punkt und baue einen schnellen, modernen Auftritt mit klarem Fokus auf Google Maps und direkte Kundenanfragen.",
     image: "/media/story/story-2-loesung-manu.webp",
     imageAlt: "Manu zeigt dem Inhaber auf dem Laptop ein 3D-Hologramm der neuen Website und 5-Sterne-Google-Bewertung",
     icon: Laptop,
