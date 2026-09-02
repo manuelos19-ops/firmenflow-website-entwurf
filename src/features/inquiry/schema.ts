@@ -77,7 +77,7 @@ export const inquirySchema = z
     privacyAccepted: z.literal(true, {
       error: "Bitte bestätige den Datenschutzhinweis.",
     }),
-    company: z.string().max(0, "Spam erkannt."), // Honeypot
+    company: z.string().optional().default(""), // Honeypot (wird serverseitig in route.ts abgefangen)
   })
   .superRefine((value, context) => {
     if (["phone", "whatsapp"].includes(value.preferredContact) && (!value.phone || value.phone.trim().length < 6)) {

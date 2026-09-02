@@ -24,15 +24,15 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
         Ich melde mich persönlich bei dir, um offene Fragen direkt zu besprechen.
       </p>
 
-      {/* Honeypot */}
-      <div className="sr-only" aria-hidden="true">
-        <label htmlFor="company">Firma (bitte frei lassen)</label>
+      {/* Honeypot für Spam-Bots (für Screenreader & Browser-Autofill unsichtbar) */}
+      <div style={{ display: "none", position: "absolute", left: "-9999px" }} aria-hidden="true">
+        <label htmlFor="ff_security_check">Bitte dieses Feld frei lassen</label>
         <input
-          id="company"
-          name="company"
+          id="ff_security_check"
+          name="ff_security_check"
           type="text"
           tabIndex={-1}
-          autoComplete="off"
+          autoComplete="new-password"
           value={data.company}
           onChange={(e) => onPatch({ company: e.target.value })}
         />
