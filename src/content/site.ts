@@ -88,7 +88,7 @@ export const homeContent = {
 export const faqItems = [
   { 
     question: "Arbeitest du nur in Wesel und am Niederrhein?", 
-    answer: "Mein Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers und dem gesamten Niederrhein. Wenn die Chemie stimmt, betreue ich aber natürlich auch Betriebe aus ganz NRW und Deutschland." 
+    answer: "Mein Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers und dem Niederrhein – hier bin ich auch schnell persönlich bei dir vor Ort. Ich unterstütze aber genauso gerne Betriebe aus ganz NRW und deutschlandweit, ganz unkompliziert per Telefon und Video-Call." 
   },
   { 
     question: "Was kostet eine Website bei Firmenflow?", 
