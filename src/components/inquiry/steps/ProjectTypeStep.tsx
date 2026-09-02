@@ -23,8 +23,8 @@ const options = [
   },
   {
     value: "google-business",
-    title: "Google Business 360° – Pilot",
-    description: "Limitiertes Pilotprogramm für Profil-Audit, echtes Bewertungsmanagement und monatliche Auswertung.",
+    title: "Google Business 360°",
+    description: "Profil-Aufbau & Optimierung, laufendes Bewertungsmanagement und monatlicher Feedback-Report.",
     icon: Star,
   },
 ] as const;

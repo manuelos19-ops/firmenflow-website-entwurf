@@ -13,7 +13,7 @@ export type InquiryMailer = {
 const projectTypeLabels: Record<string, string> = {
   "new-site": "Neue Website (Erstauftritt oder Neugestaltung)",
   "relaunch": "Relaunch & Überarbeitung der bestehenden Website",
-  "google-business": "Google Business & lokale Sichtbarkeit stärken",
+  "google-business": "Google Business 360° (Profil, Bewertungen & Feedback)",
   "photo-video": "Foto- & Videoaufnahmen",
 };
 
