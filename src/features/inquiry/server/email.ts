@@ -190,37 +190,54 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
             console.warn("Brevo CRM Kontaktanlage fehlgeschlagen (nicht blockierend):", crmErr);
           }
 
-          // C. Automatische Bestätigungsmail an den Kunden senden
+          // C. Automatische Bestätigungsmail an den Kunden senden mit optimierter Signatur
           try {
             const customerHtml = `
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
-                <div style="background-color: #3B0D4F; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
-                  <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">Deine Anfrage ist angekommen! ☕</h1>
+                <div style="background-color: #3B0D4F; padding: 22px 24px; border-radius: 12px; margin-bottom: 24px;">
+                  <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold; letter-spacing: -0.01em;">Deine Anfrage ist angekommen! ☕</h1>
                   <p style="color: #FCFAF7; opacity: 0.85; margin: 4px 0 0 0; font-size: 13px;">Firmenflow · Direkt mit Manu</p>
                 </div>
 
                 <p style="font-size: 16px; margin-bottom: 16px;">Hi ${escapeHtml(payload.name)},</p>
                 
-                <p style="font-size: 15px; color: #4A454E; margin-bottom: 16px;">
+                <p style="font-size: 15px; color: #4A454E; margin-bottom: 18px; line-height: 1.6;">
                   vielen Dank für deine Anfrage zu <strong>${escapeHtml(payload.businessName)}</strong>! Ich habe alle Details erhalten und schaue mir dein Vorhaben persönlich an.
                 </p>
 
-                <div style="background-color: #FFFFFF; padding: 16px 20px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 20px;">
+                <div style="background-color: #FFFFFF; padding: 18px 20px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 22px;">
                   <strong style="color: #653683; font-size: 14px; display: block; margin-bottom: 8px;">Wie es jetzt weitergeht:</strong>
-                  <p style="margin: 0; font-size: 14px; color: #17131A;">
-                    Ich melde mich innerhalb der nächsten <strong>24 Stunden</strong> persönlich bei dir über deinen gewünschten Kontaktweg (${escapeHtml(preferredContactGerman)}), um kurz die nächsten Schritte zu besprechen.
+                  <p style="margin: 0; font-size: 14px; color: #17131A; line-height: 1.6;">
+                    Ich melde mich innerhalb der nächsten <strong>24 Stunden</strong> persönlich bei dir über deinen gewünschten Kontaktweg (<strong>${escapeHtml(preferredContactGerman)}</strong>), um kurz die nächsten Schritte zu besprechen.
                   </p>
                 </div>
 
-                <p style="font-size: 14px; color: #4A454E; margin-bottom: 24px;">
-                  Falls du vorab schon eine dringende Frage hast, erreichst du mich jederzeit direkt per WhatsApp oder E-Mail.
+                <p style="font-size: 14px; color: #4A454E; margin-bottom: 24px; line-height: 1.6;">
+                  Falls du vorab schon eine dringende Frage hast oder noch Unterlagen nachreichen möchtest, antworte einfach direkt auf diese E-Mail oder schreibe mir bei WhatsApp.
                 </p>
 
-                <div style="border-top: 1px solid #E5E0D8; padding-top: 16px; font-size: 14px;">
-                  <strong>Viele Grüße</strong><br />
-                  Manu (Manuel Landeck)<br />
-                  <span style="color: #FF705D; font-weight: bold;">Firmenflow – Webdesign für lokale Betriebe</span><br />
-                  <a href="https://firmenflow.de" style="color: #653683; text-decoration: none;">firmenflow.de</a> · <a href="mailto:manu@firmenflow.de" style="color: #653683; text-decoration: none;">manu@firmenflow.de</a>
+                <!-- Firmenflow Signatur-Banner -->
+                <div style="border-top: 1px solid #E5E0D8; padding-top: 20px; margin-top: 24px;">
+                  <p style="font-size: 15px; margin: 0 0 16px 0; color: #17131A;">
+                    Beste Grüße aus Wesel,<br />
+                    <strong>Manu</strong>
+                  </p>
+                  
+                  <div style="margin: 0 0 16px 0;">
+                    <a href="https://firmenflow.de" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none; border: 0;">
+                      <img 
+                        src="https://www.firmenflow.de/media/firmenflow-email-signature.png" 
+                        alt="Manuel Landeck · Inhaber Firmenflow · Webdesign & Lokalpräsenz aus Wesel · Telefon 0155 67277155 · manu@firmenflow.de · firmenflow.de" 
+                        width="560" 
+                        style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; outline: none; border-radius: 12px;" 
+                      />
+                    </a>
+                  </div>
+
+                  <div style="font-size: 12px; color: #746D76; line-height: 1.6;">
+                    <strong style="color: #17131A;">Firmenflow – Webdesign & Lokalpräsenz</strong> · Manuel Landeck<br />
+                    Telefon: <a href="tel:015567277155" style="color: #653683; text-decoration: none; font-weight: bold;">0155 67277155</a> · E-Mail: <a href="mailto:manu@firmenflow.de" style="color: #653683; text-decoration: none; font-weight: bold;">manu@firmenflow.de</a> · Web: <a href="https://firmenflow.de" style="color: #FF705D; text-decoration: none; font-weight: bold;">firmenflow.de</a>
+                  </div>
                 </div>
               </div>
             `;
