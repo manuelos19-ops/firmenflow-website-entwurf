@@ -45,3 +45,4 @@ next-env.d.ts
 # local work & outputs
 /work/
 /outputs/
+.seo-cache/
