@@ -9,8 +9,8 @@ async function generate() {
   }
 
   // Load local images as base64 data URLs for 100% offline, crisp rendering
-  const portraitPath = path.resolve("public/media/manu-about.webp");
-  const portraitBase64 = `data:image/webp;base64,${fs.readFileSync(portraitPath).toString("base64")}`;
+  const portraitPath = path.resolve("public/media/manu-signature-portrait.png");
+  const portraitBase64 = `data:image/png;base64,${fs.readFileSync(portraitPath).toString("base64")}`;
 
   const wordmarkPath = path.resolve("public/brand/firmenflow-wordmark.png");
   const wordmarkBase64 = `data:image/png;base64,${fs.readFileSync(wordmarkPath).toString("base64")}`;
@@ -98,7 +98,7 @@ async function generate() {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center center;
     }
 
     .v1-badge {
@@ -267,7 +267,7 @@ async function generate() {
       height: 100px;
       border-radius: 22px;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center center;
       border: 2px solid #FF705D;
       box-shadow: 0 6px 16px rgba(59, 13, 79, 0.15);
     }
@@ -381,7 +381,7 @@ async function generate() {
       border-radius: 50%;
       border: 2.5px solid #FF705D;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center center;
       flex-shrink: 0;
     }
 
@@ -551,9 +551,8 @@ async function generate() {
   const htmlPath = path.resolve("public/signatures/preview.html");
   fs.writeFileSync(htmlPath, htmlContent, "utf-8");
 
-  console.log("Launching Playwright Chromium to capture 3x Ultra-HD signatures...");
+  console.log("Launching Playwright Chromium to capture 3x Ultra-HD signatures with new portrait...");
   const browser = await chromium.launch({ headless: true });
-  // Render at deviceScaleFactor: 3 for crystal clear Retina rendering (300 DPI equivalent)
   const context = await browser.newContext({
     deviceScaleFactor: 3,
   });
@@ -584,15 +583,15 @@ async function generate() {
     console.log("✓ Generated: public/signatures/firmenflow-signatur-v3-compact.png");
   }
 
-  // Also update the primary email signature with the perfected V1
+  // Also update public/media/firmenflow-email-signature.png
   if (v1El) {
     const v1Buffer = await v1El.screenshot({ type: "png", omitBackground: true });
     fs.writeFileSync(path.resolve("public/media/firmenflow-email-signature.png"), v1Buffer);
-    console.log("✓ Updated: public/media/firmenflow-email-signature.png with ultra-crisp V1");
+    console.log("✓ Updated: public/media/firmenflow-email-signature.png with new portrait");
   }
 
   await browser.close();
-  console.log("All signatures generated successfully in 3x Ultra-HD!");
+  console.log("All signatures generated successfully with new portrait!");
 }
 
 generate().catch(console.error);
