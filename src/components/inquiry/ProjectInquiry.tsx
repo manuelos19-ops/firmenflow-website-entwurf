@@ -79,7 +79,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       }
     } else if (state.step === 1) {
       if (!state.data.businessName || state.data.businessName.trim().length < 2) {
-        errors.businessName = "Betrieb: Bitte gib den Namen deines Betriebs an.";
+        errors.businessName = "Betrieb / Name: Bitte gib den Namen deines Betriebs oder deinen Namen an.";
       }
       if (!state.data.industry || state.data.industry.trim().length < 2) {
         errors.industry = "Branche: Bitte nenne deine Branche.";

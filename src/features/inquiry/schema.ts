@@ -34,7 +34,7 @@ export const inquirySchema = z
     businessName: z
       .string()
       .trim()
-      .min(2, "Bitte gib den Namen deines Betriebs an.")
+      .min(2, "Bitte gib den Namen deines Betriebs oder deinen Namen an.")
       .max(120, "Der Name ist zu lang."),
     industry: z
       .string()
