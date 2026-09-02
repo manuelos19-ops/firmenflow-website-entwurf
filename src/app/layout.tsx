@@ -36,7 +36,11 @@ export const metadata: Metadata = {
   description:
     "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu. Persönliches Webdesign, Relaunch und Foto/Video vor Ort für Betriebe in Wesel und am Niederrhein.",
   icons: {
-    icon: brandAssets.mark,
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Firmenflow – Webdesign persönlich mit Manu | Wesel & Niederrhein",

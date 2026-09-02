@@ -10,7 +10,7 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 interface ContactChoiceProps {
@@ -97,27 +97,63 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           </div>
 
           {/* Manu Contact Info Card */}
-          <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-6 sm:p-8 flex items-center gap-6 shadow-xl">
-            <div className="relative w-24 h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-white/30 shadow-md">
-              <Image
-                src={portraitAssets.contact.src}
-                alt={portraitAssets.contact.alt}
-                fill
-                className="object-cover"
-                sizes="96px"
-              />
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group">
+            {/* Warm Glow Background */}
+            <div className="absolute -top-12 -right-12 w-36 h-36 bg-[var(--color-coral)]/15 rounded-full blur-2xl pointer-events-none" />
+
+            <div>
+              {/* Status Header */}
+              <div className="flex items-center justify-between gap-2 mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-white/90">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Antwort garantiert innerhalb 24h</span>
+                </span>
+                <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2.5 py-0.5 rounded-full border border-[var(--color-coral)]/20">
+                  Inhaber
+                </span>
+              </div>
+
+              {/* Photo & Identity Row */}
+              <div className="flex items-center gap-4 sm:gap-5 mb-6">
+                <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden shrink-0 border-2 border-white/30 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/media/portraits/manu-contact-portrait.webp"
+                    alt="Manuel Landeck – Dein persönlicher Ansprechpartner"
+                    fill
+                    className="object-cover object-center"
+                    sizes="120px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-50" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white font-sans">Manuel Landeck</h4>
+                  <p className="text-xs sm:text-sm text-white/75 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                    <span>Wesel &amp; Niederrhein</span>
+                  </p>
+                  <p className="text-xs text-white/60 pt-0.5">
+                    Webdesign &amp; Foto/Video vor Ort
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="space-y-1.5 text-sm">
-              <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">Dein Ansprechpartner</p>
-              <h4 className="text-xl font-bold text-white">Manuel Landeck</h4>
-              <p className="text-white/75 flex items-center gap-1.5 text-xs">
-                <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-                Wesel &amp; Niederrhein
-              </p>
-              <p className="text-white/60 flex items-center gap-1.5 text-xs">
-                <Clock className="w-3.5 h-3.5 text-emerald-400" />
-                Antwort meist innerhalb 24h
-              </p>
+
+            {/* Quick Actions */}
+            <div className="grid grid-cols-2 gap-2.5 pt-2">
+              <a
+                href="tel:015567277155"
+                className="flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <Phone className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <span>Anrufen</span>
+              </a>
+              <a
+                href="mailto:manu@firmenflow.de"
+                className="flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <Mail className="w-3.5 h-3.5 text-white/80" />
+                <span>E-Mail</span>
+              </a>
             </div>
           </div>
         </div>

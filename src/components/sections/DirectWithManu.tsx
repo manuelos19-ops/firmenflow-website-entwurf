@@ -5,30 +5,30 @@ import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { PhoneCall, Milestone, ShieldCheck, MapPin, Camera } from "lucide-react";
+import { Briefcase, Camera, Handshake, MapPin } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
   {
-    title: "Persönlich erreichbar",
-    desc: "Direkter Draht per Telefon & WhatsApp. Keine Warteschleifen, keine anonymen Agentur-Tickets.",
-    icon: PhoneCall,
-    gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
-    border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
-    iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
-  },
-  {
-    title: "Klare nächste Schritte",
-    desc: "Transparenter Fahrplan vom Kennenlernen über das Design bis zum reibungslosen Go-Live.",
-    icon: Milestone,
+    title: "Selbst Unternehmer",
+    desc: "Ich habe selbst Unternehmen aufgebaut und geführt. Ich kenne den Alltag von Selbstständigen und entwickle Lösungen, die betrieblich echten Nutzen stiften.",
+    icon: Briefcase,
     gradient: "from-[var(--color-plum)]/20 via-[var(--color-plum)]/5 to-transparent",
     border: "border-[var(--color-plum)]/30 hover:border-[var(--color-plum)]",
     iconBg: "bg-[var(--color-plum)]/10 text-[var(--color-plum)]",
   },
   {
-    title: "Ehrliche Einschätzung",
-    desc: "Kein technisches Kauderwelsch, kein unnötiges Upselling – nur was deinem Betrieb wirklich hilft.",
-    icon: ShieldCheck,
+    title: "Blick für Bild & Wirkung",
+    desc: "Jahrelange Erfahrung vor und hinter der Kamera. Ich nehme dir die Scheu und sorge für authentische Aufnahmen vor Ort in deinem Betrieb.",
+    icon: Camera,
+    gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
+    border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
+    iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
+  },
+  {
+    title: "Handschlagqualität",
+    desc: "Ein Wort gilt. Feste Zusagen, kurze Wege per Telefon & WhatsApp und zügige Umsetzung ohne leere Versprechen.",
+    icon: Handshake,
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
     iconBg: "bg-emerald-100 text-emerald-700",
@@ -157,13 +157,16 @@ export function DirectWithManu() {
                 </div>
 
                 {/* Polaroid Caption Note */}
-                <div className="pt-2.5 px-1 flex items-center justify-between">
-                  <p className="font-editorial italic text-sm sm:text-base font-semibold text-[var(--color-ink)]">
-                    Manu Landeck
+                <div className="pt-3 px-1 flex flex-col gap-1.5">
+                  <p className="font-editorial italic text-xs sm:text-sm font-semibold text-[var(--color-ink)] leading-snug">
+                    „Eine gute Website muss nicht kompliziert sein – sie muss funktionieren.“
                   </p>
-                  <span className="text-[10px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2 py-0.5 rounded-full">
-                    Wesel ☕
-                  </span>
+                  <div className="flex items-center justify-between pt-1 border-t border-stone-100">
+                    <span className="text-[11px] font-medium text-[var(--color-muted)]">Manu Landeck</span>
+                    <span className="text-[9px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2 py-0.5 rounded-full">
+                      Auf Augenhöhe ☕
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -173,7 +176,7 @@ export function DirectWithManu() {
                 onMouseEnter={() => setHoveredCardIndex(1)}
                 onMouseLeave={() => setHoveredCardIndex(null)}
                 className={cn(
-                  "absolute bottom-2 right-2 sm:right-4 w-[210px] sm:w-[240px] md:w-[250px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-300 ease-[var(--ease-out)] will-change-transform group",
+                  "absolute bottom-2 right-2 sm:right-4 w-[220px] sm:w-[250px] md:w-[265px] p-3 pb-4 bg-white rounded-2xl shadow-xl border border-black/5 cursor-pointer transition-all duration-300 ease-[var(--ease-out)] will-change-transform group",
                   hoveredCardIndex === null && "animate-float-postit-2",
                   (activeCardIndex === 1 || hoveredCardIndex === 1)
                     ? "z-30 scale-[1.06] shadow-2xl ring-2 ring-[var(--color-plum)]/30" 
@@ -206,13 +209,16 @@ export function DirectWithManu() {
                 </div>
 
                 {/* Polaroid Caption Note */}
-                <div className="pt-2.5 px-1 flex items-center justify-between">
-                  <p className="font-editorial italic text-sm sm:text-base font-semibold text-[var(--color-ink)]">
-                    Gründer von Firmenflow
+                <div className="pt-3 px-1 flex flex-col gap-1.5">
+                  <p className="font-editorial italic text-xs sm:text-sm font-semibold text-[var(--color-ink)] leading-snug">
+                    „Ich denke wie ein Unternehmer: Klare Absprachen, echter Nutzen, kein Blabla.“
                   </p>
-                  <span className="text-[10px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2 py-0.5 rounded-full">
-                    Persönlich ✨
-                  </span>
+                  <div className="flex items-center justify-between pt-1 border-t border-stone-100">
+                    <span className="text-[11px] font-medium text-[var(--color-muted)]">Gründer Firmenflow</span>
+                    <span className="text-[9px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2 py-0.5 rounded-full">
+                      Handschlag ✨
+                    </span>
+                  </div>
                 </div>
               </div>
 
