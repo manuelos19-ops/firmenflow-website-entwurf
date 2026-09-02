@@ -165,7 +165,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
               Lass uns sprechen
             </h3>
             <p className="text-sm text-white/70">
-              Unverbindlich in 2 Minuten: Wähle deinen Projekttyp und deine Ziele.
+              Unverbindlich &amp; mit wenigen Klicks: Wähle deinen Projekttyp und deine Ziele.
             </p>
           </div>
 

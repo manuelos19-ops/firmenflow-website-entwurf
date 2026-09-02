@@ -81,7 +81,7 @@ export const homeContent = {
   contact: {
     eyebrow: "Lass uns sprechen",
     title: "Kurze WhatsApp oder geführte Anfrage.",
-    body: "Du entscheidest, was dir lieber ist: Schreib mir eine kurze WhatsApp oder nutze die geführte Projektanfrage in zwei Minuten.",
+    body: "Du entscheidest, was dir lieber ist: Schreib mir eine kurze WhatsApp oder sende mir mit wenigen Klicks deine unverbindliche Projektanfrage.",
   },
 } as const;
 
