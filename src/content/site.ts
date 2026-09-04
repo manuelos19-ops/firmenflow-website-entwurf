@@ -54,7 +54,7 @@ export const homeContent = {
   process: [
     { 
       number: "01", 
-      title: "Kostenfreies Kennenlernen (ca. 15 Min.)", 
+      title: "Kostenfreies Kennenlernen (ca. 30 Min.)", 
       body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." 
     },
     { 

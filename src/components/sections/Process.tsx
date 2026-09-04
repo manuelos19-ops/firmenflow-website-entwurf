@@ -12,7 +12,7 @@ export function Process() {
 
   // Use process steps from site content, with fallback
   const processSteps = homeContent?.process || [
-    { number: "01", title: "Kostenfreies Kennenlernen (ca. 15 Min.)", body: "Ich bespreche mit dir unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." },
+    { number: "01", title: "Kostenfreies Kennenlernen (ca. 30 Min.)", body: "Ich bespreche mit dir unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." },
     { number: "02", title: "Struktur & Design-Entwurf", body: "Ich erstelle die Seitenstruktur und den ersten interaktiven Entwurf. Du siehst genau, wie die Seite auf dem Smartphone wirkt, bevor alles final gebaut wird." },
     { number: "03", title: "Umsetzung & Texterstellung", body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website zügig und datenschutzkonform." },
     { number: "04", title: "Schlüsselfertig online", body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." },
