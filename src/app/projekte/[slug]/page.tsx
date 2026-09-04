@@ -81,17 +81,23 @@ export default async function ProjectPage({
   const creativeWorkSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
+    "@id": `${baseUrl}/projekte/${project.slug}#case`,
+    url: `${baseUrl}/projekte/${project.slug}`,
     name: `${project.name} – Webdesign & Lokalpräsenz`,
     headline: `${project.name} – Case Study`,
     description: project.summary,
     image: `${baseUrl}${project.image}`,
+    inLanguage: "de-DE",
+    mainEntityOfPage: `${baseUrl}/projekte/${project.slug}`,
     author: {
       "@type": "Person",
+      "@id": `${baseUrl}/#manu`,
       name: "Manuel Landeck",
       url: `${baseUrl}/#manu`,
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       name: "Firmenflow",
       url: baseUrl,
     },

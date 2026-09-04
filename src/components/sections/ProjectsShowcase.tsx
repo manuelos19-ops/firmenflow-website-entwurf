@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { liveProjects, conceptProjects, type Project } from "@/content/projects";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
@@ -12,7 +13,8 @@ import {
   ExternalLink, 
   Pause, 
   Play,
-  MapPin
+  MapPin,
+  ArrowRight
 } from "lucide-react";
 
 export function ProjectsShowcase() {
@@ -464,19 +466,38 @@ export function ProjectsShowcase() {
               {activeProject.summary}
             </p>
 
-            {/* High-Contrast Action Button with 100% White Text */}
-            <div className="shrink-0 w-full sm:w-auto">
-              <a
-                href={activeProject.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer"
-              >
-                <span className="text-white font-bold">
-                  {activeProject.kind === "live" ? "Website in neuem Tab öffnen" : "Live-Demo in neuem Tab öffnen"}
-                </span>
-                <ExternalLink className="w-4 h-4 text-white shrink-0" />
-              </a>
+            {/* Action Buttons: Internal Case Study Link + Direct External Website */}
+            <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+              {activeProject.kind === "live" ? (
+                <>
+                  <Link
+                    href={`/projekte/${activeProject.slug}`}
+                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
+                  >
+                    <span>Case Study ansehen</span>
+                    <ArrowRight className="w-4 h-4 text-white shrink-0" />
+                  </Link>
+                  <a
+                    href={activeProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+                  >
+                    <span>Live-Website</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[var(--color-muted)] shrink-0" />
+                  </a>
+                </>
+              ) : (
+                <a
+                  href={activeProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
+                >
+                  <span className="text-white font-bold">Live-Demo ansehen</span>
+                  <ExternalLink className="w-4 h-4 text-white shrink-0" />
+                </a>
+              )}
             </div>
           </div>
         </div>

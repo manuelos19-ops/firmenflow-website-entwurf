@@ -11,6 +11,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { FaqJsonLd } from "@/components/seo/JsonLd";
 
 const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Google Business 360°"];
 
@@ -29,6 +30,7 @@ export function Faq() {
       id="faq"
       className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] relative overflow-hidden"
     >
+      <FaqJsonLd />
       {/* Subtle ambient light */}
       <div 
         className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[var(--color-coral)]/5 rounded-full blur-[120px] pointer-events-none" 

@@ -48,13 +48,13 @@ const storySteps: StoryStep[] = [
     icon: SearchX,
     badge: {
       icon: SearchX,
-      text: "0 Anfragen online",
-      sub: "Kunden laufen vorbei",
+      text: "Typischer Ausgangspunkt",
+      sub: "Im Alltag oft übersehen",
     },
     highlights: [
       "Veraltete oder fehlende Website",
-      "Kein optimiertes Google-Maps-Profil",
-      "Kunden gehen zur Konkurrenz",
+      "Google-Maps-Profil ungenutzt",
+      "Interessenten suchen weiter",
     ],
   },
   {
@@ -69,13 +69,13 @@ const storySteps: StoryStep[] = [
     icon: Laptop,
     badge: {
       icon: Star,
-      text: "5.0 ★★★★★ Google 360°",
-      sub: "Modernes Webdesign",
+      text: "Google 360° Prozess",
+      sub: "Fokus auf echte Kundenstimmen",
     },
     highlights: [
       "Fester Ansprechpartner (Manu)",
       "Schnelle Website fürs Smartphone",
-      "Google-Profil mit 5 Sternen",
+      "Gezielter Aufbau echter Bewertungen",
     ],
   },
   {
@@ -84,7 +84,7 @@ const storySteps: StoryStep[] = [
     tagVariant: "success",
     title: "Kunden finden dich sofort und rufen an.",
     subtitle: "Echte Anfragen und ein voller Betrieb",
-    body: "Wer in deiner Region sucht, sieht sofort deine guten Bewertungen, klickt auf deine Website und nimmt direkt Kontakt auf. Aus stiller Qualität werden planbar neue Kunden.",
+    body: "Wer in deiner Region sucht, sieht sofort deine guten Bewertungen, klickt auf deine Website und nimmt direkt Kontakt auf. Aus stiller Qualität wird echte digitale Anziehungskraft und ein planbar voller Betrieb.",
     image: "/media/story/story-3-voller-erfolg.webp",
     imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
     icon: Users,
@@ -96,7 +96,7 @@ const storySteps: StoryStep[] = [
     highlights: [
       "Regelmäßige Anfragen über Google",
       "Starker erster Eindruck rund um die Uhr",
-      "Spürbar mehr Umsatz vor Ort",
+      "Starke lokale Anziehungskraft",
     ],
   },
 ];
@@ -131,7 +131,7 @@ export function StorySection() {
 
   return (
     <section 
-      ref={containerRef}
+      ref={containerRef} 
       id="story"
       className="pt-8 sm:pt-12 md:pt-16 pb-24 sm:pb-32 bg-transparent text-[var(--color-ink)] overflow-hidden relative"
     >
@@ -146,7 +146,7 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-5 h-3.5" />
-            <span>Die Firmenflow-Story</span>
+            <span>Die Firmenflow-Story • Illustratives Praxisbeispiel</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.
@@ -180,7 +180,6 @@ export function StorySection() {
                     src={step.image}
                     alt={step.imageAlt}
                     fill
-                    priority
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className={cn(
                       "object-cover transition-transform duration-500 ease-[var(--ease-out)] group-hover:scale-[1.04]",

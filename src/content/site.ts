@@ -22,8 +22,8 @@ export const homeContent = {
     {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
-      body: "Ich behalte, was bereits gut funktioniert, und modernisiere, was veraltet ist. Deine bestehenden Google-Rankings bleiben sicher erhalten, während der Auftritt komplett frisch, mobiloptimiert und kundenorientiert wird.",
-      points: ["Bestandsanalyse & Relaunch", "Google-Rankings behalten", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
+      body: "Ich behalte, was bereits gut funktioniert, und modernisiere, was veraltet ist. Bestehende Google-Rankings und Sichtbarkeit werden durch saubere Weiterleitungen und Strukturanalysen gezielt geschützt und nahtlos übertragen.",
+      points: ["Bestandsanalyse & Relaunch", "Google-Sichtbarkeit schützen", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
     },
     {
       slug: "foto-video",

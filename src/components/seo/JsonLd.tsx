@@ -16,6 +16,7 @@ export function JsonLd() {
     image: `${baseUrl}/opengraph-image`,
     description:
       "Persönliches Webdesign, Relaunch, Google Business 360° sowie Foto- und Videoaufnahmen vor Ort für Betriebe in Wesel, am Niederrhein und in NRW.",
+    telephone: "+49 155 67277155",
     email: "manu@firmenflow.de",
     priceRange: "€€",
     address: {
@@ -69,7 +70,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Website-Relaunch",
             description:
-              "Modernisierung bestehender Websites unter Erhalt aller bestehenden Google-Rankings.",
+              "Modernisierung bestehender Websites mit gezieltem Schutz und nahtloser Übertragung bestehender Google-Sichtbarkeit.",
           },
         },
         {
@@ -106,6 +107,23 @@ export function JsonLd() {
     inLanguage: "de-DE",
   };
 
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
+  );
+}
+
+export function FaqJsonLd() {
+  const baseUrl = getSiteUrl().origin;
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -121,19 +139,9 @@ export function JsonLd() {
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
   );
 }
