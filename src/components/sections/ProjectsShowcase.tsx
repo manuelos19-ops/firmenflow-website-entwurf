@@ -94,9 +94,6 @@ export function ProjectsShowcase() {
     lastXRef.current = e.clientX;
     startRotationRef.current = rotation;
     velocityRef.current = 0;
-    try {
-      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
-    } catch {}
   };
 
   useEffect(() => {
@@ -105,7 +102,7 @@ export function ProjectsShowcase() {
       const currentX = e.clientX;
       const deltaX = currentX - startXRef.current;
       
-      if (Math.abs(deltaX) > 4) {
+      if (Math.abs(deltaX) > 6) {
         hasMovedRef.current = true;
       }
 
@@ -148,7 +145,7 @@ export function ProjectsShowcase() {
     const currentX = touch.clientX;
     const deltaX = currentX - startXRef.current;
     
-    if (Math.abs(deltaX) > 4) {
+    if (Math.abs(deltaX) > 6) {
       hasMovedRef.current = true;
     }
 
@@ -178,13 +175,15 @@ export function ProjectsShowcase() {
     rotateToIndex((activeIndex - 1 + totalCards) % totalCards);
   };
 
-  // Card click handler: open tab if front card or rotate if side/back card
-  const handleCardClick = (project: Project, idx: number, zDepth: number) => {
-    if (hasMovedRef.current) return;
+  // Card click handler: open tab natively if front card or rotate if side/back card
+  const handleCardClick = (e: React.MouseEvent, project: Project, idx: number, isFront: boolean) => {
+    if (hasMovedRef.current) {
+      e.preventDefault();
+      return;
+    }
 
-    if (zDepth > 0.55 || idx === activeIndex) {
-      window.open(project.url, "_blank", "noopener,noreferrer");
-    } else {
+    if (!isFront && idx !== activeIndex) {
+      e.preventDefault();
       rotateToIndex(idx);
     }
   };
@@ -267,9 +266,12 @@ export function ProjectsShowcase() {
               const zIndex = Math.round((zDepth + 1) * 48) + 2;
 
               return (
-                <div
+                <a
                   key={project.slug}
-                  onClick={() => handleCardClick(project, idx, zDepth)}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => handleCardClick(e, project, idx, isFront)}
                   onMouseEnter={() => {
                     if (typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
                       setHoveredCardIndex(idx);
@@ -277,7 +279,7 @@ export function ProjectsShowcase() {
                   }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   className={cn(
-                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none",
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none block",
                     isFront 
                       ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
                       : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
@@ -343,18 +345,14 @@ export function ProjectsShowcase() {
                       </p>
                     </div>
 
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
+                    <span
                       aria-label={`${project.name} in neuem Tab öffnen`}
-                      className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 hover:bg-[var(--color-coral)] hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
+                      className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 group-hover:bg-[var(--color-coral)] group-hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </a>
+                    </span>
                   </div>
-                </div>
+                </a>
               );
             })}
 
