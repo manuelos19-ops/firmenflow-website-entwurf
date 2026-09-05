@@ -6,7 +6,7 @@ import { legalContent } from "@/content/legal";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
-  description: "Datenschutzerklärung von Firmenflow – Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme und E-Mail-Versand.",
+  description: "Datenschutzerklärung von Firmenflow – Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme, Online-Terminbuchung (meetergo) und E-Mail-Kommunikation.",
   alternates: {
     canonical: "/datenschutz",
   },
@@ -148,25 +148,56 @@ export default function DatenschutzPage() {
             </p>
           </section>
 
-          {/* 7. Keine Tracking Cookies */}
+          {/* 7. Online-Terminbuchung via meetergo */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">7. Keine Tracking-Cookies oder Werbe-Pixel</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">7. Online-Terminbuchung via meetergo</h2>
+            <p>
+              Auf dieser Website habe ich das Online-Terminvergabe-Tool <strong>meetergo</strong> eingebunden. Anbieter ist die <strong>meetergo GmbH</strong>, Hauptstr. 44, 40789 Monheim am Rhein (nachfolgend „meetergo“).
+            </p>
+            <p>
+              Wenn du online einen Termin mit mir vereinbarst, werden deine hierzu eingegebenen Daten (wie z. B. Name, E-Mail-Adresse, Telefonnummer, Wunschtermin und eventuelle Notizen) auf den Servern von meetergo in Deutschland gespeichert. Des Weiteren erfasst meetergo kurzfristig deine IP-Adresse, deine Referrer-URL, die Uhrzeit des Zugriffs und kann feststellen, dass du bei mir eine Anfrage bzw. Terminbuchung gestellt hast; diese Daten werden ausschließlich für die technische Bereitstellung des Dienstes verwendet und anschließend automatisch wieder gelöscht.
+            </p>
+            <p>
+              Die Verwendung von meetergo erfolgt auf Grundlage von <strong>Art. 6 Abs. 1 lit. f DSGVO</strong>. Ich habe ein berechtigtes Interesse an einer möglichst unkomplizierten, zuverlässigen und zeitsparenden Terminvereinbarung. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von <strong>Art. 6 Abs. 1 lit. a DSGVO</strong> bzw. <strong>Art. 9 Abs. 2 lit. a DSGVO</strong>; die Einwilligung ist jederzeit mit Wirkung für die Zukunft widerrufbar.
+            </p>
+            <p>
+              Zur technischen Fehlerdiagnose verarbeitet meetergo bei einem Anwendungsfehler außerdem die Fehlerart, eine bereinigte Fehlermeldung und einen Stacktrace sowie den technischen Seiten- und Browserkontext. E-Mail-Adressen und sensible URL-Bestandteile werden vor der Übermittlung automatisch entfernt. Die Fehlerdiagnose wird von meetergo selbst in der EU betrieben. Sie setzt keine Cookies, speichert nichts dauerhaft im Browser und erfasst keine Seitenaufrufe, Klicks, Mausbewegungen, Heatmaps, Dead Clicks oder Sitzungsaufzeichnungen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und zuverlässigen Betrieb der Buchungsseite).
+            </p>
+            <p>
+              Ich habe mit der meetergo GmbH einen Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen. Hierin verpflichtet sich meetergo, die Daten meiner Seitenbesucher streng nach den Vorgaben der europäischen DSGVO zu schützen und ausschließlich auf Servern in Deutschland zu verarbeiten.
+            </p>
+            <p className="text-xs text-[var(--color-muted)]">
+              Weitere Informationen zum Datenschutz bei meetergo findest du unter:{" "}
+              <a 
+                href="https://my.meetergo.com/privacy-policy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--color-plum)]"
+              >
+                https://my.meetergo.com/privacy-policy
+              </a>
+            </p>
+          </section>
+
+          {/* 8. Keine Tracking Cookies */}
+          <section className="space-y-3">
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">8. Keine Tracking-Cookies oder Werbe-Pixel</h2>
             <p>
               Ich verzichte auf dieser Website bewusst auf zustimmungspflichtige Analyse-Tools wie Google Analytics, Matomo, Meta-Pixel (Facebook-Pixel) oder ähnliche Tracking- und Profiling-Dienste von Drittanbietern. Es werden ausschließlich technisch notwendige Cookies eingesetzt, die für den sicheren Betrieb der Seite erforderlich sind. Daher benötige ich kein störendes Cookie-Banner.
             </p>
           </section>
 
-          {/* 8. Speicherdauer */}
+          {/* 9. Speicherdauer */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">8. Speicherdauer</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">9. Speicherdauer</h2>
             <p>
               Deine personenbezogenen Daten verbleiben bei mir, bis der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Projektanfrage). Zwingende gesetzliche Bestimmungen – insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen (z. B. nach HGB oder AO bei erteilten Aufträgen) – bleiben unberührt. Nach Ablauf dieser Fristen werden die Daten routinemäßig und datenschutzkonform gelöscht.
             </p>
           </section>
 
-          {/* 9. Betroffenenrechte */}
+          {/* 10. Betroffenenrechte */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">9. Deine Rechte als betroffene Person</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">10. Deine Rechte als betroffene Person</h2>
             <p>
               Du hast im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
             </p>
