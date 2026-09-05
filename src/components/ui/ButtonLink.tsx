@@ -62,15 +62,15 @@ export function ButtonLink({
   if (href) {
     if (external) {
       return (
-        <a href={href} target="_blank" rel="noreferrer" className={classes}>
-          <span className="inline-flex items-center gap-2">{children}</span>
+        <a href={href} target="_blank" rel="noreferrer" className={classes} onClick={onClick}>
+          <span className="inline-flex items-center gap-2 text-inherit">{children}</span>
           {arrow}
         </a>
       );
     }
     return (
-      <Link href={href} className={classes}>
-        <span className="inline-flex items-center gap-2">{children}</span>
+      <Link href={href} className={classes} onClick={onClick}>
+        <span className="inline-flex items-center gap-2 text-inherit">{children}</span>
         {arrow}
       </Link>
     );
