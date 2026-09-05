@@ -38,23 +38,23 @@ interface StoryStep {
 const storySteps: StoryStep[] = [
   {
     number: "01",
-    tag: "Das Dilemma",
+    tag: "Akt 1 · Die Ausgangslage",
     tagVariant: "problem",
-    title: "Der Laden ist top. Aber online weiß es keiner.",
-    subtitle: "Im Alltag unsichtbar",
-    body: "Du lieferst erstklassige Arbeit und gibst jeden Tag alles für deine Kunden. Aber wer auf dem Smartphone nach deinem Angebot sucht, läuft an deinem Betrieb vorbei, weil er online nicht auftaucht.",
+    title: "Vor Ort geschätzt. Doch der Neukunden-Zulauf stockt.",
+    subtitle: "Qualität, an der man online bisher vorbeilief",
+    body: "Stammkunden schwören auf deinen Service. Aber wer neu in die Region zieht oder abends auf dem Smartphone nach einem Betrieb sucht, landet bei Google bei Mitbewerbern mit frischeren Bewertungen und modernerer Seite. Dein Schaufenster im Netz spiegelt deinen Betrieb einfach nicht wider.",
     image: "/media/story/story-1-unsichtbar.webp",
-    imageAlt: "Inhaber steht mit Schild 'Hier ist meine Bäckerei' vor seinem Laden, Passanten schauen auf Smartphones",
+    imageAlt: "Inhaber steht vor seinem Betrieb, Passanten schauen auf Smartphones",
     icon: SearchX,
     badge: {
       icon: SearchX,
       text: "Typischer Ausgangspunkt",
-      sub: "Im Alltag oft übersehen",
+      sub: "Im Netz oft übersehen",
     },
     highlights: [
       "Veraltete oder fehlende Website",
       "Google-Maps-Profil ungenutzt",
-      "Interessenten suchen weiter",
+      "Neukunden suchen weiter",
     ],
   },
   {

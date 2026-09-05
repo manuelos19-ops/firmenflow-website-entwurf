@@ -3,39 +3,39 @@ export const homeContent = {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
     accent: "Deine Website. Persönlich mit Manu.",
-    body: "Ich sorge dafür, dass dein Betrieb bei Google und im Web sofort Vertrauen aufbaut. Vom maßgeschneiderten Webdesign über authentische Fotos vor Ort bis zur Google-Maps-Optimierung: schlüsselfertig umgesetzt, mobil perfekt lesbar und direkt persönlich mit mir.",
+    body: "Wenn Kunden am Niederrhein nach deinem Angebot oder Handwerk suchen, zählt der erste Klick: Eine gestochen scharfe Website, echte Fotos aus deinem Betrieb und ein Google-Profil, das sofort Vertrauen weckt. Ohne Agentur-Warteschleifen, direkt auf den Punkt.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Lass uns sprechen",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",
-    title: "Gute Arbeit im Betrieb. Aber online sucht man dich vergeblich.",
-    body: "Wenn jemand in Wesel oder am Niederrhein nach deinem Angebot googelt, findet er oft zuerst die Konkurrenz. Eine alte oder langsame Website sorgt dafür, dass Kunden weiterscrollen, statt anzurufen.",
+    title: "Dein Betrieb leistet erstklassige Arbeit. Aber online gewinnt der lautere Mitbewerber.",
+    body: "Du stehst früh im Betrieb, gibst alles für saubere Qualität – doch auf dem Smartphone sucht deine Kundschaft vergebens. Wer dich online nicht sofort versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz. Aus erstklassiger Arbeit wird stille Unsichtbarkeit.",
   },
   services: [
     {
       slug: "neue-website",
       title: "Neue Website von Grund auf",
-      body: "Für Betriebe, die noch keine oder eine veraltete Seite haben: Nach einem kurzen 15-Minuten-Gespräch schreibe und strukturiere ich alle Inhalte schlüsselfertig für dich – inklusive kurzer Ladezeiten auf dem Smartphone.",
+      body: "Vom leeren Bildschirm zum bezugsfertigen Firmenauftritt: Ich übernehme Struktur, verständliche Texte und mobile Ladezeiten unter einer Sekunde. Du prüfst den Entwurf, gibst dein Feedback – und dein Betrieb steht online stark da.",
       points: ["Kein Text-Stress für dich", "Modernes, klares Design", "Optimiert fürs Smartphone", "Transparenter Festpreis"],
     },
     {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
-      body: "Ich behalte, was bereits gut funktioniert, und modernisiere, was veraltet ist. Bestehende Google-Rankings und Sichtbarkeit werden durch saubere Weiterleitungen und Strukturanalysen gezielt geschützt und nahtlos übertragen.",
+      body: "Alte Seite entrümpeln, gewachsene Google-Sichtbarkeit behalten: Ich übernehme deine bewährten Inhalte, poliere Struktur und Design auf Hochglanz und richte saubere Weiterleitungen ein, damit kein Kunde verloren geht.",
       points: ["Bestandsanalyse & Relaunch", "Google-Sichtbarkeit schützen", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
     },
     {
       slug: "foto-video",
       title: "Foto- & Videoaufnahmen vor Ort",
-      body: "Authentische Bilder statt künstlicher Stockfotos: Viele kleine Unternehmen haben keine guten oder veraltete Fotos. Ich komme mit professionellem Foto- und Video-Equipment direkt zu dir nach Wesel oder an den Niederrhein und erstelle lebendige Team-Portraits, Raumaufnahmen oder einen sympathischen Imagefilm für deinen Webauftritt.",
+      body: "Echte Gesichter, Handgriffe und die Atmosphäre deines Betriebs im Bild: Keine anonymen Stockfotos mit künstlich lächelnden Models. Ich komme mit professionellem Foto- und Video-Equipment direkt zu dir vor Ort und fange deine echte Arbeitswelt authentisch ein.",
       points: ["Team- & Mitarbeiter-Shootings", "Räumlichkeiten & Atmosphäre", "Kurzer Imagefilm & Video-Reels", "Direkt bei dir vor Ort"],
     },
   ],
   direct: {
     eyebrow: "Persönlich mit Manu",
-    title: "Ein Ansprechpartner. Keine stille Post.",
-    body: "Du sprichst vom ersten Gedanken bis zur fertigen Website immer persönlich mit mir. Keine wechselnden Projektmanager, keine Ticket-Warteschleifen und kein Agenturtheater – nenn mich einfach Manu.",
+    title: "Ein Partner auf Augenhöhe. Vom Unternehmer für Unternehmer.",
+    body: "Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen und den Betrieb am Laufen halten. Deshalb rede ich nicht im Agentur-Jargon, sondern in klaren Fakten: Was bringt deinem Betrieb echte Anfragen? Wo sparen wir uns überflüssigen Schnickschnack? Du hast meine direkte Handynummer und das Versprechen, dass dein Projekt Chefsache bleibt.",
     points: ["Persönlich erreichbar", "Feste Absprachen", "Ehrliche Beratung", "Vor Ort am Niederrhein"],
   },
   pilot: {
@@ -99,8 +99,8 @@ export const faqItems = [
     answer: "Ja, sehr gerne! Viele kleine Unternehmen haben veraltete oder gar keine passenden Bilder. Ich bringe professionelles Foto- und Video-Equipment mit und komme direkt bei dir in Wesel und Umgebung vorbei. Ich erstelle sympathische Teamfotos, Aufnahmen deiner Räume und deines Handwerks oder einen kurzen, wirkungsvollen Imagefilm für deine Website und Social Media." 
   },
   { 
-    question: "Muss ich Texte und Fotos schon fertig vorbereitet haben?", 
-    answer: "Nein, überhaupt nicht! Wenn du bereits Fotos hast, übernehme ich diese gern. Wenn nicht, mache ich die Fotos direkt bei dir vor Ort und formuliere alle Texte schlüsselfertig für dich, abgestimmt auf dein Angebot und deine Zielgruppe." 
+    question: "Wie viel Zeit muss ich selbst in das Projekt investieren?", 
+    answer: "Sehr wenig. Nach unserem ersten Kennenlernen habe ich in der Regel alles, was ich brauche. Ich formuliere verständliche Texte, strukturiere die Angebote und bereite den Entwurf schlüsselfertig vor. Du gibst mir dein Feedback, wir feilen am Feinschliff – und ansonsten kannst du dich voll auf dein Tagesgeschäft konzentrieren." 
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 
@@ -119,7 +119,7 @@ export const faqItems = [
     },
   },
   { 
-    question: "Mit wem spreche ich während des Projekts?", 
-    answer: "Immer persönlich mit mir (Manu). Du hast meine Handynummer, erreichst mich per WhatsApp oder Anruf und landest bei keinem anonymen Callcenter oder Praktikanten." 
+    question: "Wer kümmert sich nach dem Start um Hosting, Updates und Änderungen?", 
+    answer: "Genau dafür gibt es mein Rundum-Sorglos-Paket: Ich übernehme schnelles, sicheres Hosting, regelmäßige Backups und alle technischen Updates. Wenn du Öffnungszeiten ändern möchtest, neue Fotos hast oder ein Angebot aktualisieren willst, schreibst du mir einfach kurz per WhatsApp – und ich setze es zeitnah für dich um. So bleibt deine Website immer aktuell, ohne dass du selbst Zeit investieren musst." 
   },
 ] as const;

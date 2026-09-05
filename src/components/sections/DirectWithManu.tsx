@@ -85,16 +85,16 @@ export function DirectWithManu() {
             </div>
             
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
-              Ein Ansprechpartner. <br />
-              <span className="text-[var(--color-coral)] font-editorial">Keine stille Post.</span>
+              Ein Partner auf Augenhöhe. <br />
+              <span className="text-[var(--color-coral)] font-editorial">Vom Unternehmer für Unternehmer.</span>
             </h2>
             
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-5">
-              Du sprichst vom ersten Gedanken bis zur fertigen Website immer persönlich mit mir. Keine wechselnden Projektmanager, keine anonymen Tickets und kein Agenturtheater – nenn mich einfach Manu.
+              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen und den Betrieb am Laufen halten. Deshalb rede ich nicht im Agentur-Jargon, sondern in klaren Fakten: Was bringt deinem Betrieb echte Anfragen? Wo sparen wir uns überflüssigen Schnickschnack?
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
-              Ich mag klare Gespräche, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Firmenflow ist bewusst persönlich aufgebaut: Du weißt immer genau, wer deine Website entwickelt und wer sich darum kümmert.
+              Ich mag kurze Wege, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Du hast meine direkte Handynummer und das Versprechen, dass dein Projekt Chefsache bleibt.
             </p>
 
             {/* Quick Trust Highlights - Option A */}
