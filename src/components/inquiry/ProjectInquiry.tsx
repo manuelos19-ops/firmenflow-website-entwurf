@@ -186,22 +186,39 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
 
   if (state.status === "success") {
     return (
-      <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 border border-[var(--color-line)] shadow-xl text-center space-y-6">
-        <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto">
+      <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 border border-[var(--color-line)] shadow-xl text-center space-y-6 text-[#17131a]">
+        <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-sm">
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <div className="space-y-2 max-w-md mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)]">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#17131a] font-display">
             Anfrage ist bei Manu angekommen!
           </h3>
           <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
             Vielen Dank für dein Vertrauen. Ich schaue mir deine Angaben in Ruhe an und melde mich persönlich bei dir.
           </p>
         </div>
-        <div className="pt-4">
-          <ButtonLink href="/" variant="secondary" size="default">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <ButtonLink 
+            href="/" 
+            variant="primary" 
+            size="lg" 
+            className="w-full sm:w-auto shadow-xl shadow-[var(--color-coral)]/25 text-white font-bold px-8 py-4"
+          >
             Zurück zur Startseite
           </ButtonLink>
+          <button
+            type="button"
+            onClick={() => {
+              try {
+                sessionStorage.removeItem("firmenflow_inquiry_draft");
+              } catch {}
+              dispatch({ type: "reset" });
+            }}
+            className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full text-sm font-semibold text-[#17131a] bg-[var(--color-paper)] hover:bg-stone-200 border border-[var(--color-line)] transition-all cursor-pointer"
+          >
+            Neue Anfrage starten
+          </button>
         </div>
       </div>
     );

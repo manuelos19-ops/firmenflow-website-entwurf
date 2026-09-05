@@ -15,7 +15,8 @@ export type InquiryAction =
   | { type: "errors"; value: Record<string, string> }
   | { type: "submitting" }
   | { type: "success" }
-  | { type: "error"; message?: string };
+  | { type: "error"; message?: string }
+  | { type: "reset" };
 
 export function initialInquiryState(projectType?: InquiryDraft["projectType"]): InquiryState {
   return {
@@ -85,6 +86,8 @@ export function inquiryReducer(state: InquiryState, action: InquiryAction): Inqu
         status: "error",
         serverErrorMessage: action.message,
       };
+    case "reset":
+      return initialInquiryState();
     default:
       return state;
   }

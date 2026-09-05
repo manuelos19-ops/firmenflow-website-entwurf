@@ -31,7 +31,7 @@ export default function AnfrageErhaltenPage() {
         </div>
 
         <div className="pt-4">
-          <ButtonLink href="/" variant="secondary" size="lg">
+          <ButtonLink href="/" variant="primary" size="lg" className="shadow-xl shadow-[var(--color-coral)]/25 text-white font-bold">
             Zurück zur Startseite
           </ButtonLink>
         </div>
