@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Share2, Check } from "lucide-react";
@@ -10,7 +10,7 @@ export function CopyLinkButton() {
     const url = typeof window !== "undefined" ? window.location.href : "https://firmenflow.de/links";
     const shareData = {
       title: "Manu · Firmenflow Hub",
-      text: "Persönliche Projekt- und Link-Übersicht von Manuel Osten (Firmenflow)",
+      text: "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow",
       url: url,
     };
 

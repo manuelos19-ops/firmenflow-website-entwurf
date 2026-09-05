@@ -1,4 +1,4 @@
-﻿export interface LinkItem {
+export interface LinkItem {
   id: string;
   title: string;
   url: string;
@@ -29,7 +29,7 @@ export interface LinkProfile {
 }
 
 export const linkProfile: LinkProfile = {
-  name: "Manuel (Manu) Osten",
+  name: "Manuel Landeck (Manu)",
   handle: "@firmenflow",
   role: "Webdesigner, Entwickler & Gründer von Firmenflow",
   location: "Wesel & Niederrhein 📍",

@@ -25,7 +25,7 @@ import { CopyLinkButton } from "@/components/links/CopyLinkButton";
 export const metadata: Metadata = {
   title: "Manu · Projekte, Tools & Links",
   description:
-    "Persönliche Projekt- und Link-Übersicht von Manuel Osten (Firmenflow). cliManu, VidAlyzer, X-Ray & direkte Kontaktwege.",
+    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. cliManu, VidAlyzer, X-Ray & direkte Kontaktwege.",
   robots: {
     index: false,
     follow: false,
@@ -337,7 +337,7 @@ export default function LinksPage() {
         {/* Footer Note & Legal Links */}
         <footer className="pt-6 text-center space-y-3 border-t border-[var(--color-line)]/80 text-xs text-[var(--color-muted)]">
           <p className="font-medium">
-            Firmenflow · Manuel Osten · Wesel & Niederrhein
+            Firmenflow · Manuel Landeck · Wesel & Niederrhein
           </p>
           <div className="flex items-center justify-center gap-4 font-medium">
             <Link
