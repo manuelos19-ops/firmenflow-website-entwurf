@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
 
 interface SectionItem {
@@ -23,10 +24,12 @@ const sections: SectionItem[] = [
 ];
 
 export function SectionDotNav() {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
   useEffect(() => {
+    if (pathname !== "/") return;
     const handleScroll = () => {
       const triggerY = window.innerHeight * 0.38;
 
@@ -61,7 +64,7 @@ export function SectionDotNav() {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timeout);
     };
-  }, []);
+  }, [pathname]);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -70,6 +73,10 @@ export function SectionDotNav() {
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
+
+  if (pathname !== "/") {
+    return null;
+  }
 
   return (
     <aside 
