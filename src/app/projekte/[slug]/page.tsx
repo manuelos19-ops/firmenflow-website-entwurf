@@ -5,11 +5,12 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink, CheckCircle2, Smartphone, Zap, MapPin, Sparkles, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
-import { getLiveProject, liveProjects } from "@/content/projects";
+import { allProjects, getProject } from "@/content/projects";
 import { getSiteUrl } from "@/lib/site-url";
+import { cn } from "@/lib/cn";
 
 export function generateStaticParams() {
-  return liveProjects.map(({ slug }) => ({ slug }));
+  return allProjects.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getLiveProject(slug);
+  const project = getProject(slug);
   if (!project) return {};
 
   return {
@@ -48,7 +49,7 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getLiveProject(slug);
+  const project = getProject(slug);
   if (!project) notFound();
 
   const baseUrl = getSiteUrl().origin;
@@ -136,8 +137,20 @@ export default async function ProjectPage({
           </nav>
 
           <div className="space-y-4">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span
+              className={cn(
+                "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-bold uppercase tracking-wider",
+                project.kind === "live"
+                  ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                  : "bg-[var(--color-plum)]/10 text-[var(--color-plum)] border-[var(--color-plum)]/20"
+              )}
+            >
+              <span
+                className={cn(
+                  "w-2 h-2 rounded-full",
+                  project.kind === "live" ? "bg-emerald-500 animate-pulse" : "bg-[var(--color-coral)]"
+                )}
+              />
               {project.badge}
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-[var(--color-ink)]">
@@ -197,7 +210,7 @@ export default async function ProjectPage({
           {/* Action CTAs */}
           <div className="pt-8 border-t border-[var(--color-line)] flex flex-col sm:flex-row gap-4">
             <ButtonLink href={project.url} external variant="primary" size="lg" className="flex items-center justify-center gap-2">
-              <span>Live-Website ansehen</span>
+              <span>{project.kind === "live" ? "Live-Website ansehen" : "Live-Demo ansehen"}</span>
               <ExternalLink className="w-4 h-4" />
             </ButtonLink>
             <ButtonLink href="/#kontakt" variant="secondary" size="lg" className="flex items-center justify-center gap-2">

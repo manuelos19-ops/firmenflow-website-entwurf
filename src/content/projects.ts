@@ -77,4 +77,7 @@ export const conceptProjects: readonly Project[] = [
   },
 ] as const;
 
+export const allProjects: readonly Project[] = [...liveProjects, ...conceptProjects];
+
+export const getProject = (slug: string) => allProjects.find((project) => project.slug === slug);
 export const getLiveProject = (slug: string) => liveProjects.find((project) => project.slug === slug);

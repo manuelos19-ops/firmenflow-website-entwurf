@@ -488,15 +488,24 @@ export function ProjectsShowcase() {
                   </a>
                 </>
               ) : (
-                <a
-                  href={activeProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
-                >
-                  <span className="text-white font-bold">Live-Demo ansehen</span>
-                  <ExternalLink className="w-4 h-4 text-white shrink-0" />
-                </a>
+                <>
+                  <Link
+                    href={`/projekte/${activeProject.slug}`}
+                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
+                  >
+                    <span>Showcase ansehen</span>
+                    <ArrowRight className="w-4 h-4 text-white shrink-0" />
+                  </Link>
+                  <a
+                    href={activeProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+                  >
+                    <span>Live-Demo</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[var(--color-muted)] shrink-0" />
+                  </a>
+                </>
               )}
             </div>
           </div>
