@@ -19,14 +19,14 @@ export function BrandMark({ variant = "dark", className }: BrandMarkProps) {
       aria-label="Firmenflow – für deine Lokalpräsenz" 
       className={cn("inline-flex items-center group focus-visible:outline-none select-none", className)}
     >
-      <div className="relative h-10 sm:h-11 md:h-12 w-auto aspect-[4.25/1] shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
+      <div className="relative h-10 sm:h-11 md:h-12 w-auto aspect-[3.89/1] shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
         <Image
           src={logoSrc}
-          alt="FIRMENflow – für deine Lokalpräsenz"
+          alt="Firmenflow – für deine Lokalpräsenz."
           fill
           priority
           className="object-contain object-left"
-          sizes="(max-width: 640px) 190px, 250px"
+          sizes="(max-width: 640px) 200px, 260px"
         />
       </div>
     </Link>
