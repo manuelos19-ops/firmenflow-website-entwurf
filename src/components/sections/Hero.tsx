@@ -164,23 +164,22 @@ export function Hero({ whatsappUrl }: HeroProps) {
               <svg viewBox="0 0 120 120" className="w-full h-full">
                 <path
                   id="circlePath"
-                  d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"
+                  d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
                   fill="none"
                 />
-                <text className="text-[11.5px] uppercase font-bold tracking-[0.24em] fill-[var(--color-plum)]">
+                <text className="text-[10px] sm:text-[10.5px] uppercase font-bold tracking-[0.38em] fill-[var(--color-plum)]">
                   <textPath href="#circlePath" startOffset="0%">
-                    FIRMENFLOW • WEBDESIGN • WESEL • 
+                    FIRMENFLOW • WEBDESIGN • 
                   </textPath>
                 </text>
               </svg>
             </div>
-            {/* Official Firmenflow FF Wave Center Mark */}
-            <div className="absolute w-12 h-8 sm:w-14 sm:h-9 flex items-center justify-center pointer-events-none">
+            {/* Official Firmenflow FF Signet (proportional verkleinert fuer perfekte Passung) */}
+            <div className="absolute w-5 h-8 sm:w-6 sm:h-9 md:w-7 md:h-10 flex items-center justify-center pointer-events-none">
               <Image
                 src="/brand/firmenflow-mark.webp"
-                alt="Firmenflow Logo Mark"
-                width={52}
-                height={30}
+                alt="Firmenflow Signet"
+                fill
                 className="object-contain drop-shadow-sm"
               />
             </div>

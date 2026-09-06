@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand & Slogan */}
           <div className="md:col-span-2 space-y-4">
-            <BrandMark variant="light" />
+            <BrandMark variant="light" size="lg" />
             <p className="text-sm text-white/70 max-w-sm leading-relaxed pt-1">
               Persönliches Webdesign und digitale Sichtbarkeit für lokale Unternehmen in Wesel, am Niederrhein und in NRW.
             </p>
