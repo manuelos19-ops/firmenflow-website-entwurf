@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
@@ -10,7 +10,8 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
+import { MapPin, Clock, Phone, Mail, ChevronDown } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 interface ContactChoiceProps {
@@ -19,6 +20,7 @@ interface ContactChoiceProps {
 
 export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showDetailedForm, setShowDetailedForm] = useState(false);
 
   useGSAP(
     () => {
@@ -158,20 +160,36 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           </div>
         </div>
 
-        {/* 5-Step Project Inquiry Form - Full Width Container */}
-        <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto">
-          <div className="mb-6 text-center">
-            <h3 className="text-2xl sm:text-3xl font-display text-white mb-2">
-              Lass uns sprechen
-            </h3>
-            <p className="text-sm text-white/70">
-              Unverbindlich &amp; mit wenigen Klicks: Wähle deinen Projekttyp und deine Ziele.
-            </p>
-          </div>
+        {/* Prominente 1-Klick-Weiche: Website-Einschätzung & 30-Min. Erstgespräch */}
+        <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-10">
+          <WebsiteCheckInquiry />
 
-          {/* Form Component Container */}
-          <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
-            <ProjectInquiry />
+          {/* Optionale geführte 5-Schritte-Projektanfrage */}
+          <div className="pt-2 text-center">
+            {!showDetailedForm ? (
+              <button
+                type="button"
+                onClick={() => setShowDetailedForm(true)}
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-xs sm:text-sm font-semibold text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md shadow-md active:scale-95"
+              >
+                <span>Du planst ein großes Projekt? Zur geführten 5-Schritte-Projektanfrage</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+            ) : (
+              <div className="space-y-6 pt-6 text-left animate-in fade-in duration-500">
+                <div className="text-center">
+                  <h4 className="text-xl sm:text-2xl font-display text-white mb-2">
+                    Geführte Projektanfrage
+                  </h4>
+                  <p className="text-xs sm:text-sm text-white/70">
+                    Definiere dein Vorhaben, deine Ziele und deinen Zeitrahmen in 5 Schritten.
+                  </p>
+                </div>
+                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
+                  <ProjectInquiry whatsappUrl={whatsappUrl} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </Container>

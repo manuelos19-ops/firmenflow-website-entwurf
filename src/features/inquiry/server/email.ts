@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import nodemailer from "nodemailer";
 import type { InquiryPayload } from "../schema";
+import type { AuditInquiryPayload } from "../audit-schema";
 import { escapeHtml } from "./escape-html";
 
 export type MailResult = { id: string };
@@ -347,3 +348,165 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
     return { id: `mock-${payload.submissionId}` };
   },
 };
+
+export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<MailResult> {
+  const toEmail = process.env.INQUIRY_TO_EMAIL || "anfrage@firmenflow.de";
+  const fromEmail = process.env.INQUIRY_FROM_EMAIL || "manu@firmenflow.de";
+  const brevoApiKey = process.env.BREVO_API_KEY;
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
+  const smtpPort = Number(process.env.SMTP_PORT) || 465;
+
+  const isVideo = payload.choice === "xray-video";
+  const choiceLabel = isVideo ? "🎥 Kostenlose X-Ray Video-Analyse" : "📅 30 Min. Erstgespräch via meetergo";
+  const websiteDisplay = payload.noWebsite ? "Noch keine Website vorhanden" : (payload.websiteUrl || "Keine Angabe");
+  const submissionId = `audit-${Date.now().toString(36)}`;
+
+  const subject = isVideo
+    ? `⚡ Neue X-Ray Website-Analyse: ${payload.name} (${payload.websiteUrl || "Keine Website"})`
+    : `📅 Neuer 30-Min. Erstgespräch-Lead: ${payload.name}`;
+
+  const internalHtml = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
+      <div style="background-color: #5C3378; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
+        <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue X-Ray Video-Anfrage" : "📅 Neuer Erstgespräch-Lead"}</h1>
+        <p style="color: #FCFAF7; opacity: 0.9; margin: 4px 0 0 0; font-size: 13px;">Über die 1-Klick-Weiche auf firmenflow.de</p>
+      </div>
+
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 15px;">
+        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; width: 140px; color: #5C3378;">Auswahl:</td><td style="padding: 10px 0; font-weight: bold; color: #FC583E;">${escapeHtml(choiceLabel)}</td></tr>
+        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Name:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.name)}</td></tr>
+        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">E-Mail:</td><td style="padding: 10px 0;"><a href="mailto:${escapeHtml(payload.email)}" style="color: #FC583E; text-decoration: none; font-weight: bold;">${escapeHtml(payload.email)}</a></td></tr>
+        ${payload.phone ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Telefon:</td><td style="padding: 10px 0;"><a href="tel:${escapeHtml(payload.phone)}" style="color: #17131A; text-decoration: none; font-weight: bold;">${escapeHtml(payload.phone)}</a></td></tr>` : ""}
+        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Website:</td><td style="padding: 10px 0;">${payload.noWebsite ? "<em>Noch keine Website vorhanden</em>" : `<a href="${escapeHtml(payload.websiteUrl)}" target="_blank" style="color: #FC583E; text-decoration: none; font-weight: bold;">${escapeHtml(payload.websiteUrl)}</a>`}</td></tr>
+      </table>
+
+      ${payload.notes ? `<div style="background: #FFFFFF; padding: 16px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 24px;"><strong style="color: #5C3378; display: block; margin-bottom: 6px;">Notizen / Anmerkungen:</strong><p style="margin: 0; font-size: 14px;">${escapeHtml(payload.notes)}</p></div>` : ""}
+
+      <p style="font-size: 12px; color: #746D76; border-top: 1px solid #E5E0D8; padding-top: 14px; margin: 0;">
+        Anfrage-ID: ${escapeHtml(submissionId)} · Empfänger: ${escapeHtml(toEmail)}
+      </p>
+    </div>
+  `;
+
+  const customerHtml = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <img src="https://firmenflow.de/brand/firmenflow-wordmark.png" alt="Firmenflow" style="max-width: 180px; height: auto;" />
+      </div>
+
+      <div style="background-color: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 24px;">
+        <h2 style="color: #17131A; font-size: 18px; margin-top: 0;">Hi ${escapeHtml(payload.name)},</h2>
+        <p style="font-size: 15px; color: #332E38;">
+          ${isVideo 
+            ? `deine Anfrage für die <strong>kostenlose X-Ray Website-Analyse</strong> ist erfolgreich bei mir eingegangen! Ich schaue mir deine Seite (<em>${escapeHtml(websiteDisplay)}</em>) persönlich an und erstelle dir eine kurze Video-Einschätzung mit konkreten Hebeln.`
+            : `dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt! Falls du deinen Termin noch nicht im Kalender gebucht hast, kannst du dir hier direkt deinen Wunschtermin sichern:`}
+        </p>
+
+        <div style="text-align: center; margin: 28px 0;">
+          <a href="https://cal.meetergo.com/manu-1/30-min-meeting-mit-manu" style="display: inline-block; background-color: #FC583E; color: #FFFFFF; text-decoration: none; font-weight: bold; font-size: 15px; padding: 14px 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(252, 88, 62, 0.25);">
+            ${isVideo ? "Möchtest du direkt sprechen? Termin buchen →" : "Hier deinen Termin auswählen →"}
+          </a>
+        </div>
+
+        <p style="font-size: 14px; color: #746D76; margin-bottom: 0;">
+          Beste Grüße aus Wesel am Niederrhein,<br />
+          <strong>Manu Landeck</strong><br />
+          <span style="font-size: 13px;">Firmenflow · Webdesign &amp; Lokalpräsenz</span>
+        </p>
+      </div>
+    </div>
+  `;
+
+  // 1. PRIORITÄT: Brevo API
+  if (brevoApiKey) {
+    try {
+      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "api-key": brevoApiKey,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          sender: { name: "Firmenflow Website", email: fromEmail },
+          to: [{ email: toEmail, name: "Manu Landeck" }],
+          replyTo: { email: payload.email, name: payload.name },
+          subject: subject,
+          htmlContent: internalHtml,
+        }),
+      });
+
+      if (response.ok && payload.email) {
+        try {
+          await fetch("https://api.brevo.com/v3/smtp/email", {
+            method: "POST",
+            headers: {
+              "api-key": brevoApiKey,
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              sender: { name: "Manu von Firmenflow", email: fromEmail },
+              to: [{ email: payload.email, name: payload.name }],
+              replyTo: { email: "manu@firmenflow.de", name: "Manu Landeck" },
+              subject: isVideo ? `Deine X-Ray Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`,
+              htmlContent: customerHtml,
+            }),
+          });
+        } catch {}
+      }
+
+      const resJson = (await response.json().catch(() => ({}))) as { messageId?: string };
+      return { id: resJson.messageId || submissionId };
+    } catch (e) {
+      console.error("Brevo Error:", e);
+    }
+  }
+
+  // 2. PRIORITÄT: SMTP
+  if (smtpHost && smtpUser && smtpPass) {
+    try {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: smtpPort,
+        secure: smtpPort === 465,
+        auth: { user: smtpUser, pass: smtpPass },
+      });
+      const info = await transporter.sendMail({
+        from: `"Firmenflow Website" <${smtpUser}>`,
+        to: toEmail,
+        replyTo: payload.email,
+        subject: subject,
+        html: internalHtml,
+      });
+      return { id: info.messageId || submissionId };
+    } catch (e) {
+      console.error("SMTP Error:", e);
+    }
+  }
+
+  // 3. PRIORITÄT: Resend
+  if (resendApiKey) {
+    try {
+      const resend = new Resend(resendApiKey);
+      const res = await resend.emails.send({
+        from: fromEmail,
+        to: toEmail,
+        replyTo: payload.email,
+        subject: subject,
+        html: internalHtml,
+      });
+      return { id: res.data?.id || submissionId };
+    } catch (e) {
+      console.error("Resend Error:", e);
+    }
+  }
+
+  console.log("=== Mock Audit Email Sent ===");
+  console.log({ choice: payload.choice, name: payload.name, email: payload.email, website: websiteDisplay });
+  return { id: `mock-${submissionId}` };
+}
+
