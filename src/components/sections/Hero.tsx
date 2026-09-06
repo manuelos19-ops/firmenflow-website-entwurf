@@ -9,7 +9,6 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
-import { Sparkles } from "lucide-react";
 
 interface HeroProps {
   whatsappUrl: string | null;
@@ -161,15 +160,27 @@ export function Hero({ whatsappUrl }: HeroProps) {
           {/* Modern Editorial Floating Rotating Badge (Frosted White + Legible Text + Official FF Mark) */}
           <div className="hero-badge-float absolute -top-5 -right-5 md:-right-7 w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-white/95 text-[var(--color-ink)] shadow-2xl border-2 border-[var(--color-line)] flex items-center justify-center p-2 z-20 backdrop-blur-md">
             <div className="w-full h-full relative flex items-center justify-center rotating-badge">
-              <svg viewBox="0 0 120 120" className="w-full h-full">
+              <svg viewBox="0 0 120 120" className="w-full h-full select-none">
                 <path
-                  id="circlePath"
+                  id="heroCirclePath"
                   d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
                   fill="none"
                 />
-                <text className="text-[10px] sm:text-[10.5px] uppercase font-bold tracking-[0.38em] fill-[var(--color-plum)]">
-                  <textPath href="#circlePath" startOffset="0%">
-                    FIRMENFLOW • WEBDESIGN • 
+                {/* 100% symmetrische Trennpunkte auf 9 Uhr und 3 Uhr (exakt 180° gegenüber) */}
+                <circle cx="15" cy="60" r="2.2" fill="var(--color-coral)" />
+                <circle cx="105" cy="60" r="2.2" fill="var(--color-coral)" />
+
+                {/* FIRMENFLOW - zentriert auf oberem Bogen (12 Uhr) */}
+                <text className="text-[9.5px] uppercase font-extrabold tracking-[0.28em] fill-[var(--color-plum)]" textAnchor="middle">
+                  <textPath href="#heroCirclePath" startOffset="25%">
+                    FIRMENFLOW
+                  </textPath>
+                </text>
+
+                {/* WEBDESIGN - zentriert auf unterem Bogen (6 Uhr) */}
+                <text className="text-[9.5px] uppercase font-extrabold tracking-[0.32em] fill-[var(--color-plum)]" textAnchor="middle">
+                  <textPath href="#heroCirclePath" startOffset="75%">
+                    WEBDESIGN
                   </textPath>
                 </text>
               </svg>

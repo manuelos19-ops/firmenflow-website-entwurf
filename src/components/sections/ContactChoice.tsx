@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
+import { cn } from "@/lib/cn";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
 import { portraitAssets } from "@/content/assets";
@@ -11,7 +12,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { MapPin, Clock, Phone, Mail, ChevronDown } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Sliders } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 interface ContactChoiceProps {
@@ -20,7 +21,17 @@ interface ContactChoiceProps {
 
 export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [showDetailedForm, setShowDetailedForm] = useState(false);
+  const [activeTab, setActiveTab] = useState<"check" | "project">("check");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const search = window.location.search;
+      const hash = window.location.hash;
+      if (search.includes("type=") || hash === "#gefuellte-anfrage" || hash === "#projekt-konfigurator") {
+        setActiveTab("project");
+      }
+    }
+  }, []);
 
   useGSAP(
     () => {
@@ -160,33 +171,155 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           </div>
         </div>
 
-        {/* Prominente 1-Klick-Weiche: Website-Einschätzung & 30-Min. Erstgespräch */}
-        <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-10">
-          <WebsiteCheckInquiry />
-
-          {/* Optionale geführte 5-Schritte-Projektanfrage */}
-          <div className="pt-2 text-center">
-            {!showDetailedForm ? (
-              <button
-                type="button"
-                onClick={() => setShowDetailedForm(true)}
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-xs sm:text-sm font-semibold text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md shadow-md active:scale-95"
-              >
-                <span>Du planst ein großes Projekt? Zur geführten 5-Schritte-Projektanfrage</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            ) : (
-              <div className="space-y-6 pt-6 text-left animate-in fade-in duration-500">
-                <div className="text-center">
-                  <h4 className="text-xl sm:text-2xl font-display text-white mb-2">
-                    Geführte Projektanfrage
-                  </h4>
-                  <p className="text-xs sm:text-sm text-white/70">
-                    Definiere dein Vorhaben, deine Ziele und deinen Zeitrahmen in 5 Schritten.
-                  </p>
+        {/* INTERAKTIVE FORMULAR-WEICHE (Tabs / Segmented Control) */}
+        <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
+          {/* Segmented Switcher Header */}
+          <div className="bg-white/10 backdrop-blur-md p-1.5 sm:p-2 rounded-2xl sm:rounded-3xl border border-white/20 shadow-2xl grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {/* Tab 1: Schnell-Check */}
+            <button
+              type="button"
+              onClick={() => setActiveTab("check")}
+              className={cn(
+                "p-4 sm:p-5 rounded-xl sm:rounded-2xl text-left transition-all duration-300 relative flex flex-col justify-between group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-coral)]",
+                activeTab === "check"
+                  ? "bg-white text-[var(--color-ink)] shadow-xl scale-[1.01]"
+                  : "text-white/80 hover:text-white hover:bg-white/5"
+              )}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-2.5">
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider transition-colors",
+                      activeTab === "check"
+                        ? "bg-[var(--color-coral)]/10 text-[var(--color-coral)]"
+                        : "bg-white/15 text-white"
+                    )}
+                  >
+                    <BrandIcon size="xs" variant={activeTab === "check" ? "dark" : "light"} />
+                    <span>1-Klick-Check · 1 Min.</span>
+                  </span>
+                  <span
+                    className={cn(
+                      "text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors",
+                      activeTab === "check"
+                        ? "bg-emerald-100 text-emerald-800"
+                        : "bg-white/10 text-white/70"
+                    )}
+                  >
+                    Beliebt für Erstkontakt
+                  </span>
                 </div>
-                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
+                <h3
+                  className={cn(
+                    "text-base sm:text-lg font-bold font-sans transition-colors",
+                    activeTab === "check" ? "text-[var(--color-ink)]" : "text-white"
+                  )}
+                >
+                  Website-Check &amp; Erstgespräch
+                </h3>
+                <p
+                  className={cn(
+                    "text-xs leading-relaxed mt-1 transition-colors",
+                    activeTab === "check" ? "text-[var(--color-muted)]" : "text-white/70"
+                  )}
+                >
+                  Kostenlose Video-Einschätzung deiner aktuellen Seite oder 30-Min. Live-Termin.
+                </p>
+              </div>
+            </button>
+
+            {/* Tab 2: Geführte Projektanfrage */}
+            <button
+              type="button"
+              onClick={() => setActiveTab("project")}
+              className={cn(
+                "p-4 sm:p-5 rounded-xl sm:rounded-2xl text-left transition-all duration-300 relative flex flex-col justify-between group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-coral)]",
+                activeTab === "project"
+                  ? "bg-white text-[var(--color-ink)] shadow-xl scale-[1.01]"
+                  : "text-white/80 hover:text-white hover:bg-white/5"
+              )}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-2.5">
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider transition-colors",
+                      activeTab === "project"
+                        ? "bg-[var(--color-plum)]/10 text-[var(--color-plum)]"
+                        : "bg-white/15 text-white"
+                    )}
+                  >
+                    <Sliders className="w-3.5 h-3.5" />
+                    <span>5-Schritte-Konfigurator</span>
+                  </span>
+                  <span
+                    className={cn(
+                      "text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors",
+                      activeTab === "project"
+                        ? "bg-[var(--color-plum)]/15 text-[var(--color-plum)]"
+                        : "bg-white/10 text-white/70"
+                    )}
+                  >
+                    Für Relaunches &amp; Neubau
+                  </span>
+                </div>
+                <h3
+                  className={cn(
+                    "text-base sm:text-lg font-bold font-sans transition-colors",
+                    activeTab === "project" ? "text-[var(--color-ink)]" : "text-white"
+                  )}
+                >
+                  Geführte Projektanfrage
+                </h3>
+                <p
+                  className={cn(
+                    "text-xs leading-relaxed mt-1 transition-colors",
+                    activeTab === "project" ? "text-[var(--color-muted)]" : "text-white/70"
+                  )}
+                >
+                  Detaillierte Abfrage von Zielen, Zeitplan und Leistungsumfang in 5 Schritten.
+                </p>
+              </div>
+            </button>
+          </div>
+
+          {/* Aktives Formular mit sanfter Animation */}
+          <div className="transition-all duration-300">
+            {activeTab === "check" ? (
+              <div className="space-y-4">
+                <WebsiteCheckInquiry />
+                <div className="text-center pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab("project");
+                      document.getElementById("projektanfrage")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <span>Du möchtest dein Vorhaben direkt im Detail planen?</span>
+                    <span className="underline font-semibold text-[var(--color-coral)]">Zur geführten 5-Schritte-Projektanfrage →</span>
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl bg-white">
                   <ProjectInquiry whatsappUrl={whatsappUrl} />
+                </div>
+                <div className="text-center pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab("check");
+                      document.getElementById("projektanfrage")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <span>Lieber erst eine schnelle Video-Einschätzung deiner Website?</span>
+                    <span className="underline font-semibold text-[var(--color-coral)]">Zum 1-Klick-Check wechseln →</span>
+                  </button>
                 </div>
               </div>
             )}

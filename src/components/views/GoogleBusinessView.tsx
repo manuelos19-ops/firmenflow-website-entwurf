@@ -9,6 +9,7 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -19,7 +20,6 @@ import {
   Users,
   AlertCircle,
   ArrowRight,
-  Sparkles,
   MapPin,
   TrendingUp,
   ShieldCheck,
@@ -115,8 +115,8 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headline & Value Proposition */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="g360-hero-eyebrow inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 to-[var(--color-plum)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-coral)] shadow-sm backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 animate-spin-slow" />
+            <div className="g360-hero-eyebrow inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 to-[var(--color-plum)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-coral)] shadow-sm backdrop-blur-sm">
+              <BrandIcon size="xs" />
               <span>Google Business 360° · Persönlich mit Manu</span>
             </div>
 
@@ -193,7 +193,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     : "text-[var(--color-muted)] hover:text-[var(--color-ink)]"
                 )}
               >
-                <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <BrandIcon size="xs" variant={simulationMode === "after" ? "light" : "dark"} />
                 <span>Mit Google 360°</span>
               </button>
             </div>
@@ -766,8 +766,8 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 space-y-5">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold text-[var(--color-coral)] border border-white/20 shadow-md">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold text-white border border-white/20 shadow-md">
+              <BrandIcon size="xs" variant="light" />
               <span>Unverbindlicher Google-Check</span>
             </span>
 

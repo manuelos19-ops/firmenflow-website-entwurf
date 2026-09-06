@@ -10,7 +10,6 @@ import {
   Mail, 
   User, 
   Phone, 
-  Sparkles, 
   Loader2, 
   ExternalLink,
   ShieldCheck,
@@ -18,6 +17,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { siteIdentity } from "@/config/site";
+import { BrandIcon } from "@/components/brand/BrandIcon";
 
 interface WebsiteCheckInquiryProps {
   className?: string;
@@ -145,7 +145,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   </div>
                   <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] mb-1.5 flex items-center gap-2">
                     <span>X-Ray Video-Analyse</span>
-                    <Sparkles className="w-4 h-4 text-[var(--color-coral)] shrink-0" />
+                    <BrandIcon size="xs" className="shrink-0" />
                   </h4>
                   <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
                     Manu nimmt deine Website unter die Lupe und schickt dir ein 5-Minuten-Video mit klaren Hebeln direkt ins Postfach. <strong>Ohne Termin &amp; ohne Anruf.</strong>
@@ -365,7 +365,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                 </>
               ) : choice === "xray-video" ? (
                 <>
-                  <Sparkles className="w-5 h-5" />
+                  <BrandIcon size="sm" variant="light" className="shrink-0" />
                   <span>Kostenlose X-Ray Analyse anfordern</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </>
