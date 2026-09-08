@@ -120,7 +120,7 @@ async function generateMeetergoAssets() {
     <!-- Location Pin SVG -->
     <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#FC583E" transform="scale(0.8) translate(0, -2)" />
     <text x="22" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#746D76">
-      Wesel &amp; Niederrhein • Telefonisch oder via Google Meet / Zoom
+      Wesel &amp; Niederrhein • Telefonisch oder per Video-Call
     </text>
   </g>
 

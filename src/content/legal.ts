@@ -10,7 +10,7 @@ export const legalContent = {
   postalCode: "50259",
   city: "Pulheim",
   email: "manu@firmenflow.de",
-  phone: "",
+  phone: "+49 155 67277155",
   vatId: "",
 } as const;
 

@@ -23,8 +23,8 @@ const options = [
   },
   {
     value: "google-business",
-    title: "Google Business 360°",
-    description: "Profil-Aufbau & Optimierung, laufendes Bewertungsmanagement und monatlicher Feedback-Report.",
+    title: "Lokalpräsenz 360°",
+    description: "Google-Unternehmensprofil optimieren, laufendes Bewertungsmanagement und monatlicher Feedback-Report.",
     icon: Star,
   },
 ] as const;

@@ -15,7 +15,7 @@ export function JsonLd() {
     logo: `${baseUrl}/brand/firmenflow-mark.png`,
     image: `${baseUrl}/opengraph-image`,
     description:
-      "Persönliches Webdesign, Relaunch, Google Business 360° sowie Foto- und Videoaufnahmen vor Ort für Betriebe in Wesel, am Niederrhein und in NRW.",
+      "Persönliches Webdesign, Relaunch, Lokalpräsenz 360° sowie Foto- und Videoaufnahmen vor Ort für Betriebe in Wesel, am Niederrhein und in NRW.",
     telephone: "+49 155 67277155",
     email: "manu@firmenflow.de",
     priceRange: "€€",
@@ -77,7 +77,7 @@ export function JsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Google Business 360°",
+            name: "Lokalpräsenz 360°",
             description:
               "Optimierung des Google-Unternehmensprofils, professionelles Bewertungsmanagement und laufende Kundenfeedback-Analyse.",
           },

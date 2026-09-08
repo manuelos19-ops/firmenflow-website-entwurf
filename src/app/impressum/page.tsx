@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Mail, MapPin } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
 
@@ -50,12 +50,21 @@ export default function ImpressumPage() {
 
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">Kontakt</h2>
-            <div className="flex items-center gap-2">
-              <span className="text-[var(--color-ink)] font-medium">E-Mail:</span>
-              <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
-                <span>manu@firmenflow.de</span>
-              </span>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-[var(--color-ink)] font-medium">Telefon:</span>
+                <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                  <span>0155 67277155</span>
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-[var(--color-ink)] font-medium">E-Mail:</span>
+                <span className="font-mono text-[var(--color-ink)] bg-[var(--color-paper)] px-3 py-1 rounded-lg border border-[var(--color-line)] select-all inline-flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                  <span>manu@firmenflow.de</span>
+                </span>
+              </div>
             </div>
             <p className="text-xs text-[var(--color-muted)]">
               (Zum Schutz vor automatisiertem Spam nicht direkt verlinkt)

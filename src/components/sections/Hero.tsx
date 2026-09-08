@@ -211,7 +211,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
                 <span>Wesel &amp; Niederrhein</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
-                <span>Google Business 360°</span>
+                <span>Lokalpräsenz 360°</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
                 <span>Kein Agentur-Theater</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
@@ -229,7 +229,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
                 <span>Wesel &amp; Niederrhein</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />
-                <span>Google Business 360°</span>
+                <span>Lokalpräsenz 360°</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-plum)]" />
                 <span>Kein Agentur-Theater</span>
                 <span className="w-2 h-2 rounded-full bg-[var(--color-coral)]" />

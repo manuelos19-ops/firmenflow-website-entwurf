@@ -74,7 +74,7 @@ export const primaryLinks: LinkItem[] = [
   {
     id: "climanu",
     title: "cliManu – Wetter Web-App & PWA",
-    url: "https://climanu.de/",
+    url: "https://www.climanu.de/",
     category: "Live Web-App & PWA",
     description: "Moderne, blitzschnelle Wetter-App mit DWD-Echtzeitdaten, 24h-Temperaturkurve, hochauflösendem Live-Regenradar und lokalem KI-Wettercopilot.",
     image: "/media/projects/climanu-wetter.webp",
@@ -86,13 +86,13 @@ export const primaryLinks: LinkItem[] = [
   {
     id: "vidalyzer",
     title: "VidAlyzer by Firmenflow",
-    url: "https://vidalyzer-by-firmenflow.vercel.app",
+    url: "https://www.firmenflow.de/#kontakt",
     category: "KI Video-Analyse PWA",
-    description: "Agentische Videoanalyse mit Google Gemini 3.8 Flash als PWA. Spart bis zu 88 % Token durch dynamische Zeitleistennavigation bei YouTube- & MP4-Audits.",
+    description: "Intelligente Videoanalyse für Webauftritte & Audits. Aktuell in gezielter Weiterentwicklung.",
     image: "/media/projects/vidalyzer-icon.png",
-    tags: ["Gemini 3.8 Flash", "PWA", "Token-Optimizer", "Video-KI"],
-    badge: "KI-App",
-    ctaText: "VidAlyzer öffnen",
+    tags: ["Video-Analyse", "PWA", "Audits"],
+    badge: "In Weiterentwicklung",
+    ctaText: "Projekt anfragen",
     highlight: false,
   },
   {
@@ -110,7 +110,7 @@ export const primaryLinks: LinkItem[] = [
   {
     id: "firmenflow-main",
     title: "Firmenflow – Offizielle Website",
-    url: "https://firmenflow.de/",
+    url: "https://www.firmenflow.de/",
     category: "Webdesign & Lokalpräsenz",
     description: "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website persönlich mit Manu aus Wesel am Niederrhein.",
     image: "/brand/firmenflow-mark.png",

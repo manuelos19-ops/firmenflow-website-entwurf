@@ -41,7 +41,7 @@ export const liveProjects: readonly Project[] = [
     name: "cliManu – Wetter Web-App",
     sector: "Web-App & Dashboard",
     region: "Deutschlandweit",
-    url: "https://climanu.de/",
+    url: "https://www.climanu.de/",
     kind: "live",
     badge: "Echte Live Web-App",
     summary: "Eine interaktive, responsive Wetter-App & PWA mit DWD-Echtzeitdaten, 24h-Wetterkurve, Live-Regenradar und lokalem KI-Copilot.",

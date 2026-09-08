@@ -111,10 +111,10 @@ export const faqItems = [
     answer: "Ja, genau dafür ist der Relaunch da. Ich prüfe gemeinsam mit dir, welche Inhalte und Google-Rankings erhalten bleiben sollen, und modernisiere Design, mobile Ladezeit und Struktur komplett." 
   },
   { 
-    question: "Was genau beinhaltet Google Business 360°?", 
+    question: "Was genau beinhaltet Lokalpräsenz 360°?", 
     answer: "Vom professionellen Aufbau deines Google-Unternehmensprofils über das laufende Beantworten von Rezensionen bis zur monatlichen Analyse deines Kundenfeedbacks: Ich sorge dafür, dass dein Betrieb auf Google Maps top dasteht, Kunden dir vertrauen und du aus Bewertungen konkrete Erkenntnisse für dein Unternehmen gewinnst.",
     link: {
-      text: "Alle Details & Leistungen zu Google Business 360° ansehen",
+      text: "Alle Details & Leistungen zu Lokalpräsenz 360° ansehen",
       href: "/google-business-360",
     },
   },
