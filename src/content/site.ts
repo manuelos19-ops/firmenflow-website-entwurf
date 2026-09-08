@@ -115,7 +115,7 @@ export const faqItems = [
     answer: "Vom professionellen Aufbau deines Google-Unternehmensprofils über das laufende Beantworten von Rezensionen bis zur monatlichen Analyse deines Kundenfeedbacks: Ich sorge dafür, dass dein Betrieb auf Google Maps top dasteht, Kunden dir vertrauen und du aus Bewertungen konkrete Erkenntnisse für dein Unternehmen gewinnst.",
     link: {
       text: "Alle Details & Leistungen zu Lokalpräsenz 360° ansehen",
-      href: "/google-business-360",
+      href: "/lokalpraesenz-360",
     },
   },
   { 

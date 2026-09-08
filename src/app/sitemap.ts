@@ -11,8 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2026-09-04",
     },
     {
-      url: `${baseUrl}/google-business-360`,
-      lastModified: "2026-09-04",
+      url: `${baseUrl}/lokalpraesenz-360`,
+      lastModified: "2026-09-08",
     },
     {
       url: `${baseUrl}/impressum`,

@@ -237,7 +237,7 @@ export function GoogleBusinessPilot() {
             </MagneticButton>
 
             <ButtonLink
-              href="/google-business-360"
+              href="/lokalpraesenz-360"
               variant="ghost"
               size="lg"
               className="text-white hover:text-[var(--color-coral)] hover:bg-white/10 text-sm sm:text-base border border-white/20 px-6 py-3.5"

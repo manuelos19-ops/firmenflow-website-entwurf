@@ -13,7 +13,7 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
 
-const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Google Business 360°"];
+const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Lokalpräsenz 360°"];
 
 export function Faq() {
   const containerRef = useRef<HTMLDivElement>(null);

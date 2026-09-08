@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Unabhängige Optimierung deines Google-Unternehmensprofils, professionelles Bewertungsmanagement & monatlicher Feedback-Report für Betriebe am Niederrhein. Persönlich mit Manu.",
   alternates: {
-    canonical: "/google-business-360",
+    canonical: "/lokalpraesenz-360",
   },
   openGraph: {
     title: "Lokalpräsenz 360° – Google-Unternehmensprofil & Bewertungen optimieren | Firmenflow",
     description:
       "Unabhängige Optimierung deines Google-Unternehmensprofils, professionelles Bewertungsmanagement & monatlicher Feedback-Report für Betriebe am Niederrhein. Persönlich mit Manu.",
-    url: "/google-business-360",
+    url: "/lokalpraesenz-360",
     locale: "de_DE",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function GoogleBusiness360Page() {
+export default function Lokalpraesenz360Page() {
   const whatsappUrl = buildWhatsAppUrl(
     undefined,
     "Hallo Manu, ich interessiere mich für die Optimierung meiner lokalen Google-Präsenz."

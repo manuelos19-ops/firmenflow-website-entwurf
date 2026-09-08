@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/google-business-360",
+        destination: "/lokalpraesenz-360",
+        permanent: true,
+      },
+      {
         source: "/linktree",
         destination: "/links",
         permanent: false,

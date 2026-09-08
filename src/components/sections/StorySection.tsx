@@ -61,7 +61,7 @@ const storySteps: StoryStep[] = [
     number: "02",
     tag: "Die Lösung mit Manu",
     tagVariant: "solution",
-    title: "Gemeinsam am Tisch: Website & Google 360°.",
+    title: "Gemeinsam am Tisch: Website & Lokalpräsenz 360°.",
     subtitle: "Direkt, ehrlich und ohne Fachchinesisch",
     body: "Ich setze mich mit dir zusammen, bringe dein echtes Angebot auf den Punkt und baue einen schnellen, modernen Auftritt mit klarem Fokus auf Google Maps und direkte Kundenanfragen.",
     image: "/media/story/story-2-loesung-manu.webp",
@@ -69,7 +69,7 @@ const storySteps: StoryStep[] = [
     icon: Laptop,
     badge: {
       icon: Star,
-      text: "Google 360° Prozess",
+      text: "Lokalpräsenz 360° Prozess",
       sub: "Fokus auf echte Kundenstimmen",
     },
     highlights: [

@@ -145,7 +145,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   size="lg"
                   className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
                 >
-                  <span>Google-Präsenz jetzt prüfen lassen</span>
+                  <span>Lokalpräsenz jetzt prüfen lassen</span>
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </ButtonLink>
               </MagneticButton>
@@ -194,7 +194,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 )}
               >
                 <BrandIcon size="xs" variant={simulationMode === "after" ? "light" : "dark"} />
-                <span>Mit Firmenflow 360°</span>
+                <span>Mit Lokalpräsenz 360°</span>
               </button>
             </div>
 
@@ -574,7 +574,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Hier geht Google 360° entscheidend weiter: Aus einzelnen Kundenstimmen entsteht ein <strong>kontinuierliches Feedback-System</strong>. Wir erkennen wiederkehrende Muster, bevor Probleme teuer werden.
+                Hier geht Lokalpräsenz 360° entscheidend weiter: Aus einzelnen Kundenstimmen entsteht ein <strong>kontinuierliches Feedback-System</strong>. Wir erkennen wiederkehrende Muster, bevor Probleme teuer werden.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -691,14 +691,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             {[
               {
                 num: "01",
-                title: "Google-Präsenz aufbauen",
+                title: "Lokalpräsenz aufbauen",
                 desc: "Für Betriebe ohne Profil: Komplette Neuerstellung mit allen Angaben, Leistungen und Fotos.",
                 icon: Building2,
                 color: "text-blue-600 bg-blue-50 border-blue-200",
               },
               {
                 num: "02",
-                title: "Google-Präsenz optimieren",
+                title: "Lokalpräsenz optimieren",
                 desc: "Für bestehende Profile: Fehler bereinigen, Rankingfaktoren stärken und Sichtbarkeit maximieren.",
                 icon: Search,
                 color: "text-amber-600 bg-amber-50 border-amber-200",
@@ -768,11 +768,11 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           <div className="relative z-10 space-y-5">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold text-white border border-white/20 shadow-md">
               <BrandIcon size="xs" variant="light" />
-              <span>Unverbindlicher Google-Check</span>
+              <span>Unverbindlicher Lokalpräsenz-Check</span>
             </span>
 
             <h3 className="text-3xl sm:text-5xl font-display font-bold leading-tight">
-              Finden wir heraus, welches Potenzial in deiner Google-Präsenz steckt.
+              Finden wir heraus, welches Potenzial in deiner lokalen Auffindbarkeit steckt.
             </h3>
 
             <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
@@ -787,7 +787,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   size="lg"
                   className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
                 >
-                  <span>Google-Präsenz jetzt prüfen lassen</span>
+                  <span>Lokalpräsenz jetzt prüfen lassen</span>
                 </ButtonLink>
               </MagneticButton>
 
