@@ -117,7 +117,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           <div className="lg:col-span-7 space-y-6">
             <div className="g360-hero-eyebrow inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 to-[var(--color-plum)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-coral)] shadow-sm backdrop-blur-sm">
               <BrandIcon size="xs" />
-              <span>Google Business 360° · Persönlich mit Manu</span>
+              <span>Lokalpräsenz 360° · Persönlich mit Manu</span>
             </div>
 
             <h1 className="g360-hero-title text-4xl sm:text-6xl md:text-7xl font-display font-extrabold text-[var(--color-ink)] leading-[1.06] tracking-tight">
@@ -194,31 +194,31 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 )}
               >
                 <BrandIcon size="xs" variant={simulationMode === "after" ? "light" : "dark"} />
-                <span>Mit Google 360°</span>
+                <span>Mit Firmenflow 360°</span>
               </button>
             </div>
 
-            {/* The Simulated Google Maps Card */}
+            {/* The Simulated Local Presence Card */}
             <div className="w-full max-w-md bg-white rounded-3xl border-2 border-[var(--color-line)] shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
-              {/* Fake Google Header */}
+              {/* Local Business Profile Preview Header */}
               <div className="bg-gradient-to-r from-stone-50 to-stone-100 p-4 border-b border-stone-200 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-xl bg-[var(--color-coral)] text-white flex items-center justify-center font-bold text-sm shadow-sm">
-                    G
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-[var(--color-plum)] text-white flex items-center justify-center shadow-sm">
+                    <MapPin className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block">
-                      Google Maps Vorschau
+                      Brancheneintrag-Vorschau
                     </span>
                     <span className="text-xs font-semibold text-[var(--color-ink)]">
-                      {simulationMode === "before" ? "Nicht gepflegtes Profil" : "Top gepflegter 360°-Auftritt"}
+                      {simulationMode === "before" ? "Unvollständiges Profil" : "Top gepflegter Firmenflow-Auftritt"}
                     </span>
                   </div>
                 </div>
                 {simulationMode === "after" && (
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-[11px] font-bold border border-blue-200">
-                    <CheckCircle2 className="w-3 h-3 text-blue-600" />
-                    <span>Verifiziert</span>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                    <span>Vollständig optimiert</span>
                   </span>
                 )}
               </div>
@@ -809,6 +809,13 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               Streng richtlinienkonform · Keine gekauften Bewertungen · Persönlich mit Manu
             </p>
           </div>
+        </div>
+
+        {/* Rechtlicher Marken-Disclaimer */}
+        <div className="max-w-3xl mx-auto text-center pt-8 border-t border-[var(--color-line)] text-xs text-[var(--color-muted)] leading-relaxed">
+          <p>
+            <strong>Rechtlicher Hinweis:</strong> Google, Google Maps, Google Search und Google Unternehmensprofil (Google Business Profile) sind eingetragene Marken der Google LLC. Firmenflow (Inh. Manuel Landeck) ist ein unabhängiger Dienstleister für Webdesign, lokale Auffindbarkeit und Suchmaschinenoptimierung und steht in keiner geschäftlichen, gesellschaftsrechtlichen oder offiziellen Partnerschaft oder Verbindung zur Google LLC.
+          </p>
         </div>
       </Container>
     </main>

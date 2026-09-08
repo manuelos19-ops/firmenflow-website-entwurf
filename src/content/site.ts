@@ -39,7 +39,7 @@ export const homeContent = {
     points: ["Persönlich erreichbar", "Feste Absprachen", "Ehrliche Beratung", "Vor Ort am Niederrhein"],
   },
   pilot: {
-    eyebrow: "Google Business 360°",
+    eyebrow: "Lokalpräsenz 360°",
     title: "Gefunden werden und direkt Vertrauen aufbauen.",
     body: "Wer lokal nach einem Betrieb sucht, entscheidet oft direkt bei Google. Ich optimiere dein Unternehmensprofil, übernehme das professionelle Bewertungsmanagement und mache das Feedback deiner Kunden als wertvolle Erkenntnisse für deinen Betrieb nutzbar.",
     modules: [
@@ -49,7 +49,7 @@ export const homeContent = {
       "Customer Insights & monatlicher Feedback-Report",
       "Frühwarnsystem für betriebliche Schwachstellen",
     ],
-    cta: "Google-Präsenz prüfen lassen",
+    cta: "Lokalpräsenz prüfen lassen",
   },
   process: [
     { 

@@ -119,19 +119,19 @@ export function GoogleBusinessPilot() {
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-gray-100">
             <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[var(--color-coral)] to-[var(--color-plum)] text-white flex items-center justify-center font-display font-bold text-xl shrink-0 shadow-md">
-                G
+              <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)] text-white flex items-center justify-center shrink-0 shadow-md">
+                <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-lg sm:text-xl font-bold font-sans text-[var(--color-ink)]">Dein Betrieb auf Google Maps</h3>
-                  <span className="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center shrink-0">
-                    <CheckCircle className="w-3 h-3" />
+                  <h3 className="text-lg sm:text-xl font-bold font-sans text-[var(--color-ink)]">Dein optimierter Brancheneintrag</h3>
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold shrink-0">
+                    Aktiv gepflegt
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-0.5">
                   <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-                  Wesel &amp; Niederrhein · Verifiziertes Unternehmensprofil
+                  Wesel &amp; Niederrhein · Vollständiges Unternehmensprofil
                 </p>
               </div>
             </div>
@@ -246,8 +246,9 @@ export function GoogleBusinessPilot() {
             </ButtonLink>
           </div>
           
-          <p className="text-xs text-white/50 max-w-lg text-center leading-relaxed">
-            Streng richtlinienkonform nach Google-Richtlinien. Keine gekauften Bewertungen, keine gefälschten Stimmen, keine Ranking-Garantien.
+          <p className="text-xs text-white/50 max-w-xl text-center leading-relaxed">
+            Streng richtlinienkonform nach offiziellen Richtlinien. Keine gekauften Bewertungen, keine Ranking-Garantien.<br />
+            <span className="text-[11px] opacity-75">Hinweis: Google, Google Maps und Google Unternehmensprofil sind Marken der Google LLC. Firmenflow ist ein unabhängiger Dienstleister.</span>
           </p>
         </div>
       </Container>

@@ -78,11 +78,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
       setReturnedMeetergoUrl(meetergoTarget);
       setIsSuccess(true);
       setIsSubmitting(false);
-
-      // Falls Live-Gespräch gewählt: Direkt in neuem Tab öffnen
-      if (choice === "meetergo-call") {
-        window.open(meetergoTarget, "_blank", "noopener,noreferrer");
-      }
     } catch {
       setErrorMsg("Verbindungsfehler. Bitte prüfe deine Internetverbindung oder schreibe mir direkt per WhatsApp.");
       setIsSubmitting(false);
@@ -409,7 +404,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                 </>
               ) : (
                 <>
-                  Dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt. Der meetergo-Kalender hat sich in einem neuen Fenster geöffnet.
+                  Dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt. Klicke unten einfach auf deinen Wunschtermin, um das Gespräch direkt im meetergo-Kalender festzulegen.
                 </>
               )}
             </p>

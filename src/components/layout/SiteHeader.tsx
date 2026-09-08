@@ -10,7 +10,7 @@ import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
-  { label: "Google Business 360°", href: "/google-business-360" },
+  { label: "Lokalpräsenz 360°", href: "/google-business-360" },
   { label: "Projekte", href: "/#projekte" },
   { label: "Über Manu", href: "/#manu" },
   { label: "Ablauf", href: "/#ablauf" },

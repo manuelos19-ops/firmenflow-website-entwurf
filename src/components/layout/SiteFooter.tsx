@@ -31,7 +31,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/google-business-360" className="hover:text-white transition-colors">
-                  Google Business 360°
+                  Lokalpräsenz 360°
                 </Link>
               </li>
               <li>
@@ -88,6 +88,13 @@ export function SiteFooter() {
             © {currentYear} {siteIdentity.legalName}. Alle Rechte vorbehalten.
           </p>
           <p>Persönlich mit Manu · Wesel & Niederrhein</p>
+        </div>
+
+        {/* Rechtlicher Marken-Hinweis */}
+        <div className="pt-2 text-[11px] text-white/40 text-center sm:text-left leading-relaxed">
+          <p>
+            Hinweis: Google, Google Maps, Google Search und Google Unternehmensprofil sind Marken der Google LLC. Firmenflow ist ein unabhängiger Dienstleister für Webdesign und digitale Lokalpräsenz und steht in keiner geschäftlichen oder offiziellen Verbindung zu Google LLC.
+          </p>
         </div>
       </Container>
     </footer>
