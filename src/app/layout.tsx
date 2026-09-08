@@ -12,6 +12,7 @@ import { brandAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { UtmCleaner } from "@/components/analytics/UtmCleaner";
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </noscript>
         <SpeedInsights />
         <Analytics />
+        <UtmCleaner />
       </body>
     </html>
   );
