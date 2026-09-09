@@ -87,8 +87,71 @@ export function Hero({ whatsappUrl }: HeroProps) {
           </h1>
 
           {/* Accent in Crimson Text Italic */}
-          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial italic text-[var(--color-coral)] mb-6">
+          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial italic text-[var(--color-coral)] mb-4 sm:mb-6">
             {hero.accent}
+          </div>
+
+          {/* MOBILE ONLY: Hero Portrait direkt nach dem Akzentsatz */}
+          <div className="lg:hidden w-full max-w-[340px] sm:max-w-sm my-6 sm:my-8 relative self-center">
+            <div className="hero-photo-wrap relative aspect-[4/4.9] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src={portraitAssets.hero.src}
+                alt={portraitAssets.hero.alt}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 340px"
+              />
+              
+              {/* Gradient bottom overlay on photo */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/55 via-transparent to-transparent" />
+              
+              <div className="absolute bottom-3 left-3 right-3 text-white text-xs font-medium backdrop-blur-md bg-black/40 p-2.5 rounded-xl border border-white/20 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-bold text-white text-sm tracking-tight">Manu</p>
+                    <p className="text-white/80 text-[11px]">Gründer von Firmenflow · Wesel</p>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[10px] font-semibold text-emerald-300 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-90" />
+                    <span>Online</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Rotating Badge */}
+            <div className="hero-badge-float absolute -top-3 -right-3 sm:-right-4 w-22 h-22 sm:w-26 sm:h-26 rounded-full bg-white/95 text-[var(--color-ink)] shadow-xl border-2 border-[var(--color-line)] flex items-center justify-center p-1.5 z-20 backdrop-blur-md">
+              <div className="w-full h-full relative flex items-center justify-center rotating-badge">
+                <svg viewBox="0 0 120 120" className="w-full h-full select-none">
+                  <path
+                    id="heroCirclePathMobile"
+                    d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                    fill="none"
+                  />
+                  <circle cx="15" cy="60" r="2.2" fill="var(--color-coral)" />
+                  <circle cx="105" cy="60" r="2.2" fill="var(--color-coral)" />
+                  <text className="text-[9.5px] uppercase font-extrabold tracking-[0.28em] fill-[var(--color-plum)]" textAnchor="middle">
+                    <textPath href="#heroCirclePathMobile" startOffset="25%">
+                      FIRMENFLOW
+                    </textPath>
+                  </text>
+                  <text className="text-[9.5px] uppercase font-extrabold tracking-[0.32em] fill-[var(--color-plum)]" textAnchor="middle">
+                    <textPath href="#heroCirclePathMobile" startOffset="75%">
+                      WEBDESIGN
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div className="absolute w-4 h-7 sm:w-5 sm:h-8 flex items-center justify-center pointer-events-none">
+                <Image
+                  src="/brand/firmenflow-mark.webp"
+                  alt="Firmenflow Signet"
+                  fill
+                  className="object-contain drop-shadow-sm"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Body Text */}
@@ -128,8 +191,8 @@ export function Hero({ whatsappUrl }: HeroProps) {
           </div>
         </div>
 
-        {/* Right Side: Portrait + Floating Badges */}
-        <div className="flex-1 w-full relative max-w-md lg:max-w-none">
+        {/* Right Side: Portrait + Floating Badges (DESKTOP ONLY) */}
+        <div className="hidden lg:block flex-1 w-full relative max-w-md lg:max-w-none">
           <div className="hero-photo-wrap relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
             <Image
               src={portraitAssets.hero.src}

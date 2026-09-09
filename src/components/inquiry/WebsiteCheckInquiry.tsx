@@ -382,7 +382,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               <span>•</span>
               <span>Garantiert kein Verkaufsdruck</span>
               <span>•</span>
-              <span>Direkt mit Manu aus Wesel</span>
+              <span>Persönlich mit Manu aus Wesel</span>
             </div>
           </div>
         </form>
