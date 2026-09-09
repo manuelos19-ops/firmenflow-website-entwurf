@@ -9,8 +9,8 @@ export const homeContent = {
   },
   problem: {
     eyebrow: "Die Realität vor Ort",
-    title: "Dein Betrieb leistet erstklassige Arbeit. Aber online gewinnt der lautere Mitbewerber.",
-    body: "Du stehst früh im Betrieb, gibst alles für saubere Qualität – doch auf dem Smartphone sucht deine Kundschaft vergebens. Wer dich online nicht sofort versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz. Aus erstklassiger Arbeit wird stille Unsichtbarkeit.",
+    title: "Dein Betrieb leistet erstklassige Arbeit. Aber online sieht man davon zu wenig.",
+    body: "Du stehst früh im Betrieb, gibst alles für hervorragende Qualität. Doch wer dich online nicht sofort findet und dein Angebot versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz.",
   },
   services: [
     {
