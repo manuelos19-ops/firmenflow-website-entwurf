@@ -84,7 +84,7 @@ const storySteps: StoryStep[] = [
     tagVariant: "success",
     title: "Kunden finden dich sofort und rufen an.",
     subtitle: "Echte Anfragen und ein voller Betrieb",
-    body: "Wer in deiner Region sucht, sieht sofort deine guten Bewertungen, klickt auf deine Website und nimmt direkt Kontakt auf. Aus stiller Qualität wird echte digitale Anziehungskraft und ein planbar voller Betrieb.",
+    body: "Wer in deiner Region sucht, sieht sofort deine guten Bewertungen, klickt auf deine Website und nimmt direkt Kontakt auf. So wird deine gute Arbeit online sichtbar – und bringt dir verlässlich neue Aufträge.",
     image: "/media/story/story-3-voller-erfolg.webp",
     imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
     icon: Users,
@@ -96,7 +96,7 @@ const storySteps: StoryStep[] = [
     highlights: [
       "Regelmäßige Anfragen über Google",
       "Starker erster Eindruck rund um die Uhr",
-      "Starke lokale Anziehungskraft",
+      "Verlässliche neue Aufträge vor Ort",
     ],
   },
 ];
@@ -144,15 +144,15 @@ export function StorySection() {
       <Container>
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
-            <BrandIcon className="w-5 h-3.5" />
+          <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
+            <BrandIcon className="w-4 h-3.5" />
             <span>Die Firmenflow-Story • Illustratives Praxisbeispiel</span>
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Drei Schritte, wie aus stiller Qualität echte digitale Anziehungskraft wird – ohne Fachchinesisch, direkt auf den Punkt gebracht.
+            In drei einfachen Schritten zu mehr Sichtbarkeit und echten Kundenanfragen vor Ort.
           </p>
         </div>
 

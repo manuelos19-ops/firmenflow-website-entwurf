@@ -21,10 +21,10 @@ export function SectionHeading({
 
   return (
     <div className={cn("space-y-4", isCenter && "text-center mx-auto max-w-3xl", className)}>
-      <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[var(--color-coral)]">
+      <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)]">
         {eyebrow}
       </p>
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--color-ink)] leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08]">
         {title}{" "}
         {accent && (
           <span className="font-editorial text-[var(--color-plum)] font-normal">

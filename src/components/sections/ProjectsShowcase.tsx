@@ -198,11 +198,11 @@ export function ProjectsShowcase() {
       <Container>
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 md:mb-16">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/10 text-xs font-semibold text-[var(--color-plum)] mb-4">
+          <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-4 h-3.5" />
             <span>3D Showcase · Echte Arbeiten &amp; Entwürfe</span>
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
             Websites im 3D-Orbit.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">

@@ -52,14 +52,14 @@ export function ServiceOverview() {
     >
       <Container>
         <div className="mb-14 md:mb-20 max-w-3xl">
-          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+          <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-5 shadow-sm">
             <BrandIcon className="w-4 h-3.5" />
             <span>Klarer Fokus · Kein Agentur-Schnickschnack</span>
           </span>
-          <h2 className="text-4xl md:text-6xl font-display text-[var(--color-ink)] leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
             Alles aus einer Hand für deinen Betrieb.
           </h2>
-          <p className="text-base md:text-lg text-[var(--color-muted)] leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
             Ob Neuaufbau, Relaunch oder echte Foto- und Videoaufnahmen vor Ort: Jeder Betrieb erhält eine maßgeschneiderte Lösung, die Interessenten in Kunden verwandelt.
           </p>
         </div>
@@ -125,10 +125,10 @@ export function ServiceOverview() {
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-4">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-[var(--color-ink)] mb-3 leading-snug">
               {homeContent.services[0].title}
             </h3>
-            <p className="text-base sm:text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-[var(--color-muted)] mb-6 sm:mb-8 leading-relaxed">
               {homeContent.services[0].body}
             </p>
 
@@ -204,10 +204,10 @@ export function ServiceOverview() {
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-4">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-[var(--color-ink)] mb-3 leading-snug">
               {homeContent.services[1].title}
             </h3>
-            <p className="text-base sm:text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-[var(--color-muted)] mb-6 sm:mb-8 leading-relaxed">
               {homeContent.services[1].body}
             </p>
 
@@ -283,10 +283,10 @@ export function ServiceOverview() {
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-4">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-[var(--color-ink)] mb-3 leading-snug">
               {homeContent.services[2].title}
             </h3>
-            <p className="text-base sm:text-lg text-[var(--color-muted)] mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-[var(--color-muted)] mb-6 sm:mb-8 leading-relaxed">
               {homeContent.services[2].body}
             </p>
 

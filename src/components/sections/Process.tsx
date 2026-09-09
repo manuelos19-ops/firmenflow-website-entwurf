@@ -106,11 +106,11 @@ export function Process() {
     <section ref={containerRef} id="ablauf" className="py-24 sm:py-32 md:py-40 bg-transparent text-[var(--color-ink)] relative overflow-hidden" data-component="process-timeline">
       <Container>
         <div className="mb-14 sm:mb-20 max-w-3xl">
-          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-sm sm:text-base font-bold text-[var(--color-plum)] mb-5 shadow-sm">
+          <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-4 h-3.5" />
             <span>Ablauf · In 4 klaren Schritten</span>
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-[var(--color-ink)] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
             Der Weg zu deiner neuen Website.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
@@ -143,34 +143,34 @@ export function Process() {
                 d="M 1 0 L 1 100"
                 pathLength="100"
                 stroke="var(--color-coral)" 
-                strokeWidth="2"
-                fill="none"
+                strokeWidth="2" 
                 vectorEffect="non-scaling-stroke"
+                fill="none"
               />
             </svg>
           </div>
 
-          <div className="flex flex-col gap-16 md:gap-32 w-full pt-4 pb-12">
-            {processSteps.map((step, idx) => (
-              <div key={idx} className="process-step relative flex gap-8 md:gap-12 w-full z-10 group">
-                {/* Visual Node */}
-                <div className="relative mt-2 md:mt-3 flex-shrink-0">
-                  <div className="process-node w-10 h-10 md:w-14 md:h-14 rounded-full border-2 border-[var(--color-line)] bg-[var(--color-paper)] z-10 relative flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-line)] group-hover:bg-[var(--color-paper)] transition-colors duration-300" />
-                  </div>
-                </div>
+          <div className="flex flex-col gap-12 sm:gap-16 w-full pl-12 md:pl-16">
+            {processSteps.map((step, index) => (
+              <div 
+                key={step.number} 
+                className="process-step relative flex items-start group"
+              >
+                {/* Visual Node Marker on Line */}
+                <div 
+                  className="process-node absolute -left-[35px] md:-left-[43px] top-1.5 w-3 h-3 md:w-3.5 md:h-3.5 rounded-full border-2 border-white bg-[var(--color-paper)] shadow-md transition-colors duration-300 z-10"
+                />
 
-                {/* Step Content */}
-                <div className="process-content relative pt-1 md:pt-3 w-full max-w-2xl">
+                <div className="process-content relative w-full bg-white/70 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow">
                   {/* Decorative Background Number */}
                   <div className="process-number absolute -top-8 md:-top-16 -left-4 md:-left-8 text-8xl md:text-[12rem] font-editorial text-[var(--color-plum)] opacity-[0.03] select-none pointer-events-none -z-10 leading-none">
                     {step.number}
                   </div>
                   
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-[var(--color-ink)] mb-3">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-[var(--color-ink)] mb-3 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
+                  <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                     {step.body}
                   </p>
                 </div>

@@ -41,11 +41,11 @@ export function Faq() {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+            <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-5 shadow-sm">
               <BrandIcon className="w-4 h-3.5" />
               <span>Häufige Fragen</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-[var(--color-ink)] font-bold leading-[1.15] mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
               Klartext vor dem Projektstart.
             </h2>
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">

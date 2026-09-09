@@ -84,7 +84,7 @@ export function GoogleBusinessPilot() {
       <Container className="relative z-20 my-auto">
         {/* Intro with Stop-Scroll Text Inking */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-6 border border-white/20 shadow-md backdrop-blur-md">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-6 border border-white/20 shadow-md backdrop-blur-md">
             <Search className="w-4 h-4" />
             {homeContent.pilot.eyebrow}
           </span>

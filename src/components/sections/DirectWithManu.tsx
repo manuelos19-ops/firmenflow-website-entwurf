@@ -79,12 +79,12 @@ export function DirectWithManu() {
           
           {/* Text Left */}
           <div className="lg:col-span-6 xl:col-span-7 max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-sm sm:text-base font-bold text-[var(--color-coral)] mb-5 shadow-sm">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-5 shadow-sm">
               <BrandIcon className="w-4 h-3.5" />
               <span>Persönlich mit Manu</span>
             </div>
             
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
               Ein Partner auf Augenhöhe. <br />
               <span className="text-[var(--color-coral)] font-editorial">Vom Unternehmer für Unternehmer.</span>
             </h2>

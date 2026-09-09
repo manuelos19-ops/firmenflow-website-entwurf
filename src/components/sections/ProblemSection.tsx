@@ -56,14 +56,14 @@ export function ProblemSection() {
       className="relative min-h-[75vh] md:min-h-screen flex items-center justify-center py-12 md:py-16 bg-transparent overflow-hidden"
     >
       <Container className="flex flex-col items-center text-center max-w-5xl w-full my-auto">
-        <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-sm sm:text-base font-bold text-[var(--color-coral)] tracking-wide mb-8 shadow-sm">
+        <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-8 shadow-sm">
           <BrandIcon className="w-4 h-3.5" />
           <span>{homeContent.problem.eyebrow}</span>
         </span>
 
         <h2
           ref={textRef}
-          className="relative text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.06] mb-10"
+          className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display text-[var(--color-muted)]/15 leading-[1.06] mb-10"
         >
           <span className="sr-only">{homeContent.problem.title}</span>
           <span aria-hidden="true" className="select-none">

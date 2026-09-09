@@ -3,14 +3,14 @@ export const homeContent = {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
     accent: "Deine Website. Persönlich mit Manu.",
-    body: "Wenn Kunden am Niederrhein nach deinem Angebot oder Handwerk suchen, zählt der erste Klick: Eine gestochen scharfe Website, echte Fotos aus deinem Betrieb und ein Google-Profil, das sofort Vertrauen weckt. Ohne Agentur-Warteschleifen, direkt auf den Punkt.",
+    body: "Wenn Kunden am Niederrhein nach deinem Angebot oder Handwerk suchen, zählt der erste Klick: Eine gestochen scharfe Website, echte Fotos aus deinem Betrieb und ein Google-Profil, das sofort Vertrauen weckt.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Lass uns sprechen",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",
     title: "Dein Betrieb leistet erstklassige Arbeit. Aber online sieht man davon zu wenig.",
-    body: "Du stehst früh im Betrieb, gibst alles für hervorragende Qualität. Doch wer dich online nicht sofort findet und dein Angebot versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz.",
+    body: "Deine Kunden vor Ort wissen genau, was sie an deiner Arbeit haben. Doch wer dich online nicht sofort findet und dein Angebot versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz.",
   },
   services: [
     {
