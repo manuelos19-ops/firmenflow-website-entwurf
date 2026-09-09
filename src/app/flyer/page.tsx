@@ -13,7 +13,7 @@ export default function FlyerPage() {
   return (
     <QrRedirect
       eventName="flyer_scan"
-      label="Flyer-Scan erfasst"
+      badgeText="Flyer erkannt"
     />
   );
 }

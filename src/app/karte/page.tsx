@@ -13,7 +13,7 @@ export default function KartePage() {
   return (
     <QrRedirect
       eventName="visitenkarte_scan"
-      label="Visitenkarten-Scan erfasst"
+      badgeText="Visitenkarte erkannt"
     />
   );
 }
