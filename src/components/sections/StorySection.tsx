@@ -11,7 +11,6 @@ import { BrandIcon } from "@/components/brand/BrandIcon";
 import { 
   ArrowRight, 
   CheckCircle2, 
-  Star,
   Users,
   SearchX,
   Laptop
@@ -22,81 +21,57 @@ interface StoryStep {
   tag: string;
   tagVariant: "problem" | "solution" | "success";
   title: string;
-  subtitle: string;
   body: string;
   image: string;
   imageAlt: string;
   icon: typeof SearchX;
-  badge: {
-    icon: typeof Star | typeof Users | typeof SearchX;
-    text: string;
-    sub: string;
-  };
   highlights: string[];
 }
 
 const storySteps: StoryStep[] = [
   {
     number: "01",
-    tag: "Akt 1 · Die Ausgangslage",
+    tag: "01 · Ausgangslage",
     tagVariant: "problem",
-    title: "Vor Ort geschätzt. Doch der Neukunden-Zulauf stockt.",
-    subtitle: "Qualität, an der man online bisher vorbeilief",
-    body: "Stammkunden schwören auf deinen Service. Aber wer neu in die Region zieht oder abends auf dem Smartphone nach einem Betrieb sucht, landet bei Google bei Mitbewerbern mit frischeren Bewertungen und modernerer Seite. Dein Schaufenster im Netz spiegelt deinen Betrieb einfach nicht wider.",
+    title: "Vor Ort geschätzt – aber online kaum zu finden.",
+    body: "Stammkunden schätzen deinen Betrieb seit Jahren. Wer dich aber noch nicht kennt und auf dem Smartphone sucht, findet dich bei Google nicht oder landet auf einer veralteten Seite. Neue Kunden gehen zur Konkurrenz.",
     image: "/media/story/story-1-unsichtbar.webp",
     imageAlt: "Inhaber steht vor seinem Betrieb, Passanten schauen auf Smartphones",
     icon: SearchX,
-    badge: {
-      icon: SearchX,
-      text: "Typischer Ausgangspunkt",
-      sub: "Im Netz oft übersehen",
-    },
     highlights: [
       "Veraltete oder fehlende Website",
       "Google-Maps-Profil ungenutzt",
-      "Neukunden suchen weiter",
+      "Neue Kunden suchen woanders",
     ],
   },
   {
     number: "02",
-    tag: "Die Lösung mit Manu",
+    tag: "02 · Mit Manu",
     tagVariant: "solution",
-    title: "Gemeinsam am Tisch: Website & Lokalpräsenz 360°.",
-    subtitle: "Direkt, ehrlich und ohne Fachchinesisch",
-    body: "Ich setze mich mit dir zusammen, bringe dein echtes Angebot auf den Punkt und baue einen schnellen, modernen Auftritt mit klarem Fokus auf Google Maps und direkte Kundenanfragen.",
+    title: "Kein Agentur-Theater: Direkt mit Manu an einem Tisch.",
+    body: "Wir setzen uns zusammen und besprechen dein Angebot. Deine vorhandene Website wird moderner gestaltet und für mehr Anfragen optimiert – oder wir bauen deinen Auftritt von Grund auf neu.",
     image: "/media/story/story-2-loesung-manu.webp",
-    imageAlt: "Manu zeigt dem Inhaber auf dem Laptop ein 3D-Hologramm der neuen Website und 5-Sterne-Google-Bewertung",
+    imageAlt: "Manu und Inhaber besprechen die neue Website am Laptop",
     icon: Laptop,
-    badge: {
-      icon: Star,
-      text: "Lokalpräsenz 360° Prozess",
-      sub: "Fokus auf echte Kundenstimmen",
-    },
     highlights: [
-      "Fester Ansprechpartner (Manu)",
+      "Ein fester Ansprechpartner (Manu)",
       "Schnelle Website fürs Smartphone",
-      "Gezielter Aufbau echter Bewertungen",
+      "Google-Unternehmensprofil startklar",
     ],
   },
   {
     number: "03",
-    tag: "Der Erfolg",
+    tag: "03 · Das Ergebnis",
     tagVariant: "success",
     title: "Kunden finden dich sofort und rufen an.",
-    subtitle: "Echte Anfragen und ein voller Betrieb",
-    body: "Wer in deiner Region sucht, sieht sofort deine guten Bewertungen, klickt auf deine Website und nimmt direkt Kontakt auf. So wird deine gute Arbeit online sichtbar – und bringt dir verlässlich neue Aufträge.",
+    body: "Wer in deiner Region sucht, sieht deinen Betrieb ganz oben mit guten Bewertungen und echten Fotos. Ein Klick – und Interessenten nehmen sofort Kontakt auf oder stehen bei dir im Betrieb.",
     image: "/media/story/story-3-voller-erfolg.webp",
     imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
     icon: Users,
-    badge: {
-      icon: Users,
-      text: "Voller Betrieb & Gäste",
-      sub: "Echte Stammkunden",
-    },
     highlights: [
-      "Regelmäßige Anfragen über Google",
-      "Starker erster Eindruck rund um die Uhr",
-      "Verlässliche neue Aufträge vor Ort",
+      "Ganz oben bei Google & Maps",
+      "Direkter Kontakt per Anruf oder Klick",
+      "Verlässlich neue Kunden vor Ort",
     ],
   },
 ];
@@ -146,7 +121,7 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-4 h-3.5" />
-            <span>Die Firmenflow-Story • Illustratives Praxisbeispiel</span>
+            <span>Aus der Praxis · So funktioniert's</span>
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.
@@ -161,7 +136,6 @@ export function StorySection() {
           {storySteps.map((step, idx) => {
             const isSelected = activeStep === idx;
             const Icon = step.icon;
-            const BadgeIcon = step.badge.icon;
 
             return (
               <div
@@ -174,8 +148,8 @@ export function StorySection() {
                     : "border-[var(--color-line)] hover:border-[var(--color-coral)]/50"
                 )}
               >
-                {/* Visual Image Box: Optimized 4:5 aspect ratio on mobile so baker sign and characters are 100% visible */}
-                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:h-[460px] overflow-hidden bg-[#e8e4df] shrink-0">
+                {/* Visual Image Box: Optimized 4:5 aspect ratio on mobile so characters and details are 100% visible */}
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:h-[440px] overflow-hidden bg-[#e8e4df] shrink-0">
                   <Image
                     src={step.image}
                     alt={step.imageAlt}
@@ -187,62 +161,35 @@ export function StorySection() {
                     )}
                   />
                   
-                  {/* Subtle top badge layer with Akt label */}
+                  {/* Clean Status Tag on Image */}
                   <div className="absolute top-3.5 left-3.5 z-10">
-                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-black/55 backdrop-blur-md border border-white/30 text-white text-xs font-bold font-mono shadow-md">
-                      Akt {step.number}
-                    </span>
-                  </div>
-
-                  {/* Top Status Tag */}
-                  <div className="absolute top-3.5 right-3.5 z-10">
                     <span 
                       className={cn(
-                        "inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full backdrop-blur-md shadow-md",
-                        step.tagVariant === "problem" && "bg-rose-600/90 text-white",
-                        step.tagVariant === "solution" && "bg-[var(--color-plum)]/90 text-white",
-                        step.tagVariant === "success" && "bg-emerald-600/90 text-white"
+                        "inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold rounded-full backdrop-blur-md shadow-md text-white",
+                        step.tagVariant === "problem" && "bg-rose-600/90",
+                        step.tagVariant === "solution" && "bg-[var(--color-plum)]/90",
+                        step.tagVariant === "success" && "bg-emerald-600/90"
                       )}
                     >
                       <Icon className="w-3.5 h-3.5 shrink-0" />
-                      {step.tag}
+                      <span>{step.tag}</span>
                     </span>
                   </div>
                 </div>
 
-                {/* Card Content Description */}
+                {/* Card Content: Clean, direct, human */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                   <div>
-                    {/* Status Pill Badge inside content (does not cover the photo) */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--color-paper)] border border-[var(--color-line)] mb-4">
-                      <div 
-                        className={cn(
-                          "w-6 h-6 rounded-lg flex items-center justify-center shrink-0",
-                          step.tagVariant === "problem" && "bg-rose-100 text-rose-600",
-                          step.tagVariant === "solution" && "bg-amber-100 text-amber-600",
-                          step.tagVariant === "success" && "bg-emerald-100 text-emerald-600"
-                        )}
-                      >
-                        <BadgeIcon className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="text-xs font-bold text-[var(--color-ink)]">
-                        {step.badge.text}
-                      </span>
-                    </div>
-
-                    <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)] mb-1 block">
-                      {step.subtitle}
-                    </span>
                     <h3 className="text-xl sm:text-2xl font-bold font-display text-[var(--color-ink)] mb-3 leading-snug">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-[var(--color-muted)] leading-relaxed mb-6">
+                    <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed mb-6">
                       {step.body}
                     </p>
                   </div>
 
                   {/* Feature Checkpoints */}
-                  <ul className="space-y-2 pt-4 border-t border-[var(--color-line)]/50 text-xs sm:text-sm text-[var(--color-ink)]/85">
+                  <ul className="space-y-2.5 pt-4 border-t border-[var(--color-line)]/50 text-xs sm:text-sm text-[var(--color-ink)]/85">
                     {step.highlights.map((h) => (
                       <li key={h} className="flex items-start gap-2">
                         <CheckCircle2 
@@ -264,12 +211,12 @@ export function StorySection() {
         </div>
 
         {/* Bottom Action Callout */}
-        <div className="mt-14 sm:mt-18 max-w-2xl mx-auto text-center bg-white/70 backdrop-blur-md border border-[var(--color-line)] rounded-3xl p-8 shadow-lg">
+        <div className="mt-12 sm:mt-16 max-w-2xl mx-auto text-center bg-white/70 backdrop-blur-md border border-[var(--color-line)] rounded-3xl p-8 shadow-lg">
           <p className="text-base sm:text-lg font-display font-bold text-[var(--color-ink)] mb-2">
-            Bereit für Schritt 2 &amp; 3 bei deinem Betrieb?
+            Bereit für mehr Sichtbarkeit für deinen Betrieb?
           </p>
           <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-            Lass uns unverbindlich prüfen, was deiner Website oder deinem Google-Auftritt fehlt – persönlich mit Manu, auf Augenhöhe.
+            Lass uns kurz sprechen – ehrlich, unverbindlich und direkt mit Manu.
           </p>
 
           <div className="inline-block">
