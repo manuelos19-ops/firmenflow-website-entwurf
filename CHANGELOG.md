@@ -21,7 +21,7 @@ Alle wesentlichen Änderungen am Projekt **Firmenflow Website Entwurf** werden i
 - **Leistungen (Neue Website & Relaunch):**
   - Ergänzt um interaktive **Browser-Window-Kopfzeilen** mit Ampel-Punkten (`● ● ●`) und Live-URL.
   - Visuelle **Live-Kennzahlen-Kacheln** (*Mobile-First*, *< 0.5s Ladezeit*, *SEO-Rankings safe*) und Checkmark-Listen.
-- **„Direkt mit Manu“:**
+- **„Persönlich mit Manu“:**
   - Umwandlung der Aufzählung in **4 auffällige Bento-Kacheln mit Neon-Glow-Effekt** (*Persönlich erreichbar*, *Klare nächste Schritte*, *Ehrliche Einschätzung*, *Nah an Wesel & Niederrhein*).
 - **Google Business 360° – Pilot:**
   - Visuelle **Google-Suchprofil-Karte** (5,0 Sterne ⭐⭐⭐⭐⭐, *Verifiziertes Unternehmensprofil*, Score-Badges).

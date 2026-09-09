@@ -1,6 +1,6 @@
 # Firmenflow Website Entwurf
 
-> **„Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu.“**
+> **„Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“**
 
 Offizielle Website und digitaler Markenauftritt für **Firmenflow** – Webdesign & Lokalpräsenz aus Wesel und dem Niederrhein.
 
@@ -109,7 +109,7 @@ npm run start
 ## 🔒 Rechtliche & Marken-Vorgaben
 - **Sichtbarer Markenname:** Immer **„Manu“**; **„Manuel Landeck“** erscheint ausschließlich in rechtlich vorgeschriebenen Kontexten (Impressum, Datenschutz).
 - **Slogan:** *„für deine Lokalpräsenz“*
-- **Kernversprechen:** *„Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu.“*
+- **Kernversprechen:** *„Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“*
 - **Fokusregion:** Wesel und der Niederrhein.
 
 ---

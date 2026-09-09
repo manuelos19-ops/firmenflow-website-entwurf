@@ -24,7 +24,7 @@ Firmenflow ist eine persönliche Webdesign-Marke, keine künstlich groß dargest
 Kernversprechen:
 
 > Mehr Lokalpräsenz. Weniger Agenturtheater.  
-> Deine Website. Direkt mit Manu.
+> Deine Website. Persönlich mit Manu.
 
 Die provokante erste Zeile sorgt für Wiedererkennung. Die zweite Zeile löst das Versprechen positiv auf: ein fester Ansprechpartner, direkte Kommunikation und nachvollziehbare Zusammenarbeit.
 
@@ -188,7 +188,7 @@ Bäckerei Büscher und Vincent erhalten zum Start keine separate Route, sofern d
 2. Hero mit Kernversprechen, regionaler Einordnung, Hero-Foto und zwei CTAs.
 3. Problembewusstsein: guter Betrieb, aber fehlende oder schwache Online-Präsenz.
 4. Leistungen: neue Unternehmenswebsite und Relaunch.
-5. „Direkt mit Manu“: ein Ansprechpartner, erreichbar, verständlich, regional und fair.
+5. „Persönlich mit Manu“: ein Ansprechpartner, erreichbar, verständlich, regional und fair.
 6. Google Business 360° als limitiertes Pilotprogramm.
 7. Live-Projekte.
 8. Aktuelle Konzeptentwürfe.

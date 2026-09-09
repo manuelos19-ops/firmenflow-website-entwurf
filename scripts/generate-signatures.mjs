@@ -450,7 +450,7 @@ async function generate() {
       <div class="v1-avatar-container">
         <img class="v1-avatar-img" src="${portraitBase64}" alt="Manuel Landeck" />
       </div>
-      <div class="v1-badge">Direkt mit Manu</div>
+      <div class="v1-badge">Persönlich mit Manu</div>
     </div>
     <div class="v1-right">
       <div class="v1-top-row">
@@ -530,7 +530,7 @@ async function generate() {
       <div class="v3-header">
         <div>
           <div class="v3-name-title">Manuel Landeck</div>
-          <div class="v3-tagline">Inhaber Firmenflow · Direkt mit Manu</div>
+          <div class="v3-tagline">Inhaber Firmenflow · Persönlich mit Manu</div>
         </div>
         <img style="height: 22px; width: auto;" src="${wordmarkBase64}" alt="Firmenflow" />
       </div>

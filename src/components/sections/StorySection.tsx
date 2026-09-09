@@ -48,7 +48,7 @@ const storySteps: StoryStep[] = [
     number: "02",
     tag: "02 · Mit Manu",
     tagVariant: "solution",
-    title: "Kein Agentur-Theater: Direkt mit Manu an einem Tisch.",
+    title: "Kein Agentur-Theater: Persönlich mit Manu an einem Tisch.",
     body: "Wir setzen uns zusammen und besprechen dein Angebot. Deine vorhandene Website wird moderner gestaltet und für mehr Anfragen optimiert – oder wir bauen deinen Auftritt von Grund auf neu.",
     image: "/media/story/story-2-loesung-manu.webp",
     imageAlt: "Manu und Inhaber besprechen die neue Website am Laptop",
@@ -216,7 +216,7 @@ export function StorySection() {
             Bereit für mehr Sichtbarkeit für deinen Betrieb?
           </p>
           <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-            Lass uns kurz sprechen – ehrlich, unverbindlich und direkt mit Manu.
+            Lass uns kurz sprechen – ehrlich, unverbindlich und persönlich mit Manu.
           </p>
 
           <div className="inline-block">

@@ -16,7 +16,7 @@
 
 - Sichtbarer Markenname ist immer „Manu“; „Manuel Landeck“ erscheint nur in rechtlich oder vertraglich erforderlichen Zusammenhängen.
 - Slogan exakt: „für deine Lokalpräsenz“.
-- Kernversprechen exakt: „Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Direkt mit Manu.“
+- Kernversprechen exakt: „Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“
 - Zielregion zum Start: Wesel und Niederrhein; die Architektur darf eine spätere NRW-Ausweitung nicht blockieren.
 - Farben exakt: `#FCFAF7`, `#17131A`, `#3B0D4F`, `#FF705D`.
 - Schriften: Instrument Sans und Instrument Serif Italic, ohne Laufzeitabruf von Google Fonts.
@@ -584,7 +584,7 @@ export const homeContent = {
   hero: {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
-    accent: "Deine Website. Direkt mit Manu.",
+    accent: "Deine Website. Persönlich mit Manu.",
     body: "Ich entwickle Websites für lokale Unternehmen, die gut aussehen, verständlich funktionieren und den direkten Weg zur Anfrage frei machen.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Projekt in 2 Minuten anfragen",
@@ -609,7 +609,7 @@ export const homeContent = {
     },
   ],
   direct: {
-    eyebrow: "Direkt mit Manu",
+    eyebrow: "Persönlich mit Manu",
     title: "Ein Ansprechpartner. Keine stille Post.",
     body: "Du sprichst vom ersten Gedanken bis zur fertigen Website mit mir. Keine wechselnden Zuständigkeiten, keine langen Schleifen und kein Rätselraten darüber, wer gerade Bescheid weiß.",
     points: ["Persönlich erreichbar", "Klare nächste Schritte", "Ehrliche Einschätzung", "Nah an Wesel und dem Niederrhein"],
@@ -645,7 +645,7 @@ export const faqItems = [
   { question: "Kannst du auch eine vorhandene Website überarbeiten?", answer: "Ja. Bei einem Relaunch prüfe ich zuerst, welche Inhalte, Technik und Sichtbarkeit bereits vorhanden sind. Danach planen wir den Wechsel so, dass nichts Wichtiges versehentlich verloren geht." },
   { question: "Muss ich alle Texte und Bilder fertig haben?", answer: "Nein. Wir sortieren gemeinsam, was vorhanden ist und was noch fehlt. Ich unterstütze bei Struktur und Texten; bei Bildern klären wir früh, welche Motive wirklich gebraucht werden." },
   { question: "Was ist Google Business 360°?", answer: "Ein limitiertes Pilotangebot für lokale Unternehmen: Profilprüfung, richtlinienkonformes Bewertungsmanagement und eine regelmäßige Auswertung echter Kundenstimmen. Es gibt keine gekauften Bewertungen und keine Rankinggarantie." },
-  { question: "Mit wem spreche ich während des Projekts?", answer: "Direkt mit Manu – vom ersten Gespräch bis zur Veröffentlichung und bei vereinbarten Folgeschritten auch danach." },
+  { question: "Mit wem spreche ich während des Projekts?", answer: "Persönlich mit Manu – vom ersten Gespräch bis zur Veröffentlichung und bei vereinbarten Folgeschritten auch danach." },
 ] as const;
 ```
 
@@ -929,7 +929,7 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 
 export const metadata: Metadata = {
-  title: { default: "Firmenflow – Webdesign direkt mit Manu", template: "%s | Firmenflow" },
+  title: { default: "Firmenflow – Webdesign persönlich mit Manu", template: "%s | Firmenflow" },
   description: "Persönliches Webdesign und Lokalpräsenz für Unternehmen rund um Wesel und den Niederrhein.",
 };
 
@@ -1047,8 +1047,8 @@ vi.mock("motion/react", () => ({
 
 describe("Reveal", () => {
   it("lässt den Inhalt bei reduzierter Bewegung sofort zugänglich", () => {
-    render(<Reveal><p>Direkt mit Manu</p></Reveal>);
-    expect(screen.getByText("Direkt mit Manu")).toBeVisible();
+    render(<Reveal><p>Persönlich mit Manu</p></Reveal>);
+    expect(screen.getByText("Persönlich mit Manu")).toBeVisible();
   });
 });
 ```
@@ -1332,7 +1332,7 @@ describe("Faq", () => {
   it("liefert jede Frage als nativ bedienbares Detail", () => {
     render(<Faq />);
     expect(screen.getAllByRole("group")).toHaveLength(6);
-    expect(screen.getByText(/Direkt mit Manu/)).toBeInTheDocument();
+    expect(screen.getByText(/Persönlich mit Manu/)).toBeInTheDocument();
   });
 });
 ```
@@ -2073,7 +2073,7 @@ export default function robots(): MetadataRoute.Robots {
 
 - [ ] **Step 4: Echtes OG-Bild aus Markenassets erzeugen**
 
-`opengraph-image.tsx` verwendet `ImageResponse`, die Firmenflow-Farben, Wortmarke, Slogan und die Herozeile. Keine erfundene Auszeichnung oder Kundenanzahl. Größe `1200 × 630`, Alttext „Firmenflow – für deine Lokalpräsenz. Direkt mit Manu.“.
+`opengraph-image.tsx` verwendet `ImageResponse`, die Firmenflow-Farben, Wortmarke, Slogan und die Herozeile. Keine erfundene Auszeichnung oder Kundenanzahl. Größe `1200 × 630`, Alttext „Firmenflow – für deine Lokalpräsenz. Persönlich mit Manu.“.
 
 - [ ] **Step 5: Sitemap- und Robots-Verhalten testen**
 
