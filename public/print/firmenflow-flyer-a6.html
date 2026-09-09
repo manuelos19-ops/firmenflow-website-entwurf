@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firmenflow – DIN A6 Flyer (Vistaprint 108 × 151 mm)</title>
+<title>Firmenflow – DIN A6 Flyer (Großzügiger Weißraum & Vistaprint-Maße)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -103,7 +103,8 @@
   /* EXACT VISTAPRINT MEASUREMENTS:
      Bleed: 108.00 mm × 151.00 mm
      Trim: 105.00 mm × 148.00 mm (DIN A6)
-     Safety: 102.00 mm × 145.00 mm
+     Safety Area Vistaprint: 102.00 mm × 145.00 mm (starts at 3.0mm)
+     COMFORT MARGIN (High-End Editorial): starts at 7.0mm from bleed (5.5mm from cut edge)
   */
   .flyer-page {
     width: 108mm;
@@ -144,13 +145,16 @@
     display: block;
   }
 
-  /* Safety Container (102mm × 145mm) */
-  .safety-box {
+  /* COMFORT INNER CONTENT BOX (94mm × 136mm)
+     Centered horizontally: left: 7.0mm (giving 5.5mm clean distance from cut edge)
+     Top: 4.5mm (giving 3.0mm distance from cut edge)
+  */
+  .content-box {
     position: absolute;
-    top: 3mm;
-    left: 3mm;
-    width: 102mm;
-    height: 145mm;
+    top: 4.5mm;
+    left: 7.0mm;
+    width: 94mm;
+    height: 136mm;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -180,24 +184,23 @@
     text-transform: uppercase;
   }
 
-  /* Continuously flowing Coral-to-Plum decorative ribbon across front & back */
-  /* FRONT: leaves top-right edge at Y = 2.5mm */
+  /* Swirl Ribbon FRONT */
   .ribbon-front {
     position: absolute;
     top: 0;
     right: 0;
-    width: 48mm;
-    height: 48mm;
+    width: 50mm;
+    height: 50mm;
     pointer-events: none;
     z-index: 1;
   }
-  /* BACK: enters top-left edge at Y = 2.5mm, sweeps above the eyebrow, curves into whitespace right */
+  /* Swirl Ribbon BACK */
   .ribbon-back {
     position: absolute;
     top: 0;
     left: 0;
-    width: 85mm;
-    height: 25mm;
+    width: 90mm;
+    height: 26mm;
     pointer-events: none;
     z-index: 1;
   }
@@ -212,7 +215,7 @@
     padding-top: 1mm;
   }
   .brand-logo-img {
-    width: 44mm;
+    width: 41mm;
     height: auto;
     display: block;
   }
@@ -222,72 +225,72 @@
     margin-top: 2.2mm;
   }
   .front-headline {
-    font-size: 19pt;
+    font-size: 18pt;
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.06;
     color: var(--color-ink);
-    letter-spacing: -0.5px;
+    letter-spacing: -0.4px;
   }
   .front-headline .serif-italic {
     font-family: 'Instrument Serif', Georgia, serif;
     font-style: italic;
     font-weight: 400;
     color: var(--color-plum-light);
-    font-size: 21.5pt;
+    font-size: 20.5pt;
     letter-spacing: -0.2px;
   }
   .coral-bar {
-    width: 32mm;
-    height: 3.2px;
+    width: 28mm;
+    height: 3px;
     background: var(--color-coral);
     border-radius: 2px;
-    margin-top: 2.5mm;
-    margin-bottom: 2mm;
+    margin-top: 2.2mm;
+    margin-bottom: 1.8mm;
   }
   .front-subline {
-    font-size: 8pt;
-    line-height: 1.35;
+    font-size: 7.8pt;
+    line-height: 1.36;
     color: #382B3E;
     font-weight: 500;
-    max-width: 96mm;
+    max-width: 90mm;
   }
 
   /* Front Mid / Bottom split section */
   .front-split {
     display: flex;
-    gap: 3mm;
+    gap: 3.5mm;
     align-items: center;
-    margin-top: 2mm;
+    margin-top: 1.5mm;
     margin-bottom: 1.5mm;
   }
   .front-left-col {
-    flex: 1;
+    width: 44mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 58mm;
+    height: 56mm;
   }
   .statement-lead {
-    font-size: 10pt;
+    font-size: 9.5pt;
     font-weight: 800;
     line-height: 1.25;
     color: var(--color-ink);
-    margin-bottom: 2mm;
+    margin-bottom: 1.8mm;
   }
   .statement-body {
-    font-size: 8pt;
-    line-height: 1.4;
+    font-size: 7.6pt;
+    line-height: 1.38;
     color: #382B3E;
-    margin-bottom: 2mm;
+    margin-bottom: 1.8mm;
   }
   .statement-signature {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: 25pt;
+    font-size: 24pt;
     font-style: italic;
     font-weight: 400;
     color: var(--color-plum-light);
     line-height: 0.9;
-    margin-bottom: 2mm;
+    margin-bottom: 1.8mm;
   }
   .statement-signature span {
     color: var(--color-coral);
@@ -297,45 +300,45 @@
   .trust-pills {
     display: flex;
     flex-direction: column;
-    gap: 2.5px;
+    gap: 2px;
     background: rgba(123, 40, 105, 0.05);
     border-left: 2.5px solid var(--color-coral);
-    padding: 4px 6px;
+    padding: 3.5px 5.5px;
     border-radius: 0 6px 6px 0;
   }
   .trust-item {
-    font-size: 6.8pt;
+    font-size: 6.5pt;
     font-weight: 700;
     color: var(--color-ink);
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3.5px;
   }
   .trust-item svg {
-    width: 8.5px;
-    height: 8.5px;
+    width: 8px;
+    height: 8px;
     color: var(--color-coral);
     flex-shrink: 0;
   }
 
-  /* DUAL PHOTO CLUSTER: HERO PROMINENT & CLEAR */
+  /* DUAL PHOTO CLUSTER */
   .front-photo-cluster {
-    flex: 1.12;
+    width: 46.5mm;
     position: relative;
-    height: 58mm;
+    height: 56mm;
   }
 
-  /* Card 1: Website Hero Photo (Smartphone, Color) - LARGER & PROMINENT */
+  /* Card 1: Website Hero Photo (Smartphone, Color) */
   .photo-card-hero {
     position: absolute;
     top: 0;
     left: 0;
-    width: 37mm;
-    height: 48mm;
-    border-radius: 12px;
+    width: 35mm;
+    height: 46mm;
+    border-radius: 11px;
     overflow: hidden;
     transform: rotate(-2.8deg);
-    border: 2.5px solid #FFFFFF;
+    border: 2.2px solid #FFFFFF;
     box-shadow: 0 4px 14px rgba(35, 24, 40, 0.16);
     z-index: 2;
     background: #E5E7EB;
@@ -348,18 +351,18 @@
     display: block;
   }
 
-  /* Card 2: Hasselblad Camera Photo (B&W) - Tucked subtly at bottom right */
+  /* Card 2: Hasselblad Camera Photo (B&W) */
   .photo-card-hasselblad {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 29.5mm;
-    height: 38mm;
-    border-radius: 11px;
+    width: 27.5mm;
+    height: 36mm;
+    border-radius: 10px;
     overflow: hidden;
     transform: rotate(3.2deg);
-    border: 2.2px solid #FFFFFF;
-    box-shadow: 0 6px 18px rgba(35, 24, 40, 0.24);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 6px 16px rgba(35, 24, 40, 0.24);
     z-index: 3;
     background: #1F2937;
   }
@@ -374,27 +377,27 @@
   /* Floating Badge on Hasselblad Card */
   .cluster-badge {
     position: absolute;
-    bottom: 1.5mm;
-    left: 1.5mm;
+    bottom: 1.2mm;
+    left: 1.2mm;
     background: rgba(35, 24, 40, 0.92);
     backdrop-filter: blur(4px);
     border-radius: 20px;
-    padding: 2.5px 6.5px;
+    padding: 2.2px 6px;
     color: #FFFFFF;
-    font-size: 5.3pt;
+    font-size: 5pt;
     font-weight: 700;
     letter-spacing: 0.4px;
     border: 0.8px solid rgba(252, 211, 77, 0.5);
     display: flex;
     align-items: center;
-    gap: 3.5px;
+    gap: 3px;
     z-index: 4;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     white-space: nowrap;
   }
   .cluster-badge .dot {
-    width: 4px;
-    height: 4px;
+    width: 3.5px;
+    height: 3.5px;
     border-radius: 50%;
     background: var(--color-gold);
   }
@@ -403,7 +406,7 @@
      BACK PAGE STYLES (SEITE 2)
      =================================================== */
   .back-header {
-    padding-top: 1.2mm;
+    padding-top: 0.5mm;
     position: relative;
     z-index: 2;
   }
@@ -411,17 +414,17 @@
     display: inline-block;
     background: rgba(123, 40, 105, 0.09);
     color: var(--color-plum-light);
-    font-size: 5.8pt;
+    font-size: 5.6pt;
     font-weight: 800;
     letter-spacing: 0.8px;
-    padding: 2.5px 8px;
+    padding: 2.2px 7.5px;
     border-radius: 20px;
-    margin-bottom: 1.5mm;
+    margin-bottom: 1.2mm;
     position: relative;
     z-index: 3;
   }
   .back-headline {
-    font-size: 16.5pt;
+    font-size: 15.5pt;
     font-weight: 800;
     line-height: 1.15;
     color: var(--color-ink);
@@ -430,11 +433,11 @@
     z-index: 3;
   }
   .back-subhead {
-    font-size: 7.4pt;
+    font-size: 7.2pt;
     color: var(--color-muted);
-    margin-top: 1mm;
+    margin-top: 0.8mm;
     line-height: 1.35;
-    max-width: 98mm;
+    max-width: 92mm;
     position: relative;
     z-index: 3;
   }
@@ -443,30 +446,30 @@
   .services-stack {
     display: flex;
     flex-direction: column;
-    gap: 2mm;
-    margin-top: 2.2mm;
-    margin-bottom: 2.2mm;
+    gap: 1.8mm;
+    margin-top: 1.8mm;
+    margin-bottom: 1.8mm;
     position: relative;
     z-index: 2;
   }
   .service-row {
     background: #FFFFFF;
     border-radius: 9px;
-    padding: 2.2mm 3mm;
+    padding: 2.2mm 2.8mm;
     display: flex;
-    gap: 2.8mm;
+    gap: 2.6mm;
     align-items: flex-start;
     border: 1px solid rgba(35, 24, 40, 0.07);
     box-shadow: 0 2px 5px rgba(35, 24, 40, 0.03);
   }
   .service-num {
-    width: 6.2mm;
-    height: 6.2mm;
+    width: 5.8mm;
+    height: 5.8mm;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 7.2pt;
+    font-size: 7pt;
     font-weight: 800;
     color: #FFFFFF;
     flex-shrink: 0;
@@ -479,15 +482,15 @@
     flex: 1;
   }
   .service-title {
-    font-size: 9pt;
+    font-size: 8.6pt;
     font-weight: 800;
     color: var(--color-ink);
     line-height: 1.2;
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.6mm;
   }
   .service-desc {
-    font-size: 7pt;
-    line-height: 1.35;
+    font-size: 6.8pt;
+    line-height: 1.33;
     color: #382B3E;
   }
 
@@ -495,10 +498,10 @@
   .cta-hero-card {
     background: linear-gradient(135deg, #241729 0%, #18101C 100%);
     border-radius: 11px;
-    padding: 3mm 3mm;
+    padding: 2.8mm 2.8mm;
     color: #FFFFFF;
     display: flex;
-    gap: 3mm;
+    gap: 2.8mm;
     align-items: center;
     border: 1px solid rgba(255, 107, 85, 0.35);
     box-shadow: 0 4px 16px rgba(35, 24, 40, 0.22);
@@ -511,33 +514,33 @@
     flex-direction: column;
   }
   .cta-tag {
-    font-size: 5.3pt;
+    font-size: 5.1pt;
     font-weight: 800;
     letter-spacing: 0.7px;
     color: var(--color-gold);
     text-transform: uppercase;
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.6mm;
   }
   .cta-heading {
-    font-size: 11pt;
+    font-size: 10.2pt;
     font-weight: 800;
     line-height: 1.15;
     color: #FFFFFF;
-    margin-bottom: 1.2mm;
+    margin-bottom: 1mm;
     letter-spacing: -0.2px;
   }
   .cta-text {
-    font-size: 6.8pt;
+    font-size: 6.6pt;
     color: rgba(255, 255, 255, 0.85);
-    line-height: 1.35;
-    margin-bottom: 2mm;
+    line-height: 1.33;
+    margin-bottom: 1.8mm;
   }
   .cta-contacts {
     display: flex;
     flex-direction: column;
-    gap: 1.5px;
+    gap: 1.2px;
     border-top: 1px solid rgba(255,255,255,0.12);
-    padding-top: 1.5mm;
+    padding-top: 1.2mm;
   }
   .cta-phone-row {
     display: flex;
@@ -545,18 +548,18 @@
     gap: 4px;
   }
   .cta-phone {
-    font-size: 8.8pt;
+    font-size: 8.5pt;
     font-weight: 800;
     color: #FFFFFF;
     letter-spacing: 0.2px;
   }
   .cta-phone-badge {
-    font-size: 5.6pt;
+    font-size: 5.4pt;
     color: var(--color-gold);
     font-weight: 700;
   }
   .cta-email {
-    font-size: 6.8pt;
+    font-size: 6.6pt;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
   }
@@ -566,28 +569,28 @@
     flex: 0.78;
     background: #FFFFFF;
     border-radius: 9px;
-    padding: 1.8mm;
+    padding: 1.6mm;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 3px 8px rgba(0,0,0,0.25);
   }
   .qr-code-wrapper {
-    width: 22mm;
-    height: 22mm;
+    width: 21mm;
+    height: 21mm;
   }
   .qr-domain {
-    font-size: 6.5pt;
+    font-size: 6.3pt;
     font-weight: 800;
     color: var(--color-plum);
-    margin-top: 1mm;
+    margin-top: 0.8mm;
     letter-spacing: 0.2px;
   }
   .qr-action-hint {
-    font-size: 5pt;
+    font-size: 4.8pt;
     font-weight: 700;
     color: var(--color-coral);
-    margin-top: 0.5px;
+    margin-top: 0.4px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
   }
@@ -647,8 +650,8 @@
   <!-- Top Controls -->
   <div class="toolbar">
     <div class="toolbar-info">
-      <strong>Firmenflow DIN A6 Hybrid-Flyer</strong> · Vistaprint Druckformat: 108 × 151 mm (Endformat 105 × 148 mm)<br>
-      Hero-Porträt im Fokus, korrigierte Zierlinie ohne Textüberdeckung & Tracking-QR-Code.
+      <strong>Firmenflow DIN A6 Hybrid-Flyer (Optimierter Randabstand)</strong> · Vistaprint Druckformat: 108 × 151 mm<br>
+      Angenehmer Weißraum (5,5 mm Abstand zur Schnittkante), balanciertes Layout & exakte 2 Seiten.
     </div>
     <div class="btn-group">
       <button class="btn btn-secondary" onclick="toggleGuides()">
@@ -681,8 +684,8 @@
         <span>PERSÖNLICH MIT MANU | WESEL · NIEDERRHEIN · NRW</span>
       </div>
 
-      <!-- Safety Box (102mm × 145mm) -->
-      <div class="safety-box">
+      <!-- Content Box: 7.0mm left margin (5.5mm inside cut edge) -->
+      <div class="content-box">
         
         <!-- Header: Clean Logo without redundant tagline -->
         <div class="front-header">
@@ -735,7 +738,7 @@
             </div>
           </div>
 
-          <!-- Right: Duo Overlapping Photos (Hero larger & prominent!) -->
+          <!-- Right: Duo Overlapping Photos -->
           <div class="front-photo-cluster">
             
             <!-- Photo 1: Website Hero Photo (Smartphone, Color, Prominent) -->
@@ -758,9 +761,6 @@
 
         </div>
 
-        <!-- Spacer to push bottom above the bleed bar -->
-        <div style="height: 6mm;"></div>
-
       </div>
     </div>
 
@@ -772,7 +772,7 @@
       <div class="guide-trim" title="Schnittkante (105 × 148 mm)"></div>
       <div class="guide-safety" title="Sicherheitsbereich (102 × 145 mm)"></div>
 
-      <!-- Continued Ribbon: enters top-left above all text (Y = 2.5mm), arches gently across top margin and curves into whitespace on the right, without touching any text! -->
+      <!-- Continued Ribbon: enters top-left above all text (Y = 2.5mm) -->
       <svg class="ribbon-back" viewBox="0 0 340 100" fill="none">
         <defs>
           <linearGradient id="coralToPlum" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -782,7 +782,6 @@
             <stop offset="100%" stop-color="#7B2869" stop-opacity="0.0" />
           </linearGradient>
         </defs>
-        <!-- Arches in the top 2mm margin, completely above the eyebrow pill, then sweeps down to the right into blank space -->
         <path d="M0 10 C 60 10, 140 8, 210 14 C 260 18, 300 38, 335 65" stroke="url(#coralToPlum)" stroke-width="3" stroke-linecap="round"/>
       </svg>
 
@@ -791,8 +790,8 @@
         <span>EIN STARKER BETRIEB VERDIENT EINEN STARKEN AUFTRITT</span>
       </div>
 
-      <!-- Safety Box (102mm × 145mm) -->
-      <div class="safety-box">
+      <!-- Content Box: 7.0mm left margin -->
+      <div class="content-box">
         
         <!-- Header -->
         <div class="back-header">
@@ -1117,9 +1116,6 @@
             <div class="qr-action-hint">Kamera draufhalten</div>
           </div>
         </div>
-
-        <!-- Spacer above bottom bleed bar -->
-        <div style="height: 6mm;"></div>
 
       </div>
     </div>
