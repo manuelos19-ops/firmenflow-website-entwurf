@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Paper & Ceramic White | Icon: WhatsApp (Solo) -->
+  
+      <defs>
+        <filter id="shadowWhite" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(23, 19, 26, 0.08)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="#ffffff" filter="url(#shadowWhite)" stroke="#e7e2dc" stroke-width="4"/>
+    
+  
+      <!-- WhatsApp Bubble -->
+      <path d="M 256 118 C 179.8 118 118 179.8 118 256 C 118 282.6 125.6 307.5 138.8 328.7 L 122 390 L 185.6 373.4 C 206.2 385.6 230.3 392.8 256 392.8 C 332.2 392.8 394 331 394 256 C 394 179.8 332.2 118 256 118 Z" 
+            fill="none" stroke="#ff705d" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Handset -->
+      <path d="M 206 194 C 201 194 193 199 187 207 C 177 218 175 233 182 248 C 203 289 238 324 282 346 C 295 353 310 351 321 342 L 333 332 C 340 326 343 317 341 308 L 331 283 C 328 274 319 269 310 271 L 295 276 C 279 264 266 250 256 233 L 264 220 C 269 211 267 200 258 195 L 234 182 C 227 179 219 180 206 194 Z" 
+            fill="#ff705d"/>
+    
+</svg>

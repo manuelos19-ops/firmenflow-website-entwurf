@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Signature Coral Circle | Icon: Website (Globus) -->
+  
+      <defs>
+        <linearGradient id="coralCircGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff705d"/>
+          <stop offset="100%" stop-color="#fa5d48"/>
+        </linearGradient>
+        <filter id="shadowCirc" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="rgba(250, 93, 72, 0.32)"/>
+        </filter>
+      </defs>
+      <circle cx="256" cy="256" r="198" fill="url(#coralCircGrad)" filter="url(#shadowCirc)"/>
+      <circle cx="256" cy="256" r="196" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="3"/>
+    
+  
+      <!-- Website Globe -->
+      <g transform="translate(0, 0)">
+        <!-- Outer Circle -->
+        <circle cx="256" cy="256" r="136" fill="none" stroke="#ffffff" stroke-width="26"/>
+        <!-- Equator -->
+        <line x1="120" y1="256" x2="392" y2="256" stroke="#ffffff" stroke-width="24" stroke-linecap="round"/>
+        <!-- Prime Meridian -->
+        <line x1="256" y1="120" x2="256" y2="392" stroke="#ffffff" stroke-width="24" stroke-linecap="round"/>
+        <!-- Latitude Top -->
+        <path d="M 154 196 C 182 216 330 216 358 196" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+        <!-- Latitude Bottom -->
+        <path d="M 154 316 C 182 296 330 296 358 316" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+        <!-- Longitude Oval -->
+        <ellipse cx="256" cy="256" rx="68" ry="136" fill="none" stroke="#ffffff" stroke-width="24"/>
+      </g>
+    
+</svg>

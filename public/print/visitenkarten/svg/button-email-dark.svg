@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Deep Plum & Ink Luxury | Icon: E-Mail -->
+  
+      <defs>
+        <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#24192b"/>
+          <stop offset="100%" stop-color="#17131a"/>
+        </linearGradient>
+        <filter id="shadowDark" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="rgba(23, 19, 26, 0.25)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="url(#darkGrad)" filter="url(#shadowDark)" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+    
+  
+      <!-- Mail Envelope -->
+      <g transform="translate(0, 0)">
+        <!-- Envelope Body -->
+        <rect x="114" y="152" width="284" height="208" rx="34" ry="34" 
+              fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Flap Fold -->
+        <path d="M 122 170 L 238.4 260 C 248.8 268 263.2 268 273.6 260 L 390 170" 
+              fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Bottom Folds -->
+        <path d="M 124 344 L 208 274" 
+              fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+        <path d="M 388 344 L 304 274" 
+              fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+      </g>
+    
+</svg>

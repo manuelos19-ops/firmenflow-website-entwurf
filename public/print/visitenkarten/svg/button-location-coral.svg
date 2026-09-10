@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Firmenflow Signature Coral | Icon: Standort / Adresse -->
+  
+      <defs>
+        <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff705d"/>
+          <stop offset="100%" stop-color="#fa5d48"/>
+        </linearGradient>
+        <filter id="shadowCoral" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="rgba(250, 93, 72, 0.32)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="url(#coralGrad)" filter="url(#shadowCoral)" />
+      <!-- Subtle top inner highlight border -->
+      <rect x="54" y="54" width="404" height="404" rx="110" ry="110" 
+            fill="none" stroke="rgba(255, 255, 255, 0.28)" stroke-width="3"/>
+    
+  
+      <!-- Location Pin -->
+      <g transform="translate(0, 0)">
+        <path d="M 256 122 C 196.4 122 148 170.4 148 230 C 148 305 240 380 251.2 388.8 C 254.1 391.1 257.9 391.1 260.8 388.8 C 272 380 364 305 364 230 C 364 170.4 315.6 122 256 122 Z" 
+              fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="256" cy="226" r="42" fill="#ffffff"/>
+      </g>
+    
+</svg>

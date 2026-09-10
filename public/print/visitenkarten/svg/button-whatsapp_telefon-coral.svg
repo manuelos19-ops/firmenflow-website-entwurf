@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Firmenflow Signature Coral | Icon: WhatsApp & Telefon -->
+  
+      <defs>
+        <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff705d"/>
+          <stop offset="100%" stop-color="#fa5d48"/>
+        </linearGradient>
+        <filter id="shadowCoral" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="rgba(250, 93, 72, 0.32)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="url(#coralGrad)" filter="url(#shadowCoral)" />
+      <!-- Subtle top inner highlight border -->
+      <rect x="54" y="54" width="404" height="404" rx="110" ry="110" 
+            fill="none" stroke="rgba(255, 255, 255, 0.28)" stroke-width="3"/>
+    
+  
+      <!-- WhatsApp Bubble Base -->
+      <path d="M 256 122 C 182 122 122 182 122 256 C 122 281.8 129.5 306.1 142.4 326.8 L 126 386 L 188.1 369.8 C 208.2 381.6 231.5 388.5 256 388.5 C 330 388.5 390 328.5 390 256 C 390 182 330 122 256 122 Z" 
+            fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Ergonomic Phone Receiver inside -->
+      <path d="M 212 198 C 206 198 198 203 193 210 C 184 220 182 234 188 247 C 207 285 240 318 280 338 C 292 344 306 342 316 334 L 327 325 C 333 320 336 312 334 304 L 325 281 C 322 273 314 268 306 270 L 292 274 C 277 263 265 250 256 234 L 263 222 C 267 214 265 204 257 200 L 235 188 C 229 185 221 186 212 198 Z" 
+            fill="#ffffff"/>
+      <!-- Signal waves indicating incoming call/message -->
+      <path d="M 324 186 C 336 198 336 218 324 230" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 346 168 C 368 190 368 226 346 248" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+    
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Paper & Ceramic White | Icon: Website (Globus) -->
+  
+      <defs>
+        <filter id="shadowWhite" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="rgba(23, 19, 26, 0.08)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="#ffffff" filter="url(#shadowWhite)" stroke="#e7e2dc" stroke-width="4"/>
+    
+  
+      <!-- Website Globe -->
+      <g transform="translate(0, 0)">
+        <!-- Outer Circle -->
+        <circle cx="256" cy="256" r="136" fill="none" stroke="#ff705d" stroke-width="26"/>
+        <!-- Equator -->
+        <line x1="120" y1="256" x2="392" y2="256" stroke="#ff705d" stroke-width="24" stroke-linecap="round"/>
+        <!-- Prime Meridian -->
+        <line x1="256" y1="120" x2="256" y2="392" stroke="#ff705d" stroke-width="24" stroke-linecap="round"/>
+        <!-- Latitude Top -->
+        <path d="M 154 196 C 182 216 330 216 358 196" fill="none" stroke="#ff705d" stroke-width="22" stroke-linecap="round"/>
+        <!-- Latitude Bottom -->
+        <path d="M 154 316 C 182 296 330 296 358 316" fill="none" stroke="#ff705d" stroke-width="22" stroke-linecap="round"/>
+        <!-- Longitude Oval -->
+        <ellipse cx="256" cy="256" rx="68" ry="136" fill="none" stroke="#ff705d" stroke-width="24"/>
+      </g>
+    
+</svg>

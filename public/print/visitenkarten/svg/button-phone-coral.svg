@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Style: Firmenflow Signature Coral | Icon: Telefon (Hörer) -->
+  
+      <defs>
+        <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff705d"/>
+          <stop offset="100%" stop-color="#fa5d48"/>
+        </linearGradient>
+        <filter id="shadowCoral" x="-15%" y="-10%" width="130%" height="135%">
+          <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="rgba(250, 93, 72, 0.32)"/>
+        </filter>
+      </defs>
+      <rect x="52" y="52" width="408" height="408" rx="112" ry="112" 
+            fill="url(#coralGrad)" filter="url(#shadowCoral)" />
+      <!-- Subtle top inner highlight border -->
+      <rect x="54" y="54" width="404" height="404" rx="110" ry="110" 
+            fill="none" stroke="rgba(255, 255, 255, 0.28)" stroke-width="3"/>
+    
+  
+      <!-- Solid Handset -->
+      <g transform="translate(0, 0)">
+        <path d="M 188 144 C 176 144 164 150 157 160 L 140 184 C 130 198 128 218 137 234 C 166 290 213 341 273 376 C 288 385 308 384 323 375 L 349 359 C 359 353 365 342 365 330 C 365 323 363 317 358 311 L 314 261 C 305 251 290 249 279 256 L 258 268 C 236 254 219 236 206 215 L 220 195 C 228 185 228 170 219 160 L 206 147 C 201 145 194 144 188 144 Z" 
+              fill="#ffffff"/>
+      </g>
+    
+</svg>
