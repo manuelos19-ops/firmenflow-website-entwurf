@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { Container } from "@/components/ui/Container";
 import { siteIdentity } from "@/config/site";
+import { CookieSettingsButton } from "@/components/consent/CookieSettingsButton";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -77,6 +78,9 @@ export function SiteFooter() {
                 <Link href="/datenschutz" className="hover:text-white transition-colors">
                   Datenschutz
                 </Link>
+              </li>
+              <li>
+                <CookieSettingsButton />
               </li>
             </ul>
           </div>

@@ -13,6 +13,7 @@ import { getSiteUrl } from "@/lib/site-url";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { UtmCleaner } from "@/components/analytics/UtmCleaner";
+import { CookieConsent } from "@/components/consent/CookieConsent";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -78,19 +79,39 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SpeedInsights />
         <Analytics />
         <UtmCleaner />
+        <CookieConsent />
+        <Script id="google-consent-mode" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            var initialAnalyticsConsent = 'denied';
+            try {
+              var stored = localStorage.getItem('firmenflow_consent');
+              if (stored) {
+                var parsed = JSON.parse(stored);
+                if (parsed.analytics) {
+                  initialAnalyticsConsent = 'granted';
+                }
+              }
+            } catch (e) {}
+
+            gtag('consent', 'default', {
+              'analytics_storage': initialAnalyticsConsent,
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
+
+            gtag('js', new Date());
+            gtag('config', 'G-EKM1716MWN');
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EKM1716MWN"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-EKM1716MWN');
-          `}
-        </Script>
       </body>
     </html>
   );
