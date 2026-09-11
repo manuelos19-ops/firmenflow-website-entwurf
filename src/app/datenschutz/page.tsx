@@ -3,10 +3,12 @@ import Link from "next/link";
 import { ArrowLeft, Mail, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
+import { CookieSettingsButton } from "@/components/consent/CookieSettingsButton";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
-  description: "Datenschutzerklärung von Firmenflow – Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme, Online-Terminbuchung (meetergo) und E-Mail-Kommunikation.",
+  description:
+    "Datenschutzerklärung von Firmenflow – Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme, Terminbuchung, Cookie-Einstellungen und Webanalyse (Google Analytics).",
   alternates: {
     canonical: "/datenschutz",
   },
@@ -179,25 +181,91 @@ export default function DatenschutzPage() {
             </p>
           </section>
 
-          {/* 8. Keine Tracking Cookies */}
+          {/* 8. Cookies und Consent-Management (Cookie-Banner) */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">8. Keine Tracking-Cookies oder Werbe-Pixel</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">8. Cookies und Consent-Management (Cookie-Banner)</h2>
             <p>
-              Ich verzichte auf dieser Website bewusst auf zustimmungspflichtige Analyse-Tools wie Google Analytics, Matomo, Meta-Pixel (Facebook-Pixel) oder ähnliche Tracking- und Profiling-Dienste von Drittanbietern. Es werden ausschließlich technisch notwendige Cookies eingesetzt, die für den sicheren Betrieb der Seite erforderlich sind. Daher benötige ich kein störendes Cookie-Banner.
+              Diese Website verwendet Cookies und ähnliche Speichertechnologien. Cookies sind kleine Textdateien, die auf deinem Endgerät gespeichert werden. Wir unterscheiden zwischen:
+            </p>
+            <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
+              <li>
+                <strong>Technisch essenzielle Cookies:</strong> Diese sind für den sicheren und einwandfreien Betrieb der Website sowie zur Speicherung deiner Cookie-Einwilligung erforderlich. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am reibungslosen Betrieb der Website).
+              </li>
+              <li>
+                <strong>Analyse-Cookies (Google Analytics):</strong> Diese dienen der statistischen Auswertung des Nutzungsverhaltens, um unser Webangebot zu optimieren. Sie werden ausschließlich nach deiner ausdrücklichen Einwilligung gesetzt. Rechtsgrundlage ist § 25 Abs. 1 TDDDG i. V. m. Art. 6 Abs. 1 lit. a DSGVO.
+              </li>
+            </ul>
+            <p>
+              Zur Einholung und Verwaltung deiner Einwilligung setzen wir ein maßgeschneidertes Consent-Management-Tool ein. Deine getroffene Auswahl wird lokal in deinem Browser (im <code>localStorage</code> unter dem Schlüssel <code>firmenflow_consent</code>) mit Zeitstempel und Versionsnummer gespeichert, damit du beim erneuten Besuch nicht erneut gefragt wirst.
+            </p>
+            <p>
+              Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft anpassen oder widerrufen. Klicke dazu auf den folgenden Button oder nutze den Link „Cookie-Einstellungen“ im Footer unserer Website:
+            </p>
+            <div className="pt-2">
+              <CookieSettingsButton className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[var(--color-plum)] text-white text-xs sm:text-sm font-semibold hover:bg-[var(--color-plum-light)] transition-colors cursor-pointer shadow-sm">
+                Cookie-Einstellungen anpassen / widerrufen
+              </CookieSettingsButton>
+            </div>
+          </section>
+
+          {/* 9. Webanalyse via Google Analytics 4 */}
+          <section className="space-y-3">
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">9. Webanalyse via Google Analytics 4</h2>
+            <p>
+              Soweit du über unser Cookie-Banner deine Einwilligung erteilt hast, nutzt diese Website <strong>Google Analytics 4</strong>, einen Webanalysedienst der <strong>Google Ireland Limited</strong> („Google“), Gordon House, Barrow Street, Dublin 4, Irland (Mutterunternehmen: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).
+            </p>
+            <p>
+              Google Analytics verwendet Cookies und Gerätekennungen, die eine Analyse der Benutzung der Website durch dich ermöglichen. Die dabei erhobenen Informationen (z. B. gekürzte IP-Adresse, Datum und Uhrzeit des Aufrufs, aufgerufene Seiten, Verweildauer, Klicks, Browsertyp und Betriebssystem) werden in der Regel an einen Server von Google übertragen und dort verarbeitet.
+            </p>
+            <p>
+              <strong>IP-Anonymisierung:</strong> Auf dieser Website ist die IP-Anonymisierung in Google Analytics standardmäßig aktiviert. Deine IP-Adresse wird von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung gekürzt.
+            </p>
+            <p>
+              <strong>Google Consent Mode v2:</strong> Wir setzen den Google Consent Mode v2 ein. Das bedeutet, dass Google Analytics initial mit dem Status <code>analytics_storage: &apos;denied&apos;</code> konfiguriert ist. Erst wenn du im Cookie-Banner aktiv auf „Alle akzeptieren“ klickst oder in den Einstellungen die Kategorie Analyse aktivierst, wird der Status auf <code>granted</code> aktualisiert und Tracking-Cookies gesetzt.
+            </p>
+            <p>
+              <strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt ausschließlich auf Grundlage deiner Einwilligung gemäß <strong>Art. 6 Abs. 1 lit. a DSGVO</strong> und <strong>§ 25 Abs. 1 TDDDG</strong>. Du kannst die Einwilligung jederzeit über den Button „Cookie-Einstellungen“ widerrufen.
+            </p>
+            <p>
+              <strong>Drittlandübermittlung (USA):</strong> Google LLC ist unter dem <em>EU-U.S. Data Privacy Framework (DPF)</em> zertifiziert. Für Unternehmen, die nach dem DPF zertifiziert sind, besteht ein Angemessenheitsbeschluss der Europäischen Kommission (Art. 45 DSGVO). Darüber hinaus haben wir mit Google die Standardvertragsklauseln (SCCs) vereinbart.
+            </p>
+            <p>
+              <strong>Speicherdauer:</strong> Die von uns gesendeten und mit Cookies oder Nutzerkennungen verknüpften Daten werden nach Ablauf der in Google Analytics definierten Aufbewahrungsdauer (14 Monate) automatisch gelöscht.
+            </p>
+            <p className="text-xs text-[var(--color-muted)]">
+              Weitere Informationen zur Datennutzung durch Google findest du in der Datenschutzerklärung von Google unter:{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--color-plum)]"
+              >
+                https://policies.google.com/privacy
+              </a>{" "}
+              sowie zum Opt-Out-Add-on für Browser unter:{" "}
+              <a
+                href="https://tools.google.com/dlpage/gaoptout"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--color-plum)]"
+              >
+                https://tools.google.com/dlpage/gaoptout
+              </a>
+              .
             </p>
           </section>
 
-          {/* 9. Speicherdauer */}
+          {/* 10. Speicherdauer */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">9. Speicherdauer</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">10. Allgemeine Speicherdauer</h2>
             <p>
               Deine personenbezogenen Daten verbleiben bei mir, bis der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Projektanfrage). Zwingende gesetzliche Bestimmungen – insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen (z. B. nach HGB oder AO bei erteilten Aufträgen) – bleiben unberührt. Nach Ablauf dieser Fristen werden die Daten routinemäßig und datenschutzkonform gelöscht.
             </p>
           </section>
 
-          {/* 10. Betroffenenrechte */}
+          {/* 11. Betroffenenrechte */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">10. Deine Rechte als betroffene Person</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">11. Deine Rechte als betroffene Person</h2>
             <p>
               Du hast im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
             </p>
