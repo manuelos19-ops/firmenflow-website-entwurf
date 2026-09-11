@@ -87,7 +87,7 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70">
           <p>
             © {currentYear} {siteIdentity.legalName}. Alle Rechte vorbehalten.
           </p>
@@ -95,7 +95,7 @@ export function SiteFooter() {
         </div>
 
         {/* Rechtlicher Marken-Hinweis */}
-        <div className="pt-2 text-[11px] text-white/40 text-center sm:text-left leading-relaxed">
+        <div className="pt-2 text-xs text-white/70 text-center sm:text-left leading-relaxed">
           <p>
             Hinweis: Google, Google Maps, Google Search und Google Unternehmensprofil sind Marken der Google LLC. Firmenflow ist ein unabhängiger Dienstleister für Webdesign und digitale Lokalpräsenz und steht in keiner geschäftlichen oder offiziellen Verbindung zu Google LLC.
           </p>

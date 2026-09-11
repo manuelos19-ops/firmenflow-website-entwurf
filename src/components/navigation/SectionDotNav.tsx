@@ -115,7 +115,7 @@ export function SectionDotNav() {
               onClick={() => scrollTo(sec.id)}
               aria-label={`Springe zu ${sec.label}`}
               className={cn(
-                "relative rounded-full transition-all duration-300 ease-[var(--ease-out)] cursor-pointer flex items-center justify-center",
+                "relative rounded-full transition-all duration-300 ease-[var(--ease-out)] cursor-pointer flex items-center justify-center before:content-[''] before:absolute before:-inset-2.5",
                 isActive
                   ? "h-7 w-2.5 bg-[var(--color-coral)] shadow-md shadow-[var(--color-coral)]/40 ring-4 ring-[var(--color-coral)]/20"
                   : "h-2 w-2 bg-[var(--color-ink)]/25 hover:bg-[var(--color-coral)] hover:scale-150"

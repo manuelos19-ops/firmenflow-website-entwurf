@@ -11,3 +11,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 # Projekt-Regeln (Firmenflow)
 - **Tonalität & Marke:** Niemals mehr „direkt mit Manu“ verwenden. Überall und ausnahmslos **„Persönlich mit Manu“** verwenden.
 - **Sprache:** Alle Git-Commits, Vercel- und Deployment-Infos immer auf Deutsch verfassen.
+- **Tracking & Legal Consistency:** Sobald Tracking-, Analytics- oder Consent-Tools (wie Google Analytics, Pixel, Cookie-Banner) geändert werden, muss zwingend im selben Zug die Datenschutzerklärung (`/datenschutz`) synchronisiert, veraltete Klauseln entfernt und der interaktive Widerrufs-Button eingebunden werden.

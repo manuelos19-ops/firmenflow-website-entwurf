@@ -102,7 +102,7 @@
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
-  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   
   --motion-lg: 450ms;
   --motion-md: 260ms;
@@ -320,22 +320,30 @@ img {
   animation: float-postit-2 7s ease-in-out infinite 0.9s;
 }
 
-/* Reduced motion */
+/* Reduced motion - Neutralisiere große Bewegungen, erhalte verständliches UI-Feedback */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 
-  .marquee-track {
-    animation: none !important;
+  /* Dezent erhaltene Übergänge für essentielle UI-Zustände (Fokus, Hover, Dialoge) */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="dialog"] {
+    transition-duration: 100ms !important;
   }
 
-  .rotating-badge {
+  .marquee-track,
+  .rotating-badge,
+  .float-card {
     animation: none !important;
   }
 

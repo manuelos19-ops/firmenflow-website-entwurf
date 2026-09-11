@@ -36,9 +36,9 @@ export function ButtonLink({
     primary:
       "bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] shadow-md shadow-[var(--color-coral)]/20 hover:shadow-lg hover:shadow-[var(--color-coral)]/30",
     secondary:
-      "bg-[var(--color-paper)] text-[#17131a] !text-[#17131a] hover:bg-white border border-[var(--color-line)] shadow-sm hover:border-[var(--color-plum)]/40 font-semibold",
+      "bg-[var(--color-paper)] text-[var(--color-ink)] !text-[var(--color-ink)] hover:bg-white border border-[var(--color-line)] shadow-sm hover:border-[var(--color-plum)]/40 font-semibold",
     dark: "bg-[var(--color-plum)] text-white hover:bg-[var(--color-plum-light)] shadow-md shadow-[var(--color-plum)]/20",
-    ghost: "bg-transparent text-[#17131a] !text-[#17131a] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
+    ghost: "bg-transparent text-[var(--color-ink)] !text-[var(--color-ink)] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#20ba5a] shadow-md shadow-[#25D366]/25 hover:shadow-lg hover:shadow-[#25D366]/35 font-semibold",
   };
