@@ -120,10 +120,10 @@ export function CookieConsent() {
   return (
     <>
       {/* =========================================================================
-          EBENE 1: Direkt sichtbares Banner (Unten fixiert)
+          EBENE 1: Direkt sichtbares Banner (Unten fixiert, mobil-optimiert)
           Anforderungen e-Recht24:
-          - 3 gleichwertige Buttons (Akzeptieren, Ablehnen/Essenzielle, Einstellungen)
-          - Kein Nudging / Dark Patterns
+          - 3 gleichwertige Optionen (Akzeptieren, Ablehnen/Essenzielle, Einstellungen)
+          - Kein Nudging / Dark Patterns (Mobil 50/50 Grid für Hauptbuttons)
           - Direkte Links zu Impressum & Datenschutzerklärung
           ========================================================================= */}
       {showBanner && (
@@ -131,31 +131,31 @@ export function CookieConsent() {
           role="dialog"
           aria-labelledby={titleId}
           aria-describedby={descId}
-          className="fixed bottom-0 inset-x-0 z-[100] p-4 sm:p-6 transition-all duration-300 pointer-events-none"
+          className="fixed bottom-0 inset-x-0 z-[100] p-2.5 sm:p-6 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] transition-all duration-300 pointer-events-none"
         >
-          <div className="max-w-4xl mx-auto pointer-events-auto bg-[var(--color-paper)]/95 backdrop-blur-md text-[var(--color-ink)] border border-[var(--color-plum)]/15 rounded-2xl sm:rounded-3xl shadow-2xl p-5 sm:p-7 space-y-5 ring-1 ring-black/5">
-            <div className="space-y-2">
+          <div className="max-w-3xl mx-auto pointer-events-auto bg-[var(--color-paper)]/98 backdrop-blur-md text-[var(--color-ink)] border border-[var(--color-plum)]/15 rounded-2xl sm:rounded-3xl shadow-2xl p-3.5 sm:p-6 space-y-2.5 sm:space-y-4 ring-1 ring-black/5">
+            <div className="space-y-1 sm:space-y-2">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-coral)]" />
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[var(--color-coral)] shrink-0" />
                 <h2
                   id={titleId}
-                  className="font-bold text-base sm:text-lg text-[var(--color-plum)] tracking-tight"
+                  className="font-bold text-xs sm:text-base text-[var(--color-plum)] tracking-tight"
                 >
-                  Deine Privatsphäre & Cookie-Einstellungen
+                  Privatsphäre & Cookie-Einstellungen
                 </h2>
               </div>
               <p
                 id={descId}
-                className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed"
+                className="text-[11px] sm:text-xs text-[var(--color-muted)] leading-relaxed"
               >
-                Wir nutzen Cookies und Tracking-Technologien (Google Analytics), um unsere Website für dich nutzerfreundlich zu gestalten, Zugriffe zu analysieren und unser Angebot zu verbessern. Du kannst selbst entscheiden, welche Kategorien du zulässt. Weitere Details findest du in unserer{" "}
+                Wir nutzen essenzielle Cookies für den Betrieb der Website sowie – mit deiner Einwilligung – Google Analytics zur Optimierung. Du kannst deine Auswahl jederzeit anpassen. Details in unserer{" "}
                 <Link
                   href="/datenschutz"
                   className="underline font-medium text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors"
                 >
                   Datenschutzerklärung
                 </Link>{" "}
-                sowie im{" "}
+                und im{" "}
                 <Link
                   href="/impressum"
                   className="underline font-medium text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors"
@@ -166,28 +166,31 @@ export function CookieConsent() {
               </p>
             </div>
 
-            {/* Die 3 gleichwertigen Buttons nach e-Recht24 */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2.5 sm:gap-3 pt-2 border-t border-[var(--color-plum)]/10">
+            {/* Buttons: Auf Mobile 50/50 Grid für Hauptentscheidungen, Einstellungen darunter; Desktop flex-row */}
+            <div className="pt-2 border-t border-[var(--color-plum)]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-1.5 sm:gap-3">
+              <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3 order-1 sm:order-2">
+                <button
+                  type="button"
+                  onClick={handleRejectAll}
+                  className="px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-xl border border-[var(--color-plum)]/30 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
+                >
+                  Nur essenzielle
+                </button>
+                <button
+                  type="button"
+                  onClick={handleAcceptAll}
+                  className="px-2.5 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none cursor-pointer"
+                >
+                  Alle akzeptieren
+                </button>
+              </div>
+
               <button
                 type="button"
                 onClick={handleOpenSettings}
-                className="px-4 py-2.5 rounded-xl border border-[var(--color-plum)]/20 text-xs sm:text-sm font-semibold text-[var(--color-plum)] hover:bg-[var(--color-plum)]/5 transition-all text-center order-3 sm:order-1 focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none"
+                className="py-1 sm:py-2.5 px-2 sm:px-4 rounded-xl text-center text-[11px] sm:text-xs font-semibold text-[var(--color-plum)]/80 hover:text-[var(--color-plum)] sm:border sm:border-[var(--color-plum)]/20 hover:bg-[var(--color-plum)]/5 transition-all order-2 sm:order-1 focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
               >
-                Einstellungen
-              </button>
-              <button
-                type="button"
-                onClick={handleRejectAll}
-                className="px-5 py-2.5 rounded-xl border border-[var(--color-plum)]/30 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center order-2 focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none"
-              >
-                Nur essenzielle Cookies
-              </button>
-              <button
-                type="button"
-                onClick={handleAcceptAll}
-                className="px-6 py-2.5 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center order-1 sm:order-3 focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none"
-              >
-                Alle akzeptieren
+                Einstellungen anpassen
               </button>
             </div>
           </div>
@@ -207,26 +210,26 @@ export function CookieConsent() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={modalTitleId}
-          className="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity"
+          className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity"
         >
-          <div className="w-full max-w-2xl bg-[var(--color-paper)] text-[var(--color-ink)] rounded-2xl sm:rounded-3xl border border-[var(--color-plum)]/20 shadow-2xl p-6 sm:p-8 space-y-6 max-h-[90vh] flex flex-col">
+          <div className="w-full max-w-2xl bg-[var(--color-paper)] text-[var(--color-ink)] rounded-2xl sm:rounded-3xl border border-[var(--color-plum)]/20 shadow-2xl p-4 sm:p-8 space-y-4 sm:space-y-6 max-h-[90vh] flex flex-col">
             {/* Modal Header */}
-            <div className="flex items-start justify-between gap-4 pb-4 border-b border-[var(--color-plum)]/10">
+            <div className="flex items-start justify-between gap-4 pb-3 sm:pb-4 border-b border-[var(--color-plum)]/10">
               <div className="space-y-1">
                 <h3
                   id={modalTitleId}
-                  className="font-bold text-lg sm:text-xl text-[var(--color-plum)] tracking-tight"
+                  className="font-bold text-base sm:text-xl text-[var(--color-plum)] tracking-tight"
                 >
                   Cookie- & Datenschutz-Einstellungen
                 </h3>
-                <p className="text-xs sm:text-sm text-[var(--color-muted)]">
-                  Wähle hier granular aus, welche Cookies und Verarbeitungen du auf Firmenflow erlauben möchtest.
+                <p className="text-[11px] sm:text-sm text-[var(--color-muted)]">
+                  Wähle granular aus, welche Cookies und Verarbeitungen du auf Firmenflow erlauben möchtest.
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setShowModal(false)}
-                className="p-1.5 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-plum)]/10 transition-colors focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none"
+                className="p-1.5 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-plum)]/10 transition-colors focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 aria-label="Dialog schließen"
               >
                 <svg
@@ -246,13 +249,13 @@ export function CookieConsent() {
             </div>
 
             {/* Modal Content / Kategorien */}
-            <div className="space-y-4 overflow-y-auto pr-1 flex-1 text-sm">
+            <div className="space-y-3 sm:space-y-4 overflow-y-auto pr-1 flex-1 text-xs sm:text-sm">
               {/* Kategorie 1: Technisch essenziell */}
-              <div className="p-4 rounded-xl border border-[var(--color-plum)]/15 bg-white/70 space-y-2">
+              <div className="p-3 sm:p-4 rounded-xl border border-[var(--color-plum)]/15 bg-white/70 space-y-1.5 sm:space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-[var(--color-plum)] flex items-center gap-2">
+                  <span className="font-bold text-xs sm:text-sm text-[var(--color-plum)] flex items-center gap-2">
                     Essenziell & Technisch notwendig
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[var(--color-plum)]/10 text-[var(--color-plum)]">
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[var(--color-plum)]/10 text-[var(--color-plum)]">
                       Immer aktiv
                     </span>
                   </span>
@@ -264,17 +267,17 @@ export function CookieConsent() {
                     className="w-4 h-4 rounded text-[var(--color-plum)] focus:ring-0 cursor-not-allowed opacity-75"
                   />
                 </div>
-                <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-[var(--color-muted)] leading-relaxed">
                   Diese Cookies sind für den technischen Betrieb der Website unverzichtbar (z. B. Navigation, Barrierefreiheit, Sicherheit und das Speichern deiner Cookie-Einstellungen). Sie können nicht deaktiviert werden.
                 </p>
               </div>
 
               {/* Kategorie 2: Analyse / Google Analytics */}
-              <div className="p-4 rounded-xl border border-[var(--color-plum)]/15 bg-white/70 space-y-2">
+              <div className="p-3 sm:p-4 rounded-xl border border-[var(--color-plum)]/15 bg-white/70 space-y-1.5 sm:space-y-2">
                 <div className="flex items-center justify-between">
                   <label
                     htmlFor="category-analytics"
-                    className="font-bold text-[var(--color-plum)] cursor-pointer select-none"
+                    className="font-bold text-xs sm:text-sm text-[var(--color-plum)] cursor-pointer select-none"
                   >
                     Analyse & Reichweitenmessung (Google Analytics)
                   </label>
@@ -286,15 +289,15 @@ export function CookieConsent() {
                     className="w-4 h-4 rounded text-[var(--color-coral)] focus:ring-[var(--color-coral)] cursor-pointer"
                   />
                 </div>
-                <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                  Erlaubt uns, mittels Google Analytics 4 (Property: <code className="text-[11px] bg-black/5 px-1 py-0.5 rounded">G-EKM1716MWN</code>) das Besucherverhalten anonymisiert zu analysieren und die Website kontinuierlich zu optimieren. Es werden Gerätekennungen und Cookies gesetzt. Die Datenverarbeitung erfolgt nur mit deiner ausdrücklichen Einwilligung.
+                <p className="text-[11px] sm:text-xs text-[var(--color-muted)] leading-relaxed">
+                  Erlaubt uns, mittels Google Analytics 4 (Property: <code className="text-[10px] sm:text-[11px] bg-black/5 px-1 py-0.5 rounded">G-EKM1716MWN</code>) das Besucherverhalten anonymisiert zu analysieren und die Website kontinuierlich zu optimieren. Es werden Gerätekennungen und Cookies gesetzt. Die Datenverarbeitung erfolgt nur mit deiner ausdrücklichen Einwilligung.
                 </p>
               </div>
             </div>
 
             {/* Modal Footer / Aktionen */}
-            <div className="pt-4 border-t border-[var(--color-plum)]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-              <div className="text-xs text-[var(--color-muted)]">
+            <div className="pt-3 sm:pt-4 border-t border-[var(--color-plum)]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="text-[11px] sm:text-xs text-[var(--color-muted)] text-center sm:text-left">
                 <Link
                   href="/datenschutz"
                   className="underline hover:text-[var(--color-coral)] transition-colors"
@@ -310,27 +313,27 @@ export function CookieConsent() {
                 </Link>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+              <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-2.5">
                 <button
                   type="button"
                   onClick={handleRejectAll}
-                  className="px-4 py-2 rounded-xl border border-[var(--color-plum)]/25 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none"
+                  className="px-3 sm:px-4 py-2 rounded-xl border border-[var(--color-plum)]/25 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 >
                   Alle ablehnen
                 </button>
                 <button
                   type="button"
-                  onClick={handleSaveModalSettings}
-                  className="px-5 py-2 rounded-xl bg-[var(--color-plum)] hover:bg-[var(--color-plum-light)] text-white text-xs sm:text-sm font-bold transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none"
+                  onClick={handleAcceptAll}
+                  className="px-3 sm:px-5 py-2 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none cursor-pointer"
                 >
-                  Auswahl speichern
+                  Alle akzeptieren
                 </button>
                 <button
                   type="button"
-                  onClick={handleAcceptAll}
-                  className="px-5 py-2 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none"
+                  onClick={handleSaveModalSettings}
+                  className="col-span-2 sm:col-span-1 px-4 sm:px-5 py-2 rounded-xl bg-[var(--color-plum)] hover:bg-[var(--color-plum-light)] text-white text-xs sm:text-sm font-bold transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 >
-                  Alle akzeptieren
+                  Auswahl speichern
                 </button>
               </div>
             </div>
