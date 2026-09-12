@@ -359,3 +359,9 @@ img {
     cursor: auto !important;
   }
 }
+
+/* Sofortige Ausblendung des Cookie-Banners bei bereits getroffener Entscheidung (Zero-Flicker & Zero-Delay) */
+html.consent-decided #cookie-consent-banner {
+  display: none !important;
+}
+

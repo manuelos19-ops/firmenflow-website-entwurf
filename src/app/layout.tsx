@@ -58,6 +58,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="de">
       <head>
         <JsonLd />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('firmenflow_consent')){document.documentElement.classList.add('consent-decided')}}catch(e){}`,
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col">
         <SmoothScrollProvider>

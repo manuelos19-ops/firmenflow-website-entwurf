@@ -41,8 +41,7 @@ function clearAnalyticsCookies() {
 }
 
 export function CookieConsent() {
-  const [mounted, setMounted] = useState(false);
-  const [showBanner, setShowBanner] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
   // Settings state in Modal
@@ -54,8 +53,6 @@ export function CookieConsent() {
 
   // Load existing consent on mount
   useEffect(() => {
-    setMounted(true);
-
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
@@ -63,8 +60,8 @@ export function CookieConsent() {
         setAnalyticsChecked(Boolean(parsed.analytics));
         // Ensure Google Consent Mode aligns with saved state
         updateGtagConsent(Boolean(parsed.analytics));
+        setShowBanner(false);
       } else {
-        // No choice made yet: show level 1 banner
         setShowBanner(true);
       }
     } catch {
@@ -136,22 +133,24 @@ export function CookieConsent() {
     saveConsent(analyticsChecked);
   };
 
-  if (!mounted) return null;
-
   return (
     <>
       {/* =========================================================================
           EBENE 1: Direkt sichtbares Banner (Unten fixiert, mobil-optimiert)
-          Anforderungen e-Recht24:
-          - 3 gleichwertige Optionen (Akzeptieren, Ablehnen/Essenzielle, Einstellungen)
+          Anforderungen e-Recht24 / DSGVO:
+          - 3 gleichwertige Optionen (Akzeptieren, Ablehnen, Einstellungen)
+          - Standardmäßige Button-Bezeichnung 'Alle ablehnen' für Scanner & Nutzer
           - Kein Nudging / Dark Patterns (Mobil 50/50 Grid für Hauptbuttons)
           - Direkte Links zu Impressum & Datenschutzerklärung
           ========================================================================= */}
       {showBanner && (
         <div
+          id="cookie-consent-banner"
+          data-cmp="firmenflow"
           role="dialog"
           aria-labelledby={titleId}
           aria-describedby={descId}
+          aria-label="Cookie-Einwilligung"
           className="fixed bottom-0 inset-x-0 z-[100] p-2.5 sm:p-6 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] transition-all duration-300 pointer-events-none"
         >
           <div className="max-w-3xl mx-auto pointer-events-auto bg-[var(--color-paper)]/98 backdrop-blur-md text-[var(--color-ink)] border border-[var(--color-plum)]/15 rounded-2xl sm:rounded-3xl shadow-2xl p-3.5 sm:p-6 space-y-2.5 sm:space-y-4 ring-1 ring-black/5">
@@ -191,15 +190,23 @@ export function CookieConsent() {
             <div className="pt-2 border-t border-[var(--color-plum)]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-1.5 sm:gap-3">
               <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3 order-1 sm:order-2">
                 <button
+                  id="cookie-reject-all"
+                  data-action="reject"
+                  data-consent="reject"
                   type="button"
                   onClick={handleRejectAll}
+                  aria-label="Alle Cookies ablehnen (nur essenzielle verwenden)"
                   className="px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-xl border border-[var(--color-plum)]/30 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 >
-                  Nur essenzielle
+                  Alle ablehnen
                 </button>
                 <button
+                  id="cookie-accept-all"
+                  data-action="accept"
+                  data-consent="accept"
                   type="button"
                   onClick={handleAcceptAll}
+                  aria-label="Alle Cookies akzeptieren"
                   className="px-2.5 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none cursor-pointer"
                 >
                   Alle akzeptieren
@@ -207,8 +214,12 @@ export function CookieConsent() {
               </div>
 
               <button
+                id="cookie-settings-button"
+                data-action="settings"
+                data-consent="settings"
                 type="button"
                 onClick={handleOpenSettings}
+                aria-label="Cookie-Einstellungen anpassen"
                 className="py-1 sm:py-2.5 px-2 sm:px-4 rounded-xl text-center text-[11px] sm:text-xs font-semibold text-[var(--color-plum)]/80 hover:text-[var(--color-plum)] sm:border sm:border-[var(--color-plum)]/20 hover:bg-[var(--color-plum)]/5 transition-all order-2 sm:order-1 focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
               >
                 Einstellungen anpassen
@@ -336,22 +347,31 @@ export function CookieConsent() {
 
               <div className="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-2.5">
                 <button
+                  id="modal-cookie-reject"
+                  data-action="reject"
                   type="button"
                   onClick={handleRejectAll}
+                  aria-label="Alle Cookies ablehnen"
                   className="px-3 sm:px-4 py-2 rounded-xl border border-[var(--color-plum)]/25 text-xs sm:text-sm font-semibold text-[var(--color-ink)] hover:bg-[var(--color-plum)]/5 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 >
                   Alle ablehnen
                 </button>
                 <button
+                  id="modal-cookie-accept"
+                  data-action="accept"
                   type="button"
                   onClick={handleAcceptAll}
+                  aria-label="Alle Cookies akzeptieren"
                   className="px-3 sm:px-5 py-2 rounded-xl bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white text-xs sm:text-sm font-bold shadow-md shadow-[var(--color-coral)]/20 transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:outline-none cursor-pointer"
                 >
                   Alle akzeptieren
                 </button>
                 <button
+                  id="modal-cookie-save"
+                  data-action="save"
                   type="button"
                   onClick={handleSaveModalSettings}
+                  aria-label="Ausgewählte Cookie-Einstellungen speichern"
                   className="col-span-2 sm:col-span-1 px-4 sm:px-5 py-2 rounded-xl bg-[var(--color-plum)] hover:bg-[var(--color-plum-light)] text-white text-xs sm:text-sm font-bold transition-all text-center focus-visible:ring-2 focus-visible:ring-[var(--color-coral)] focus-visible:outline-none cursor-pointer"
                 >
                   Auswahl speichern
