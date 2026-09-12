@@ -23,6 +23,23 @@ function updateGtagConsent(analyticsGranted: boolean) {
   }
 }
 
+// Löscht GA-Cookies bei Widerruf oder Ablehnung
+function clearAnalyticsCookies() {
+  if (typeof document === "undefined") return;
+  const cookies = document.cookie.split(";");
+  for (const c of cookies) {
+    const name = c.split("=")[0].trim();
+    if (name.startsWith("_ga")) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      if (typeof window !== "undefined") {
+        const hostname = window.location.hostname;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${hostname};`;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${hostname};`;
+      }
+    }
+  }
+}
+
 export function CookieConsent() {
   const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
@@ -90,6 +107,9 @@ export function CookieConsent() {
     }
 
     updateGtagConsent(analyticsGranted);
+    if (!analyticsGranted) {
+      clearAnalyticsCookies();
+    }
     setAnalyticsChecked(analyticsGranted);
     setShowBanner(false);
     setShowModal(false);

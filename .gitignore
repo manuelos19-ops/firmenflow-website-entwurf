@@ -49,3 +49,6 @@ next-env.d.ts
 
 # print build temp (Python venv etc.)
 /print-assets/tmp/
+
+# tooling / codex
+/.codex/
