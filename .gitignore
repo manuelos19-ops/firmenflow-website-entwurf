@@ -46,3 +46,6 @@ next-env.d.ts
 /work/
 /outputs/
 .seo-cache/
+
+# print build temp (Python venv etc.)
+/print-assets/tmp/

@@ -1,0 +1,22 @@
+{
+  "pages": 2,
+  "media_mm": [
+    108,
+    151
+  ],
+  "trim_mm": [
+    105,
+    148
+  ],
+  "safe_mm": [
+    102,
+    145
+  ],
+  "bleed_each_edge_mm": 1.5,
+  "text_bounds_checked": 37,
+  "qr_decoded": [
+    "https://firmenflow.de"
+  ],
+  "color_space": "RGB, no printer-specific CMYK profile supplied",
+  "photo_effective_dpi": 495
+}
