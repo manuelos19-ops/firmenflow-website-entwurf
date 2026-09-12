@@ -2,10 +2,11 @@
 
 import { useEffect, useState, useId } from "react";
 import Link from "next/link";
+import { GA_MEASUREMENT_ID } from "@/config/analytics";
 
 export interface ConsentSettings {
   essential: boolean; // Always true
-  analytics: boolean; // Google Analytics (G-EKM1716MWN)
+  analytics: boolean; // Google Analytics (GA_MEASUREMENT_ID)
   timestamp: number;
   version: string;
 }
@@ -290,7 +291,7 @@ export function CookieConsent() {
                   />
                 </div>
                 <p className="text-[11px] sm:text-xs text-[var(--color-muted)] leading-relaxed">
-                  Erlaubt uns, mittels Google Analytics 4 (Property: <code className="text-[10px] sm:text-[11px] bg-black/5 px-1 py-0.5 rounded">G-EKM1716MWN</code>) das Besucherverhalten anonymisiert zu analysieren und die Website kontinuierlich zu optimieren. Es werden Gerätekennungen und Cookies gesetzt. Die Datenverarbeitung erfolgt nur mit deiner ausdrücklichen Einwilligung.
+                  Erlaubt uns, mittels Google Analytics 4 (Property: <code className="text-[10px] sm:text-[11px] bg-black/5 px-1 py-0.5 rounded">{GA_MEASUREMENT_ID}</code>) das Besucherverhalten anonymisiert zu analysieren und die Website kontinuierlich zu optimieren. Es werden Gerätekennungen und Cookies gesetzt. Die Datenverarbeitung erfolgt nur mit deiner ausdrücklichen Einwilligung.
                 </p>
               </div>
             </div>
