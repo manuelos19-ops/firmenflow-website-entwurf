@@ -1,0 +1,38 @@
+# Firmenflow – Webdesign & Lokalpräsenz persönlich mit Manu
+
+> Persönliches Webdesign, Website-Relaunch, Foto/Video vor Ort und Google-Business-Optimierung für Betriebe in Wesel, am Niederrhein und in NRW.
+
+Firmenflow wird von Manuel Landeck („Manu“) geführt und richtet sich an Handwerker, Dienstleister und inhabergeführte Unternehmen. Das Leitmotiv lautet: „Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“ Betriebe erhalten einen festen Ansprechpartner auf Augenhöhe – ohne Agenturbürokratie, ohne Fachchinesisch und mit fairen Festpreisen.
+
+## Kernleistungen
+
+- [Neue Website von Grund auf](https://www.firmenflow.de/#leistungen): Schlüsselfertige Unternehmens-Websites mit klaren Texten, moderner Gestaltung und extrem schnellen Ladezeiten (< 1s auf Mobilgeräten). Transparente Festpreise ab 490 € für kompakte Web-Visitenkarten bis hin zu vollständigen Firmenauftritten.
+- [Website-Relaunch & Modernisierung](https://www.firmenflow.de/#leistungen): Entrümpelung veralteter Seiten, frisches Design, zeitgemäße mobile Darstellung und Schutz gewachsener Google-Rankings durch saubere Weiterleitungen.
+- [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360): Vollständige Optimierung des Google-Unternehmensprofils (Google Business / Maps), richtlinienkonformes Beantworten von Rezensionen, systematischer Bewertungsaufbau und monatliche Customer-Voice-Reports.
+- [Foto- & Videoaufnahmen vor Ort](https://www.firmenflow.de/#leistungen): Echte Teamfotos, authentische Arbeitsaufnahmen und kurze Image-Videos direkt vor Ort im Betrieb statt anonymer Stockfotos.
+- [Rundum-Sorglos-Betreuung](https://www.firmenflow.de/#faq): Sicheres Hosting, SSL, regelmäßige Backups und unkomplizierte Inhaltsänderungen auf Zuruf per WhatsApp.
+
+## Philosophie & Arbeitsweise
+
+- [Persönlich mit Manu](https://www.firmenflow.de/#manu): Direkte Betreuung durch Inhaber Manuel Landeck. Feste Absprachen, klare Empfehlungen und persönliche Verantwortung.
+- [4-Schritte-Ablauf](https://www.firmenflow.de/#ablauf): 1. Kostenfreies Kennenlernen (ca. 30 Min.) -> 2. Struktur & Design-Entwurf -> 3. Umsetzung & Texterstellung -> 4. Schlüsselfertig online in ca. 1–2 Wochen.
+- [Häufige Fragen (FAQ)](https://www.firmenflow.de/#faq): Antworten zu Preisen, Ablauf, Betreuungsaufwand und Service-Umfang.
+
+## Referenzen & Case Studies
+
+- [Eiscafé Orrico](https://www.firmenflow.de/projekte/eiscafe-orrico): Moderner Webauftritt für ein beliebtes Eiscafé am Niederrhein mit digitaler Karte und Anfahrt.
+- [Autotransport Alex](https://www.firmenflow.de/projekte/autotransport-alex): Kontakt- und conversionoptimierte Website für einen Fahrzeuglogistiker in NRW.
+- [cliManu Wetter Web-App](https://www.firmenflow.de/projekte/climanu-wetter): Interaktive PWA mit DWD-Echtzeitdaten, Regenradar und lokalem KI-Copiloten.
+
+## Regionale Ausrichtung & Kontakt
+
+- Region: Wesel, Voerde, Dinslaken, Moers, Hünxe, Schermbeck, Hamminkeln, Niederrhein und ganz Nordrhein-Westfalen (deutschlandweit remote).
+- Telefon / WhatsApp: +49 155 67277155
+- E-Mail: manu@firmenflow.de
+- Adresse: Manuel Landeck, Küferweg 2a, 50259 Pulheim
+- Website: https://www.firmenflow.de
+- Projektanfrage: https://www.firmenflow.de/#kontakt
+
+## Optional
+
+- [Ausführliche Dokumentation für LLMs](https://www.firmenflow.de/llms-full.txt): Komplette Wissensbasis inklusive ausführlicher FAQs, Modulbeschreibungen und Referenzdetails.

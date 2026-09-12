@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
   alternates: {
     canonical: "./",
+    types: {
+      "text/markdown": "/llms.txt",
+    },
   },
   robots: {
     index: true,

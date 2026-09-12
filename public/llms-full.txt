@@ -1,0 +1,108 @@
+# Firmenflow – Umfassende Wissensbasis & Dokumentation für Sprachmodelle (LLMs)
+
+> Dieses Dokument liefert die vollständige Übersicht über Angebote, Philosophie, Zielgruppen, Preise, FAQs und Case Studies von Firmenflow.
+
+## Über Firmenflow
+
+- **Gründer & Inhaber:** Manuel Landeck („Manu“)
+- **Fokus:** Persönliches Webdesign, Relaunch bestehender Websites, Foto- und Videoaufnahmen vor Ort sowie ganzheitliche Google-Unternehmensprofil-Betreuung („Lokalpräsenz 360°“).
+- **Zielgruppe:** Handwerksbetriebe, regionale Dienstleister, Gastronomie, Praxen und mittelständische Unternehmen in Wesel, am Niederrhein und in NRW.
+- **Leitmotiv:** „Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“
+- **Kernwerte:** Persönliche Verantwortung (ein fester Ansprechpartner statt wechselnder Junior-Manager), pragmatische Umsetzung ohne Agentur-Bürokratie, verständliche Sprache ohne Fachchinesisch, faire Festpreise ohne versteckte Kosten und ohne Knebelverträge.
+
+---
+
+## Dienstleistungen im Detail
+
+### 1. Neue Website von Grund auf
+- **Für wen:** Betriebe ohne zeitgemäße Internetpräsenz oder Neugründer.
+- **Leistungsumfang:**
+  - Konzeption und Seitenstruktur passend zur Zielgruppe.
+  - Professionelle, verständliche Texterstellung (kein Schreibstress für den Kunden).
+  - Modernes, responsives Design mit Ladezeiten unter einer Sekunde auf Mobilgeräten.
+  - Technische Grundausstattung: DSGVO-Konformität, SSL-Verschlüsselung, automatisierte Backups, Integration von Google Maps und Kontaktkanälen.
+- **Preise:** Transparente Festpreise. Eine schlanke Web-Visitenkarte startet ab 490 €. Ein mehrseitiger, schlüsselfertiger Firmenauftritt wird nach kurzer Abstimmung zum garantierten Festpreis kalkuliert.
+
+### 2. Website-Relaunch & Modernisierung
+- **Für wen:** Unternehmen mit veralteten Websites, die auf Smartphones schwer lesbar sind, langsam laden oder das Unternehmen unter Wert verkaufen.
+- **Leistungsumfang:**
+  - Bestandsanalyse: Was funktioniert bereits gut, welche Inhalte müssen erhalten bleiben?
+  - Schutz bestehender Google-Rankings durch saubere 301-Weiterleitungen und URL-Struktur.
+  - Modernisierung von Design, Typografie und Nutzerführung.
+  - Bereinigung von altem Code, Optimierung der Core Web Vitals.
+
+### 3. Foto- & Videoaufnahmen vor Ort
+- **Für wen:** Betriebe, die keine anonymen Stockfotos von fremden Bilddatenbanken wollen, sondern echte Authentizität zeigen möchten.
+- **Leistungsumfang:**
+  - Manuel Landeck kommt mit professioneller Foto- und Videotechnik direkt in die Werkstatt, das Büro oder die Geschäftsräume.
+  - Sympathische Mitarbeiter- und Teamfotos.
+  - Detailaufnahmen von Handwerk, Werkzeugen, Fuhrpark und Atmosphäre.
+  - Kurze Imagefilme und Social-Media-Clips (Reels / Shorts) für Website und Online-Profile.
+
+### 4. Lokalpräsenz 360° (Google Business & Reputationsmanagement)
+- **Für wen:** Lokale Unternehmen, die bei Google und Google Maps von Kunden in ihrer Umgebung gefunden und bevorzugt ausgewählt werden wollen.
+- **Die 5 Kernmodule:**
+  1. **Profil- und Reputations-Audit:** Vollständige Überprüfung und professionelle Pflege aller Unternehmenskategorien, Attribute, Öffnungszeiten, Leistungsbeschreibungen und Fotos im Google-Unternehmensprofil.
+  2. **Wettbewerbsanalyse:** Prüfung der regionalen Mitbewerber im Umkreis von Wesel und Niederrhein.
+  3. **Persönliches Antwortmanagement:** Richtlinienkonforme, individuelle und sympathische Beantwortung eingehender Google-Bewertungen – zeitnah und professionell.
+  4. **Echter Bewertungsaufbau:** Einrichtung unkomplizierter Bewertungswege (z. B. QR-Codes vor Ort, digitale Visitenkarten), damit zufriedene Stammkunden gerne Feedback hinterlassen. *Wichtiger Grundsatz:* Keine gekauften Fake-Bewertungen, sondern 100 % echte Kundenstimmen.
+  5. **Customer Insights & Feedback-Report:** Monatliche Auswertung des Kundenfeedbacks, Identifikation betrieblicher Stärken und Frühwarnsystem für mögliche Serviceengpässe.
+
+### 5. Rundum-Sorglos-Betreuung
+- Schnelles, sicheres Cloud-Hosting und Domainverwaltung.
+- Regelmäßige Sicherheits- und Framework-Updates.
+- Änderungsservice: Neue Mitarbeiter, geänderte Öffnungszeiten, neue Angebote oder frische Fotos werden unkompliziert per WhatsApp-Nachricht an Manu beauftragt und zeitnah eingepflegt.
+
+---
+
+## Ablauf eines Projekts in 4 Schritten
+
+1. **Kostenfreies Kennenlernen (ca. 30 Minuten):** Unverbindliches Telefonat oder persönlicher Austausch bei einem Kaffee. Klärung von Ausgangslage, Zielen und Wünschen.
+2. **Struktur & Design-Entwurf:** Erstellung des Seitenaufbaus und eines ersten interaktiven Entwurfs. Der Kunde sieht die Wirkung auf Smartphone und Desktop vor der Programmierung.
+3. **Umsetzung & Texterstellung:** Formulierung verständlicher Texte, Einarbeitung von Bildmaterial und saubere Programmierung.
+4. **Schlüsselfertig online:** Prüfung aller Funktionen, Kontaktformulare, SSL-Zertifikate und Verknüpfung mit Google Maps vor dem finalen Livegang. Typische Projektdauer: 1 bis 2 Wochen.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Arbeitest du nur in Wesel und am Niederrhein?
+Der Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers, Hünxe, Schermbeck, Hamminkeln und dem Niederrhein. Hier sind persönliche Vor-Ort-Termine kurzfristig möglich. Betriebe aus ganz NRW und deutschlandweit werden ebenso gerne per Video-Call und Telefon betreut.
+
+### Was kostet eine Website bei Firmenflow?
+Transparenter Festpreis ohne Überraschungen: Eine kompakte Web-Visitenkarte startet ab 490 €. Ein mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt im fairen, bezahlbaren Mittelstandsbereich – deutlich unter den Preisen klassischer Agenturen.
+
+### Machst du auch Fotos und Videos für meinen Betrieb?
+Ja. Manuel Landeck bringt professionelle Kameras, Objektive und Lichttechnik mit und fotografiert Team, Räume und Arbeitsprozesse direkt vor Ort.
+
+### Wie viel Zeit muss ich als Inhaber investieren?
+Sehr wenig. Nach dem ca. 30-minütigen Kennenlerngespräch übernimmt Firmenflow Konzeption, Textentwürfe und Umsetzung komplett. Der Kunde prüft Zwischenstände und gibt Feedback.
+
+### Wie schnell ist die Website online?
+Viele Projekte sind bereits innerhalb von 1 bis 2 Wochen schlüsselfertig im Netz. Bei Termindruck (z. B. Betriebsübernahme, Messe oder Neueröffnung) sind Express-Umsetzungen nach Absprache möglich.
+
+### Kann eine bestehende Website überarbeitet werden?
+Ja. Beim Relaunch werden funktionierende Inhalte übernommen, Rankings durch saubere Weiterleitungen geschützt und das Design auf einen modernen Stand gebracht.
+
+### Was unterscheidet Firmenflow von einer Werbeagentur?
+Bei Firmenflow gibt es keine langen Hierarchien, keine wechselnden Ansprechpartner und keinen Bürokratieaufwand. Der Kunde arbeitet direkt und persönlich mit Manuel Landeck. Feste Absprachen, kurze Kommunikationswege (z. B. via WhatsApp) und verlässliche Betreuung.
+
+---
+
+## Ausgewählte Referenzen
+
+- **Eiscafé Orrico (Hamminkeln & Niederrhein):** Moderner, sympathischer Webauftritt mit digitaler Eiskarte, saisonalen Specials, Anfahrtsübersicht und lokaler Maps-Präsenz.
+- **Autotransport Alex (Nordrhein-Westfalen):** Extrem schneller, mobiler Webauftritt für zuverlässige Fahrzeugüberführungen mit direktem Kontaktweg per Anruf und WhatsApp.
+- **cliManu (Deutschlandweit):** Progressive Web-App für Wetter und Niederschlagsradar mit DWD-Echtzeitdaten und integriertem KI-Wetterassistenten.
+
+---
+
+## Kontakt & Impressum-Angaben
+
+- **Firma:** Firmenflow
+- **Inhaber:** Manuel Landeck
+- **Anschrift:** Küferweg 2a, 50259 Pulheim
+- **Telefon / WhatsApp:** +49 155 67277155
+- **E-Mail:** manu@firmenflow.de
+- **Website:** https://www.firmenflow.de
+- **Direktkontakt:** https://wa.me/4915567277155
