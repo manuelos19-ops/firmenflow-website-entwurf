@@ -337,7 +337,13 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
       return { id: response.data?.id || payload.submissionId };
     }
 
-    // Fallback Entwicklungsmodus
+    // Fallback Entwicklungsmodus – in Produktion hart failen, damit Leads nie stillschweigend verloren gehen
+    if (process.env.NODE_ENV === "production") {
+      throw new Error(
+        "Kein Mail-Provider konfiguriert (BREVO_API_KEY, SMTP_* oder RESEND_API_KEY). Anfrage wurde NICHT zugestellt."
+      );
+    }
+
     console.warn("⚠️ Keine Mail-Konfiguration (BREVO_API_KEY, SMTP oder RESEND_API_KEY) gefunden!");
     console.log("=== Neue Firmenflow-Anfrage (Entwicklungsmodus) ===");
     console.log("ID:", payload.submissionId);
@@ -503,6 +509,13 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
     } catch (e) {
       console.error("Resend Error:", e);
     }
+  }
+
+  // Auch hier: in Produktion nicht vortäuschen, dass zugestellt wurde
+  if (process.env.NODE_ENV === "production") {
+    throw new Error(
+      "Kein Mail-Provider konfiguriert oder Zustellung fehlgeschlagen (audit-inquiry). Anfrage wurde NICHT zugestellt."
+    );
   }
 
   console.log("=== Mock Audit Email Sent ===");
