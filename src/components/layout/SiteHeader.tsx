@@ -150,7 +150,11 @@ export function SiteHeader() {
       <div
         ref={menuRef}
         className={cn(
-          "fixed inset-x-4 top-[4.75rem] z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden max-h-[calc(100vh-6rem)] overflow-y-auto double-bezel-outer bg-[var(--color-paper)]/95 backdrop-blur-2xl shadow-2xl",
+          // Achtung: hier NICHT double-bezel-outer verwenden - die Klasse setzt
+          // position: relative und gewinnt gegen Tailwinds .fixed, wodurch das
+          // geschlossene Menue im Textfluss bleibt und den Seiteninhalt nach
+          // unten schiebt. Die Bezel-Optik ist deshalb hier als Utilities gesetzt.
+          "fixed inset-x-4 top-[4.75rem] z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden max-h-[calc(100vh-6rem)] overflow-y-auto rounded-[2rem] p-1.5 border border-black/[0.06] bg-[var(--color-paper)]/95 backdrop-blur-2xl shadow-2xl",
           isOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         )}
         aria-hidden={!isOpen}
