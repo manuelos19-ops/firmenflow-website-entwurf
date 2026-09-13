@@ -3,32 +3,32 @@ export const homeContent = {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
     accent: "Deine Website. Persönlich mit Manu.",
-    body: "Wenn Kunden am Niederrhein nach deinem Angebot oder Handwerk suchen, zählt der erste Klick: Eine gestochen scharfe Website, echte Fotos aus deinem Betrieb und ein Google-Profil, das sofort Vertrauen weckt.",
+    body: "Wer am Niederrhein sucht, entscheidet bei Google. Ich baue deine Website, fotografiere bei dir vor Ort und bringe dein Google-Profil in Ordnung – damit dein Betrieb online so gut aussieht, wie er arbeitet.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Lass uns sprechen",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",
-    title: "Dein Betrieb leistet erstklassige Arbeit. Aber online sieht man davon zu wenig.",
-    body: "Deine Kunden vor Ort wissen genau, was sie an deiner Arbeit haben. Doch wer dich online nicht sofort findet und dein Angebot versteht oder auf einer veralteten Seite landet, wischt mit dem Daumen weiter zur Konkurrenz.",
+    title: "Deine Stammkunden kennen deine Arbeit. Alle anderen sehen nur, was Google zeigt.",
+    body: "Wer dich noch nicht kennt, sucht am Smartphone. Findet er dich nicht – oder landet auf einer Seite, die aussieht wie von 2015 – wischt er mit dem Daumen weiter zur Konkurrenz. Du merkst davon nichts. Das ist das Tückische daran.",
   },
   services: [
     {
       slug: "neue-website",
       title: "Neue Website von Grund auf",
-      body: "Vom leeren Bildschirm zum bezugsfertigen Firmenauftritt: Ich übernehme Struktur, verständliche Texte und mobile Ladezeiten unter einer Sekunde. Du prüfst den Entwurf, gibst dein Feedback – und dein Betrieb steht online stark da.",
-      points: ["Kein Text-Stress für dich", "Modernes, klares Design", "Optimiert fürs Smartphone", "Transparenter Festpreis"],
+      body: "Vom leeren Bildschirm bis zur fertigen Seite: Struktur, Texte, Bilder, Technik. Du schaust dir den Entwurf an und sagst, was du anders willst. Wenn es passt, geht sie live.",
+      points: ["Kein Text-Stress für dich", "Kein Baukasten-Look", "Schnell auf dem Handy", "Transparenter Festpreis"],
     },
     {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
-      body: "Alte Seite entrümpeln, gewachsene Google-Sichtbarkeit behalten: Ich übernehme deine bewährten Inhalte, poliere Struktur und Design auf Hochglanz und richte saubere Weiterleitungen ein, damit kein Kunde verloren geht.",
+      body: "Alte Seite entrümpeln, ohne die gewachsene Google-Sichtbarkeit zu verlieren. Ich übernehme deine bewährten Inhalte, ordne Struktur und Design neu und richte saubere Weiterleitungen ein – damit niemand auf einer Fehlerseite landet.",
       points: ["Bestandsanalyse & Relaunch", "Google-Sichtbarkeit schützen", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
     },
     {
       slug: "foto-video",
       title: "Foto- & Videoaufnahmen vor Ort",
-      body: "Echte Gesichter, Handgriffe und die Atmosphäre deines Betriebs im Bild: Keine anonymen Stockfotos mit künstlich lächelnden Models. Ich komme mit professionellem Foto- und Video-Equipment direkt zu dir vor Ort und fange deine echte Arbeitswelt authentisch ein.",
+      body: "Echte Gesichter, echte Handgriffe, deine Räume. Keine Stockfotos mit lächelnden Models, die noch nie einen Betrieb von innen gesehen haben. Ich komme mit Kamera zu dir und fotografiere, wie es bei dir wirklich aussieht.",
       points: ["Team- & Mitarbeiter-Shootings", "Räumlichkeiten & Atmosphäre", "Kurzer Imagefilm & Video-Reels", "Direkt bei dir vor Ort"],
     },
   ],
@@ -92,11 +92,11 @@ export const faqItems = [
   },
   { 
     question: "Was kostet eine Website bei Firmenflow?", 
-    answer: "100 % transparent und ohne Agenturaufschläge: Eine kompakte digitale Web-Visitenkarte für kleinere Vorhaben startet bereits ab 490 Euro. Ein schlüsselfertiger, mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt fair im bezahlbaren Rahmen – weit unter dem, was klassische Agenturen verlangen. Nach unserem kurzen Kennenlernen nenne ich dir sofort einen garantierten Festpreis – ohne versteckte Zusatzkosten und ohne laufende Knebelverträge." 
+    answer: "Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger Auftritt mit eigenen Leistungsseiten liegt darüber; den genauen Betrag nenne ich dir nach dem Kennenlernen als verbindlichen Festpreis, ohne versteckte Zusatzkosten. Dazu kommen 39 Euro im Monat für Hosting, Updates und 30 Minuten Änderungen – monatlich kündbar, keine Mindestlaufzeit."
   },
   { 
     question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
-    answer: "Ja, sehr gerne! Viele kleine Unternehmen haben veraltete oder gar keine passenden Bilder. Ich bringe professionelles Foto- und Video-Equipment mit und komme direkt bei dir in Wesel und Umgebung vorbei. Ich erstelle sympathische Teamfotos, Aufnahmen deiner Räume und deines Handwerks oder einen kurzen, wirkungsvollen Imagefilm für deine Website und Social Media." 
+    answer: "Ja. Viele Betriebe haben veraltete Bilder oder gar keine. Ich komme mit Kamera zu dir nach Wesel und Umgebung und fotografiere dein Team, deine Räume und deine Arbeit – auf Wunsch auch ein kurzes Video für Website und Social Media. Der Fototermin kostet 350 Euro und lässt sich mit jedem Website-Projekt kombinieren."
   },
   { 
     question: "Wie viel Zeit muss ich selbst in das Projekt investieren?", 
@@ -112,7 +112,7 @@ export const faqItems = [
   },
   { 
     question: "Was genau beinhaltet Lokalpräsenz 360°?", 
-    answer: "Vom professionellen Aufbau deines Google-Unternehmensprofils über das laufende Beantworten von Rezensionen bis zur monatlichen Analyse deines Kundenfeedbacks: Ich sorge dafür, dass dein Betrieb auf Google Maps top dasteht, Kunden dir vertrauen und du aus Bewertungen konkrete Erkenntnisse für dein Unternehmen gewinnst.",
+    answer: "Drei Dinge: Ich richte dein Google-Profil ein oder räume ein bestehendes auf, beantworte jede neue Bewertung in deinem Ton und sage dir einmal im Monat, was in den Bewertungen steht und was sich wiederholt. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
     link: {
       text: "Alle Details & Leistungen zu Lokalpräsenz 360° ansehen",
       href: "/lokalpraesenz-360",
@@ -120,6 +120,6 @@ export const faqItems = [
   },
   { 
     question: "Wer kümmert sich nach dem Start um Hosting, Updates und Änderungen?", 
-    answer: "Genau dafür gibt es mein Rundum-Sorglos-Paket: Ich übernehme schnelles, sicheres Hosting, regelmäßige Backups und alle technischen Updates. Wenn du Öffnungszeiten ändern möchtest, neue Fotos hast oder ein Angebot aktualisieren willst, schreibst du mir einfach kurz per WhatsApp – und ich setze es zeitnah für dich um. So bleibt deine Website immer aktuell, ohne dass du selbst Zeit investieren musst." 
+    answer: "Das läuft über die monatliche Betreuung für 39 Euro: Hosting, Backups, technische Updates und 30 Minuten Änderungen im Monat. Öffnungszeiten anpassen, neue Fotos einbinden, ein Angebot aktualisieren – du schreibst mir kurz per WhatsApp, ich setze es um. Monatlich kündbar, keine Mindestlaufzeit."
   },
 ] as const;

@@ -33,7 +33,7 @@ const storySteps: StoryStep[] = [
     tag: "01 · Ausgangslage",
     tagVariant: "problem",
     title: "Vor Ort geschätzt – aber online kaum zu finden.",
-    body: "Stammkunden schätzen deinen Betrieb seit Jahren. Wer dich aber noch nicht kennt und auf dem Smartphone sucht, findet dich bei Google nicht oder landet auf einer veralteten Seite. Neue Kunden gehen zur Konkurrenz.",
+    body: "Seit Jahren läuft der Betrieb über Empfehlung. Die Website ist von damals, das Google-Profil hat nie jemand angefasst. Funktioniert – solange die Stammkunden bleiben.",
     image: "/media/story/story-1-unsichtbar.webp",
     imageAlt: "Inhaber steht vor seinem Betrieb, Passanten schauen auf Smartphones",
     icon: SearchX,
@@ -48,7 +48,7 @@ const storySteps: StoryStep[] = [
     tag: "02 · Mit Manu",
     tagVariant: "solution",
     title: "Kein Agentur-Theater: Persönlich mit Manu an einem Tisch.",
-    body: "Wir setzen uns zusammen und besprechen dein Angebot. Deine vorhandene Website wird moderner gestaltet und für mehr Anfragen optimiert – oder wir bauen deinen Auftritt von Grund auf neu.",
+    body: "Wir setzen uns zusammen – bei dir, im Café oder am Telefon. Du erzählst, was du machst und wer deine Kunden sind. Danach baue ich deine Seite um oder von Grund auf neu.",
     image: "/media/story/story-2-loesung-manu.webp",
     imageAlt: "Manu und Inhaber besprechen die neue Website am Laptop",
     icon: Laptop,
@@ -62,15 +62,15 @@ const storySteps: StoryStep[] = [
     number: "03",
     tag: "03 · Das Ergebnis",
     tagVariant: "success",
-    title: "Kunden finden dich sofort und rufen an.",
-    body: "Wer in deiner Region sucht, sieht deinen Betrieb ganz oben mit guten Bewertungen und echten Fotos. Ein Klick – und Interessenten nehmen sofort Kontakt auf oder stehen bei dir im Betrieb.",
+    title: "Wer sucht, findet dich – und sieht sofort, was du kannst.",
+    body: "Ein aktuelles Google-Profil, echte Fotos aus deinem Betrieb, eine Seite die auf dem Handy sofort lädt. Der Weg zum Anruf ist ein Klick lang.",
     image: "/media/story/story-3-voller-erfolg.webp",
     imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
     icon: Users,
     highlights: [
-      "Ganz oben bei Google & Maps",
+      "Sichtbar bei Google & Maps",
       "Direkter Kontakt per Anruf oder Klick",
-      "Verlässlich neue Kunden vor Ort",
+      "Anfragen von neuen Kunden",
     ],
   },
 ];
@@ -120,13 +120,13 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="badge-eyebrow mb-5">
             <BrandIcon className="w-3.5 h-3" />
-            <span>Aus der Praxis · So funktioniert&apos;s</span>
+            <span>Aus der Praxis</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
-            Vom unsichtbaren Laden zum vollen Betrieb.
+            Vom Geheimtipp zum ersten Treffer bei Google.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            In drei einfachen Schritten zu mehr Sichtbarkeit und echten Kundenanfragen vor Ort.
+            Ausgangslage, Zusammenarbeit, Ergebnis.
           </p>
         </div>
 
