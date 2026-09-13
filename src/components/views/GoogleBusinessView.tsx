@@ -19,7 +19,6 @@ import {
   LineChart,
   Users,
   AlertCircle,
-  ArrowRight,
   MapPin,
   TrendingUp,
   ShieldCheck,
@@ -146,7 +145,6 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
                 >
                   <span>Lokalpräsenz jetzt prüfen lassen</span>
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
                 </ButtonLink>
               </MagneticButton>
 

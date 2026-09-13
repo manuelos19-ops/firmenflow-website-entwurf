@@ -8,9 +8,8 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  CheckCircle2,
   Users,
   SearchX,
   Laptop
@@ -121,7 +120,7 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="badge-eyebrow mb-5">
             <BrandIcon className="w-3.5 h-3" />
-            <span>Aus der Praxis · So funktioniert's</span>
+            <span>Aus der Praxis · So funktioniert&apos;s</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.
@@ -232,7 +231,6 @@ export function StorySection() {
                   className="shadow-xl shadow-[var(--color-coral)]/25 text-sm sm:text-base px-8 py-4"
                 >
                   <span>Lass uns sprechen</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
                 </ButtonLink>
               </MagneticButton>
             </div>

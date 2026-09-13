@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, CheckCircle2, Smartphone, Zap, MapPin, Sparkles, ShieldCheck } from "lucide-react";
+import { Smartphone, Zap, MapPin, Sparkles, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { allProjects, getProject } from "@/content/projects";
@@ -235,7 +235,6 @@ export default async function ProjectPage({
           <div className="pt-8 border-t border-[var(--color-line)] flex flex-col sm:flex-row gap-4">
             <ButtonLink href={project.url} external variant="primary" size="lg" className="flex items-center justify-center gap-2">
               <span>{project.kind === "live" ? "Live-Website ansehen" : "Live-Demo ansehen"}</span>
-              <ExternalLink className="w-4 h-4" />
             </ButtonLink>
             <ButtonLink href="/#kontakt" variant="secondary" size="lg" className="flex items-center justify-center gap-2">
               <span>Eigenes Projekt besprechen</span>
