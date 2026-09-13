@@ -67,13 +67,19 @@ export function Hero({ whatsappUrl }: HeroProps) {
     <section 
       ref={containerRef} 
       id="hero"
-      className="relative min-h-[85vh] flex flex-col justify-between pt-28 pb-4 lg:pt-36 lg:pb-8 bg-transparent text-[var(--color-ink)] overflow-hidden"
+      className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-8 lg:pt-44 lg:pb-16 bg-transparent text-[var(--color-ink)] overflow-hidden"
     >
-      <Container className="relative z-10 flex-grow flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 my-auto">
+      <Container className="relative z-10 flex-grow flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 my-auto">
         
         {/* Left Side: Copy */}
         <div className="flex-1 flex flex-col items-start w-full z-10 max-w-2xl lg:max-w-none">
           
+          {/* Microscopic High-End Eyebrow Tag */}
+          <div className="badge-eyebrow mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-coral)] animate-pulse" />
+            <span>{hero.eyebrow}</span>
+          </div>
+
           {/* Calm, Stable, High-End Editorial Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight mb-6 select-none">
             {/* Line 1 */}
@@ -93,8 +99,9 @@ export function Hero({ whatsappUrl }: HeroProps) {
 
           {/* MOBILE ONLY: Hero Portrait direkt nach dem Akzentsatz */}
           <div className="lg:hidden w-full max-w-[340px] sm:max-w-sm my-6 sm:my-8 relative self-center">
-            <div className="hero-photo-wrap relative aspect-[4/4.9] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-              <Image
+            <div className="double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03]">
+              <div className="hero-photo-wrap relative aspect-[4/4.9] rounded-[calc(2.25rem-0.375rem)] overflow-hidden shadow-xl border border-white/60">
+                <Image
                 src={portraitAssets.hero.src}
                 alt={portraitAssets.hero.alt}
                 fill
@@ -118,6 +125,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
 
             {/* Mobile Rotating Badge */}
@@ -193,15 +201,16 @@ export function Hero({ whatsappUrl }: HeroProps) {
 
         {/* Right Side: Portrait + Floating Badges (DESKTOP ONLY) */}
         <div className="hidden lg:block flex-1 w-full relative max-w-md lg:max-w-none">
-          <div className="hero-photo-wrap relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-            <Image
-              src={portraitAssets.hero.src}
-              alt={portraitAssets.hero.alt}
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+          <div className="double-bezel-outer p-2 rounded-[2.75rem] bg-black/[0.03]">
+            <div className="hero-photo-wrap relative aspect-[4/5] rounded-[calc(2.75rem-0.5rem)] overflow-hidden shadow-2xl border border-white/60">
+              <Image
+                src={portraitAssets.hero.src}
+                alt={portraitAssets.hero.alt}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             
             {/* Gradient bottom overlay on photo */}
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/50 via-transparent to-transparent" />
@@ -217,6 +226,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   <span>Online</span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
 

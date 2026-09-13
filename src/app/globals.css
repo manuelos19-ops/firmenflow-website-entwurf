@@ -365,3 +365,81 @@ html.consent-decided #cookie-consent-banner {
   display: none !important;
 }
 
+/* ==========================================================================
+   High-End Visual Design Utilities (Awwwards / Vanguard Architecture)
+   ========================================================================== */
+
+/* Double-Bezel Architecture (Doppelrand / Nested Hardware Enclosure) */
+.double-bezel-outer {
+  position: relative;
+  border-radius: 2rem;
+  padding: 0.375rem;
+  background: color-mix(in srgb, var(--color-ink) 3%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 6%, transparent);
+  box-shadow: 0 1.5rem 3.5rem -1rem rgb(72 35 97 / 0.07),
+              0 0.25rem 1rem -0.25rem rgb(72 35 97 / 0.04);
+  transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.double-bezel-outer-dark {
+  position: relative;
+  border-radius: 2rem;
+  padding: 0.375rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 2rem 4rem -1.5rem rgba(0, 0, 0, 0.5),
+              inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.double-bezel-inner {
+  border-radius: calc(2rem - 0.375rem);
+  background: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--color-plum) 8%, transparent);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+              0 0.125rem 0.5rem -0.125rem rgba(72, 35, 97, 0.03);
+  transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.double-bezel-inner-dark {
+  border-radius: calc(2rem - 0.375rem);
+  background: color-mix(in srgb, var(--color-plum) 75%, #12051a);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  transition: all 400ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Micro Eyebrow Badges (High-End Pill Tag) */
+.badge-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.875rem;
+  font-size: 0.625rem;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  background: color-mix(in srgb, var(--color-plum) 5%, transparent);
+  color: var(--color-plum);
+  border: 1px solid color-mix(in srgb, var(--color-plum) 12%, transparent);
+}
+
+.badge-eyebrow-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.875rem;
+  font-size: 0.625rem;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-coral);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+

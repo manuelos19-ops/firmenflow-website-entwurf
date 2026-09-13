@@ -22,21 +22,23 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
+  const kindLabel = project.kind === "live" ? "Webdesign Case Study" : "Webdesign Konzeptentwurf";
+
   return {
-    title: `${project.name} – Webdesign Case Study`,
+    title: `${project.name} – ${kindLabel}`,
     description: project.summary,
     alternates: {
       canonical: `/projekte/${project.slug}`,
     },
     openGraph: {
-      title: `${project.name} – Webdesign Case Study | Firmenflow`,
+      title: `${project.name} – ${kindLabel} | Firmenflow`,
       description: project.summary,
       images: [
         {
           url: project.image,
           width: 1200,
           height: 630,
-          alt: `${project.name} Webdesign Case Study`,
+          alt: `${project.name} – ${kindLabel}`,
         },
       ],
     },
@@ -85,7 +87,10 @@ export default async function ProjectPage({
     "@id": `${baseUrl}/projekte/${project.slug}#case`,
     url: `${baseUrl}/projekte/${project.slug}`,
     name: `${project.name} – Webdesign & Lokalpräsenz`,
-    headline: `${project.name} – Case Study`,
+    headline:
+      project.kind === "live"
+        ? `${project.name} – Case Study`
+        : `${project.name} – Konzeptentwurf (kein Kundenauftrag)`,
     description: project.summary,
     image: `${baseUrl}${project.image}`,
     inLanguage: "de-DE",
@@ -162,6 +167,25 @@ export default async function ProjectPage({
             </p>
           </div>
         </div>
+
+        {project.kind === "concept" && (
+          <aside
+            role="note"
+            className="flex gap-4 rounded-3xl border-2 border-[var(--color-plum)]/25 bg-[var(--color-plum)]/[0.06] p-6 sm:p-7"
+          >
+            <Sparkles className="w-6 h-6 shrink-0 text-[var(--color-plum)]" aria-hidden="true" />
+            <div className="space-y-2">
+              <h2 className="font-bold text-base sm:text-lg text-[var(--color-ink)]">
+                Konzeptentwurf – kein realer Kundenauftrag
+              </h2>
+              <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                &bdquo;{project.name}&ldquo; ist ein von mir frei gestalteter Entwurf, um zu zeigen,
+                wie ein Auftritt in dieser Branche aussehen kann. Der Betrieb existiert nicht, alle
+                Inhalte sind Beispielinhalte. Es gab keinen Auftrag und keine Zusammenarbeit.
+              </p>
+            </div>
+          </aside>
+        )}
 
         {/* Visual Preview Card */}
         <div className="relative w-full h-[280px] sm:h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-line)] bg-stone-100">

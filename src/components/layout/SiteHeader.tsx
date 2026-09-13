@@ -59,25 +59,32 @@ export function SiteHeader() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] px-3 sm:px-6 pointer-events-none",
           isOpen || isScrolled
-            ? "bg-[var(--color-paper)]/85 backdrop-blur-xl backdrop-saturate-150 py-3 border-b border-[var(--color-line)] shadow-sm"
-            : "bg-transparent py-4 sm:py-5"
+            ? "pt-2 sm:pt-3"
+            : "pt-4 sm:pt-6"
         )}
       >
-        <Container className="flex items-center justify-between gap-4">
+        <div
+          className={cn(
+            "mx-auto w-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] flex items-center justify-between gap-4 pointer-events-auto",
+            isOpen || isScrolled
+              ? "max-w-6xl rounded-full bg-[var(--color-paper)]/90 backdrop-blur-2xl backdrop-saturate-150 border border-[var(--color-line)] shadow-lg shadow-[var(--color-plum)]/[0.04] px-5 sm:px-7 py-2.5 ring-1 ring-white/60"
+              : "max-w-[88rem] bg-transparent px-2 sm:px-4 py-2"
+          )}
+        >
           {/* Brand Wordmark (Always full Firmenflow) */}
           <div className="shrink-0 flex items-center">
             <BrandMark />
           </div>
 
           {/* Desktop Nav (Consistent lg breakpoint) */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Hauptnavigation">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Hauptnavigation">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] active:scale-[0.96] transition-all duration-150"
+                className="px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] hover:bg-black/[0.03] active:scale-[0.97] transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
               >
                 {item.label}
               </Link>
@@ -127,54 +134,58 @@ export function SiteHeader() {
               />
             </div>
           </button>
-        </Container>
+        </div>
       </header>
 
       {/* Backdrop overlay for mobile menu */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden animate-fade-in"
+          className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 lg:hidden animate-fade-in transition-all duration-500"
           aria-hidden="true"
         />
       )}
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown with Double-Bezel Hardware Architecture */}
       <div
         ref={menuRef}
         className={cn(
-          "fixed inset-x-3 top-[4.5rem] z-50 bg-[var(--color-paper)] border border-[var(--color-line)] rounded-3xl shadow-2xl p-6 transition-all duration-300 lg:hidden max-h-[calc(100vh-6rem)] overflow-y-auto",
+          "fixed inset-x-4 top-[4.75rem] z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden max-h-[calc(100vh-6rem)] overflow-y-auto double-bezel-outer bg-[var(--color-paper)]/95 backdrop-blur-2xl shadow-2xl",
           isOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         )}
         aria-hidden={!isOpen}
       >
-        <nav className="flex flex-col divide-y divide-[var(--color-line)]/40 mb-6">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className="text-base font-semibold text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors flex items-center justify-between py-3.5"
-            >
-              <span>{item.label}</span>
-              <ArrowUpRight className="w-4 h-4 text-[var(--color-muted)]" />
-            </Link>
-          ))}
-        </nav>
+        <div className="double-bezel-inner p-6 bg-white/95">
+          <nav className="flex flex-col divide-y divide-[var(--color-line)]/40 mb-6">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-base font-semibold text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors flex items-center justify-between py-3.5"
+              >
+                <span>{item.label}</span>
+                <span className="w-7 h-7 rounded-full bg-black/[0.04] flex items-center justify-center">
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[var(--color-muted)]" />
+                </span>
+              </Link>
+            ))}
+          </nav>
 
-        <div className="space-y-3 pt-2">
-          <ButtonLink
-            href="/#projektanfrage"
-            variant="primary"
-            size="default"
-            className="w-full justify-center shadow-md shadow-[var(--color-coral)]/20"
-            onClick={() => setIsOpen(false)}
-          >
-            Lass uns sprechen
-          </ButtonLink>
-          <p className="text-center text-xs text-[var(--color-muted)] font-medium">
-            Persönlich mit Manu · Wesel &amp; Niederrhein
-          </p>
+          <div className="space-y-3 pt-2">
+            <ButtonLink
+              href="/#projektanfrage"
+              variant="primary"
+              size="default"
+              className="w-full justify-center shadow-md shadow-[var(--color-coral)]/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Lass uns sprechen
+            </ButtonLink>
+            <p className="text-center text-xs text-[var(--color-muted)] font-medium">
+              Persönlich mit Manu · Wesel &amp; Niederrhein
+            </p>
+          </div>
         </div>
       </div>
     </>

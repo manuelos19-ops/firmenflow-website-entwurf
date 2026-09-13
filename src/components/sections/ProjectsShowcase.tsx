@@ -238,12 +238,12 @@ export function ProjectsShowcase() {
               width: `${radius * 2.2}px`,
               height: `${radius * 0.9}px`,
               transform: "rotateX(75deg)",
-              WebkitTransform: "rotateX(75deg)",
             }}
             aria-hidden="true"
+            suppressHydrationWarning
           />
 
-          {/* 3D Rotating Stage with All 4 Visible Cards & Central Core */}
+          {/* 3D Rotating Stage with All Visible Cards & Central Core */}
           <div 
             className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[330px] sm:h-[380px] md:h-[420px]"
             style={{
@@ -251,18 +251,20 @@ export function ProjectsShowcase() {
               WebkitTransformStyle: "preserve-3d",
             }}
           >
-            {/* All 4 Cards: Permanently visible 360° orbiting around central logo */}
+            {/* All Cards: Permanently visible 360° orbiting around central logo */}
             {allProjects.map((project, idx) => {
               const cardBaseAngle = idx * anglePerCard;
               const currentAngleRad = ((cardBaseAngle + rotation) * Math.PI) / 180;
               
-              // True 3D Parametric Orbit Coordinates
-              const x = Math.sin(currentAngleRad) * radius;
-              const z = Math.cos(currentAngleRad) * radius; // -radius (back) to +radius (front)
+              // True 3D Parametric Orbit Coordinates (rounded to 2-3 decimals to prevent floating point mismatch)
+              const rawX = Math.sin(currentAngleRad) * radius;
+              const rawZ = Math.cos(currentAngleRad) * radius; // -radius (back) to +radius (front)
+              const x = Math.round(rawX * 100) / 100;
+              const z = Math.round(rawZ * 100) / 100;
               const zDepth = z / radius; // -1 to +1
 
-              const scale = 0.78 + (zDepth + 1) * 0.11; // 0.78 (back) to 1.0 (front)
-              const opacity = 0.72 + (zDepth + 1) * 0.14; // 0.72 (back) to 1.0 (front)
+              const scale = Math.round((0.78 + (zDepth + 1) * 0.11) * 1000) / 1000; // 0.78 (back) to 1.0 (front)
+              const opacity = Math.round((0.72 + (zDepth + 1) * 0.14) * 1000) / 1000; // 0.72 (back) to 1.0 (front)
               const isFront = zDepth > 0.55;
               // Center logo is at zIndex 50. Back cards sit at 2..48, front cards sit at 52..98
               const zIndex = Math.round((zDepth + 1) * 48) + 2;
@@ -281,19 +283,17 @@ export function ProjectsShowcase() {
                   }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   className={cn(
-                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none block",
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none block bg-[var(--color-paper)] will-change-transform",
                     isFront 
                       ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
                       : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
                   )}
                   style={{
                     transform: `translate3d(${x}px, 0px, ${z}px) scale(${scale})`,
-                    WebkitTransform: `translate3d(${x}px, 0px, ${z}px) scale(${scale})`,
                     zIndex: zIndex,
                     opacity: opacity,
-                    backgroundColor: "var(--color-paper)",
-                    willChange: "transform",
                   }}
+                  suppressHydrationWarning
                 >
                   {/* Browser Mockup Top Bar */}
                   <div className="bg-white/95 px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
@@ -329,7 +329,7 @@ export function ProjectsShowcase() {
                         </span>
                       ) : (
                         <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-semibold bg-[var(--color-plum)] text-white rounded-full shadow-md">
-                          Showcase
+                          Konzeptentwurf
                         </span>
                       )}
                     </div>
@@ -360,14 +360,12 @@ export function ProjectsShowcase() {
 
             {/* Central Floating FIRMENflow 360° Wordmark Core (Z-Index 50, strictly in middle of orbit) */}
             <div 
-              className="absolute inset-0 m-auto w-52 h-32 pointer-events-none flex flex-col items-center justify-center select-none"
+              className="absolute inset-0 m-auto w-52 h-32 pointer-events-none flex flex-col items-center justify-center select-none z-50 will-change-transform"
               style={{
                 transform: "translate3d(0px, 0px, 0px)",
-                WebkitTransform: "translate3d(0px, 0px, 0px)",
-                zIndex: 50,
-                willChange: "transform",
               }}
               aria-hidden="true"
+              suppressHydrationWarning
             >
               <div 
                 className="relative flex flex-col items-center justify-center gap-1.5"
@@ -384,6 +382,7 @@ export function ProjectsShowcase() {
                     src="/brand/firmenflow-mark.webp"
                     alt="Firmenflow Logo Mark"
                     fill
+                    sizes="48px"
                     className="object-contain"
                   />
                 </div>
@@ -510,6 +509,27 @@ export function ProjectsShowcase() {
             </div>
           </div>
         </div>
+        {/* Statische, immer gerenderte Projektliste.
+            Die Karten und die Leiste darüber zeigen jeweils nur das aktive Projekt,
+            sodass serverseitig nur ein einziger interner Projektlink im HTML steht.
+            Diese Liste macht alle Projektseiten verlinkt und auffindbar. */}
+        <nav
+          aria-label="Alle Projekte"
+          className="max-w-3xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm"
+        >
+          <span className="text-[var(--color-muted)] font-medium">Alle Projekte im Detail:</span>
+          {allProjects.map((project, idx) => (
+            <span key={project.slug} className="inline-flex items-center gap-2">
+              {idx > 0 && <span className="text-[var(--color-line)]" aria-hidden="true">·</span>}
+              <Link
+                href={`/projekte/${project.slug}`}
+                className="font-semibold text-[var(--color-plum)] hover:text-[var(--color-coral)] underline decoration-[var(--color-plum)]/25 underline-offset-4 hover:decoration-[var(--color-coral)] transition-colors rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-coral)]"
+              >
+                {project.name}
+              </Link>
+            </span>
+          ))}
+        </nav>
       </Container>
     </section>
   );

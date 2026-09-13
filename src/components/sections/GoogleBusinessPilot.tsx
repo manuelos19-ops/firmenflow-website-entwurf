@@ -84,10 +84,10 @@ export function GoogleBusinessPilot() {
       <Container className="relative z-20 my-auto">
         {/* Intro with Stop-Scroll Text Inking */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-6 border border-white/20 shadow-md backdrop-blur-md">
-            <Search className="w-4 h-4" />
-            {homeContent.pilot.eyebrow}
-          </span>
+          <div className="badge-eyebrow-dark mb-6">
+            <Search className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+            <span>{homeContent.pilot.eyebrow}</span>
+          </div>
 
           {/* Huge Statement Title with Scroll-Fill Inking */}
           <h2 className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display leading-[1.06] mb-5 text-white/15">
@@ -115,109 +115,117 @@ export function GoogleBusinessPilot() {
         {/* Visual Google Business Mockup Card */}
         <div 
           ref={mockupRef}
-          className="max-w-4xl mx-auto bg-white text-[var(--color-ink)] rounded-3xl p-5 sm:p-7 md:p-8 shadow-2xl mb-8 md:mb-12 border border-white/20"
+          className="max-w-4xl mx-auto double-bezel-outer-dark p-2 rounded-[2.5rem] mb-8 md:mb-12 shadow-2xl"
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-gray-100">
-            <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)] text-white flex items-center justify-center shrink-0 shadow-md">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-lg sm:text-xl font-bold font-sans text-[var(--color-ink)]">Dein optimierter Brancheneintrag</h3>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold shrink-0">
-                    Aktiv gepflegt
-                  </span>
+          <div className="double-bezel-inner rounded-[calc(2.5rem-0.5rem)] bg-white text-[var(--color-ink)] p-5 sm:p-7 md:p-8 border border-white/40 shadow-inner">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-gray-100">
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
-                  Wesel &amp; Niederrhein · Vollständiges Unternehmensprofil
-                </p>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-lg sm:text-xl font-bold font-sans text-[var(--color-ink)]">Dein optimierter Brancheneintrag</h3>
+                    <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold shrink-0">
+                      Aktiv gepflegt
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-0.5">
+                    <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                    Wesel &amp; Niederrhein · Vollständiges Unternehmensprofil
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-2xl shrink-0">
+                <div className="flex text-amber-400">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                  ))}
+                </div>
+                <span className="text-xs sm:text-sm font-bold text-amber-900 ml-1.5">5,0 Sterne</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-1 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-2xl shrink-0">
-              <div className="flex text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                ))}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
+              <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center gap-3">
+                <div className="w-7 h-7 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                  <MapPin className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <p className="text-[11px] text-emerald-800 font-medium">Lokale Sichtbarkeit</p>
+                  <p className="text-xs sm:text-sm font-bold text-emerald-950">Vollständiges Maps-Profil</p>
+                </div>
               </div>
-              <span className="text-xs sm:text-sm font-bold text-amber-900 ml-1.5">5,0 Sterne</span>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
-            <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center gap-3">
-              <div className="w-7 h-7 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                <MapPin className="w-3.5 h-3.5" />
+              <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-100 flex items-center gap-3">
+                <div className="w-7 h-7 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
+                  <MessageSquareCheck className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <p className="text-[11px] text-blue-800 font-medium">Bewertungsmanagement</p>
+                  <p className="text-xs sm:text-sm font-bold text-blue-950">Individuelle Antworten</p>
+                </div>
               </div>
-              <div>
-                <p className="text-[11px] text-emerald-800 font-medium">Lokale Sichtbarkeit</p>
-                <p className="text-xs sm:text-sm font-bold text-emerald-950">Vollständiges Maps-Profil</p>
-              </div>
-            </div>
 
-            <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-100 flex items-center gap-3">
-              <div className="w-7 h-7 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
-                <MessageSquareCheck className="w-3.5 h-3.5" />
-              </div>
-              <div>
-                <p className="text-[11px] text-blue-800 font-medium">Bewertungsmanagement</p>
-                <p className="text-xs sm:text-sm font-bold text-blue-950">Individuelle Antworten</p>
-              </div>
-            </div>
-
-            <div className="p-3.5 rounded-2xl bg-purple-50 border border-purple-100 flex items-center gap-3">
-              <div className="w-7 h-7 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0">
-                <LineChart className="w-3.5 h-3.5" />
-              </div>
-              <div>
-                <p className="text-[11px] text-purple-800 font-medium">Customer Insights</p>
-                <p className="text-xs sm:text-sm font-bold text-purple-950">Monatliche Auswertung</p>
+              <div className="p-3.5 rounded-2xl bg-purple-50 border border-purple-100 flex items-center gap-3">
+                <div className="w-7 h-7 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0">
+                  <LineChart className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <p className="text-[11px] text-purple-800 font-medium">Customer Insights</p>
+                  <p className="text-xs sm:text-sm font-bold text-purple-950">Monatliche Auswertung</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="p-3.5 rounded-2xl bg-gray-50 border border-gray-100 text-xs text-gray-700 italic">
-            „Google-Bewertungen sind mehr als Marketing – sie sind dein direkter Blick in die echte Zufriedenheit deiner Kunden.“
+            <div className="p-3.5 rounded-2xl bg-gray-50 border border-gray-100 text-xs text-gray-700 italic">
+              „Google-Bewertungen sind mehr als Marketing – sie sind dein direkter Blick in die echte Zufriedenheit deiner Kunden.“
+            </div>
           </div>
         </div>
 
         {/* 3 Action Pillars */}
         <div ref={pillarsRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-10">
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
-            <div>
-              <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4">
-                <Search className="w-5 h-5" />
+          <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
+              <div>
+                <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4 ring-1 ring-[var(--color-coral)]/30">
+                  <Search className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil-Schliff &amp; Sichtbarkeit</h3>
+                <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                  Prüfung aller Angaben, Kategorien, Fotos und Leistungen. Ein vollständiger Auftritt, der bei lokalen Suchanfragen überzeugt.
+                </p>
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil-Schliff &amp; Sichtbarkeit</h3>
-              <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                Prüfung aller Angaben, Kategorien, Fotos und Leistungen. Ein vollständiger Auftritt, der bei lokalen Suchanfragen überzeugt.
-              </p>
             </div>
           </div>
 
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
-            <div>
-              <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4">
-                <Star className="w-5 h-5" />
+          <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
+              <div>
+                <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4 ring-1 ring-amber-300/30">
+                  <Star className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungsaufbau &amp; Betreuung</h3>
+                <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                  Neue Rezensionen zeitnah und passend beantwortet. Plus ein praxistauglicher Prozess, damit zufriedene Kunden gerne bewerten.
+                </p>
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungsaufbau &amp; Betreuung</h3>
-              <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                Neue Rezensionen zeitnah und passend beantwortet. Plus ein praxistauglicher Prozess, damit zufriedene Kunden gerne bewerten.
-              </p>
             </div>
           </div>
 
-          <div className="pillar-card p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between transition-all duration-300 ease-[var(--ease-out)] hover:-translate-y-1.5 hover:scale-[1.02] hover:bg-white/15 hover:border-white/30 hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform">
-            <div>
-              <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4">
-                <LineChart className="w-5 h-5" />
+          <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
+            <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
+              <div>
+                <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4 ring-1 ring-emerald-300/30">
+                  <LineChart className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">3. Insights &amp; Frühwarnsystem</h3>
+                <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                  Wiederkehrendes Lob und Kritik im monatlichen Feedback-Report sichtbar machen – für fundierte betriebliche Entscheidungen.
+                </p>
               </div>
-              <h3 className="text-lg font-bold font-sans text-white mb-2">3. Insights &amp; Frühwarnsystem</h3>
-              <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                Wiederkehrendes Lob und Kritik im monatlichen Feedback-Report sichtbar machen – für fundierte betriebliche Entscheidungen.
-              </p>
             </div>
           </div>
         </div>

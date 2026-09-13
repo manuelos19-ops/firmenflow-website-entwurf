@@ -79,7 +79,7 @@ export function DirectWithManu() {
           
           {/* Text Left */}
           <div className="lg:col-span-6 xl:col-span-7 max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] mb-5 shadow-sm">
+            <div className="badge-eyebrow text-[var(--color-coral)] mb-6">
               <BrandIcon className="w-4 h-3.5" />
               <span>Persönlich mit Manu</span>
             </div>
@@ -97,17 +97,17 @@ export function DirectWithManu() {
               Ich mag kurze Wege, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Du hast meine direkte Handynummer und das Versprechen, dass dein Projekt Chefsache bleibt.
             </p>
 
-            {/* Quick Trust Highlights - Option A */}
+            {/* Quick Trust Highlights - High-End Frosted Pills */}
             <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <PhoneCall className="w-3.5 h-3.5 text-[var(--color-coral)]" />
                 <span>Direkter Draht via WhatsApp &amp; Telefon</span>
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <MessageSquare className="w-3.5 h-3.5 text-[var(--color-plum)]" />
                 <span>Kein Agentur-Fachchinesisch</span>
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[var(--color-line)] shadow-sm">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <Handshake className="w-3.5 h-3.5 text-emerald-600" />
                 <span>100 % persönliche Verantwortung</span>
               </div>
@@ -224,7 +224,7 @@ export function DirectWithManu() {
           </div>
         </div>
 
-        {/* 3 Clean, Grounded Bento Value Cards */}
+        {/* 3 Clean, Grounded Bento Value Cards - Double-Bezel Architecture */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {bentoItems.map((item, index) => {
             const Icon = item.icon;
@@ -234,31 +234,34 @@ export function DirectWithManu() {
                 ref={(el) => {
                   cardsRef.current[index] = el;
                 }}
-                className={cn(
-                  "group relative p-7 rounded-3xl bg-white border shadow-md transition-all duration-300 ease-[var(--ease-out)]",
-                  "hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl active:scale-[0.985] cursor-pointer will-change-transform",
-                  item.border
-                )}
+                className="double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03] border border-black/[0.06] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5 group cursor-pointer"
               >
-                <div 
+                <div
                   className={cn(
-                    "absolute inset-0 rounded-3xl bg-gradient-to-b opacity-40 group-hover:opacity-80 transition-opacity pointer-events-none",
-                    item.gradient
-                  )} 
-                />
+                    "double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-8 bg-white border border-[var(--color-line)]/50 relative overflow-hidden flex flex-col h-full justify-between gap-6 transition-all duration-300",
+                    item.border
+                  )}
+                >
+                  <div 
+                    className={cn(
+                      "absolute inset-0 bg-gradient-to-b opacity-30 group-hover:opacity-75 transition-opacity pointer-events-none",
+                      item.gradient
+                    )} 
+                  />
 
-                <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                  <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-110", item.iconBg)}>
-                    <Icon className="w-6 h-6" />
-                  </div>
+                  <div className="relative z-10 flex flex-col h-full justify-between gap-6">
+                    <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-110", item.iconBg)}>
+                      <Icon className="w-6 h-6" />
+                    </div>
 
-                  <div>
-                    <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 font-sans group-hover:text-[var(--color-coral)] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <div>
+                      <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 font-sans group-hover:text-[var(--color-coral)] transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

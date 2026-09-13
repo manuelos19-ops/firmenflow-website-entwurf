@@ -119,10 +119,10 @@ export function StorySection() {
       <Container>
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
-            <BrandIcon className="w-4 h-3.5" />
+          <div className="badge-eyebrow mb-5">
+            <BrandIcon className="w-3.5 h-3" />
             <span>Aus der Praxis · So funktioniert's</span>
-          </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
             Vom unsichtbaren Laden zum vollen Betrieb.
           </h2>
@@ -142,12 +142,14 @@ export function StorySection() {
                 key={step.number}
                 onMouseEnter={() => setActiveStep(idx)}
                 className={cn(
-                  "story-card flex flex-col justify-between bg-white rounded-3xl border-2 transition-all duration-300 ease-[var(--ease-out)] overflow-hidden shadow-lg group hover:-translate-y-2 hover:scale-[1.015] hover:shadow-2xl active:scale-[0.99] cursor-pointer will-change-transform",
+                  "story-card double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03] border border-black/[0.06] shadow-xl",
+                  "transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-2 hover:shadow-2xl active:scale-[0.99] cursor-pointer will-change-transform",
                   isSelected
-                    ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/20 ring-4 ring-[var(--color-coral)]/10"
-                    : "border-[var(--color-line)] hover:border-[var(--color-coral)]/50"
+                    ? "ring-2 ring-[var(--color-coral)]/40 shadow-[var(--color-coral)]/15"
+                    : "hover:border-[var(--color-coral)]/30"
                 )}
               >
+                <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] flex flex-col justify-between bg-white border border-[var(--color-line)]/50 overflow-hidden h-full">
                 {/* Visual Image Box: Optimized 4:5 aspect ratio on mobile so characters and details are 100% visible */}
                 <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:h-[440px] overflow-hidden bg-[#e8e4df] shrink-0">
                   <Image
@@ -205,32 +207,35 @@ export function StorySection() {
                     ))}
                   </ul>
                 </div>
+                </div>
               </div>
             );
           })}
         </div>
 
         {/* Bottom Action Callout */}
-        <div className="mt-12 sm:mt-16 max-w-2xl mx-auto text-center bg-white/70 backdrop-blur-md border border-[var(--color-line)] rounded-3xl p-8 shadow-lg">
-          <p className="text-base sm:text-lg font-display font-bold text-[var(--color-ink)] mb-2">
-            Bereit für mehr Sichtbarkeit für deinen Betrieb?
-          </p>
-          <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-            Lass uns kurz sprechen – ehrlich, unverbindlich und persönlich mit Manu.
-          </p>
+        <div className="mt-14 sm:mt-20 max-w-2xl mx-auto text-center double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03] border border-black/[0.06] shadow-lg">
+          <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-8 sm:p-10 bg-white/95 border border-[var(--color-line)]/50">
+            <p className="text-base sm:text-lg font-display font-bold text-[var(--color-ink)] mb-2">
+              Bereit für mehr Sichtbarkeit für deinen Betrieb?
+            </p>
+            <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
+              Lass uns kurz sprechen – ehrlich, unverbindlich und persönlich mit Manu.
+            </p>
 
-          <div className="inline-block">
-            <MagneticButton>
-              <ButtonLink 
-                href="#projektanfrage" 
-                variant="primary"
-                size="lg"
-                className="shadow-xl shadow-[var(--color-coral)]/25 text-sm sm:text-base px-8 py-4"
-              >
-                <span>Lass uns sprechen</span>
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </ButtonLink>
-            </MagneticButton>
+            <div className="inline-block">
+              <MagneticButton>
+                <ButtonLink 
+                  href="#projektanfrage" 
+                  variant="primary"
+                  size="lg"
+                  className="shadow-xl shadow-[var(--color-coral)]/25 text-sm sm:text-base px-8 py-4"
+                >
+                  <span>Lass uns sprechen</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </ButtonLink>
+              </MagneticButton>
+            </div>
           </div>
         </div>
       </Container>
