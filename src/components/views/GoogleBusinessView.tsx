@@ -121,19 +121,19 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </div>
 
             <h1 className="g360-hero-title text-4xl sm:text-6xl md:text-7xl font-display font-extrabold text-[var(--color-ink)] leading-[1.06] tracking-tight">
-              Bei Google gefunden werden. <br className="hidden sm:block" />
-              <span className="text-[var(--color-plum)]">Vertrauen aufbauen.</span> <br />
+              Der erste Eindruck <br className="hidden sm:block" />
+              <span className="text-[var(--color-plum)]">passiert bei Google.</span> <br />
               <span className="text-[var(--color-coral)] font-editorial italic font-normal">
-                Aus Feedback lernen.
+                Nicht in deinem Betrieb.
               </span>
             </h1>
 
             <p className="g360-hero-body text-xl sm:text-2xl text-[var(--color-ink)] font-semibold leading-relaxed">
-              Deine Google-Präsenz sollte mehr können, als nur deine Öffnungszeiten anzuzeigen.
+              Dein Google-Profil kann mehr als Öffnungszeiten anzeigen.
             </p>
 
             <p className="g360-hero-body text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl">
-              Wenn Kunden in deiner Region nach einem Handwerker, Café, Friseur oder Dienstleister suchen, beginnt die Entscheidung fast immer bei Google Maps. Wie wirkt dein Betrieb dort? Wie frisch sind deine Bewertungen? Und vor allem: <strong>Nutzt du das Feedback deiner Kunden als wertvolle Erkenntnisse für deinen Betrieb?</strong>
+              Egal ob Bäckerei, Handyladen oder Heizungsbauer: Wer am Niederrhein sucht, schaut zuerst auf Google Maps. Sterne, Fotos, letzte Bewertung – in drei Sekunden steht fest, wer angerufen wird. <strong>Ich sorge dafür, dass du das bist.</strong>
             </p>
 
             {/* CTAs */}
@@ -354,16 +354,16 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </p>
 
                 <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                  Ich baue deine Präsenz in Google Suche und Google Maps von Grund auf auf – sauber, lückenlos und optimal vorbereitet:
+                  Ich richte dein Profil für Google Suche und Maps ein. Das gehört dazu:
                 </p>
 
                 <ul className="space-y-3 text-xs sm:text-sm text-[var(--color-ink)]">
                   {[
-                    "Einrichtung oder saubere Übernahme deines Profils",
-                    "Prüfung aller Unternehmensinformationen",
-                    "Richtige Primär- und Nebenkategorien für mehr Treffer",
-                    "Öffnungszeiten, Kontaktdaten & ansprechende Texte",
-                    "Hochwertige Bilder & Verknüpfung mit deiner Website",
+                    "Profil einrichten oder ein vorhandenes übernehmen",
+                    "Name, Adresse, Telefon überall identisch – Google mag Widersprüche nicht",
+                    "Die richtige Hauptkategorie – der größte einzelne Hebel fürs Ranking",
+                    "Öffnungszeiten, die stimmen – Google wertet das inzwischen mit",
+                    "Echte Fotos aus deinem Betrieb, keine Stockbilder",
                   ].map((pt) => (
                     <li key={pt} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -375,7 +375,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
               <div className="pt-6 mt-6 border-t border-stone-100 relative z-10">
                 <span className="text-xs font-semibold text-amber-900 block">
-                  Ergebnis: Dein Eintrag existiert nicht nur, sondern zieht aktiv Kunden an.
+                  Danach findet dich jemand, der deinen Namen nicht kennt.
                 </span>
               </div>
             </div>
@@ -394,7 +394,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </h3>
 
                 <p className="text-base font-semibold text-[var(--color-plum)]">
-                  Nutzt du sein volles Potenzial auch wirklich?
+                  Wann hast du zuletzt reingeschaut?
                 </p>
 
                 <p className="text-sm text-[var(--color-muted)] leading-relaxed">
@@ -404,9 +404,9 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <ul className="space-y-3 text-xs sm:text-sm text-[var(--color-ink)]">
                   {[
                     "Positive Bewertungen bleiben monatelang unkommentiert",
-                    "Kritik wird übersehen, ignoriert oder zu spät beantwortet",
-                    "Antworten wirken oft wie lieblose Copy-Paste-Standardfloskeln",
-                    "Wertvolle Anregungen deiner Kunden versickern ungenutzt",
+                    "Kritik bleibt unbeantwortet – oder kommt zu spät",
+                    "Antworten klingen wie aus der Vorlage",
+                    "Niemand wertet aus, was Kunden eigentlich sagen",
                   ].map((pt) => (
                     <li key={pt} className="flex items-start gap-2.5">
                       <AlertCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
@@ -418,7 +418,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
               <div className="pt-6 mt-6 border-t border-stone-100 relative z-10">
                 <span className="text-xs font-semibold text-[var(--color-plum)] block">
-                  Lösung: Ich mache dieses Feedback zu einem echten Wettbewerbsvorteil für dich.
+                  Ich kümmere mich drum – und sage dir, was drinsteht.
                 </span>
               </div>
             </div>
@@ -429,13 +429,13 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
         <div className="space-y-12">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-              Leistungstiefe
+              Die Leistung
             </span>
             <h2 className="text-3xl sm:text-5xl font-display font-bold text-[var(--color-ink)] mt-2">
-              Die 3 Kernsäulen im Detail
+              Drei Dinge, um die ich mich kümmere
             </h2>
             <p className="text-sm sm:text-base text-[var(--color-muted)] mt-2">
-              Kein Agentur-Fachchinesisch. Sondern drei greifbare Hebel für deinen Betrieb.
+              Bewertungen beantworten. Neue Bewertungen bekommen. Verstehen, was drinsteht.
             </p>
           </div>
 
@@ -444,15 +444,15 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200">
                 <MessageSquareCheck className="w-4 h-4" />
-                <span>Säule 01 · Reputationsschutz</span>
+                <span>01 · Bewertungen beantworten</span>
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-display font-bold text-[var(--color-ink)]">
-                Professionelles Bewertungsmanagement
+                Jede Bewertung bekommt eine Antwort
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Ich übernehme auf Wunsch die laufende Betreuung deiner Google-Rezensionen. Neue Bewertungen werden geprüft, eingeordnet und passend zu deinem Unternehmen beantwortet.
+                Auf Wunsch übernehme ich das komplett. Neue Bewertung kommt rein, ich lese sie, ich antworte – in deinem Namen und in deinem Ton.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -461,10 +461,10 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     ✍️
                   </div>
                   <strong className="text-[var(--color-ink)] text-sm block mb-1">
-                    Deine echte Sprache
+                    Klingt nach dir
                   </strong>
                   <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                    Keine generischen Standard-Bots. Jede Antwort ist individuell und spiegelt die Herzlichkeit deines Betriebs wider.
+                    Wir legen vorher fest, wie du klingst. Danach liest niemand, dass da jemand anderes tippt.
                   </p>
                 </div>
 
@@ -473,10 +473,10 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     🛡️
                   </div>
                   <strong className="text-[var(--color-ink)] text-sm block mb-1">
-                    Deeskalation bei Kritik
+                    Ruhig bleiben, wenn&apos;s Ärger gibt
                   </strong>
                   <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                    Sensible Rezensionen werden professionell und besonnen beantwortet – damit negative Stimmen keine Neukunden abschrecken.
+                    Bei einer schlechten Bewertung zählt der Ton. Sachlich antworten wirkt auf die, die mitlesen, oft besser als die Bewertung selbst.
                   </p>
                 </div>
               </div>
@@ -490,11 +490,11 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 Worauf ich bei jeder Antwort achte:
               </p>
               <ul className="space-y-2.5 text-xs sm:text-sm text-stone-700">
-                <li className="flex items-center gap-2">✓ Wertschätzung bei Lob &amp; Empfehlungen</li>
-                <li className="flex items-center gap-2">✓ Eingehen auf konkrete Produkte &amp; Details</li>
-                <li className="flex items-center gap-2">✓ Klare, deeskalierende Antworten bei Kritik</li>
-                <li className="flex items-center gap-2">✓ Vorab-Rücksprache bei heiklen Vorfällen</li>
-                <li className="flex items-center gap-2">✓ Einheitlicher Außenauftritt rund um die Uhr</li>
+                <li className="flex items-center gap-2">✓ Bei Lob: danken, ohne floskelhaft zu werden</li>
+                <li className="flex items-center gap-2">✓ Auf das eingehen, was der Kunde wirklich erwähnt hat</li>
+                <li className="flex items-center gap-2">✓ Bei Kritik: sachlich, kurz, ohne Rechtfertigung</li>
+                <li className="flex items-center gap-2">✓ Bei heiklen Fällen frage ich dich vorher</li>
+                <li className="flex items-center gap-2">✓ Immer derselbe Ton – egal wer gerade schreibt</li>
               </ul>
             </div>
           </div>
@@ -506,43 +506,43 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <Star className="w-5 h-5 fill-white text-white" />
               </div>
               <h4 className="text-lg font-bold text-[var(--color-ink)]">
-                Das Dilemma gelöst:
+                Warum so wenige schreiben:
               </h4>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-                Zufriedene Kunden gehen oft nach Hause, ohne eine Rezension zu schreiben – einfach weil im Alltag der richtige Impuls fehlte.
+                Nicht aus Unzufriedenheit. Meistens fehlt im Moment einfach der Anstoß – und zu Hause denkt keiner mehr dran.
               </p>
               <div className="p-3.5 bg-white border border-amber-300 rounded-xl text-xs text-amber-950 font-medium shadow-sm">
-                <strong>100 % Richtlinienkonform:</strong> Keine gekauften Bewertungen, kein Drängen. Reale Kundenmeinungen, die Vertrauen stiften.
+                <strong>Regelkonform:</strong> Keine gekauften Bewertungen, kein Drängen. Nur echte Kunden, die von selbst schreiben.
               </div>
             </div>
 
             <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-xs font-bold border border-amber-200">
                 <Star className="w-4 h-4 fill-amber-500 text-amber-500" />
-                <span>Säule 02 · Wachstums-Prozess</span>
+                <span>02 · Mehr Bewertungen bekommen</span>
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-display font-bold text-[var(--color-ink)]">
-                Systematischer Aufbau echter Bewertungen
+                Zufriedene Kunden schreiben selten von allein
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Gute Leistungen allein führen selten automatisch zu vielen Rezensionen. Wir entwickeln gemeinsam einen unkomplizierten Prozess, mit dem du Kunden im passenden Moment erreichst:
+                Gute Arbeit allein bringt keine Bewertungen. Es braucht jemanden, der im richtigen Moment fragt. Wir überlegen gemeinsam, wann das bei dir ist:
               </p>
 
               <div className="space-y-3 pt-2">
                 {[
                   {
-                    title: "Smarte Kontaktpunkte im Kundenalltag",
-                    desc: "Unkomplizierte Bewertungswege genau dort, wo deine Kunden begeistert sind (am Tresen, nach erledigtem Auftrag oder bei der Abholung).",
+                    title: "Der richtige Moment",
+                    desc: "Am Tresen. Nach dem Auftrag. Bei der Abholung. Da, wo der Kunde gerade zufrieden ist – nicht drei Tage später per Mail.",
                   },
                   {
-                    title: "Passende Formulierungen für dich & dein Team",
-                    desc: "Keine plumpen Verkaufsfloskeln, sondern sympathische und natürliche Ansprachen.",
+                    title: "Sätze, die du wirklich sagen würdest",
+                    desc: "Kein auswendig gelernter Spruch. Ein Satz, der zu dir passt und den dein Team sich merken kann.",
                   },
                   {
-                    title: "Einbindung in Rechnungen & Bestätigungen",
-                    desc: "Subtile, richtlinienkonforme Hinweise auf Rechnungen, Lieferscheinen oder Begleitdokumenten.",
+                    title: "Auf Rechnung und Lieferschein",
+                    desc: "Ein kurzer Hinweis auf Papieren, die der Kunde ohnehin in der Hand hat.",
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
@@ -566,15 +566,15 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">
                 <LineChart className="w-4 h-4" />
-                <span>Säule 03 · Unternehmerischer Mehrwert</span>
+                <span>03 · Verstehen, was drinsteht</span>
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-display font-bold text-[var(--color-ink)]">
-                Customer Insights &amp; Frühwarnsystem
+                Du erfährst, was schiefläuft – bevor es dich Kunden kostet
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Hier geht Lokalpräsenz 360° entscheidend weiter: Aus einzelnen Kundenstimmen entsteht ein <strong>kontinuierliches Feedback-System</strong>. Wir erkennen wiederkehrende Muster, bevor Probleme teuer werden.
+                Eine schlechte Bewertung ist Pech. <strong>Viermal dieselbe Kritik ist ein Muster.</strong> Einmal im Monat lese ich alles durch und sage dir, was sich wiederholt.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -584,17 +584,17 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     <span>Was Kunden loben:</span>
                   </div>
                   <p className="text-xs text-emerald-950 leading-relaxed">
-                    Wir identifizieren Stärken, die Kunden immer wieder betonen (z. B. Freundlichkeit bestimmter Mitarbeiter, Atmosphäre, Qualität) – damit du sie bewusst beibehältst.
+                    Wenn zehn Leute deine Beratung loben, weißt du, womit du werben solltest. Und was du auf keinen Fall ändern darfst.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-rose-50/80 border border-rose-200">
                   <div className="flex items-center gap-2 text-rose-800 font-bold text-xs mb-1">
                     <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
-                    <span>Frühwarnsystem:</span>
+                    <span>Wenn sich was häuft:</span>
                   </div>
                   <p className="text-xs text-rose-950 leading-relaxed">
-                    Eine Kritik kann Zufall sein. Wenn Wartezeiten oder Erreichbarkeit jedoch gehäuft auftauchen, erfährst du es sofort – bevor Kunden dauerhaft abwandern.
+                    Eine Kritik kann Zufall sein. Viermal Wartezeit ist ein Muster – und du erfährst es, bevor es sich in deinen Sternen niederschlägt.
                   </p>
                 </div>
               </div>
@@ -633,7 +633,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               {/* Sample Insight Box */}
               <div className="p-3.5 rounded-xl bg-white/10 text-xs space-y-1.5 backdrop-blur-sm">
                 <span className="text-[11px] font-bold text-[var(--color-coral)] uppercase tracking-wider block">
-                  Erkannte Handlungsfelder:
+                  Was mir aufgefallen ist:
                 </span>
                 <p className="text-white/90 leading-relaxed">
                   ✓ 9x Lob für Team-Freundlichkeit am Empfang. <br />
@@ -642,7 +642,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               </div>
 
               <div className="p-3.5 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-xs text-white/90">
-                <strong className="text-white block mb-0.5">💡 Konkrete Empfehlung für dich:</strong>
+                <strong className="text-white block mb-0.5">💡 Mein Vorschlag:</strong>
                 Samstags zwischen 10:00 und 12:00 Uhr eine zusätzliche Kraft einteilen, um die Wartezeit an der Kasse zu halbieren.
               </div>
             </div>
@@ -656,19 +656,19 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           </div>
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200/60 text-amber-900 text-xs font-bold font-mono">
-              Optionales Modul
+              Optional
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold font-sans text-amber-950">
-              Mitarbeiter vor Ort einbinden
+              Dein Team macht mit
             </h3>
             <p className="text-sm sm:text-base text-amber-900/85 leading-relaxed">
-              Eine Bewertungsstrategie funktioniert erst dann, wenn sie von deinem Team ganz natürlich im Arbeitsalltag umgesetzt wird. In einer kurzen, praxistauglichen Schulung zeige ich deinen Mitarbeitern:
+              Am Ende fragt nicht du, sondern dein Team. In einer kurzen Schulung gehe ich mit deinen Leuten durch:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-amber-950 font-medium">
-              <span className="flex items-center gap-2">✓ Wann der perfekte Zeitpunkt für die Frage ist</span>
-              <span className="flex items-center gap-2">✓ Wie Kunden sympathisch angesprochen werden</span>
-              <span className="flex items-center gap-2">✓ Welche Sätze garantiert funktionieren</span>
-              <span className="flex items-center gap-2">✓ Wie man souverän auf Kundenkritik reagiert</span>
+              <span className="flex items-center gap-2">✓ Wann man fragt – und wann besser nicht</span>
+              <span className="flex items-center gap-2">✓ Wie man es anspricht, ohne aufdringlich zu wirken</span>
+              <span className="flex items-center gap-2">✓ Welche Sätze sich im Alltag bewährt haben</span>
+              <span className="flex items-center gap-2">✓ Was man sagt, wenn sich jemand beschwert</span>
             </div>
           </div>
         </div>
@@ -680,10 +680,10 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               Übersicht
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-[var(--color-ink)] mt-2">
-              Die 6 Bausteine auf einen Blick
+              Die sechs Bausteine
             </h2>
             <p className="text-sm text-[var(--color-muted)] mt-1">
-              Du entscheidest flexibel, welche Bausteine für deinen Betrieb Sinn machen.
+              Du entscheidest, welche davon du brauchst.
             </p>
           </div>
 
@@ -691,43 +691,43 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             {[
               {
                 num: "01",
-                title: "Lokalpräsenz aufbauen",
-                desc: "Für Betriebe ohne Profil: Komplette Neuerstellung mit allen Angaben, Leistungen und Fotos.",
+                title: "Profil aufbauen",
+                desc: "Noch kein Google-Profil? Ich lege es an – mit allen Angaben, Leistungen und echten Fotos.",
                 icon: Building2,
                 color: "text-blue-600 bg-blue-50 border-blue-200",
               },
               {
                 num: "02",
-                title: "Lokalpräsenz optimieren",
-                desc: "Für bestehende Profile: Fehler bereinigen, Rankingfaktoren stärken und Sichtbarkeit maximieren.",
+                title: "Profil aufräumen",
+                desc: "Falsche Angaben raus, richtige Kategorien rein, Fotos und Texte auf Stand.",
                 icon: Search,
                 color: "text-amber-600 bg-amber-50 border-amber-200",
               },
               {
                 num: "03",
-                title: "Laufendes Bewertungsmanagement",
-                desc: "Regelmäßige Überwachung und persönliche Beantwortung neuer Rezensionen in deinem Ton.",
+                title: "Bewertungen beantworten",
+                desc: "Ich lese jede neue Bewertung und antworte in deinem Ton, ohne dass du dran denken musst.",
                 icon: MessageSquareCheck,
                 color: "text-purple-600 bg-purple-50 border-purple-200",
               },
               {
                 num: "04",
-                title: "Echter Bewertungsaufbau",
-                desc: "Ein durchdachter Prozess, damit zufriedene Kunden im richtigen Moment gerne 5 Sterne hinterlassen.",
+                title: "Mehr Bewertungen bekommen",
+                desc: "Ein Ablauf, mit dem dein Team im richtigen Moment fragt. Ohne Drängen.",
                 icon: Star,
                 color: "text-emerald-600 bg-emerald-50 border-emerald-200",
               },
               {
                 num: "05",
-                title: "Customer Insights & Frühwarnsystem",
-                desc: "Strukturierte Auswertung: Was Kunden besonders schätzen und wo betrieblicher Handlungsbedarf besteht.",
+                title: "Auswertung",
+                desc: "Was Kunden immer wieder loben – und was sich an Kritik häuft.",
                 icon: LineChart,
                 color: "text-rose-600 bg-rose-50 border-rose-200",
               },
               {
                 num: "06",
-                title: "Monatsreport & Beratung",
-                desc: "Verständliche Auswertungen, Vergleich zu den Vormonaten und konkrete Handlungsempfehlungen.",
+                title: "Monatsreport",
+                desc: "Einmal im Monat verständlich zusammengefasst, mit Vergleich zum Vormonat und einem konkreten Vorschlag.",
                 icon: ShieldCheck,
                 color: "text-indigo-600 bg-indigo-50 border-indigo-200",
               },
@@ -760,6 +760,100 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           </div>
         </div>
 
+        {/* PREISE */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+              Preise
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-[var(--color-ink)] mt-2">
+              Was es kostet
+            </h2>
+            <p className="text-sm text-[var(--color-muted)] mt-1">
+              Alle Preise netto. Keine Mindestlaufzeit, keine Einrichtungsgebühr obendrauf.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-white border-2 border-[var(--color-line)] shadow-md space-y-5">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                  Einmalig
+                </span>
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Einrichtung</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-[var(--color-line)]">
+                  <span className="text-sm text-[var(--color-ink)]">Profil aufbauen</span>
+                  <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">290 €</span>
+                </div>
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="text-sm text-[var(--color-ink)]">Profil aufräumen</span>
+                  <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">190 €</span>
+                </div>
+              </div>
+              <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                Kategorien, Angaben, Leistungen, Beschreibung und Verifizierung. Bilder lieferst du – oder wir machen einen Fototermin.
+              </p>
+            </div>
+
+            <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-[var(--color-plum)] text-white border-2 border-[var(--color-plum)] shadow-2xl space-y-5 relative overflow-hidden">
+              <div className="absolute -top-20 -right-20 w-52 h-52 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative z-10 space-y-5">
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+                    Monatlich
+                  </span>
+                  <h3 className="text-xl font-bold mt-1">Betreuung</h3>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-display font-bold">99 €</span>
+                  <span className="text-sm text-white/70">/ Monat</span>
+                </div>
+                <ul className="space-y-2.5 text-sm text-white/90">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <span>Jede neue Bewertung wird beantwortet</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <span>Monatsreport mit konkretem Vorschlag</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <span>Profil bleibt aktuell und gepflegt</span>
+                  </li>
+                </ul>
+                <div className="p-3.5 rounded-2xl bg-white/10 border border-white/20 text-sm font-semibold">
+                  Monatlich kündbar. Keine zwölf Monate Mindestlaufzeit.
+                </div>
+              </div>
+            </div>
+
+            <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-white border-2 border-[var(--color-line)] shadow-md space-y-5">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                  Wenn du willst
+                </span>
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Dazu buchbar</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-[var(--color-line)]">
+                  <span className="text-sm text-[var(--color-ink)]">Fototermin vor Ort</span>
+                  <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">350 €</span>
+                </div>
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="text-sm text-[var(--color-ink)]">Team-Schulung</span>
+                  <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">150 €</span>
+                </div>
+              </div>
+              <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+                Echte Fotos aus deinem Betrieb statt Stockbildern. Und eine kurze Schulung, damit dein Team im richtigen Moment nach Bewertungen fragt.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* CLOSING CTA CARD - High Converting Finish */}
         <div className="g360-card-reveal relative bg-gradient-to-b from-[var(--color-plum)] to-[#240632] text-white rounded-[2.5rem] p-8 sm:p-16 shadow-2xl text-center max-w-4xl mx-auto space-y-6 overflow-hidden border border-white/20">
           <div className="absolute -top-32 -left-32 w-80 h-80 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" />
@@ -772,11 +866,11 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </span>
 
             <h3 className="text-3xl sm:text-5xl font-display font-bold leading-tight">
-              Finden wir heraus, welches Potenzial in deiner lokalen Auffindbarkeit steckt.
+              Ich schaue mir an, wie dein Betrieb bei Google dasteht.
             </h3>
 
             <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
-              Ich schaue mir deinen aktuellen Auftritt unverbindlich an und zeige dir, wo konkrete Verbesserungsmöglichkeiten für mehr Sichtbarkeit und echtes Kundenvertrauen liegen.
+              Kostet nichts und verpflichtet zu nichts. Ich sage dir, was ich sehe und was ich als Erstes ändern würde. Ob du das dann mit mir machst oder selbst, ist deine Sache.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
