@@ -91,19 +91,19 @@ export function GoogleBusinessPilot() {
 
           {/* Huge Statement Title with Scroll-Fill Inking */}
           <h2 className="relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display leading-[1.06] mb-5 text-white/15">
-            <span className="sr-only">Gefunden werden und direkt Vertrauen aufbauen.</span>
+            <span className="sr-only">Gefunden werden ist das eine. Vertrauen das andere.</span>
             <span aria-hidden="true" className="select-none">
-              Gefunden werden und <br className="hidden sm:block" />
-              <span className="font-editorial italic">direkt Vertrauen aufbauen.</span>
+              Gefunden werden ist das eine. <br className="hidden sm:block" />
+              <span className="font-editorial italic">Vertrauen das andere.</span>
             </span>
-            
+
             <span
               ref={overlayRef}
               className="absolute inset-0 text-white select-none pointer-events-none"
               aria-hidden="true"
             >
-              Gefunden werden und <br className="hidden sm:block" />
-              <span className="font-editorial text-[var(--color-coral)] italic">direkt Vertrauen aufbauen.</span>
+              Gefunden werden ist das eine. <br className="hidden sm:block" />
+              <span className="font-editorial text-[var(--color-coral)] italic">Vertrauen das andere.</span>
             </span>
           </h2>
 
@@ -163,8 +163,8 @@ export function GoogleBusinessPilot() {
                   <MessageSquareCheck className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <p className="text-[11px] text-blue-800 font-medium">Bewertungsmanagement</p>
-                  <p className="text-xs sm:text-sm font-bold text-blue-950">Individuelle Antworten</p>
+                  <p className="text-[11px] text-blue-800 font-medium">Bewertungen</p>
+                  <p className="text-xs sm:text-sm font-bold text-blue-950">Antwort in deinem Ton</p>
                 </div>
               </div>
 
@@ -173,8 +173,8 @@ export function GoogleBusinessPilot() {
                   <LineChart className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <p className="text-[11px] text-purple-800 font-medium">Customer Insights</p>
-                  <p className="text-xs sm:text-sm font-bold text-purple-950">Monatliche Auswertung</p>
+                  <p className="text-[11px] text-purple-800 font-medium">Auswertung</p>
+                  <p className="text-xs sm:text-sm font-bold text-purple-950">Monatsreport</p>
                 </div>
               </div>
             </div>
@@ -193,9 +193,9 @@ export function GoogleBusinessPilot() {
                 <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4 ring-1 ring-[var(--color-coral)]/30">
                   <Search className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil-Schliff &amp; Sichtbarkeit</h3>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil einrichten und aufräumen</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Prüfung aller Angaben, Kategorien, Fotos und Leistungen. Ein vollständiger Auftritt, der bei lokalen Suchanfragen überzeugt.
+                  Richtige Kategorien, vollständige Angaben, echte Fotos aus deinem Betrieb. Damit dein Eintrag überhaupt gefunden wird.
                 </p>
               </div>
             </div>
@@ -207,9 +207,9 @@ export function GoogleBusinessPilot() {
                 <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4 ring-1 ring-amber-300/30">
                   <Star className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungsaufbau &amp; Betreuung</h3>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungen beantworten</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Neue Rezensionen zeitnah und passend beantwortet. Plus ein praxistauglicher Prozess, damit zufriedene Kunden gerne bewerten.
+                  Jede neue Bewertung bekommt eine Antwort in deinem Ton – auch die unangenehmen. Dazu ein Ablauf, mit dem zufriedene Kunden überhaupt erst eine schreiben.
                 </p>
               </div>
             </div>
@@ -221,9 +221,9 @@ export function GoogleBusinessPilot() {
                 <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4 ring-1 ring-emerald-300/30">
                   <LineChart className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold font-sans text-white mb-2">3. Insights &amp; Frühwarnsystem</h3>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">3. Verstehen, was drinsteht</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Wiederkehrendes Lob und Kritik im monatlichen Feedback-Report sichtbar machen – für fundierte betriebliche Entscheidungen.
+                  Einmal im Monat lese ich alles durch und sage dir, was sich wiederholt – beim Lob wie bei der Kritik.
                 </p>
               </div>
             </div>

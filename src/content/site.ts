@@ -40,15 +40,10 @@ export const homeContent = {
   },
   pilot: {
     eyebrow: "Lokalpräsenz 360°",
-    title: "Gefunden werden und direkt Vertrauen aufbauen.",
-    body: "Wer lokal nach einem Betrieb sucht, entscheidet oft direkt bei Google. Ich optimiere dein Unternehmensprofil, übernehme das professionelle Bewertungsmanagement und mache das Feedback deiner Kunden als wertvolle Erkenntnisse für deinen Betrieb nutzbar.",
-    modules: [
-      "Google-Unternehmensprofil komplett optimieren",
-      "Laufendes Bewertungsmanagement (echte Antworten)",
-      "Systematischer Prozess für neue Kundenbewertungen",
-      "Customer Insights & monatlicher Feedback-Report",
-      "Frühwarnsystem für betriebliche Schwachstellen",
-    ],
+    // Die Ueberschrift steht bewusst in GoogleBusinessPilot.tsx, weil sie fuer
+    // den Tinten-Effekt dreifach gerendert wird. Hier kein title-Feld anlegen -
+    // es wuerde nicht ausgespielt.
+    body: "Wer dich bei Google Maps sucht, sieht zuerst Sterne, Fotos und die letzte Bewertung. Steht da nichts – oder etwas von 2022 – nützt die beste Website wenig. Ich kümmere mich darum, laufend, für 99 Euro im Monat.",
     cta: "Lokalpräsenz prüfen lassen",
   },
   process: [

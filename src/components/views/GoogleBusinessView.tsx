@@ -437,7 +437,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </p>
           </div>
 
-          {/* SÄULE 1: Professionelles Bewertungsmanagement */}
+          {/* SÄULE 1: Bewertungen beantworten */}
           <div className="g360-card-reveal bg-white rounded-3xl p-8 sm:p-12 border-2 border-[var(--color-line)] shadow-xl hover:shadow-2xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200">
@@ -559,7 +559,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </div>
           </div>
 
-          {/* SÄULE 3: Customer Insights & Der monatliche Feedback-Report (Frühwarnsystem) */}
+          {/* SÄULE 3: Verstehen, was drinsteht - der monatliche Report */}
           <div className="g360-card-reveal bg-white rounded-3xl p-8 sm:p-12 border-2 border-[var(--color-line)] shadow-xl hover:shadow-2xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">

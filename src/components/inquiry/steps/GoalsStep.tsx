@@ -13,7 +13,7 @@ const goalOptions = [
   { value: "modern-look", label: "Moderner, vertrauenswürdiger Auftritt für meinen Betrieb" },
   { value: "clear-offer", label: "Leistungen und Angebote verständlicher darstellen" },
   { value: "photo-video", label: "Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)" },
-  { value: "better-reviews", label: "Echtes Bewertungsmanagement & Google-Reputation" },
+  { value: "better-reviews", label: "Mehr und bessere Google-Bewertungen" },
 ] as const;
 
 export function GoalsStep({ data, errors, onPatch }: StepProps) {

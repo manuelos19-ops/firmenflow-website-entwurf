@@ -79,7 +79,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Lokalpräsenz 360°",
             description:
-              "Optimierung des Google-Unternehmensprofils, professionelles Bewertungsmanagement und laufende Kundenfeedback-Analyse.",
+              "Google-Unternehmensprofil einrichten oder aufräumen, laufendes Beantworten neuer Bewertungen und ein monatlicher Report zum Kundenfeedback.",
           },
         },
         {
@@ -88,7 +88,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Foto- & Videoaufnahmen vor Ort",
             description:
-              "Authentische Teamfotos, Räumlichkeiten und kurze Imagefilme direkt vor Ort beim Kunden.",
+              "Teamfotos, Räumlichkeiten und kurze Imagefilme direkt im Betrieb aufgenommen – keine Stockbilder.",
           },
         },
       ],
