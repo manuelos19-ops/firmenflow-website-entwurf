@@ -319,10 +319,10 @@ export function ServiceOverview() {
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
-                  100 % Preissicherheit &amp; kein Text-Stress
+                  Festpreis vorher. Texte inklusive.
                 </h4>
                 <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                  Du erhältst vor dem Start einen verbindlichen Festpreis. Alle Texte, Layouts und auf Wunsch Foto- &amp; Videoaufnahmen vor Ort erhältst du schlüsselfertig aus einer Hand.
+                  Du weißt vor dem Start, was es kostet. Texte, Layout und auf Wunsch die Fotos kommen von mir – du musst nichts vorbereiten.
                 </p>
               </div>
             </div>

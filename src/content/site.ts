@@ -32,12 +32,8 @@ export const homeContent = {
       points: ["Team- & Mitarbeiter-Shootings", "Räumlichkeiten & Atmosphäre", "Kurzer Imagefilm & Video-Reels", "Direkt bei dir vor Ort"],
     },
   ],
-  direct: {
-    eyebrow: "Persönlich mit Manu",
-    title: "Ein Partner auf Augenhöhe. Vom Unternehmer für Unternehmer.",
-    body: "Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen und den Betrieb am Laufen halten. Deshalb rede ich nicht im Agentur-Jargon, sondern in klaren Fakten: Was bringt deinem Betrieb echte Anfragen? Wo sparen wir uns überflüssigen Schnickschnack? Du hast meine direkte Handynummer und das Versprechen, dass dein Projekt Chefsache bleibt.",
-    points: ["Persönlich erreichbar", "Feste Absprachen", "Ehrliche Beratung", "Vor Ort am Niederrhein"],
-  },
+  // Die Texte des Abschnitts "Persönlich mit Manu" stehen in
+  // DirectWithManu.tsx, nicht hier. Kein direct-Feld anlegen.
   pilot: {
     eyebrow: "Lokalpräsenz 360°",
     // Die Ueberschrift steht bewusst in GoogleBusinessPilot.tsx, weil sie fuer
@@ -68,11 +64,6 @@ export const homeContent = {
       body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." 
     },
   ],
-  about: {
-    eyebrow: "Hi, ich bin Manu",
-    title: "Websites mit persönlicher Verantwortung.",
-    body: "Ich mag kurze Wege, klare Absprachen und Lösungen, die im echten Alltag funktionieren. Bei Firmenflow gibt es keine Agentur-Bürokratie: Du weißt genau, wer an deiner Website sitzt, hast meine direkte Handynummer und kannst dich darauf verlassen, dass aus deinen Ideen ein starker Auftritt wird.",
-  },
   contact: {
     eyebrow: "Lass uns sprechen",
     title: "Kurze WhatsApp oder geführte Anfrage.",

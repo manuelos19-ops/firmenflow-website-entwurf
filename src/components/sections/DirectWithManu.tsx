@@ -85,16 +85,16 @@ export function DirectWithManu() {
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-6">
-              Ein Partner auf Augenhöhe. <br />
+              Du redest mit mir. <br />
               <span className="text-[var(--color-coral)] font-editorial">Vom Unternehmer für Unternehmer.</span>
             </h2>
             
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-5">
-              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen und den Betrieb am Laufen halten. Deshalb rede ich nicht im Agentur-Jargon, sondern in klaren Fakten: Was bringt deinem Betrieb echte Anfragen? Wo sparen wir uns überflüssigen Schnickschnack?
+              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen, den Betrieb am Laufen halten. Deshalb bekommst du von mir keine Präsentation mit Fachbegriffen, sondern zwei Sätze dazu, was es bringt und was es kostet.
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
-              Ich mag kurze Wege, hochwertige Gestaltung und Lösungen, die im Alltag deines Betriebs funktionieren. Du hast meine direkte Handynummer und das Versprechen, dass dein Projekt Chefsache bleibt.
+              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache.
             </p>
 
             {/* Quick Trust Highlights - High-End Frosted Pills */}
@@ -105,11 +105,11 @@ export function DirectWithManu() {
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <MessageSquare className="w-3.5 h-3.5 text-[var(--color-plum)]" />
-                <span>Kein Agentur-Fachchinesisch</span>
+                <span>Ein Ansprechpartner, keine Hotline</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <Handshake className="w-3.5 h-3.5 text-emerald-600" />
-                <span>100 % persönliche Verantwortung</span>
+                <span>Persönliche Verantwortung</span>
               </div>
             </div>
           </div>
