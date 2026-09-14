@@ -301,9 +301,20 @@ export default function LinksPage() {
                         {item.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed line-clamp-2">
+                      {/* Vollständige Beschreibung ohne unleserliche Kürzungen */}
+                      <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
                         {item.description}
                       </p>
+
+                      {/* Deutlicher Download-Hinweis für FlowScreen */}
+                      {isFlowscreen && (
+                        <div className="flex items-start gap-2 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-900 text-xs font-medium">
+                          <Download className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                          <span>
+                            <strong>Wichtiger Hinweis:</strong> Ein Klick auf diese Karte startet sofort den direkten Download des Installers (<span className="font-mono font-semibold text-amber-800">FlowScreen-Setup-1.1.0.exe</span>, ~79 MB für Windows 11).
+                          </span>
+                        </div>
+                      )}
 
                       {/* Tags */}
                       {item.tags && item.tags.length > 0 && (
@@ -318,6 +329,22 @@ export default function LinksPage() {
                           ))}
                         </div>
                       )}
+
+                      {/* CTA-Aktionszeile für maximale Klarheit */}
+                      <div className="pt-2.5 mt-2 flex items-center justify-between border-t border-[var(--color-line)]/50 text-xs font-semibold">
+                        <span className="text-[var(--color-coral)] group-hover:text-[var(--color-ink)] transition-colors flex items-center gap-1.5">
+                          {item.ctaText}
+                        </span>
+                        {isDownload ? (
+                          <span className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 font-mono font-bold">
+                            <Download className="w-3 h-3" /> .EXE DOWNLOAD
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 text-[11px] text-[var(--color-muted)] font-medium group-hover:text-[var(--color-coral)] transition-colors">
+                            Öffnen <ArrowUpRight className="w-3.5 h-3.5" />
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </a>
