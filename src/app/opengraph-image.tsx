@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import fs from "node:fs";
+import path from "node:path";
 
 export const runtime = "nodejs";
 export const alt = "Firmenflow – für deine Lokalpräsenz. Persönlich mit Manu.";
@@ -6,6 +8,16 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  let markBase64: string | null = null;
+  try {
+    const markPath = path.join(process.cwd(), "public/brand/firmenflow-mark.png");
+    if (fs.existsSync(markPath)) {
+      markBase64 = `data:image/png;base64,${fs.readFileSync(markPath).toString("base64")}`;
+    }
+  } catch {
+    markBase64 = null;
+  }
+
   return new ImageResponse(
     (
       <div
@@ -22,10 +34,21 @@ export default async function Image() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
-          <div style={{ display: "flex", fontSize: 44, fontWeight: "bold", color: "#3B0D4F" }}>
-            Firmenflow
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            {markBase64 ? (
+              <img
+                src={markBase64}
+                width="52"
+                height="52"
+                alt="Firmenflow"
+                style={{ width: 52, height: 52, borderRadius: 12 }}
+              />
+            ) : null}
+            <div style={{ display: "flex", fontSize: 44, fontWeight: "bold", color: "#482361" }}>
+              Firmenflow
+            </div>
           </div>
-          <div style={{ display: "flex", fontSize: 24, color: "#FF705D", fontWeight: 600 }}>
+          <div style={{ display: "flex", fontSize: 24, color: "#FA5D48", fontWeight: 600 }}>
             für deine Lokalpräsenz
           </div>
         </div>
@@ -33,9 +56,9 @@ export default async function Image() {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ display: "flex", flexDirection: "column", fontSize: 58, fontWeight: "bold", color: "#17131A", lineHeight: 1.15 }}>
             <div style={{ display: "flex" }}>Mehr Lokalpräsenz.</div>
-            <div style={{ display: "flex", color: "#3B0D4F" }}>Weniger Agenturtheater.</div>
+            <div style={{ display: "flex", color: "#482361" }}>Weniger Agenturtheater.</div>
           </div>
-          <div style={{ display: "flex", fontSize: 36, color: "#FF705D", fontStyle: "italic" }}>
+          <div style={{ display: "flex", fontSize: 36, color: "#FA5D48", fontStyle: "italic" }}>
             Deine Website. Persönlich mit Manu.
           </div>
         </div>
@@ -44,8 +67,19 @@ export default async function Image() {
           <div style={{ display: "flex", fontSize: 20, color: "#746D76" }}>
             Webdesign für Wesel & den Niederrhein
           </div>
-          <div style={{ display: "flex", fontSize: 20, color: "#3B0D4F", fontWeight: "bold" }}>
-            firmenflow.de
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            {markBase64 ? (
+              <img
+                src={markBase64}
+                width="24"
+                height="24"
+                alt="Firmenflow"
+                style={{ width: 24, height: 24, borderRadius: 6 }}
+              />
+            ) : null}
+            <div style={{ display: "flex", fontSize: 20, color: "#482361", fontWeight: "bold" }}>
+              firmenflow.de
+            </div>
           </div>
         </div>
       </div>
@@ -55,3 +89,4 @@ export default async function Image() {
     }
   );
 }
+
