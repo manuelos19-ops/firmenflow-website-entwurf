@@ -65,9 +65,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             Ueberschrift in der Systemschrift und springt dann sichtbar um. */}
         <link
           rel="preload"
-          href="/fonts/atmosphere/AtmosphereGrotesk-Bold.otf"
+          href="/fonts/atmosphere/AtmosphereGrotesk-Bold.woff2"
           as="font"
-          type="font/otf"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         <JsonLd />
