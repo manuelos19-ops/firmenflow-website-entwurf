@@ -32,13 +32,17 @@ export function ButtonLink({
   const baseStyles =
     "group inline-flex items-center justify-center gap-3 font-medium tracking-tight rounded-full select-none transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] cursor-pointer text-center will-change-transform";
 
+  // Keine "!"-Prefixe fuer Textfarben hier: tailwind-merge 3 erkennt die
+  // alte Tailwind-v3-Schreibweise nicht als Farbklasse, laesst sie stehen und
+  // haengt die Farbe vom Aufrufort zusaetzlich an. Ergebnis war ein schwarzer
+  // Button-Text auf dunklem Grund (Google-Sektion, ghost-Variante).
   const variants = {
     primary:
       "bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] shadow-md shadow-[var(--color-coral)]/20 hover:shadow-xl hover:shadow-[var(--color-coral)]/30 ring-1 ring-white/20",
     secondary:
-      "bg-white text-[var(--color-ink)] !text-[var(--color-ink)] hover:bg-[var(--color-paper)] border border-[var(--color-line)] shadow-sm hover:border-[var(--color-plum)]/30 font-semibold ring-1 ring-black/[0.03]",
+      "bg-white text-[var(--color-ink)] hover:bg-[var(--color-paper)] border border-[var(--color-line)] shadow-sm hover:border-[var(--color-plum)]/30 font-semibold ring-1 ring-black/[0.03]",
     dark: "bg-[var(--color-plum)] text-white hover:bg-[var(--color-plum-light)] shadow-md shadow-[var(--color-plum)]/20 ring-1 ring-white/15",
-    ghost: "bg-transparent text-[var(--color-ink)] !text-[var(--color-ink)] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
+    ghost: "bg-transparent text-[var(--color-ink)] hover:text-[var(--color-coral)] underline-offset-4 hover:underline",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#20ba5a] shadow-md shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 font-semibold ring-1 ring-white/20",
   };

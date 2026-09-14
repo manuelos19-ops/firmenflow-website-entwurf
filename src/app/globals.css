@@ -196,6 +196,16 @@ img {
   font-style: italic;
 }
 
+/* Auf schmalen Displays rutschte in Ueberschriften regelmaessig ein einzelnes
+   Wort allein in die letzte Zeile ("Wo steht dein Betrieb / aktuell?").
+   text-wrap: balance verteilt die Zeilen gleichmaessig; explizite <br> bleiben
+   davon unberuehrt. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
 .text-balance {
   text-wrap: balance;
 }

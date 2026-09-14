@@ -54,7 +54,7 @@ export function ServiceOverview() {
         <div className="mb-14 md:mb-20 max-w-3xl">
           <div className="badge-eyebrow mb-5">
             <BrandIcon className="w-3.5 h-3" />
-            <span>Leistungen · Alles aus einer Hand</span>
+            <span>Leistungen</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
             Alles aus einer Hand für deinen Betrieb.
@@ -111,7 +111,7 @@ export function ServiceOverview() {
                   </div>
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Ladezeit</p>
-                    <p className="text-sm font-bold text-[var(--color-ink)]">Kurze Ladezeit</p>
+                    <p className="text-sm font-bold text-[var(--color-ink)]">Ohne Ladebalken</p>
                   </div>
                 </div>
 

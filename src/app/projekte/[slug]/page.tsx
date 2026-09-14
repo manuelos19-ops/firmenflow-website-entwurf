@@ -33,14 +33,9 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.name} – ${kindLabel} | Firmenflow`,
       description: project.summary,
-      images: [
-        {
-          url: project.image,
-          width: 1200,
-          height: 630,
-          alt: `${project.name} – ${kindLabel}`,
-        },
-      ],
+      // Kein eigenes OG-Bild: die Projektbilder sind Handy-Screenshots im
+      // Hochformat und wuerden in der 1200x630-Vorschau beschnitten. Ohne
+      // Angabe greift die opengraph-image aus src/app.
     },
   };
 }
@@ -187,14 +182,15 @@ export default async function ProjectPage({
           </aside>
         )}
 
-        {/* Visual Preview Card */}
-        <div className="relative w-full h-[280px] sm:h-[400px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-line)] bg-stone-100">
+        {/* Handy-Screenshot der echten Seite. object-contain, weil der
+            Geraeterahmen sonst links und rechts angeschnitten wird. */}
+        <div className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-line)] bg-gradient-to-b from-[var(--color-plum)]/[0.06] via-[var(--color-paper)] to-white">
           <Image
             src={project.image}
-            alt={`${project.name} Website Vorschau`}
+            alt={`${project.name} auf dem Smartphone`}
             fill
             priority
-            className="object-cover object-top"
+            className="object-contain p-6 sm:p-8"
             sizes="(max-width: 1024px) 100vw, 896px"
           />
         </div>

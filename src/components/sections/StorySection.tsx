@@ -10,6 +10,7 @@ import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import {
   CheckCircle2,
+  XCircle,
   Users,
   SearchX,
   Laptop
@@ -191,19 +192,23 @@ export function StorySection() {
 
                   {/* Feature Checkpoints */}
                   <ul className="space-y-2.5 pt-4 border-t border-[var(--color-line)]/50 text-xs sm:text-sm text-[var(--color-ink)]/85">
-                    {step.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-2">
-                        <CheckCircle2 
-                          className={cn(
-                            "w-4 h-4 mt-0.5 shrink-0",
-                            step.tagVariant === "problem" && "text-rose-400",
-                            step.tagVariant === "solution" && "text-[var(--color-coral)]",
-                            step.tagVariant === "success" && "text-emerald-500"
-                          )} 
-                        />
-                        <span>{h}</span>
-                      </li>
-                    ))}
+                    {step.highlights.map((h) => {
+                      // Die Problem-Karte listet auf, was schiefgeht - ein
+                      // gruener Haken daneben las sich wie eine Zusage.
+                      const isProblem = step.tagVariant === "problem";
+                      const Icon = isProblem ? XCircle : CheckCircle2;
+                      return (
+                        <li key={h} className="flex items-start gap-2">
+                          <Icon
+                            className={cn(
+                              "w-4 h-4 mt-0.5 shrink-0",
+                              isProblem ? "text-rose-500" : "text-emerald-500"
+                            )}
+                          />
+                          <span>{h}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 </div>

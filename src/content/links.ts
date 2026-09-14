@@ -177,8 +177,8 @@ export const showcaseLinks = [
     type: "Branchen-Showcase",
   },
   {
-    name: "Käsekuchen Manufaktur",
-    sector: "Café & Backstube Showcase",
+    name: "Café Goldstück",
+    sector: "Specialty Coffee Showcase",
     url: "https://kaesekuchen-cafe-demo.vercel.app/",
     type: "Branchen-Showcase",
   },

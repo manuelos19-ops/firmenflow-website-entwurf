@@ -200,13 +200,13 @@ export function ProjectsShowcase() {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 md:mb-16">
           <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/20 text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] mb-5 shadow-sm">
             <BrandIcon className="w-4 h-3.5" />
-            <span>3D Showcase · Echte Arbeiten &amp; Entwürfe</span>
+            <span>Projekte</span>
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
-            Websites im 3D-Orbit.
+            Schau dir an, was ich baue.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Ausgewählte Live-Websites &amp; Web-Apps drehen sich auf der 3D-Bühne. Ziehe mit der Maus oder klicke auf eine Karte, um das Projekt direkt in einem neuen Tab zu öffnen.
+            Drei davon sind live im Netz, zwei sind Entwürfe für Branchen, für die ich noch keinen Kunden hatte. Klick auf eine Karte und schau dir die Seite selbst an.
           </p>
         </div>
 
@@ -283,7 +283,7 @@ export function ProjectsShowcase() {
                   }}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   className={cn(
-                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none block bg-[var(--color-paper)] will-change-transform",
+                    "absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden transition-shadow duration-300 group cursor-pointer border-2 select-none flex flex-col bg-[var(--color-paper)] will-change-transform",
                     isFront 
                       ? "border-[var(--color-coral)] shadow-2xl shadow-[var(--color-coral)]/25 ring-4 ring-[var(--color-coral)]/15" 
                       : "border-white/85 shadow-xl hover:opacity-100 hover:border-[var(--color-coral)]/60"
@@ -295,31 +295,29 @@ export function ProjectsShowcase() {
                   }}
                   suppressHydrationWarning
                 >
-                  {/* Browser Mockup Top Bar */}
-                  <div className="bg-white/95 px-3.5 py-2 border-b border-[var(--color-line)] flex items-center justify-between">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-red-400/90 inline-block" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-amber-400/90 inline-block" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/90 inline-block" />
-                    </div>
-                    <div className="text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[130px] sm:max-w-[160px] px-2 py-0.5 bg-[var(--color-paper)] rounded-md border border-[var(--color-line)]/50">
-                      {project.url.replace("https://", "").replace(/\/$/, "")}
-                    </div>
-                    <div className="w-4" />
-                  </div>
-
-                  {/* High-Res Preview Screenshot */}
-                  <div className="relative w-full h-[210px] sm:h-[250px] md:h-[290px] bg-slate-100 overflow-hidden">
+                  {/* Echter Handy-Screenshot statt Browser-Attrappe: die Seiten
+                      sind fuers Smartphone gebaut und genau so sieht sie ein
+                      Interessent auch. Deshalb object-contain - der Rahmen darf
+                      nicht angeschnitten werden. */}
+                  <div className="relative flex-1 min-h-0 w-full overflow-hidden bg-gradient-to-b from-[var(--color-plum)]/[0.07] via-[var(--color-paper)] to-white">
+                    {/* Weicher Schein hinter dem Geraet, damit der Platz neben
+                        dem Hochformat wie eine Produktaufnahme wirkt. */}
+                    <div
+                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[62%] h-[70%] rounded-full bg-[var(--color-coral)]/20 blur-2xl pointer-events-none"
+                      aria-hidden="true"
+                    />
                     <Image
                       src={project.image}
-                      alt={project.name}
+                      alt={`${project.name} auf dem Smartphone`}
                       fill
                       priority={idx === 0}
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain object-top p-2 pb-0 drop-shadow-xl transition-transform duration-500 group-hover:scale-[1.04]"
                       sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
                     />
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+
+                    <div className="absolute top-2.5 left-2.5 z-10 text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[120px] sm:max-w-[150px] px-2 py-0.5 bg-white/90 rounded-md border border-[var(--color-line)]/60 shadow-sm">
+                      {project.url.replace("https://", "").replace(/\/$/, "")}
+                    </div>
 
                     <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (
@@ -336,7 +334,7 @@ export function ProjectsShowcase() {
                   </div>
 
                   {/* Card Bottom Meta */}
-                  <div className="p-3.5 sm:p-4 bg-white/95 border-t border-[var(--color-line)] flex items-center justify-between">
+                  <div className="shrink-0 p-3.5 sm:p-4 bg-white/95 border-t border-[var(--color-line)] flex items-center justify-between">
                     <div className="min-w-0 pr-2">
                       <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)] truncate group-hover:text-[var(--color-coral)] transition-colors">
                         {project.name}

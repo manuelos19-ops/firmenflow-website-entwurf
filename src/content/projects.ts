@@ -22,7 +22,7 @@ export const liveProjects: readonly Project[] = [
     badge: "Echte Live-Website",
     summary: "Ein moderner, öffentlich erreichbarer Webauftritt für ein beliebtes regionales Eiscafé am Niederrhein mit digitaler Karte und Anfahrt.",
     factsApproved: false,
-    image: "/media/projects/eiscafe-orrico.webp",
+    image: "/media/projects/eiscafe-orrico-phone.webp",
   },
   {
     slug: "autotransport-alex",
@@ -34,7 +34,7 @@ export const liveProjects: readonly Project[] = [
     badge: "Echte Live-Website",
     summary: "Ein kontaktorientierter, mobiler Webauftritt für zuverlässige Fahrzeugüberführungen und Transportdienstleistungen in NRW.",
     factsApproved: false,
-    image: "/media/projects/autotransport-alex.webp",
+    image: "/media/projects/autotransport-alex-phone.webp",
   },
   {
     slug: "climanu-wetter",
@@ -46,7 +46,7 @@ export const liveProjects: readonly Project[] = [
     badge: "Echte Live Web-App",
     summary: "Eine interaktive, responsive Wetter-App & PWA mit DWD-Echtzeitdaten, 24h-Wetterkurve, Live-Regenradar und lokalem KI-Copilot.",
     factsApproved: true,
-    image: "/media/projects/climanu-wetter.webp",
+    image: "/media/projects/climanu-wetter-phone.webp",
   },
 ] as const;
 
@@ -61,19 +61,19 @@ export const conceptProjects: readonly Project[] = [
     badge: "Konzeptentwurf – kein Kundenauftrag",
     summary: "Ein frei gestalteter Konzeptentwurf für eine Handwerksbäckerei: digitale Auslage, Torten-Konfigurator und regionale Bildsprache. Der Betrieb ist erfunden – der Entwurf zeigt, wie ein Bäckerei-Auftritt aussehen kann, und behauptet weder Auftrag noch Zusammenarbeit.",
     factsApproved: true,
-    image: "/media/projects/goldkruste-baeckerei.webp",
+    image: "/media/projects/baeckerei-goldkruste-phone.webp",
   },
   {
-    slug: "kaesekuchen-manufaktur",
-    name: "Käsekuchen Manufaktur",
-    sector: "Café & Handwerksbackstube",
-    region: "Spezialitäten-Gastronomie",
+    slug: "cafe-goldstueck",
+    name: "Café Goldstück",
+    sector: "Café & Spezialitätenkaffee",
+    region: "Hamburger Speicherstadt",
     url: "https://kaesekuchen-cafe-demo.vercel.app/",
     kind: "concept",
     badge: "Konzeptentwurf – kein Kundenauftrag",
-    summary: "Ein frei gestalteter Konzeptentwurf für ein Spezialitäten-Café: digitale Speisekarte, Tischreservierung und Fokus auf Handwerk. Der Betrieb ist erfunden – der Entwurf zeigt, wie ein Café-Auftritt aussehen kann, und behauptet weder Auftrag noch Zusammenarbeit.",
+    summary: "Ein frei gestalteter Konzeptentwurf für ein Specialty-Coffee-Café: Speisekarte, Bewertungen und Kontakt auf einen Blick, gebaut fürs Smartphone. Der Betrieb ist erfunden – der Entwurf zeigt, wie ein Café-Auftritt aussehen kann, und behauptet weder Auftrag noch Zusammenarbeit.",
     factsApproved: true,
-    image: "/media/projects/kaesekuchen-cafe.webp",
+    image: "/media/projects/cafe-goldstueck-phone.webp",
   },
 ] as const;
 
