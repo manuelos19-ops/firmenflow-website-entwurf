@@ -2,10 +2,11 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Briefcase, Camera, Handshake, PhoneCall, MessageSquare } from "lucide-react";
+import { ArrowUpRight, Briefcase, Camera, Handshake, PhoneCall, MessageSquare } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 
 const bentoItems = [
@@ -112,6 +113,14 @@ export function DirectWithManu() {
                 <span>Persönliche Verantwortung</span>
               </div>
             </div>
+
+            <Link
+              href="/ueber-manu"
+              className="inline-flex items-center gap-2 mt-6 font-semibold text-[var(--color-plum)] hover:text-[var(--color-coral)] underline decoration-[var(--color-plum)]/25 underline-offset-4 hover:decoration-[var(--color-coral)] transition-colors"
+            >
+              Mehr über mich und meinen Werdegang
+              <ArrowUpRight className="w-4 h-4 shrink-0" />
+            </Link>
           </div>
 
           {/* Organic Floating Post-it / Polaroid Moodboard Canvas */}
