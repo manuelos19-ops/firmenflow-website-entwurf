@@ -23,7 +23,7 @@ export const homeContent = {
       slug: "relaunch",
       title: "Bestehende Website modernisieren",
       body: "Alte Seite entrümpeln, ohne die gewachsene Google-Sichtbarkeit zu verlieren. Ich übernehme deine bewährten Inhalte, ordne Struktur und Design neu und richte saubere Weiterleitungen ein – damit niemand auf einer Fehlerseite landet.",
-      points: ["Bestandsanalyse & Relaunch", "Google-Sichtbarkeit schützen", "Neue, klare Struktur", "Schlüsselfertig in deinem Tempo"],
+      points: ["Bestandsanalyse & Relaunch", "Google-Sichtbarkeit schützen", "Neue, klare Struktur", "In deinem Tempo"],
     },
     {
       slug: "foto-video",
@@ -46,22 +46,22 @@ export const homeContent = {
     { 
       number: "01", 
       title: "Kostenfreies Kennenlernen (ca. 30 Min.)", 
-      body: "Ich bespreche mit dir am Telefon oder bei einem Kaffee unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." 
+      body: "Am Telefon oder bei einem Kaffee. Du erzählst, was du vorhast, ich sage dir, was sinnvoll ist und was es kostet. Bring einfach deine wichtigsten Gedanken mit."
     },
     { 
       number: "02", 
       title: "Struktur & Design-Entwurf", 
-      body: "Ich erstelle die Seitenstruktur und den ersten interaktiven Entwurf. Du siehst genau, wie die Seite auf dem Smartphone wirkt, bevor alles final gebaut wird." 
+      body: "Ich baue die Struktur und einen ersten klickbaren Entwurf. Du siehst auf deinem Handy, wie die Seite wirkt – bevor ich sie fertig baue."
     },
     { 
       number: "03", 
-      title: "Umsetzung & Texterstellung", 
-      body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website zügig und datenschutzkonform." 
+      title: "Umsetzung und Texte",
+      body: "Ich schreibe die Texte, binde deine Fotos ein und baue die Seite fertig – datenschutzkonform, mit allem, was rechtlich dazugehört."
     },
     { 
       number: "04", 
-      title: "Schlüsselfertig online", 
-      body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." 
+      title: "Live geschaltet",
+      body: "Erst nach deiner Freigabe geht die Seite online. Ich prüfe jeden Button, richte das SSL-Zertifikat ein und verknüpfe dein Google-Profil."
     },
   ],
   contact: {
@@ -86,11 +86,11 @@ export const faqItems = [
   },
   { 
     question: "Wie viel Zeit muss ich selbst in das Projekt investieren?", 
-    answer: "Sehr wenig. Nach unserem ersten Kennenlernen habe ich in der Regel alles, was ich brauche. Ich formuliere verständliche Texte, strukturiere die Angebote und bereite den Entwurf schlüsselfertig vor. Du gibst mir dein Feedback, wir feilen am Feinschliff – und ansonsten kannst du dich voll auf dein Tagesgeschäft konzentrieren." 
+    answer: "Sehr wenig. Nach unserem ersten Kennenlernen habe ich in der Regel alles, was ich brauche. Ich schreibe die Texte, ordne die Leistungen und lege dir den fertigen Entwurf vor. Du sagst, was du anders willst – ansonsten kannst du dich um dein Tagesgeschäft kümmern."
   },
   { 
     question: "Wie lange dauert es, bis meine neue Website live ist?", 
-    answer: "Das richtet sich flexibel nach deinen Anforderungen und geht ohne träge Agenturschleifen: Viele Websites sind schon nach 1 bis 2 Wochen schlüsselfertig online. Wenn es bei dir eilt (z. B. wegen einer Neueröffnung oder Kampagne), können wir das Projekt nach Absprache auch kurzfristig vorziehen." 
+    answer: "Das hängt vom Umfang ab. Ein Onepager steht oft nach ein bis zwei Wochen, größere Auftritte brauchen länger. Wenn es bei dir eilt – Neueröffnung, Saison, Kampagne – sag Bescheid, dann ziehen wir es vor."
   },
   { 
     question: "Kannst du meine alte Website überarbeiten?", 

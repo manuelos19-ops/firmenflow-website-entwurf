@@ -10,13 +10,7 @@ export function Process() {
   const containerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<SVGPathElement>(null);
 
-  // Use process steps from site content, with fallback
-  const processSteps = homeContent?.process || [
-    { number: "01", title: "Kostenfreies Kennenlernen (ca. 30 Min.)", body: "Ich bespreche mit dir unverbindlich und kostenfrei deinen nächsten Schritt. Du kennst deinen Betrieb am besten: Bring einfach deine wichtigsten Gedanken mit, den Rest klären wir gemeinsam." },
-    { number: "02", title: "Struktur & Design-Entwurf", body: "Ich erstelle die Seitenstruktur und den ersten interaktiven Entwurf. Du siehst genau, wie die Seite auf dem Smartphone wirkt, bevor alles final gebaut wird." },
-    { number: "03", title: "Umsetzung & Texterstellung", body: "Ich formuliere verständliche Texte, binde deine Fotos ein und programmiere deine Website zügig und datenschutzkonform." },
-    { number: "04", title: "Schlüsselfertig online", body: "Nach deiner finalen Freigabe schalte ich die Website live. Ich prüfe alle Buttons, richte SSL ein und verknüpfe dein Google-Maps-Profil." },
-  ];
+  const processSteps = homeContent.process;
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -39,9 +33,9 @@ export function Process() {
       }
 
       // Steps reveal and nodes pulse
-      const steps = gsap.utils.toArray('.process-step');
-      
-      steps.forEach((step: any) => {
+      const steps = gsap.utils.toArray<HTMLElement>('.process-step');
+
+      steps.forEach((step) => {
         const node = step.querySelector('.process-node');
         const content = step.querySelector('.process-content');
         const number = step.querySelector('.process-number');
@@ -114,7 +108,7 @@ export function Process() {
             Der Weg zu deiner neuen Website.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
-            Keine monatelangen Wartezeiten: Flexibel und zügig in deinem Tempo – oft schon nach 1 bis 2 Wochen schlüsselfertig online. Wenn es eilt, nach Absprache auch schneller.
+            Kein Warten auf Rückmeldungen aus einer Agentur. Jeder Schritt geht über meinen Tisch – deshalb geht es schnell.
           </p>
         </div>
 

@@ -10,8 +10,6 @@ import {
   MapPin,
   ArrowUpRight,
   CloudSun,
-  Video,
-  ScanEye,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import {
@@ -23,9 +21,9 @@ import {
 import { CopyLinkButton } from "@/components/links/CopyLinkButton";
 
 export const metadata: Metadata = {
-  title: "Manu · Projekte, Tools & Links",
+  title: "Manu · Projekte, PWAs & Links",
   description:
-    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. cliManu, VidAlyzer, X-Ray & direkte Kontaktwege.",
+    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. FlowRay, Flowalyzer, foundersflow, cliManu & persönliche Kontaktwege.",
   robots: {
     index: false,
     follow: false,
@@ -42,64 +40,66 @@ export default function LinksPage() {
   return (
     <main id="main" className="pt-24 sm:pt-28 pb-20 min-h-screen">
       <Container className="max-w-xl mx-auto px-4 sm:px-6 space-y-8">
-        {/* Profile Card Header */}
-        <section className="text-center space-y-5 bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[var(--color-line)] shadow-xl shadow-black/5 relative overflow-hidden">
-          {/* Subtle Ambient Glow */}
-          <div
-            className="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-[var(--color-coral)]/10 rounded-full blur-3xl pointer-events-none"
-            aria-hidden="true"
-          />
-
-          {/* Avatar with Status Badge */}
-          <div className="relative inline-block mx-auto">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-white shadow-lg relative bg-amber-50">
-              <Image
-                src={linkProfile.avatar}
-                alt={linkProfile.name}
-                fill
-                priority
-                sizes="(max-width: 640px) 96px, 112px"
-                className="object-cover object-top"
-              />
-            </div>
-            {/* Live Status Indicator */}
+        {/* Profile Card Header - Double Bezel Architecture */}
+        <section className="double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03] border border-black/[0.06] shadow-sm">
+          <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-6 sm:p-8 bg-white/95 backdrop-blur-xl border border-[var(--color-line)]/50 text-center space-y-5 relative overflow-hidden">
+            {/* Subtle Ambient Glow */}
             <div
-              className="absolute bottom-1 right-1 flex items-center justify-center p-1 bg-white rounded-full shadow-md"
-              title={linkProfile.status}
-            >
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
-              </span>
-            </div>
-          </div>
+              className="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-[var(--color-coral)]/10 rounded-full blur-3xl pointer-events-none"
+              aria-hidden="true"
+            />
 
-          {/* Name & Role */}
-          <div className="space-y-1.5">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-ink)] font-heading">
-              {linkProfile.name}
-            </h1>
-            <p className="text-sm font-semibold text-[var(--color-coral)]">
-              {linkProfile.role}
+            {/* Avatar with Status Badge */}
+            <div className="relative inline-block mx-auto">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-white shadow-lg relative bg-amber-50">
+                <Image
+                  src={linkProfile.avatar}
+                  alt={linkProfile.name}
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 96px, 112px"
+                  className="object-cover object-top"
+                />
+              </div>
+              {/* Live Status Indicator */}
+              <div
+                className="absolute bottom-1 right-1 flex items-center justify-center p-1 bg-white rounded-full shadow-md"
+                title={linkProfile.status}
+              >
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+                </span>
+              </div>
+            </div>
+
+            {/* Name & Role */}
+            <div className="space-y-1.5">
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-ink)] font-heading">
+                {linkProfile.name}
+              </h1>
+              <p className="text-sm font-semibold text-[var(--color-coral)]">
+                {linkProfile.role}
+              </p>
+              <div className="flex items-center justify-center gap-1.5 text-xs text-[var(--color-muted)] font-medium pt-1">
+                <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
+                <span>{linkProfile.location}</span>
+              </div>
+            </div>
+
+            {/* Personal Bio */}
+            <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-md mx-auto">
+              {linkProfile.bio}
             </p>
-            <div className="flex items-center justify-center gap-1.5 text-xs text-[var(--color-muted)] font-medium pt-1">
-              <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
-              <span>{linkProfile.location}</span>
-            </div>
-          </div>
 
-          {/* Personal Bio */}
-          <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-md mx-auto">
-            {linkProfile.bio}
-          </p>
-
-          {/* Availability Badge & Share Button */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-200/80 text-emerald-800 text-xs font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-              <span>{linkProfile.status}</span>
+            {/* Availability Badge & Share Button */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-200/80 text-emerald-800 text-xs font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                <span>{linkProfile.status}</span>
+              </div>
+              <CopyLinkButton />
             </div>
-            <CopyLinkButton />
           </div>
         </section>
 
@@ -144,22 +144,23 @@ export default function LinksPage() {
         </section>
 
         {/* Primary Project & Tool Links */}
-        <section aria-label="Projekte und Tools" className="space-y-4">
+        <section aria-label="PWAs und Web-Tools" className="space-y-4">
           <div className="flex items-center justify-between px-1">
             <h2 className="text-xs font-bold uppercase tracking-wider text-[var(--color-muted)] font-mono">
-              Tools & Web-Apps
+              PWAs &amp; Web-Tools
             </h2>
             <span className="text-xs text-[var(--color-muted)] font-medium">
-              Direkt im Browser nutzbar
+              Direkt im Browser installierbar
             </span>
           </div>
 
           <div className="space-y-3.5">
             {primaryLinks.map((item) => {
               const isHighlight = item.highlight;
+              const isFlowray = item.id === "flowray";
+              const isFlowalyzer = item.id === "flowalyzer";
+              const isFoundersflow = item.id === "foundersflow";
               const isClimanu = item.id === "climanu";
-              const isVidalyzer = item.id === "vidalyzer";
-              const isXray = item.id === "xray";
               const isMain = item.id === "firmenflow-main";
 
               return (
@@ -182,6 +183,39 @@ export default function LinksPage() {
                           <Sparkles className="w-6 h-6" />
                         </div>
                       )}
+                      {isFlowray && (
+                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
+                          <Image
+                            src={item.image || "/brand/flowray-mark.webp"}
+                            alt={item.title}
+                            fill
+                            sizes="48px"
+                            className="object-contain p-0.5"
+                          />
+                        </div>
+                      )}
+                      {isFlowalyzer && (
+                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
+                          <Image
+                            src={item.image || "/brand/flowalyzer-mark.webp"}
+                            alt={item.title}
+                            fill
+                            sizes="48px"
+                            className="object-contain p-0.5"
+                          />
+                        </div>
+                      )}
+                      {isFoundersflow && (
+                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
+                          <Image
+                            src={item.image || "/brand/foundersflow-mark.webp"}
+                            alt={item.title}
+                            fill
+                            sizes="48px"
+                            className="object-contain p-0.5"
+                          />
+                        </div>
+                      )}
                       {isClimanu && (
                         <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center shadow-md shadow-sky-500/25 group-hover:scale-105 transition-transform overflow-hidden relative">
                           {item.image ? (
@@ -197,44 +231,14 @@ export default function LinksPage() {
                           )}
                         </div>
                       )}
-                      {isVidalyzer && (
-                        <div className="w-12 h-12 rounded-xl bg-[#0F172A] border border-cyan-500/30 text-cyan-400 flex items-center justify-center shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform overflow-hidden relative p-1.5">
-                          {item.image ? (
-                            <Image
-                              src={item.image}
-                              alt={item.title}
-                              fill
-                              sizes="48px"
-                              className="object-contain p-1"
-                            />
-                          ) : (
-                            <Video className="w-6 h-6" />
-                          )}
-                        </div>
-                      )}
-                      {isXray && (
-                        <div className="w-12 h-12 rounded-xl bg-[#1E1B4B] border border-indigo-500/30 text-indigo-300 flex items-center justify-center shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform overflow-hidden relative p-1.5">
-                          {item.image ? (
-                            <Image
-                              src={item.image}
-                              alt={item.title}
-                              fill
-                              sizes="48px"
-                              className="object-contain p-1"
-                            />
-                          ) : (
-                            <ScanEye className="w-6 h-6" />
-                          )}
-                        </div>
-                      )}
                       {isMain && (
-                        <div className="w-12 h-12 rounded-xl bg-[var(--color-plum)] text-white flex items-center justify-center shadow-md shadow-[var(--color-plum)]/20 group-hover:scale-105 transition-transform overflow-hidden relative p-2">
+                        <div className="w-12 h-12 rounded-xl bg-white border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1.5">
                           <Image
-                            src={item.image || "/brand/firmenflow-mark.png"}
+                            src={item.image || "/brand/firmenflow-mark.webp"}
                             alt={item.title}
                             fill
                             sizes="48px"
-                            className="object-contain p-2 invert"
+                            className="object-contain p-0.5"
                           />
                         </div>
                       )}
