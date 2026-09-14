@@ -10,6 +10,7 @@ import {
   MapPin,
   ArrowUpRight,
   CloudSun,
+  Download,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import {
@@ -23,7 +24,7 @@ import { CopyLinkButton } from "@/components/links/CopyLinkButton";
 export const metadata: Metadata = {
   title: "Manu · Projekte, PWAs & Links",
   description:
-    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. FlowRay, Flowalyzer, foundersflow, GSCflow, cliManu & persönliche Kontaktwege.",
+    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. FlowRay, Flowalyzer, foundersflow, GSCflow, FlowScreen, cliManu & persönliche Kontaktwege.",
   robots: {
     index: false,
     follow: false,
@@ -144,13 +145,13 @@ export default function LinksPage() {
         </section>
 
         {/* Primary Project & Tool Links */}
-        <section aria-label="PWAs und Web-Tools" className="space-y-4">
+        <section aria-label="PWAs, Software und Tools" className="space-y-4">
           <div className="flex items-center justify-between px-1">
             <h2 className="text-xs font-bold uppercase tracking-wider text-[var(--color-muted)] font-mono">
-              PWAs &amp; Web-Tools
+              PWAs, Software &amp; Tools
             </h2>
             <span className="text-xs text-[var(--color-muted)] font-medium">
-              Direkt im Browser installierbar
+              Web-Apps &amp; Windows-Software
             </span>
           </div>
 
@@ -161,8 +162,10 @@ export default function LinksPage() {
               const isFlowalyzer = item.id === "flowalyzer";
               const isFoundersflow = item.id === "foundersflow";
               const isGscflow = item.id === "gscflow";
+              const isFlowscreen = item.id === "flowscreen";
               const isClimanu = item.id === "climanu";
               const isMain = item.id === "firmenflow-main";
+              const isDownload = item.url.endsWith(".exe");
 
               return (
                 <a
@@ -170,6 +173,7 @@ export default function LinksPage() {
                   href={item.url}
                   target={item.url.startsWith("http") ? "_blank" : undefined}
                   rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                  download={isDownload ? true : undefined}
                   className={`group block relative rounded-2xl p-4 sm:p-5 transition-all duration-300 border ${
                     isHighlight
                       ? "bg-gradient-to-br from-white via-white to-amber-50/40 border-[var(--color-coral)]/40 shadow-lg shadow-[var(--color-coral)]/10 hover:shadow-xl hover:shadow-[var(--color-coral)]/20 hover:border-[var(--color-coral)]"
@@ -228,6 +232,17 @@ export default function LinksPage() {
                           />
                         </div>
                       )}
+                      {isFlowscreen && (
+                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
+                          <Image
+                            src={item.image || "/brand/flowscreen-mark.png"}
+                            alt={item.title}
+                            fill
+                            sizes="48px"
+                            className="object-contain p-0.5"
+                          />
+                        </div>
+                      )}
                       {isClimanu && (
                         <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center shadow-md shadow-sky-500/25 group-hover:scale-105 transition-transform overflow-hidden relative">
                           {item.image ? (
@@ -275,7 +290,11 @@ export default function LinksPage() {
                             {item.category}
                           </span>
                         </div>
-                        <ArrowUpRight className="w-4 h-4 text-[var(--color-muted)] group-hover:text-[var(--color-coral)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+                        {isDownload ? (
+                          <Download className="w-4 h-4 text-[var(--color-muted)] group-hover:text-[var(--color-coral)] group-hover:translate-y-0.5 transition-all shrink-0" />
+                        ) : (
+                          <ArrowUpRight className="w-4 h-4 text-[var(--color-muted)] group-hover:text-[var(--color-coral)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+                        )}
                       </div>
 
                       <h3 className="text-base sm:text-lg font-bold text-[var(--color-ink)] group-hover:text-[var(--color-coral)] transition-colors leading-snug">

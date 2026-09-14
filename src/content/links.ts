@@ -120,6 +120,18 @@ export const primaryLinks: LinkItem[] = [
     highlight: false,
   },
   {
+    id: "flowscreen",
+    title: "FlowScreen – Windows 11 Screenshot Suite",
+    url: "/downloads/FlowScreen-Setup-1.1.0.exe",
+    category: "Windows 11 Desktop-App",
+    description: "Desktop Screenshot- & Snipping-Tool für Windows 11: Fadenkreuz-Auswahl mit Lupe, Vektor-Canvas-Editor, Schrittzähler, Zensur-Funktionen und sofortige Kunden-Mockups.",
+    image: "/brand/flowscreen-mark.png",
+    tags: ["Windows 11", "Screenshot & Snipping", "Mockup-Modus", "Desktop-App"],
+    badge: "Windows App",
+    ctaText: "Installer herunterladen (.exe)",
+    highlight: false,
+  },
+  {
     id: "climanu",
     title: "cliManu – Wetter Web-App & PWA",
     url: "https://www.climanu.de/",
