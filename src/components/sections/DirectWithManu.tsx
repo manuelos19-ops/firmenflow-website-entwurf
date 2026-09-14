@@ -11,7 +11,7 @@ import { BrandIcon } from "@/components/brand/BrandIcon";
 const bentoItems = [
   {
     title: "Selbst Unternehmer",
-    desc: "Sechs Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe. Ich kenne Rechnungen, Personal und Kundengespräche nicht aus der Beratung, sondern aus elf Jahren im Betrieb.",
+    desc: "Sechs Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer einer selbst gebauten Lasertag-Arena, zuletzt Marketing und Aufbau von BattleKart Düsseldorf-Neuss. Ich kenne Rechnungen, Personal und Kundengespräche nicht aus der Beratung, sondern aus elf Jahren im Betrieb.",
     icon: Briefcase,
     gradient: "from-[var(--color-plum)]/20 via-[var(--color-plum)]/5 to-transparent",
     border: "border-[var(--color-plum)]/30 hover:border-[var(--color-plum)]",
@@ -19,7 +19,7 @@ const bentoItems = [
   },
   {
     title: "Blick für Bild & Wirkung",
-    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das ist. Hinter der Kamera habe ich unter anderem Videos für einen Lasertag-Standort in Düsseldorf gemacht. Bei dir nehme ich dir die Scheu.",
+    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das ist. Hinter der Kamera habe ich unter anderem Videos für LaserTag Evolution Düsseldorf gemacht. Bei dir nehme ich dir die Scheu.",
     icon: Camera,
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
