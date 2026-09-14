@@ -43,33 +43,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
     () => {
       if (prefersReducedMotion()) return;
 
-      // Hero timeline entrance
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.fromTo(
-        ".g360-hero-eyebrow",
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 }
-      )
-        .fromTo(
-          ".g360-hero-title",
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          "-=0.3"
-        )
-        .fromTo(
-          ".g360-hero-body",
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          "-=0.4"
-        )
-        .fromTo(
-          ".g360-hero-cta",
-          { opacity: 0, scale: 0.95, y: 15 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.5, stagger: 0.1 },
-          "-=0.3"
-        );
-
+      // Die Hero-Einblendung liegt in globals.css - siehe Kommentar dort.
       // Scroll-triggered staggered reveal for feature cards
       const cards = gsap.utils.toArray<HTMLElement>(".g360-card-reveal");
       cards.forEach((card) => {

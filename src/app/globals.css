@@ -282,6 +282,133 @@ h3 {
   }
 }
 
+/* ---------------------------------------------------------------------------
+   Einblenden der beiden Hero-Bereiche als reine CSS-Animation.
+
+   Vorher lief das ueber GSAP. GSAP startet aber erst nach dem Hydrieren -
+   bis dahin hatte der Browser den Hero laengst sichtbar gemalt. GSAP setzte
+   ihn dann auf opacity 0 und blendete ihn erneut ein. Genau das sah aus, als
+   wuerde die Seite zweimal laden.
+
+   Eine CSS-Animation laeuft ab dem ersten Frame und braucht kein JavaScript,
+   kann also nichts mehr verstecken, was schon zu sehen war.
+
+   animation-fill-mode: backwards haelt den Startzustand waehrend der
+   Verzoegerung und gibt das Element danach wieder komplett frei. So bleibt
+   keine Regel stehen, die spaetere Transforms (Hover, MagneticButton)
+   ueberschreiben wuerde. Die Keyframes definieren deshalb nur "from" - das
+   Ziel ist der normale Zustand des Elements.
+--------------------------------------------------------------------------- */
+@keyframes entrance-rise {
+  from { opacity: 0; transform: translateY(30px); }
+}
+
+@keyframes entrance-rise-sm {
+  from { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes entrance-pop {
+  from { opacity: 0; transform: translateY(15px) scale(0.95); }
+}
+
+@keyframes entrance-photo {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+}
+
+@keyframes entrance-badge {
+  from { opacity: 0; transform: scale(0) rotate(-30deg); }
+}
+
+.hero-title-line,
+.hero-accent,
+.hero-body,
+.hero-cta-wrap,
+.hero-photo-wrap,
+.hero-badge-float,
+.g360-hero-eyebrow,
+.g360-hero-title,
+.g360-hero-body,
+.g360-hero-cta {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: backwards;
+}
+
+/* Startseite */
+.hero-title-line { animation-name: entrance-rise; }
+.hero-title-line:nth-child(2) { animation-delay: 0.15s; }
+
+.hero-accent {
+  animation-name: entrance-rise-sm;
+  animation-duration: 0.6s;
+  animation-delay: 0.65s;
+}
+
+.hero-body {
+  animation-name: entrance-rise-sm;
+  animation-duration: 0.6s;
+  animation-delay: 0.85s;
+}
+
+.hero-cta-wrap {
+  animation-name: entrance-pop;
+  animation-duration: 0.5s;
+  animation-delay: 1.15s;
+}
+
+.hero-cta-wrap:nth-child(2) { animation-delay: 1.25s; }
+
+.hero-photo-wrap {
+  animation-name: entrance-photo;
+  animation-duration: 0.9s;
+  animation-delay: 0.95s;
+}
+
+.hero-badge-float {
+  animation-name: entrance-badge;
+  animation-duration: 0.7s;
+  animation-delay: 1.25s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Lokalpraesenz 360 */
+.g360-hero-eyebrow {
+  animation-name: entrance-rise-sm;
+  animation-duration: 0.6s;
+}
+
+.g360-hero-title {
+  animation-name: entrance-rise;
+  animation-delay: 0.3s;
+}
+
+.g360-hero-body {
+  animation-name: entrance-rise-sm;
+  animation-duration: 0.6s;
+  animation-delay: 0.7s;
+}
+
+.g360-hero-cta {
+  animation-name: entrance-pop;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-line,
+  .hero-accent,
+  .hero-body,
+  .hero-cta-wrap,
+  .hero-photo-wrap,
+  .hero-badge-float,
+  .g360-hero-eyebrow,
+  .g360-hero-title,
+  .g360-hero-body,
+  .g360-hero-cta {
+    animation: none;
+  }
+}
+
 /* Text inking gradient fill */
 @keyframes text-ink-fill {
   0% {

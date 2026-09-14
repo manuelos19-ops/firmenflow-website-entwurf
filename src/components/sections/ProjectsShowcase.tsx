@@ -310,7 +310,7 @@ export function ProjectsShowcase() {
                       src={project.image}
                       alt={`${project.name} auf dem Smartphone`}
                       fill
-                      priority={idx === 0}
+                      loading="lazy"
                       className="object-contain object-top p-2 pb-0 drop-shadow-xl transition-transform duration-500 group-hover:scale-[1.04]"
                       sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
                     />

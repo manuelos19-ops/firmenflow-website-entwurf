@@ -60,6 +60,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de">
       <head>
+        {/* Die Anzeigeschrift traegt alle Ueberschriften. Ohne Preload findet
+            der Browser sie erst beim Parsen des CSS - bis dahin steht die
+            Ueberschrift in der Systemschrift und springt dann sichtbar um. */}
+        <link
+          rel="preload"
+          href="/fonts/atmosphere/AtmosphereGrotesk-Bold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
         <JsonLd />
         <script
           dangerouslySetInnerHTML={{

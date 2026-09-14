@@ -1,8 +1,6 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -14,58 +12,14 @@ interface HeroProps {
   whatsappUrl: string | null;
 }
 
+// Die Einblendung des Heros liegt bewusst in globals.css und nicht in GSAP:
+// GSAP laeuft erst nach dem Hydrieren und hat den bereits sichtbaren Hero
+// dadurch kurz wieder ausgeblendet.
 export function Hero({ whatsappUrl }: HeroProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const { hero } = homeContent;
-
-  useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-
-      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-
-      tl.fromTo(
-        ".hero-title-line",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15 }
-      )
-        .fromTo(
-          ".hero-accent",
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          "-=0.3"
-        )
-        .fromTo(
-          ".hero-body",
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          "-=0.4"
-        )
-        .fromTo(
-          ".hero-cta-wrap",
-          { opacity: 0, scale: 0.95, y: 15 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.5, stagger: 0.1 },
-          "-=0.3"
-        )
-        .fromTo(
-          ".hero-photo-wrap",
-          { opacity: 0, scale: 0.96, y: 20 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: "power3.out" },
-          "-=0.8"
-        )
-        .fromTo(
-          ".hero-badge-float",
-          { opacity: 0, scale: 0, rotation: -30 },
-          { opacity: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.5)" },
-          "-=0.6"
-        );
-    },
-    { scope: containerRef }
-  );
 
   return (
     <section 
-      ref={containerRef} 
       id="hero"
       className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-8 lg:pt-44 lg:pb-16 bg-transparent text-[var(--color-ink)] overflow-hidden"
     >
