@@ -70,8 +70,8 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
             <span>{contact.eyebrow}</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display leading-[1.06] mb-6">
-            Kurz schreiben oder direkt das <br className="hidden sm:block" />
-            <span className="font-editorial text-[var(--color-coral)]">Projekt einordnen.</span>
+            Kurz schreiben oder <br className="hidden sm:block" />
+            <span className="font-editorial text-[var(--color-coral)]">alles auf einmal erzählen.</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             {contact.body}
@@ -122,7 +122,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                 <div className="flex items-center justify-between gap-2 mb-5">
                   <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-white/90">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>Antwort garantiert innerhalb 24h</span>
+                    <span>Antwort innerhalb eines Werktages</span>
                   </span>
                   <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2.5 py-0.5 rounded-full border border-[var(--color-coral)]/20">
                     Inhaber

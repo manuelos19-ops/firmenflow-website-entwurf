@@ -66,8 +66,9 @@ export const homeContent = {
   ],
   contact: {
     eyebrow: "Lass uns sprechen",
-    title: "Kurze WhatsApp oder geführte Anfrage.",
-    body: "Du entscheidest, was dir lieber ist: Schreib mir eine kurze WhatsApp oder sende mir mit wenigen Klicks deine unverbindliche Projektanfrage.",
+    // Die Ueberschrift steht in ContactChoice.tsx, nicht hier.
+    // Kein title-Feld anlegen - es wuerde nicht ausgespielt.
+    body: "Du entscheidest. Eine WhatsApp reicht völlig – oder du gehst das Formular durch, wenn du gleich alles loswerden willst. Beides unverbindlich.",
   },
 } as const;
 
