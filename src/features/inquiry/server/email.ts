@@ -58,7 +58,8 @@ export const resendInquiryMailer: InquiryMailer = {
     const timeframeGerman = timeframeLabels[payload.timeframe] || payload.timeframe;
     const preferredContactGerman = contactPreferenceLabels[payload.preferredContact] || payload.preferredContact;
 
-    const subject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName ? `${payload.businessName} (${payload.place})` : `${payload.name} (${payload.place})`}`;
+    const rawSubject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName ? `${payload.businessName} (${payload.place})` : `${payload.name} (${payload.place})`}`;
+    const subject = rawSubject.replace(/[\r\n]+/g, " ").trim();
 
     const internalHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
@@ -370,9 +371,10 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
   const websiteDisplay = payload.noWebsite ? "Noch keine Website vorhanden" : (payload.websiteUrl || "Keine Angabe");
   const submissionId = `audit-${Date.now().toString(36)}`;
 
-  const subject = isVideo
+  const rawSubject = isVideo
     ? `⚡ Neue X-Ray Website-Analyse: ${payload.name} (${payload.websiteUrl || "Keine Website"})`
     : `📅 Neuer 30-Min. Erstgespräch-Lead: ${payload.name}`;
+  const subject = rawSubject.replace(/[\r\n]+/g, " ").trim();
 
   const internalHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
@@ -458,7 +460,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
               sender: { name: "Manu von Firmenflow", email: fromEmail },
               to: [{ email: payload.email, name: payload.name }],
               replyTo: { email: "manu@firmenflow.de", name: "Manu Landeck" },
-              subject: isVideo ? `Deine X-Ray Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`,
+              subject: (isVideo ? `Deine X-Ray Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`).replace(/[\r\n]+/g, " ").trim(),
               htmlContent: customerHtml,
             }),
           });
