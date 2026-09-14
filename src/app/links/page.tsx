@@ -23,7 +23,7 @@ import { CopyLinkButton } from "@/components/links/CopyLinkButton";
 export const metadata: Metadata = {
   title: "Manu · Projekte, PWAs & Links",
   description:
-    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. FlowRay, Flowalyzer, foundersflow, cliManu & persönliche Kontaktwege.",
+    "Persönliche Projekt- und Link-Übersicht von Manuel Landeck (Manu) – Firmenflow. FlowRay, Flowalyzer, foundersflow, GSCflow, cliManu & persönliche Kontaktwege.",
   robots: {
     index: false,
     follow: false,
@@ -160,6 +160,7 @@ export default function LinksPage() {
               const isFlowray = item.id === "flowray";
               const isFlowalyzer = item.id === "flowalyzer";
               const isFoundersflow = item.id === "foundersflow";
+              const isGscflow = item.id === "gscflow";
               const isClimanu = item.id === "climanu";
               const isMain = item.id === "firmenflow-main";
 
@@ -209,6 +210,17 @@ export default function LinksPage() {
                         <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
                           <Image
                             src={item.image || "/brand/foundersflow-mark.webp"}
+                            alt={item.title}
+                            fill
+                            sizes="48px"
+                            className="object-contain p-0.5"
+                          />
+                        </div>
+                      )}
+                      {isGscflow && (
+                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
+                          <Image
+                            src={item.image || "/brand/gscflow-mark.webp"}
                             alt={item.title}
                             fill
                             sizes="48px"

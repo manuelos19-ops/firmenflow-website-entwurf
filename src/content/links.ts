@@ -108,6 +108,18 @@ export const primaryLinks: LinkItem[] = [
     highlight: false,
   },
   {
+    id: "gscflow",
+    title: "GSCflow – Google Search & KI-Cockpit",
+    url: "https://gscflow.vercel.app/",
+    category: "Search Console PWA",
+    description: "Google Search Console Cockpit mit Gemini KI: Automatische Erkennung von Keyword-Potenzialen (Position 8–18), CTR-Booster für Google-Snippets und 3-Minuten Chef-Report für lokale Betriebe.",
+    image: "/brand/gscflow-mark.webp",
+    tags: ["Search Console", "Gemini KI", "SEO-Cockpit", "PWA"],
+    badge: "Live PWA",
+    ctaText: "gscflow.vercel.app öffnen",
+    highlight: false,
+  },
+  {
     id: "climanu",
     title: "cliManu – Wetter Web-App & PWA",
     url: "https://www.climanu.de/",
