@@ -11,7 +11,7 @@ import { BrandIcon } from "@/components/brand/BrandIcon";
 const bentoItems = [
   {
     title: "Selbst Unternehmer",
-    desc: "Ich habe selbst Unternehmen aufgebaut und geführt. Ich kenne den Alltag von Selbstständigen und entwickle Lösungen, die betrieblich echten Nutzen stiften.",
+    desc: "Sechs Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe. Ich kenne Rechnungen, Personal und Kundengespräche nicht aus der Beratung, sondern aus elf Jahren im Betrieb.",
     icon: Briefcase,
     gradient: "from-[var(--color-plum)]/20 via-[var(--color-plum)]/5 to-transparent",
     border: "border-[var(--color-plum)]/30 hover:border-[var(--color-plum)]",
@@ -19,7 +19,7 @@ const bentoItems = [
   },
   {
     title: "Blick für Bild & Wirkung",
-    desc: "Jahrelange Erfahrung vor und hinter der Kamera. Ich nehme dir die Scheu und sorge für authentische Aufnahmen vor Ort in deinem Betrieb.",
+    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das ist. Hinter der Kamera habe ich unter anderem Videos für einen Lasertag-Standort in Düsseldorf gemacht. Bei dir nehme ich dir die Scheu.",
     icon: Camera,
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
@@ -27,7 +27,7 @@ const bentoItems = [
   },
   {
     title: "Handschlagqualität",
-    desc: "Ein Wort gilt. Feste Zusagen, kurze Wege per Telefon & WhatsApp und zügige Umsetzung ohne leere Versprechen.",
+    desc: "Ein Wort gilt. Was wir besprechen, halte ich fest – und du erreichst mich per Telefon oder WhatsApp, nicht über ein Ticketsystem.",
     icon: Handshake,
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
