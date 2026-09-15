@@ -1,0 +1,744 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Container } from "@/components/ui/Container";
+import { ButtonLink } from "@/components/ui/ButtonLink";
+import { MagneticButton } from "@/components/effects/MagneticButton";
+import { BrandIcon } from "@/components/brand/BrandIcon";
+import { cn } from "@/lib/cn";
+import {
+  ArrowLeft,
+  Download,
+  ShieldCheck,
+  Zap,
+  Sparkles,
+  Layers,
+  ListOrdered,
+  EyeOff,
+  Search,
+  Keyboard,
+  Check,
+  X,
+  ChevronDown,
+  Monitor,
+  HardDrive,
+  RefreshCw,
+  ExternalLink,
+} from "lucide-react";
+
+const DOWNLOAD_SETUP_URL =
+  "https://github.com/manuelos19-ops/flowscreen-releases/releases/latest/download/FlowScreen-Setup-1.1.0.exe";
+const DOWNLOAD_PORTABLE_URL =
+  "https://github.com/manuelos19-ops/flowscreen-releases/releases/latest/download/FlowScreen-Portable-1.1.0.exe";
+const RELEASES_PAGE_URL =
+  "https://github.com/manuelos19-ops/flowscreen-releases/releases";
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    question: "Warum ist FlowScreen aktuell komplett kostenlos?",
+    answer:
+      "FlowScreen ist ursprünglich als internes Werkzeug bei Firmenflow entstanden, weil bestehende Tools wie Snagit teuer im Abo sind, ShareX mit Hunderten Submenüs überladen ist und das Windows Snipping Tool keine schönen Mockups für Kundenpräsentationen erzeugen kann. Aktuell stellen wir die Vollversion für Macher, Freelancer und Teams kostenlos zur Verfügung.",
+  },
+  {
+    question: "Werden meine Screenshots oder Daten in die Cloud geladen?",
+    answer:
+      "Nein. Ausnahmslos 0 % Cloud. FlowScreen arbeitet zu 100 % lokal auf deinem Rechner. Es gibt keinen Telemetrie-Zwang, keinen Login-Account und keine externen Server, die deine Bilddaten sehen. Das macht FlowScreen absolut DSGVO-konform für sensible Betriebs- und Kundendaten.",
+  },
+  {
+    question: "Wie funktionieren die Updates?",
+    answer:
+      "FlowScreen prüft im Hintergrund automatisch über unser öffentliches GitHub-Repository, ob eine neue Version veröffentlicht wurde. Wenn ein Update bereitsteht, wirst du direkt in der App informiert und kannst es mit einem Klick laden und installieren.",
+  },
+  {
+    question: "Was bedeutet die Meldung beim ersten Start unter Windows?",
+    answer:
+      "Da FlowScreen eine neu veröffentlichte Software ohne ein tausende Euro teures Unternehmens-Signaturzertifikat ist, kann der Windows SmartScreen-Filter beim ersten Start anzeigen: 'Der Computer wurde durch Windows geschützt'. Klicke einfach auf 'Weitere Informationen' und danach auf 'Trotzdem ausführen'. Die App ist sauber, quelloffen verwaltet und enthält keinerlei Adware.",
+  },
+  {
+    question: "Was ist der Unterschied zwischen Installer und Portable?",
+    answer:
+      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und unterstützt automatische Updates. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick.",
+  },
+];
+
+export function FlowscreenView() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  return (
+    <main id="main" className="pt-28 sm:pt-36 pb-28 overflow-hidden bg-[var(--color-paper)]">
+      <Container className="space-y-24 sm:space-y-36">
+        {/* Navigation & Status Badge */}
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--color-line)] pb-5">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-muted)] hover:text-[var(--color-coral)] transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            <span>Zurück zur Firmenflow Startseite</span>
+          </Link>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-3 py-1 rounded-full border border-[var(--color-coral)]/20">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+              Windows 11 Native · v1.1.0
+            </span>
+          </div>
+        </div>
+
+        {/* HERO SECTION */}
+        <div className="space-y-12 text-center max-w-5xl mx-auto">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 via-[var(--color-plum)]/10 to-[var(--color-coral)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-plum)] shadow-sm backdrop-blur-sm">
+            <BrandIcon size="xs" />
+            <span>FlowScreen Studio · Entwickelt von Manuel Landeck</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold text-[var(--color-ink)] leading-[1.04] tracking-tight">
+            Schluss mit hässlichen <br className="hidden sm:block" />
+            <span className="text-[var(--color-plum)]">Screenshots.</span> <br />
+            <span className="text-[var(--color-coral)] font-editorial italic font-normal">
+              Präsentieren statt nur knipsen.
+            </span>
+          </h1>
+
+          {/* Subtext */}
+          <p className="text-lg sm:text-2xl text-[var(--color-muted)] font-normal leading-relaxed max-w-3xl mx-auto">
+            Windows Snipping Tool ist zu basic, ShareX total überladen und Web-Tools wollen deine Daten.{" "}
+            <strong className="text-[var(--color-ink)] font-semibold">FlowScreen</strong> vereint blitzschnelle
+            Bildschirmfotos mit 1-Klick-Canvas-Mockups, automatischem Schrittzähler, DSGVO-Zensur und Vektor-Editor –{" "}
+            <span className="text-[var(--color-coral)] font-semibold">100 % lokal und kostenlos</span>.
+          </p>
+
+          {/* Primary Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <MagneticButton>
+              <ButtonLink
+                href={DOWNLOAD_SETUP_URL}
+                external={true}
+                variant="primary"
+                size="lg"
+                className="shadow-xl shadow-[var(--color-coral)]/25 text-base sm:text-lg px-8 py-4.5"
+              >
+                <Download className="w-5 h-5 mr-2 shrink-0" />
+                <span>FlowScreen laden (Setup.exe)</span>
+              </ButtonLink>
+            </MagneticButton>
+
+            <MagneticButton>
+              <ButtonLink
+                href={DOWNLOAD_PORTABLE_URL}
+                external={true}
+                variant="secondary"
+                size="lg"
+                className="text-base sm:text-lg px-7 py-4.5"
+              >
+                <HardDrive className="w-5 h-5 mr-2 shrink-0 text-[var(--color-plum)]" />
+                <span>Portable Version (.exe)</span>
+              </ButtonLink>
+            </MagneticButton>
+          </div>
+
+          {/* Trust Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-xs sm:text-sm font-medium text-[var(--color-muted)]">
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              100 % Offline &amp; Kein Cloud-Zwang
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-[var(--color-coral)]" />
+              Druck-Taste &amp; Tastenkürzel
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <RefreshCw className="w-4 h-4 text-[var(--color-plum)]" />
+              Automatische GitHub-Updates
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="w-4 h-4 text-emerald-600" />
+              Kein Account / Kein Abo
+            </span>
+          </div>
+
+          {/* App Window Preview Mockup */}
+          <div className="pt-8 relative">
+            <div
+              className="absolute inset-0 -top-12 bg-gradient-to-tr from-[var(--color-coral)]/20 via-[var(--color-plum)]/15 to-transparent blur-3xl rounded-3xl -z-10 pointer-events-none"
+              aria-hidden="true"
+            />
+
+            <div className="rounded-3xl border border-black/10 bg-white/70 backdrop-blur-md shadow-2xl shadow-[var(--color-plum)]/15 overflow-hidden p-2 sm:p-4">
+              <div className="flex items-center justify-between px-3 sm:px-4 py-2 border-b border-black/5 mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-rose-400" />
+                  <span className="w-3 h-3 rounded-full bg-amber-400" />
+                  <span className="w-3 h-3 rounded-full bg-emerald-400" />
+                  <span className="ml-3 text-xs font-mono text-[var(--color-muted)] hidden sm:inline">
+                    FlowScreen Studio v1.1.0 · Canvas Mockup Mode
+                  </span>
+                </div>
+                <div className="text-xs font-semibold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-3 py-0.5 rounded-full">
+                  Live Editor Preview
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-gradient-to-br from-slate-900 to-slate-800">
+                <Image
+                  src="/media/flowscreen/editor-preview.png"
+                  alt="FlowScreen Benutzeroberfläche und Mockup-Editor"
+                  width={1400}
+                  height={880}
+                  priority
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 text-left">
+              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
+                <div className="flex items-center gap-2 text-[var(--color-coral)] font-bold text-sm mb-1">
+                  <Sparkles className="w-4 h-4" />
+                  <span>1-Klick Mockup Canvas</span>
+                </div>
+                <p className="text-xs text-[var(--color-muted)]">
+                  Fügt edle Farbverläufe, Eckenrundungen und weiche Schlagschatten direkt um deinen Screenshot.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
+                <div className="flex items-center gap-2 text-[var(--color-plum)] font-bold text-sm mb-1">
+                  <ListOrdered className="w-4 h-4" />
+                  <span>Automatischer Schrittzähler</span>
+                </div>
+                <p className="text-xs text-[var(--color-muted)]">
+                  Klicke auf Elemente – FlowScreen generiert aufsteigende Zahlenkreise (1, 2, 3...) für Tutorials.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
+                <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm mb-1">
+                  <EyeOff className="w-4 h-4" />
+                  <span>DSGVO Zensur &amp; Blur</span>
+                </div>
+                <p className="text-xs text-[var(--color-muted)]">
+                  Verpixelung oder solide Schwärzung mit einer Mausbewegung. Keine Kundendaten mehr leaken.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* COMPARISON TABLE: Why FlowScreen is better */}
+        <div className="space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+              Vergleich &amp; Mehrwert
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+              Warum FlowScreen andere Tools alt aussehen lässt.
+            </h2>
+            <p className="text-base sm:text-lg text-[var(--color-muted)]">
+              Entwickelt, um die Lücke zwischen zu simplen Systemtools und überfrachteten Monster-Programmen zu schließen.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <div className="min-w-[720px] rounded-3xl border border-[var(--color-line)] bg-white shadow-sm overflow-hidden">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-[var(--color-line)] bg-stone-50/70 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+                    <th className="py-4 px-6 w-1/3">Funktion / Kriterium</th>
+                    <th className="py-4 px-4 w-1/5 text-center text-[var(--color-muted)]">
+                      Windows Snipping Tool
+                    </th>
+                    <th className="py-4 px-4 w-1/5 text-center text-[var(--color-muted)]">ShareX</th>
+                    <th className="py-4 px-6 w-1/4 text-center bg-[var(--color-plum)]/5 text-[var(--color-plum)] font-bold">
+                      FlowScreen
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[var(--color-line)] text-xs sm:text-sm">
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      Canvas-Mockups &amp; Farbverläufe
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Macht Screenshots repräsentativ für Kunden
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-rose-500">
+                      <X className="w-5 h-5 mx-auto" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-rose-500">
+                      <X className="w-5 h-5 mx-auto" />
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
+                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      Automatischer Schrittzähler (1, 2, 3...)
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Für Schritt-für-Schritt-Anleitungen &amp; Bugreports
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-rose-500">
+                      <X className="w-5 h-5 mx-auto" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-amber-500 text-xs">
+                      Kompliziert
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
+                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      DSGVO-Zensur (Pixel-Blur &amp; Balken)
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Kundendaten &amp; Passwörter unkenntlich machen
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-rose-500">
+                      <X className="w-5 h-5 mx-auto" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-emerald-600">
+                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
+                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      Bedienung ohne Handbuch
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Sofort intuitiv, ohne 500 Submenüs &amp; Regler
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-emerald-600">
+                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-rose-500">
+                      <X className="w-5 h-5 mx-auto" />
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
+                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      100 % Lokal (Kein Cloud-Upload-Zwang)
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Keine Weitergabe sensibler Geschäftsdaten
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-emerald-600">
+                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-amber-500 text-xs">
+                      Je nach Config
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
+                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
+                      Kostenlose Vollversion &amp; Updates
+                      <span className="block text-xs font-normal text-[var(--color-muted)]">
+                        Kein 60 €/Jahr Abonnement wie Snagit
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-center text-emerald-600">
+                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
+                    </td>
+                    <td className="py-4 px-4 text-center text-emerald-600">
+                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
+                    </td>
+                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-[var(--color-coral)] font-bold">
+                      Kostenlos (v1.1.0)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* BENTO FEATURE GRID */}
+        <div className="space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] uppercase">
+              Alles an Bord
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+              Die Werkzeuge, die du täglich brauchst.
+            </h2>
+            <p className="text-base sm:text-lg text-[var(--color-muted)]">
+              Kein Schnickschnack. Jedes Feature löst ein konkretes Problem beim Erklären, Zeigen und Dokumentieren.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                1-Klick Canvas-Mockup
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Macht aus jedem öden Programmfenster ein Magazin-reifes Design. Wähle aus edlen Farbverläufen, bestimme
+                die Eckenabrundung und setze weiche Schlagschatten für den modernen Look.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center">
+                <ListOrdered className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                Automatischer Schrittzähler
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Klicke auf den Button, dann auf das Eingabefeld, dann auf Speichern. FlowScreen setzt automatisch
+                aufsteigende Nummernbubbles (1, 2, 3...) – ohne dass du jedes Mal die Zahl tippen musst.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
+                <EyeOff className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                DSGVO-Zensur &amp; Mosaik
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Ein Ziehen genügt: Verpixle Kundennamen, Adressen, Bankverbindungen oder Passwörter sicher und
+                unwiderruflich vor dem Teilen in Slack, Microsoft Teams oder WhatsApp.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                <Search className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                Lupen-Werkzeug &amp; Zoom
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Kleine Menüeinträge, Schriftzüge oder UI-Details sofort ins Auge stechen lassen. Die Lupe hebt wichtige
+                Bereiche mit einem runden Zoom-Spotlight und Kontur hervor.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center">
+                <Layers className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                Voller Vektor-Editor
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Keine festen Pixel-Striche: Pfeile, Rechtecke, Notizen und Text bleiben jederzeit anklickbar,
+                verschiebbar, skalierbar und farblich anpassbar – bis du final exportierst.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center">
+                <Keyboard className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                Druck-Taste &amp; Autostart
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Ersetze das träge Standard-Tool: Mit der Druck-Taste oder globalem Tastenkürzel schnappt sich FlowScreen
+                sofort den Bildschirminhalt und öffnet sich schwebend im Vordergrund.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 3-STEP WORKFLOW */}
+        <div className="rounded-3xl bg-stone-900 text-white p-8 sm:p-14 lg:p-16 space-y-12 shadow-xl">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-coral)]">
+              Workflow in Sekundenschnelle
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
+              In 3 Schritten zum Kunden-Wow.
+            </h2>
+            <p className="text-sm sm:text-base text-stone-300">
+              Vom einfachen Schnappschuss zur professionellen Dokumentation in unter fünf Sekunden.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-4xl font-display font-extrabold text-[var(--color-coral)]">01</div>
+              <h3 className="text-lg font-bold text-white">Aufnehmen</h3>
+              <p className="text-sm text-stone-300 leading-relaxed">
+                Drücke die Druck-Taste oder wähle mit der Maus den exakten Fensterbereich oder Desktop-Ausschnitt.
+              </p>
+            </div>
+
+            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-4xl font-display font-extrabold text-[var(--color-plum-light)]">02</div>
+              <h3 className="text-lg font-bold text-white">Veredeln</h3>
+              <p className="text-sm text-stone-300 leading-relaxed">
+                Aktiviere das Canvas-Mockup, klicke 1-2 Schritte ein und verpixle vertrauliche Zahlen mit der Zensur.
+              </p>
+            </div>
+
+            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="text-4xl font-display font-extrabold text-emerald-400">03</div>
+              <h3 className="text-lg font-bold text-white">Kopieren &amp; Teilen</h3>
+              <p className="text-sm text-stone-300 leading-relaxed">
+                Mit einem Klick in die Zwischenablage kopieren und direkt in Slack, E-Mail oder Angebot einfügen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* DOWNLOAD OPTIONS & SYSTEM REQS */}
+        <div id="download" className="space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+              Download &amp; Installation
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+              Wähle deine Version für Windows 11 &amp; 10.
+            </h2>
+            <p className="text-base sm:text-lg text-[var(--color-muted)]">
+              Aktuell 100 % kostenlos verfügbar. Keine Registrierung oder E-Mail-Adresse erforderlich.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Card 1: Setup Installer */}
+            <div className="rounded-3xl border-2 border-[var(--color-plum)] bg-white p-8 sm:p-10 shadow-lg relative flex flex-col justify-between space-y-8">
+              <div className="absolute -top-3.5 left-8 bg-[var(--color-plum)] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
+                Empfohlen
+              </div>
+
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center">
+                    <Monitor className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v1.1.0 · ~95 MB</span>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-display font-bold text-[var(--color-ink)]">
+                    FlowScreen Setup Installer
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)]">
+                    Für deinen festen Arbeitsplatz. Richtet sich nahtlos im Startmenü und auf dem Desktop ein.
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 text-xs sm:text-sm text-[var(--color-ink)]">
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Inklusive automatischer GitHub-Update-Prüfung</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Optionale Windows-Drucktasten-Integration</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Sauberer Uninstaller über die Windows-Systemsteuerung</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Windows 11 &amp; Windows 10 (64-Bit)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ButtonLink
+                href={DOWNLOAD_SETUP_URL}
+                external={true}
+                variant="primary"
+                size="lg"
+                className="w-full justify-center shadow-lg shadow-[var(--color-coral)]/20"
+              >
+                <Download className="w-5 h-5 mr-2 shrink-0" />
+                <span>Installer herunterladen</span>
+              </ButtonLink>
+            </div>
+
+            {/* Card 2: Portable Version */}
+            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-8 sm:p-10 shadow-sm relative flex flex-col justify-between space-y-8">
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-2xl bg-stone-100 text-[var(--color-ink)] flex items-center justify-center">
+                    <HardDrive className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v1.1.0 · ~95 MB</span>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-display font-bold text-[var(--color-ink)]">
+                    FlowScreen Portable
+                  </h3>
+                  <p className="text-sm text-[var(--color-muted)]">
+                    Keine Installation nötig. Läuft direkt aus dem Download-Ordner oder vom Firmen-USB-Stick.
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 text-xs sm:text-sm text-[var(--color-ink)]">
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Keine Windows-Administratorrechte erforderlich</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Perfekt für restriktive Firmen-Laptops</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Hinterlässt keine Einträge in der Registry</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Direkt startbar nach dem Download</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ButtonLink
+                href={DOWNLOAD_PORTABLE_URL}
+                external={true}
+                variant="secondary"
+                size="lg"
+                className="w-full justify-center"
+              >
+                <Download className="w-5 h-5 mr-2 shrink-0" />
+                <span>Portable .exe herunterladen</span>
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div className="text-center pt-2">
+            <a
+              href={RELEASES_PAGE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-[var(--color-muted)] hover:text-[var(--color-coral)] font-medium transition-colors"
+            >
+              <span>Alle Versionen &amp; Release Notes im GitHub Repository einsehen</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+
+        {/* FAQ ACCORDION */}
+        <div className="space-y-10 max-w-3xl mx-auto">
+          <div className="text-center space-y-3">
+            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] uppercase">
+              Häufige Fragen
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-[var(--color-ink)]">
+              FAQ zu FlowScreen
+            </h2>
+          </div>
+
+          <div className="divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]">
+            {FAQ_ITEMS.map((item, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div key={idx} className="py-5">
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(idx)}
+                    className="w-full flex items-center justify-between text-left gap-4 font-semibold text-base sm:text-lg text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors cursor-pointer"
+                  >
+                    <span>{item.question}</span>
+                    <ChevronDown
+                      className={cn(
+                        "w-5 h-5 shrink-0 text-[var(--color-muted)] transition-transform duration-200",
+                        isOpen && "rotate-180 text-[var(--color-coral)]"
+                      )}
+                    />
+                  </button>
+                  {isOpen && (
+                    <p className="mt-3 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed animate-in fade-in duration-200">
+                      {item.answer}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* BOTTOM FINAL CTA */}
+        <div className="rounded-3xl bg-gradient-to-br from-[var(--color-plum)] to-[#2f1342] text-white p-8 sm:p-14 lg:p-16 text-center space-y-8 shadow-2xl relative overflow-hidden">
+          <div
+            className="absolute -right-20 -bottom-20 w-80 h-80 bg-[var(--color-coral)]/20 rounded-full blur-3xl pointer-events-none"
+            aria-hidden="true"
+          />
+
+          <div className="space-y-4 max-w-2xl mx-auto relative z-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90 border border-white/20">
+              <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+              <span>Persönlich mit Manu · Firmenflow</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
+              Mach deine Screenshots zum Aushängeschild.
+            </h2>
+            <p className="text-base sm:text-lg text-white/80 leading-relaxed">
+              Lade FlowScreen jetzt herunter und spare täglich wertvolle Minuten beim Dokumentieren, Erklären und
+              Präsentieren.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+            <MagneticButton>
+              <ButtonLink
+                href={DOWNLOAD_SETUP_URL}
+                external={true}
+                variant="primary"
+                size="lg"
+                className="shadow-xl shadow-black/20 text-base sm:text-lg px-8 py-4.5"
+              >
+                <Download className="w-5 h-5 mr-2 shrink-0" />
+                <span>FlowScreen jetzt kostenlos laden</span>
+              </ButtonLink>
+            </MagneticButton>
+
+            <MagneticButton>
+              <ButtonLink
+                href="/#kontakt"
+                variant="secondary"
+                size="lg"
+                className="text-base sm:text-lg px-7 py-4.5"
+              >
+                <span>Fragen an Manu</span>
+              </ButtonLink>
+            </MagneticButton>
+          </div>
+        </div>
+      </Container>
+    </main>
+  );
+}
