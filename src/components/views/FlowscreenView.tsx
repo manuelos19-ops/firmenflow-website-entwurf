@@ -131,7 +131,7 @@ export function FlowscreenView() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 via-[var(--color-plum)]/10 to-[var(--color-coral)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-plum)] shadow-sm backdrop-blur-sm">
             <BrandIcon size="xs" />
-            <span>FlowScreen Studio · Entwickelt von Manuel Landeck</span>
+            <span>FlowScreen · Entwickelt von Manuel Landeck</span>
           </div>
 
           {/* Main Headline */}
@@ -220,7 +220,7 @@ export function FlowscreenView() {
                   <span className="w-3 h-3 rounded-full bg-amber-400" />
                   <span className="w-3 h-3 rounded-full bg-emerald-400" />
                   <span className="ml-3 text-xs font-mono text-[var(--color-muted)] hidden sm:inline">
-                    FlowScreen Studio v{FLOWSCREEN_VERSION} · Canvas Mockup Mode
+                    FlowScreen v{FLOWSCREEN_VERSION} · Canvas Mockup Mode
                   </span>
                 </div>
                 <div className="text-xs font-semibold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-3 py-0.5 rounded-full">

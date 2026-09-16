@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { FileCheck2, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import {
   FLOWSCREEN_HASHES,
   FLOWSCREEN_VERSION,
@@ -15,7 +14,7 @@ function shortHash(hash: string): string {
 
 /**
  * Vertrauens-Sektion für /flowscreen (unter den Download-Cards).
- * Zeigt SHA256-Kurzhashes + VirusTotal-Links + Link zur Verify-Seite.
+ * Zeigt SHA256-Kurzhashes + VirusTotal-Ergebnisse.
  */
 export function FlowscreenTrustSection() {
   return (
@@ -79,13 +78,13 @@ export function FlowscreenTrustSection() {
         </li>
       </ul>
 
-      <Link
-        href="/flowscreen/verify"
-        className="inline-flex items-center gap-2 rounded-full bg-[var(--color-ink)] px-5 py-2.5 text-xs sm:text-sm font-bold text-white hover:opacity-90 transition-opacity"
-      >
-        <FileCheck2 className="w-4 h-4" />
-        <span>Hash meiner Datei abgleichen – so geht&apos;s</span>
-      </Link>
+      <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
+        So prüfst du selbst: Datei bei VirusTotal hochladen oder in PowerShell{" "}
+        <code className="font-mono text-[11px] bg-white border border-[var(--color-line)] rounded px-1.5 py-0.5">
+          Get-FileHash ~/Downloads/FlowScreen-Setup-1.1.0.exe -Algorithm SHA256
+        </code>{" "}
+        ausführen und mit dem Hash oben vergleichen – exakt gleich bedeutet unverändertes Original.
+      </p>
     </div>
   );
 }
