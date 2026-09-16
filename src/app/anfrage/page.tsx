@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { siteIdentity } from "@/config/site";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { ArrowLeft, ShieldCheck, Clock, Phone, Calendar, ArrowRight } from "lucide-react";
+import { ArrowLeft, Clock, Phone, Calendar, ArrowRight } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -53,19 +53,9 @@ export default function AnfragePage() {
             Egal ob neue Website, Relaunch oder stärkere Google-Lokalpräsenz: In 5 einfachen Schritten klären wir Ziele, Umfang und Zeitplan – für ein transparentes, verlässliches Angebot ohne Agenturtheater.
           </p>
 
-          {/* Quick Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold text-[var(--color-muted)] pt-2">
-            <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>100% vertraulich</span>
-            </span>
-            <span>•</span>
-            <span className="inline-flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-[var(--color-plum)]" />
-              <span>Antwort innerhalb von 24 Std.</span>
-            </span>
-            <span>•</span>
-            <span>Garantiert kein Verkaufsdruck</span>
+          <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-semibold text-[var(--color-muted)] pt-1">
+            <Clock className="w-4 h-4 text-[var(--color-plum)]" />
+            <span>Rückmeldung i. d. R. innerhalb von 24 Stunden</span>
           </div>
         </div>
 

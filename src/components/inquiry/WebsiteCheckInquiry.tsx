@@ -9,7 +9,6 @@ import {
   User, 
   Phone, 
   Loader2, 
-  ShieldCheck,
   Calendar,
   Sparkles
 } from "lucide-react";
@@ -106,7 +105,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               Kostenlose Website-Prüfung per Video
             </h3>
             <p className="text-sm sm:text-base text-[var(--color-muted)] max-w-2xl leading-relaxed">
-              Trage einfach deine Webadresse ein. Ich schaue mir deinen Auftritt persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Hebeln direkt ins Postfach – <strong>ohne Termin, ohne Anruf und garantiert ohne Verkaufsdruck.</strong>
+              Trage einfach deine Webadresse ein. Ich schaue mir deinen Auftritt persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Hebeln direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
             </p>
           </div>
 
@@ -267,18 +266,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                 </>
               )}
             </button>
-
-            {/* Trust Footer */}
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--color-muted)] pt-1">
-              <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>100% vertraulich &amp; DSGVO-konform</span>
-              </span>
-              <span>•</span>
-              <span>Garantiert kein Verkaufsdruck</span>
-              <span>•</span>
-              <span>Persönlich mit Manu aus Wesel</span>
-            </div>
           </div>
         </form>
       ) : (
