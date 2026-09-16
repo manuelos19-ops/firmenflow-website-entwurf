@@ -396,7 +396,10 @@ export function ProjectsShowcase() {
         </div>
 
         {/* 3D Orbit Controls & Active Project Summary Bar - Fixed height to prevent any layout shift during auto-rotation */}
-        <div className="max-w-3xl mx-auto mt-6 sm:mt-8 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl min-h-[220px] sm:min-h-[196px] flex flex-col justify-between">
+        <div 
+          className="max-w-3xl mx-auto mt-6 sm:mt-8 bg-white border border-[var(--color-line)] rounded-3xl p-6 sm:p-8 shadow-xl min-h-[220px] sm:min-h-[196px] flex flex-col justify-between"
+          style={{ contain: "layout" }}
+        >
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-[var(--color-line)]/60">
             <div className="min-h-[72px] flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-1.5">
@@ -459,9 +462,11 @@ export function ProjectsShowcase() {
           </div>
 
           <div className="pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 min-h-[56px]">
-            <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-lg min-h-[42px] flex items-center">
-              {activeProject.summary}
-            </p>
+            <div className="min-h-[44px] flex items-center max-w-lg">
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed line-clamp-2">
+                {activeProject.summary}
+              </p>
+            </div>
 
             {/* Action Buttons: Internal Case Study Link + Direct External Website */}
             <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">

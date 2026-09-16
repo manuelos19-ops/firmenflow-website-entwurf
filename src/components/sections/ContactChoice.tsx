@@ -133,7 +133,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     <h4 className="text-base sm:text-lg font-bold text-white font-sans">Erstgespräch mit Manu</h4>
                     <p className="text-xs text-white/70 flex items-center gap-1">
                       <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
-                      <span>Telefon oder Google Meet</span>
+                      <span>Telefon oder Videocall</span>
                     </p>
                   </div>
                 </div>

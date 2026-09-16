@@ -125,7 +125,10 @@ export function DirectWithManu() {
 
           {/* Organic Floating Post-it / Polaroid Moodboard Canvas */}
           <div className="lg:col-span-6 xl:col-span-5 flex flex-col items-center justify-center pt-4 lg:pt-0">
-            <div className="relative w-full max-w-[360px] sm:max-w-[420px] h-[360px] sm:h-[400px] select-none">
+            <div 
+              className="relative w-full max-w-[360px] sm:max-w-[420px] h-[360px] sm:h-[400px] select-none"
+              style={{ contain: "layout" }}
+            >
               
               {/* Polaroid 1: Manu Nature Seated (Left & Floating) */}
               <div
