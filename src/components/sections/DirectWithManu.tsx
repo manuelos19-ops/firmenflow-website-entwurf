@@ -20,7 +20,7 @@ const bentoItems = [
   },
   {
     title: "Blick für Bild & Wirkung",
-    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das ist. Hinter der Kamera habe ich unter anderem Videos für LaserTag Evolution Düsseldorf gemacht. Bei dir nehme ich dir die Scheu.",
+    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das im ersten Moment sein kann. Du musst nicht modeln können: Wir fangen authentische Alltagsmomente deines Betriebs beiläufig ein – und glaube mir, die Scheu vor der Kamera ist schneller weg, als du „lächeln“ sagen kannst.",
     icon: Camera,
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",

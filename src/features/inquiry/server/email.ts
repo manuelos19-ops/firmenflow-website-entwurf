@@ -366,20 +366,20 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
   const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
   const smtpPort = Number(process.env.SMTP_PORT) || 465;
 
-  const isVideo = payload.choice === "xray-video";
-  const choiceLabel = isVideo ? "🎥 Kostenlose X-Ray Video-Analyse" : "📅 30 Min. Erstgespräch via meetergo";
+  const isVideo = payload.choice === "flowray-video" || payload.choice === "xray-video";
+  const choiceLabel = isVideo ? "🎥 Kostenlose FlowRay Video-Analyse" : "📅 30 Min. Erstgespräch via meetergo";
   const websiteDisplay = payload.noWebsite ? "Noch keine Website vorhanden" : (payload.websiteUrl || "Keine Angabe");
   const submissionId = `audit-${Date.now().toString(36)}`;
 
   const rawSubject = isVideo
-    ? `⚡ Neue X-Ray Website-Analyse: ${payload.name} (${payload.websiteUrl || "Keine Website"})`
+    ? `⚡ Neue FlowRay Website-Analyse: ${payload.name} (${payload.websiteUrl || "Keine Website"})`
     : `📅 Neuer 30-Min. Erstgespräch-Lead: ${payload.name}`;
   const subject = rawSubject.replace(/[\r\n]+/g, " ").trim();
 
   const internalHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
       <div style="background-color: #5C3378; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
-        <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue X-Ray Video-Anfrage" : "📅 Neuer Erstgespräch-Lead"}</h1>
+        <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue FlowRay Video-Anfrage" : "📅 Neuer Erstgespräch-Lead"}</h1>
         <p style="color: #FCFAF7; opacity: 0.9; margin: 4px 0 0 0; font-size: 13px;">Über die 1-Klick-Weiche auf firmenflow.de</p>
       </div>
 
@@ -409,7 +409,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
         <h2 style="color: #17131A; font-size: 18px; margin-top: 0;">Hi ${escapeHtml(payload.name)},</h2>
         <p style="font-size: 15px; color: #332E38;">
           ${isVideo 
-            ? `deine Anfrage für die <strong>kostenlose X-Ray Website-Analyse</strong> ist erfolgreich bei mir eingegangen! Ich schaue mir deine Seite (<em>${escapeHtml(websiteDisplay)}</em>) persönlich an und erstelle dir eine kurze Video-Einschätzung mit konkreten Hebeln.`
+            ? `deine Anfrage für die <strong>kostenlose FlowRay Website-Analyse</strong> ist erfolgreich bei mir eingegangen! Ich schaue mir deine Seite (<em>${escapeHtml(websiteDisplay)}</em>) persönlich an und erstelle dir eine kurze Video-Einschätzung mit konkreten Hebeln.`
             : `dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt! Falls du deinen Termin noch nicht im Kalender gebucht hast, kannst du dir hier direkt deinen Wunschtermin sichern:`}
         </p>
 
@@ -460,7 +460,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
               sender: { name: "Manu von Firmenflow", email: fromEmail },
               to: [{ email: payload.email, name: payload.name }],
               replyTo: { email: "manu@firmenflow.de", name: "Manu Landeck" },
-              subject: (isVideo ? `Deine X-Ray Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`).replace(/[\r\n]+/g, " ").trim(),
+              subject: (isVideo ? `Deine FlowRay Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`).replace(/[\r\n]+/g, " ").trim(),
               htmlContent: customerHtml,
             }),
           });

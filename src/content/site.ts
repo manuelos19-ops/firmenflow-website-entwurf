@@ -5,7 +5,7 @@ export const homeContent = {
     accent: "Deine Website. Persönlich mit Manu.",
     body: "Wer am Niederrhein sucht, entscheidet bei Google. Ich baue deine Website, fotografiere bei dir vor Ort und bringe dein Google-Profil in Ordnung – damit dein Betrieb online so gut aussieht, wie er arbeitet.",
     primaryCta: "WhatsApp an Manu",
-    secondaryCta: "Lass uns sprechen",
+    secondaryCta: "Website kostenlos prüfen",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",

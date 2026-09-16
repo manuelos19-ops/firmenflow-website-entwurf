@@ -26,7 +26,7 @@ const normalizedWebsite = z
 
 export const auditInquirySchema = z
   .object({
-    choice: z.enum(["xray-video", "meetergo-call"]),
+    choice: z.enum(["flowray-video", "xray-video", "meetergo-call"]),
     websiteUrl: normalizedWebsite.optional().default(""),
     noWebsite: z.boolean().optional().default(false),
     name: z

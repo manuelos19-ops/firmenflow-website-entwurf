@@ -11,6 +11,7 @@ import { ContactStep } from "./steps/ContactStep";
 import { FrameStep } from "./steps/FrameStep";
 import { GoalsStep } from "./steps/GoalsStep";
 import { ProjectTypeStep } from "./steps/ProjectTypeStep";
+import { trackProjectInquirySubmit } from "@/lib/track-inquiry";
 
 export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null }) {
   const [state, dispatch] = useReducer(inquiryReducer, undefined, initialInquiryState);
@@ -165,6 +166,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       });
 
       if (res.ok) {
+        trackProjectInquirySubmit();
         dispatch({ type: "success" });
         try {
           sessionStorage.removeItem("firmenflow_inquiry_draft");

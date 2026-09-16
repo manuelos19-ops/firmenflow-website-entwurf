@@ -74,12 +74,15 @@ export default function DatenschutzPage() {
 
           {/* 3. Hosting */}
           <section className="space-y-3">
-            <h2 className="text-xl font-bold text-[var(--color-ink)]">3. Hosting bei Vercel</h2>
+            <h2 className="text-xl font-bold text-[var(--color-ink)]">3. Hosting bei Vercel, Web Analytics &amp; Speed Insights</h2>
             <p>
               Diese Website wird bei <strong>Vercel Inc.</strong> (440 N Barranca Ave #4133, Covina, CA 91723, USA) gehostet. Beim Aufruf der Seiten werden durch den Hostinganbieter technisch notwendige Server-Log-Dateien verarbeitet (z. B. gekürzte IP-Adresse, Datum und Uhrzeit des Abrufs, Browsertyp, Betriebssystem). 
             </p>
             <p>
-              Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Ich habe ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Stabilität meines Webangebots. Mit Vercel besteht eine Vereinbarung zur Auftragsverarbeitung (Data Processing Addendum) auf Basis von EU-Standardvertragsklauseln.
+              <strong>Vercel Web Analytics &amp; Speed Insights:</strong> Zur bedarfsgerechten Gestaltung, statistischen Auswertung und technischen Performance-Messung (Web Vitals) nutzen wir Vercel Web Analytics und Speed Insights. Diese Dienste arbeiten vollständig <strong>ohne Tracking-Cookies</strong> und erstellen keine individuellen Nutzerprofile über Webseiten hinweg. Daten wie aufgerufene Pfade, grobe geografische Herkunft und aggregierte Interaktionen (z. B. Download- und Anfrage-Klicks) werden anonymisiert erfasst.
+            </p>
+            <p>
+              Die Erfassung dieser Daten erfolgt auf Grundlage von <strong>Art. 6 Abs. 1 lit. f DSGVO</strong>. Ich habe ein berechtigtes Interesse an der technisch fehlerfreien Darstellung, Stabilität und fortlaufenden Optimierung meines Webangebots. Mit Vercel Inc. besteht eine Vereinbarung zur Auftragsverarbeitung (Data Processing Addendum) auf Basis der EU-Standardvertragsklauseln (SCCs).
             </p>
           </section>
 
