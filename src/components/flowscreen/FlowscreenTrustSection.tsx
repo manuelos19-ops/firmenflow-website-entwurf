@@ -35,9 +35,17 @@ export function FlowscreenTrustSection() {
       </div>
 
       <ul className="space-y-2.5 text-xs sm:text-sm">
-        <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-[var(--color-line)] px-3.5 py-2.5">
+        <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-emerald-500/30 px-3.5 py-2.5">
           <span className="font-semibold text-[var(--color-ink)]">
             Setup · <span className="font-mono font-normal text-[var(--color-muted)]">{shortHash(FLOWSCREEN_HASHES.setup)}</span>
+            {FLOWSCREEN_VIRUSTOTAL.setup && (
+              <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                <ShieldCheck className="w-3 h-3" />
+                <span>
+                  VirusTotal: 0/{FLOWSCREEN_VIRUSTOTAL.setup.total} sauber
+                </span>
+              </span>
+            )}
           </span>
           <a
             href={getFlowscreenVirusTotalUrl("setup")}
@@ -45,7 +53,7 @@ export function FlowscreenTrustSection() {
             rel="noreferrer"
             className="font-semibold text-[var(--color-coral)] hover:underline underline-offset-4"
           >
-            Auf VirusTotal prüfen
+            Ergebnis ansehen
           </a>
         </li>
         <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-emerald-500/30 px-3.5 py-2.5">
