@@ -28,6 +28,17 @@ export const FLOWSCREEN_FILE_SIZES = {
   portable: 82692520,
 } as const;
 
+/**
+ * VirusTotal-Ergebnis (manuell verifiziert, Stand 16.09.2026).
+ * Portable v1.1.0: 0/66 Erkennungen.
+ * Setup noch nicht auf VirusTotal hochgeladen -> KEIN falsches Badge!
+ * Sobald Setup-Ergebnis vorliegt, hier als eigenes Feld ergänzen.
+ */
+export const FLOWSCREEN_VIRUSTOTAL = {
+  portable: { clean: 66, total: 66, verifiedAt: "16.09.2026" },
+  setup: null,
+} as const;
+
 /** VirusTotal-Analyseseite für einen Datei-Hash (Datei-Upload NICHT nötig zum Ansehen). */
 export function getVirusTotalUrl(hash: string): string {
   return `https://www.virustotal.com/gui/file/${hash}`;

@@ -10,6 +10,7 @@ import {
   FLOWSCREEN_HASHES,
   FLOWSCREEN_RELEASE_TAG_URL,
   FLOWSCREEN_VERSION,
+  FLOWSCREEN_VIRUSTOTAL,
   getFlowscreenVirusTotalUrl,
   type FlowscreenVariant,
 } from "@/lib/flowscreen";
@@ -54,6 +55,12 @@ function HashRow({ variantKey, label }: { variantKey: FlowscreenVariant; label: 
       <div className="flex items-center justify-between gap-3 flex-wrap">
         <span className="text-xs text-[var(--color-muted)] font-mono">
           {formatBytes(FLOWSCREEN_FILE_SIZES[variantKey])} · SHA256
+          {variantKey === "portable" && FLOWSCREEN_VIRUSTOTAL.portable && (
+            <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 font-sans text-[11px] font-bold text-emerald-700">
+              <ShieldCheck className="w-3 h-3" />
+              <span>VirusTotal: 0/{FLOWSCREEN_VIRUSTOTAL.portable.total} sauber (16.09.2026)</span>
+            </span>
+          )}
         </span>
         <a
           href={getFlowscreenVirusTotalUrl(variantKey)}
@@ -62,7 +69,7 @@ function HashRow({ variantKey, label }: { variantKey: FlowscreenVariant; label: 
           className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[var(--color-coral)] hover:underline underline-offset-4"
         >
           <ShieldCheck className="w-4 h-4" />
-          <span>Auf VirusTotal prüfen</span>
+          <span>{variantKey === "portable" ? "Ergebnis ansehen" : "Auf VirusTotal prüfen"}</span>
         </a>
       </div>
     </div>

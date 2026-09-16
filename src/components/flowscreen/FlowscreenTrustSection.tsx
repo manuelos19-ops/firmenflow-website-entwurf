@@ -5,6 +5,7 @@ import { FileCheck2, ShieldCheck } from "lucide-react";
 import {
   FLOWSCREEN_HASHES,
   FLOWSCREEN_VERSION,
+  FLOWSCREEN_VIRUSTOTAL,
   getFlowscreenVirusTotalUrl,
 } from "@/lib/flowscreen";
 
@@ -47,9 +48,17 @@ export function FlowscreenTrustSection() {
             Auf VirusTotal prüfen
           </a>
         </li>
-        <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-[var(--color-line)] px-3.5 py-2.5">
+        <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-emerald-500/30 px-3.5 py-2.5">
           <span className="font-semibold text-[var(--color-ink)]">
             Portable · <span className="font-mono font-normal text-[var(--color-muted)]">{shortHash(FLOWSCREEN_HASHES.portable)}</span>
+            {FLOWSCREEN_VIRUSTOTAL.portable && (
+              <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                <ShieldCheck className="w-3 h-3" />
+                <span>
+                  VirusTotal: 0/{FLOWSCREEN_VIRUSTOTAL.portable.total} sauber
+                </span>
+              </span>
+            )}
           </span>
           <a
             href={getFlowscreenVirusTotalUrl("portable")}
@@ -57,7 +66,7 @@ export function FlowscreenTrustSection() {
             rel="noreferrer"
             className="font-semibold text-[var(--color-coral)] hover:underline underline-offset-4"
           >
-            Auf VirusTotal prüfen
+            Ergebnis ansehen
           </a>
         </li>
       </ul>
