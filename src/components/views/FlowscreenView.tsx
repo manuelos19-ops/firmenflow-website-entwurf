@@ -785,7 +785,7 @@ export function FlowscreenView() {
                 placement="final-cta"
                 buttonVariant="secondary"
                 size="lg"
-                className="text-base sm:text-lg px-7 py-4.5"
+                className="text-base sm:text-lg px-7 py-4.5 bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50 shadow-lg shadow-black/20"
               >
                 <span>Portable ohne Installation</span>
               </FlowscreenDownloadButton>
