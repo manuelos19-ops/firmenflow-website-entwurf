@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { FlowscreenDownloadButton } from "@/components/flowscreen/FlowscreenDownloadButton";
 import { FlowscreenStickyCta } from "@/components/flowscreen/FlowscreenStickyCta";
+import { FlowscreenTrustSection } from "@/components/flowscreen/FlowscreenTrustSection";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { cn } from "@/lib/cn";
 import { brandAssets } from "@/content/assets";
@@ -680,6 +681,7 @@ export function FlowscreenView() {
               ohne Admin-Rechte oder USB-Stick → Portable. Beim ersten Start einmal: „Weitere Informationen“ →{" "}
               „Trotzdem ausführen“.
             </p>
+            <FlowscreenTrustSection />
             <a
               href={RELEASES_PAGE_URL}
               target="_blank"
