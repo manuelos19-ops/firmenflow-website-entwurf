@@ -1,5 +1,6 @@
 export const FLOWSCREEN_VERSION = "1.1.0";
-export const FLOWSCREEN_SIZE_LABEL = "~95 MB";
+export const FLOWSCREEN_SIZE_LABEL = "~83 MB";
+export const FLOWSCREEN_SIZE_LABEL_SHORT = "83 MB";
 export const FLOWSCREEN_OS_LABEL = "Windows 11 & Windows 10 (64-Bit)";
 
 export const FLOWSCREEN_GITHUB_OWNER = "manuelos19-ops";

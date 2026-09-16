@@ -306,12 +306,12 @@ export default function LinksPage() {
                         {item.description}
                       </p>
 
-                      {/* Deutlicher Download-Hinweis für FlowScreen */}
+                      {/* Deutlicher Hinweis für FlowScreen */}
                       {isFlowscreen && (
-                        <div className="flex items-start gap-2 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-900 text-xs font-medium">
-                          <Download className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                        <div className="flex items-start gap-2 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-900 text-xs font-medium">
+                          <Download className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                           <span>
-                            <strong>Wichtiger Hinweis:</strong> Ein Klick auf diese Karte startet sofort den direkten Download des Installers (<span className="font-mono font-semibold text-amber-800">FlowScreen-Setup-1.1.0.exe</span>, ~79 MB für Windows 11).
+                            <strong>Kostenlos für Windows 10 & 11.</strong> Ein Klick führt zur Detailseite mit Setup- und Portable-Version (kein Konto, keine Cloud).
                           </span>
                         </div>
                       )}

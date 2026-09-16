@@ -10,7 +10,7 @@ const FAQ_ENTRIES = [
   {
     question: "Warum ist FlowScreen aktuell komplett kostenlos?",
     answer:
-      "FlowScreen ist ursprünglich als internes Werkzeug bei Firmenflow entstanden, weil bestehende Tools wie Snagit teuer im Abo sind, ShareX mit Hunderten Submenüs überladen ist und das Windows Snipping Tool keine schönen Mockups für Kundenpräsentationen erzeugen kann. Aktuell stellen wir die Vollversion für Macher, Freelancer und Teams kostenlos zur Verfügung.",
+      "FlowScreen ist ursprünglich als internes Werkzeug bei Firmenflow entstanden: Snagit steckt heute im Camtasia-Abo (ca. 40 €/Jahr), ShareX erschlägt Einsteiger mit seinen unzähligen Menüs und das Windows Snipping Tool kann keine ansehnlichen Mockups für Kundenpräsentationen erzeugen. Aktuell stellen wir die Vollversion für Macher, Freelancer und Teams kostenlos zur Verfügung.",
   },
   {
     question: "Werden meine Screenshots oder Daten in die Cloud geladen?",
@@ -25,7 +25,7 @@ const FAQ_ENTRIES = [
   {
     question: "Was bedeutet die Meldung beim ersten Start unter Windows?",
     answer:
-      "Da FlowScreen eine neu veröffentlichte Software ohne ein tausende Euro teures Unternehmens-Signaturzertifikat ist, kann der Windows SmartScreen-Filter beim ersten Start anzeigen: 'Der Computer wurde durch Windows geschützt'. Klicke einfach auf 'Weitere Informationen' und danach auf 'Trotzdem ausführen'. Die App ist sauber, quelloffen verwaltet und enthält keinerlei Adware.",
+      "Da FlowScreen eine neu veröffentlichte Software ohne ein tausende Euro teures Unternehmens-Signaturzertifikat ist, kann der Windows SmartScreen-Filter beim ersten Start anzeigen: 'Der Computer wurde durch Windows geschützt'. Klicke einfach auf 'Weitere Informationen' und danach auf 'Trotzdem ausführen'. Die App wird sauber über unser öffentliches GitHub-Repository verteilt und enthält keinerlei Adware.",
   },
   {
     question: "Was ist der Unterschied zwischen Installer und Portable?",

@@ -52,7 +52,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Warum ist FlowScreen aktuell komplett kostenlos?",
     answer:
-      "FlowScreen ist ursprünglich als internes Werkzeug bei Firmenflow entstanden, weil bestehende Tools wie Snagit teuer im Abo sind, ShareX mit Hunderten Submenüs überladen ist und das Windows Snipping Tool keine schönen Mockups für Kundenpräsentationen erzeugen kann. Aktuell stellen wir die Vollversion für Macher, Freelancer und Teams kostenlos zur Verfügung.",
+      "FlowScreen ist ursprünglich als internes Werkzeug bei Firmenflow entstanden: Snagit steckt heute im Camtasia-Abo (ca. 40 €/Jahr), ShareX erschlägt Einsteiger mit seinen unzähligen Menüs und das Windows Snipping Tool kann keine ansehnlichen Mockups für Kundenpräsentationen erzeugen. Aktuell stellen wir die Vollversion für Macher, Freelancer und Teams kostenlos zur Verfügung.",
   },
   {
     question: "Werden meine Screenshots oder Daten in die Cloud geladen?",
@@ -67,7 +67,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Was bedeutet die Meldung beim ersten Start unter Windows?",
     answer:
-      "Da FlowScreen eine neu veröffentlichte Software ohne ein tausende Euro teures Unternehmens-Signaturzertifikat ist, kann der Windows SmartScreen-Filter beim ersten Start anzeigen: 'Der Computer wurde durch Windows geschützt'. Klicke einfach auf 'Weitere Informationen' und danach auf 'Trotzdem ausführen'. Die App ist sauber, quelloffen verwaltet und enthält keinerlei Adware.",
+      "Da FlowScreen eine neu veröffentlichte Software ohne ein tausende Euro teures Unternehmens-Signaturzertifikat ist, kann der Windows SmartScreen-Filter beim ersten Start anzeigen: 'Der Computer wurde durch Windows geschützt'. Klicke einfach auf 'Weitere Informationen' und danach auf 'Trotzdem ausführen'. Die App wird sauber über unser öffentliches GitHub-Repository verteilt und enthält keinerlei Adware.",
   },
   {
     question: "Was ist der Unterschied zwischen Installer und Portable?",
@@ -108,7 +108,7 @@ export function FlowscreenView() {
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-3 py-1 rounded-full border border-[var(--color-coral)]/20">
               <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
-              Windows 11 Native · v1.1.0
+              Windows 11 &amp; 10 · v{FLOWSCREEN_VERSION}
             </span>
           </div>
 {/* Creator Badge - Personal connection */}
@@ -121,7 +121,7 @@ export function FlowscreenView() {
               className="w-6 h-6"
             />
             <span className="text-[var(--color-coral)] font-bold">vom Inhaber Manu</span>
-            <span className="text-[var(--color-muted)]">· FlowScreen 1.1.0</span>
+            <span className="text-[var(--color-muted)]">· FlowScreen {FLOWSCREEN_VERSION}</span>
           </div>
         </div>
 
@@ -144,7 +144,8 @@ export function FlowscreenView() {
 
           {/* Subtext */}
           <p className="text-lg sm:text-2xl text-[var(--color-muted)] font-normal leading-relaxed max-w-3xl mx-auto">
-            Windows Snipping Tool ist zu basic, ShareX total überladen und Web-Tools wollen deine Daten.{" "}
+            Snipping Tool ist zu basic, ShareX für Einsteiger schnell überfordernd und Web-Tools laden deine
+            Screenshots in fremde Clouds.{" "}
             <strong className="text-[var(--color-ink)] font-semibold">FlowScreen</strong> vereint blitzschnelle
             Bildschirmfotos mit 1-Klick-Canvas-Mockups, automatischem Schrittzähler, DSGVO-Zensur und Vektor-Editor –{" "}
             <span className="text-[var(--color-coral)] font-semibold">100 % lokal und kostenlos</span>.
@@ -180,7 +181,7 @@ export function FlowscreenView() {
           </div>
 
           <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
-            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL}. Beim ersten Start einmalig: SmartScreen
+            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL} · {FLOWSCREEN_SIZE_LABEL} Download. Beim ersten Start einmal: SmartScreen
             → „Weitere Informationen“ → „Trotzdem ausführen“.
           </p>
 
@@ -218,7 +219,7 @@ export function FlowscreenView() {
                   <span className="w-3 h-3 rounded-full bg-amber-400" />
                   <span className="w-3 h-3 rounded-full bg-emerald-400" />
                   <span className="ml-3 text-xs font-mono text-[var(--color-muted)] hidden sm:inline">
-                    FlowScreen Studio v1.1.0 · Canvas Mockup Mode
+                    FlowScreen Studio v{FLOWSCREEN_VERSION} · Canvas Mockup Mode
                   </span>
                 </div>
                 <div className="text-xs font-semibold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-3 py-0.5 rounded-full">
@@ -358,9 +359,9 @@ export function FlowscreenView() {
 
                   <tr>
                     <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      Bedienung ohne Handbuch
+                      Bedienung ohne Einarbeitung
                       <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Sofort intuitiv, ohne 500 Submenüs &amp; Regler
+                        Sofort starten statt lange konfigurieren
                       </span>
                     </td>
                     <td className="py-4 px-4 text-center text-emerald-600">
@@ -376,9 +377,9 @@ export function FlowscreenView() {
 
                   <tr>
                     <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      100 % Lokal (Kein Cloud-Upload-Zwang)
+                      100 % lokal (kein Cloud-Zwang)
                       <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Keine Weitergabe sensibler Geschäftsdaten
+                        Screenshots verlassen deinen PC nicht
                       </span>
                     </td>
                     <td className="py-4 px-4 text-center text-emerald-600">
@@ -396,7 +397,7 @@ export function FlowscreenView() {
                     <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
                       Kostenlose Vollversion &amp; Updates
                       <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Kein 60 €/Jahr Abonnement wie Snagit
+                        Kein Camtasia-Abo (ca. 40 €/Jahr) wie für Snagit nötig
                       </span>
                     </td>
                     <td className="py-4 px-4 text-center text-emerald-600">
@@ -577,7 +578,7 @@ export function FlowscreenView() {
                   <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center">
                     <Monitor className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v1.1.0 · ~95 MB</span>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION} · {FLOWSCREEN_SIZE_LABEL}</span>
                 </div>
 
                 <div className="space-y-2">
@@ -628,7 +629,7 @@ export function FlowscreenView() {
                   <div className="w-12 h-12 rounded-2xl bg-stone-100 text-[var(--color-ink)] flex items-center justify-center">
                     <HardDrive className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v1.1.0 · ~95 MB</span>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION} · {FLOWSCREEN_SIZE_LABEL}</span>
                 </div>
 
                 <div className="space-y-2">
@@ -673,7 +674,12 @@ export function FlowscreenView() {
             </div>
           </div>
 
-          <div className="text-center pt-2">
+          <div className="text-center pt-2 space-y-2">
+            <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
+              <strong className="text-[var(--color-ink)]">Für wen ist was?</strong> Fester Büro-PC → Setup. Laptop
+              ohne Admin-Rechte oder USB-Stick → Portable. Beim ersten Start einmal: „Weitere Informationen“ →{" "}
+              „Trotzdem ausführen“.
+            </p>
             <a
               href={RELEASES_PAGE_URL}
               target="_blank"
