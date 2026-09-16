@@ -1,6 +1,10 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { FlowscreenView } from "@/components/views/FlowscreenView";
+import { FlowscreenJsonLd } from "@/components/seo/FlowscreenJsonLd";
 
+// Hinweis: noindex bleibt bewusst bis zum finalen Go-Live aktiv.
+// JSON-LD ist bereits eingebaut, damit der Release spaeter nur noch
+// aus dem Umschalten von index/follow + Sitemap/llms besteht.
 export const metadata: Metadata = {
   title: "FlowScreen – Das Windows 11 Screenshot-Studio | Firmenflow",
   description:
@@ -42,5 +46,10 @@ export const metadata: Metadata = {
 };
 
 export default function FlowscreenPage() {
-  return <FlowscreenView />;
+  return (
+    <>
+      <FlowscreenJsonLd />
+      <FlowscreenView />
+    </>
+  );
 }

@@ -47,6 +47,12 @@ next-env.d.ts
 /outputs/
 .seo-cache/
 
+# FlowScreen binaries: Source of Truth ist GitHub Releases.
+# Keine .exe in public/ committen (Vercel-Build + Repo werden sonst riesig).
+/public/downloads/*.exe
+/public/downloads/*.msi
+/public/downloads/*.zip
+
 # print build temp (Python venv etc.)
 /print-assets/tmp/
 

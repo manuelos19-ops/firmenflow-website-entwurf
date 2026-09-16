@@ -4,10 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
+import { FlowscreenDownloadButton } from "@/components/flowscreen/FlowscreenDownloadButton";
+import { FlowscreenStickyCta } from "@/components/flowscreen/FlowscreenStickyCta";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { cn } from "@/lib/cn";
+import { brandAssets } from "@/content/assets";
+import {
+  FLOWSCREEN_OS_LABEL,
+  FLOWSCREEN_RELEASES_URL,
+  FLOWSCREEN_SIZE_LABEL,
+  FLOWSCREEN_VERSION,
+} from "@/lib/flowscreen";
 import {
   ArrowLeft,
   Download,
@@ -26,14 +34,14 @@ import {
   HardDrive,
   RefreshCw,
   ExternalLink,
+  Users,
+  Briefcase,
+  BarChart3,
+  Clock,
+  FileImage,
 } from "lucide-react";
 
-const DOWNLOAD_SETUP_URL =
-  "https://github.com/manuelos19-ops/flowscreen-releases/releases/latest/download/FlowScreen-Setup-1.1.0.exe";
-const DOWNLOAD_PORTABLE_URL =
-  "https://github.com/manuelos19-ops/flowscreen-releases/releases/latest/download/FlowScreen-Portable-1.1.0.exe";
-const RELEASES_PAGE_URL =
-  "https://github.com/manuelos19-ops/flowscreen-releases/releases";
+const RELEASES_PAGE_URL = FLOWSCREEN_RELEASES_URL;
 
 interface FaqItem {
   question: string;
@@ -66,6 +74,16 @@ const FAQ_ITEMS: FaqItem[] = [
     answer:
       "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und unterstützt automatische Updates. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick.",
   },
+  {
+    question: "Läuft FlowScreen auch unter Windows 10?",
+    answer:
+      "Ja. FlowScreen läuft auf Windows 11 und Windows 10 (64-Bit). Für die Portable-Version brauchst du keine Administratorrechte – einfach herunterladen und starten.",
+  },
+  {
+    question: "Brauche ich Administratorrechte für die Installation?",
+    answer:
+      "Für die Portable-Version nicht. Nur die Setup-Version mit Startmenü-Eintrag und Drucktasten-Integration kann je nach Firmenrichtlinie Admin-Rechte erfordern.",
+  },
 ];
 
 export function FlowscreenView() {
@@ -92,6 +110,18 @@ export function FlowscreenView() {
               <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
               Windows 11 Native · v1.1.0
             </span>
+          </div>
+{/* Creator Badge - Personal connection */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)]/50 text-xs font-semibold text-[var(--color-ink)] shadow-sm mb-6">
+            <Image
+              src={brandAssets.markLight}
+              alt="Firmenflow Markenzeichen"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+            <span className="text-[var(--color-coral)] font-bold">vom Inhaber Manu</span>
+            <span className="text-[var(--color-muted)]">· FlowScreen 1.1.0</span>
           </div>
         </div>
 
@@ -123,31 +153,36 @@ export function FlowscreenView() {
           {/* Primary Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <MagneticButton>
-              <ButtonLink
-                href={DOWNLOAD_SETUP_URL}
-                external={true}
-                variant="primary"
+              <FlowscreenDownloadButton
+                variant="setup"
+                placement="hero"
+                buttonVariant="primary"
                 size="lg"
                 className="shadow-xl shadow-[var(--color-coral)]/25 text-base sm:text-lg px-8 py-4.5"
               >
                 <Download className="w-5 h-5 mr-2 shrink-0" />
-                <span>FlowScreen laden (Setup.exe)</span>
-              </ButtonLink>
+                <span>FlowScreen kostenlos laden · {FLOWSCREEN_SIZE_LABEL}</span>
+              </FlowscreenDownloadButton>
             </MagneticButton>
 
             <MagneticButton>
-              <ButtonLink
-                href={DOWNLOAD_PORTABLE_URL}
-                external={true}
-                variant="secondary"
+              <FlowscreenDownloadButton
+                variant="portable"
+                placement="hero"
+                buttonVariant="secondary"
                 size="lg"
                 className="text-base sm:text-lg px-7 py-4.5"
               >
                 <HardDrive className="w-5 h-5 mr-2 shrink-0 text-[var(--color-plum)]" />
                 <span>Portable Version (.exe)</span>
-              </ButtonLink>
+              </FlowscreenDownloadButton>
             </MagneticButton>
           </div>
+
+          <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
+            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL}. Beim ersten Start einmalig: SmartScreen
+            → „Weitere Informationen“ → „Trotzdem ausführen“.
+          </p>
 
           {/* Trust Pills */}
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-xs sm:text-sm font-medium text-[var(--color-muted)]">
@@ -251,8 +286,8 @@ export function FlowscreenView() {
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <div className="min-w-[720px] rounded-3xl border border-[var(--color-line)] bg-white shadow-sm overflow-hidden">
+          <div className="overflow-x-auto md:overflow-visible">
+            <div className="min-w-[720px] md:min-w-0 rounded-3xl border border-[var(--color-line)] bg-white shadow-sm overflow-hidden">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-[var(--color-line)] bg-stone-50/70 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
@@ -569,21 +604,21 @@ export function FlowscreenView() {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Windows 11 &amp; Windows 10 (64-Bit)</span>
+                    <span>{FLOWSCREEN_OS_LABEL}</span>
                   </li>
                 </ul>
               </div>
 
-              <ButtonLink
-                href={DOWNLOAD_SETUP_URL}
-                external={true}
-                variant="primary"
+              <FlowscreenDownloadButton
+                variant="setup"
+                placement="download-card"
+                buttonVariant="primary"
                 size="lg"
                 className="w-full justify-center shadow-lg shadow-[var(--color-coral)]/20"
               >
                 <Download className="w-5 h-5 mr-2 shrink-0" />
                 <span>Installer herunterladen</span>
-              </ButtonLink>
+              </FlowscreenDownloadButton>
             </div>
 
             {/* Card 2: Portable Version */}
@@ -625,16 +660,16 @@ export function FlowscreenView() {
                 </ul>
               </div>
 
-              <ButtonLink
-                href={DOWNLOAD_PORTABLE_URL}
-                external={true}
-                variant="secondary"
+              <FlowscreenDownloadButton
+                variant="portable"
+                placement="download-card"
+                buttonVariant="secondary"
                 size="lg"
                 className="w-full justify-center"
               >
                 <Download className="w-5 h-5 mr-2 shrink-0" />
                 <span>Portable .exe herunterladen</span>
-              </ButtonLink>
+              </FlowscreenDownloadButton>
             </div>
           </div>
 
@@ -665,10 +700,15 @@ export function FlowscreenView() {
           <div className="divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]">
             {FAQ_ITEMS.map((item, idx) => {
               const isOpen = openFaq === idx;
+              const panelId = `flowscreen-faq-panel-${idx}`;
+              const buttonId = `flowscreen-faq-button-${idx}`;
               return (
                 <div key={idx} className="py-5">
                   <button
                     type="button"
+                    id={buttonId}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
                     onClick={() => toggleFaq(idx)}
                     className="w-full flex items-center justify-between text-left gap-4 font-semibold text-base sm:text-lg text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors cursor-pointer"
                   >
@@ -681,7 +721,12 @@ export function FlowscreenView() {
                     />
                   </button>
                   {isOpen && (
-                    <p className="mt-3 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed animate-in fade-in duration-200">
+                    <p
+                      id={panelId}
+                      role="region"
+                      aria-labelledby={buttonId}
+                      className="mt-3 text-sm sm:text-base text-[var(--color-muted)] leading-relaxed animate-in fade-in duration-200"
+                    >
                       {item.answer}
                     </p>
                   )}
@@ -714,31 +759,33 @@ export function FlowscreenView() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <MagneticButton>
-              <ButtonLink
-                href={DOWNLOAD_SETUP_URL}
-                external={true}
-                variant="primary"
+              <FlowscreenDownloadButton
+                variant="setup"
+                placement="final-cta"
+                buttonVariant="primary"
                 size="lg"
                 className="shadow-xl shadow-black/20 text-base sm:text-lg px-8 py-4.5"
               >
                 <Download className="w-5 h-5 mr-2 shrink-0" />
                 <span>FlowScreen jetzt kostenlos laden</span>
-              </ButtonLink>
+              </FlowscreenDownloadButton>
             </MagneticButton>
 
             <MagneticButton>
-              <ButtonLink
-                href="/#kontakt"
-                variant="secondary"
+              <FlowscreenDownloadButton
+                variant="portable"
+                placement="final-cta"
+                buttonVariant="secondary"
                 size="lg"
                 className="text-base sm:text-lg px-7 py-4.5"
               >
-                <span>Fragen an Manu</span>
-              </ButtonLink>
+                <span>Portable ohne Installation</span>
+              </FlowscreenDownloadButton>
             </MagneticButton>
           </div>
         </div>
       </Container>
+      <FlowscreenStickyCta />
     </main>
   );
 }
