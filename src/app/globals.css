@@ -1,27 +1,18 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   Typografie-Trio (Studio Wemento Inspiration):
-   1. Atmosphere Grotesk (Expressive Display Headlines)
+   Typografie-Trio:
+   1. Space Grotesk (Expressive Display Headlines, OFL-lizenziert)
    2. Switzer (Modern Functional UI & Body)
    3. Crimson Text (Warm Editorial Serif & Italics)
    ========================================================================== */
 
-/* 1. Atmosphere Grotesk */
+/* 1. Space Grotesk (Variable, OFL 1.1 – Florian Karsten) */
 @font-face {
-  font-family: "Atmosphere Grotesk";
-  src: url("/fonts/atmosphere/AtmosphereGrotesk-Bold.woff2") format("woff2"),
-       url("/fonts/atmosphere/AtmosphereGrotesk-Bold.otf") format("opentype");
-  font-weight: 700 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Atmosphere Grotesk";
-  src: url("/fonts/atmosphere/AtmosphereGrotesk-Regular.woff2") format("woff2"),
-       url("/fonts/atmosphere/AtmosphereGrotesk-Regular.otf") format("opentype");
-  font-weight: 400 600;
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk/SpaceGrotesk-Variable.woff2") format("woff2 supports variations"),
+       url("/fonts/space-grotesk/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 300 700;
   font-display: swap;
   font-style: normal;
 }
@@ -96,7 +87,7 @@
   --color-muted: #746d76;
   --color-line: color-mix(in srgb, var(--color-plum) 14%, transparent);
   
-  --font-display: "Atmosphere Grotesk", "Switzer", sans-serif;
+  --font-display: "Space Grotesk", "Switzer", sans-serif;
   --font-sans: "Switzer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Crimson Text", Georgia, serif;
   

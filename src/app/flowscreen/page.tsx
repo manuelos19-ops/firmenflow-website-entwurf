@@ -2,19 +2,17 @@ import type { Metadata } from "next";
 import { FlowscreenView } from "@/components/views/FlowscreenView";
 import { FlowscreenJsonLd } from "@/components/seo/FlowscreenJsonLd";
 
-// Hinweis: noindex bleibt bewusst bis zum finalen Go-Live aktiv.
-// JSON-LD ist bereits eingebaut, damit der Release spaeter nur noch
-// aus dem Umschalten von index/follow + Sitemap/llms besteht.
+// Hinweis: /flowscreen ist bewusst auf index/follow (Go-Live v1.1.1).
 export const metadata: Metadata = {
   title: "FlowScreen – Das Windows 11 Screenshot-Studio | Firmenflow",
   description:
     "Kostenloses Windows 11 Screenshot-Tool mit 1-Klick-Mockups, automatischem Schrittzähler, Zensur, Lupe und Vektor-Editor. Ohne Cloud-Zwang, 100% lokal auf deinem PC.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
   alternates: {

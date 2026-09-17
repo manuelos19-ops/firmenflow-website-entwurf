@@ -15,6 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2026-09-08",
     },
     {
+      url: `${baseUrl}/flowscreen`,
+      lastModified: "2026-09-18",
+    },
+    {
       url: `${baseUrl}/ueber-manu`,
       lastModified: "2026-09-14",
     },
