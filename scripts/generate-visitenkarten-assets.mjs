@@ -317,15 +317,9 @@ function generatePreviewHtml(manifest) {
   <title>Firmenflow Visitenkarten Button-Kollektion (Print-Ready)</title>
   <style>
     @font-face {
-      font-family: 'Atmosphere Grotesk';
-      src: url('../../fonts/atmosphere/AtmosphereGrotesk-Bold.otf') format('opentype');
-      font-weight: 700;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Atmosphere Grotesk';
-      src: url('../../fonts/atmosphere/AtmosphereGrotesk-Regular.otf') format('opentype');
-      font-weight: 400;
+      font-family: 'Space Grotesk';
+      src: url('../../fonts/space-grotesk/SpaceGrotesk-Variable.woff2') format('woff2');
+      font-weight: 300 700;
       font-style: normal;
     }
     @font-face {
@@ -379,7 +373,7 @@ function generatePreviewHtml(manifest) {
       margin-bottom: 16px;
     }
     h1 {
-      font-family: 'Atmosphere Grotesk', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 38px;
       letter-spacing: -0.02em;
       margin-bottom: 12px;
@@ -464,7 +458,7 @@ function generatePreviewHtml(manifest) {
       color: var(--muted);
     }
     .card-name {
-      font-family: 'Atmosphere Grotesk', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 26px;
       letter-spacing: -0.01em;
       margin-bottom: 4px;
@@ -504,7 +498,7 @@ function generatePreviewHtml(manifest) {
       margin-bottom: 2px;
     }
     .contact-val {
-      font-family: 'Atmosphere Grotesk', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 17px;
       color: var(--ink);
       letter-spacing: -0.01em;
