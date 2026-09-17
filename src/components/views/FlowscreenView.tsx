@@ -12,6 +12,7 @@ import { cn } from "@/lib/cn";
 import { brandAssets } from "@/content/assets";
 import { FirmenflowIcon, FlowscreenIcon } from "@/components/brand/FirmenflowIcon";
 import {
+  FLOWSCREEN_CHANGELOG,
   FLOWSCREEN_OS_LABEL,
   FLOWSCREEN_RELEASES_URL,
   FLOWSCREEN_SIZE_LABEL,
@@ -672,6 +673,48 @@ export function FlowscreenView() {
               <span>Alle Versionen &amp; Release Notes im GitHub Repository einsehen</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
+          </div>
+        </div>
+
+        {/* CHANGELOG: Was ist neu? */}
+        <div className="space-y-10 max-w-3xl mx-auto">
+          <div className="text-center space-y-3">
+            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+              Changelog
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-[var(--color-ink)]">
+              Was ist neu in FlowScreen?
+            </h2>
+            <p className="text-base sm:text-lg text-[var(--color-muted)]">
+              Jede Version wird vom Inhaber persönlich gebaut, geprüft und virenfrei veröffentlicht.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {FLOWSCREEN_CHANGELOG.map((entry) => (
+              <div
+                key={entry.version}
+                className="rounded-3xl border border-[var(--color-line)] bg-white p-6 sm:p-8 shadow-sm space-y-4"
+              >
+                <div className="flex flex-wrap items-center gap-3">
+                  <FlowscreenIcon name="app-icon-512" size={40} alt="FlowScreen App-Icon" />
+                  <div>
+                    <p className="text-base sm:text-lg font-bold text-[var(--color-ink)]">
+                      v{entry.version} · {entry.title}
+                    </p>
+                    <p className="text-xs sm:text-sm text-[var(--color-muted)]">{entry.date}</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm sm:text-base text-[var(--color-muted)]">
+                  {entry.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 mt-1 text-emerald-600 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 

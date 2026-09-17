@@ -18,6 +18,30 @@ export const FLOWSCREEN_HASHES = {
   portable: "777bce14e0fa62f6a2d0145795430fa4d4a20f1d438e687085a546fdf8f5f461",
 } as const;
 
+export const FLOWSCREEN_CHANGELOG = [
+  {
+    version: "1.1.1",
+    date: "17.09.2026",
+    title: "Neues App-Icon, stabilere Hilfe & Dark-Mode-Fixes",
+    items: [
+      "Neues FlowScreen App-Icon (Taskleiste, Tray, Installer & Shortcuts)",
+      "Hilfe-Menü: alle 6 Tabs schalten wieder zuverlässig um",
+      "Neuer Profi-Tipp: Linien, Marker & Kreise gerade ziehen mit Shift / Strg",
+      "Dark Mode: Druck-Tasten-Status und Hinweis-Balken wieder gut lesbar",
+    ],
+  },
+  {
+    version: "1.1.0",
+    date: "15.09.2026",
+    title: "Mockup-Vollausbau, Dark Mode & Portable",
+    items: [
+      "Mockup-Modus mit Browser- und Geräte-Rahmen, Presets & 3D-Tilt",
+      "Dark Mode für den Editor, Portable-Version ohne Installation",
+      "Automatisches Update-System über GitHub Releases",
+    ],
+  },
+] as const;
+
 export const FLOWSCREEN_FILE_NAMES = {
   setup: `FlowScreen-Setup-${FLOWSCREEN_VERSION}.exe`,
   portable: `FlowScreen-Portable-${FLOWSCREEN_VERSION}.exe`,

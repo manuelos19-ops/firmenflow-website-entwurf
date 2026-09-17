@@ -75,11 +75,8 @@ export function FlowscreenTrustSection() {
       </ul>
 
       <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-        So prüfst du selbst: Datei bei VirusTotal hochladen oder in PowerShell{" "}
-        <code className="font-mono text-[11px] bg-white border border-[var(--color-line)] rounded px-1.5 py-0.5">
-          Get-FileHash ~/Downloads/FlowScreen-Setup-1.1.1.exe -Algorithm SHA256
-        </code>{" "}
-        ausführen und mit dem Hash oben vergleichen – exakt gleich bedeutet unverändertes Original.
+        Vom Inhaber persönlich geprüft und virenfrei – lade einfach herunter und lege los. Bei der
+        Windows-Warnung beim ersten Start: „Weitere Informationen“ → „Trotzdem ausführen“.
       </p>
     </div>
   );
