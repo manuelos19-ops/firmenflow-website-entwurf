@@ -65,6 +65,10 @@ export default function AnfragePage() {
               <span>Direkt mit Manu</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
+              <FirmenflowIcon name="termin" size={20} decorative />
+              <span>Rückmeldung i. d. R. innerhalb eines Werktags</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5">
               <FirmenflowIcon name="formular" size={20} decorative />
               <span>Noch kein fertiger Plan nötig</span>
             </span>

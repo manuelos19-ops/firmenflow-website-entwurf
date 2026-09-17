@@ -32,7 +32,7 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
         Wie darf ich mich bei dir melden?
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
-        Ich melde mich persönlich über deinen gewählten Kontaktweg – mit einer ersten Einschätzung und dem passenden nächsten Schritt.
+        Ich melde mich persönlich über deinen gewählten Kontaktweg – in der Regel innerhalb eines Werktags – mit einer ersten Einschätzung und dem passenden nächsten Schritt.
       </p>
 
       {/* Zusammenfassung der gewählten Leistungen */}

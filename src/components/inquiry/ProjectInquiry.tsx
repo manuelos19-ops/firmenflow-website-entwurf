@@ -221,7 +221,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             Anfrage ist bei Manu angekommen!
           </h3>
           <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-            Vielen Dank für dein Vertrauen. Ich schaue mir deine Angaben in Ruhe an und melde mich persönlich bei dir.
+            Vielen Dank für dein Vertrauen. Ich schaue mir deine Angaben in Ruhe an und melde mich in der Regel innerhalb eines Werktags persönlich bei dir.
           </p>
         </div>
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -384,7 +384,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
                   )}
                 </button>
                 <p className="text-xs text-[var(--color-muted)] max-w-sm sm:text-right">
-                  Du beauftragst damit noch keine Leistung. Ich melde mich persönlich über deinen gewählten Kontaktweg.
+                  Du beauftragst damit noch keine Leistung. Ich melde mich persönlich über deinen gewählten Kontaktweg – in der Regel innerhalb eines Werktags.
                 </p>
               </div>
             )}

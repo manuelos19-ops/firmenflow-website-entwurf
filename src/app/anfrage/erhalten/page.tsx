@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function AnfrageErhaltenPage() {
-  const responseTime = process.env.NEXT_PUBLIC_RESPONSE_TIME || "in der Regel innerhalb von 24 Stunden";
+  const responseTime = process.env.NEXT_PUBLIC_RESPONSE_TIME || "in der Regel innerhalb eines Werktags";
 
   return (
     <main id="main" className="pt-36 sm:pt-44 pb-28 min-h-[70vh] flex items-center">

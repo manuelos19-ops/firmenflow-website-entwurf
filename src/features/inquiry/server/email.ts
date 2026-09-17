@@ -222,7 +222,7 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                 <div style="background-color: #FFFFFF; padding: 18px 20px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 22px;">
                   <strong style="color: #653683; font-size: 14px; display: block; margin-bottom: 8px;">Wie es jetzt weitergeht:</strong>
                   <p style="margin: 0; font-size: 14px; color: #17131A; line-height: 1.6;">
-                    Ich melde mich innerhalb der nächsten <strong>24 Stunden</strong> persönlich bei dir über deinen gewünschten Kontaktweg (<strong>${escapeHtml(preferredContactGerman)}</strong>), um kurz die nächsten Schritte zu besprechen.
+                    Ich melde mich <strong>in der Regel innerhalb eines Werktags</strong> persönlich bei dir über deinen gewünschten Kontaktweg (<strong>${escapeHtml(preferredContactGerman)}</strong>), um kurz die nächsten Schritte zu besprechen.
                   </p>
                 </div>
 
