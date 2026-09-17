@@ -12,7 +12,7 @@ const processIcons: FirmenflowIconName[][] = [
   ["kennenlernen"],
   ["designentwurf"],
   ["umsetzung-texte"],
-  ["freigabe", "go-live"],
+  ["go-live"],
 ];
 
 export function Process() {

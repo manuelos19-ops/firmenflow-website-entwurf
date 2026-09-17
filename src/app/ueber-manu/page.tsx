@@ -127,10 +127,6 @@ export default function UeberManuPage() {
               Manuel Landeck, Wesel und Niederrhein. Ich mache Websites und Google-Profile
               für kleine Betriebe – und weiß aus eigener Erfahrung, wie so ein Betrieb läuft.
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-1">
-              <FirmenflowIcon name="persoenlicher-ansprechpartner" size={48} decorative />
-              <FirmenflowIcon name="beratung" size={48} decorative />
-            </div>
           </div>
         </div>
 

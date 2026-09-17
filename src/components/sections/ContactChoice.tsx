@@ -174,10 +174,6 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
 
         {/* DAS HAUPT-FORMULAR: Kostenlose Video-Prüfung */}
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
-          <div className="flex items-center gap-3">
-            <FirmenflowIcon name="video-website-check" size={56} decorative />
-            <FirmenflowIcon name="formular" size={40} decorative />
-          </div>
           <div className="double-bezel-outer-dark p-1 sm:p-1.5 rounded-[2.25rem] sm:rounded-[2.75rem] shadow-2xl">
             <WebsiteCheckInquiry />
           </div>
