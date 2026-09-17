@@ -94,12 +94,12 @@ export function SiteHeader() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <ButtonLink 
-              href="/#kontakt" 
+              href="/#projektanfrage" 
               variant="primary" 
               size="default"
               className="text-xs sm:text-sm px-5 py-2.5 shadow-sm"
             >
-              Website prüfen lassen
+              Kostenlos anfragen
             </ButtonLink>
           </div>
 
@@ -178,13 +178,13 @@ export function SiteHeader() {
 
           <div className="space-y-3 pt-2">
             <ButtonLink
-              href="/#kontakt"
+              href="/#projektanfrage"
               variant="primary"
               size="default"
               className="w-full justify-center shadow-md shadow-[var(--color-coral)]/20"
               onClick={() => setIsOpen(false)}
             >
-              Website prüfen lassen
+              Kostenlos anfragen
             </ButtonLink>
             <p className="text-center text-xs text-[var(--color-muted)] font-medium">
               Persönlich mit Manu · Wesel &amp; Niederrhein
