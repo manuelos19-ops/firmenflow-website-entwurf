@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/media/flowscreen/editor-preview.png",
-        width: 1280,
-        height: 800,
-        alt: "FlowScreen Screenshot Studio für Windows 11",
+        url: "/media/flowscreen/flowscreen-share.png",
+        width: 1200,
+        height: 630,
+        alt: "FlowScreen App-Icon und Screenshot-Studio für Windows 11",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "FlowScreen – Das Windows 11 Screenshot-Studio | Firmenflow",
     description:
       "Kostenloses Windows 11 Screenshot-Tool mit 1-Klick-Mockups, automatischem Schrittzähler, Zensur, Lupe und Vektor-Editor.",
-    images: ["/media/flowscreen/editor-preview.png"],
+    images: ["/media/flowscreen/flowscreen-share.png"],
   },
 };
 
