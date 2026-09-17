@@ -7,17 +7,31 @@ type StepProps = {
   onPatch: (value: Partial<InquiryDraft>) => void;
 };
 
-const goalOptions = [
-  { value: "more-inquiries", label: "Mehr direkte Kundenanfragen über die Website" },
-  { value: "better-local-presence", label: "Bessere Auffindbarkeit bei Google in der Region" },
-  { value: "modern-look", label: "Moderner, vertrauenswürdiger Auftritt für meinen Betrieb" },
-  { value: "clear-offer", label: "Leistungen und Angebote verständlicher darstellen" },
-  { value: "photo-video", label: "Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)" },
-  { value: "better-reviews", label: "Mehr und bessere Google-Bewertungen" },
+// Ziele konditional: nur die Sätze zeigen, die zu den gewählten Leistungen passen
+const websiteGoals = [
+  { value: "more-inquiries", label: "Mehr passende Anfragen erhalten" },
+  { value: "professional-presentation", label: "Meinen Betrieb professioneller präsentieren" },
+  { value: "clear-offer", label: "Leistungen verständlicher erklären" },
+  { value: "easy-contact", label: "Kontaktaufnahme erleichtern" },
+] as const;
+
+const lokalGoals = [
+  { value: "better-findability", label: "Bei Google und Maps besser auffindbar sein" },
+  { value: "profile-current", label: "Mein Profil aktuell halten" },
+  { value: "reviews-handled", label: "Bewertungen zuverlässig beantworten lassen" },
+  { value: "less-daytoday", label: "Im Alltag weniger selbst erledigen müssen" },
 ] as const;
 
 export function GoalsStep({ data, errors, onPatch }: StepProps) {
-  const toggleGoal = (goal: (typeof goalOptions)[number]["value"]) => {
+  const services = data.services || [];
+  const showWebsiteGoals = services.includes("website") || data.guidance;
+  const showLokalGoals = services.includes("lokalpraesenz") || data.guidance;
+  const options = [
+    ...(showWebsiteGoals ? websiteGoals : []),
+    ...(showLokalGoals ? lokalGoals : []),
+  ];
+
+  const toggleGoal = (goal: InquiryDraft["goals"][number]) => {
     const current = data.goals || [];
     const exists = current.includes(goal);
     const updated = exists ? current.filter((g) => g !== goal) : [...current, goal];
@@ -27,10 +41,18 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
   return (
     <fieldset className="space-y-6">
       <legend className="text-xl sm:text-2xl font-bold text-[var(--color-ink)] mb-2">
-        Was möchtest du konkret erreichen?
+        Was soll sich für deinen Betrieb verbessern?
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
-        Wähle alle Ziele aus, die für deinen Betrieb im Vordergrund stehen.
+        Wähle alles aus, was für dich im Vordergrund steht.
+        {data.guidance && (
+          <>
+            {" "}
+            <span className="font-medium text-[var(--color-ink)]">
+              Das möchte ich gemeinsam mit dir herausfinden.
+            </span>
+          </>
+        )}
       </p>
 
       {errors.goals && (
@@ -40,7 +62,7 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
       )}
 
       <div className="space-y-3">
-        {goalOptions.map((opt) => {
+        {options.map((opt) => {
           const isChecked = data.goals?.includes(opt.value);
 
           return (
@@ -65,6 +87,32 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
             </label>
           );
         })}
+      </div>
+
+      {/* Optionale Zusatzleistung (kein Geschäftsziel) */}
+      <div className="pt-4 border-t border-[var(--color-line)] space-y-3">
+        <p className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+          Dabei wünsche ich mir Unterstützung <span className="text-[var(--color-muted)] font-normal">(optional)</span>
+        </p>
+        <label
+          className={cn(
+            "flex items-center gap-3.5 p-4 rounded-xl border cursor-pointer transition-all",
+            data.supportPhotoVideo
+              ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 text-[var(--color-ink)] font-medium"
+              : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
+          )}
+        >
+          <input
+            type="checkbox"
+            name="supportPhotoVideo"
+            checked={data.supportPhotoVideo}
+            onChange={(e) => onPatch({ supportPhotoVideo: e.target.checked })}
+            className="w-5 h-5 rounded border-[var(--color-line)] text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
+          />
+          <span className="text-sm sm:text-base text-[var(--color-ink)]">
+            Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)
+          </span>
+        </label>
       </div>
 
       {/* Goal Details */}

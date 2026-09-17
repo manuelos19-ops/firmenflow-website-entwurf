@@ -11,20 +11,26 @@ export type InquiryMailer = {
 };
 
 // Deutsche Bezeichnungen für das E-Mail-Template und CRM
-const projectTypeLabels: Record<string, string> = {
-  "new-site": "Neue Website (Erstauftritt oder Neugestaltung)",
-  "relaunch": "Relaunch & Überarbeitung der bestehenden Website",
-  "google-business": "Lokalpräsenz 360° (Google-Profil, Bewertungen & Feedback)",
-  "photo-video": "Foto- & Videoaufnahmen",
+const serviceLabels: Record<string, string> = {
+  website: "Website erstellen oder verbessern",
+  lokalpraesenz: "Lokalpräsenz 360° (Google-Profil, Bewertungen & Betreuung)",
+};
+
+const websiteScopeLabels: Record<string, string> = {
+  new: "Neue Website erstellen",
+  relaunch: "Bestehende Website überarbeiten",
+  unsure: "Website-Vorhaben noch unsicher",
 };
 
 const goalLabels: Record<string, string> = {
-  "more-inquiries": "Mehr Kundenanfragen gewinnen",
-  "better-local-presence": "Bessere Sichtbarkeit am Niederrhein & regional",
-  "modern-look": "Zeitgemäßes & modernes Design",
-  "clear-offer": "Leistungen verständlich auf den Punkt bringen",
-  "better-reviews": "Google Bewertungen & Vertrauen stärken",
-  "photo-video": "Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)",
+  "more-inquiries": "Mehr passende Anfragen erhalten",
+  "professional-presentation": "Betrieb professioneller präsentieren",
+  "clear-offer": "Leistungen verständlicher erklären",
+  "easy-contact": "Kontaktaufnahme erleichtern",
+  "better-findability": "Bei Google und Maps besser auffindbar sein",
+  "profile-current": "Profil aktuell halten",
+  "reviews-handled": "Bewertungen zuverlässig beantworten lassen",
+  "less-daytoday": "Im Alltag weniger selbst erledigen müssen",
 };
 
 const timeframeLabels: Record<string, string> = {
@@ -52,8 +58,14 @@ export const resendInquiryMailer: InquiryMailer = {
     const smtpPort = Number(process.env.SMTP_PORT) || 465;
 
     // Deutsche Klartext-Werte
-    const projectTypeGerman = projectTypeLabels[payload.projectType] || payload.projectType;
+    const servicesGermanList = payload.services.map((s) => serviceLabels[s] || s);
+    const servicesGermanFormatted =
+      payload.services.length > 0
+        ? servicesGermanList.join(" + ")
+        : "Beratungswunsch: Empfehlung durch Manu (noch unsicher)";
+    const websiteScopeGerman = payload.websiteScope ? websiteScopeLabels[payload.websiteScope] || payload.websiteScope : "";
     const goalsGermanList = payload.goals.map((g) => goalLabels[g] || g);
+    if (payload.supportPhotoVideo) goalsGermanList.push("Unterstützung: Fotos & Imagefilm");
     const goalsGermanFormatted = goalsGermanList.join(", ");
     const timeframeGerman = timeframeLabels[payload.timeframe] || payload.timeframe;
     const preferredContactGerman = contactPreferenceLabels[payload.preferredContact] || payload.preferredContact;
@@ -73,7 +85,8 @@ export const resendInquiryMailer: InquiryMailer = {
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Branche:</td><td style="padding: 10px 0;">${escapeHtml(payload.industry)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Standort:</td><td style="padding: 10px 0;">${escapeHtml(payload.place)}</td></tr>
           ${payload.currentWebsite ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Website:</td><td style="padding: 10px 0;"><a href="${escapeHtml(payload.currentWebsite)}" style="color: #FF705D; text-decoration: none;">${escapeHtml(payload.currentWebsite)}</a></td></tr>` : ""}
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Vorhaben:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(projectTypeGerman)}</td></tr>
+          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Leistungen:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(servicesGermanFormatted)}</td></tr>
+          ${websiteScopeGerman ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Website-Vorhaben:</td><td style="padding: 10px 0;">${escapeHtml(websiteScopeGerman)}</td></tr>` : ""}
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ziele:</td><td style="padding: 10px 0;">${escapeHtml(goalsGermanFormatted)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Zeitrahmen:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(timeframeGerman)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ansprechpartner:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.name)}</td></tr>
@@ -102,8 +115,8 @@ Neue Firmenflow Projektanfrage:
 ================================
 ${payload.businessName ? `Betrieb: ${payload.businessName}\n` : ""}Branche: ${payload.industry}
 Standort: ${payload.place}
-${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Vorhaben: ${projectTypeGerman}
-Ziele: ${goalsGermanFormatted}
+${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Leistungen: ${servicesGermanFormatted}
+${websiteScopeGerman ? `Website-Vorhaben: ${websiteScopeGerman}\n` : ""}Ziele: ${goalsGermanFormatted}
 Zeitrahmen: ${timeframeGerman}
 
 Kontaktdaten:
@@ -178,7 +191,7 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                   BRANCHE: payload.industry,
                   ORT: payload.place,
                   TELEFON: payload.phone || "",
-                  PROJEKTART: projectTypeGerman,
+                  PROJEKTART: servicesGermanFormatted,
                   ZIELE: goalsGermanFormatted,
                   ZEITRAHMEN: timeframeGerman,
                   KONTAKTWEG: preferredContactGerman,

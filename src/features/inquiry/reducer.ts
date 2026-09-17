@@ -1,7 +1,9 @@
 import type { InquiryDraft } from "./types";
 
+export const TOTAL_STEPS = 4;
+
 export type InquiryState = {
-  step: 0 | 1 | 2 | 3 | 4;
+  step: 0 | 1 | 2 | 3;
   status: "idle" | "submitting" | "success" | "error";
   data: InquiryDraft;
   fieldErrors: Record<string, string>;
@@ -18,20 +20,23 @@ export type InquiryAction =
   | { type: "error"; message?: string }
   | { type: "reset" };
 
-export function initialInquiryState(projectType?: InquiryDraft["projectType"]): InquiryState {
+export function initialInquiryState(): InquiryState {
   return {
     step: 0,
     status: "idle",
     data: {
       submissionId: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : "",
-      projectType: projectType || "",
+      services: [],
+      guidance: false,
+      websiteScope: "",
       businessName: "",
       industry: "",
       place: "",
       currentWebsite: "",
       goals: [],
+      supportPhotoVideo: false,
       goalDetails: "",
-      timeframe: "flexible",
+      timeframe: "",
       name: "",
       email: "",
       phone: "",
@@ -41,6 +46,48 @@ export function initialInquiryState(projectType?: InquiryDraft["projectType"]): 
     },
     fieldErrors: {},
   };
+}
+
+/**
+ * Migriert alte Draft-Formate (projectType, alte Ziel-Werte) aus dem
+ * sessionStorage bzw. URL-Preselects in das neue Datenmodell.
+ */
+const legacyGoalMap: Record<string, InquiryDraft["goals"][number]> = {
+  "more-inquiries": "more-inquiries",
+  "modern-look": "professional-presentation",
+  "clear-offer": "clear-offer",
+  "better-local-presence": "better-findability",
+  "better-reviews": "reviews-handled",
+};
+
+export function migrateLegacyDraft(raw: Record<string, unknown>): Partial<InquiryDraft> {
+  const migrated: Partial<InquiryDraft> = {};
+
+  // Altes projectType → services + websiteScope
+  if (typeof raw.projectType === "string" && raw.projectType) {
+    if (raw.projectType === "new-site" || raw.projectType === "relaunch") {
+      migrated.services = ["website"];
+      migrated.websiteScope = raw.projectType === "new-site" ? "new" : "relaunch";
+    } else if (raw.projectType === "google-business") {
+      migrated.services = ["lokalpraesenz"];
+    }
+  }
+  if (Array.isArray(raw.services)) {
+    const valid = raw.services.filter(
+      (s): s is InquiryDraft["services"][number] => s === "website" || s === "lokalpraesenz"
+    );
+    if (valid.length > 0) migrated.services = valid;
+  }
+
+  // Alte Ziel-Werte filtern/mappen
+  if (Array.isArray(raw.goals)) {
+    const mapped = raw.goals
+      .map((g) => (typeof g === "string" ? legacyGoalMap[g] : undefined))
+      .filter((g): g is InquiryDraft["goals"][number] => Boolean(g));
+    migrated.goals = mapped;
+  }
+
+  return migrated;
 }
 
 export function inquiryReducer(state: InquiryState, action: InquiryAction): InquiryState {
@@ -54,7 +101,7 @@ export function inquiryReducer(state: InquiryState, action: InquiryAction): Inqu
     case "next":
       return {
         ...state,
-        step: Math.min(4, state.step + 1) as InquiryState["step"],
+        step: Math.min(TOTAL_STEPS - 1, state.step + 1) as InquiryState["step"],
         fieldErrors: {},
       };
     case "back":

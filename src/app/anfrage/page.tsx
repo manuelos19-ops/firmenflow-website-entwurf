@@ -10,9 +10,9 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Projektanfrage – In 5 Schritten zum klaren Angebot",
+  title: "Anfrage – In 4 kurzen Schritten zum klaren nächsten Schritt",
   description:
-    "Geführte Projektanfrage für Webdesign, Relaunch und Lokalpräsenz in Wesel & am Niederrhein. Unverbindlich, transparent und persönlich mit Manu.",
+    "Unverbindliche Anfrage für Website und Lokalpräsenz 360° in Wesel & am Niederrhein. Frei kombinierbar, persönlich mit Manu, ohne Verpflichtung.",
   alternates: {
     canonical: "/anfrage",
   },
@@ -46,21 +46,28 @@ export default function AnfragePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[var(--color-ink)] leading-[1.12]">
-            Lass uns dein Vorhaben <br />
-            <span className="font-editorial text-[var(--color-coral)]">auf den Punkt bringen.</span>
+            Was soll sich für deinen{" "}
+            <span className="font-editorial text-[var(--color-coral)]">Betrieb verbessern?</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-[var(--color-muted)] leading-relaxed">
-            Egal ob neue Website, Relaunch oder stärkere Google-Lokalpräsenz: In 5 einfachen Schritten klären wir Ziele, Umfang und Zeitplan – für ein transparentes, verlässliches Angebot ohne Agenturtheater.
+            Sag mir kurz, was du vorhast. Ich schaue mir deine Angaben persönlich an und melde
+            mich mit einer ersten Einschätzung und dem passenden nächsten Schritt.
           </p>
 
-          <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-semibold text-[var(--color-muted)] pt-1">
-            <FirmenflowIcon name="nachricht-senden" size={20} decorative />
-            <span>Rückmeldung i. d. R. innerhalb von 24 Stunden</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-3 pt-1">
-            <FirmenflowIcon name="formular" size={40} decorative />
-            <FirmenflowIcon name="angebot" size={40} decorative />
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold text-[var(--color-muted)] pt-1">
+            <span className="inline-flex items-center gap-1.5">
+              <FirmenflowIcon name="nachricht-senden" size={20} decorative />
+              <span>Kostenlos & unverbindlich</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <FirmenflowIcon name="termin" size={20} decorative />
+              <span>Direkt mit Manu</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <FirmenflowIcon name="formular" size={20} decorative />
+              <span>Noch kein fertiger Plan nötig</span>
+            </span>
           </div>
         </div>
 

@@ -4,14 +4,14 @@ import { useEffect, useReducer, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { initialInquiryState, inquiryReducer } from "@/features/inquiry/reducer";
+import { TOTAL_STEPS, initialInquiryState, inquiryReducer, migrateLegacyDraft } from "@/features/inquiry/reducer";
 import { inquirySchema, type InquiryPayload } from "@/features/inquiry/schema";
 import { InquiryProgress } from "./InquiryProgress";
 import { BusinessStep } from "./steps/BusinessStep";
 import { ContactStep } from "./steps/ContactStep";
-import { FrameStep } from "./steps/FrameStep";
 import { GoalsStep } from "./steps/GoalsStep";
-import { ProjectTypeStep } from "./steps/ProjectTypeStep";
+import { ServicesStep } from "./steps/ServicesStep";
+import type { InquiryDraft } from "@/features/inquiry/types";
 import { trackProjectInquirySubmit } from "@/lib/track-inquiry";
 
 export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null }) {
@@ -24,20 +24,33 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
   useEffect(() => {
     setEnhanced(true);
 
-    // Check URL parameters for preselected type
+    // URL-Preselect verarbeiten (neu & alt, damit bestehende Links weiter funktionieren)
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const typeParam = params.get("type");
-      if (typeParam && ["new-site", "relaunch", "google-business"].includes(typeParam)) {
-        dispatch({ type: "patch", value: { projectType: typeParam as InquiryPayload["projectType"] } });
+      const serviceParam = params.get("leistung");
+      if (typeParam) {
+        dispatch({ type: "patch", value: migrateLegacyDraft({ projectType: typeParam }) });
+      } else if (serviceParam === "website" || serviceParam === "lokalpraesenz") {
+        dispatch({ type: "patch", value: { services: [serviceParam] } });
       }
 
-      // Restore session data if available
+      // Restore session data if available (inkl. Migration alter Draft-Formate)
       try {
         const saved = sessionStorage.getItem("firmenflow_inquiry_draft");
         if (saved) {
-          const parsed = JSON.parse(saved);
-          dispatch({ type: "patch", value: parsed });
+          const parsed = JSON.parse(saved) as Record<string, unknown>;
+          const legacy = migrateLegacyDraft(parsed);
+          const knownKeys = [
+            "submissionId", "services", "guidance", "websiteScope", "businessName", "industry",
+            "place", "currentWebsite", "goals", "supportPhotoVideo", "goalDetails", "timeframe",
+            "name", "email", "phone", "preferredContact", "privacyAccepted", "company",
+          ];
+          const sanitized: Record<string, unknown> = {};
+          for (const key of knownKeys) {
+            if (key in parsed) sanitized[key] = parsed[key];
+          }
+          dispatch({ type: "patch", value: { ...sanitized, ...legacy } as Partial<InquiryDraft> });
         }
       } catch {}
     }
@@ -76,25 +89,27 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
     const errors: Record<string, string> = {};
 
     if (state.step === 0) {
-      if (!state.data.projectType) {
-        errors.projectType = "Vorhaben: Bitte wähle dein wichtigstes Vorhaben aus.";
+      if ((state.data.services || []).length === 0 && !state.data.guidance) {
+        errors.services = "Leistungen: Bitte wähle mindestens eine Leistung aus – oder klicke auf „deine Empfehlung“.";
+      }
+      if ((state.data.services || []).includes("website") && !state.data.websiteScope) {
+        errors.websiteScope = "Website: Bitte gib an, ob es um eine neue oder deine bestehende Website geht.";
       }
     } else if (state.step === 1) {
+      if (!state.data.goals || state.data.goals.length === 0) {
+        errors.goals = "Ziele: Bitte wähle mindestens ein Ziel aus.";
+      }
+    } else if (state.step === 2) {
       if (!state.data.industry || state.data.industry.trim().length < 2) {
         errors.industry = "Branche: Bitte nenne deine Branche.";
       }
       if (!state.data.place || state.data.place.trim().length < 2) {
         errors.place = "Standort: Bitte nenne deinen Ort (z. B. Wesel).";
       }
-    } else if (state.step === 2) {
-      if (!state.data.goals || state.data.goals.length === 0) {
-        errors.goals = "Ziele: Bitte wähle mindestens ein Ziel aus.";
+      if (!state.data.timeframe) {
+        errors.timeframe = "Zeitrahmen: Bitte wähle aus, wann es losgehen soll.";
       }
     } else if (state.step === 3) {
-      if (!state.data.timeframe) {
-        errors.timeframe = "Zeitrahmen: Bitte wähle einen gewünschten Zeitrahmen aus.";
-      }
-    } else if (state.step === 4) {
       if (!state.data.name || state.data.name.trim().length < 2) {
         errors.name = "Name: Bitte gib deinen Vor- und Nachnamen an.";
       }
@@ -105,7 +120,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
         errors.phone = "Telefonnummer: Für den gewählten Kontaktweg per Telefon/WhatsApp wird deine Telefonnummer benötigt.";
       }
       if (!state.data.preferredContact) {
-        errors.preferredContact = "Rückmeldekanal: Bitte wähle deinen bevorzugten Kontaktweg.";
+        errors.preferredContact = "Kontaktweg: Bitte wähle deinen bevorzugten Kontaktweg.";
       }
       if (!state.data.privacyAccepted) {
         errors.privacyAccepted = "Datenschutz: Bitte bestätige die Datenschutzerklärung vor dem Absenden.";
@@ -137,6 +152,14 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Enter-Taste / implizites Submit in früheren Schritten: wie "Weiter" behandeln
+    if (enhanced && state.step < TOTAL_STEPS - 1) {
+      if (validateCurrentStep()) {
+        dispatch({ type: "next" });
+      }
+      return;
+    }
 
     if (!validateCurrentStep()) return;
 
@@ -234,7 +257,13 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       style={{ overflowAnchor: "none" }}
       className="bg-white rounded-[2.5rem] p-6 sm:p-10 md:p-14 border border-[var(--color-line)] shadow-xl scroll-mt-24"
     >
-      <form action="/api/inquiry" method="post" onSubmit={handleSubmit} className="space-y-8">
+      <form
+        action="/api/inquiry"
+        method="post"
+        onSubmit={handleSubmit}
+        noValidate
+        className="space-y-8"
+      >
         {enhanced && <InquiryProgress step={state.step} />}
 
         {state.status === "error" && (
@@ -257,7 +286,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
         {/* Steps container */}
         <div className="min-h-[280px]">
           {(!enhanced || state.step === 0) && (
-            <ProjectTypeStep
+            <ServicesStep
               data={state.data}
               errors={state.fieldErrors}
               onPatch={(v) => dispatch({ type: "patch", value: v })}
@@ -265,14 +294,6 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
           )}
 
           {(!enhanced || state.step === 1) && (
-            <BusinessStep
-              data={state.data}
-              errors={state.fieldErrors}
-              onPatch={(v) => dispatch({ type: "patch", value: v })}
-            />
-          )}
-
-          {(!enhanced || state.step === 2) && (
             <GoalsStep
               data={state.data}
               errors={state.fieldErrors}
@@ -280,15 +301,15 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             />
           )}
 
-          {(!enhanced || state.step === 3) && (
-            <FrameStep
+          {(!enhanced || state.step === 2) && (
+            <BusinessStep
               data={state.data}
               errors={state.fieldErrors}
               onPatch={(v) => dispatch({ type: "patch", value: v })}
             />
           )}
 
-          {(!enhanced || state.step === 4) && (
+          {(!enhanced || state.step === 3) && (
             <ContactStep
               data={state.data}
               errors={state.fieldErrors}
@@ -308,7 +329,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             <div className="flex items-center gap-2.5 font-bold text-sm sm:text-base text-rose-800">
               <FirmenflowIcon name="fehler" size={24} decorative />
               <span>
-                {state.step === 4
+                {state.step === TOTAL_STEPS - 1
                   ? "Bitte prüfe vor dem Absenden noch folgende Angaben:"
                   : "Bitte prüfe noch folgende Angaben, um fortzufahren:"}
               </span>
@@ -337,7 +358,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
               <div />
             )}
 
-            {state.step < 4 ? (
+            {state.step < TOTAL_STEPS - 1 ? (
               <button
                 type="button"
                 onClick={handleNext}
@@ -347,20 +368,25 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
                 <ArrowRight className="w-4 h-4" />
               </button>
             ) : (
-              <button
-                type="submit"
-                disabled={state.status === "submitting"}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] transition-all shadow-lg cursor-pointer ml-auto disabled:opacity-50"
-              >
-                {state.status === "submitting" ? (
-                  <>
-                    <RefreshCw className="w-4 h-4 animate-spin" />
-                    <span>Wird an Manu gesendet …</span>
-                  </>
-                ) : (
-                  <span>Anfrage an Manu senden</span>
-                )}
-              </button>
+              <div className="ml-auto space-y-2">
+                <button
+                  type="submit"
+                  disabled={state.status === "submitting"}
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] transition-all shadow-lg cursor-pointer disabled:opacity-50"
+                >
+                  {state.status === "submitting" ? (
+                    <>
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      <span>Wird an Manu gesendet …</span>
+                    </>
+                  ) : (
+                    <span>Unverbindliche Anfrage senden</span>
+                  )}
+                </button>
+                <p className="text-xs text-[var(--color-muted)] max-w-sm sm:text-right">
+                  Du beauftragst damit noch keine Leistung. Ich melde mich persönlich über deinen gewählten Kontaktweg.
+                </p>
+              </div>
             )}
           </div>
         ) : (

@@ -25,12 +25,29 @@ const optionalPhone = z.union([
   z.string().regex(/^[+0-9()\s/-]{6,40}$/, "Bitte prüfe deine Telefonnummer."),
 ]);
 
+// Ziele je Leistung (kombinierbar): Website-Ziele, Lokalpräsenz-Ziele
+const goalValues = [
+  // Website
+  "more-inquiries",
+  "professional-presentation",
+  "clear-offer",
+  "easy-contact",
+  // Lokalpräsenz 360°
+  "better-findability",
+  "profile-current",
+  "reviews-handled",
+  "less-daytoday",
+] as const;
+
 export const inquirySchema = z
   .object({
     submissionId: z.string().uuid(),
-    projectType: z.enum(["new-site", "relaunch", "google-business"], {
-      error: "Bitte wähle eine Projektart aus.",
-    }),
+    // Leistungen: kombinierbar (Website + Lokalpräsenz 360°).
+    services: z.array(z.enum(["website", "lokalpraesenz"])).max(2, "Bitte wähle maximal zwei Leistungen."),
+    // true = "Noch unsicher, Empfehlung von Manu" (Beratungswunsch ohne Leistungsauswahl)
+    guidance: z.boolean(),
+    // Website-Vorhaben (nur relevant, wenn "website" gewählt)
+    websiteScope: z.enum(["", "new", "relaunch", "unsure"]).default(""),
     businessName: z
       .string()
       .trim()
@@ -48,18 +65,11 @@ export const inquirySchema = z
       .max(100, "Der Ort ist zu lang."),
     currentWebsite: optionalWebsite,
     goals: z
-      .array(
-        z.enum([
-          "more-inquiries",
-          "better-local-presence",
-          "modern-look",
-          "clear-offer",
-          "better-reviews",
-          "photo-video",
-        ])
-      )
+      .array(z.enum(goalValues))
       .min(1, "Bitte wähle mindestens ein Ziel aus.")
-      .max(6),
+      .max(8),
+    // Optionale Zusatzleistung (kein Geschäftsziel)
+    supportPhotoVideo: z.boolean().default(false),
     goalDetails: z.string().trim().max(1_000, "Bitte fasse dein Anliegen in maximal 1.000 Zeichen zusammen."),
     timeframe: z.enum(["soon", "three-months", "six-months", "flexible"]),
     name: z
@@ -80,6 +90,23 @@ export const inquirySchema = z
     company: z.string().optional().default(""), // Honeypot (wird serverseitig in route.ts abgefangen)
   })
   .superRefine((value, context) => {
+    // Mindestens eine Leistung ODER Beratungswunsch
+    if (!value.guidance && value.services.length === 0) {
+      context.addIssue({
+        code: "custom",
+        path: ["services"],
+        message: "Bitte wähle mindestens eine Leistung aus – oder klicke auf „Empfehlung von Manu“.",
+      });
+    }
+    // Website-Vorhaben nur prüfen, wenn Website gewählt
+    if (value.services.includes("website") && !value.websiteScope) {
+      context.addIssue({
+        code: "custom",
+        path: ["websiteScope"],
+        message: "Bitte gib an, ob es um eine neue Website oder deine bestehende Website geht.",
+      });
+    }
+    // Telefonnummer nur prüfen, wenn Telefon/WhatsApp als Rückweg gewählt
     if (["phone", "whatsapp"].includes(value.preferredContact) && (!value.phone || value.phone.trim().length < 6)) {
       context.addIssue({
         code: "custom",

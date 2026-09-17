@@ -14,15 +14,34 @@ const contactPreferences = [
   { value: "whatsapp", label: "Per WhatsApp" },
 ] as const;
 
+const serviceSummary = (data: InquiryDraft): string => {
+  const parts: string[] = [];
+  if (data.services?.includes("website")) parts.push("Website");
+  if (data.services?.includes("lokalpraesenz")) parts.push("Lokalpräsenz 360°");
+  if (data.guidance) return "deine Empfehlung (noch unsicher)";
+  return parts.length > 0 ? parts.join(" + ") : "";
+};
+
 export function ContactStep({ data, errors, onPatch }: StepProps) {
+  const phoneMandatory = data.preferredContact === "phone" || data.preferredContact === "whatsapp";
+  const summary = serviceSummary(data);
+
   return (
     <fieldset className="space-y-6">
       <legend className="text-xl sm:text-2xl font-bold text-[var(--color-ink)] mb-2">
-        Wie kann Manu dich am besten erreichen?
+        Wie darf ich mich bei dir melden?
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
-        Ich melde mich persönlich bei dir, um offene Fragen direkt zu besprechen.
+        Ich melde mich persönlich über deinen gewählten Kontaktweg – mit einer ersten Einschätzung und dem passenden nächsten Schritt.
       </p>
+
+      {/* Zusammenfassung der gewählten Leistungen */}
+      {summary && (
+        <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm bg-[var(--color-plum)]/5 border border-[var(--color-plum)]/20 rounded-xl px-4 py-3">
+          <span className="text-[var(--color-muted)]">Du interessierst dich für:</span>
+          <span className="font-bold text-[var(--color-plum)]">{summary}</span>
+        </div>
+      )}
 
       {/* Honeypot für Spam-Bots (für Screenreader & Browser-Autofill unsichtbar) */}
       <div style={{ display: "none", position: "absolute", left: "-9999px" }} aria-hidden="true">
@@ -39,6 +58,46 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
       </div>
 
       <div className="space-y-4">
+        {/* Bevorzugter Kontaktweg zuerst */}
+        <div className="space-y-2 pt-2">
+          <label className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
+            Bevorzugter Kontaktweg *
+          </label>
+          <div className="grid grid-cols-3 gap-3">
+            {contactPreferences.map((pref) => {
+              const isSelected = data.preferredContact === pref.value;
+
+              return (
+                <label
+                  key={pref.value}
+                  className={cn(
+                    "flex items-center justify-center p-3 rounded-xl border cursor-pointer text-center transition-all",
+                    isSelected
+                      ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 font-semibold text-[var(--color-ink)]"
+                      : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
+                  )}
+                >
+                  <input
+                    type="radio"
+                    name="preferredContact"
+                    value={pref.value}
+                    checked={isSelected}
+                    onChange={() => onPatch({ preferredContact: pref.value })}
+                    className="sr-only"
+                  />
+                  <span className="text-xs sm:text-sm">{pref.label}</span>
+                </label>
+              );
+            })}
+          </div>
+          {errors.preferredContact && (
+            <p className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
+              <span>⚠️</span>
+              <span>{errors.preferredContact}</span>
+            </p>
+          )}
+        </div>
+
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)] mb-1.5">
@@ -90,6 +149,11 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
               )}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
+            {phoneMandatory && (
+              <p className="text-xs text-[var(--color-muted)] mt-1.5">
+                Auch bei telefonischer Rückmeldung: Ich schicke dir kurz per E-Mail eine Bestätigung deiner Anfrage.
+              </p>
+            )}
             {errors.email && (
               <p id="email-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
                 <span>⚠️</span>
@@ -100,12 +164,18 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
 
           <div>
             <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)] mb-1.5">
-              Telefonnummer / WhatsApp <span className="text-[var(--color-muted)] font-normal">(optional)</span>
+              Telefonnummer / WhatsApp{" "}
+              {phoneMandatory ? (
+                <span className="text-[var(--color-coral)] font-semibold">* (erforderlich für deinen gewählten Kontaktweg)</span>
+              ) : (
+                <span className="text-[var(--color-muted)] font-normal">(optional)</span>
+              )}
             </label>
             <input
               id="phone"
               name="phone"
               type="tel"
+              required={phoneMandatory}
               value={data.phone}
               onChange={(e) => onPatch({ phone: e.target.value })}
               placeholder="0171 1234567"
@@ -124,46 +194,6 @@ export function ContactStep({ data, errors, onPatch }: StepProps) {
               </p>
             )}
           </div>
-        </div>
-
-        {/* Preferred Contact Method */}
-        <div className="space-y-2 pt-2">
-          <label className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-            Bevorzugter Rückmeldekanal *
-          </label>
-          <div className="grid grid-cols-3 gap-3">
-            {contactPreferences.map((pref) => {
-              const isSelected = data.preferredContact === pref.value;
-
-              return (
-                <label
-                  key={pref.value}
-                  className={cn(
-                    "flex items-center justify-center p-3 rounded-xl border cursor-pointer text-center transition-all",
-                    isSelected
-                      ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 font-semibold text-[var(--color-ink)]"
-                      : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
-                  )}
-                >
-                  <input
-                    type="radio"
-                    name="preferredContact"
-                    value={pref.value}
-                    checked={isSelected}
-                    onChange={() => onPatch({ preferredContact: pref.value })}
-                    className="sr-only"
-                  />
-                  <span className="text-xs sm:text-sm">{pref.label}</span>
-                </label>
-              );
-            })}
-          </div>
-          {errors.preferredContact && (
-            <p className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
-              <span>⚠️</span>
-              <span>{errors.preferredContact}</span>
-            </p>
-          )}
         </div>
 
         {/* Privacy Notice */}
