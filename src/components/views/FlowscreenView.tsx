@@ -259,6 +259,106 @@ export function FlowscreenView() {
               </div>
             </div>
           </div>
+
+          {/* ECHTE EINBLICKE intro */}
+          <div className="pt-10 max-w-5xl mx-auto text-left">
+            <div className="text-center max-w-3xl mx-auto space-y-3 pb-8">
+              <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+                Echte Einblicke
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+                So sieht Arbeiten mit FlowScreen aus.
+              </h2>
+              <p className="text-base sm:text-lg text-[var(--color-muted)]">
+                Keine Stockfotos – echte Screenshots aus dem laufenden Editor.
+              </p>
+            </div>
+
+            {/* 01 Mockup */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center rounded-3xl border border-[var(--color-line)] bg-white p-6 sm:p-8 shadow-sm">
+              <div className="relative rounded-2xl overflow-hidden border border-black/10 shadow-xl">
+                <Image
+                  src="/media/flowscreen/flowscreen-mockup.webp"
+                  alt="FlowScreen Mockup-Modus mit iPhone-Rahmen, Presets und Hintergrund-Reglern"
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+                  01 · Mockup-Modus
+                </p>
+                <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+                  Vom Screenshot zum Kunden-Wow in einem Klick.
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                  Rechts das Mockup-Panel: <strong>Presets</strong> wie Social, Clean oder Phone,
+                  dazu <strong>Browser- und Geräte-Rahmen</strong> (Safari, Chrome, iPhone,
+                  Android, Tablet). Hintergrund als Verlauf, eigene Farbe oder Bild – Feinschliff
+                  über Padding, Ecken, Winkel und Schatten, optional mit 3D-Tilt.
+                </p>
+              </div>
+            </div>
+
+            {/* 02 Annotationen */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center rounded-3xl border border-[var(--color-line)] bg-white p-6 sm:p-8 shadow-sm">
+              <div className="space-y-4 order-2 lg:order-1">
+                <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+                  02 · Erklären &amp; Markieren
+                </p>
+                <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+                  Pfeile, Rahmen, Kreise – alles bleibt verschiebbar.
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                  Vektor statt Pixel: <strong>Pfeile</strong> zeigen wohin,{" "}
+                  <strong>Rahmen</strong> fassen Wichtiges ein, <strong>Kreise</strong> heben
+                  Details hervor. Dazu der <strong>Schrittzähler</strong> für nummerierte
+                  Anleitungen (1, 2, 3 …) – jedes Element lässt sich anklicken, verschieben und
+                  umfärben, bis zum Export.
+                </p>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden border border-black/10 shadow-xl order-1 lg:order-2">
+                <Image
+                  src="/media/flowscreen/flowscreen-annotationen.webp"
+                  alt="FlowScreen Editor mit Pfeil-, Rahmen- und Kreis-Markierungen plus Schrittzähler"
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* 03 Zensur + Texte */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center rounded-3xl border border-[var(--color-line)] bg-white p-6 sm:p-8 shadow-sm">
+              <div className="relative rounded-2xl overflow-hidden border border-black/10 shadow-xl">
+                <Image
+                  src="/media/flowscreen/flowscreen-zensur-texte.webp"
+                  alt="FlowScreen Zensur mit Mosaik, Blur und Schwarz plus Text-Annotationen"
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
+                  03 · Zensur &amp; Texte
+                </p>
+                <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
+                  Sensibles schwärzen, Wichtiges beschriften.
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                  Unten die <strong>Zensur-Leiste</strong>: <strong>Mosaik</strong> (echtes
+                  Verpixeln), <strong>Blur</strong> oder <strong>Schwarz</strong> – Namen und
+                  Kundendaten sind unwiderruflich weg, ideal für die DSGVO. Dazu{" "}
+                  <strong>Textblöcke</strong> in allen Farben, Größen und Schriften.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* COMPARISON TABLE: Why FlowScreen is better */}
