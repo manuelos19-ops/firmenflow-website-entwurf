@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 const GITHUB_OWNER = "manuelos19-ops";
 const GITHUB_REPO = "flowscreen-releases";
-const FLOWSCREEN_VERSION = "1.1.0";
+const FLOWSCREEN_VERSION = "1.1.1";
 
 const ASSETS = {
   setup: `FlowScreen-Setup-${FLOWSCREEN_VERSION}.exe`,

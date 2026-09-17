@@ -1,6 +1,6 @@
-export const FLOWSCREEN_VERSION = "1.1.0";
-export const FLOWSCREEN_SIZE_LABEL = "~79 MB";
-export const FLOWSCREEN_SIZE_LABEL_SHORT = "79 MB";
+export const FLOWSCREEN_VERSION = "1.1.1";
+export const FLOWSCREEN_SIZE_LABEL = "~80 MB";
+export const FLOWSCREEN_SIZE_LABEL_SHORT = "80 MB";
 export const FLOWSCREEN_OS_LABEL = "Windows 11 & Windows 10 (64-Bit)";
 
 export const FLOWSCREEN_GITHUB_OWNER = "manuelos19-ops";
@@ -9,13 +9,13 @@ export const FLOWSCREEN_RELEASES_URL = `https://github.com/${FLOWSCREEN_GITHUB_O
 export const FLOWSCREEN_RELEASE_TAG_URL = `https://github.com/${FLOWSCREEN_GITHUB_OWNER}/${FLOWSCREEN_GITHUB_REPO}/releases/tag/v${FLOWSCREEN_VERSION}`;
 
 /**
- * SHA256-Hashes der Release-Dateien v1.1.0.
- * Quelle: GitHub Releases API `digest`-Feld (Stand 15.09.2026).
+ * SHA256-Hashes der Release-Dateien v1.1.1.
+ * Quelle: GitHub Releases API `digest`-Feld (Stand 17.09.2026).
  * Bei jedem neuen Release HIER + in der Verify-Seite aktualisieren.
  */
 export const FLOWSCREEN_HASHES = {
-  setup: "83982c012eb0a66e84479b006235f698c7595e1199098432e3882db8c3b16330",
-  portable: "0f72376d8111182fae43e3271bc630f3a435d9bb1fa16a391b4f50707d952a81",
+  setup: "e846f02e0fa5e50e130f5074af4658a989f6aef1c328b5710be2823e48ac552e",
+  portable: "777bce14e0fa62f6a2d0145795430fa4d4a20f1d438e687085a546fdf8f5f461",
 } as const;
 
 export const FLOWSCREEN_FILE_NAMES = {
@@ -24,17 +24,19 @@ export const FLOWSCREEN_FILE_NAMES = {
 } as const;
 
 export const FLOWSCREEN_FILE_SIZES = {
-  setup: 82922919,
-  portable: 82692520,
+  setup: 83502523,
+  portable: 83126383,
 } as const;
 
 /**
- * VirusTotal-Ergebnis (manuell verifiziert, Stand 16.09.2026).
- * Setup v1.1.0: 0/67 Erkennungen. Portable v1.1.0: 0/66 Erkennungen.
+ * VirusTotal-Ergebnis (manuell verifiziert, Stand 17.09.2026).
+ * Setup v1.1.1: 0/46 Erkennungen. Portable v1.1.1: 0/44 Erkennungen.
+ * Hinweis: Viele Scanner waren zum Pruefzeitpunkt noch im Timeout,
+ * daher faellt der Nenner kleiner aus als bei v1.1.0 (0/67 bzw. 0/66).
  */
 export const FLOWSCREEN_VIRUSTOTAL = {
-  portable: { clean: 66, total: 66, verifiedAt: "16.09.2026" },
-  setup: { clean: 67, total: 67, verifiedAt: "16.09.2026" },
+  portable: { clean: 44, total: 44, verifiedAt: "17.09.2026" },
+  setup: { clean: 46, total: 46, verifiedAt: "17.09.2026" },
 } as const;
 
 /** VirusTotal-Analyseseite für einen Datei-Hash (Datei-Upload NICHT nötig zum Ansehen). */

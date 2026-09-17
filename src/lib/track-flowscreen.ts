@@ -18,7 +18,7 @@ export function trackFlowscreenDownload(variant: FlowscreenVariant, placement: s
   const payload = {
     variant,
     placement,
-    version: "1.1.0",
+    version: "1.1.1",
   };
 
   try {
@@ -34,7 +34,7 @@ export function trackFlowscreenDownload(variant: FlowscreenVariant, placement: s
       window.gtag("event", "flowscreen_download", {
         download_variant: variant,
         placement,
-        app_version: "1.1.0",
+        app_version: "1.1.1",
       });
     }
   } catch {

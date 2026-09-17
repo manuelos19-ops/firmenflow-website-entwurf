@@ -266,6 +266,10 @@ export function FlowscreenView() {
             <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
               Vergleich &amp; Mehrwert
             </p>
+            <div className="flex items-center justify-center gap-3 pt-1">
+              <FlowscreenIcon name="app-icon-512" size={56} alt="FlowScreen App-Icon" priority />
+              <span className="text-sm font-bold text-[var(--color-plum)]">FlowScreen v{FLOWSCREEN_VERSION}</span>
+            </div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
               Warum FlowScreen andere Tools alt aussehen lässt.
             </h2>
@@ -285,7 +289,10 @@ export function FlowscreenView() {
                     </th>
                     <th className="py-4 px-4 w-1/5 text-center text-[var(--color-muted)]">ShareX</th>
                     <th className="py-4 px-6 w-1/4 text-center bg-[var(--color-plum)]/5 text-[var(--color-plum)] font-bold">
-                      FlowScreen
+                      <span className="inline-flex items-center justify-center gap-2">
+                        <FlowscreenIcon name="app-icon-512" size={28} alt="FlowScreen App-Icon" />
+                        FlowScreen
+                      </span>
                     </th>
                   </tr>
                 </thead>
@@ -394,7 +401,7 @@ export function FlowscreenView() {
                       <Check className="w-5 h-5 mx-auto text-emerald-600" />
                     </td>
                     <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-[var(--color-coral)] font-bold">
-                      Kostenlos (v1.1.0)
+                      Kostenlos (v{FLOWSCREEN_VERSION})
                     </td>
                   </tr>
                 </tbody>
