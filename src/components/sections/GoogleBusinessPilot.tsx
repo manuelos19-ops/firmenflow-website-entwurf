@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
-import { Star, MapPin, Search, MessageSquareCheck, TrendingUp, CheckCircle, LineChart, Sparkles } from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 export function GoogleBusinessPilot() {
   const containerRef = useRef<HTMLElement>(null);
@@ -85,7 +85,7 @@ export function GoogleBusinessPilot() {
         {/* Intro with Stop-Scroll Text Inking */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10 md:mb-14">
           <div className="badge-eyebrow-dark mb-6">
-            <Search className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+            <FirmenflowIcon name="unternehmensprofil" size={20} decorative />
             <span>{homeContent.pilot.eyebrow}</span>
           </div>
 
@@ -120,9 +120,7 @@ export function GoogleBusinessPilot() {
           <div className="double-bezel-inner rounded-[calc(2.5rem-0.5rem)] bg-white text-[var(--color-ink)] p-5 sm:p-7 md:p-8 border border-white/40 shadow-inner">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-gray-100">
               <div className="flex items-center gap-3.5">
-                <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)] text-white flex items-center justify-center shrink-0 shadow-md">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
+                <FirmenflowIcon name="unternehmensprofil" size={48} decorative />
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="text-lg sm:text-xl font-bold font-sans text-[var(--color-ink)]">Dein optimierter Brancheneintrag</h3>
@@ -131,27 +129,21 @@ export function GoogleBusinessPilot() {
                     </span>
                   </div>
                   <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="unternehmensprofil" size={20} decorative />
                     Wesel &amp; Niederrhein · Vollständiges Unternehmensprofil
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-1 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-2xl shrink-0">
-                <div className="flex text-amber-400">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-                  ))}
-                </div>
+                <FirmenflowIcon name="mehr-bewertungen" size={24} decorative />
                 <span className="text-xs sm:text-sm font-bold text-amber-900 ml-1.5">5,0 Sterne</span>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
               <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center gap-3">
-                <div className="w-7 h-7 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                  <MapPin className="w-3.5 h-3.5" />
-                </div>
+                <FirmenflowIcon name="profil-einrichten" size={36} decorative />
                 <div>
                   <p className="text-[11px] text-emerald-800 font-medium">Lokale Sichtbarkeit</p>
                   <p className="text-xs sm:text-sm font-bold text-emerald-950">Vollständiges Maps-Profil</p>
@@ -159,9 +151,7 @@ export function GoogleBusinessPilot() {
               </div>
 
               <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-100 flex items-center gap-3">
-                <div className="w-7 h-7 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
-                  <MessageSquareCheck className="w-3.5 h-3.5" />
-                </div>
+                <FirmenflowIcon name="bewertungen-beantworten" size={36} decorative />
                 <div>
                   <p className="text-[11px] text-blue-800 font-medium">Bewertungen</p>
                   <p className="text-xs sm:text-sm font-bold text-blue-950">Antwort in deinem Ton</p>
@@ -169,9 +159,7 @@ export function GoogleBusinessPilot() {
               </div>
 
               <div className="p-3.5 rounded-2xl bg-purple-50 border border-purple-100 flex items-center gap-3">
-                <div className="w-7 h-7 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0">
-                  <LineChart className="w-3.5 h-3.5" />
-                </div>
+                <FirmenflowIcon name="monatsreport" size={36} decorative />
                 <div>
                   <p className="text-[11px] text-purple-800 font-medium">Auswertung</p>
                   <p className="text-xs sm:text-sm font-bold text-purple-950">Monatsreport</p>
@@ -190,9 +178,7 @@ export function GoogleBusinessPilot() {
           <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
             <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
               <div>
-                <div className="w-10 h-10 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center mb-4 ring-1 ring-[var(--color-coral)]/30">
-                  <Search className="w-5 h-5" />
-                </div>
+                <FirmenflowIcon name="profil-einrichten" size={56} decorative className="mb-4" />
                 <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil einrichten und aufräumen</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   Richtige Kategorien, vollständige Angaben, echte Fotos aus deinem Betrieb. Damit dein Eintrag überhaupt gefunden wird.
@@ -204,9 +190,7 @@ export function GoogleBusinessPilot() {
           <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
             <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
               <div>
-                <div className="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center mb-4 ring-1 ring-amber-300/30">
-                  <Star className="w-5 h-5" />
-                </div>
+                <FirmenflowIcon name="bewertungen-beantworten" size={56} decorative className="mb-4" />
                 <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungen beantworten</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   Jede neue Bewertung bekommt eine Antwort in deinem Ton – auch die unangenehmen. Dazu ein Ablauf, mit dem zufriedene Kunden überhaupt erst eine schreiben.
@@ -218,9 +202,7 @@ export function GoogleBusinessPilot() {
           <div className="pillar-card double-bezel-outer-dark p-1 rounded-[2rem] hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]">
             <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
               <div>
-                <div className="w-10 h-10 rounded-2xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center mb-4 ring-1 ring-emerald-300/30">
-                  <LineChart className="w-5 h-5" />
-                </div>
+                <FirmenflowIcon name="handlungsempfehlung" size={56} decorative className="mb-4" />
                 <h3 className="text-lg font-bold font-sans text-white mb-2">3. Verstehen, was drinsteht</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   Einmal im Monat lese ich alles durch und sage dir, was sich wiederholt – beim Lob wie bei der Kritik.

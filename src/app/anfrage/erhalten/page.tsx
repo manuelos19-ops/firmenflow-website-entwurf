@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 export const metadata: Metadata = {
   title: "Anfrage erhalten | Firmenflow",
@@ -17,8 +17,8 @@ export default function AnfrageErhaltenPage() {
   return (
     <main id="main" className="pt-36 sm:pt-44 pb-28 min-h-[70vh] flex items-center">
       <Container className="max-w-2xl text-center space-y-8">
-        <div className="w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-sm">
-          <CheckCircle2 className="w-10 h-10" />
+        <div className="flex justify-center">
+          <FirmenflowIcon name="erfolg" size={80} decorative />
         </div>
 
         <div className="space-y-4">

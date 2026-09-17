@@ -8,13 +8,8 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import {
-  CheckCircle2,
-  XCircle,
-  Users,
-  SearchX,
-  Laptop
-} from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
 interface StoryStep {
   number: string;
@@ -24,7 +19,7 @@ interface StoryStep {
   body: string;
   image: string;
   imageAlt: string;
-  icon: typeof SearchX;
+  iconName: FirmenflowIconName;
   highlights: string[];
 }
 
@@ -37,7 +32,7 @@ const storySteps: StoryStep[] = [
     body: "Seit Jahren läuft der Betrieb über Empfehlung. Die Website ist von damals, das Google-Profil hat nie jemand angefasst. Funktioniert – solange die Stammkunden bleiben.",
     image: "/media/story/story-1-unsichtbar.webp",
     imageAlt: "Inhaber steht vor seinem Betrieb, Passanten schauen auf Smartphones",
-    icon: SearchX,
+    iconName: "analyse",
     highlights: [
       "Veraltete oder fehlende Website",
       "Google-Maps-Profil ungenutzt",
@@ -52,7 +47,7 @@ const storySteps: StoryStep[] = [
     body: "Wir setzen uns zusammen – bei dir, im Café oder am Telefon. Du erzählst, was du machst und wer deine Kunden sind. Danach baue ich deine Seite um oder von Grund auf neu.",
     image: "/media/story/story-2-loesung-manu.webp",
     imageAlt: "Manu und Inhaber besprechen die neue Website am Laptop",
-    icon: Laptop,
+    iconName: "persoenlicher-ansprechpartner",
     highlights: [
       "Ein fester Ansprechpartner (Manu)",
       "Schnelle Website fürs Smartphone",
@@ -67,7 +62,7 @@ const storySteps: StoryStep[] = [
     body: "Ein aktuelles Google-Profil, echte Fotos aus deinem Betrieb, eine Seite die auf dem Handy sofort lädt. Der Weg zum Anruf ist ein Klick lang.",
     image: "/media/story/story-3-voller-erfolg.webp",
     imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
-    icon: Users,
+    iconName: "mehr-anfragen",
     highlights: [
       "Sichtbar bei Google & Maps",
       "Direkter Kontakt per Anruf oder Klick",
@@ -135,7 +130,7 @@ export function StorySection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8 items-stretch">
           {storySteps.map((step, idx) => {
             const isSelected = activeStep === idx;
-            const Icon = step.icon;
+            const Icon = step.iconName;
 
             return (
               <div
@@ -173,7 +168,7 @@ export function StorySection() {
                         step.tagVariant === "success" && "bg-emerald-600/90"
                       )}
                     >
-                      <Icon className="w-3.5 h-3.5 shrink-0" />
+                      <FirmenflowIcon name={Icon} size={20} decorative />
                       <span>{step.tag}</span>
                     </span>
                   </div>
@@ -193,16 +188,17 @@ export function StorySection() {
                   {/* Feature Checkpoints */}
                   <ul className="space-y-2.5 pt-4 border-t border-[var(--color-line)]/50 text-xs sm:text-sm text-[var(--color-ink)]/85">
                     {step.highlights.map((h) => {
-                      // Die Problem-Karte listet auf, was schiefgeht - ein
-                      // gruener Haken daneben las sich wie eine Zusage.
+                      // Die Problem-Karte listet auf, was schiefgeht.
+                      // Kleine reduzierte CSS-Marker bleiben bewusst bestehen,
+                      // keine grossen 3D-Icons vor jedem Listeneintrag.
                       const isProblem = step.tagVariant === "problem";
-                      const Icon = isProblem ? XCircle : CheckCircle2;
                       return (
                         <li key={h} className="flex items-start gap-2">
-                          <Icon
+                          <span
+                            aria-hidden="true"
                             className={cn(
-                              "w-4 h-4 mt-0.5 shrink-0",
-                              isProblem ? "text-rose-500" : "text-emerald-500"
+                              "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full",
+                              isProblem ? "bg-rose-500" : "bg-emerald-500"
                             )}
                           />
                           <span>{h}</span>

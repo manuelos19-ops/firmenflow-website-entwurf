@@ -6,14 +6,17 @@ import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { ArrowUpRight, Briefcase, Camera, Handshake, PhoneCall, MessageSquare } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import type { FirmenflowIconName } from "@/content/firmenflow-icons";
+
+const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto", "festpreis"];
 
 const bentoItems = [
   {
     title: "Selbst Unternehmer",
     desc: "Sechs Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer einer selbst gebauten Lasertag-Arena, zuletzt Marketing und Aufbau von BattleKart Düsseldorf-Neuss. Ich kenne Rechnungen, Personal und Kundengespräche nicht aus der Beratung, sondern aus elf Jahren im Betrieb.",
-    icon: Briefcase,
     gradient: "from-[var(--color-plum)]/20 via-[var(--color-plum)]/5 to-transparent",
     border: "border-[var(--color-plum)]/30 hover:border-[var(--color-plum)]",
     iconBg: "bg-[var(--color-plum)]/10 text-[var(--color-plum)]",
@@ -21,7 +24,6 @@ const bentoItems = [
   {
     title: "Blick für Bild & Wirkung",
     desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das im ersten Moment sein kann. Du musst nicht modeln können: Wir fangen authentische Alltagsmomente deines Betriebs beiläufig ein – und glaube mir, die Scheu vor der Kamera ist schneller weg, als du „lächeln“ sagen kannst.",
-    icon: Camera,
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
     iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
@@ -29,7 +31,6 @@ const bentoItems = [
   {
     title: "Handschlagqualität",
     desc: "Ein Wort gilt. Was wir besprechen, halte ich fest – und du erreichst mich per Telefon oder WhatsApp, nicht über ein Ticketsystem.",
-    icon: Handshake,
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
     iconBg: "bg-emerald-100 text-emerald-700",
@@ -101,15 +102,15 @@ export function DirectWithManu() {
             {/* Quick Trust Highlights - High-End Frosted Pills */}
             <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <PhoneCall className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <FirmenflowIcon name="telefon" size={20} decorative />
                 <span>Direkter Draht via WhatsApp &amp; Telefon</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <MessageSquare className="w-3.5 h-3.5 text-[var(--color-plum)]" />
+                <FirmenflowIcon name="persoenlicher-ansprechpartner" size={20} decorative />
                 <span>Ein Ansprechpartner, keine Hotline</span>
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <Handshake className="w-3.5 h-3.5 text-emerald-600" />
+                <FirmenflowIcon name="festpreis" size={20} decorative />
                 <span>Persönliche Verantwortung</span>
               </div>
             </div>
@@ -226,7 +227,7 @@ export function DirectWithManu() {
                   </p>
                   <div className="flex items-center justify-center pt-1.5 border-t border-stone-100">
                     <span className="text-[10px] font-mono font-bold text-[var(--color-plum)] bg-[var(--color-plum)]/10 px-2.5 py-0.5 rounded-full">
-                      Handschlagqualität ✨
+                      Handschlagqualität
                     </span>
                   </div>
                 </div>
@@ -239,7 +240,6 @@ export function DirectWithManu() {
         {/* 3 Clean, Grounded Bento Value Cards - Double-Bezel Architecture */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {bentoItems.map((item, index) => {
-            const Icon = item.icon;
             return (
               <div
                 key={item.title}
@@ -262,9 +262,11 @@ export function DirectWithManu() {
                   />
 
                   <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                    <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-110", item.iconBg)}>
-                      <Icon className="w-6 h-6" />
-                    </div>
+                    <FirmenflowIcon
+                      name={bentoIcons[index]}
+                      size={56}
+                      decorative
+                    />
 
                     <div>
                       <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 font-sans group-hover:text-[var(--color-coral)] transition-colors">

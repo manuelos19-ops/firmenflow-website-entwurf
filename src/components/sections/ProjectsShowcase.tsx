@@ -7,13 +7,12 @@ import { liveProjects, conceptProjects, type Project } from "@/content/projects"
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  ExternalLink, 
-  Pause, 
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Pause,
   Play,
-  MapPin,
   ArrowRight
 } from "lucide-react";
 
@@ -340,7 +339,7 @@ export function ProjectsShowcase() {
                         {project.name}
                       </h4>
                       <p className="text-[11px] sm:text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5 truncate">
-                        <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
+                        <FirmenflowIcon name="referenzen-portfolio" size={16} decorative />
                         {project.region} · {project.sector}
                       </p>
                     </div>
@@ -349,7 +348,7 @@ export function ProjectsShowcase() {
                       aria-label={`${project.name} in neuem Tab öffnen`}
                       className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-plum)]/5 group-hover:bg-[var(--color-coral)] group-hover:text-white text-[var(--color-plum)] flex items-center justify-center transition-all shadow-sm"
                     >
-                      <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      <FirmenflowIcon name="externer-link" size={20} decorative />
                     </span>
                   </div>
                 </a>
@@ -420,7 +419,7 @@ export function ProjectsShowcase() {
                 {activeProject.name}
               </h3>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-1">
-                <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                <FirmenflowIcon name="referenzen-portfolio" size={20} decorative />
                 {activeProject.region} · {activeProject.sector}
               </p>
             </div>
@@ -486,7 +485,7 @@ export function ProjectsShowcase() {
                     className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
                   >
                     <span>Live-Website</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-[var(--color-muted)] shrink-0" />
+                    <FirmenflowIcon name="externer-link" size={20} decorative />
                   </a>
                 </>
               ) : (
@@ -505,7 +504,7 @@ export function ProjectsShowcase() {
                     className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
                   >
                     <span>Live-Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-[var(--color-muted)] shrink-0" />
+                    <FirmenflowIcon name="externer-link" size={20} decorative />
                   </a>
                 </>
               )}

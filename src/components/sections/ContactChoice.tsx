@@ -10,8 +10,9 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { MapPin, Calendar, Phone, Mail, ArrowRight, Sparkles, Sliders } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
 
 interface ContactChoiceProps {
@@ -111,9 +112,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
               <div>
                 {/* Status & Identität */}
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <div className="w-11 h-11 rounded-2xl bg-[var(--color-coral)]/20 text-[var(--color-coral)] flex items-center justify-center">
-                    <Calendar className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="termin" size={44} decorative />
                   <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2.5 py-0.5 rounded-full border border-[var(--color-coral)]/20">
                     30 Min. Live
                   </span>
@@ -132,7 +131,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                   <div>
                     <h4 className="text-base sm:text-lg font-bold text-white font-sans">Erstgespräch mit Manu</h4>
                     <p className="text-xs text-white/70 flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-[var(--color-coral)] shrink-0" />
+                      <FirmenflowIcon name="telefon" size={16} decorative />
                       <span>Telefon oder Videocall</span>
                     </p>
                   </div>
@@ -152,19 +151,19 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                   className="inline-flex items-center justify-center gap-2.5 w-full py-3 px-5 rounded-full bg-[var(--color-coral)] hover:bg-[#e44d39] text-white font-bold text-sm shadow-md transition-all hover:scale-[1.01]"
                   style={{ color: "#ffffff" }}
                 >
-                  <Calendar className="w-4 h-4 text-white shrink-0" />
+                  <FirmenflowIcon name="termin" size={20} decorative />
                   <span className="!text-white text-white">30 Min. Wunschtermin sichern</span>
                   <ArrowRight className="w-4 h-4 text-white shrink-0" />
                 </a>
 
                 <div className="flex items-center justify-center gap-4 text-xs text-white/60 pt-1">
                   <a href="tel:015567277155" className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
-                    <Phone className="w-3 h-3 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="telefon" size={16} decorative />
                     <span>0155 67277155</span>
                   </a>
                   <span>•</span>
                   <a href="mailto:manu@firmenflow.de" className="inline-flex items-center gap-1.5 hover:text-white transition-colors">
-                    <Mail className="w-3 h-3 text-white/70" />
+                    <FirmenflowIcon name="email" size={16} decorative />
                     <span>manu@firmenflow.de</span>
                   </a>
                 </div>
@@ -175,6 +174,10 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
 
         {/* DAS HAUPT-FORMULAR: Kostenlose Video-Prüfung */}
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
+          <div className="flex items-center gap-3">
+            <FirmenflowIcon name="video-website-check" size={56} decorative />
+            <FirmenflowIcon name="formular" size={40} decorative />
+          </div>
           <div className="double-bezel-outer-dark p-1 sm:p-1.5 rounded-[2.25rem] sm:rounded-[2.75rem] shadow-2xl">
             <WebsiteCheckInquiry />
           </div>
@@ -183,7 +186,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left transition-colors hover:bg-white/[0.07]">
             <div className="space-y-1">
               <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--color-coral)]">
-                <Sliders className="w-3.5 h-3.5" />
+                <FirmenflowIcon name="formular" size={20} decorative />
                 <span>Planst du einen Relaunch oder eine komplette Neu-Entwicklung?</span>
               </div>
               <p className="text-xs sm:text-sm text-white/75 max-w-xl">

@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { faqItems } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { Plus, Minus, HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -48,6 +49,9 @@ export function Faq() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
               Klartext vor dem Projektstart.
             </h2>
+            <div className="mt-6 flex justify-center">
+              <FirmenflowIcon name="faq-plus" size={72} decorative />
+            </div>
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
               Hier findest du direkte Antworten auf die wichtigsten Fragen zu Ablauf, Kosten und Zusammenarbeit – ehrlich und ohne Kleingedrucktes.
             </p>
@@ -83,7 +87,7 @@ export function Faq() {
                             : "bg-[var(--color-paper)] text-[var(--color-muted)] group-hover:text-[var(--color-coral)]"
                         )}
                       >
-                        <HelpCircle className="w-4 h-4" />
+                        <FirmenflowIcon name="faq" size={20} decorative />
                       </div>
                       <h3 className={cn(
                         "text-base sm:text-lg font-bold font-sans transition-colors duration-200 leading-snug select-text",
@@ -142,9 +146,7 @@ export function Faq() {
           {/* Bottom Direct Question Contact Box */}
           <div className="mt-12 sm:mt-16 bg-white rounded-3xl border border-[var(--color-line)] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
             <div className="flex items-center gap-4 text-center sm:text-left">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mx-auto sm:mx-0 shadow-sm">
-                <MessageCircle className="w-6 h-6" />
-              </div>
+              <FirmenflowIcon name="nachricht-senden" size={48} decorative />
               <div>
                 <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
                   Deine Frage war nicht dabei?

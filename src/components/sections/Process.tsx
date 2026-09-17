@@ -1,10 +1,19 @@
 "use client";
 
 import { useRef } from 'react';
-import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
+import { gsap, useGSAP } from '@/lib/gsap';
 import { Container } from '@/components/ui/Container';
 import { homeContent } from '@/content/site';
 import { BrandIcon } from '@/components/brand/BrandIcon';
+import { FirmenflowIcon } from '@/components/brand/FirmenflowIcon';
+import type { FirmenflowIconName } from '@/content/firmenflow-icons';
+
+const processIcons: FirmenflowIconName[][] = [
+  ["kennenlernen"],
+  ["designentwurf"],
+  ["umsetzung-texte"],
+  ["freigabe", "go-live"],
+];
 
 export function Process() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -164,6 +173,16 @@ export function Process() {
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-[var(--color-ink)] mb-3 leading-snug">
                     {step.title}
                   </h3>
+                  <div className="mb-4 flex items-center gap-3">
+                    {(processIcons[index] ?? []).map((iconName) => (
+                      <FirmenflowIcon
+                        key={iconName}
+                        name={iconName}
+                        size={64}
+                        decorative
+                      />
+                    ))}
+                  </div>
                   <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                     {step.body}
                   </p>

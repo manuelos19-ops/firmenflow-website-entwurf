@@ -5,8 +5,9 @@ import { homeContent } from "@/content/site";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Check, Smartphone, Zap, ShieldCheck, Search, Layout, Sparkles, Camera, Video, Film, MapPin } from "lucide-react";
+import { Check } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 export function ServiceOverview() {
   const containerRef = useRef<HTMLElement>(null);
@@ -77,6 +78,9 @@ export function ServiceOverview() {
             )}
           >
             <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-9 md:p-11 bg-white border border-[var(--color-line)]/50 shadow-sm relative overflow-hidden group">
+              <div className="mb-7 flex items-center gap-4">
+                <FirmenflowIcon name="neue-website" size={96} decorative />
+              </div>
               {/* Visual Browser Mockup Bar */}
               <div className="flex items-center justify-between pb-6 mb-8 border-b border-gray-100">
                 <div className="flex items-center gap-2">
@@ -96,9 +100,7 @@ export function ServiceOverview() {
               {/* Visual Feature Badges Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
-                  <div className="w-9 h-9 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0">
-                    <Smartphone className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="mobile-first" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Layout</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Mobile-First</p>
@@ -106,9 +108,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
-                  <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                    <Zap className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="ladezeit-performance" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Ladezeit</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Ohne Ladebalken</p>
@@ -116,9 +116,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3 transition-transform duration-200 hover:scale-[1.03]">
-                  <div className="w-9 h-9 rounded-xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="mehr-anfragen" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Ziel</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Mehr Anfragen</p>
@@ -159,6 +157,9 @@ export function ServiceOverview() {
             )}
           >
             <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-9 md:p-11 bg-white border border-[var(--color-line)]/50 shadow-sm relative overflow-hidden group">
+              <div className="mb-7 flex items-center gap-4">
+                <FirmenflowIcon name="relaunch" size={96} decorative />
+              </div>
               {/* Visual Browser Mockup Bar */}
               <div className="flex items-center justify-between pb-6 mb-8 border-b border-gray-100">
                 <div className="flex items-center gap-2">
@@ -178,9 +179,7 @@ export function ServiceOverview() {
               {/* Visual Feature Badges Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center shrink-0">
-                    <Search className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="analyse" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Audit</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Bestands-Prüfung</p>
@@ -188,9 +187,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="seo-schutz" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Sicherheit</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">SEO-Rankings safe</p>
@@ -198,9 +195,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <Layout className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="struktur-wireframe" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Struktur</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Klare Führung</p>
@@ -240,6 +235,10 @@ export function ServiceOverview() {
             )}
           >
             <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-9 md:p-11 bg-white border border-[var(--color-line)]/50 shadow-sm relative overflow-hidden group">
+              <div className="mb-7 flex items-center gap-4">
+                <FirmenflowIcon name="foto" size={96} decorative />
+                <FirmenflowIcon name="video" size={64} decorative />
+              </div>
               {/* Visual Camera Studio Bar */}
               <div className="flex items-center justify-between pb-6 mb-8 border-b border-gray-100">
                 <div className="flex items-center gap-2">
@@ -248,7 +247,7 @@ export function ServiceOverview() {
                   <span className="w-3.5 h-3.5 rounded-full bg-emerald-400" />
                 </div>
                 <div className="px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-mono text-gray-500 flex items-center gap-2">
-                  <Camera className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                  <FirmenflowIcon name="foto" size={20} decorative />
                   <span>Foto- &amp; Videoproduktion vor Ort</span>
                 </div>
                 <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
@@ -259,9 +258,7 @@ export function ServiceOverview() {
               {/* Visual Feature Badges Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0">
-                    <Camera className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="foto" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Fotoshoot</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Team &amp; Portraits</p>
@@ -269,9 +266,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
-                    <Video className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="video" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Video</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Imagefilm &amp; Reels</p>
@@ -279,9 +274,7 @@ export function ServiceOverview() {
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/40 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
+                  <FirmenflowIcon name="texte-copywriting" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Vor Ort</p>
                     <p className="text-sm font-bold text-[var(--color-ink)]">Wesel &amp; Umgebung</p>
@@ -314,9 +307,7 @@ export function ServiceOverview() {
         <div className="mt-14 sm:mt-20 max-w-4xl mx-auto double-bezel-outer p-1.5 sm:p-2 rounded-[2rem] bg-black/[0.03] border border-black/[0.06] shadow-lg">
           <div className="double-bezel-inner rounded-[calc(2rem-0.375rem)] p-6 sm:p-7 bg-white/95 border border-[var(--color-line)]/50 flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="flex items-center gap-4 text-left">
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0 shadow-sm ring-1 ring-[var(--color-coral)]/20">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
+              <FirmenflowIcon name="festpreis" size={48} decorative />
               <div>
                 <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
                   Festpreis vorher. Texte inklusive.

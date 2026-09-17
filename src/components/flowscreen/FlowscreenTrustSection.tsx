@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck } from "lucide-react";
+import { FlowscreenIcon } from "@/components/brand/FirmenflowIcon";
 import {
   FLOWSCREEN_HASHES,
   FLOWSCREEN_VERSION,
@@ -20,9 +20,7 @@ export function FlowscreenTrustSection() {
   return (
     <div className="rounded-3xl border border-emerald-500/25 bg-emerald-500/[0.04] p-6 sm:p-8 space-y-5">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-2xl bg-emerald-500/15 text-emerald-700 flex items-center justify-center shrink-0">
-          <ShieldCheck className="w-5 h-5" />
-        </div>
+        <FlowscreenIcon name="lokal-ohne-cloud" size={40} decorative />
         <div>
           <h3 className="text-lg sm:text-xl font-bold text-[var(--color-ink)]">
             Geprüft sauber – verifiziere es selbst
@@ -39,7 +37,6 @@ export function FlowscreenTrustSection() {
             Setup · <span className="font-mono font-normal text-[var(--color-muted)]">{shortHash(FLOWSCREEN_HASHES.setup)}</span>
             {FLOWSCREEN_VIRUSTOTAL.setup && (
               <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
-                <ShieldCheck className="w-3 h-3" />
                 <span>
                   VirusTotal: 0/{FLOWSCREEN_VIRUSTOTAL.setup.total} sauber
                 </span>
@@ -60,7 +57,6 @@ export function FlowscreenTrustSection() {
             Portable · <span className="font-mono font-normal text-[var(--color-muted)]">{shortHash(FLOWSCREEN_HASHES.portable)}</span>
             {FLOWSCREEN_VIRUSTOTAL.portable && (
               <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
-                <ShieldCheck className="w-3 h-3" />
                 <span>
                   VirusTotal: 0/{FLOWSCREEN_VIRUSTOTAL.portable.total} sauber
                 </span>

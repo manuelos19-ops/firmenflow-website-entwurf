@@ -1,6 +1,6 @@
-import { Globe, RefreshCw, Star } from "lucide-react";
 import type { InquiryDraft } from "@/features/inquiry/types";
 import { cn } from "@/lib/cn";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 type StepProps = {
   data: InquiryDraft;
@@ -13,19 +13,19 @@ const options = [
     value: "new-site",
     title: "Neue Website",
     description: "Für deinen Betrieb ohne moderne Website. Individuell, mobilfreundlich und lokal auffindbar.",
-    icon: Globe,
+    iconName: "neue-website",
   },
   {
     value: "relaunch",
     title: "Website-Relaunch",
     description: "Deine vorhandene Website wird neu strukturiert, moderner gestaltet und für mehr Anfragen optimiert.",
-    icon: RefreshCw,
+    iconName: "relaunch",
   },
   {
     value: "google-business",
     title: "Lokalpräsenz 360°",
     description: "Google-Profil einrichten oder aufräumen, Bewertungen beantworten, Monatsreport.",
-    icon: Star,
+    iconName: "unternehmensprofil",
   },
 ] as const;
 
@@ -47,7 +47,6 @@ export function ProjectTypeStep({ data, errors, onPatch }: StepProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         {options.map((opt) => {
-          const Icon = opt.icon;
           const isSelected = data.projectType === opt.value;
 
           return (
@@ -70,16 +69,11 @@ export function ProjectTypeStep({ data, errors, onPatch }: StepProps) {
                 aria-describedby={errors.projectType ? "projectType-error" : undefined}
               />
               <div className="space-y-4">
-                <div
-                  className={cn(
-                    "w-12 h-12 rounded-xl flex items-center justify-center transition-colors",
-                    isSelected
-                      ? "bg-[var(--color-coral)] text-white"
-                      : "bg-[var(--color-plum)]/10 text-[var(--color-plum)]"
-                  )}
-                >
-                  <Icon className="w-6 h-6" />
-                </div>
+                <FirmenflowIcon
+                  name={opt.iconName}
+                  size={56}
+                  decorative
+                />
                 <h3 className="text-lg font-bold text-[var(--color-ink)]">{opt.title}</h3>
                 <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
                   {opt.description}

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useReducer, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, RefreshCw, AlertCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { initialInquiryState, inquiryReducer } from "@/features/inquiry/reducer";
 import { inquirySchema, type InquiryPayload } from "@/features/inquiry/schema";
@@ -189,8 +190,8 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
   if (state.status === "success") {
     return (
       <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 border border-[var(--color-line)] shadow-xl text-center space-y-6 text-[var(--color-ink)]">
-        <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-sm">
-          <CheckCircle2 className="w-8 h-8" />
+        <div className="flex justify-center">
+          <FirmenflowIcon name="erfolg" size={72} decorative />
         </div>
         <div className="space-y-2 max-w-md mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] font-display">
@@ -305,7 +306,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             className="p-4 sm:p-5 rounded-2xl bg-rose-50 border-2 border-rose-300 text-rose-900 shadow-sm space-y-2 animate-in fade-in duration-200"
           >
             <div className="flex items-center gap-2.5 font-bold text-sm sm:text-base text-rose-800">
-              <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+              <FirmenflowIcon name="fehler" size={24} decorative />
               <span>
                 {state.step === 4
                   ? "Bitte prüfe vor dem Absenden noch folgende Angaben:"

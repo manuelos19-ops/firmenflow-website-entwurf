@@ -3,18 +3,12 @@
 import { useState } from "react";
 import { 
   ArrowRight, 
-  CheckCircle2, 
-  Globe, 
-  Mail, 
-  User, 
-  Phone, 
   Loader2, 
-  Calendar,
-  Sparkles
 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { siteIdentity } from "@/config/site";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackVideoAuditSubmit, trackMeetergoClick } from "@/lib/track-inquiry";
 
 interface WebsiteCheckInquiryProps {
@@ -98,7 +92,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
           {/* Header */}
           <div className="space-y-3 text-center sm:text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 text-[var(--color-coral)] text-xs font-bold tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+              <FirmenflowIcon name="video-website-check" size={20} decorative />
               <span>100% KOSTENLOS &amp; UNVERBINDLICH</span>
             </div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[var(--color-ink)] leading-tight">
@@ -118,7 +112,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Website-Adresse deines Betriebs {!noWebsite && <span className="text-[var(--color-coral)]">*</span>}
                 </label>
                 <div className="relative">
-                  <Globe className="w-4 h-4 text-[var(--color-muted)] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="audit-website"
                     type="text"
@@ -160,7 +153,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Dein Name oder Betrieb <span className="text-[var(--color-coral)]">*</span>
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-[var(--color-muted)] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="audit-name"
                     type="text"
@@ -187,7 +179,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   E-Mail-Adresse für das Video <span className="text-[var(--color-coral)]">*</span>
                 </label>
                 <div className="relative">
-                  <Mail className="w-4 h-4 text-[var(--color-muted)] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="audit-email"
                     type="email"
@@ -214,7 +205,6 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Telefonnummer <span className="text-xs font-normal text-[var(--color-muted)]">(optional, für eventuelle Rückfragen zur Seite)</span>
                 </label>
                 <div className="relative">
-                  <Phone className="w-4 h-4 text-[var(--color-muted)] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="audit-phone"
                     type="tel"
@@ -271,8 +261,8 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
       ) : (
         /* SUCCESS STATE */
         <div className="relative z-10 py-6 text-center space-y-8 animate-in fade-in duration-500">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
-            <CheckCircle2 className="w-10 h-10" />
+          <div className="flex justify-center">
+            <FirmenflowIcon name="erfolg" size={64} decorative />
           </div>
 
           <div className="space-y-3 max-w-xl mx-auto">
@@ -287,9 +277,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
           {/* DER MEETERGO-DIREKTWEG: Für Eilige */}
           <div className="p-6 sm:p-8 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)] max-w-xl mx-auto text-left space-y-4 shadow-sm">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-[var(--color-plum)] text-white flex items-center justify-center shrink-0">
-                <Calendar className="w-5 h-5 text-white" />
-              </div>
+              <FirmenflowIcon name="termin" size={36} decorative />
               <div>
                 <h4 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">
                   Du möchtest nicht auf das Video warten, sondern direkt sprechen?

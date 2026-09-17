@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { portraitAssets } from "@/content/assets";
 import { getSiteUrl } from "@/lib/site-url";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -126,6 +127,10 @@ export default function UeberManuPage() {
               Manuel Landeck, Wesel und Niederrhein. Ich mache Websites und Google-Profile
               für kleine Betriebe – und weiß aus eigener Erfahrung, wie so ein Betrieb läuft.
             </p>
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <FirmenflowIcon name="persoenlicher-ansprechpartner" size={48} decorative />
+              <FirmenflowIcon name="beratung" size={48} decorative />
+            </div>
           </div>
         </div>
 
@@ -199,28 +204,38 @@ export default function UeberManuPage() {
             Wenig, und das ist Absicht.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
+            {([
               {
                 title: "Das erste Gespräch kostet nichts",
                 body: "Etwa 30 Minuten, am Telefon oder bei einem Kaffee. Danach weißt du, was sinnvoll wäre und was es kostet – auch wenn du es dann selbst machst.",
+                iconName: "kennenlernen" as const,
               },
               {
                 title: "Monatlich kündbar",
                 body: "Keine Mindestlaufzeit, keine zwölf Monate. Ich muss jeden Monat einen Grund liefern, dass du bleibst.",
+                iconName: "monatlich-kuendbar" as const,
               },
               {
                 title: "Die Domain läuft auf dich",
                 body: "Nicht auf mich. Sie gehört dir, unabhängig davon, ob wir zusammenarbeiten.",
+                iconName: "domain-eigentum" as const,
               },
               {
                 title: "Den Code bekommst du",
                 body: "Auf Wunsch händige ich dir das komplette Projekt aus. Wenn du woanders hosten willst, steht dir nichts im Weg.",
+                iconName: "code-uebergabe" as const,
               },
-            ].map((item) => (
+            ] as const).map((item) => (
               <div
                 key={item.title}
                 className="rounded-3xl border border-[var(--color-line)] bg-[var(--color-paper)] p-6"
               >
+                <FirmenflowIcon
+                  name={item.iconName}
+                  size={48}
+                  decorative
+                  className="mb-3"
+                />
                 <h3 className="font-bold text-[var(--color-ink)] mb-2">{item.title}</h3>
                 <p className="text-sm text-[var(--color-muted)] leading-relaxed">{item.body}</p>
               </div>

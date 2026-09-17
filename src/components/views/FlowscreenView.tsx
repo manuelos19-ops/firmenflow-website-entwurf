@@ -8,9 +8,9 @@ import { MagneticButton } from "@/components/effects/MagneticButton";
 import { FlowscreenDownloadButton } from "@/components/flowscreen/FlowscreenDownloadButton";
 import { FlowscreenStickyCta } from "@/components/flowscreen/FlowscreenStickyCta";
 import { FlowscreenTrustSection } from "@/components/flowscreen/FlowscreenTrustSection";
-import { BrandIcon } from "@/components/brand/BrandIcon";
 import { cn } from "@/lib/cn";
 import { brandAssets } from "@/content/assets";
+import { FirmenflowIcon, FlowscreenIcon } from "@/components/brand/FirmenflowIcon";
 import {
   FLOWSCREEN_OS_LABEL,
   FLOWSCREEN_RELEASES_URL,
@@ -20,26 +20,12 @@ import {
 import {
   ArrowLeft,
   Download,
-  ShieldCheck,
-  Zap,
-  Sparkles,
-  Layers,
-  ListOrdered,
-  EyeOff,
-  Search,
-  Keyboard,
   Check,
   X,
   ChevronDown,
   Monitor,
   HardDrive,
-  RefreshCw,
   ExternalLink,
-  Users,
-  Briefcase,
-  BarChart3,
-  Clock,
-  FileImage,
 } from "lucide-react";
 
 const RELEASES_PAGE_URL = FLOWSCREEN_RELEASES_URL;
@@ -130,7 +116,7 @@ export function FlowscreenView() {
         <div className="space-y-12 text-center max-w-5xl mx-auto">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--color-coral)]/15 via-[var(--color-plum)]/10 to-[var(--color-coral)]/15 border border-[var(--color-coral)]/30 text-xs sm:text-sm font-bold text-[var(--color-plum)] shadow-sm backdrop-blur-sm">
-            <BrandIcon size="xs" />
+            <FlowscreenIcon name="app-logo" size={28} alt="FlowScreen" />
             <span>FlowScreen · Entwickelt von Manuel Landeck</span>
           </div>
 
@@ -189,19 +175,19 @@ export function FlowscreenView() {
           {/* Trust Pills */}
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-xs sm:text-sm font-medium text-[var(--color-muted)]">
             <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <FlowscreenIcon name="lokal-ohne-cloud" size={24} decorative />
               100 % Offline &amp; Kein Cloud-Zwang
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Zap className="w-4 h-4 text-[var(--color-coral)]" />
+              <FlowscreenIcon name="screenshot-aufnahme" size={24} decorative />
               Druck-Taste &amp; Tastenkürzel
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <RefreshCw className="w-4 h-4 text-[var(--color-plum)]" />
+              <FirmenflowIcon name="monatsreport" size={24} decorative />
               Automatische GitHub-Updates
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-emerald-600" />
+              <FirmenflowIcon name="erfolg" size={24} decorative />
               Kein Account / Kein Abo
             </span>
           </div>
@@ -242,9 +228,9 @@ export function FlowscreenView() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 text-left">
               <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="flex items-center gap-2 text-[var(--color-coral)] font-bold text-sm mb-1">
-                  <Sparkles className="w-4 h-4" />
-                  <span>1-Klick Mockup Canvas</span>
+                <div className="mb-2 flex items-center gap-2">
+                  <FlowscreenIcon name="canvas-mockup" size={40} decorative />
+                  <span className="text-[var(--color-coral)] font-bold text-sm">1-Klick Mockup Canvas</span>
                 </div>
                 <p className="text-xs text-[var(--color-muted)]">
                   Fügt edle Farbverläufe, Eckenrundungen und weiche Schlagschatten direkt um deinen Screenshot.
@@ -252,9 +238,9 @@ export function FlowscreenView() {
               </div>
 
               <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="flex items-center gap-2 text-[var(--color-plum)] font-bold text-sm mb-1">
-                  <ListOrdered className="w-4 h-4" />
-                  <span>Automatischer Schrittzähler</span>
+                <div className="mb-2 flex items-center gap-2">
+                  <FlowscreenIcon name="schrittzaehler" size={40} decorative />
+                  <span className="text-[var(--color-plum)] font-bold text-sm">Automatischer Schrittzähler</span>
                 </div>
                 <p className="text-xs text-[var(--color-muted)]">
                   Klicke auf Elemente – FlowScreen generiert aufsteigende Zahlenkreise (1, 2, 3...) für Tutorials.
@@ -262,9 +248,9 @@ export function FlowscreenView() {
               </div>
 
               <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm mb-1">
-                  <EyeOff className="w-4 h-4" />
-                  <span>DSGVO Zensur &amp; Blur</span>
+                <div className="mb-2 flex items-center gap-2">
+                  <FlowscreenIcon name="dsgvo-verpixelung" size={40} decorative />
+                  <span className="text-emerald-600 font-bold text-sm">DSGVO Zensur &amp; Blur</span>
                 </div>
                 <p className="text-xs text-[var(--color-muted)]">
                   Verpixelung oder solide Schwärzung mit einer Mausbewegung. Keine Kundendaten mehr leaken.
@@ -433,9 +419,7 @@ export function FlowscreenView() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center">
-                <Sparkles className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="canvas-mockup" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 1-Klick Canvas-Mockup
               </h3>
@@ -446,9 +430,7 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center">
-                <ListOrdered className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="schrittzaehler" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 Automatischer Schrittzähler
               </h3>
@@ -459,9 +441,7 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-                <EyeOff className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="dsgvo-verpixelung" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 DSGVO-Zensur &amp; Mosaik
               </h3>
@@ -472,9 +452,7 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                <Search className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="lupe-zoom" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 Lupen-Werkzeug &amp; Zoom
               </h3>
@@ -485,9 +463,7 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center">
-                <Layers className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="vektor-editor" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 Voller Vektor-Editor
               </h3>
@@ -498,9 +474,7 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center">
-                <Keyboard className="w-6 h-6" />
-              </div>
+              <FlowscreenIcon name="screenshot-aufnahme" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 Druck-Taste &amp; Autostart
               </h3>
@@ -753,7 +727,7 @@ export function FlowscreenView() {
 
           <div className="space-y-4 max-w-2xl mx-auto relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90 border border-white/20">
-              <Sparkles className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+              <FlowscreenIcon name="app-logo" size={24} alt="FlowScreen" />
               <span>Persönlich mit Manu · Firmenflow</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">

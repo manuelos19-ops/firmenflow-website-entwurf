@@ -4,7 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { siteIdentity } from "@/config/site";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { ArrowLeft, Clock, Phone, Calendar, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -54,8 +55,12 @@ export default function AnfragePage() {
           </p>
 
           <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-semibold text-[var(--color-muted)] pt-1">
-            <Clock className="w-4 h-4 text-[var(--color-plum)]" />
+            <FirmenflowIcon name="nachricht-senden" size={20} decorative />
             <span>Rückmeldung i. d. R. innerhalb von 24 Stunden</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <FirmenflowIcon name="formular" size={40} decorative />
+            <FirmenflowIcon name="angebot" size={40} decorative />
           </div>
         </div>
 
@@ -68,9 +73,12 @@ export default function AnfragePage() {
         <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[var(--color-line)] shadow-sm space-y-4 text-center sm:text-left">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="space-y-1">
-              <h3 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
-                Du möchtest nicht tippen, sondern lieber direkt sprechen?
-              </h3>
+              <div className="flex items-center gap-2">
+                <FirmenflowIcon name="termin" size={28} decorative />
+                <h3 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
+                  Du möchtest nicht tippen, sondern lieber direkt sprechen?
+                </h3>
+              </div>
               <p className="text-xs sm:text-sm text-[var(--color-muted)]">
                 Schnapp dir direkt einen freien 30-Minuten-Termin in Manus Kalender oder schreib unkompliziert per WhatsApp.
               </p>
@@ -84,7 +92,7 @@ export default function AnfragePage() {
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[var(--color-plum)] hover:bg-[var(--color-plum-light)] !text-white text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
                 style={{ color: "#ffffff" }}
               >
-                <Calendar className="w-4 h-4 text-white" />
+                <FirmenflowIcon name="termin" size={20} decorative />
                 <span className="!text-white text-white">30 Min. Call buchen</span>
                 <ArrowRight className="w-3.5 h-3.5 text-white" />
               </a>

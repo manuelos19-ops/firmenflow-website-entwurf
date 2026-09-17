@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { MagneticButton } from "@/components/effects/MagneticButton";
@@ -10,25 +9,10 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import {
   ArrowLeft,
-  CheckCircle2,
-  Star,
-  Search,
-  MessageSquareCheck,
-  LineChart,
-  Users,
-  AlertCircle,
-  MapPin,
-  TrendingUp,
-  ShieldCheck,
-  ThumbsUp,
-  AlertTriangle,
-  Building2,
   Clock,
-  Phone,
-  BarChart3,
-  ExternalLink,
 } from "lucide-react";
 
 interface GoogleBusinessViewProps {
@@ -151,7 +135,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     : "text-[var(--color-muted)] hover:text-[var(--color-ink)]"
                 )}
               >
-                <AlertTriangle className="w-3.5 h-3.5" />
+                <FirmenflowIcon name="warnung" size={16} decorative />
                 <span>Typischer Betrieb</span>
               </button>
 
@@ -175,9 +159,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               {/* Local Business Profile Preview Header */}
               <div className="bg-gradient-to-r from-stone-50 to-stone-100 p-4 border-b border-stone-200 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-[var(--color-plum)] text-white flex items-center justify-center shadow-sm">
-                    <MapPin className="w-4 h-4 text-white" />
-                  </div>
+                  <FirmenflowIcon name="unternehmensprofil" size={32} decorative />
                   <div>
                     <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block">
                       Brancheneintrag-Vorschau
@@ -189,7 +171,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </div>
                 {simulationMode === "after" && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                    <FirmenflowIcon name="profil-aufraeumen" size={16} decorative />
                     <span>Vollständig optimiert</span>
                   </span>
                 )}
@@ -207,28 +189,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     )}
                   </h4>
                   <p className="text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="unternehmensprofil" size={20} decorative />
                     Wesel &amp; Niederrhein · Fachbetrieb
                   </p>
                 </div>
 
                 {/* Stars & Reviews */}
                 <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
-                  <div className="flex items-center text-amber-400">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className={cn(
-                          "w-4 h-4",
-                          simulationMode === "after"
-                            ? "fill-amber-400 text-amber-400"
-                            : i < 3
-                            ? "fill-amber-400 text-amber-400"
-                            : "text-stone-300"
-                        )}
-                      />
-                    ))}
-                  </div>
+                  <FirmenflowIcon name="mehr-bewertungen" size={28} decorative />
                   <span className="text-sm font-bold text-[var(--color-ink)]">
                     {simulationMode === "after" ? "5,0 Sterne (52 Bewertungen)" : "3,4 Sterne (5 Bewertungen)"}
                   </span>
@@ -250,7 +218,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <MessageSquareCheck className="w-4 h-4 text-[var(--color-muted)] shrink-0" />
+                    <FirmenflowIcon name="bewertungen-beantworten" size={20} decorative />
                     {simulationMode === "after" ? (
                       <span className="text-blue-700 font-semibold">
                         100 % aller Bewertungen persönlich &amp; wertschätzend beantwortet
@@ -338,7 +306,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     "Echte Fotos aus deinem Betrieb, keine Stockbilder",
                   ].map((pt) => (
                     <li key={pt} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <FirmenflowIcon name="info-hinweis" size={20} decorative />
                       <span>{pt}</span>
                     </li>
                   ))}
@@ -381,7 +349,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     "Niemand wertet aus, was Kunden eigentlich sagen",
                   ].map((pt) => (
                     <li key={pt} className="flex items-start gap-2.5">
-                      <AlertCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
+                      <FirmenflowIcon name="warnung" size={20} decorative />
                       <span>{pt}</span>
                     </li>
                   ))}
@@ -415,7 +383,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           <div className="g360-card-reveal bg-white rounded-3xl p-8 sm:p-12 border-2 border-[var(--color-line)] shadow-xl hover:shadow-2xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200">
-                <MessageSquareCheck className="w-4 h-4" />
+                <FirmenflowIcon name="bewertungen-beantworten" size={20} decorative />
                 <span>01 · Bewertungen beantworten</span>
               </div>
 
@@ -429,9 +397,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-stone-50 border border-stone-100 hover:bg-stone-100/70 transition-colors">
-                  <div className="w-8 h-8 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs mb-2">
-                    ✍️
-                  </div>
+                  <FirmenflowIcon name="texte-copywriting" size={40} decorative className="mb-2" />
                   <strong className="text-[var(--color-ink)] text-sm block mb-1">
                     Klingt nach dir
                   </strong>
@@ -441,9 +407,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </div>
 
                 <div className="p-4 rounded-2xl bg-stone-50 border border-stone-100 hover:bg-stone-100/70 transition-colors">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs mb-2">
-                    🛡️
-                  </div>
+                  <FirmenflowIcon name="datenschutz" size={40} decorative className="mb-2" />
                   <strong className="text-[var(--color-ink)] text-sm block mb-1">
                     Ruhig bleiben, wenn&apos;s Ärger gibt
                   </strong>
@@ -474,9 +438,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           {/* SÄULE 2: Systematischer Aufbau echter Bewertungen */}
           <div className="g360-card-reveal bg-white rounded-3xl p-8 sm:p-12 border-2 border-[var(--color-line)] shadow-xl hover:shadow-2xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 bg-gradient-to-br from-amber-50/80 via-white to-amber-50/40 rounded-2xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-4 order-2 lg:order-1">
-              <div className="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-bold shadow-md">
-                <Star className="w-5 h-5 fill-white text-white" />
-              </div>
+              <FirmenflowIcon name="mehr-bewertungen" size={48} decorative />
               <h4 className="text-lg font-bold text-[var(--color-ink)]">
                 Warum so wenige schreiben:
               </h4>
@@ -490,7 +452,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
             <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-800 text-xs font-bold border border-amber-200">
-                <Star className="w-4 h-4 fill-amber-500 text-amber-500" />
+                <FirmenflowIcon name="mehr-bewertungen" size={20} decorative />
                 <span>02 · Mehr Bewertungen bekommen</span>
               </div>
 
@@ -518,7 +480,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
-                    <CheckCircle2 className="w-4 h-4 text-[var(--color-coral)] shrink-0 mt-0.5" />
+                    <FirmenflowIcon name="mehr-bewertungen" size={24} decorative />
                     <div>
                       <strong className="text-xs sm:text-sm text-[var(--color-ink)] block">
                         {item.title}
@@ -537,7 +499,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           <div className="g360-card-reveal bg-white rounded-3xl p-8 sm:p-12 border-2 border-[var(--color-line)] shadow-xl hover:shadow-2xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">
-                <LineChart className="w-4 h-4" />
+                <FirmenflowIcon name="monatsreport" size={20} decorative />
                 <span>03 · Verstehen, was drinsteht</span>
               </div>
 
@@ -552,7 +514,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200">
                   <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs mb-1">
-                    <ThumbsUp className="w-3.5 h-3.5 text-emerald-600" />
+                    <FirmenflowIcon name="lob" size={24} decorative />
                     <span>Was Kunden loben:</span>
                   </div>
                   <p className="text-xs text-emerald-950 leading-relaxed">
@@ -562,7 +524,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
                 <div className="p-4 rounded-2xl bg-rose-50/80 border border-rose-200">
                   <div className="flex items-center gap-2 text-rose-800 font-bold text-xs mb-1">
-                    <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
+                    <FirmenflowIcon name="wiederkehrendes-problem" size={24} decorative />
                     <span>Wenn sich was häuft:</span>
                   </div>
                   <p className="text-xs text-rose-950 leading-relaxed">
@@ -576,7 +538,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="lg:col-span-5 bg-[var(--color-plum)] text-white rounded-3xl p-6 sm:p-8 shadow-2xl space-y-4 border border-white/15">
               <div className="flex items-center justify-between border-b border-white/20 pb-3">
                 <div className="flex items-center gap-2">
-                  <BarChart3 className="w-4 h-4 text-[var(--color-coral)]" />
+                  <FirmenflowIcon name="monatsreport" size={28} decorative />
                   <span className="text-xs font-mono uppercase tracking-wider text-white font-bold">
                     Monatsreport · Musteranalyse
                   </span>
@@ -607,14 +569,21 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <span className="text-[11px] font-bold text-[var(--color-coral)] uppercase tracking-wider block">
                   Was mir aufgefallen ist:
                 </span>
-                <p className="text-white/90 leading-relaxed">
-                  ✓ 9x Lob für Team-Freundlichkeit am Empfang. <br />
-                  ⚠️ 2x Hinweis auf Wartezeiten bei Stoßzeiten am Samstag.
-                </p>
+                <div className="flex items-start gap-2 text-white/90 leading-relaxed">
+                  <FirmenflowIcon name="lob" size={24} decorative />
+                  <span>9x Lob für Team-Freundlichkeit am Empfang.</span>
+                </div>
+                <div className="flex items-start gap-2 text-white/90 leading-relaxed">
+                  <FirmenflowIcon name="warnung" size={24} decorative />
+                  <span>2x Hinweis auf Wartezeiten bei Stoßzeiten am Samstag.</span>
+                </div>
               </div>
 
               <div className="p-3.5 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-xs text-white/90">
-                <strong className="text-white block mb-0.5">💡 Mein Vorschlag:</strong>
+                <div className="mb-1 flex items-center gap-2">
+                  <FirmenflowIcon name="handlungsempfehlung" size={24} decorative />
+                  <strong className="text-white">Mein Vorschlag:</strong>
+                </div>
                 Samstags zwischen 10:00 und 12:00 Uhr eine zusätzliche Kraft einteilen, um die Wartezeit an der Kasse zu halbieren.
               </div>
             </div>
@@ -623,9 +592,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
         {/* OPTIONALES MODUL: Mitarbeiterschulung */}
         <div className="g360-card-reveal bg-gradient-to-r from-amber-50/80 via-orange-50/50 to-amber-50/80 rounded-3xl p-8 sm:p-12 border-2 border-amber-300/80 shadow-lg flex flex-col md:flex-row items-start md:items-center gap-8 max-w-5xl mx-auto hover:shadow-xl transition-all">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-600 to-amber-500 text-white flex items-center justify-center shrink-0 shadow-lg">
-            <Users className="w-8 h-8" />
-          </div>
+          <FirmenflowIcon name="team-schulung" size={72} decorative />
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200/60 text-amber-900 text-xs font-bold font-mono">
               Optional
@@ -660,51 +627,44 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
+            {([
               {
                 num: "01",
                 title: "Profil aufbauen",
                 desc: "Noch kein Google-Profil? Ich lege es an – mit allen Angaben, Leistungen und echten Fotos.",
-                icon: Building2,
-                color: "text-blue-600 bg-blue-50 border-blue-200",
+                iconName: "profil-einrichten" as const,
               },
               {
                 num: "02",
                 title: "Profil aufräumen",
                 desc: "Falsche Angaben raus, richtige Kategorien rein, Fotos und Texte auf Stand.",
-                icon: Search,
-                color: "text-amber-600 bg-amber-50 border-amber-200",
+                iconName: "profil-aufraeumen" as const,
               },
               {
                 num: "03",
                 title: "Bewertungen beantworten",
                 desc: "Ich lese jede neue Bewertung und antworte in deinem Ton, ohne dass du dran denken musst.",
-                icon: MessageSquareCheck,
-                color: "text-purple-600 bg-purple-50 border-purple-200",
+                iconName: "bewertungen-beantworten" as const,
               },
               {
                 num: "04",
                 title: "Mehr Bewertungen bekommen",
                 desc: "Ein Ablauf, mit dem dein Team im richtigen Moment fragt. Ohne Drängen.",
-                icon: Star,
-                color: "text-emerald-600 bg-emerald-50 border-emerald-200",
+                iconName: "mehr-bewertungen" as const,
               },
               {
                 num: "05",
                 title: "Auswertung",
                 desc: "Was Kunden immer wieder loben – und was sich an Kritik häuft.",
-                icon: LineChart,
-                color: "text-rose-600 bg-rose-50 border-rose-200",
+                iconName: "lob" as const,
               },
               {
                 num: "06",
                 title: "Monatsreport",
                 desc: "Einmal im Monat verständlich zusammengefasst, mit Vergleich zum Vormonat und einem konkreten Vorschlag.",
-                icon: ShieldCheck,
-                color: "text-indigo-600 bg-indigo-50 border-indigo-200",
+                iconName: "monatsreport" as const,
               },
-            ].map((item) => {
-              const Icon = item.icon;
+            ] as const).map((item) => {
               return (
                 <div
                   key={item.num}
@@ -712,9 +672,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <div className={cn("w-10 h-10 rounded-2xl flex items-center justify-center border font-bold", item.color)}>
-                        <Icon className="w-5 h-5" />
-                      </div>
+                      <FirmenflowIcon name={item.iconName} size={48} decorative />
                       <span className="text-xs font-mono font-bold text-stone-400 group-hover:text-[var(--color-coral)] transition-colors">
                         {item.num}
                       </span>
@@ -748,11 +706,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-white border-2 border-[var(--color-line)] shadow-md space-y-5">
-              <div>
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                  Einmalig
-                </span>
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Einrichtung</h3>
+              <div className="flex items-center gap-3">
+                <FirmenflowIcon name="profil-einrichten" size={44} decorative />
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                    Einmalig
+                  </span>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Einrichtung</h3>
+                </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-[var(--color-line)]">
@@ -772,11 +733,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-[var(--color-plum)] text-white border-2 border-[var(--color-plum)] shadow-2xl space-y-5 relative overflow-hidden">
               <div className="absolute -top-20 -right-20 w-52 h-52 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" />
               <div className="relative z-10 space-y-5">
-                <div>
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                    Monatlich
-                  </span>
-                  <h3 className="text-xl font-bold mt-1">Betreuung</h3>
+                <div className="flex items-center gap-3">
+                  <FirmenflowIcon name="monatlich-kuendbar" size={44} decorative />
+                  <div>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+                      Monatlich
+                    </span>
+                    <h3 className="text-xl font-bold mt-1">Betreuung</h3>
+                  </div>
                 </div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-5xl font-display font-bold">99 €</span>
@@ -784,15 +748,15 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </div>
                 <ul className="space-y-2.5 text-sm text-white/90">
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="bewertungen-beantworten" size={24} decorative />
                     <span>Jede neue Bewertung wird beantwortet</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="monatsreport" size={24} decorative />
                     <span>Monatsreport mit konkretem Vorschlag</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-coral)]" />
+                    <FirmenflowIcon name="profil-aufraeumen" size={24} decorative />
                     <span>Profil bleibt aktuell und gepflegt</span>
                   </li>
                 </ul>
@@ -803,11 +767,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </div>
 
             <div className="g360-card-reveal p-7 sm:p-8 rounded-3xl bg-white border-2 border-[var(--color-line)] shadow-md space-y-5">
-              <div>
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                  Wenn du willst
-                </span>
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Dazu buchbar</h3>
+              <div className="flex items-center gap-3">
+                <FirmenflowIcon name="angebot" size={44} decorative />
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                    Wenn du willst
+                  </span>
+                  <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Dazu buchbar</h3>
+                </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-[var(--color-line)]">

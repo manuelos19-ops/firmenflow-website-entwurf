@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Smartphone, Zap, MapPin, Sparkles, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { allProjects, getProject } from "@/content/projects";
 import { getSiteUrl } from "@/lib/site-url";
 import { cn } from "@/lib/cn";
@@ -157,7 +157,7 @@ export default async function ProjectPage({
               {project.name}
             </h1>
             <p className="text-lg sm:text-xl text-[var(--color-coral)] font-medium flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
+              <FirmenflowIcon name="referenzen-portfolio" size={24} decorative />
               <span>{project.sector} · {project.region}</span>
             </p>
           </div>
@@ -168,7 +168,7 @@ export default async function ProjectPage({
             role="note"
             className="flex gap-4 rounded-3xl border-2 border-[var(--color-plum)]/25 bg-[var(--color-plum)]/[0.06] p-6 sm:p-7"
           >
-            <Sparkles className="w-6 h-6 shrink-0 text-[var(--color-plum)]" aria-hidden="true" />
+            <FirmenflowIcon name="referenzen-portfolio" size={28} decorative />
             <div className="space-y-2">
               <h2 className="font-bold text-base sm:text-lg text-[var(--color-ink)]">
                 Konzeptentwurf – kein realer Kundenauftrag
@@ -209,19 +209,19 @@ export default async function ProjectPage({
           {/* Key Deliverables Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <Smartphone className="w-6 h-6 text-[var(--color-coral)] mb-2" />
+              <FirmenflowIcon name="responsive-design" size={40} decorative className="mb-2" />
               <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Mobile First</h3>
               <p className="text-xs text-[var(--color-muted)] mt-1">Klar lesbar auf allen Smartphones.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <Zap className="w-6 h-6 text-emerald-600 mb-2" />
+              <FirmenflowIcon name="performance-ladezeit" size={40} decorative className="mb-2" />
               <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Schnelle Ladezeit</h3>
               <p className="text-xs text-[var(--color-muted)] mt-1">Optimierte Ladezeiten &amp; Bildkomprimierung.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <ShieldCheck className="w-6 h-6 text-[var(--color-plum)] mb-2" />
+              <FirmenflowIcon name="unternehmensprofil" size={40} decorative className="mb-2" />
               <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Lokale Präsenz</h3>
               <p className="text-xs text-[var(--color-muted)] mt-1">Direkte Kontaktwege &amp; Google-Verknüpfung.</p>
             </div>
@@ -230,6 +230,7 @@ export default async function ProjectPage({
           {/* Action CTAs */}
           <div className="pt-8 border-t border-[var(--color-line)] flex flex-col sm:flex-row gap-4">
             <ButtonLink href={project.url} external variant="primary" size="lg" className="flex items-center justify-center gap-2">
+              <FirmenflowIcon name="externer-link" size={24} decorative />
               <span>{project.kind === "live" ? "Live-Website ansehen" : "Live-Demo ansehen"}</span>
             </ButtonLink>
             <ButtonLink href="/#kontakt" variant="secondary" size="lg" className="flex items-center justify-center gap-2">
