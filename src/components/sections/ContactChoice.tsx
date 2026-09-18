@@ -8,7 +8,7 @@ import { siteIdentity } from "@/config/site";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { ArrowRight, ChevronDown, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
@@ -117,7 +117,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                   href="tel:015567277155"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
                 >
-                  <Phone className="w-3.5 h-3.5 text-white" />
+                  <FirmenflowIcon name="telefon" size={18} decorative className="shrink-0" />
                   <span>Manu anrufen</span>
                 </a>
                 <a

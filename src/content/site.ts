@@ -6,7 +6,7 @@ export const homeContent = {
     body: "Ich bin Manu. Ich übernehme Struktur, Texte und Technik, fotografiere auf Wunsch bei dir vor Ort und bringe dein Google-Profil auf Stand. Persönlich mit Manu, mit einem festen Ansprechpartner und einem klaren Preis vor dem Start.",
     primaryCta: "Kostenlose Website-Einschätzung",
     secondaryCta: "Manu anrufen",
-    whatsappCta: "Per WhatsApp schreiben",
+    whatsappCta: "WhatsApp-Chat",
     phone: "0155 67277155",
     phoneTel: "tel:015567277155",
     microcopy: "Kostenlose 3–5-Minuten-Videoanalyse · Direkter Anruf ohne Termin · Klarer Festpreis vor dem Start",

@@ -7,7 +7,7 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
-import { Phone, ArrowRight } from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 interface HeroProps {
   whatsappUrl: string | null;
@@ -15,6 +15,7 @@ interface HeroProps {
 
 export function Hero({ whatsappUrl }: HeroProps) {
   const { hero } = homeContent;
+  const resolvedWhatsappUrl = whatsappUrl || "https://wa.me/4915567277155";
 
   return (
     <section 
@@ -45,8 +46,8 @@ export function Hero({ whatsappUrl }: HeroProps) {
             {hero.body}
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
+          {/* CTAs: Primär (Website-Einschätzung), Sekundär (Manu anrufen) & WhatsApp-Chat in gleicher Größe */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-3.5 mb-4">
             <div className="hero-cta-wrap">
               <MagneticButton>
                 <ButtonLink 
@@ -56,7 +57,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   className="shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
                 >
                   <span>{hero.primaryCta}</span>
-                  <ArrowRight className="w-4 h-4 ml-1 shrink-0" />
                 </ButtonLink>
               </MagneticButton>
             </div>
@@ -69,27 +69,30 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   size="lg"
                   className="hover:border-[var(--color-plum)] text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
                 >
-                  <Phone className="w-4 h-4 mr-2 text-[var(--color-coral)] shrink-0" />
+                  <FirmenflowIcon name="telefon" size={20} decorative priority className="shrink-0" />
                   <span>{hero.secondaryCta}</span>
+                </ButtonLink>
+              </MagneticButton>
+            </div>
+
+            <div className="hero-cta-wrap">
+              <MagneticButton>
+                <ButtonLink 
+                  href={resolvedWhatsappUrl} 
+                  external
+                  variant="whatsapp"
+                  size="lg"
+                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
+                >
+                  <WhatsAppIcon className="w-5 h-5 text-white shrink-0" />
+                  <span>{hero.whatsappCta}</span>
                 </ButtonLink>
               </MagneticButton>
             </div>
           </div>
 
-          {/* WhatsApp Textlink & Microcopy */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-[var(--color-muted)] font-medium">
-            {whatsappUrl && (
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
-              >
-                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600" />
-                <span>{hero.whatsappCta}</span>
-              </a>
-            )}
-            <span className="hidden sm:inline text-stone-300">•</span>
+          {/* Microcopy */}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm text-[var(--color-muted)] font-medium">
             <span>{hero.microcopy}</span>
           </div>
 
