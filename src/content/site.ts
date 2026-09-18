@@ -3,7 +3,7 @@ export const homeContent = {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
     title: ["Websites und Google-Profile,", "die deinen Betrieb vor Ort sichtbar machen."],
     accent: "Deine Website. Persönlich mit Manu.",
-    body: "Ich bin Manu. Ich übernehme Struktur, Texte und Technik, fotografiere auf Wunsch bei dir vor Ort und bringe dein Google-Profil auf Stand. Persönlich mit Manu, mit einem festen Ansprechpartner und einem klaren Preis vor dem Start.",
+    body: "Ich bin Manu. Ich übernehme Struktur, Texte und Technik, fotografiere auf Wunsch bei dir vor Ort und bringe dein Google-Profil auf Stand – alles persönlich mit mir als festem Ansprechpartner und mit einem klaren Festpreis vor dem Start.",
     primaryCta: "Kostenlose Website-Einschätzung",
     secondaryCta: "Manu anrufen",
     whatsappCta: "WhatsApp-Chat",

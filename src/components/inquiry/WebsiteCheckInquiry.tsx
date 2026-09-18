@@ -297,7 +297,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Du möchtest nicht auf das Video warten, sondern direkt sprechen?
                 </h4>
                 <p className="text-xs text-[var(--color-muted)]">
-                  Sichere dir jetzt direkt deinen 30-Minuten-Wunschtermin via meetergo:
+                  Sichere dir jetzt deinen 30-Minuten-Wunschtermin direkt in meinem Kalender:
                 </p>
               </div>
             </div>

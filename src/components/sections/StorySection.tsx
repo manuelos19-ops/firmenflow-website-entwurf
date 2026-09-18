@@ -49,7 +49,7 @@ const storySteps: StoryStep[] = [
     imageAlt: "Illustration: Beispielhafte Szene einer persönlichen Abstimmung am Laptop",
     iconName: "persoenlicher-ansprechpartner",
     highlights: [
-      "Ein fester Ansprechpartner (Manu)",
+      "Ein fester Ansprechpartner: immer ich",
       "Klare Struktur & professionelle Fotos",
       "Google-Profil und Website synchron",
     ],

@@ -74,122 +74,122 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
     >
       <Container className="relative z-20">
         {/* Section Header */}
-        <div className="contact-reveal text-center max-w-3xl mx-auto mb-14 md:mb-16">
-          <span className="badge-eyebrow-dark mb-5">
+        <div className="contact-reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
+          <span className="badge-eyebrow-dark mb-4">
             <BrandIcon variant="light" className="w-4 h-3.5" />
             <span>Persönlich mit Manu</span>
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display leading-[1.08] mb-5">
-            Drei Wege zu deiner Antwort. Du entscheidest.
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display leading-[1.08] mb-4">
+            Lass uns sprechen. Wie es für dich am besten passt.
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            Ganz gleich, ob du kurz anrufst, eine Nachricht schreibst oder dir eine Video-Einschätzung holst: Du tauschst dich immer Persönlich mit Manu aus – transparent, unverbindlich und ohne Verkaufsdruck.
+            Ganz gleich, ob du kurz anrufst, mir eine WhatsApp schreibst oder dir eine Video-Einschätzung holst: Du sprichst immer persönlich mit mir – transparent, auf Augenhöhe und ohne Verkaufsdruck.
           </p>
         </div>
 
-        {/* WEG 1: 4-Stufen-Anfrage direkt auf der Startseite */}
+        {/* 4-Stufen-Anfrage direkt auf der Startseite */}
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
-          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60">
-            Weg 1 · Unverbindliche Projektanfrage (in wenigen Schritten zum Festpreis)
-          </p>
           <div className="double-bezel-outer-dark p-1 sm:p-1.5 rounded-[2.25rem] sm:rounded-[2.75rem] shadow-2xl">
             <ProjectInquiry whatsappUrl={whatsappUrl} />
           </div>
-          {/* WEG 2: Direkt sprechen (wie auf /anfrage) */}
-          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
-            Weg 2 · Persönlicher Direktaustausch (Telefon, WhatsApp oder 30-Minuten-Call)
-          </p>
-          <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="space-y-1">
-                <div className="flex items-center justify-center sm:justify-start gap-2">
-                  <FirmenflowIcon name="termin" size={28} decorative />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-sans">
-                    Du möchtest nicht tippen, sondern lieber direkt sprechen?
-                  </h3>
+
+          {/* Alternative Optionen: Direktkontakt & Video-Check */}
+          <div className="pt-2 space-y-4">
+            <div className="flex items-center gap-4 my-2">
+              <div className="h-px bg-white/10 flex-1" />
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold font-mono">
+                Oder direkt ohne Formular
+              </span>
+              <div className="h-px bg-white/10 flex-1" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Option A: Direkt sprechen */}
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between gap-4">
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <FirmenflowIcon name="termin" size={24} decorative />
+                    <h3 className="text-base font-bold text-white font-sans">
+                      Lieber direkt sprechen?
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                    Ruf mich an, sichere dir einen freien 30-Minuten-Termin in meinem Kalender oder schreib mir unkompliziert per WhatsApp.
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-white/75">
-                  Ruf mich direkt an, schnapp dir einen freien 30-Minuten-Termin in Manus Kalender oder schreib unkompliziert per WhatsApp.
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
-                <a
-                  href="tel:015567277155"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
-                >
-                  <FirmenflowIcon name="telefon" size={18} decorative className="shrink-0" />
-                  <span>Manu anrufen</span>
-                </a>
-                <a
-                  href={siteIdentity.meetergoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackMeetergoClick("contact_section")}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[var(--color-coral)] hover:bg-[#e44d39] !text-white text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
-                  style={{ color: "#ffffff" }}
-                >
-                  <FirmenflowIcon name="termin" size={20} decorative />
-                  <span className="!text-white text-white">30 Min. Call buchen</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-white" />
-                </a>
-                {whatsappUrl && (
+                <div className="flex flex-wrap items-center gap-2.5 pt-1">
                   <a
-                    href={whatsappUrl}
+                    href="tel:015567277155"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/20 text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                  >
+                    <FirmenflowIcon name="telefon" size={16} decorative className="shrink-0" />
+                    <span>Anrufen</span>
+                  </a>
+                  <a
+                    href={siteIdentity.meetergoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackWhatsAppClick("contact_section")}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                    onClick={() => trackMeetergoClick("contact_section")}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[var(--color-coral)] hover:bg-[#e44d39] !text-white text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                    style={{ color: "#ffffff" }}
                   >
-                    <WhatsAppIcon className="w-4 h-4 text-white" />
-                    <span>WhatsApp</span>
+                    <FirmenflowIcon name="termin" size={16} decorative />
+                    <span className="!text-white text-white">30 Min. Call</span>
+                    <ArrowRight className="w-3 h-3 text-white" />
                   </a>
-                )}
-              </div>
-            </div>
-          </div>
-          {/* WEG 3: Video-Analyse (gleiche Box-Optik, Formular aufklappbar) */}
-          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
-            Weg 3 · Kostenlose Video-Einschätzung deiner Website (3–5 Minuten Video)
-          </p>
-          <div id="website-check" className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left scroll-mt-28">
-            <div id="videoanalyse" className="sr-only" />
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="space-y-1">
-                <div className="flex items-center justify-center sm:justify-start gap-2">
-                  <FirmenflowIcon name="video-website-check" size={28} decorative />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-sans">
-                    Lieber erst eine kostenlose Video-Einschätzung deiner Website?
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-white/75">
-                  Ich schaue mir deine aktuelle Website an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setVideoOpen((v) => !v)}
-                aria-expanded={videoOpen}
-                aria-controls="website-check-form-wrapper"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95 shrink-0 cursor-pointer"
-              >
-                <span>{videoOpen ? "Formular schließen" : "Video-Analyse anfordern"}</span>
-                <ChevronDown
-                  className={cn(
-                    "w-3.5 h-3.5 text-white/80 transition-transform duration-300",
-                    videoOpen && "rotate-180"
+                  {whatsappUrl && (
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick("contact_section")}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                    >
+                      <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
+                      <span>WhatsApp</span>
+                    </a>
                   )}
-                />
-              </button>
+                </div>
+              </div>
+
+              {/* Option B: Video-Einschätzung */}
+              <div id="website-check" className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between gap-4 scroll-mt-28">
+                <div id="videoanalyse" className="sr-only" />
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <FirmenflowIcon name="video-website-check" size={24} decorative />
+                    <h3 className="text-base font-bold text-white font-sans">
+                      Kostenlose Video-Einschätzung
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
+                    Ich schaue mir deine Website an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
+                  </p>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => setVideoOpen((v) => !v)}
+                    aria-expanded={videoOpen}
+                    aria-controls="website-check-form-wrapper"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                  >
+                    <span>{videoOpen ? "Formular schließen" : "Video-Analyse anfordern"}</span>
+                    <ChevronDown
+                      className={cn(
+                        "w-3.5 h-3.5 text-white/80 transition-transform duration-300",
+                        videoOpen && "rotate-180"
+                      )}
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
+
+            {/* Video-Check Formular (aufgeklappt) */}
             {videoOpen && (
-              <div id="website-check-form-wrapper" className="pt-2">
+              <div id="website-check-form-wrapper" className="pt-2 animate-in fade-in duration-300">
                 <WebsiteCheckInquiry />
-                <p className="text-center text-xs text-white/50 pt-3 pb-1">
-                  Nur eine kurze Ersteinschätzung{" "}
-                  <Link href="/anfrage" className="underline hover:text-white transition-colors">
-                    für konkrete Projekte nutze die Anfrage oben
-                  </Link>.
-                </p>
               </div>
             )}
           </div>

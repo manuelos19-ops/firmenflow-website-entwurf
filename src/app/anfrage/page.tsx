@@ -91,11 +91,19 @@ export default function AnfragePage() {
                 </h3>
               </div>
               <p className="text-xs sm:text-sm text-[var(--color-muted)]">
-                Schnapp dir direkt einen freien 30-Minuten-Termin in Manus Kalender oder schreib unkompliziert per WhatsApp.
+                Ruf mich an, sichere dir einen freien 30-Minuten-Termin in meinem Kalender oder schreib mir unkompliziert per WhatsApp.
               </p>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <a
+                href="tel:015567277155"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-[var(--color-ink)] text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+              >
+                <FirmenflowIcon name="telefon" size={18} decorative className="shrink-0" />
+                <span>Anrufen</span>
+              </a>
+
               <a
                 href={siteIdentity.meetergoUrl}
                 target="_blank"
