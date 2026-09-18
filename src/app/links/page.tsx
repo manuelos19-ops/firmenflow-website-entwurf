@@ -3,13 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ExternalLink,
-  MessageCircle,
-  Phone,
-  Mail,
-  Sparkles,
   MapPin,
   ArrowUpRight,
-  CloudSun,
   Download,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -20,6 +15,8 @@ import {
   showcaseLinks,
 } from "@/content/links";
 import { CopyLinkButton } from "@/components/links/CopyLinkButton";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Manu · Projekte, PWAs & Links",
@@ -126,15 +123,13 @@ export default function LinksPage() {
                 <div
                   className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center mb-1.5 transition-transform group-hover:scale-110 ${
                     isWhatsApp
-                      ? "bg-emerald-500 text-white shadow-sm shadow-emerald-500/30"
-                      : isPhone
-                      ? "bg-amber-100 text-amber-800"
-                      : "bg-sky-100 text-sky-800"
+                      ? "bg-[#25D366] text-white shadow-sm shadow-[#25D366]/30"
+                      : "bg-white border border-[var(--color-line)] shadow-sm"
                   }`}
                 >
-                  {isWhatsApp && <MessageCircle className="w-5 h-5 fill-current" />}
-                  {isPhone && <Phone className="w-4 h-4" />}
-                  {contact.icon === "mail" && <Mail className="w-4 h-4" />}
+                  {isWhatsApp && <WhatsAppIcon className="w-5 h-5 text-white" />}
+                  {isPhone && <FirmenflowIcon name="telefon" size={24} decorative />}
+                  {contact.icon === "mail" && <FirmenflowIcon name="email" size={24} decorative />}
                 </div>
                 <span className="text-xs font-bold leading-tight line-clamp-1">
                   {contact.label}
@@ -158,13 +153,7 @@ export default function LinksPage() {
           <div className="space-y-3.5">
             {primaryLinks.map((item) => {
               const isHighlight = item.highlight;
-              const isFlowray = item.id === "flowray";
-              const isFlowalyzer = item.id === "flowalyzer";
-              const isFoundersflow = item.id === "foundersflow";
-              const isGscflow = item.id === "gscflow";
               const isFlowscreen = item.id === "flowscreen";
-              const isClimanu = item.id === "climanu";
-              const isMain = item.id === "firmenflow-main";
               const isDownload = item.url.endsWith(".exe");
 
               return (
@@ -181,94 +170,18 @@ export default function LinksPage() {
                   } hover:-translate-y-0.5`}
                 >
                   <div className="flex items-start gap-3.5 sm:gap-4">
-                    {/* Visual Icon / Thumbnail */}
+                    {/* Visual Icon / Thumbnail: Neues 3D-Glas-App-Icon */}
                     <div className="shrink-0 pt-0.5">
-                      {isHighlight && (
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--color-coral)] to-amber-500 text-white flex items-center justify-center shadow-md shadow-[var(--color-coral)]/30 group-hover:scale-105 transition-transform">
-                          <Sparkles className="w-6 h-6" />
-                        </div>
-                      )}
-                      {isFlowray && (
-                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
-                          <Image
-                            src={item.image || "/brand/flowray-mark.webp"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
-                      {isFlowalyzer && (
-                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
-                          <Image
-                            src={item.image || "/brand/flowalyzer-mark.webp"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
-                      {isFoundersflow && (
-                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
-                          <Image
-                            src={item.image || "/brand/foundersflow-mark.webp"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
-                      {isGscflow && (
-                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
-                          <Image
-                            src={item.image || "/brand/gscflow-mark.webp"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
-                      {isFlowscreen && (
-                        <div className="w-12 h-12 rounded-xl bg-[#17131A] border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1">
-                          <Image
-                            src={item.image || "/brand/flowscreen-mark.png"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
-                      {isClimanu && (
-                        <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center shadow-md shadow-sky-500/25 group-hover:scale-105 transition-transform overflow-hidden relative">
-                          {item.image ? (
-                            <Image
-                              src={item.image}
-                              alt={item.title}
-                              fill
-                              sizes="48px"
-                              className="object-cover"
-                            />
-                          ) : (
-                            <CloudSun className="w-6 h-6" />
-                          )}
-                        </div>
-                      )}
-                      {isMain && (
-                        <div className="w-12 h-12 rounded-xl bg-white border border-[var(--color-line)] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden relative p-1.5">
-                          <Image
-                            src={item.image || "/brand/firmenflow-mark.webp"}
-                            alt={item.title}
-                            fill
-                            sizes="48px"
-                            className="object-contain p-0.5"
-                          />
-                        </div>
-                      )}
+                      <div className="relative w-12 h-12 sm:w-14 sm:h-14 group-hover:scale-105 transition-transform drop-shadow-md">
+                        <Image
+                          src={item.image || "/brand/app-icons/firmenflow-app-icon-v1.png"}
+                          alt={item.title}
+                          fill
+                          sizes="(max-width: 640px) 48px, 56px"
+                          className="object-contain"
+                          priority={item.highlight}
+                        />
+                      </div>
                     </div>
 
                     {/* Content */}
