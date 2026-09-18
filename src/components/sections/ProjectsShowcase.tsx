@@ -320,13 +320,13 @@ export function ProjectsShowcase() {
 
                     <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                          Echte Website, live
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-600 text-white rounded-full shadow-md">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                          {project.badge}
                         </span>
                       ) : (
                         <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-semibold bg-[var(--color-plum)] text-white rounded-full shadow-md">
-                          Freier Entwurf, kein Auftrag
+                          {project.badge}
                         </span>
                       )}
                     </div>
@@ -405,15 +405,14 @@ export function ProjectsShowcase() {
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">
                   Projekt {activeIndex + 1} von {totalCards}
                 </span>
-                {activeProject.kind === "live" ? (
-                  <span className="px-2.5 py-0.5 text-[11px] font-semibold bg-emerald-100 text-emerald-800 rounded-full">
-                    Live-Website
-                  </span>
-                ) : (
-                  <span className="px-2.5 py-0.5 text-[11px] font-medium bg-[var(--color-plum)]/10 text-[var(--color-plum)] rounded-full">
-                    Konzeptentwurf
-                  </span>
-                )}
+                <span className={cn(
+                  "px-2.5 py-0.5 text-[11px] font-semibold rounded-full",
+                  activeProject.kind === "live"
+                    ? "bg-emerald-100 text-emerald-800"
+                    : "bg-[var(--color-plum)]/10 text-[var(--color-plum)]"
+                )}>
+                  {activeProject.badge}
+                </span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-display text-[var(--color-ink)] font-bold truncate max-w-[270px] sm:max-w-md">
                 {activeProject.name}
@@ -467,7 +466,7 @@ export function ProjectsShowcase() {
               </p>
             </div>
 
-            {/* Action Buttons: Internal Case Study Link + Direct External Website */}
+            {/* Action Buttons: Internal Details Link + Direct External Website */}
             <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
               {activeProject.kind === "live" ? (
                 <>
@@ -475,7 +474,7 @@ export function ProjectsShowcase() {
                     href={`/projekte/${activeProject.slug}`}
                     className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
                   >
-                    <span>Case Study ansehen</span>
+                    <span>Umsetzung im Detail</span>
                     <ArrowRight className="w-4 h-4 text-white shrink-0" />
                   </Link>
                   <a
@@ -494,7 +493,7 @@ export function ProjectsShowcase() {
                     href={`/projekte/${activeProject.slug}`}
                     className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
                   >
-                    <span>Showcase ansehen</span>
+                    <span>Konzept im Detail</span>
                     <ArrowRight className="w-4 h-4 text-white shrink-0" />
                   </Link>
                   <a

@@ -181,7 +181,7 @@ export function GoogleBusinessPilot() {
                 <FirmenflowIcon name="profil-einrichten" size={56} decorative className="mb-4" />
                 <h3 className="text-lg font-bold font-sans text-white mb-2">1. Profil einrichten und aufräumen</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Richtige Kategorien, vollständige Angaben, echte Fotos aus deinem Betrieb. Damit dein Eintrag überhaupt gefunden wird.
+                  Richtige Kategorien, vollständige Angaben, echte Fotos aus deinem Betrieb. Damit Google dein Angebot und deinen Standort korrekt einordnen kann.
                 </p>
               </div>
             </div>

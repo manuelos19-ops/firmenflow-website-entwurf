@@ -26,47 +26,47 @@ interface StoryStep {
 const storySteps: StoryStep[] = [
   {
     number: "01",
-    tag: "01 · Ausgangslage",
+    tag: "01 · Typische Ausgangslage",
     tagVariant: "problem",
-    title: "Vor Ort geschätzt – aber online kaum zu finden.",
-    body: "Seit Jahren läuft der Betrieb über Empfehlung. Die Website ist von damals, das Google-Profil hat nie jemand angefasst. Funktioniert – solange die Stammkunden bleiben.",
+    title: "Gute Arbeit vor Ort – aber online unvollständig oder veraltet.",
+    body: "Der Betrieb läuft oft über Empfehlungen, doch wer online nach Öffnungszeiten oder Leistungen sucht, findet veraltete Angaben oder eine Seite, die auf dem Smartphone kaum lesbar ist.",
     image: "/media/story/story-1-unsichtbar.webp",
-    imageAlt: "Inhaber steht vor seinem Betrieb, Passanten schauen auf Smartphones",
+    imageAlt: "Illustration: Beispielhafte Szene eines Betriebs mit veralteter Online-Präsenz",
     iconName: "analyse",
     highlights: [
-      "Veraltete oder fehlende Website",
-      "Google-Maps-Profil ungenutzt",
-      "Neue Kunden suchen woanders",
+      "Veraltete oder unvollständige Website",
+      "Google-Unternehmensprofil nicht gepflegt",
+      "Wichtige Infos mobil schwer auffindbar",
     ],
   },
   {
     number: "02",
-    tag: "02 · Mit Manu",
+    tag: "02 · So arbeite ich",
     tagVariant: "solution",
-    title: "Kein Agentur-Theater: Persönlich mit Manu an einem Tisch.",
-    body: "Wir setzen uns zusammen – bei dir, im Café oder am Telefon. Du erzählst, was du machst und wer deine Kunden sind. Danach baue ich deine Seite um oder von Grund auf neu.",
+    title: "Persönlich mit Manu: Struktur, Fotos und Technik aus einer Hand.",
+    body: "Wir besprechen deine wichtigsten Leistungen und Kunden. Ich erstelle die Struktur, schreibe verständliche Texte, mache auf Wunsch Fotos vor Ort und richte dein Google-Profil sauber ein.",
     image: "/media/story/story-2-loesung-manu.webp",
-    imageAlt: "Manu und Inhaber besprechen die neue Website am Laptop",
+    imageAlt: "Illustration: Beispielhafte Szene einer persönlichen Abstimmung am Laptop",
     iconName: "persoenlicher-ansprechpartner",
     highlights: [
       "Ein fester Ansprechpartner (Manu)",
-      "Schnelle Website fürs Smartphone",
-      "Google-Unternehmensprofil startklar",
+      "Klare Struktur & professionelle Fotos",
+      "Google-Profil und Website synchron",
     ],
   },
   {
     number: "03",
-    tag: "03 · Das Ergebnis",
+    tag: "03 · Was danach besser funktioniert",
     tagVariant: "success",
-    title: "Wer sucht, findet dich – und sieht sofort, was du kannst.",
-    body: "Ein aktuelles Google-Profil, echte Fotos aus deinem Betrieb, eine Seite die auf dem Handy sofort lädt. Der Weg zum Anruf ist ein Klick lang.",
+    title: "Ein aufgeräumter Gesamteindruck, der Interessenten Orientierung gibt.",
+    body: "Aktuelle Öffnungszeiten, verständliche Leistungen und ein direkter Weg zum Anruf oder zur Anfrage. Website und Google-Profil zeigen den Betrieb so, wie er wirklich arbeitet.",
     image: "/media/story/story-3-voller-erfolg.webp",
-    imageAlt: "Volles Café mit glücklichen Gästen, Inhaber und Manu freuen sich gemeinsam über den Erfolg",
+    imageAlt: "Illustration: Beispielhafte Szene eines modern und verlässlich aufgestellten Betriebs",
     iconName: "mehr-anfragen",
     highlights: [
-      "Sichtbar bei Google & Maps",
-      "Direkter Kontakt per Anruf oder Klick",
-      "Anfragen von neuen Kunden",
+      "Leistungen verständlich dargestellt",
+      "Öffnungszeiten & Kontaktdaten aktuell",
+      "Leichtere Kontaktaufnahme per Klick",
     ],
   },
 ];
@@ -116,13 +116,13 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="badge-eyebrow mb-5">
             <BrandIcon className="w-3.5 h-3" />
-            <span>Aus der Praxis</span>
+            <span>Beispielhafter Ablauf</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
-            Vom Geheimtipp zum ersten Treffer bei Google.
+            So wird aus einem veralteten Auftritt ein klarer digitaler erster Eindruck.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Ausgangslage, Zusammenarbeit, Ergebnis.
+            Ein typisches Beispiel dafür, wie Website, Fotos und Google-Profil zusammenspielen. Keine Fallstudie und keine Ranking-Zusage.
           </p>
         </div>
 

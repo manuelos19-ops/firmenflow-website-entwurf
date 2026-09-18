@@ -90,7 +90,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </p>
 
             <p className="g360-hero-body text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl">
-              Egal ob Bäckerei, Handyladen oder Heizungsbauer: Wer am Niederrhein sucht, schaut zuerst auf Google Maps. Sterne, Fotos, letzte Bewertung – in drei Sekunden steht fest, wer angerufen wird. <strong>Ich sorge dafür, dass du das bist.</strong>
+              Egal ob Bäckerei, Handyladen oder Heizungsbauer: Wer am Niederrhein sucht, schaut zuerst auf Google Maps. Sterne, Fotos, letzte Bewertung – in drei Sekunden steht fest, wer angerufen wird. <strong>Ich sorge dafür, dass dein Auftritt vollständig, aktuell und vertrauenswürdig wirkt.</strong>
             </p>
 
             {/* CTAs */}
@@ -136,7 +136,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 )}
               >
                 <FirmenflowIcon name="warnung" size={16} decorative />
-                <span>Typischer Betrieb</span>
+                <span>Vorher: ungepflegt</span>
               </button>
 
               <button
@@ -150,7 +150,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 )}
               >
                 <BrandIcon size="xs" variant={simulationMode === "after" ? "light" : "dark"} />
-                <span>Mit Lokalpräsenz 360°</span>
+                <span>Nachher: sauber aufgesetzt</span>
               </button>
             </div>
 
@@ -165,14 +165,14 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                       Brancheneintrag-Vorschau
                     </span>
                     <span className="text-xs font-semibold text-[var(--color-ink)]">
-                      {simulationMode === "before" ? "Unvollständiges Profil" : "Top gepflegter Firmenflow-Auftritt"}
+                      {simulationMode === "before" ? "Ungepflegtes Profil mit Lücken" : "Sauber aufgesetzter & aktiv gepflegter Auftritt"}
                     </span>
                   </div>
                 </div>
                 {simulationMode === "after" && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">
                     <FirmenflowIcon name="profil-aufraeumen" size={16} decorative />
-                    <span>Vollständig optimiert</span>
+                    <span>Vollständig eingerichtet</span>
                   </span>
                 )}
               </div>
@@ -194,12 +194,17 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   </p>
                 </div>
 
-                {/* Stars & Reviews */}
+                {/* Profile Completeness & Quality */}
                 <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
-                  <FirmenflowIcon name="mehr-bewertungen" size={28} decorative />
-                  <span className="text-sm font-bold text-[var(--color-ink)]">
-                    {simulationMode === "after" ? "5,0 Sterne (52 Bewertungen)" : "3,4 Sterne (5 Bewertungen)"}
-                  </span>
+                  <FirmenflowIcon name="profil-aufraeumen" size={24} decorative />
+                  <div>
+                    <span className="text-xs font-bold text-[var(--color-ink)] block">
+                      {simulationMode === "after" ? "Vollständige Angaben & verifizierte Kategorien" : "Lückenhafte Angaben & falsche Hauptkategorie"}
+                    </span>
+                    <span className="text-[11px] text-[var(--color-muted)]">
+                      {simulationMode === "after" ? "Alle Kernbereiche, Leistungen & Kontaktwege gepflegt" : "Wichtige Suchbegriffe & Leistungen fehlen"}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Status Indicator */}
@@ -231,33 +236,36 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   </div>
                 </div>
 
-                {/* Sample Review Snapshot */}
+                {/* Review Management Snapshot */}
                 <div className="pt-3 border-t border-stone-100 text-xs space-y-2">
                   <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
-                    Letzte Kundenstimme:
+                    Rezensions-Management:
                   </span>
                   {simulationMode === "after" ? (
-                    <div className="p-3 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-2">
-                      <p className="text-emerald-950 font-medium italic">
-                        „Hervorragende Beratung und super freundliches Team! Man fühlt sich sofort gut aufgehoben.“
+                    <div className="p-3 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-1.5">
+                      <p className="text-emerald-950 font-medium">
+                        Aktiver Feedback-Prozess &amp; persönliche Antworten auf Kundenfeedback
                       </p>
-                      <div className="pl-2 border-l-2 border-emerald-600 text-[11px] text-emerald-800">
-                        <strong>Antwort vom Inhaber:</strong> Vielen Dank für die lieben Worte! Es war uns eine echte Freude, euch zu unterstützen.
-                      </div>
+                      <p className="text-[11px] text-emerald-800">
+                        Zeigt potenziellen Kunden, dass der Betrieb aktiv erreichbar ist und Rückmeldungen ernst nimmt.
+                      </p>
                     </div>
                   ) : (
                     <div className="p-3 bg-rose-50/70 border border-rose-200 rounded-xl space-y-1">
-                      <p className="text-rose-950 font-medium italic">
-                        „Stand vor verschlossener Tür, obwohl online geöffnet stand. Schade...“
+                      <p className="text-rose-950 font-medium">
+                        Keine Antworten auf Kundenfeedback oder Fragen
                       </p>
                       <p className="text-[11px] text-rose-600 italic">
-                        (Unbeantwortet seit 7 Monaten)
+                        (Letzte Rezensionen seit Monaten unkommentiert – wirkt inaktiv)
                       </p>
                     </div>
                   )}
                 </div>
               </div>
             </div>
+            <p className="text-[11px] text-stone-400 text-center mt-2.5">
+              Beispielhafte Profilvorschau – keine Kundenergebnisse oder Ranking-Zusage.
+            </p>
           </div>
         </div>
 
@@ -301,7 +309,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   {[
                     "Profil einrichten oder ein vorhandenes übernehmen",
                     "Name, Adresse, Telefon überall identisch – Google mag Widersprüche nicht",
-                    "Die richtige Hauptkategorie – der größte einzelne Hebel fürs Ranking",
+                    "Die richtige Hauptkategorie – wichtige Grundlage für die lokale Einordnung",
                     "Öffnungszeiten, die stimmen – Google wertet das inzwischen mit",
                     "Echte Fotos aus deinem Betrieb, keine Stockbilder",
                   ].map((pt) => (

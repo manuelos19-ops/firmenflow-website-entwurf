@@ -61,7 +61,7 @@ export function ServiceOverview() {
             Alles aus einer Hand für deinen Betrieb.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
-            Ob Neuaufbau, Relaunch oder echte Foto- und Videoaufnahmen vor Ort: Jeder Betrieb erhält eine maßgeschneiderte Lösung, die Interessenten in Kunden verwandelt.
+            Ob Neuaufbau, Relaunch oder echte Foto- und Videoaufnahmen vor Ort: Jeder Betrieb erhält eine maßgeschneiderte Lösung, die Leistungen verständlich zeigt und die Kontaktaufnahme einfach macht.
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export function ServiceOverview() {
                   <FirmenflowIcon name="seo-schutz" size={36} decorative />
                   <div>
                     <p className="text-xs text-[var(--color-muted)] font-medium">Sicherheit</p>
-                    <p className="text-sm font-bold text-[var(--color-ink)]">SEO-Rankings safe</p>
+                    <p className="text-sm font-bold text-[var(--color-ink)]">Sichtbarkeit schützen</p>
                   </div>
                 </div>
 

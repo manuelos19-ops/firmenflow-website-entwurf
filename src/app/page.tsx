@@ -3,6 +3,8 @@ import { DirectWithManu } from "@/components/sections/DirectWithManu";
 import { Faq } from "@/components/sections/Faq";
 import { GoogleBusinessPilot } from "@/components/sections/GoogleBusinessPilot";
 import { Hero } from "@/components/sections/Hero";
+import { TrustCommitmentSection } from "@/components/sections/TrustCommitmentSection";
+import { FeaturedWorkSampleSection } from "@/components/sections/FeaturedWorkSampleSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { StorySection } from "@/components/sections/StorySection";
 import { ServiceOverview } from "@/components/sections/ServiceOverview";
@@ -19,6 +21,8 @@ export default function HomePage() {
   return (
     <main id="main">
       <Hero whatsappUrl={whatsappUrl} />
+      <TrustCommitmentSection />
+      <FeaturedWorkSampleSection />
       <ProblemSection />
       <StorySection />
       <ServiceOverview />

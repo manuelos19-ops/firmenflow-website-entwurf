@@ -4,6 +4,10 @@ import { useState } from "react";
 import { 
   ArrowRight, 
   Loader2, 
+  Globe, 
+  User, 
+  Mail, 
+  Phone,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { siteIdentity } from "@/config/site";
@@ -99,7 +103,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               Kostenlose Website-Prüfung per Video
             </h3>
             <p className="text-sm sm:text-base text-[var(--color-muted)] max-w-2xl leading-relaxed">
-              Trage einfach deine Webadresse ein. Ich schaue mir deinen Auftritt persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Hebeln direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
+              Trage einfach deine Webadresse ein. Ich schaue mir deinen aktuellen Auftritt persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Verbesserungsmöglichkeiten direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
             </p>
           </div>
 
@@ -112,6 +116,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Website-Adresse deines Betriebs {!noWebsite && <span className="text-[var(--color-coral)]">*</span>}
                 </label>
                 <div className="relative">
+                  <Globe className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                   <input
                     id="audit-website"
                     type="text"
@@ -119,6 +124,8 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                     value={websiteUrl}
                     onChange={(e) => setWebsiteUrl(e.target.value)}
                     placeholder={noWebsite ? "Wird neu erstellt (keine Website vorhanden)" : "z. B. www.mein-betrieb.de"}
+                    aria-invalid={!!fieldErrors.websiteUrl}
+                    aria-describedby={fieldErrors.websiteUrl ? "audit-website-error" : undefined}
                     className={cn(
                       "w-full pl-11 pr-4 py-3 rounded-xl border bg-[var(--color-paper)]/50 text-sm sm:text-base text-[var(--color-ink)] transition-all focus:bg-white focus:outline-none focus:ring-2",
                       noWebsite && "opacity-60 bg-gray-100 cursor-not-allowed",
@@ -129,7 +136,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   />
                 </div>
                 {fieldErrors.websiteUrl && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.websiteUrl}</p>
+                  <p id="audit-website-error" className="text-xs text-red-500 mt-1">{fieldErrors.websiteUrl}</p>
                 )}
 
                 {/* Checkbox für Neugründung */}
@@ -153,6 +160,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Dein Name oder Betrieb <span className="text-[var(--color-coral)]">*</span>
                 </label>
                 <div className="relative">
+                  <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                   <input
                     id="audit-name"
                     type="text"
@@ -160,6 +168,8 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="z. B. Manuel Landeck"
+                    aria-invalid={!!fieldErrors.name}
+                    aria-describedby={fieldErrors.name ? "audit-name-error" : undefined}
                     className={cn(
                       "w-full pl-11 pr-4 py-3 rounded-xl border bg-[var(--color-paper)]/50 text-sm sm:text-base text-[var(--color-ink)] transition-all focus:bg-white focus:outline-none focus:ring-2",
                       fieldErrors.name 
@@ -169,7 +179,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   />
                 </div>
                 {fieldErrors.name && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.name}</p>
+                  <p id="audit-name-error" className="text-xs text-red-500 mt-1">{fieldErrors.name}</p>
                 )}
               </div>
 
@@ -179,6 +189,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   E-Mail-Adresse für das Video <span className="text-[var(--color-coral)]">*</span>
                 </label>
                 <div className="relative">
+                  <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                   <input
                     id="audit-email"
                     type="email"
@@ -186,6 +197,8 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@betrieb.de"
+                    aria-invalid={!!fieldErrors.email}
+                    aria-describedby={fieldErrors.email ? "audit-email-error" : undefined}
                     className={cn(
                       "w-full pl-11 pr-4 py-3 rounded-xl border bg-[var(--color-paper)]/50 text-sm sm:text-base text-[var(--color-ink)] transition-all focus:bg-white focus:outline-none focus:ring-2",
                       fieldErrors.email 
@@ -195,7 +208,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   />
                 </div>
                 {fieldErrors.email && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.email}</p>
+                  <p id="audit-email-error" className="text-xs text-red-500 mt-1">{fieldErrors.email}</p>
                 )}
               </div>
 
@@ -205,6 +218,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                   Telefonnummer <span className="text-xs font-normal text-[var(--color-muted)]">(optional, für eventuelle Rückfragen zur Seite)</span>
                 </label>
                 <div className="relative">
+                  <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
                   <input
                     id="audit-phone"
                     type="tel"

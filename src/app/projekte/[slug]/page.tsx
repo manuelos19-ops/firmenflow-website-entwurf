@@ -22,7 +22,7 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
-  const kindLabel = project.kind === "live" ? "Webdesign Case Study" : "Webdesign Konzeptentwurf";
+  const kindLabel = project.badge;
 
   return {
     title: `${project.name} – ${kindLabel}`,
@@ -79,13 +79,10 @@ export default async function ProjectPage({
   const creativeWorkSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "@id": `${baseUrl}/projekte/${project.slug}#case`,
+    "@id": `${baseUrl}/projekte/${project.slug}#detail`,
     url: `${baseUrl}/projekte/${project.slug}`,
     name: `${project.name} – Webdesign & Lokalpräsenz`,
-    headline:
-      project.kind === "live"
-        ? `${project.name} – Case Study`
-        : `${project.name} – Konzeptentwurf (kein Kundenauftrag)`,
+    headline: `${project.name} – ${project.badge}`,
     description: project.summary,
     image: `${baseUrl}${project.image}`,
     inLanguage: "de-DE",
@@ -195,19 +192,54 @@ export default async function ProjectPage({
           />
         </div>
 
-        {/* Substantive Case Study Body */}
+        {/* Projekt-Details */}
         <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 border border-[var(--color-line)] shadow-xl space-y-10">
           <div>
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)] mb-4">
-              Projektübersicht &amp; Zielsetzung
+              Projektübersicht &amp; Einordnung
             </h2>
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
               {project.summary}
             </p>
           </div>
 
+          {/* Transparente Projektdaten */}
+          <div className="space-y-4 pt-6 border-t border-gray-100">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">
+              Transparente Projektangaben
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/60 space-y-1.5">
+                <span className="text-xs font-bold text-stone-500 block uppercase tracking-wide">
+                  Was ist das für ein Projekt?
+                </span>
+                <p className="text-xs sm:text-sm text-[var(--color-ink)] font-medium leading-relaxed">
+                  {project.nature}
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/60 space-y-1.5">
+                <span className="text-xs font-bold text-stone-500 block uppercase tracking-wide">
+                  Was hat Firmenflow umgesetzt?
+                </span>
+                <p className="text-xs sm:text-sm text-[var(--color-ink)] font-medium leading-relaxed">
+                  {project.scope}
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/60 space-y-1.5">
+                <span className="text-xs font-bold text-stone-500 block uppercase tracking-wide">
+                  Was kannst du daran prüfen?
+                </span>
+                <p className="text-xs sm:text-sm text-[var(--color-ink)] font-medium leading-relaxed">
+                  {project.verifiable}
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Key Deliverables Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-100">
             <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
               <FirmenflowIcon name="responsive-design" size={40} decorative className="mb-2" />
               <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Mobile First</h3>

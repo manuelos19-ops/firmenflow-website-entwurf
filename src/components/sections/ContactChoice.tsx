@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
@@ -8,7 +8,7 @@ import { siteIdentity } from "@/config/site";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Phone } from "lucide-react";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
@@ -21,6 +21,29 @@ interface ContactChoiceProps {
 export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [videoOpen, setVideoOpen] = useState(false);
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = typeof window !== "undefined" ? window.location.hash : "";
+      if (hash === "#website-check" || hash === "#videoanalyse") {
+        setVideoOpen(true);
+        setTimeout(() => {
+          const el = document.getElementById("website-check");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+            const firstInput = el.querySelector<HTMLInputElement>("input:not([type=hidden]):not([disabled])");
+            if (firstInput) {
+              firstInput.focus();
+            }
+          }
+        }, 150);
+      }
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
 
   useGSAP(
     () => {
@@ -67,14 +90,14 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
         {/* WEG 1: 4-Stufen-Anfrage direkt auf der Startseite */}
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
           <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60">
-            Weg 1 · Für alle, die es schriftlich mögen (ca. 2 Minuten)
+            Weg 1 · Unverbindliche Projektanfrage (in wenigen Schritten zum Festpreis)
           </p>
           <div className="double-bezel-outer-dark p-1 sm:p-1.5 rounded-[2.25rem] sm:rounded-[2.75rem] shadow-2xl">
             <ProjectInquiry whatsappUrl={whatsappUrl} />
           </div>
           {/* WEG 2: Direkt sprechen (wie auf /anfrage) */}
           <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
-            Weg 2 · Für alle, die lieber sprechen als tippen
+            Weg 2 · Persönlicher Direktaustausch (Telefon, WhatsApp oder 30-Minuten-Call)
           </p>
           <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -86,10 +109,17 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-white/75">
-                  Schnapp dir direkt einen freien 30-Minuten-Termin in Manus Kalender oder schreib unkompliziert per WhatsApp.
+                  Ruf mich direkt an, schnapp dir einen freien 30-Minuten-Termin in Manus Kalender oder schreib unkompliziert per WhatsApp.
                 </p>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+                <a
+                  href="tel:015567277155"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                >
+                  <Phone className="w-3.5 h-3.5 text-white" />
+                  <span>Manu anrufen</span>
+                </a>
                 <a
                   href={siteIdentity.meetergoUrl}
                   target="_blank"
@@ -119,9 +149,10 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           </div>
           {/* WEG 3: Video-Analyse (gleiche Box-Optik, Formular aufklappbar) */}
           <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
-            Weg 3 · Für alle mit bestehender Website (3–5 Minuten Video)
+            Weg 3 · Kostenlose Video-Einschätzung deiner Website (3–5 Minuten Video)
           </p>
-          <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left">
+          <div id="website-check" className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left scroll-mt-28">
+            <div id="videoanalyse" className="sr-only" />
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center justify-center sm:justify-start gap-2">
@@ -138,6 +169,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                 type="button"
                 onClick={() => setVideoOpen((v) => !v)}
                 aria-expanded={videoOpen}
+                aria-controls="website-check-form-wrapper"
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all hover:scale-105 active:scale-95 shrink-0 cursor-pointer"
               >
                 <span>{videoOpen ? "Formular schließen" : "Video-Analyse anfordern"}</span>
@@ -150,7 +182,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
               </button>
             </div>
             {videoOpen && (
-              <div className="pt-2">
+              <div id="website-check-form-wrapper" className="pt-2">
                 <WebsiteCheckInquiry />
                 <p className="text-center text-xs text-white/50 pt-3 pb-1">
                   Nur eine kurze Ersteinschätzung{" "}

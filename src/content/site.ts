@@ -1,12 +1,15 @@
 export const homeContent = {
   hero: {
     eyebrow: "Webdesign & Lokalpräsenz aus Wesel",
-    title: ["Mehr Lokalpräsenz.", "Weniger Agenturtheater."],
+    title: ["Websites und Google-Profile,", "die deinen Betrieb vor Ort sichtbar machen."],
     accent: "Deine Website. Persönlich mit Manu.",
-    body: "Wer am Niederrhein sucht, entscheidet bei Google. Ich baue deine Website, fotografiere bei dir vor Ort und bringe dein Google-Profil in Ordnung – damit dein Betrieb online so gut aussieht, wie er arbeitet.",
-    primaryCta: "WhatsApp an Manu",
-    secondaryCta: "Website kostenlos prüfen",
-    microcopy: "Kostenlos & unverbindlich · Antwort meist am selben Werktag · Kein Verkaufsgespräch",
+    body: "Ich bin Manu. Ich übernehme Struktur, Texte und Technik, fotografiere auf Wunsch bei dir vor Ort und bringe dein Google-Profil auf Stand. Persönlich mit Manu, mit einem festen Ansprechpartner und einem klaren Preis vor dem Start.",
+    primaryCta: "Kostenlose Website-Einschätzung",
+    secondaryCta: "Manu anrufen",
+    whatsappCta: "Per WhatsApp schreiben",
+    phone: "0155 67277155",
+    phoneTel: "tel:015567277155",
+    microcopy: "Kostenlose 3–5-Minuten-Videoanalyse · Direkter Anruf ohne Termin · Klarer Festpreis vor dem Start",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",

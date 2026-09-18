@@ -12,15 +12,17 @@ interface SectionItem {
 
 const sections: SectionItem[] = [
   { id: "hero", number: "01", label: "Start" },
-  { id: "problem", number: "02", label: "Die Realität" },
-  { id: "story", number: "03", label: "3-Akt Story" },
-  { id: "leistungen", number: "04", label: "Leistungen" },
-  { id: "google-pilot", number: "05", label: "Lokalpräsenz 360°" },
-  { id: "projekte", number: "06", label: "Projekte" },
-  { id: "manu", number: "07", label: "Persönlich mit Manu" },
-  { id: "ablauf", number: "08", label: "Ablauf" },
-  { id: "faq", number: "09", label: "FAQ" },
-  { id: "kontakt", number: "10", label: "Anfrage" },
+  { id: "vertrauen", number: "02", label: "Sicherheit" },
+  { id: "arbeitsprobe", number: "03", label: "Arbeitsprobe" },
+  { id: "problem", number: "04", label: "Die Realität" },
+  { id: "story", number: "05", label: "Beispiel" },
+  { id: "leistungen", number: "06", label: "Leistungen" },
+  { id: "google-pilot", number: "07", label: "Lokalpräsenz 360°" },
+  { id: "projekte", number: "08", label: "Projekte" },
+  { id: "manu", number: "09", label: "Persönlich mit Manu" },
+  { id: "ablauf", number: "10", label: "Schritte" },
+  { id: "faq", number: "11", label: "FAQ" },
+  { id: "kontakt", number: "12", label: "Anfrage" },
 ];
 
 export function SectionDotNav() {

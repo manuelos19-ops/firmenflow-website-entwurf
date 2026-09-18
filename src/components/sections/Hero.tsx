@@ -7,79 +7,121 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
+import { Phone, ArrowRight } from "lucide-react";
 
 interface HeroProps {
   whatsappUrl: string | null;
 }
 
-// Die Einblendung des Heros liegt bewusst in globals.css und nicht in GSAP:
-// GSAP laeuft erst nach dem Hydrieren und hat den bereits sichtbaren Hero
-// dadurch kurz wieder ausgeblendet.
 export function Hero({ whatsappUrl }: HeroProps) {
   const { hero } = homeContent;
 
   return (
     <section 
       id="hero"
-      className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-8 lg:pt-44 lg:pb-16 bg-transparent text-[var(--color-ink)] overflow-hidden"
+      className="relative min-h-[85vh] flex flex-col justify-between pt-24 pb-6 lg:pt-32 lg:pb-10 bg-transparent text-[var(--color-ink)] overflow-hidden"
     >
-      <Container className="relative z-10 flex-grow flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 my-auto">
+      <Container className="relative z-10 flex-grow flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 my-auto">
         
-        {/* Left Side: Copy */}
+        {/* Left Side: Copy & CTAs */}
         <div className="flex-1 flex flex-col items-start w-full z-10 max-w-2xl lg:max-w-none">
           
           {/* Microscopic High-End Eyebrow Tag */}
-          <div className="badge-eyebrow mb-6">
+          <div className="badge-eyebrow mb-4 sm:mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-coral)] animate-pulse" />
             <span>{hero.eyebrow}</span>
           </div>
 
           {/* Calm, Stable, High-End Editorial Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight mb-6 select-none">
-            {/* Line 1 */}
-            <span className="hero-title-line block font-display font-extrabold text-[var(--color-ink)]">
-              Mehr Lokalpräsenz.
-            </span>
-            {/* Line 2 */}
-            <span className="hero-title-line block font-display font-extrabold text-[var(--color-plum)]">
-              Weniger <span className="font-editorial italic font-normal text-[var(--color-coral)]">Agenturtheater.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.12] tracking-tight mb-4 sm:mb-5 select-none font-display font-extrabold text-[var(--color-ink)]">
+            <span className="block">{hero.title[0]}</span>
+            <span className="text-[var(--color-plum)] block">
+              die deinen Betrieb <span className="font-editorial italic font-normal text-[var(--color-coral)]">vor Ort sichtbar machen.</span>
             </span>
           </h1>
 
-          {/* Accent in Crimson Text Italic */}
-          <div className="hero-accent text-2xl sm:text-3xl md:text-4xl font-editorial italic text-[var(--color-coral)] mb-4 sm:mb-6">
-            {hero.accent}
+          {/* Body Text */}
+          <p className="hero-body text-base sm:text-lg text-[var(--color-muted)] max-w-xl leading-relaxed mb-6 sm:mb-8">
+            {hero.body}
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
+            <div className="hero-cta-wrap">
+              <MagneticButton>
+                <ButtonLink 
+                  href="#website-check" 
+                  variant="primary"
+                  size="lg"
+                  className="shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
+                >
+                  <span>{hero.primaryCta}</span>
+                  <ArrowRight className="w-4 h-4 ml-1 shrink-0" />
+                </ButtonLink>
+              </MagneticButton>
+            </div>
+
+            <div className="hero-cta-wrap">
+              <MagneticButton>
+                <ButtonLink 
+                  href={hero.phoneTel} 
+                  variant="secondary"
+                  size="lg"
+                  className="hover:border-[var(--color-plum)] text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
+                >
+                  <Phone className="w-4 h-4 mr-2 text-[var(--color-coral)] shrink-0" />
+                  <span>{hero.secondaryCta}</span>
+                </ButtonLink>
+              </MagneticButton>
+            </div>
           </div>
 
-          {/* MOBILE ONLY: Hero Portrait direkt nach dem Akzentsatz */}
+          {/* WhatsApp Textlink & Microcopy */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-[var(--color-muted)] font-medium">
+            {whatsappUrl && (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-semibold text-emerald-700 hover:text-emerald-800 transition-colors"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600" />
+                <span>{hero.whatsappCta}</span>
+              </a>
+            )}
+            <span className="hidden sm:inline text-stone-300">•</span>
+            <span>{hero.microcopy}</span>
+          </div>
+
+          {/* MOBILE ONLY: Hero Portrait direkt unter den CTAs */}
           <div className="lg:hidden w-full max-w-[340px] sm:max-w-sm my-6 sm:my-8 relative self-center">
             <div className="double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03]">
               <div className="hero-photo-wrap relative aspect-[4/4.9] rounded-[calc(2.25rem-0.375rem)] overflow-hidden shadow-xl border border-white/60">
                 <Image
-                src={portraitAssets.hero.src}
-                alt={portraitAssets.hero.alt}
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 340px"
-              />
-              
-              {/* Gradient bottom overlay on photo */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/55 via-transparent to-transparent" />
-              
-              <div className="absolute bottom-3 left-3 right-3 text-white text-xs font-medium backdrop-blur-md bg-black/40 p-2.5 rounded-xl border border-white/20 shadow-lg">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-bold text-white text-sm tracking-tight">Manu</p>
-                    <p className="text-white/80 text-[11px]">Gründer von Firmenflow · Wesel</p>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[10px] font-semibold text-emerald-300 shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-90" />
-                    <span>Online</span>
+                  src={portraitAssets.hero.src}
+                  alt={portraitAssets.hero.alt}
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 340px"
+                />
+                
+                {/* Gradient bottom overlay on photo */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/55 via-transparent to-transparent" />
+                
+                <div className="absolute bottom-3 left-3 right-3 text-white text-xs font-medium backdrop-blur-md bg-black/40 p-2.5 rounded-xl border border-white/20 shadow-lg">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-bold text-white text-sm tracking-tight">Manu</p>
+                      <p className="text-white/80 text-[11px]">Gründer von Firmenflow · Wesel</p>
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[10px] font-semibold text-emerald-300 shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-90" />
+                      <span>Online</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
 
             {/* Mobile Rotating Badge */}
@@ -115,45 +157,6 @@ export function Hero({ whatsappUrl }: HeroProps) {
               </div>
             </div>
           </div>
-
-          {/* Body Text */}
-          <p className="hero-body text-base sm:text-lg md:text-xl text-[var(--color-muted)] max-w-xl leading-relaxed mb-8 sm:mb-10">
-            {hero.body}
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-5">
-            <div className="hero-cta-wrap">
-              <MagneticButton>
-                <ButtonLink 
-                  href={whatsappUrl || "#"} 
-                  external={Boolean(whatsappUrl)}
-                  variant="whatsapp"
-                  size="lg"
-                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-6 py-3.5"
-                >
-                  <WhatsAppIcon className="w-5 h-5 text-white mr-1 shrink-0" />
-                  <span>{hero.primaryCta}</span>
-                </ButtonLink>
-              </MagneticButton>
-            </div>
-
-            <div className="hero-cta-wrap">
-              <MagneticButton>
-                <ButtonLink 
-                  href="#projektanfrage" 
-                  variant="secondary"
-                  size="lg"
-                  className="hover:border-[var(--color-plum)] text-sm sm:text-base px-6 py-3.5"
-                >
-                  {hero.secondaryCta}
-                </ButtonLink>
-              </MagneticButton>
-            </div>
-          </div>
-          <p className="text-xs sm:text-sm text-[var(--color-muted)] font-medium mt-4">
-            {hero.microcopy}
-          </p>
         </div>
 
         {/* Right Side: Portrait + Floating Badges (DESKTOP ONLY) */}
