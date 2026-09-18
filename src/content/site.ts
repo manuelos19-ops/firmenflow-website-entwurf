@@ -6,6 +6,7 @@ export const homeContent = {
     body: "Wer am Niederrhein sucht, entscheidet bei Google. Ich baue deine Website, fotografiere bei dir vor Ort und bringe dein Google-Profil in Ordnung – damit dein Betrieb online so gut aussieht, wie er arbeitet.",
     primaryCta: "WhatsApp an Manu",
     secondaryCta: "Website kostenlos prüfen",
+    microcopy: "Kostenlos & unverbindlich · Antwort meist am selben Werktag · Kein Verkaufsgespräch",
   },
   problem: {
     eyebrow: "Die Realität vor Ort",
@@ -39,7 +40,7 @@ export const homeContent = {
     // Die Ueberschrift steht bewusst in GoogleBusinessPilot.tsx, weil sie fuer
     // den Tinten-Effekt dreifach gerendert wird. Hier kein title-Feld anlegen -
     // es wuerde nicht ausgespielt.
-    body: "Wer dich bei Google Maps sucht, sieht zuerst Sterne, Fotos und die letzte Bewertung. Steht da nichts – oder etwas von 2022 – nützt die beste Website wenig. Ich kümmere mich darum, laufend, für 99 Euro im Monat.",
+    body: "Konkret heißt das: Dein Google-Profil wird eingerichtet und gepflegt, neue Bewertungen bekommen eine Antwort in deinem Ton, und einmal im Monat erfährst du, was sich darin wiederholt. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
     cta: "Lokalpräsenz prüfen lassen",
   },
   process: [
@@ -73,17 +74,25 @@ export const homeContent = {
 } as const;
 
 export const faqItems = [
-  { 
-    question: "Arbeitest du nur in Wesel und am Niederrhein?", 
-    answer: "Mein Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers und dem Niederrhein – hier bin ich auch schnell persönlich bei dir vor Ort. Ich unterstütze aber genauso gerne Betriebe aus ganz NRW und deutschlandweit, ganz unkompliziert per Telefon und Video-Call." 
+  {
+    question: "Firmenflow ist noch jung – warum sollte ich dir vertrauen?",
+    answer: "Faire Frage. Deshalb sage ich es offen: Die Firma ist neu, meine Erfahrung nicht. Ich habe elf Jahre Betriebe geführt und vermarktet – sechs Jahre eigenes Studio, zwei Jahre Geschäftsführung einer selbst gebauten Arena, danach Marketing und Aufbau im größeren Maßstab. Was ich dort gemacht habe – Texte, Fotos, Abläufe, Kundengespräche – mache ich heute für andere. Dazu: Festpreis vor dem Start, monatlich kündbare Betreuung, Domain und Code gehören dir. Wenn es nicht passt, bist du in keinem Vertrag gefangen."
   },
-  { 
-    question: "Was kostet eine Website bei Firmenflow?", 
+  {
+    question: "Arbeitest du nur in Wesel und am Niederrhein?",
+    answer: "Mein Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers und dem Niederrhein – hier bin ich auch schnell persönlich bei dir vor Ort. Ich unterstütze aber genauso gerne Betriebe aus ganz NRW und deutschlandweit, ganz unkompliziert per Telefon und Video-Call."
+  },
+  {
+    question: "Was kostet eine Website bei Firmenflow?",
     answer: "Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger Auftritt mit eigenen Leistungsseiten liegt darüber; den genauen Betrag nenne ich dir nach dem Kennenlernen als verbindlichen Festpreis, ohne versteckte Zusatzkosten. Dazu kommen 39 Euro im Monat für Hosting, Updates und 30 Minuten Änderungen – monatlich kündbar, keine Mindestlaufzeit."
   },
   { 
     question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
     answer: "Ja. Viele Betriebe haben veraltete Bilder oder gar keine. Ich komme mit Kamera zu dir nach Wesel und Umgebung und fotografiere dein Team, deine Räume und deine Arbeit – auf Wunsch auch ein kurzes Video für Website und Social Media. Der Fototermin kostet 350 Euro und lässt sich mit jedem Website-Projekt kombinieren."
+  },
+  { 
+    question: "Was passiert, wenn mir der Entwurf nicht gefällt?", 
+    answer: "Dann sagst du es mir – dafür ist der Entwurf da. Du siehst die Seite auf deinem Handy, bevor sie fertig gebaut wird, und wir passen sie an, bis sie zu dir passt. Erst nach deiner Freigabe geht sie live. Und falls wir grundsätzlich nicht zusammenpassen, merkst du das schon im kostenlosen Kennenlernen, nicht erst auf der Rechnung." 
   },
   { 
     question: "Wie viel Zeit muss ich selbst in das Projekt investieren?", 

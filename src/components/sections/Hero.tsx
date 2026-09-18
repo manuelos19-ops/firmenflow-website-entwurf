@@ -151,6 +151,9 @@ export function Hero({ whatsappUrl }: HeroProps) {
               </MagneticButton>
             </div>
           </div>
+          <p className="text-xs sm:text-sm text-[var(--color-muted)] font-medium mt-4">
+            {hero.microcopy}
+          </p>
         </div>
 
         {/* Right Side: Portrait + Floating Badges (DESKTOP ONLY) */}
