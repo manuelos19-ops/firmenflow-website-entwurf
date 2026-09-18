@@ -508,35 +508,35 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">
                 <FirmenflowIcon name="monatsreport" size={20} decorative />
-                <span>03 · Verstehen, was drinsteht</span>
+                <span>03 · Feedback nutzen &amp; Betrieb verbessern</span>
               </div>
 
               <h3 className="text-2xl sm:text-4xl font-display font-bold text-[var(--color-ink)]">
-                Du erfährst, was schiefläuft – bevor es dich Kunden kostet
+                Kundenfeedback als Chance: Wissen, wo du ansetzen kannst
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Eine schlechte Bewertung ist Pech. <strong>Viermal dieselbe Kritik ist ein Muster.</strong> Einmal im Monat lese ich alles durch und sage dir, was sich wiederholt.
+                Eine schlechte Bewertung ist ärgerlich. <strong>Wiederholte Kritik ist ein wertvoller Hinweis.</strong> Einmal im Monat werte ich alle Rezensionen für dich aus: Du erfährst konkret, welche Kritikpunkte und Kundenwünsche aufkommen, wo du deinen Betrieb verbessern und wo du dein Team gezielt schulen kannst.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200">
                   <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs mb-1">
                     <FirmenflowIcon name="lob" size={24} decorative />
-                    <span>Was Kunden loben:</span>
+                    <span>Was Kunden begeistert:</span>
                   </div>
                   <p className="text-xs text-emerald-950 leading-relaxed">
-                    Wenn zehn Leute deine Beratung loben, weißt du, womit du werben solltest. Und was du auf keinen Fall ändern darfst.
+                    Wenn Gäste und Kunden deine Beratung oder Zuverlässigkeit loben, weißt du genau, was dein Team auszeichnet und womit du werben solltest.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-rose-50/80 border border-rose-200">
                   <div className="flex items-center gap-2 text-rose-800 font-bold text-xs mb-1">
                     <FirmenflowIcon name="wiederkehrendes-problem" size={24} decorative />
-                    <span>Wenn sich was häuft:</span>
+                    <span>Kritikpunkte &amp; Schulungsbedarf:</span>
                   </div>
                   <p className="text-xs text-rose-950 leading-relaxed">
-                    Eine Kritik kann Zufall sein. Viermal Wartezeit ist ein Muster – und du erfährst es, bevor es sich in deinen Sternen niederschlägt.
+                    Taucht Kritik an Wartezeiten oder Service mehrfach auf, bekommst du ein klares Signal, wo Abläufe haken oder Mitarbeiter Unterstützung brauchen – bevor es dauerhaft Sterne kostet.
                   </p>
                 </div>
               </div>

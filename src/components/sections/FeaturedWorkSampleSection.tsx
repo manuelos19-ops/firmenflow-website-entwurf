@@ -1,17 +1,11 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { 
-  ArrowRight, 
-  ExternalLink, 
-  Smartphone, 
-  Zap, 
-  MapPin, 
-  CheckCircle2 
-} from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { ArrowRight } from "lucide-react";
 
 export function FeaturedWorkSampleSection() {
   return (
@@ -70,8 +64,8 @@ export function FeaturedWorkSampleSection() {
                     Eiscafé Orrico
                   </h3>
                   <p className="text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-1">
-                    <MapPin className="w-3.5 h-3.5 text-[var(--color-coral)] shrink-0" />
-                    Hamminkeln &amp; Niederrhein · Gastronomie &amp; Café
+                    <FirmenflowIcon name="unternehmensprofil" size={18} decorative className="shrink-0" />
+                    <span>Hamminkeln &amp; Niederrhein · Gastronomie &amp; Café</span>
                   </p>
                 </div>
 
@@ -82,9 +76,7 @@ export function FeaturedWorkSampleSection() {
                 {/* Measurable & Verifiable Highlights */}
                 <div className="space-y-3 pt-2">
                   <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-lg bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center shrink-0 mt-0.5">
-                      <Smartphone className="w-4 h-4" />
-                    </div>
+                    <FirmenflowIcon name="mobile-first" size={32} decorative className="shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-bold text-[var(--color-ink)]">Mobil-first für echte Gäste</p>
                       <p className="text-xs text-[var(--color-muted)]">Digitale Karte, Eissorten und saisonale Highlights direkt mit dem Daumen erreichbar.</p>
@@ -92,9 +84,7 @@ export function FeaturedWorkSampleSection() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-lg bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center shrink-0 mt-0.5">
-                      <Zap className="w-4 h-4" />
-                    </div>
+                    <FirmenflowIcon name="ladezeit-performance" size={32} decorative className="shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-bold text-[var(--color-ink)]">Schnelle Ladezeit ohne Ballast</p>
                       <p className="text-xs text-[var(--color-muted)]">Moderne Web-Technik für blitzschnelle Ladezeiten auch im mobilen Mobilfunknetz vor Ort.</p>
@@ -102,9 +92,7 @@ export function FeaturedWorkSampleSection() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                      <CheckCircle2 className="w-4 h-4" />
-                    </div>
+                    <FirmenflowIcon name="unternehmensprofil" size={32} decorative className="shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-bold text-[var(--color-ink)]">Verlässliche Angaben</p>
                       <p className="text-xs text-[var(--color-muted)]">Adresse, Öffnungszeiten und Anbindung an Google Maps stimmen exakt überein.</p>
@@ -128,7 +116,7 @@ export function FeaturedWorkSampleSection() {
                     className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-sm transition-all shadow-sm active:scale-95 text-center"
                   >
                     <span>Live-Website öffnen</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-[var(--color-muted)]" />
+                    <FirmenflowIcon name="externer-link" size={16} decorative />
                   </a>
                 </div>
               </div>

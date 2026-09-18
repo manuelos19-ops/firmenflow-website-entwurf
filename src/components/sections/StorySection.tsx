@@ -116,13 +116,13 @@ export function StorySection() {
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="badge-eyebrow mb-5">
             <BrandIcon className="w-3.5 h-3" />
-            <span>Beispielhafter Ablauf</span>
+            <span>Praxis-Einblick</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-5">
-            So wird aus einem veralteten Auftritt ein klarer digitaler erster Eindruck.
+            So wird aus einem veralteten Auftritt ein starker digitaler erster Eindruck.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Ein typisches Beispiel dafür, wie Website, Fotos und Google-Profil zusammenspielen. Keine Fallstudie und keine Ranking-Zusage.
+            Wie Website, authentische Fotos und dein Google-Profil in der Praxis zusammenspielen – ehrlich, nachvollziehbar und ohne Agenturtheater.
           </p>
         </div>
 

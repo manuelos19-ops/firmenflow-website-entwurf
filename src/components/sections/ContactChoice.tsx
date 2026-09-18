@@ -83,7 +83,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
             Drei Wege zu deiner Antwort. Du entscheidest.
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            Formular, Anruf oder Videoprüfung: Alles landet Persönlich mit Manu, alles ist kostenlos und unverbindlich.
+            Ganz gleich, ob du kurz anrufst, eine Nachricht schreibst oder dir eine Video-Einschätzung holst: Du tauschst dich immer Persönlich mit Manu aus – transparent, unverbindlich und ohne Verkaufsdruck.
           </p>
         </div>
 

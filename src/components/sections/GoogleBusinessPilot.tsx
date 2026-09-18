@@ -203,9 +203,9 @@ export function GoogleBusinessPilot() {
             <div className="double-bezel-inner-dark rounded-[calc(2rem-0.25rem)] p-6 flex flex-col justify-between h-full bg-white/[0.08] backdrop-blur-md border border-white/10 hover:border-white/20">
               <div>
                 <FirmenflowIcon name="handlungsempfehlung" size={56} decorative className="mb-4" />
-                <h3 className="text-lg font-bold font-sans text-white mb-2">3. Verstehen, was drinsteht</h3>
+                <h3 className="text-lg font-bold font-sans text-white mb-2">3. Feedback nutzen &amp; Betrieb verbessern</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Einmal im Monat lese ich alles durch und sage dir, was sich wiederholt – beim Lob wie bei der Kritik.
+                  Einmal im Monat werte ich dein Kundenfeedback aus: Welche Kritikpunkte und Wünsche auftauchen, woraus du Learnings für deinen Betrieb ziehst und wo du deine Mitarbeiter gezielt schulen kannst.
                 </p>
               </div>
             </div>

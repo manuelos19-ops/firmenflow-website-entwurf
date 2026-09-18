@@ -1,38 +1,39 @@
-﻿"use client";
+"use client";
 
 import { Container } from "@/components/ui/Container";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { 
-  FileCheck2, 
-  CheckCircle2, 
-  Globe2, 
-  CalendarClock, 
-  FolderDown 
-} from "lucide-react";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
-const commitments = [
+interface Commitment {
+  iconName: FirmenflowIconName;
+  title: string;
+  detail: string;
+}
+
+const commitments: Commitment[] = [
   {
-    icon: FileCheck2,
+    iconName: "festpreis",
     title: "Verbindlicher Leistungsumfang und klarer Preis vor dem Start",
     detail: "Kein Angebot, das im Nachhinein teurer wird. Du kennst Umfang und Festpreis vor dem ersten Handgriff.",
   },
   {
-    icon: CheckCircle2,
+    iconName: "freigabe",
     title: "Online erst nach deiner Freigabe",
     detail: "Wir prüfen den Entwurf gemeinsam auf deinem Handy. Erst wenn du nickst, geht deine Seite öffentlich live.",
   },
   {
-    icon: Globe2,
+    iconName: "domain-eigentum",
     title: "Die Domain läuft auf dich",
     detail: "Deine Webadresse gehört dir und bleibt dein Eigentum – unabhängig davon, ob wir langfristig zusammenarbeiten.",
   },
   {
-    icon: CalendarClock,
+    iconName: "monatlich-kuendbar",
     title: "Betreuung monatlich kündbar",
     detail: "Keine 12- oder 24-Monats-Verträge. Du bleibst, weil der Service dir den Rücken freihält – nicht wegen einer Klausel.",
   },
   {
-    icon: FolderDown,
+    iconName: "code-uebergabe",
     title: "Das vollständige Projekt erhältst du auf Wunsch",
     detail: "Alle Dateien, Texte und der Code gehören dir. Du kannst dein Projekt jederzeit exportieren oder umziehen.",
   },
@@ -62,7 +63,6 @@ export function TrustCommitmentSection() {
         {/* 5 Commitments Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {commitments.map((item, idx) => {
-            const Icon = item.icon;
             const isWide = idx === 0;
             return (
               <div
@@ -72,8 +72,8 @@ export function TrustCommitmentSection() {
                 }`}
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[var(--color-coral)]/10 text-[var(--color-coral)] flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5" />
+                  <div className="mb-4">
+                    <FirmenflowIcon name={item.iconName} size={48} decorative />
                   </div>
                   <h3 className="text-base font-bold text-[var(--color-ink)] mb-2 font-sans leading-snug">
                     {item.title}

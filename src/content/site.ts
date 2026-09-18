@@ -43,7 +43,7 @@ export const homeContent = {
     // Die Ueberschrift steht bewusst in GoogleBusinessPilot.tsx, weil sie fuer
     // den Tinten-Effekt dreifach gerendert wird. Hier kein title-Feld anlegen -
     // es wuerde nicht ausgespielt.
-    body: "Konkret heißt das: Dein Google-Profil wird eingerichtet und gepflegt, neue Bewertungen bekommen eine Antwort in deinem Ton, und einmal im Monat erfährst du, was sich darin wiederholt. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
+    body: "Konkret heißt das: Dein Google-Profil wird eingerichtet und gepflegt, neue Bewertungen bekommen eine Antwort in deinem Ton, und einmal im Monat erhältst du eine Auswertung zu Kundenfeedback, Kritik und Verbesserungswünschen – als direktes Learning, wo du deinen Betrieb verbessern oder dein Team gezielt schulen kannst. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
     cta: "Lokalpräsenz prüfen lassen",
   },
   process: [
@@ -111,7 +111,7 @@ export const faqItems = [
   },
   { 
     question: "Was genau beinhaltet Lokalpräsenz 360°?", 
-    answer: "Drei Dinge: Ich richte dein Google-Profil ein oder räume ein bestehendes auf, beantworte jede neue Bewertung in deinem Ton und sage dir einmal im Monat, was in den Bewertungen steht und was sich wiederholt. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
+    answer: "Drei Dinge: Ich richte dein Google-Profil ein oder räume ein bestehendes auf, beantworte jede neue Bewertung in deinem Ton und fasse dir einmal im Monat zusammen, welche Kritikpunkte und Kundenwünsche aufkommen – als direktes Feedback, wo du Prozesse optimieren oder Mitarbeiter gezielt schulen kannst. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat – monatlich kündbar.",
     link: {
       text: "Alle Details & Leistungen zu Lokalpräsenz 360° ansehen",
       href: "/lokalpraesenz-360",

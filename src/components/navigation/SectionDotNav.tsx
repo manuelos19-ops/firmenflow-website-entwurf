@@ -15,7 +15,7 @@ const sections: SectionItem[] = [
   { id: "vertrauen", number: "02", label: "Sicherheit" },
   { id: "arbeitsprobe", number: "03", label: "Arbeitsprobe" },
   { id: "problem", number: "04", label: "Die Realität" },
-  { id: "story", number: "05", label: "Beispiel" },
+  { id: "story", number: "05", label: "Praxis" },
   { id: "leistungen", number: "06", label: "Leistungen" },
   { id: "google-pilot", number: "07", label: "Lokalpräsenz 360°" },
   { id: "projekte", number: "08", label: "Projekte" },
