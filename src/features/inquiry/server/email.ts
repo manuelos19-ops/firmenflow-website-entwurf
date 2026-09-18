@@ -39,6 +39,63 @@ const contactPreferenceLabels: Record<string, string> = {
   "whatsapp": "WhatsApp Nachricht",
 };
 
+const BRAND = {
+  logoDark: "https://www.firmenflow.de/brand/firmenflow-email-logo-dark.png",
+  signature: "https://www.firmenflow.de/brand/firmenflow-mail-signature.png",
+  portrait: "https://www.firmenflow.de/brand/manu-rund-mail.jpg",
+  site: "https://firmenflow.de",
+  font: "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif",
+};
+
+function mailBrandHeader(kicker: string): string {
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+    <tr>
+      <td align="left" valign="middle">
+        <a href="${BRAND.site}" target="_blank" style="text-decoration: none; display: inline-block;">
+          <img src="${BRAND.logoDark}" width="170" alt="FIRMENflow \u2013 f\u00fcr deine Lokalpr\u00e4senz." style="display: block; width: 170px; max-width: 170px; height: auto; border: 0; outline: none; text-decoration: none; color: #17131A; font-family: ${BRAND.font}; font-size: 16px; font-weight: 700;" />
+        </a>
+      </td>
+      <td align="right" valign="middle" style="font-family: ${BRAND.font};">
+        <span style="display: inline-block; padding: 5px 12px; background-color: #F5F0EB; border-radius: 20px; border: 1px solid #E2DAD0; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; color: #653683;">${kicker}</span>
+      </td>
+    </tr>
+  </table>
+  <div style="background-color: #FF705D; font-size: 0; line-height: 0; height: 3px; border-radius: 2px; margin-bottom: 20px;">&nbsp;</div>`;
+}
+
+function mailPortraitRow(): string {
+  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+    <tr>
+      <td width="52" valign="middle" style="padding-right: 12px;">
+        <img src="${BRAND.portrait}" width="52" height="52" alt="Manuel Landeck von Firmenflow" style="display: block; width: 52px; height: 52px; border-radius: 26px; border: 0; outline: none;" />
+      </td>
+      <td valign="middle" style="font-family: ${BRAND.font}; font-size: 13px; line-height: 1.5; color: #746D76;">
+        <strong style="color: #17131A; font-size: 14px;">Manuel Landeck</strong><br />Pers\u00f6nlich mit Manu \u00b7 Wesel &amp; Niederrhein
+      </td>
+    </tr>
+  </table>`;
+}
+
+function mailSignatureBlock(): string {
+  return `<div style="border-top: 1px solid #E5E0D8; padding-top: 20px; margin-top: 24px;">
+    <div style="margin: 0 0 16px 0;">
+      <a href="${BRAND.site}" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none; border: 0;">
+        <img src="${BRAND.signature}" alt="Manuel Landeck \u00b7 Inhaber Firmenflow \u00b7 Webdesign &amp; Lokalpr\u00e4senz aus Wesel \u00b7 Telefon 0155 67277155 \u00b7 manu@firmenflow.de \u00b7 firmenflow.de" width="560" style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; outline: none; border-radius: 12px;" />
+      </a>
+    </div>
+    <div style="font-family: ${BRAND.font}; font-size: 12px; color: #746D76; line-height: 1.6;">
+      <strong style="color: #17131A;">Firmenflow \u2013 Webdesign &amp; Lokalpr\u00e4senz</strong> \u00b7 Manuel Landeck<br />
+      Telefon: <a href="tel:015567277155" style="color: #653683; text-decoration: none; font-weight: bold;">0155 67277155</a> \u00b7 E-Mail: <a href="mailto:manu@firmenflow.de" style="color: #653683; text-decoration: none; font-weight: bold;">manu@firmenflow.de</a> \u00b7 Web: <a href="https://firmenflow.de" style="color: #FF705D; text-decoration: none; font-weight: bold;">firmenflow.de</a>
+    </div>
+  </div>`;
+}
+
+function mailButton(href: string, label: string, bg: string, fg: string, border = ""): string {
+  const borderStyle = border ? `border: ${border};` : "border: 0;";
+  const pad = border ? "12px 24px" : "13px 26px";
+  return `<a href="${href}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: ${pad}; font-family: ${BRAND.font}; font-size: 14px; font-weight: 700; color: ${fg}; background-color: ${bg}; text-decoration: none; border-radius: 10px; ${borderStyle}">${label}</a>`;
+}
+
 export const resendInquiryMailer: InquiryMailer = {
   async send(payload: InquiryPayload): Promise<MailResult> {
     const toEmail = process.env.INQUIRY_TO_EMAIL || "anfrage@firmenflow.de";
@@ -67,6 +124,7 @@ export const resendInquiryMailer: InquiryMailer = {
 
     const internalHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
+        ${mailBrandHeader("NEUE ANFRAGE")}
         <div style="background-color: #3B0D4F; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
           <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">⚡ Neue Firmenflow Projektanfrage</h1>
           <p style="color: #FCFAF7; opacity: 0.85; margin: 4px 0 0 0; font-size: 13px;">Über firmenflow.de eingegangen</p>
@@ -197,10 +255,12 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
           try {
             const customerHtml = `
               <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
+                ${mailBrandHeader("PERS&Ouml;NLICH MIT MANU")}
                 <div style="background-color: #3B0D4F; padding: 22px 24px; border-radius: 12px; margin-bottom: 24px;">
                   <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold; letter-spacing: -0.01em;">Deine Anfrage ist angekommen! ☕</h1>
                   <p style="color: #FCFAF7; opacity: 0.85; margin: 4px 0 0 0; font-size: 13px;">Firmenflow · Persönlich mit Manu</p>
                 </div>
+                ${mailPortraitRow()}
 
                 <p style="font-size: 16px; margin-bottom: 16px;">Hi ${escapeHtml(payload.name)},</p>
                 
@@ -219,29 +279,11 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                   Falls du vorab schon eine dringende Frage hast oder noch Unterlagen nachreichen möchtest, antworte einfach direkt auf diese E-Mail oder schreibe mir bei WhatsApp.
                 </p>
 
-                <!-- Firmenflow Signatur-Banner -->
-                <div style="border-top: 1px solid #E5E0D8; padding-top: 20px; margin-top: 24px;">
-                  <p style="font-size: 15px; margin: 0 0 16px 0; color: #17131A;">
-                    Beste Grüße aus Wesel,<br />
-                    <strong>Manu</strong>
-                  </p>
-                  
-                  <div style="margin: 0 0 16px 0;">
-                    <a href="https://firmenflow.de" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none; border: 0;">
-                      <img 
-                        src="https://www.firmenflow.de/media/firmenflow-email-signature.png" 
-                        alt="Manuel Landeck · Inhaber Firmenflow · Webdesign & Lokalpräsenz aus Wesel · Telefon 0155 67277155 · manu@firmenflow.de · firmenflow.de" 
-                        width="560" 
-                        style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; outline: none; border-radius: 12px;" 
-                      />
-                    </a>
-                  </div>
-
-                  <div style="font-size: 12px; color: #746D76; line-height: 1.6;">
-                    <strong style="color: #17131A;">Firmenflow – Webdesign & Lokalpräsenz</strong> · Manuel Landeck<br />
-                    Telefon: <a href="tel:015567277155" style="color: #653683; text-decoration: none; font-weight: bold;">0155 67277155</a> · E-Mail: <a href="mailto:manu@firmenflow.de" style="color: #653683; text-decoration: none; font-weight: bold;">manu@firmenflow.de</a> · Web: <a href="https://firmenflow.de" style="color: #FF705D; text-decoration: none; font-weight: bold;">firmenflow.de</a>
-                  </div>
-                </div>
+                <p style="font-size: 15px; margin: 24px 0 0 0; color: #17131A;">
+                  Beste Grüße aus Wesel,<br />
+                  <strong>Manu</strong>
+                </p>
+                ${mailSignatureBlock()}
               </div>
             `;
 
@@ -380,6 +422,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
 
   const internalHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
+      ${mailBrandHeader("NEUE ANFRAGE")}
       <div style="background-color: #5C3378; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
         <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue FlowRay Video-Anfrage" : "📅 Neuer Erstgespräch-Lead"}</h1>
         <p style="color: #FCFAF7; opacity: 0.9; margin: 4px 0 0 0; font-size: 13px;">Über die 1-Klick-Weiche auf firmenflow.de</p>
@@ -403,9 +446,8 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
 
   const customerHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
-      <div style="text-align: center; margin-bottom: 24px;">
-        <img src="https://firmenflow.de/brand/firmenflow-wordmark.png" alt="Firmenflow" style="max-width: 180px; height: auto;" />
-      </div>
+      ${mailBrandHeader(isVideo ? "VIDEO-ANALYSE" : "ERSTGESPR&Auml;CH")}
+      ${mailPortraitRow()}
 
       <div style="background-color: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 24px;">
         <h2 style="color: #17131A; font-size: 18px; margin-top: 0;">Hi ${escapeHtml(payload.name)},</h2>
@@ -415,18 +457,27 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
             : `dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt! Falls du deinen Termin noch nicht im Kalender gebucht hast, kannst du dir hier direkt deinen Wunschtermin sichern:`}
         </p>
 
-        <div style="text-align: center; margin: 28px 0;">
-          <a href="https://cal.meetergo.com/manu-1/30-min-meeting-mit-manu" style="display: inline-block; background-color: #FC583E; color: #FFFFFF; text-decoration: none; font-weight: bold; font-size: 15px; padding: 14px 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(252, 88, 62, 0.25);">
-            ${isVideo ? "Möchtest du direkt sprechen? Termin buchen →" : "Hier deinen Termin auswählen →"}
-          </a>
+        <div style="margin: 28px 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center" class="ff-btn" style="padding-bottom: 10px;">
+                ${mailButton("https://wa.me/4915567277155", "Kurz per WhatsApp", "#25D366", "#FFFFFF")}
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="ff-btn">
+                ${mailButton("https://cal.meetergo.com/manu-1/30-min-meeting-mit-manu", isVideo ? "M\u00f6chtest du direkt sprechen? Termin buchen \u2192" : "Hier deinen Termin ausw\u00e4hlen \u2192", "#FF705D", "#FFFFFF")}
+              </td>
+            </tr>
+          </table>
         </div>
 
         <p style="font-size: 14px; color: #746D76; margin-bottom: 0;">
           Beste Grüße aus Wesel am Niederrhein,<br />
-          <strong>Manu Landeck</strong><br />
-          <span style="font-size: 13px;">Firmenflow · Webdesign &amp; Lokalpräsenz</span>
+          <strong>Manu</strong>
         </p>
       </div>
+      ${mailSignatureBlock()}
     </div>
   `;
 
