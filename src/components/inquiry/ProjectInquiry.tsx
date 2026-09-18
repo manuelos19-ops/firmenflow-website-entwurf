@@ -43,7 +43,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
           const legacy = migrateLegacyDraft(parsed);
           const knownKeys = [
             "submissionId", "services", "guidance", "websiteScope", "businessName", "industry",
-            "place", "currentWebsite", "goals", "supportPhotoVideo", "goalDetails", "timeframe",
+            "place", "currentWebsite", "goals", "supportPhotoVideo", "goalDetails",
             "name", "email", "phone", "preferredContact", "privacyAccepted", "company",
           ];
           const sanitized: Record<string, unknown> = {};
@@ -105,9 +105,6 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       }
       if (!state.data.place || state.data.place.trim().length < 2) {
         errors.place = "Standort: Bitte nenne deinen Ort (z. B. Wesel).";
-      }
-      if (!state.data.timeframe) {
-        errors.timeframe = "Zeitrahmen: Bitte wähle aus, wann es losgehen soll.";
       }
     } else if (state.step === 3) {
       if (!state.data.name || state.data.name.trim().length < 2) {

@@ -71,7 +71,6 @@ export const inquirySchema = z
     // Optionale Zusatzleistung (kein Geschäftsziel)
     supportPhotoVideo: z.boolean().default(false),
     goalDetails: z.string().trim().max(1_000, "Bitte fasse dein Anliegen in maximal 1.000 Zeichen zusammen."),
-    timeframe: z.enum(["soon", "three-months", "six-months", "flexible"]),
     name: z
       .string()
       .trim()

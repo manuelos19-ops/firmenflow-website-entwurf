@@ -36,7 +36,6 @@ export function initialInquiryState(): InquiryState {
       goals: [],
       supportPhotoVideo: false,
       goalDetails: "",
-      timeframe: "",
       name: "",
       email: "",
       phone: "",

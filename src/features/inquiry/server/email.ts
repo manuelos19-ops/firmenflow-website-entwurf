@@ -33,13 +33,6 @@ const goalLabels: Record<string, string> = {
   "less-daytoday": "Im Alltag weniger selbst erledigen müssen",
 };
 
-const timeframeLabels: Record<string, string> = {
-  "soon": "Möglichst zeitnah",
-  "three-months": "In den nächsten 1–3 Monaten",
-  "six-months": "In 3–6 Monaten",
-  "flexible": "Flexibel / Erstmal orientieren",
-};
-
 const contactPreferenceLabels: Record<string, string> = {
   "email": "E-Mail",
   "phone": "Telefonischer Rückruf",
@@ -67,7 +60,6 @@ export const resendInquiryMailer: InquiryMailer = {
     const goalsGermanList = payload.goals.map((g) => goalLabels[g] || g);
     if (payload.supportPhotoVideo) goalsGermanList.push("Unterstützung: Fotos & Imagefilm");
     const goalsGermanFormatted = goalsGermanList.join(", ");
-    const timeframeGerman = timeframeLabels[payload.timeframe] || payload.timeframe;
     const preferredContactGerman = contactPreferenceLabels[payload.preferredContact] || payload.preferredContact;
 
     const rawSubject = `⚡ Neue Firmenflow-Anfrage: ${payload.businessName ? `${payload.businessName} (${payload.place})` : `${payload.name} (${payload.place})`}`;
@@ -88,7 +80,6 @@ export const resendInquiryMailer: InquiryMailer = {
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Leistungen:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(servicesGermanFormatted)}</td></tr>
           ${websiteScopeGerman ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Website-Vorhaben:</td><td style="padding: 10px 0;">${escapeHtml(websiteScopeGerman)}</td></tr>` : ""}
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ziele:</td><td style="padding: 10px 0;">${escapeHtml(goalsGermanFormatted)}</td></tr>
-          <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Zeitrahmen:</td><td style="padding: 10px 0; font-weight: bold; color: #17131A;">${escapeHtml(timeframeGerman)}</td></tr>
           <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Ansprechpartner:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.name)}</td></tr>
           ${payload.email ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">E-Mail:</td><td style="padding: 10px 0;"><a href="mailto:${escapeHtml(payload.email)}" style="color: #FF705D; text-decoration: none; font-weight: bold;">${escapeHtml(payload.email)}</a></td></tr>` : ""}
           ${payload.phone ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #653683;">Telefon:</td><td style="padding: 10px 0;"><a href="tel:${escapeHtml(payload.phone)}" style="color: #17131A; text-decoration: none; font-weight: bold;">${escapeHtml(payload.phone)}</a></td></tr>` : ""}
@@ -117,7 +108,6 @@ ${payload.businessName ? `Betrieb: ${payload.businessName}\n` : ""}Branche: ${pa
 Standort: ${payload.place}
 ${payload.currentWebsite ? `Website: ${payload.currentWebsite}\n` : ""}Leistungen: ${servicesGermanFormatted}
 ${websiteScopeGerman ? `Website-Vorhaben: ${websiteScopeGerman}\n` : ""}Ziele: ${goalsGermanFormatted}
-Zeitrahmen: ${timeframeGerman}
 
 Kontaktdaten:
 -------------
@@ -193,7 +183,6 @@ ${payload.goalDetails ? `Anmerkungen / Wünsche:\n${payload.goalDetails}\n\n` : 
                   TELEFON: payload.phone || "",
                   PROJEKTART: servicesGermanFormatted,
                   ZIELE: goalsGermanFormatted,
-                  ZEITRAHMEN: timeframeGerman,
                   KONTAKTWEG: preferredContactGerman,
                 },
                 listIds: listIds,
