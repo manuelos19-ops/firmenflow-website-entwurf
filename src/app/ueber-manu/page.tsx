@@ -288,8 +288,8 @@ export default function UeberManuPage() {
             und wenn nicht, auch das.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <ButtonLink href="/#kontakt" variant="primary" size="lg">
-              Lass uns sprechen
+            <ButtonLink href="/#projektanfrage" variant="primary" size="lg">
+              Unverbindlich anfragen
             </ButtonLink>
             <ButtonLink href={whatsappUrl} external variant="whatsapp" size="lg">
               WhatsApp an Manu
