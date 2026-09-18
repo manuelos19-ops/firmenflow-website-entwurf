@@ -57,19 +57,25 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
             <span>Persönlich mit Manu</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display leading-[1.08] mb-5">
-            Was soll sich für deinen Betrieb verbessern?
+            Drei Wege zu deiner Antwort. Du entscheidest.
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            Sag mir kurz, was du vorhast. Ich schaue mir deine Angaben persönlich an und melde mich mit einer ersten Einschätzung und dem passenden nächsten Schritt.
+            Formular, Anruf oder Videoprüfung: Alles landet Persönlich mit Manu, alles ist kostenlos und unverbindlich.
           </p>
         </div>
 
-        {/* HAUPT-FORMULAR: 4-Stufen-Anfrage direkt auf der Startseite */}
+        {/* WEG 1: 4-Stufen-Anfrage direkt auf der Startseite */}
         <div id="projektanfrage" className="contact-reveal max-w-4xl mx-auto space-y-6 scroll-mt-28">
+          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60">
+            Weg 1 · Für alle, die es schriftlich mögen (ca. 2 Minuten)
+          </p>
           <div className="double-bezel-outer-dark p-1 sm:p-1.5 rounded-[2.25rem] sm:rounded-[2.75rem] shadow-2xl">
             <ProjectInquiry whatsappUrl={whatsappUrl} />
           </div>
-          {/* Direkt-Alternative (wie auf /anfrage) */}
+          {/* WEG 2: Direkt sprechen (wie auf /anfrage) */}
+          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
+            Weg 2 · Für alle, die lieber sprechen als tippen
+          </p>
           <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-1">
@@ -111,7 +117,10 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
               </div>
             </div>
           </div>
-          {/* Video-Analyse: gleiche Box-Optik wie Direkt-Alternative, Formular aufklappbar */}
+          {/* WEG 3: Video-Analyse (gleiche Box-Optik, Formular aufklappbar) */}
+          <p className="text-center text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/60 pt-4">
+            Weg 3 · Für alle mit bestehender Website (3–5 Minuten Video)
+          </p>
           <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-center sm:text-left">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-1">

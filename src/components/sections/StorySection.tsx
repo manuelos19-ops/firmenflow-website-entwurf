@@ -217,10 +217,10 @@ export function StorySection() {
         <div className="mt-14 sm:mt-20 max-w-2xl mx-auto text-center double-bezel-outer p-1.5 rounded-[2.25rem] bg-black/[0.03] border border-black/[0.06] shadow-lg">
           <div className="double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-8 sm:p-10 bg-white/95 border border-[var(--color-line)]/50">
             <p className="text-base sm:text-lg font-display font-bold text-[var(--color-ink)] mb-2">
-              Bereit für mehr Sichtbarkeit für deinen Betrieb?
+              Passt das zu deinem Betrieb? Frag einfach nach.
             </p>
             <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-              Lass uns kurz sprechen – ehrlich, unverbindlich und persönlich mit Manu.
+              Schick mir deine Seite oder deinen Google-Eintrag per WhatsApp – ich sage dir ehrlich, ob sich etwas lohnt und was es kosten würde. Dauert keine zwei Minuten.
             </p>
 
             <div className="inline-block">
@@ -231,7 +231,7 @@ export function StorySection() {
                   size="lg"
                   className="shadow-xl shadow-[var(--color-coral)]/25 text-sm sm:text-base px-8 py-4"
                 >
-                  <span>Lass uns sprechen</span>
+                  <span>Unverbindlich anfragen</span>
                 </ButtonLink>
               </MagneticButton>
             </div>

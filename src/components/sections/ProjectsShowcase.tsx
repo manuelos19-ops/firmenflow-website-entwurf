@@ -202,10 +202,10 @@ export function ProjectsShowcase() {
             <span>Projekte</span>
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
-            Schau dir an, was ich baue.
+            Schau dir an, was ich baue – live zum Anklicken.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Drei davon sind live im Netz, zwei sind Entwürfe für Branchen, für die ich noch keinen Kunden hatte. Klick auf eine Karte und schau dir die Seite selbst an.
+            Drei davon sind echte, öffentlich erreichbare Websites. Zwei sind freie Entwürfe für Branchen, für die ich noch keinen Kunden hatte – klar gekennzeichnet, damit du weißt, was du siehst. Klick dich einfach durch.
           </p>
         </div>
 
@@ -322,11 +322,11 @@ export function ProjectsShowcase() {
                       {project.kind === "live" ? (
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold bg-emerald-500 text-white rounded-full shadow-md">
                           <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                          Live-Projekt
+                          Echte Website, live
                         </span>
                       ) : (
                         <span className="inline-flex items-center px-2.5 py-1 text-[11px] font-semibold bg-[var(--color-plum)] text-white rounded-full shadow-md">
-                          Konzeptentwurf
+                          Freier Entwurf, kein Auftrag
                         </span>
                       )}
                     </div>
