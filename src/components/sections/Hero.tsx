@@ -46,54 +46,52 @@ export function Hero({ whatsappUrl }: HeroProps) {
             {hero.body}
           </p>
 
-          {/* CTAs: Primär (Website-Einschätzung), Sekundär (Manu anrufen) & WhatsApp-Chat in gleicher Größe */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-3.5 mb-4">
-            <div className="hero-cta-wrap">
-              <MagneticButton>
+          {/* CTAs: Primär oben (mobil volle Breite), darunter Anrufen & WhatsApp IMMER nebeneinander */}
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-3.5 mb-2 sm:mb-4 w-full sm:w-auto">
+            <div className="hero-cta-wrap w-full sm:w-auto">
+              <MagneticButton className="w-full sm:w-auto">
                 <ButtonLink 
                   href="#website-check" 
                   variant="primary"
                   size="lg"
-                  className="shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
+                  className="w-full sm:w-auto shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
                 >
                   <span>{hero.primaryCta}</span>
                 </ButtonLink>
               </MagneticButton>
             </div>
 
-            <div className="hero-cta-wrap">
-              <MagneticButton>
-                <ButtonLink 
-                  href={hero.phoneTel} 
-                  variant="secondary"
-                  size="lg"
-                  className="hover:border-[var(--color-plum)] text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
-                >
-                  <FirmenflowIcon name="telefon" size={20} decorative priority className="shrink-0" />
-                  <span>{hero.secondaryCta}</span>
-                </ButtonLink>
-              </MagneticButton>
-            </div>
+            {/* Feste 2er-Gruppe: Manu anrufen & WhatsApp-Chat auf JEDER Bildschirmgröße garantiert nebeneinander */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto shrink-0">
+              <div className="hero-cta-wrap w-full sm:w-auto">
+                <MagneticButton className="w-full sm:w-auto">
+                  <ButtonLink 
+                    href={hero.phoneTel} 
+                    variant="secondary"
+                    size="lg"
+                    className="w-full sm:w-auto justify-center text-center !px-2.5 sm:!px-5 !py-3 sm:!py-3.5 text-xs sm:text-sm md:text-base whitespace-nowrap hover:border-[var(--color-plum)] [&_[data-arrow]]:hidden sm:[&_[data-arrow]]:inline-flex"
+                  >
+                    <FirmenflowIcon name="telefon" size={18} decorative priority className="shrink-0" />
+                    <span>{hero.secondaryCta}</span>
+                  </ButtonLink>
+                </MagneticButton>
+              </div>
 
-            <div className="hero-cta-wrap">
-              <MagneticButton>
-                <ButtonLink 
-                  href={resolvedWhatsappUrl} 
-                  external
-                  variant="whatsapp"
-                  size="lg"
-                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
-                >
-                  <WhatsAppIcon className="w-5 h-5 text-white shrink-0" />
-                  <span>{hero.whatsappCta}</span>
-                </ButtonLink>
-              </MagneticButton>
+              <div className="hero-cta-wrap w-full sm:w-auto">
+                <MagneticButton className="w-full sm:w-auto">
+                  <ButtonLink 
+                    href={resolvedWhatsappUrl} 
+                    external
+                    variant="whatsapp"
+                    size="lg"
+                    className="w-full sm:w-auto justify-center text-center !px-2.5 sm:!px-5 !py-3 sm:!py-3.5 text-xs sm:text-sm md:text-base whitespace-nowrap shadow-lg shadow-[#25D366]/25 [&_[data-arrow]]:hidden sm:[&_[data-arrow]]:inline-flex"
+                  >
+                    <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
+                    <span>{hero.whatsappCta}</span>
+                  </ButtonLink>
+                </MagneticButton>
+              </div>
             </div>
-          </div>
-
-          {/* Microcopy */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm text-[var(--color-muted)] font-medium">
-            <span>{hero.microcopy}</span>
           </div>
 
           {/* MOBILE ONLY: Hero Portrait direkt unter den CTAs */}
