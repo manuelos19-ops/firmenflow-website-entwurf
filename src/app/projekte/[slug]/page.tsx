@@ -240,23 +240,16 @@ export default async function ProjectPage({
 
           {/* Key Deliverables Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-100">
-            <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <FirmenflowIcon name="responsive-design" size={40} decorative className="mb-2" />
-              <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Mobile First</h3>
-              <p className="text-xs text-[var(--color-muted)] mt-1">Klar lesbar auf allen Smartphones.</p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <FirmenflowIcon name="performance-ladezeit" size={40} decorative className="mb-2" />
-              <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Schnelle Ladezeit</h3>
-              <p className="text-xs text-[var(--color-muted)] mt-1">Optimierte Ladezeiten &amp; Bildkomprimierung.</p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50">
-              <FirmenflowIcon name="unternehmensprofil" size={40} decorative className="mb-2" />
-              <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">Lokale Präsenz</h3>
-              <p className="text-xs text-[var(--color-muted)] mt-1">Direkte Kontaktwege &amp; Google-Verknüpfung.</p>
-            </div>
+            {project.highlights.map((highlight) => (
+              <div
+                key={highlight.title}
+                className="p-4 rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)]/50"
+              >
+                <FirmenflowIcon name={highlight.icon} size={40} decorative className="mb-2" />
+                <h3 className="font-bold text-sm sm:text-base text-[var(--color-ink)]">{highlight.title}</h3>
+                <p className="text-xs text-[var(--color-muted)] mt-1">{highlight.body}</p>
+              </div>
+            ))}
           </div>
 
           {/* Action CTAs */}

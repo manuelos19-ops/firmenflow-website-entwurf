@@ -1,3 +1,9 @@
+export type ProjectHighlight = {
+  icon: "responsive-design" | "performance-ladezeit" | "unternehmensprofil" | "mehr-anfragen" | "foto" | "video" | "struktur-wireframe" | "analyse" | "formular" | "texte-copywriting" | "seo-schutz" | "go-live";
+  title: string;
+  body: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -12,6 +18,7 @@ export type Project = {
   nature: string;
   scope: string;
   verifiable: string;
+  highlights: readonly [ProjectHighlight, ProjectHighlight, ProjectHighlight];
 };
 
 export const liveProjects: readonly Project[] = [
@@ -29,6 +36,23 @@ export const liveProjects: readonly Project[] = [
     nature: "Ein regionaler Gastronomiebetrieb am Niederrhein.",
     scope: "Konzeption, mobiles Webdesign, Strukturierung des Angebots und Bereitstellung der Website.",
     verifiable: "Öffentlich erreichbare Website: Ladezeit, mobile Bedienung und klare Struktur direkt auf dem Smartphone prüfbar.",
+    highlights: [
+      {
+        icon: "responsive-design",
+        title: "Karte & Sorten im Daumenformat",
+        body: "Digitale Karte, Eissorten und Öffnungszeiten ohne Zoomen erreichbar.",
+      },
+      {
+        icon: "foto",
+        title: "Appetit auf den ersten Blick",
+        body: "Echte Fotos von Eis, Theke und Terrasse statt austauschbarer Symbole.",
+      },
+      {
+        icon: "unternehmensprofil",
+        title: "Weg zum Eis verkürzt",
+        body: "Anfahrt, Anruf und Google-Route direkt aus der Seite heraus.",
+      },
+    ],
   },
   {
     slug: "autotransport-alex",
@@ -44,6 +68,23 @@ export const liveProjects: readonly Project[] = [
     nature: "Ein regionaler Dienstleister für Fahrzeugüberführungen und Transporte.",
     scope: "Kompakter Auftritt mit direktem Fokus auf schnelle Kontaktaufnahme (Telefon, WhatsApp) und klare Leistungsübersicht.",
     verifiable: "Öffentlich erreichbare Website: Schnelle Orientierung, Barrierefreiheit und einfache Kontaktwege.",
+    highlights: [
+      {
+        icon: "mehr-anfragen",
+        title: "Anruf in zwei Sekunden",
+        body: "Telefon und WhatsApp prominent platziert, kein Suchen nach Kontakt.",
+      },
+      {
+        icon: "struktur-wireframe",
+        title: "Leistung sofort erkennbar",
+        body: "Überführung, Termine und Ablauf auf den Punkt erklärt.",
+      },
+      {
+        icon: "performance-ladezeit",
+        title: "Schnell auch unterwegs",
+        body: "Schlanke Seite, die am Straßenrand ohne Warten lädt.",
+      },
+    ],
   },
   {
     slug: "climanu-wetter",
@@ -59,6 +100,23 @@ export const liveProjects: readonly Project[] = [
     nature: "Ein eigenständiges Software- und Web-App-Projekt von Manuel Landeck.",
     scope: "Vollständige Produktentwicklung: Frontend-Architektur, DWD-Echtzeitdaten-Anbindung und PWA-Installation.",
     verifiable: "Frei nutzbare Live-Web-App: Interaktivität, Performance, Datenvisualisierung und Interface-Design.",
+    highlights: [
+      {
+        icon: "responsive-design",
+        title: "App-Gefühl im Browser",
+        body: "Installierbare PWA mit 24h-Kurve, Radar und Copilot auf jedem Gerät.",
+      },
+      {
+        icon: "performance-ladezeit",
+        title: "Echtzeit ohne Warten",
+        body: "DWD-Daten, Karten und Vorhersagen flüssig und zwischengespeichert.",
+      },
+      {
+        icon: "analyse",
+        title: "Daten lesbar gemacht",
+        body: "Komplexe Wetterdaten als klare Kurven und Karten statt Tabellen.",
+      },
+    ],
   },
 ] as const;
 
@@ -77,6 +135,23 @@ export const conceptProjects: readonly Project[] = [
     nature: "Frei gestalteter Konzeptentwurf für einen fiktiven Handwerksbetrieb (kein realer Kundenauftrag).",
     scope: "Designstudie mit digitaler Auslage, Anfrage-Logik und handwerklich abgestimmter Bildsprache.",
     verifiable: "Funktionsfähige Demo: Layout, Komponenten, Farbstimmung und Benutzerführung auf Mobilgeräten.",
+    highlights: [
+      {
+        icon: "foto",
+        title: "Auslage zum Anbeißen",
+        body: "Brot, Torten und Konfigurator in warmer Handwerks-Bildsprache.",
+      },
+      {
+        icon: "formular",
+        title: "Torte anfragen statt anrufen",
+        body: "Konfigurator mit Wunschtermin führt direkt zur Anfrage.",
+      },
+      {
+        icon: "seo-schutz",
+        title: "Handwerkston ohne Kitsch",
+        body: "Ehrliche Texte und Typografie, die zum Bäcker passen.",
+      },
+    ],
   },
   {
     slug: "cafe-goldstueck",
@@ -92,6 +167,23 @@ export const conceptProjects: readonly Project[] = [
     nature: "Frei gestalteter Konzeptentwurf für einen fiktiven Gastronomiebetrieb (kein realer Kundenauftrag).",
     scope: "Designstudie mit Fokus auf Ästhetik, Speisekarte, Atmosphäre und mobile Lesbarkeit.",
     verifiable: "Funktionsfähige Demo: Responsive Typografie, ruhige Bildführung und mobile Übersicht.",
+    highlights: [
+      {
+        icon: "video",
+        title: "Atmosphäre vor Geschmack",
+        body: "Ruhige Bildführung und Karte, die Lust auf den ersten Kaffee macht.",
+      },
+      {
+        icon: "texte-copywriting",
+        title: "Karte, die man versteht",
+        body: "Spezialitäten, Preise und Story klar strukturiert statt PDF-Wust.",
+      },
+      {
+        icon: "go-live",
+        title: "Stammgäste willkommen",
+        body: "Bewertungen, Anfahrt und Öffnungszeiten auf einen Blick.",
+      },
+    ],
   },
 ] as const;
 
