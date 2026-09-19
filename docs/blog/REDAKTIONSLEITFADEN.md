@@ -8,7 +8,7 @@ Lokale Unternehmer, insbesondere Handwerk, Bäckereien, Handel und lokale Dienst
 
 ## Stimme
 
-Deutsch, persönliche Du-Ansprache, locker, klar und fachlich fundiert. Kurze Absätze, konkrete Alltagssituationen, verständliche Erklärungen. „Persönlich mit Manu“ ist die verbindliche Markenformulierung für UI, Navigation und Leistungsbeschreibungen. Dort, wo Manu selbst als Autor/Erzähler spricht, gilt die Ich-Form („persönlich mit mir“): Hier schreibt Manu selbst, niemand schreibt über ihn. Keine Agenturfloskeln, erfundenen Erfahrungen, künstliche Dringlichkeit oder unbelegten Erfolgsversprechen. Keine Gedankenstriche als Satztrenner. „KI“ statt „AI“.
+Deutsch, persönliche Du-Ansprache, locker, klar und fachlich fundiert. Kurze Absätze, konkrete Alltagssituationen, verständliche Erklärungen. Der Claim „Persönlich mit Manu“ darf gelegentlich als Claim auftauchen, aber nicht ständig wiederholt werden. In allen weiteren Texten spricht Manu selbst in der Ich-Form und redet den Leser direkt an („persönlich mit mir“, „ich übernehme“, „schreib mir“): Hier schreibt Manu selbst, niemand schreibt über ihn. Keine dritte Person („Manu macht …“) für Manus eigene Aussagen. Keine Agenturfloskeln, erfundenen Erfahrungen, künstliche Dringlichkeit oder unbelegten Erfolgsversprechen. Keine Gedankenstriche als Satztrenner. „KI“ statt „AI“.
 
 ### Ergänzung von Manu am 19.09.2026: verständlich und natürlich schreiben
 
