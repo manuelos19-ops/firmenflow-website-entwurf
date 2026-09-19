@@ -12,7 +12,7 @@ Quelle der Wahrheit für Scope, Stil und Arbeitsweise. Alle Memory-Bank-Dateien 
 
 ## Anforderungen
 
-1. Persönlicher Ton: überall **„Persönlich mit Manu“**, niemals „direkt mit Manu“.
+1. Persönlicher Ton: In UI, Navigation und Leistungsbeschreibungen gilt **„Persönlich mit Manu“** (niemals „direkt mit Manu“). Dort, wo Manu selbst als Autor/Erzähler spricht (z. B. Ratgeber-Artikel), gilt die Ich-Form, z. B. **„persönlich mit mir“** – dort schreibt Manu selbst, niemand schreibt über ihn.
 2. Sichtbarer Markenname **„Manu“**; „Manuel Landeck“ nur in rechtlich vorgeschriebenen Kontexten (Impressum, Datenschutz).
 3. Slogan: „für deine Lokalpräsenz“. Fokusregion: Wesel & Niederrhein (+ NRW).
 4. Alle Git-Commits sowie Vercel-/Deployment-Infos **auf Deutsch**.

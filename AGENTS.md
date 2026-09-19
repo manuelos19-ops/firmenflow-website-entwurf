@@ -9,6 +9,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 <!-- END:nextjs-agent-rules -->
 
 # Projekt-Regeln (Firmenflow)
-- **Tonalität & Marke:** Niemals mehr „direkt mit Manu“ verwenden. Überall und ausnahmslos **„Persönlich mit Manu“** verwenden.
+- **Tonalität & Marke:** Niemals mehr „direkt mit Manu“ verwenden. In UI, Navigation und Leistungsbeschreibungen gilt **„Persönlich mit Manu“**. Dort, wo Manu selbst als Autor/Erzähler spricht (z. B. Ratgeber-Artikel, persönliche Ansprache im Fließtext), gilt die Ich-Form, z. B. **„persönlich mit mir“** – dort schreibt Manu selbst, niemand schreibt über ihn.
 - **Sprache:** Alle Git-Commits, Vercel- und Deployment-Infos immer auf Deutsch verfassen.
 - **Tracking & Legal Consistency:** Sobald Tracking-, Analytics- oder Consent-Tools (wie Google Analytics, Pixel, Cookie-Banner) geändert werden, muss zwingend im selben Zug die Datenschutzerklärung (`/datenschutz`) synchronisiert, veraltete Klauseln entfernt und der interaktive Widerrufs-Button eingebunden werden.

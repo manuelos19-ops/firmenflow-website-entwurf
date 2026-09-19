@@ -85,7 +85,7 @@ Bei Firmenflow kümmere ich mich um [neue Websites und die Überarbeitung besteh
 
 * **Video-Einschätzung anfragen:** Schreib mir einfach kurz eine Nachricht oder melde dich per WhatsApp.
 * **Kurzer Anruf:** Du erreichst mich unter **0155 67277155**.
-* Alles unverbindlich und **Persönlich mit Manu**.
+* Alles unverbindlich und **persönlich mit mir**.
 
-*Autor: [Manu von Firmenflow](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
+*Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 
