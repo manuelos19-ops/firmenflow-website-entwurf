@@ -170,13 +170,38 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">{post.category} · {post.readingMinutes} Min. Lesezeit</p>
           <h1 className="text-3xl sm:text-5xl font-display font-bold text-[var(--color-ink)] leading-[1.1]">{post.title}</h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">{post.description}</p>
-          <p className="text-sm text-[var(--color-muted)]">Von mir · {formatDate(post.date)}</p>
+          <p className="text-sm text-[var(--color-muted)]">Von Manu · {formatDate(post.date)}</p>
         </header>
         <article className="space-y-8">
           {post.sections.map((section, i) => (
             <RatgeberBlock key={i} section={section} />
           ))}
         </article>
+        {related.length > 0 && (
+          <section className="space-y-4 pt-6 border-t border-[var(--color-line)]">
+            <h2 className="text-xl font-display font-bold text-[var(--color-ink)]">
+              Weitere Beiträge
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {related.map((rel) => (
+                <Link
+                  key={rel.slug}
+                  href={`/ratgeber/${rel.slug}`}
+                  className="rounded-2xl border border-[var(--color-line)] bg-white p-5 hover:border-[var(--color-coral)]/50 transition-colors space-y-2 block shadow-sm"
+                >
+                  <p className="text-xs font-mono font-bold text-[var(--color-muted)]">{rel.category}</p>
+                  <h3 className="text-base font-bold text-[var(--color-ink)] line-clamp-2">
+                    {rel.title}
+                  </h3>
+                  <span className="text-xs font-bold text-[var(--color-coral)] inline-flex items-center gap-1">
+                    Beitrag lesen →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="rounded-[2rem] bg-[var(--color-plum)] text-white p-8 sm:p-10 text-center space-y-4 shadow-xl">
           <h2 className="text-2xl sm:text-3xl font-display font-bold">Lieber direkt umsetzen als lesen?</h2>
           <p className="text-white/85 max-w-xl mx-auto">Erzähl mir kurz, wo dein Betrieb steht. Ich sage dir ehrlich, was sich lohnt.</p>

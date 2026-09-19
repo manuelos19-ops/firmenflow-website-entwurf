@@ -83,7 +83,11 @@ function inlineMarkdown(value: string): string {
   out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   out = out.replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
   out = out.replace(/`([^`]+)`/g, "<code>$1</code>");
-  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_match, text, href) => {
+    const isExternal = /^https?:\/\//.test(href) && !href.includes("firmenflow.de");
+    const extAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : "";
+    return `<a href="${href}" class="text-[var(--color-plum)] font-semibold underline underline-offset-4 decoration-[var(--color-coral)]/60 hover:decoration-[var(--color-coral)] hover:text-[var(--color-coral)] transition-colors"${extAttrs}>${text}</a>`;
+  });
   return out;
 }
 
@@ -154,7 +158,9 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       closeList();
       const id = slugify(h3[1]);
       headings.push({ id, text: h3[1], level: 3 });
-      html.push(`<h3 id="${id}">${inlineMarkdown(h3[1])}</h3>`);
+      const h = `<h3 id="${id}" class="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] scroll-mt-28 pt-2">${inlineMarkdown(h3[1])}</h3>`;
+      html.push(h);
+      sections.push({ kind: "text", html: h });
       continue;
     }
     if (/^[-*]\s+/.test(trimmed)) {

@@ -6,6 +6,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { getAllRatgeberPosts } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
+import { RatgeberHub } from "@/components/ratgeber/RatgeberHub";
 
 export const metadata: Metadata = {
   title: "Ratgeber – Praxiswissen für lokale Betriebe in Wesel & NRW",
@@ -63,7 +64,6 @@ const ablauf = [
 export default function RatgeberPage() {
   const baseUrl = getSiteUrl().origin;
   const posts = getAllRatgeberPosts();
-  const featured = posts[0];
 
   const collectionSchema = {
     "@context": "https://schema.org",
@@ -96,7 +96,7 @@ export default function RatgeberPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Container className="max-w-4xl space-y-14 sm:space-y-20">
+      <Container className="max-w-5xl space-y-12 sm:space-y-16">
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-[var(--color-muted)]">
             <li>
@@ -110,7 +110,8 @@ export default function RatgeberPage() {
             </li>
           </ol>
         </nav>
-        <div className="space-y-5">
+
+        <div className="space-y-4">
           <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-xs font-bold text-[var(--color-coral)]">
             <FirmenflowIcon name="faq" size={20} decorative />
             <span>Firmenflow Ratgeber</span>
@@ -120,57 +121,15 @@ export default function RatgeberPage() {
           </h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl">
             Hier erscheinen regelmäßig Beiträge zu Website, Google-Profil und Anfragen.
-            Jeder Beitrag lässt sich auch ohne Vorkenntnisse lesen und direkt nutzen.
+            Jeder Beitrag lässt sich ohne Vorkenntnisse lesen und direkt im Alltag nutzen.
           </p>
         </div>
 
-        <section
-          aria-labelledby="ratgeber-status"
-          className="rounded-[2rem] border border-[var(--color-line)] bg-white p-7 sm:p-10 shadow-sm space-y-4"
-        >
-          {featured ? (
-            <Link href={`/ratgeber/${featured.slug}`} className="block group space-y-3">
-              <div className="flex items-center gap-3">
-                <FirmenflowIcon name="texte-copywriting" size={48} decorative />
-                <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                  Neu · {featured.category} · {featured.readingMinutes} Min. Lesezeit · von mir
-                </p>
-              </div>
-              <h2 id="ratgeber-status" className="text-xl sm:text-3xl font-display font-bold text-[var(--color-ink)] leading-tight group-hover:text-[var(--color-coral)] transition-colors">
-                {featured.title}
-              </h2>
-              <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed max-w-2xl">
-                {featured.description}
-              </p>
-              <span className="inline-block text-sm font-bold text-[var(--color-plum)] group-hover:text-[var(--color-coral)] transition-colors">
-                Beitrag lesen
-              </span>
-            </Link>
-          ) : (
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <FirmenflowIcon name="texte-copywriting" size={48} decorative />
-                <h2 id="ratgeber-status" className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)]">
-                  Die ersten Beiträge entstehen gerade.
-                </h2>
-              </div>
-              <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed max-w-2xl">
-                Der Ratgeber ist neu. Sobald der erste Beitrag fertig geprüft ist, erscheint er hier
-                mit Zusammenfassung und Lesezeit.
-              </p>
-            </div>
-          )}
-          <div className="flex flex-wrap gap-3 pt-1">
-            <ButtonLink href="/anfrage" variant="primary" size="default">
-              Projekt anfragen
-            </ButtonLink>
-            <ButtonLink href="/#kontakt" variant="secondary" size="default">
-              Kostenlose Video-Einschätzung
-            </ButtonLink>
-          </div>
-        </section>
+        {/* Interaktiver Hub: Suche, Seitenmenü & Beitragsübersicht */}
+        <RatgeberHub posts={posts} />
 
-        <section className="space-y-6" aria-labelledby="ratgeber-themen">
+        {/* Themenschwerpunkte */}
+        <section className="space-y-6 pt-4" aria-labelledby="ratgeber-themen">
           <SectionHeading
             eyebrow="Themen im Ratgeber"
             title="Darum wird es hier gehen."
@@ -189,6 +148,7 @@ export default function RatgeberPage() {
           </div>
         </section>
 
+        {/* Struktur der Beiträge */}
         <section className="space-y-6" aria-labelledby="ratgeber-lesen">
           <SectionHeading
             eyebrow="So lesen sich die Beiträge"
@@ -213,6 +173,7 @@ export default function RatgeberPage() {
           </div>
         </section>
 
+        {/* Dezent gestalteter Abschluss-Callout */}
         <section className="rounded-[2.5rem] bg-[var(--color-plum)] text-white p-8 sm:p-12 text-center space-y-5 shadow-2xl">
           <h2 className="text-2xl sm:text-4xl font-display font-bold leading-tight">
             Lieber persönlich klären als lange lesen?
