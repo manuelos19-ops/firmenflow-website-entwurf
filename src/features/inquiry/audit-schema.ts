@@ -3,25 +3,31 @@ import { z } from "zod";
 const normalizedWebsite = z
   .string()
   .trim()
-  .max(255, "Die Webadresse ist zu lang.")
+  .max(255, "Die Eingabe ist zu lang.")
   .transform((val) => {
     if (!val) return "";
-    return /^https?:\/\//i.test(val) ? val : `https://${val}`;
+    if (!/^https?:\/\//i.test(val) && val.includes(".")) {
+      return `https://${val}`;
+    }
+    return val;
   })
   .refine(
     (val) => {
       if (!val) return true;
-      try {
-        const url = new URL(val);
-        return (
-          url.hostname.includes(".") &&
-          ["http:", "https:"].includes(url.protocol.toLowerCase())
-        );
-      } catch {
-        return false;
+      if (/^https?:\/\//i.test(val)) {
+        try {
+          const url = new URL(val);
+          return (
+            url.hostname.includes(".") &&
+            ["http:", "https:"].includes(url.protocol.toLowerCase())
+          );
+        } catch {
+          return false;
+        }
       }
+      return val.length >= 2;
     },
-    { message: "Bitte gib eine gültige Webadresse ein (z. B. dein-betrieb.de)." }
+    { message: "Bitte gib eine gültige Webadresse oder deinen Betriebsnamen ein." }
   );
 
 export const auditInquirySchema = z
@@ -47,10 +53,10 @@ export const auditInquirySchema = z
   .refine(
     (data) => {
       if (data.noWebsite) return true;
-      return Boolean(data.websiteUrl && data.websiteUrl.trim().length >= 3);
+      return Boolean(data.websiteUrl && data.websiteUrl.trim().length >= 2);
     },
     {
-      message: "Bitte trage deine Website-Adresse ein oder aktiviere 'Noch keine Website vorhanden'.",
+      message: "Bitte trage deine Webadresse oder deinen Betriebsnamen ein oder aktiviere 'Noch keine Website vorhanden'.",
       path: ["websiteUrl"],
     }
   );

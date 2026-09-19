@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { faqItems } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { Plus, Minus, ArrowRight } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";

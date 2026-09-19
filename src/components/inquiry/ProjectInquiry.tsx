@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useReducer, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
+import { ArrowLeft, ArrowRight, RefreshCw } from "@/components/brand/FirmenflowUiIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { TOTAL_STEPS, initialInquiryState, inquiryReducer, migrateLegacyDraft } from "@/features/inquiry/reducer";

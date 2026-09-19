@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { siteIdentity } from "@/config/site";
 import { BrandIcon } from "@/components/brand/BrandIcon";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "@/components/brand/FirmenflowUiIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";

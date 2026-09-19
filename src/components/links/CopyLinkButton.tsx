@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Share2, Check } from "lucide-react";
+import { Share2, Check } from "@/components/brand/FirmenflowUiIcon";
 
 export function CopyLinkButton() {
   const [copied, setCopied] = useState(false);

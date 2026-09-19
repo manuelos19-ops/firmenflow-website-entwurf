@@ -8,7 +8,7 @@ import {
   User, 
   Mail, 
   Phone,
-} from "lucide-react";
+} from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
 import { siteIdentity } from "@/config/site";
 import { BrandIcon } from "@/components/brand/BrandIcon";
@@ -100,10 +100,10 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               <span>100% KOSTENLOS &amp; UNVERBINDLICH</span>
             </div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[var(--color-ink)] leading-tight">
-              Kostenlose Website-Prüfung per Video
+              Kostenlose Video-Einschätzung für Website &amp; Google-Profil
             </h3>
             <p className="text-sm sm:text-base text-[var(--color-muted)] max-w-2xl leading-relaxed">
-              Trage einfach deine Webadresse ein. Ich schaue mir deinen aktuellen Auftritt persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Verbesserungsmöglichkeiten direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
+              Trage einfach deine Webadresse oder den Namen deines Betriebs ein. Ich schaue mir deinen aktuellen Auftritt und dein Google-Unternehmensprofil persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Verbesserungsmöglichkeiten direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               {/* Website-URL Feld */}
               <div className="sm:col-span-2 space-y-1.5">
                 <label htmlFor="audit-website" className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-                  Website-Adresse deines Betriebs {!noWebsite && <span className="text-[var(--color-coral)]">*</span>}
+                  Website-Adresse oder Name deines Betriebs {!noWebsite && <span className="text-[var(--color-coral)]">*</span>}
                 </label>
                 <div className="relative">
                   <Globe className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none" />
@@ -123,7 +123,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                     disabled={noWebsite}
                     value={websiteUrl}
                     onChange={(e) => setWebsiteUrl(e.target.value)}
-                    placeholder={noWebsite ? "Wird neu erstellt (keine Website vorhanden)" : "z. B. www.mein-betrieb.de"}
+                    placeholder={noWebsite ? "Fokus auf Google-Profil (noch keine Website vorhanden)" : "z. B. www.mein-betrieb.de oder Firmenname"}
                     aria-invalid={!!fieldErrors.websiteUrl}
                     aria-describedby={fieldErrors.websiteUrl ? "audit-website-error" : undefined}
                     className={cn(
@@ -150,7 +150,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
                     }}
                     className="w-4 h-4 rounded border-[var(--color-line)] text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
                   />
-                  <span>Ich habe aktuell noch keine Website (Neugründung / kompletter Neuauftritt)</span>
+                  <span>Ich habe aktuell noch keine Website (Fokus auf Google-Profil / Neugründung)</span>
                 </label>
               </div>
 
@@ -265,7 +265,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               ) : (
                 <>
                   <BrandIcon size="sm" variant="light" className="shrink-0" />
-                  <span>Kostenlose Video-Prüfung anfordern</span>
+                  <span>Kostenlose Video-Einschätzung anfordern</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </>
               )}
@@ -284,7 +284,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               Klasse, {name || "vielen Dank"}!
             </h3>
             <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-              Deine Anfrage für die <strong>kostenlose Website-Prüfung per Video</strong> ist erfolgreich eingegangen. Ich schaue mir deine Website persönlich an und sende dir deine Video-Auswertung zeitnah per E-Mail.
+              Deine Anfrage für die <strong>kostenlose Video-Einschätzung für Website &amp; Google-Profil</strong> ist erfolgreich eingegangen. Ich schaue mir deinen Auftritt und dein Google-Profil persönlich an und sende dir deine Video-Auswertung zeitnah per E-Mail.
             </p>
           </div>
 
@@ -327,7 +327,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
             }}
             className="text-xs font-semibold text-[var(--color-muted)] hover:text-[var(--color-plum)] underline transition-colors"
           >
-            Weitere Website prüfen lassen
+            Weiteren Auftritt prüfen lassen
           </button>
         </div>
       )}

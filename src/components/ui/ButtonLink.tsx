@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
 
 type ButtonLinkProps = {
@@ -30,7 +30,7 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   const baseStyles =
-    "group inline-flex items-center justify-center gap-3 font-medium tracking-tight rounded-full select-none transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] cursor-pointer text-center will-change-transform";
+    "group relative isolate overflow-hidden inline-flex items-center justify-center gap-3 font-medium tracking-tight rounded-full select-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98] cursor-pointer text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-plum)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-paper)]";
 
   // Keine "!"-Prefixe fuer Textfarben hier: tailwind-merge 3 erkennt die
   // alte Tailwind-v3-Schreibweise nicht als Farbklasse, laesst sie stehen und
@@ -66,7 +66,7 @@ export function ButtonLink({
     <span
       data-arrow
       className={cn(
-        "inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full shrink-0 -mr-1 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105",
+        "relative z-10 inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full shrink-0 -mr-1 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105",
         arrowBgVariants[variant]
       )}
     >
@@ -74,18 +74,28 @@ export function ButtonLink({
     </span>
   ) : null;
 
+  const sheen = (
+    <span
+      aria-hidden="true"
+      data-flow-sheen
+      className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-[18deg] bg-gradient-to-r from-transparent via-white/25 to-transparent opacity-0 transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-[420%] group-hover:opacity-100 motion-reduce:hidden"
+    />
+  );
+
   if (href) {
     if (external) {
       return (
         <a href={href} target="_blank" rel="noreferrer" className={classes} onClick={onClick}>
-          <span className="inline-flex items-center gap-2 text-inherit">{children}</span>
+          {sheen}
+          <span className="relative z-10 inline-flex items-center gap-2 text-inherit">{children}</span>
           {arrow}
         </a>
       );
     }
     return (
       <Link href={href} className={classes} onClick={onClick}>
-        <span className="inline-flex items-center gap-2 text-inherit">{children}</span>
+        {sheen}
+        <span className="relative z-10 inline-flex items-center gap-2 text-inherit">{children}</span>
         {arrow}
       </Link>
     );
@@ -93,7 +103,8 @@ export function ButtonLink({
 
   return (
     <button type={type} disabled={disabled} onClick={onClick} className={classes} {...props}>
-      <span className="inline-flex items-center gap-2">{children}</span>
+      {sheen}
+      <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
       {arrow}
     </button>
   );

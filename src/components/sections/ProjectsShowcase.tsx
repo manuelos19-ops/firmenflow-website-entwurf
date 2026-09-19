@@ -14,7 +14,7 @@ import {
   Pause,
   Play,
   ArrowRight
-} from "lucide-react";
+} from "@/components/brand/FirmenflowUiIcon";
 
 export function ProjectsShowcase() {
   const allProjects: Project[] = [...liveProjects, ...conceptProjects];
@@ -313,10 +313,6 @@ export function ProjectsShowcase() {
                       className="object-contain object-top p-2 pb-0 drop-shadow-xl transition-transform duration-500 group-hover:scale-[1.04]"
                       sizes="(max-width: 640px) 250px, (max-width: 1024px) 300px, 350px"
                     />
-
-                    <div className="absolute top-2.5 left-2.5 z-10 text-[10px] sm:text-[11px] font-mono text-[var(--color-muted)] truncate max-w-[120px] sm:max-w-[150px] px-2 py-0.5 bg-white/90 rounded-md border border-[var(--color-line)]/60 shadow-sm">
-                      {project.url.replace("https://", "").replace(/\/$/, "")}
-                    </div>
 
                     <div className="absolute top-2.5 right-2.5 z-10">
                       {project.kind === "live" ? (

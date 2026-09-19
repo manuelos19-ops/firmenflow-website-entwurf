@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/components/brand/FirmenflowUiIcon";
 
 export function FeaturedWorkSampleSection() {
   return (

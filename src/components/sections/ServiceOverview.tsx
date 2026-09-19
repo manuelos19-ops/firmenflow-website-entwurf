@@ -5,7 +5,7 @@ import { homeContent } from "@/content/site";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { Check } from "lucide-react";
+import { Check } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 

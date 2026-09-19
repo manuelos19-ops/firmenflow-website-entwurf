@@ -6,7 +6,7 @@ import {
   MapPin,
   ArrowUpRight,
   Download,
-} from "lucide-react";
+} from "@/components/brand/FirmenflowUiIcon";
 import { Container } from "@/components/ui/Container";
 import {
   linkProfile,

@@ -411,12 +411,12 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
   const smtpPort = Number(process.env.SMTP_PORT) || 465;
 
   const isVideo = payload.choice === "flowray-video" || payload.choice === "xray-video";
-  const choiceLabel = isVideo ? "🎥 Kostenlose FlowRay Video-Analyse" : "📅 30 Min. Erstgespräch via meetergo";
+  const choiceLabel = isVideo ? "🎥 Kostenlose Video-Einschätzung (Website & Google-Profil)" : "📅 30 Min. Erstgespräch via meetergo";
   const websiteDisplay = payload.noWebsite ? "Noch keine Website vorhanden" : (payload.websiteUrl || "Keine Angabe");
   const submissionId = `audit-${Date.now().toString(36)}`;
 
   const rawSubject = isVideo
-    ? `⚡ Neue FlowRay Website-Analyse: ${payload.name} (${payload.websiteUrl || "Keine Website"})`
+    ? `⚡ Neue Video-Einschätzung: ${payload.name} (${payload.websiteUrl || "Keine Website / Google-Profil"})`
     : `📅 Neuer 30-Min. Erstgespräch-Lead: ${payload.name}`;
   const subject = rawSubject.replace(/[\r\n]+/g, " ").trim();
 
@@ -424,7 +424,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
       ${mailBrandHeader("NEUE ANFRAGE")}
       <div style="background-color: #5C3378; padding: 20px 24px; border-radius: 12px; margin-bottom: 24px;">
-        <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue FlowRay Video-Anfrage" : "📅 Neuer Erstgespräch-Lead"}</h1>
+        <h1 style="color: #FFFFFF; font-size: 20px; margin: 0; font-weight: bold;">${isVideo ? "🎥 Neue Video-Einschätzung" : "📅 Neuer Erstgespräch-Lead"}</h1>
         <p style="color: #FCFAF7; opacity: 0.9; margin: 4px 0 0 0; font-size: 13px;">Über die 1-Klick-Weiche auf firmenflow.de</p>
       </div>
 
@@ -433,7 +433,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
         <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Name:</td><td style="padding: 10px 0; font-weight: bold;">${escapeHtml(payload.name)}</td></tr>
         <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">E-Mail:</td><td style="padding: 10px 0;"><a href="mailto:${escapeHtml(payload.email)}" style="color: #FC583E; text-decoration: none; font-weight: bold;">${escapeHtml(payload.email)}</a></td></tr>
         ${payload.phone ? `<tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Telefon:</td><td style="padding: 10px 0;"><a href="tel:${escapeHtml(payload.phone)}" style="color: #17131A; text-decoration: none; font-weight: bold;">${escapeHtml(payload.phone)}</a></td></tr>` : ""}
-        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Website:</td><td style="padding: 10px 0;">${payload.noWebsite ? "<em>Noch keine Website vorhanden</em>" : `<a href="${escapeHtml(payload.websiteUrl)}" target="_blank" style="color: #FC583E; text-decoration: none; font-weight: bold;">${escapeHtml(payload.websiteUrl)}</a>`}</td></tr>
+        <tr style="border-bottom: 1px solid #E5E0D8;"><td style="padding: 10px 0; font-weight: bold; color: #5C3378;">Website / Betrieb:</td><td style="padding: 10px 0;">${payload.noWebsite ? "<em>Noch keine Website vorhanden (Fokus auf Google-Profil)</em>" : (/^https?:\/\//i.test(payload.websiteUrl) ? `<a href="${escapeHtml(payload.websiteUrl)}" target="_blank" style="color: #FC583E; text-decoration: none; font-weight: bold;">${escapeHtml(payload.websiteUrl)}</a>` : `<strong>${escapeHtml(payload.websiteUrl)}</strong>`)}</td></tr>
       </table>
 
       ${payload.notes ? `<div style="background: #FFFFFF; padding: 16px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 24px;"><strong style="color: #5C3378; display: block; margin-bottom: 6px;">Notizen / Anmerkungen:</strong><p style="margin: 0; font-size: 14px;">${escapeHtml(payload.notes)}</p></div>` : ""}
@@ -446,14 +446,14 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
 
   const customerHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #17131A; max-width: 600px; margin: 0 auto; padding: 24px; background-color: #FCFAF7; border-radius: 16px; border: 1px solid #E5E0D8;">
-      ${mailBrandHeader(isVideo ? "VIDEO-ANALYSE" : "ERSTGESPR&Auml;CH")}
+      ${mailBrandHeader(isVideo ? "VIDEO-EINSCH&Auml;TZUNG" : "ERSTGESPR&Auml;CH")}
       ${mailPortraitRow()}
 
       <div style="background-color: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E5E0D8; margin-bottom: 24px;">
         <h2 style="color: #17131A; font-size: 18px; margin-top: 0;">Hi ${escapeHtml(payload.name)},</h2>
         <p style="font-size: 15px; color: #332E38;">
           ${isVideo 
-            ? `deine Anfrage für die <strong>kostenlose FlowRay Website-Analyse</strong> ist erfolgreich bei mir eingegangen! Ich schaue mir deine Seite (<em>${escapeHtml(websiteDisplay)}</em>) persönlich an und erstelle dir eine kurze Video-Einschätzung mit konkreten Hebeln.`
+            ? `deine Anfrage für die <strong>kostenlose Video-Einschätzung für Website & Google-Profil</strong> ist erfolgreich bei mir eingegangen! Ich schaue mir deinen Auftritt (<em>${escapeHtml(websiteDisplay)}</em>) und dein Google-Unternehmensprofil persönlich an und erstelle dir eine kurze Video-Auswertung mit konkreten Hebeln.`
             : `dein <strong>30-Minuten Erstgespräch</strong> ist vorgemerkt! Falls du deinen Termin noch nicht im Kalender gebucht hast, kannst du dir hier direkt deinen Wunschtermin sichern:`}
         </p>
 
@@ -513,7 +513,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
               sender: { name: "Manu von Firmenflow", email: fromEmail },
               to: [{ email: payload.email, name: payload.name }],
               replyTo: { email: "manu@firmenflow.de", name: "Manu Landeck" },
-              subject: (isVideo ? `Deine FlowRay Website-Analyse ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`).replace(/[\r\n]+/g, " ").trim(),
+              subject: (isVideo ? `Deine Video-Einschätzung ist in Arbeit, ${payload.name}!` : `Dein 30-Min. Erstgespräch mit Manu, ${payload.name}!`).replace(/[\r\n]+/g, " ").trim(),
               htmlContent: customerHtml,
             }),
           });

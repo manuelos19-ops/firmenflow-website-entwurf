@@ -13,7 +13,7 @@ import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import {
   ArrowLeft,
   Clock,
-} from "lucide-react";
+} from "@/components/brand/FirmenflowUiIcon";
 
 interface GoogleBusinessViewProps {
   whatsappUrl: string;
@@ -97,7 +97,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="g360-hero-cta flex flex-wrap items-center gap-4 pt-2">
               <MagneticButton>
                 <ButtonLink
-                  href="/#kontakt"
+                  href="/#website-check"
                   variant="primary"
                   size="lg"
                   className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
@@ -823,7 +823,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <MagneticButton>
                 <ButtonLink
-                  href="/#kontakt"
+                  href="/#website-check"
                   variant="primary"
                   size="lg"
                   className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"

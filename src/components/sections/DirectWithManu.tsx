@@ -6,7 +6,7 @@ import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { FirmenflowIconName } from "@/content/firmenflow-icons";

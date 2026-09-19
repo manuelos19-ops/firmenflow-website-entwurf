@@ -27,7 +27,7 @@ import {
   Monitor,
   HardDrive,
   ExternalLink,
-} from "lucide-react";
+} from "@/components/brand/FirmenflowUiIcon";
 
 const RELEASES_PAGE_URL = FLOWSCREEN_RELEASES_URL;
 

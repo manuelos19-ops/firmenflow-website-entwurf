@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Phone } from "@/components/brand/FirmenflowUiIcon";
 import { Container } from "@/components/ui/Container";
 import { legalContent } from "@/content/legal";
 

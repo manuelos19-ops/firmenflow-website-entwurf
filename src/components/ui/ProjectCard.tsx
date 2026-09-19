@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
 import type { Project } from "@/content/projects";
 import { cn } from "@/lib/cn";
 

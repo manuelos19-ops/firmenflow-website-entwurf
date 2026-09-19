@@ -6,7 +6,7 @@ import { BrandMark } from "@/components/brand/BrandMark";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "@/components/brand/FirmenflowUiIcon";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Download } from "lucide-react";
+import { Download } from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
 import { getFlowscreenDownloadUrl, FLOWSCREEN_VERSION } from "@/lib/flowscreen";
 import { trackFlowscreenDownload } from "@/lib/track-flowscreen";

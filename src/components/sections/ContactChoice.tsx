@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { siteIdentity } from "@/config/site";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
@@ -163,7 +162,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                    Ich schaue mir deine Website an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
+                    Ich schaue mir deine Website und dein Google-Unternehmensprofil an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
                   </p>
                 </div>
                 <div>
