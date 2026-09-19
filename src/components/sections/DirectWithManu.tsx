@@ -11,7 +11,7 @@ import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
-const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto", "festpreis"];
+const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto", "go-live"];
 
 const bentoItems = [
   {
@@ -29,8 +29,8 @@ const bentoItems = [
     iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
   },
   {
-    title: "Handschlagqualität",
-    desc: "Ein Wort gilt. Was wir besprechen, halte ich fest. Und du erreichst mich persönlich per Telefon oder WhatsApp, nicht über ein Ticketsystem. Genau deshalb bleibt dein Projekt bei mir Chefsache.",
+    title: "Schnell, weil ich alles selbst mache",
+    desc: "Keine Agentur-Kette, keine Warteschleife: Du sprichst mit dem, der auch baut. Kurze Wege, schnelle Entscheidungen, ein Ansprechpartner von Anfang bis Go-live.",
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
     iconBg: "bg-emerald-100 text-emerald-700",
@@ -96,7 +96,7 @@ export function DirectWithManu() {
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
-              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache. Wie das im Detail aussieht, steht unten bei der Handschlagqualität.
+              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache.
             </p>
 
             {/* Quick Trust Highlights - High-End Frosted Pills */}
@@ -159,7 +159,7 @@ export function DirectWithManu() {
                     src="/media/portraits/manu-nature-seated.webp"
                     alt="Manu – Gründer von Firmenflow"
                     fill
-                    className="object-cover object-[50%_30%] transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-[50%_15%] scale-[1.15] transition-transform duration-500 group-hover:scale-[1.2]"
                     sizes="250px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />

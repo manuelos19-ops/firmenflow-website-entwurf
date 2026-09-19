@@ -104,7 +104,7 @@ export default function UeberManuPage() {
                 alt={portraitAssets.about.alt}
                 fill
                 priority
-                className="object-cover object-[50%_25%]"
+                className="object-cover object-[50%_20%] scale-[1.12]"
                 sizes="(max-width: 640px) 100vw, 40vw"
               />
             </div>
@@ -276,62 +276,6 @@ export default function UeberManuPage() {
               </span>
             </li>
           </ul>
-        </section>
-
-        {/* Preise */}
-        <section className="space-y-5">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)]">
-            Was es kostet
-          </h2>
-          <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
-            Klare Preise, Festpreis vor dem Start. Keine Überraschungen auf der Rechnung.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                Einmalig
-              </p>
-              <h3 className="font-bold text-[var(--color-ink)]">Onepager ab 690 € netto</h3>
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Aufbau, Texte und die Einbindung deiner Bilder inklusive. Mehrseitige
-                Auftritte nach dem Kennenlernen zum verbindlichen Festpreis.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                Monatlich
-              </p>
-              <h3 className="font-bold text-[var(--color-ink)]">Betreuung 39 €</h3>
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Hosting, Updates und 30 Minuten Änderungen im Monat. Monatlich kündbar,
-                keine Mindestlaufzeit.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                Optional
-              </p>
-              <h3 className="font-bold text-[var(--color-ink)]">Fototermin 350 €</h3>
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Team, Räume und Arbeit bei dir vor Ort. Lässt sich mit jedem
-                Website-Projekt kombinieren.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                Optional
-              </p>
-              <h3 className="font-bold text-[var(--color-ink)]">Lokalpräsenz 360° ab 99 €/Monat</h3>
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Google-Profil einrichten oder aufräumen, Bewertungen beantworten,
-                Monatsreport. Details auf der{" "}
-                <Link href="/lokalpraesenz-360" className="text-[var(--color-plum)] font-semibold underline hover:text-[var(--color-coral)]">
-                  Lokalpräsenz-Seite
-                </Link>
-                .
-              </p>
-            </div>
-          </div>
         </section>
 
         {/* Abschluss */}

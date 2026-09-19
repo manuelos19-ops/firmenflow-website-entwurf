@@ -8,6 +8,7 @@ import { FeaturedWorkSampleSection } from "@/components/sections/FeaturedWorkSam
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { StorySection } from "@/components/sections/StorySection";
 import { ServiceOverview } from "@/components/sections/ServiceOverview";
+import { WebsitePreise } from "@/components/sections/WebsitePreise";
 import { Process } from "@/components/sections/Process";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <ProblemSection />
       <StorySection />
       <ServiceOverview />
+      <WebsitePreise />
       <GoogleBusinessPilot />
       <ProjectsShowcase />
       <DirectWithManu />
