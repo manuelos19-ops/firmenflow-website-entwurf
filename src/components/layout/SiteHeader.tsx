@@ -12,6 +12,7 @@ const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
   { label: "Lokalpräsenz 360°", href: "/lokalpraesenz-360" },
   { label: "Projekte", href: "/#projekte" },
+  { label: "Ratgeber", href: "/ratgeber" },
   { label: "Über Manu", href: "/ueber-manu" },
   { label: "Ablauf", href: "/#ablauf" },
   { label: "FAQ", href: "/#faq" },

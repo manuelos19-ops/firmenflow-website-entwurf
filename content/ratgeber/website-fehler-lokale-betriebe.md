@@ -1,0 +1,91 @@
+---
+title: "Die 5 typischen Website-Fehler lokaler Betriebe: Warum Neukunden mit dem Daumen weiterscrollen"
+description: "Deine Stammkunden kennen deine Arbeit. Neue Kunden sehen nur deinen Auftritt auf dem Handy. Fünf typische Website-Fehler lokaler Betriebe und was du selbst prüfen kannst."
+date: "2026-09-19"
+category: "Website & Vertrauen"
+tags: [Website, Google-Profil, Handwerk, Wesel]
+featured: "true"
+---
+
+Deine Stammkunden wissen, was sie an dir haben. Sie kennen deine Zuverlässigkeit, deine saubere Arbeit und rufen dich an, wenn etwas repariert, gebaut oder gebacken werden muss.
+
+Schwieriger wird es bei Menschen, die neu in deinen Ort gezogen sind oder dringend einen Fachbetrieb in ihrer Nähe suchen. Diese Leute fragen selten den Nachbarn über den Zaun. Sie nehmen das Smartphone aus der Tasche und suchen bei Google.
+
+In genau diesem Moment entscheidet sich alles. Diese Kunden kennen deine jahrelange Erfahrung und deinen Meisterbrief noch nicht. Sie sehen im ersten Augenblick nur deinen Auftritt auf dem Handybildschirm. Ist die Seite unübersichtlich, langsam oder veraltet, wischt der Daumen in zwei Sekunden weiter zur Konkurrenz. Du merkst davon überhaupt nichts, weil dein Telefon einfach stumm bleibt.
+
+Aus meiner täglichen Arbeit mit Betrieben in Wesel und am Niederrhein fallen mir fünf Fehler immer wieder auf.
+
+## Fehler 1: Die lange Ladezeit auf dem Smartphone
+
+Wenn jemandem am Wochenende ein Rohr platzt, das Garagentor streikt oder jemand morgens schnell die Öffnungszeiten deiner Bäckerei nachsehen will, setzt sich niemand an einen Schreibtisch vor einen Computer. Fast jeder sucht unterwegs oder vom Sofa aus auf dem Handy.
+
+## Fehler 2: Versteckte Telefonnummern und komplizierte Formulare
+
+Wer vor Ort einen Betrieb sucht, will keine langen Aufsätze lesen. Er will wissen, ob du sein Problem löst, wann du geöffnet hast und wie er dich erreicht.
+
+Trotzdem muss man auf vielen Seiten regelrecht suchen. Die Telefonnummer steht irgendwo im Fließtext ganz unten und lässt sich auf dem Handy nicht antippen. Wer ein Kontaktformular nutzen will, wird oft gezwungen, technische Details in Pflichtfelder einzutragen, die er noch gar nicht kennt.
+
+Wer lokal auf dem Smartphone sucht, hat ein konkretes Anliegen und will schnell eine Lösung. Mache die Kontaktaufnahme passend zum Anliegen einfach:
+
+* Ein gut sichtbarer Knopf zum Anrufen, der sich direkt mit einem Daumentipp wählen lässt.
+* Eine unkomplizierte Nachricht per WhatsApp für schnelle Rückfragen.
+* Klare Beschriftungen auf Knöpfen, zum Beispiel „Reparatur anfragen“ statt eines unpersönlichen „Senden“.
+
+Wenn der Weg zu dir Mühe kostet, verliert der Kunde die Geduld und ruft den nächsten Betrieb an.
+
+## Fehler 3: Seelenlose Katalogfotos statt deiner echten Werkstatt
+
+Handwerk und lokale Betriebe leben von Vertrauen. Niemand lässt jemanden in sein Haus, wenn das Bauchgefühl nicht stimmt.
+
+Ein großer Fehler sind gekaufte Katalogfotos. Viele kennen diese Bilder: Drei strahlende Fotomodelle mit blütenweißen Bauhelmen, die noch nie ein Werkzeug in der Hand hatten.
+
+Kunden erkennen solche Bilder sofort. Es wirkt künstlich und fremd. Man fragt sich unwillkürlich, ob es den Betrieb wirklich vor Ort gibt. Ein ehrliches Foto von dir bei der Arbeit, von deiner Werkstatt, deinen Fahrzeugen oder einem fertigen Projekt überzeugt viel stärker als jedes gekaufte Hochglanzfoto. Kunden vor Ort wollen sehen, wer tatsächlich zu ihnen nach Hause kommt.
+
+## Fehler 4: Keine Verbindung zu Google Maps
+
+Viele Unternehmer pflegen ihre Website, vergessen aber ihr Google-Unternehmensprofil völlig.
+
+Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit drei Betrieben an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
+
+Viele Kunden lesen vor einer Entscheidung die Bewertungen lokaler Betriebe. Eine kurze, sachliche Antwort auf Bewertungen zeigt, dass dir Rückmeldungen wichtig sind. Deine eigene Website und dein Google-Kartenprofil gehören fest zusammen.
+
+Wenn diese Aufgaben neben dem Tagesgeschäft liegen bleiben, unterstütze ich dich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360). Ich richte dein Google-Profil ein, bringe es auf Stand und kümmere mich um die laufende Pflege.
+
+## Fehler 5: Begrüßungsfloskeln statt klarer Antworten
+
+Schau dir einmal die Startseite deines eigenen Betriebs an. Beginnt der erste Text mit:
+*„Herzlich willkommen. Seit vielen Jahren stehen wir für Qualität, Kompetenz und Zuverlässigkeit.“*?
+
+Das ist freundlich gedacht, hilft dem Kunden auf dem Smartphone aber nicht weiter. Das könnte auf fast jeder Firmenwebsite stehen. Wer auf deiner Seite landet, hat ein Problem und sucht eine Lösung.
+
+Lies einmal nur die erste Überschrift deiner Website. Wenn sie genauso gut zu einem Friseursalon passen würde wie zu deinem Handwerksbetrieb, solltest du konkreter werden. Schreibe gleich auf der Startseite, was du anbietest und wo du tätig bist. Für einen Heizungsbetrieb sieht ein klarer Einstieg so aus:
+
+*„Heizungswartung und Reparaturen in Wesel und Umgebung. Ruf uns an und beschreibe kurz, was mit deiner Heizung los ist.“*
+
+Deine Firmengeschichte und deine Urkunden sind wichtig, gehören aber weiter nach unten auf die Seite. Sie dienen als Beleg für deine gute Arbeit, sobald der Kunde weiß, was du anbietest.
+
+## Der schnelle Smartphone-Test für deinen Betrieb
+
+Nimm dir heute Abend zwei Minuten Zeit und öffne deine eigene Firmenwebsite auf deinem Smartphone:
+* Baut sich die Seite sofort auf?
+* Kannst du deine Telefonnummer mit einem Daumentipp sofort anrufen?
+* Versteht jemand sofort, was du anbietest und wo du tätig bist?
+* Siehst du echte Bilder von dir und deiner Arbeit?
+* Stimmen deine Angaben mit deinem Profil auf Google Maps überein?
+
+Wenn du feststellst, dass deine Seite vor allem für den Computerbildschirm von damals gebaut wurde und auf dem Handy schwer zu bedienen ist, lässt sich das ändern. Ohne langes Agenturtheater und mit einem festen Preis vor dem Start.
+
+## Wie wirkt dein Betrieb aktuell auf Neukunden?
+
+Wenn du wissen möchtest, wie deine Website und dein Google-Profil im Moment auf Neukunden wirken: Ich nehme mir gerne die Zeit für eine kostenlose Video-Einschätzung von drei bis fünf Minuten.
+
+Ich rufe deine Seite auf, schaue sie mir wie ein Kunde an und zeige dir im Video ganz sachlich, an welchen Stellen Kunden abspringen und was du verbessern kannst.
+
+Bei Firmenflow kümmere ich mich um [neue Websites und die Überarbeitung bestehender Seiten](https://www.firmenflow.de/#leistungen). Ich übernehme den Aufbau, schreibe die Texte und setze die Seite technisch um. Auf Wunsch komme ich für Fotos zu dir. Zuerst schauen wir gemeinsam, was dein Betrieb braucht.
+
+* **Video-Einschätzung anfragen:** Schreib mir einfach kurz eine Nachricht oder melde dich per WhatsApp.
+* **Kurzer Anruf:** Du erreichst mich unter **0155 67277155**.
+* Alles unverbindlich und **Persönlich mit Manu**.
+
+*Autor: [Manu von Firmenflow](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
+

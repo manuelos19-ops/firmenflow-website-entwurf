@@ -36,3 +36,8 @@ Firmenflow wird von Manuel Landeck („Manu“) geführt und richtet sich an Han
 ## Optional
 
 - [Ausführliche Dokumentation für LLMs](https://www.firmenflow.de/llms-full.txt): Komplette Wissensbasis inklusive ausführlicher FAQs, Modulbeschreibungen und Referenzdetails.
+
+## Ratgeber
+
+- [Firmenflow Ratgeber](https://www.firmenflow.de/ratgeber): Praxiswissen zu Website, Google-Profil und Anfragen für lokale Betriebe. Persönlich mit Manu, ohne Agenturtheater.
+- [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe): Warum Neukunden mit dem Daumen weiterscrollen und was du selbst prüfen kannst.

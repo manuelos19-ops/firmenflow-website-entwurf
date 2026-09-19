@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allProjects } from "@/content/projects";
+import { getAllRatgeberPosts } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,6 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/`,
       lastModified: "2026-09-04",
+    },
+    {
+      url: `${baseUrl}/ratgeber`,
+      lastModified: "2026-09-19",
     },
     {
       url: `${baseUrl}/lokalpraesenz-360`,
@@ -41,5 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: "2026-09-04",
   }));
 
-  return [...staticRoutes, ...projectRoutes];
+  const ratgeberRoutes: MetadataRoute.Sitemap = getAllRatgeberPosts().map((post) => ({
+    url: `${baseUrl}/ratgeber/${post.slug}`,
+    lastModified: post.updated ?? post.date,
+  }));
+
+  return [...staticRoutes, ...projectRoutes, ...ratgeberRoutes];
 }
