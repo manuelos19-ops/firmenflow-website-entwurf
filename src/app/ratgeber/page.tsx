@@ -133,7 +133,7 @@ export default function RatgeberPage() {
               <div className="flex items-center gap-3">
                 <FirmenflowIcon name="texte-copywriting" size={48} decorative />
                 <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                  Neu · {featured.category} · {featured.readingMinutes} Min. Lesezeit
+                  Neu · {featured.category} · {featured.readingMinutes} Min. Lesezeit · von mir
                 </p>
               </div>
               <h2 id="ratgeber-status" className="text-xl sm:text-3xl font-display font-bold text-[var(--color-ink)] leading-tight group-hover:text-[var(--color-coral)] transition-colors">

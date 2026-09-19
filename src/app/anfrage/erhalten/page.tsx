@@ -26,7 +26,7 @@ export default function AnfrageErhaltenPage() {
             Danke – deine Anfrage ist angekommen!
           </h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-lg mx-auto">
-            Vielen Dank für deine Nachricht. Manu schaut sich deine Angaben in Ruhe an und meldet sich {responseTime} persönlich bei dir.
+            Vielen Dank für deine Nachricht. Ich schaue mir deine Angaben in Ruhe an und melde mich {responseTime} persönlich bei dir.
           </p>
         </div>
 

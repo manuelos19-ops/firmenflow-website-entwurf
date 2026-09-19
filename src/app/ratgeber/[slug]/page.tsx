@@ -50,18 +50,18 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
     );
   }
   if (section.kind === "heading") {
+    const isError = /^Fehler \d+/.test(section.text);
     return (
       <div className="pt-4">
         <div className="rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8 space-y-2">
-          <p className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[var(--color-coral)]/10 text-sm font-bold">
-              {section.index}
-            </span>
-            <span>Fehler {section.index}</span>
-          </p>
           <h2 id={section.id} className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)] leading-tight scroll-mt-28">
             {section.text}
           </h2>
+          {isError && (
+            <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+              {section.text.split(":")[0]}
+            </p>
+          )}
         </div>
       </div>
     );
@@ -170,7 +170,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">{post.category} · {post.readingMinutes} Min. Lesezeit</p>
           <h1 className="text-3xl sm:text-5xl font-display font-bold text-[var(--color-ink)] leading-[1.1]">{post.title}</h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">{post.description}</p>
-          <p className="text-sm text-[var(--color-muted)]">Von <strong className="text-[var(--color-ink)]">Manu</strong> · {formatDate(post.date)}</p>
+          <p className="text-sm text-[var(--color-muted)]">Von mir · {formatDate(post.date)}</p>
         </header>
         <article className="space-y-8">
           {post.sections.map((section, i) => (

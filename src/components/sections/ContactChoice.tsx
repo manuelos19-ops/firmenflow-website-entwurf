@@ -76,7 +76,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
         <div className="contact-reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <span className="badge-eyebrow-dark mb-4">
             <BrandIcon variant="light" className="w-4 h-3.5" />
-            <span>Persönlich mit Manu</span>
+            <span>Lass uns sprechen</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display leading-[1.08] mb-4">
             Lass uns sprechen. Wie es für dich am besten passt.

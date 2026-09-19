@@ -62,10 +62,6 @@ export default function AnfragePage() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <FirmenflowIcon name="termin" size={20} decorative />
-              <span>Persönlich mit Manu</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <FirmenflowIcon name="termin" size={20} decorative />
               <span>Rückmeldung i. d. R. innerhalb eines Werktags</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
