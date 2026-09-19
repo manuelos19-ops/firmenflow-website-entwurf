@@ -104,7 +104,7 @@ export default function UeberManuPage() {
                 alt={portraitAssets.about.alt}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-[50%_25%]"
                 sizes="(max-width: 640px) 100vw, 40vw"
               />
             </div>
@@ -203,12 +203,12 @@ export default function UeberManuPage() {
             {([
               {
                 title: "Das erste Gespräch kostet nichts",
-                body: "Etwa 30 Minuten, am Telefon oder bei einem Kaffee. Danach weißt du, was sinnvoll wäre und was es kostet – auch wenn du es dann selbst machst.",
+                body: "Etwa 30 Minuten, am Telefon oder bei einem Kaffee. Danach weißt du, was sinnvoll wäre und was es kostet. Natürlich kannst du es auch selbst versuchen – aber rechne ehrlich: Wochen an Abenden und Wochenenden, dazu Baukasten-Look und halbfertige Texte. Die meisten kommen nach so einem Versuch zu mir, nur mit weniger Geduld und mehr Frust im Gepäck.",
                 iconName: "kennenlernen" as const,
               },
               {
                 title: "Monatlich kündbar",
-                body: "Keine Mindestlaufzeit, keine zwölf Monate. Ich muss jeden Monat einen Grund liefern, dass du bleibst.",
+                body: "Keine Mindestlaufzeit, keine zwölf Monate. Du wirst merken, wie viel dir abgenommen wird – Hosting, Updates, kleine Änderungen per kurzer Nachricht. Die meisten fragen sich nach ein paar Wochen eher, warum sie das nicht schon früher abgegeben haben.",
                 iconName: "monatlich-kuendbar" as const,
               },
               {
@@ -271,11 +271,67 @@ export default function UeberManuPage() {
               <span className="text-[var(--color-coral)] font-bold shrink-0">—</span>
               <span>
                 <strong className="text-[var(--color-ink)]">Keine Projekte, die ich nicht kann.</strong>{" "}
-                Onlineshops, große Portale, Schnittstellen zu Warenwirtschaft – dafür sage ich
+                Große Portale oder Schnittstellen zu Warenwirtschaft – dafür sage ich
                 dir lieber, wen du fragen solltest.
               </span>
             </li>
           </ul>
+        </section>
+
+        {/* Preise */}
+        <section className="space-y-5">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)]">
+            Was es kostet
+          </h2>
+          <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
+            Klare Preise, Festpreis vor dem Start. Keine Überraschungen auf der Rechnung.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
+              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                Einmalig
+              </p>
+              <h3 className="font-bold text-[var(--color-ink)]">Onepager ab 690 € netto</h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Aufbau, Texte und die Einbindung deiner Bilder inklusive. Mehrseitige
+                Auftritte nach dem Kennenlernen zum verbindlichen Festpreis.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
+              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                Monatlich
+              </p>
+              <h3 className="font-bold text-[var(--color-ink)]">Betreuung 39 €</h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Hosting, Updates und 30 Minuten Änderungen im Monat. Monatlich kündbar,
+                keine Mindestlaufzeit.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
+              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                Optional
+              </p>
+              <h3 className="font-bold text-[var(--color-ink)]">Fototermin 350 €</h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Team, Räume und Arbeit bei dir vor Ort. Lässt sich mit jedem
+                Website-Projekt kombinieren.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-2 shadow-sm">
+              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
+                Optional
+              </p>
+              <h3 className="font-bold text-[var(--color-ink)]">Lokalpräsenz 360° ab 99 €/Monat</h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Google-Profil einrichten oder aufräumen, Bewertungen beantworten,
+                Monatsreport. Details auf der{" "}
+                <Link href="/lokalpraesenz-360" className="text-[var(--color-plum)] font-semibold underline hover:text-[var(--color-coral)]">
+                  Lokalpräsenz-Seite
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Abschluss */}

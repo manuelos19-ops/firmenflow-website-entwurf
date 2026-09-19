@@ -30,7 +30,7 @@ const bentoItems = [
   },
   {
     title: "Handschlagqualität",
-    desc: "Ein Wort gilt. Was wir besprechen, halte ich fest – und du erreichst mich per Telefon oder WhatsApp, nicht über ein Ticketsystem.",
+    desc: "Ein Wort gilt. Was wir besprechen, halte ich fest. Und du erreichst mich persönlich per Telefon oder WhatsApp, nicht über ein Ticketsystem. Genau deshalb bleibt dein Projekt bei mir Chefsache.",
     gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     border: "border-emerald-500/30 hover:border-emerald-500",
     iconBg: "bg-emerald-100 text-emerald-700",
@@ -96,7 +96,7 @@ export function DirectWithManu() {
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
-              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache: Ein Wort gilt. Was wir besprechen, halte ich fest – und du erreichst mich per Telefon oder WhatsApp, nicht über ein Ticketsystem.
+              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache. Wie das im Detail aussieht, steht unten bei der Handschlagqualität.
             </p>
 
             {/* Quick Trust Highlights - High-End Frosted Pills */}
@@ -159,7 +159,7 @@ export function DirectWithManu() {
                     src="/media/portraits/manu-nature-seated.webp"
                     alt="Manu – Gründer von Firmenflow"
                     fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-[50%_30%] transition-transform duration-500 group-hover:scale-105"
                     sizes="250px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
