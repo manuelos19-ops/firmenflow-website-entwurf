@@ -92,11 +92,11 @@ export function DirectWithManu() {
             </h2>
             
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-5">
-              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen, den Betrieb am Laufen halten. Deshalb bekommst du von mir keine Präsentation mit Fachbegriffen, sondern zwei Sätze dazu, was es bringt und was es kostet.
+              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen, den Betrieb am Laufen halten. Deshalb rede ich Klartext: Ich sage dir, was es bringt, was es kostet und was ich davon halte – auch wenn das heißt, dir von etwas abzuraten.
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
-              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache.
+              Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache: Ein Wort gilt. Was wir besprechen, halte ich fest – und du erreichst mich per Telefon oder WhatsApp, nicht über ein Ticketsystem.
             </p>
 
             {/* Quick Trust Highlights - High-End Frosted Pills */}
@@ -108,10 +108,6 @@ export function DirectWithManu() {
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
                 <FirmenflowIcon name="persoenlicher-ansprechpartner" size={20} decorative />
                 <span>Ein Ansprechpartner, keine Hotline</span>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <FirmenflowIcon name="festpreis" size={20} decorative />
-                <span>Persönliche Verantwortung</span>
               </div>
             </div>
 

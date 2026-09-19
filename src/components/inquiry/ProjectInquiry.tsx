@@ -13,6 +13,7 @@ import { GoalsStep } from "./steps/GoalsStep";
 import { ServicesStep } from "./steps/ServicesStep";
 import type { InquiryDraft } from "@/features/inquiry/types";
 import { trackProjectInquirySubmit } from "@/lib/track-inquiry";
+import { scrollToElement } from "@/lib/scroll";
 
 export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null }) {
   const [state, dispatch] = useReducer(inquiryReducer, undefined, initialInquiryState);
@@ -76,12 +77,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
     }
 
     if (formTopRef.current) {
-      const navOffset = 90;
-      const top = formTopRef.current.getBoundingClientRect().top + window.pageYOffset - navOffset;
-      window.scrollTo({
-        top: Math.max(0, top),
-        behavior: "smooth",
-      });
+      scrollToElement(formTopRef.current);
     }
   }, [state.step]);
 
@@ -128,9 +124,9 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       dispatch({ type: "errors", value: errors });
       setTimeout(() => {
         if (errorSummaryRef.current) {
-          errorSummaryRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          scrollToElement(errorSummaryRef.current);
         }
-      }, 50);
+      }, 80);
       return false;
     }
 
@@ -171,9 +167,9 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       dispatch({ type: "errors", value: fieldErrors });
       setTimeout(() => {
         if (errorSummaryRef.current) {
-          errorSummaryRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          scrollToElement(errorSummaryRef.current);
         }
-      }, 50);
+      }, 80);
       return;
     }
 

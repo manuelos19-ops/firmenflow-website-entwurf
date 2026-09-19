@@ -8,7 +8,7 @@
 - **Fokus:** Persönliches Webdesign, Relaunch bestehender Websites, Foto- und Videoaufnahmen vor Ort sowie ganzheitliche Google-Unternehmensprofil-Betreuung („Lokalpräsenz 360°“).
 - **Zielgruppe:** Handwerksbetriebe, regionale Dienstleister, Gastronomie, Praxen und mittelständische Unternehmen in Wesel, am Niederrhein und in NRW.
 - **Leitmotiv:** „Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.“
-- **Kernwerte:** Persönliche Verantwortung (ein fester Ansprechpartner statt wechselnder Junior-Manager), pragmatische Umsetzung ohne Agentur-Bürokratie, verständliche Sprache ohne Fachchinesisch, faire Festpreise ohne versteckte Kosten und ohne Knebelverträge.
+- **Kernwerte:** Handschlagqualität (ein Wort gilt, ein fester Ansprechpartner statt wechselnder Junior-Manager), pragmatische Umsetzung ohne Agentur-Bürokratie, verständliche Sprache ohne Fachchinesisch, faire Festpreise ohne versteckte Kosten und ohne Knebelverträge.
 
 ---
 
@@ -20,8 +20,8 @@
   - Konzeption und Seitenstruktur passend zur Zielgruppe.
   - Professionelle, verständliche Texterstellung (kein Schreibstress für den Kunden).
   - Modernes, responsives Design mit Ladezeiten unter einer Sekunde auf Mobilgeräten.
-  - Technische Grundausstattung: DSGVO-Konformität, SSL-Verschlüsselung, automatisierte Backups, Integration von Google Maps und Kontaktkanälen.
-- **Preise:** Transparente Festpreise. Eine schlanke Web-Visitenkarte startet ab 490 €. Ein mehrseitiger, schlüsselfertiger Firmenauftritt wird nach kurzer Abstimmung zum garantierten Festpreis kalkuliert.
+  - Technische Grundausstattung: SSL-Verschlüsselung, automatisierte Backups, Integration von Google Maps und Kontaktkanälen, Impressum und Datenschutzerklärung nach gängiger Praxis (keine Rechtsberatung, keine Garantie rechtlicher Wasserdichtigkeit).
+- **Preise:** Transparente Festpreise. Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger, schlüsselfertiger Firmenauftritt wird nach kurzer Abstimmung zum garantierten Festpreis kalkuliert.
 
 ### 2. Website-Relaunch & Modernisierung
 - **Für wen:** Unternehmen mit veralteten Websites, die auf Smartphones schwer lesbar sind, langsam laden oder das Unternehmen unter Wert verkaufen.
@@ -70,7 +70,7 @@
 Der Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers, Hünxe, Schermbeck, Hamminkeln und dem Niederrhein. Hier sind persönliche Vor-Ort-Termine kurzfristig möglich. Betriebe aus ganz NRW und deutschlandweit werden ebenso gerne per Video-Call und Telefon betreut.
 
 ### Was kostet eine Website bei Firmenflow?
-Transparenter Festpreis ohne Überraschungen: Eine kompakte Web-Visitenkarte startet ab 490 €. Ein mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt im fairen, bezahlbaren Mittelstandsbereich – deutlich unter den Preisen klassischer Agenturen.
+Transparenter Festpreis ohne Überraschungen: Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt darüber und wird nach dem Kennenlernen als verbindlicher Festpreis genannt.
 
 ### Machst du auch Fotos und Videos für meinen Betrieb?
 Ja. Manuel Landeck bringt professionelle Kameras, Objektive und Lichttechnik mit und fotografiert Team, Räume und Arbeitsprozesse direkt vor Ort.
@@ -91,7 +91,7 @@ Bei Firmenflow gibt es keine langen Hierarchien, keine wechselnden Ansprechpartn
 
 ## Ausgewählte Referenzen
 
-- **Eiscafé Orrico (Hamminkeln & Niederrhein):** Moderner, sympathischer Webauftritt mit digitaler Eiskarte, saisonalen Specials, Anfahrtsübersicht und lokaler Maps-Präsenz.
+- **Eiscafé Orrico (Hamminkeln & Niederrhein):** Moderner, sympathischer Webauftritt mit Eissorten, Öffnungszeiten, Anfahrtsübersicht und lokaler Maps-Präsenz.
 - **Autotransport Alex (Nordrhein-Westfalen):** Extrem schneller, mobiler Webauftritt für zuverlässige Fahrzeugüberführungen mit direktem Kontaktweg per Anruf und WhatsApp.
 - **cliManu (Deutschlandweit):** Progressive Web-App für Wetter und Niederschlagsradar mit DWD-Echtzeitdaten und integriertem KI-Wetterassistenten.
 

@@ -60,7 +60,7 @@ export const homeContent = {
     { 
       number: "03", 
       title: "Umsetzung und Texte",
-      body: "Ich schreibe die Texte, binde deine Fotos ein und baue die Seite fertig – datenschutzkonform, mit allem, was rechtlich dazugehört."
+      body: "Ich schreibe die Texte, binde deine Fotos ein und baue die Seite fertig – inklusive Impressum und Datenschutzerklärung nach gängiger Praxis. Ich bin kein Anwalt: Eine rechtsverbindliche Prüfung deiner Inhalte ersetze ich nicht, bei speziellen Fragen lohnt der kurze Weg zum Profi."
     },
     { 
       number: "04", 
@@ -79,7 +79,7 @@ export const homeContent = {
 export const faqItems = [
   {
     question: "Firmenflow ist noch jung – warum sollte ich dir vertrauen?",
-    answer: "Faire Frage. Deshalb sage ich es offen: Die Firma ist neu, meine Erfahrung nicht. Ich habe elf Jahre Betriebe geführt und vermarktet – sechs Jahre eigenes Studio, zwei Jahre Geschäftsführung einer selbst gebauten Arena, danach Marketing und Aufbau im größeren Maßstab. Was ich dort gemacht habe – Texte, Fotos, Abläufe, Kundengespräche – mache ich heute für andere. Dazu: Festpreis vor dem Start, monatlich kündbare Betreuung, Domain und Code gehören dir. Wenn es nicht passt, bist du in keinem Vertrag gefangen."
+    answer: "Faire Frage. Deshalb sage ich es offen: Die Firma ist neu, meine Erfahrung nicht. Ich habe elf Jahre Betriebe geführt und vermarktet – sechs Jahre eigenes Studio, zwei Jahre Geschäftsführung einer selbst gebauten Arena, danach Marketing, Digitalisierung, Foto und Video im größeren Maßstab. Was ich dort gemacht habe – Texte, Fotos und Videos, technische Abläufe, Digitalisierung, Kundengespräche – mache ich heute u. a. für andere. Dazu: Festpreis vor dem Start, monatlich kündbare Betreuung, Domain und Code gehören dir. Wenn es nicht passt, bist du in keinem Vertrag gefangen."
   },
   {
     question: "Arbeitest du nur in Wesel und am Niederrhein?",
@@ -91,7 +91,7 @@ export const faqItems = [
   },
   { 
     question: "Machst du auch Fotos und Videos für meinen Betrieb?", 
-    answer: "Ja. Viele Betriebe haben veraltete Bilder oder gar keine. Ich komme mit Kamera zu dir nach Wesel und Umgebung und fotografiere dein Team, deine Räume und deine Arbeit – auf Wunsch auch ein kurzes Video für Website und Social Media. Der Fototermin kostet 350 Euro und lässt sich mit jedem Website-Projekt kombinieren."
+    answer: "Ja. Viele Betriebe haben veraltete Bilder oder gar keine – und vergessen dabei, dass gute Fotos genauso wichtig für dein Google-Profil sind wie für deine Website: Ein gepflegter Auftritt mit echten Bildern wirkt auf Maps sofort vertrauenswürdiger. Ich komme mit Kamera zu dir nach Wesel und Umgebung und fotografiere dein Team, deine Räume und deine Arbeit – auf Wunsch auch ein kurzes Video für Website und Social Media. Der Fototermin kostet 350 Euro und lässt sich mit jedem Website-Projekt kombinieren."
   },
   { 
     question: "Was passiert, wenn mir der Entwurf nicht gefällt?", 

@@ -46,7 +46,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/#manu" className="hover:text-white transition-colors">
+                <Link href="/ueber-manu" className="hover:text-white transition-colors">
                   Über Manu
                 </Link>
               </li>

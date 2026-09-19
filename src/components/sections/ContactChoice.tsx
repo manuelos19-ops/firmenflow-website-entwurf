@@ -11,6 +11,7 @@ import { ArrowRight, ChevronDown } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
+import { scrollToId } from "@/lib/scroll";
 import { cn } from "@/lib/cn";
 
 interface ContactChoiceProps {
@@ -27,15 +28,15 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
       if (hash === "#website-check" || hash === "#videoanalyse") {
         setVideoOpen(true);
         setTimeout(() => {
+          scrollToId("website-check");
           const el = document.getElementById("website-check");
           if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
             const firstInput = el.querySelector<HTMLInputElement>("input:not([type=hidden]):not([disabled])");
             if (firstInput) {
-              firstInput.focus();
+              firstInput.focus({ preventScroll: true });
             }
           }
-        }, 150);
+        }, 200);
       }
     };
 

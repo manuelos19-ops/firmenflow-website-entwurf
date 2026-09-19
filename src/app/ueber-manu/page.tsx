@@ -184,9 +184,9 @@ export default function UeberManuPage() {
               </li>
             </ul>
             <p>
-              Was ich dort gemacht habe, ist ziemlich genau das, was ich heute anbiete:
-              Marketing, Fotos und Videos, technische Abläufe, Kundengespräche. Der Unterschied
-              ist, dass ich es jetzt für andere mache statt für den eigenen Laden.
+              Was ich dort gemacht habe, ist ziemlich genau das, was ich heute u. a. anbiete:
+              Marketing, Digitalisierung, Fotos und Videos, technische Abläufe, Kundengespräche.
+              Der Unterschied ist, dass ich es jetzt für andere mache statt für den eigenen Laden.
             </p>
           </div>
         </section>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
+import { scrollToId } from "@/lib/scroll";
 
 interface SectionItem {
   id: string;
@@ -69,11 +70,7 @@ export function SectionDotNav() {
   }, [pathname]);
 
   const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
+    scrollToId(id);
   };
 
   if (pathname !== "/") {

@@ -1,7 +1,8 @@
 import Link from "next/link";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, MouseEvent, ReactNode } from "react";
 import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
+import { scrollToId } from "@/lib/scroll";
 
 type ButtonLinkProps = {
   children: ReactNode;
@@ -12,7 +13,7 @@ type ButtonLinkProps = {
   external?: boolean;
   type?: "button" | "submit";
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (e: MouseEvent) => void;
   showArrow?: boolean;
 } & Omit<ComponentPropsWithoutRef<"button">, "type">;
 
@@ -82,7 +83,26 @@ export function ButtonLink({
     />
   );
 
+  const isHashLink = !!href && href.startsWith("#");
+
+  const handleHashClick = (e: MouseEvent) => {
+    if (!href || !href.startsWith("#")) return;
+    e.preventDefault();
+    try { window.history.replaceState(null, "", href); } catch {}
+    scrollToId(href.slice(1));
+    if (onClick) onClick(e);
+  };
+
   if (href) {
+    if (isHashLink) {
+      return (
+        <a href={href} className={classes} onClick={handleHashClick}>
+          {sheen}
+          <span className="relative z-10 inline-flex items-center gap-2 text-inherit">{children}</span>
+          {arrow}
+        </a>
+      );
+    }
     if (external) {
       return (
         <a href={href} target="_blank" rel="noreferrer" className={classes} onClick={onClick}>
