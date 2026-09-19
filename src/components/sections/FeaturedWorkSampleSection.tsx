@@ -55,9 +55,6 @@ export function FeaturedWorkSampleSection() {
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       Live-Arbeitsprobe · Öffentlich erreichbar
                     </span>
-                    <span className="text-xs text-[var(--color-muted)] font-medium">
-                      Keine erfundene Fallstudie
-                    </span>
                   </div>
 
                   <h3 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)] leading-snug">
@@ -70,7 +67,7 @@ export function FeaturedWorkSampleSection() {
                 </div>
 
                 <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-                  Ein echter, öffentlich zugänglicher Webauftritt für ein beliebtes regionales Eiscafé. Gebaut für Gäste am Smartphone, die schnell Speisekarte, Sorten oder Öffnungszeiten nachschauen wollen.
+                  Ein echter, öffentlich zugänglicher Webauftritt für ein beliebtes regionales Eiscafé. Gebaut für Gäste am Smartphone, die schnell Eissorten oder Öffnungszeiten nachschauen wollen.
                 </p>
 
                 {/* Measurable & Verifiable Highlights */}
@@ -79,7 +76,7 @@ export function FeaturedWorkSampleSection() {
                     <FirmenflowIcon name="mobile-first" size={32} decorative className="shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-bold text-[var(--color-ink)]">Mobil-first für echte Gäste</p>
-                      <p className="text-xs text-[var(--color-muted)]">Digitale Karte, Eissorten und saisonale Highlights direkt mit dem Daumen erreichbar.</p>
+                      <p className="text-xs text-[var(--color-muted)]">Eissorten, Öffnungszeiten und saisonale Highlights direkt mit dem Daumen erreichbar.</p>
                     </div>
                   </div>
 
