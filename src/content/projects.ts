@@ -30,7 +30,7 @@ export const liveProjects: readonly Project[] = [
     url: "https://eiscafe-orrico.de/",
     kind: "live",
     badge: "Live-Arbeitsprobe",
-    summary: "Ein moderner, öffentlich erreichbarer Webauftritt für ein beliebtes regionales Eiscafé am Niederrhein mit digitaler Karte und Anfahrt.",
+    summary: "Ein moderner, öffentlich erreichbarer Webauftritt für ein beliebtes regionales Eiscafé am Niederrhein mit Eissorten, Öffnungszeiten und Anfahrt.",
     factsApproved: false,
     image: "/media/projects/eiscafe-orrico-phone.webp",
     nature: "Ein regionaler Gastronomiebetrieb am Niederrhein.",
@@ -39,13 +39,13 @@ export const liveProjects: readonly Project[] = [
     highlights: [
       {
         icon: "responsive-design",
-        title: "Karte & Sorten im Daumenformat",
-        body: "Digitale Karte, Eissorten und Öffnungszeiten ohne Zoomen erreichbar.",
+        title: "Sorten & Zeiten im Daumenformat",
+        body: "Eissorten und Öffnungszeiten ohne Zoomen erreichbar. Eine neue digitale Karte kommt in der nächsten Ausbaustufe.",
       },
       {
         icon: "foto",
         title: "Appetit auf den ersten Blick",
-        body: "Echte Fotos von Eis, Theke und Terrasse statt austauschbarer Symbole.",
+        body: "Echte Fotos von Eis und Theke statt austauschbarer Symbole. Dazu sichtbare Google-Bewertungen als Vertrauensbeweis.",
       },
       {
         icon: "unternehmensprofil",
