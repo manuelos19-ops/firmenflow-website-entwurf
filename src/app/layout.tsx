@@ -51,8 +51,25 @@ export const metadata: Metadata = {
     title: "Firmenflow – Webdesign persönlich mit Manu | Wesel & Niederrhein",
     description:
       "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.",
+    url: "/",
+    siteName: "Firmenflow",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "/media/social/firmenflow-og-social.png",
+        width: 1200,
+        height: 630,
+        alt: "Firmenflow – Mehr Lokalpräsenz. Weniger Agenturtheater.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Firmenflow – Webdesign persönlich mit Manu | Wesel & Niederrhein",
+    description:
+      "Mehr Lokalpräsenz. Weniger Agenturtheater. Deine Website. Persönlich mit Manu.",
+    images: ["/media/social/firmenflow-og-social.png"],
   },
 };
 

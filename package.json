@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:og-pilot": "vitest run scripts/og-social-pilot",
+    "generate:og-pilot": "tsx scripts/og-social-pilot/generate.ts",
+    "validate:og-pilot": "tsx scripts/og-social-pilot/validate.ts"
   },
   "dependencies": {
     "@fontsource-variable/instrument-sans": "^5.3.0",
