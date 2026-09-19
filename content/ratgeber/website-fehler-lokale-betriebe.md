@@ -4,6 +4,8 @@ description: "Deine Stammkunden kennen deine Arbeit. Neue Kunden sehen nur deine
 date: "2026-09-19"
 category: "Website & Vertrauen"
 tags: [Website, Google-Profil, Handwerk, Wesel, Ladezeit]
+image: "/images/ratgeber/website-fehler-lokale-betriebe.webp"
+imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Ladezeit-Tacho, Google Maps Standort-Pin und Anruf-Symbol"
 featured: "true"
 ---
 

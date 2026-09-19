@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { RatgeberPostMeta } from "@/lib/ratgeber";
 
@@ -183,16 +184,19 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Beiträge durchsuchen (z. B. Ladezeit, Google Maps, Handwerker)..."
             aria-label="Ratgeber-Beiträge durchsuchen"
-            className="w-full pl-11 pr-10 py-3.5 sm:py-4 rounded-2xl sm:rounded-full bg-white border border-[var(--color-line)] text-sm sm:text-base text-[var(--color-ink)] placeholder-[var(--color-muted)] focus:outline-none focus:border-[var(--color-plum)] focus:ring-2 focus:ring-[var(--color-plum)]/10 shadow-sm transition-all"
+            className="w-full pl-11 pr-12 py-3.5 sm:py-4 rounded-2xl sm:rounded-full bg-white border border-[var(--color-line)] text-sm sm:text-base text-[var(--color-ink)] placeholder-[var(--color-muted)] focus:outline-none focus:border-[var(--color-plum)] focus:ring-2 focus:ring-[var(--color-plum)]/10 shadow-sm transition-all [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => setSearchQuery("")}
-              className="absolute inset-y-0 right-0 pr-4 flex items-center text-xs font-bold text-[var(--color-muted)] hover:text-[var(--color-ink)]"
+              className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors"
               aria-label="Suche zurücksetzen"
+              title="Suche zurücksetzen"
             >
-              Zurücksetzen
+              <span className="w-7 h-7 rounded-full bg-[var(--color-paper)] hover:bg-[var(--color-line)] flex items-center justify-center text-xs font-bold transition-colors">
+                ✕
+              </span>
             </button>
           )}
         </div>
@@ -233,43 +237,59 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
             {filteredPosts.map((post) => (
               <article
                 key={post.slug}
-                className="rounded-3xl border border-[var(--color-line)] bg-white p-7 sm:p-9 shadow-sm hover:border-[var(--color-coral)]/40 transition-all space-y-4"
+                className="rounded-3xl border border-[var(--color-line)] bg-white overflow-hidden shadow-sm hover:border-[var(--color-coral)]/40 transition-all group"
               >
-                {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit */}
-                <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-medium text-[var(--color-muted)]">
-                  <span className="px-2.5 py-0.5 rounded-full bg-[var(--color-paper)] text-[var(--color-plum)] font-bold">
-                    {post.category}
-                  </span>
-                  <span>·</span>
-                  <span>{formatDate(post.date)}</span>
-                  <span>·</span>
-                  <span>von Manu</span>
-                  <span>·</span>
-                  <span>{post.readingMinutes} Min. Lesezeit</span>
-                </div>
-
-                <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] leading-tight">
+                {post.image && (
                   <Link
                     href={`/ratgeber/${post.slug}`}
-                    className="hover:text-[var(--color-coral)] transition-colors"
+                    className="block relative aspect-[16/9] w-full overflow-hidden bg-[var(--color-paper)]"
                   >
-                    {post.title}
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 680px"
+                      className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                    />
                   </Link>
-                </h2>
+                )}
+                <div className="p-7 sm:p-9 space-y-4">
+                  {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit */}
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-medium text-[var(--color-muted)]">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[var(--color-paper)] text-[var(--color-plum)] font-bold">
+                      {post.category}
+                    </span>
+                    <span>·</span>
+                    <span>{formatDate(post.date)}</span>
+                    <span>·</span>
+                    <span>von Manu</span>
+                    <span>·</span>
+                    <span>{post.readingMinutes} Min. Lesezeit</span>
+                  </div>
 
-                <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-                  {post.description}
-                </p>
+                  <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] leading-tight">
+                    <Link
+                      href={`/ratgeber/${post.slug}`}
+                      className="hover:text-[var(--color-coral)] transition-colors"
+                    >
+                      {post.title}
+                    </Link>
+                  </h2>
 
-                {/* Nur ein einziger Button: zum Lesen! */}
-                <div className="pt-2">
-                  <Link
-                    href={`/ratgeber/${post.slug}`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-coral)] text-white font-bold text-sm shadow-sm hover:bg-[var(--color-plum)] transition-all"
-                  >
-                    <span>Beitrag lesen</span>
-                    <span aria-hidden="true">→</span>
-                  </Link>
+                  <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+                    {post.description}
+                  </p>
+
+                  {/* Nur ein einziger Button: zum Lesen! */}
+                  <div className="pt-2">
+                    <Link
+                      href={`/ratgeber/${post.slug}`}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-coral)] text-white font-bold text-sm shadow-sm hover:bg-[var(--color-plum)] transition-all"
+                    >
+                      <span>Beitrag lesen</span>
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}

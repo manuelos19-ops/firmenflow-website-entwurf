@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       authors: ["Manuel Landeck"],
+      images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
     },
   };
 }
@@ -139,6 +141,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
       name: "Firmenflow",
       url: baseUrl,
     },
+    image: post.image ? `${baseUrl}${post.image}` : undefined,
     mainEntityOfPage: `${baseUrl}/ratgeber/${post.slug}`,
   };
 
@@ -172,6 +175,20 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">{post.description}</p>
           <p className="text-sm text-[var(--color-muted)]">Von Manu · {formatDate(post.date)}</p>
         </header>
+
+        {post.image && (
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[var(--color-line)] bg-[var(--color-paper)] shadow-sm">
+            <Image
+              src={post.image}
+              alt={post.imageAlt || post.title}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
+        )}
+
         <article className="space-y-8">
           {post.sections.map((section, i) => (
             <RatgeberBlock key={i} section={section} />
