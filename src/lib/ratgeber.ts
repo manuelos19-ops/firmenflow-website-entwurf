@@ -18,7 +18,16 @@ export type RatgeberPostMeta = {
 export type RatgeberPost = RatgeberPostMeta & {
   html: string;
   headings: { id: string; text: string; level: 2 | 3 }[];
+  sections: RatgeberSection[];
 };
+
+export type RatgeberSection =
+  | { kind: "lead"; html: string }
+  | { kind: "text"; html: string }
+  | { kind: "heading"; id: string; text: string; index: number }
+  | { kind: "list"; items: string[]; variant: "check" | "bullet" }
+  | { kind: "quote"; html: string }
+  | { kind: "cta"; html: string };
 
 const RATGEBER_DIR = "content/ratgeber";
 
@@ -78,33 +87,70 @@ function inlineMarkdown(value: string): string {
   return out;
 }
 
-function markdownToHtml(body: string): { html: string; headings: RatgeberPost["headings"] } {
+function markdownToHtml(body: string): { html: string; headings: RatgeberPost["headings"]; sections: RatgeberSection[] } {
   const lines = body.split(/\r?\n/);
   const html: string[] = [];
   const headings: RatgeberPost["headings"] = [];
+  const sections: RatgeberSection[] = [];
   let inList = false;
+  let listItems: string[] = [];
+  let paraBuffer: string[] = [];
+  let headingCount = 0;
+  let leadDone = false;
+
+  const flushPara = () => {
+    if (paraBuffer.length === 0) return;
+    const text = paraBuffer.join(" ").trim();
+    paraBuffer = [];
+    if (!text) return;
+    if (!leadDone) {
+      leadDone = true;
+      const p = `<p class="ratgeber-lead">${inlineMarkdown(text)}</p>`;
+      html.push(p);
+      sections.push({ kind: "lead", html: p });
+      return;
+    }
+    if (/^(Alles unverbindlich|Persönlich mit Manu)/.test(text)) {
+      const p = `<p class="ratgeber-fine">${inlineMarkdown(text)}</p>`;
+      html.push(p);
+      sections.push({ kind: "text", html: p });
+      return;
+    }
+    const p = `<p>${inlineMarkdown(text)}</p>`;
+    html.push(p);
+    sections.push({ kind: "text", html: p });
+  };
+
   const closeList = () => {
     if (inList) {
       html.push("</ul>");
+      const isChecklist = listItems.some((i) => /\?$/.test(i.replace(/<[^>]+>/g, "").trim()));
+      sections.push({ kind: "list", items: listItems, variant: isChecklist ? "check" : "bullet" });
       inList = false;
+      listItems = [];
     }
   };
   for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed || trimmed === "---") {
+      flushPara();
       closeList();
       continue;
     }
     const h2 = trimmed.match(/^##\s+(.+)/);
     const h3 = trimmed.match(/^###\s+(.+)/);
     if (h2) {
+      flushPara();
       closeList();
+      headingCount += 1;
       const id = slugify(h2[1]);
       headings.push({ id, text: h2[1], level: 2 });
       html.push(`<h2 id="${id}">${inlineMarkdown(h2[1])}</h2>`);
+      sections.push({ kind: "heading", id, text: h2[1], index: headingCount });
       continue;
     }
     if (h3) {
+      flushPara();
       closeList();
       const id = slugify(h3[1]);
       headings.push({ id, text: h3[1], level: 3 });
@@ -112,23 +158,57 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       continue;
     }
     if (/^[-*]\s+/.test(trimmed)) {
+      flushPara();
       if (!inList) {
         html.push("<ul>");
         inList = true;
       }
-      html.push(`<li>${inlineMarkdown(trimmed.replace(/^[-*]\s+/, ""))}</li>`);
+      const item = inlineMarkdown(trimmed.replace(/^[-*]\s+/, ""));
+      listItems.push(item);
+      html.push(`<li>${item}</li>`);
+      continue;
+    }
+    if (/^>\s?/.test(trimmed)) {
+      flushPara();
+      closeList();
+      const quote = `<blockquote>${inlineMarkdown(trimmed.replace(/^>\s?/, ""))}</blockquote>`;
+      html.push(quote);
+      sections.push({ kind: "quote", html: quote });
       continue;
     }
     if (/^\d+[.)]\s+/.test(trimmed)) {
+      flushPara();
       closeList();
-      html.push(`<p>${inlineMarkdown(trimmed)}</p>`);
+      const p = `<p>${inlineMarkdown(trimmed)}</p>`;
+      html.push(p);
+      sections.push({ kind: "text", html: p });
+      continue;
+    }
+    if (/^Autor:/.test(trimmed)) {
+      flushPara();
+      closeList();
+      const p = `<p class="ratgeber-fine">${inlineMarkdown(trimmed)}</p>`;
+      html.push(p);
+      sections.push({ kind: "text", html: p });
       continue;
     }
     closeList();
-    html.push(`<p>${inlineMarkdown(trimmed)}</p>`);
+    if (
+      trimmed.startsWith("*„") ||
+      trimmed.startsWith("*\"") ||
+      (trimmed.startsWith("*") && trimmed.endsWith("?"))
+    ) {
+      flushPara();
+      const quote = `<blockquote>${inlineMarkdown(trimmed.replace(/^\*|\*$/g, ""))}</blockquote>`;
+      html.push(quote);
+      sections.push({ kind: "quote", html: quote });
+      continue;
+    }
+    paraBuffer.push(trimmed);
   }
+  flushPara();
   closeList();
-  return { html: html.join("\n"), headings };
+  return { html: html.join("\n"), headings, sections };
 }
 
 function readPostFile(file: string): RatgeberPost {
@@ -136,7 +216,7 @@ function readPostFile(file: string): RatgeberPost {
   const { data, body } = parseFrontmatter(raw);
   const slug = path.basename(file, ".md");
   const words = body.split(/\s+/).filter(Boolean).length;
-  const { html, headings } = markdownToHtml(body);
+  const { html, headings, sections } = markdownToHtml(body);
   return {
     slug,
     title: data.title ?? slug,
@@ -151,6 +231,7 @@ function readPostFile(file: string): RatgeberPost {
     featured: data.featured === "true",
     html,
     headings,
+    sections,
   };
 }
 
