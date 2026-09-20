@@ -66,7 +66,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
               <FirmenflowButton
                 href={hero.phoneTel}
                 buttonIcon="anrufen"
-                subline="Ohne Termin · persönlich mit mir"
+                subline="Lass uns kurz sprechen"
                 hideArrow
               >
                 Mich anrufen
@@ -75,7 +75,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 href={resolvedWhatsappUrl}
                 external
                 buttonIcon="whatsapp"
-                subline="WhatsApp · kurz und unkompliziert"
+                subline="Schnell & einfach"
                 hideArrow
               >
                 WhatsApp schreiben
