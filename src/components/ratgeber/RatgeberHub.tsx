@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import type { RatgeberPostMeta } from "@/lib/ratgeber";
 
 type RatgeberHubProps = {
@@ -282,13 +283,13 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
 
                   {/* Nur ein einziger Button: zum Lesen! */}
                   <div className="pt-2">
-                    <Link
+                    <FirmenflowButton
                       href={`/ratgeber/${post.slug}`}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-coral)] text-white font-bold text-sm shadow-sm hover:bg-[var(--color-plum)] transition-all"
+                      buttonIcon="details"
+                      size="compact"
                     >
-                      <span>Beitrag lesen</span>
-                      <span aria-hidden="true">→</span>
-                    </Link>
+                      Beitrag lesen
+                    </FirmenflowButton>
                   </div>
                 </div>
               </article>

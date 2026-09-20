@@ -51,22 +51,20 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 buttonIcon="video-einschaetzung"
                 subline="3–5 Minuten · meine Einschätzung für dich"
                 className="w-full"
-                hideArrow
               >
                 Kostenlose Video-Einschätzung
               </FirmenflowButton>
             </div>
 
-            {/* Feste 2er-Gruppe: Mich anrufen & WhatsApp auf JEDER Bildschirmgröße garantiert nebeneinander */}
+            {/* Feste 2er-Gruppe: Anruf & WhatsApp auf JEDER Bildschirmgröße garantiert nebeneinander */}
             <div className="grid grid-cols-2 items-stretch gap-3 w-full">
               <FirmenflowButton
                 href={hero.phoneTel}
                 buttonIcon="anrufen"
                 size="compact"
                 subline="Lass uns kurz sprechen"
-                hideArrow
               >
-                Mich anrufen
+                Ruf mich an
               </FirmenflowButton>
               <FirmenflowButton
                 href={resolvedWhatsappUrl}
@@ -74,9 +72,8 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 buttonIcon="whatsapp"
                 size="compact"
                 subline="Schnell & einfach"
-                hideArrow
               >
-                Mir per WhatsApp schreiben
+                Schreib mir per WhatsApp
               </FirmenflowButton>
             </div>
           </div>

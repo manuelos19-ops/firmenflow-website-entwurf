@@ -160,7 +160,7 @@ export function Faq() {
                 size="compact"
                 subline="Direkter Chat mit mir"
               >
-                Mir per WhatsApp schreiben
+                Schreib mir per WhatsApp
               </FirmenflowButton>
             </div>
           </div>

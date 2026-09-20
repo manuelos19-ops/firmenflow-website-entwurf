@@ -101,7 +101,7 @@ export default function AnfragePage() {
                 subline="Ohne Termin"
                 className="w-full"
               >
-                Mich anrufen
+                Ruf mich an
               </FirmenflowButton>
 
               <FirmenflowButton
@@ -112,7 +112,7 @@ export default function AnfragePage() {
                 subline="30 Minuten mit mir"
                 className="w-full"
               >
-                Kostenlos kennenlernen
+                Termin mit mir buchen
               </FirmenflowButton>
 
               {whatsappUrl && (
@@ -124,7 +124,7 @@ export default function AnfragePage() {
                   subline="Direkter Chat mit mir"
                   className="w-full"
                 >
-                  Mir per WhatsApp schreiben
+                  Schreib mir per WhatsApp
                 </FirmenflowButton>
               )}
             </div>

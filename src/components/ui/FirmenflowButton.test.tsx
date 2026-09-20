@@ -28,13 +28,25 @@ describe("FirmenflowButton", () => {
         size="compact"
         subline="Direkter Chat mit mir"
       >
-        Mir per WhatsApp schreiben
+        Schreib mir per WhatsApp
       </FirmenflowButton>,
     );
 
     expect(markup).toContain('target="_blank"');
-    expect(markup).toContain('aria-label="Mir per WhatsApp schreiben"');
-    expect(markup).toContain("Mir per WhatsApp schreiben");
+    expect(markup).toContain('aria-label="Schreib mir per WhatsApp"');
+    expect(markup).toContain("Schreib mir per WhatsApp");
     expect(markup).toContain("Direkter Chat mit mir");
+  });
+
+  it("zeigt nur das passende Motiv und keinen zusätzlichen Aktionspfeil", () => {
+    const markup = renderToStaticMarkup(
+      <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen">
+        Kostenlos anfragen
+      </FirmenflowButton>,
+    );
+
+    expect(markup).toContain("projekt-besprechen.png");
+    expect(markup).not.toContain("action-arrow.png");
+    expect(markup).not.toContain("ff-btn-action");
   });
 });

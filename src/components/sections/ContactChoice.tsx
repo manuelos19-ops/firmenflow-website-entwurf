@@ -7,12 +7,10 @@ import { siteIdentity } from "@/config/site";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { ChevronDown } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
 import { scrollToId } from "@/lib/scroll";
-import { cn } from "@/lib/cn";
 
 interface ContactChoiceProps {
   whatsappUrl: string | null;
@@ -117,7 +115,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     Ruf mich an, sichere dir einen freien 30-Minuten-Termin in meinem Kalender oder schreib mir unkompliziert per WhatsApp.
                   </p>
                 </div>
-                <div className="grid grid-cols-1 gap-2.5 pt-1 sm:grid-cols-3 md:grid-cols-1 xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-2.5 pt-1">
                   <FirmenflowButton
                     href="tel:015567277155"
                     buttonIcon="anrufen"
@@ -125,7 +123,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     subline="Ohne Termin"
                     className="w-full"
                   >
-                    Mich anrufen
+                    Ruf mich an
                   </FirmenflowButton>
                   <FirmenflowButton
                     href={siteIdentity.meetergoUrl}
@@ -136,7 +134,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     onClick={() => trackMeetergoClick("contact_section")}
                     className="w-full"
                   >
-                    Kostenlos kennenlernen
+                    Termin mit mir buchen
                   </FirmenflowButton>
                   {whatsappUrl && (
                     <FirmenflowButton
@@ -148,7 +146,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                       onClick={() => trackWhatsAppClick("contact_section")}
                       className="w-full"
                     >
-                      Mir per WhatsApp schreiben
+                      Schreib mir per WhatsApp
                     </FirmenflowButton>
                   )}
                 </div>
@@ -168,22 +166,18 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     Ich schaue mir deine Website und dein Google-Unternehmensprofil an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
                   </p>
                 </div>
-                <div>
-                  <button
-                    type="button"
+                <div className="w-full">
+                  <FirmenflowButton
                     onClick={() => setVideoOpen((v) => !v)}
-                    aria-expanded={videoOpen}
-                    aria-controls="website-check-form-wrapper"
-                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                    buttonIcon="video-einschaetzung"
+                    size="compact"
+                    subline={videoOpen ? undefined : "3–5 Minuten · per E-Mail"}
+                    className="w-full"
+                    ariaExpanded={videoOpen}
+                    ariaControls="website-check-form-wrapper"
                   >
-                    <span>{videoOpen ? "Formular schließen" : "Video-Analyse anfordern"}</span>
-                    <ChevronDown
-                      className={cn(
-                        "w-3.5 h-3.5 text-white/80 transition-transform duration-300",
-                        videoOpen && "rotate-180"
-                      )}
-                    />
-                  </button>
+                    {videoOpen ? "Formular schließen" : "Website kostenlos prüfen lassen"}
+                  </FirmenflowButton>
                 </div>
               </div>
             </div>

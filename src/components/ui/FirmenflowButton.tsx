@@ -40,7 +40,8 @@ type FirmenflowButtonProps = {
   size?: "default" | "compact";
   subline?: string;
   label?: string;
-  hideArrow?: boolean;
+  ariaExpanded?: boolean;
+  ariaControls?: string;
 };
 
 export function FirmenflowButton({
@@ -54,7 +55,8 @@ export function FirmenflowButton({
   size = "default",
   subline,
   label,
-  hideArrow = false,
+  ariaExpanded,
+  ariaControls,
 }: FirmenflowButtonProps) {
   const ariaLabel = label ?? (typeof children === "string" ? children : undefined);
   const classes = cn("ff-btn", size === "compact" && "ff-btn--compact", className);
@@ -76,18 +78,6 @@ export function FirmenflowButton({
         <span className="ff-btn-title">{children}</span>
         {subline ? <span className="ff-btn-sub">{subline}</span> : null}
       </span>
-      {!hideArrow && (
-        <span className="ff-btn-action" aria-hidden="true">
-          <Image
-            src="/images/buttons/action-arrow.png"
-            alt=""
-            width={96}
-            height={96}
-            sizes={imageSize}
-            className="ff-btn-action-img"
-          />
-        </span>
-      )}
     </span>
   );
 
@@ -144,7 +134,15 @@ export function FirmenflowButton({
   }
 
   return (
-    <button type="button" className={classes} style={style} onClick={onClick} aria-label={ariaLabel}>
+    <button
+      type="button"
+      className={classes}
+      style={style}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      aria-expanded={ariaExpanded}
+      aria-controls={ariaControls}
+    >
       {inner}
     </button>
   );
