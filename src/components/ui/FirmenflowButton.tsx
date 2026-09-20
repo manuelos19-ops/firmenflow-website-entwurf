@@ -39,6 +39,7 @@ type FirmenflowButtonProps = {
   buttonIcon?: FirmenflowButtonIcon;
   subline?: string;
   label?: string;
+  hideArrow?: boolean;
 };
 
 export function FirmenflowButton({
@@ -51,6 +52,7 @@ export function FirmenflowButton({
   buttonIcon = "projekt-besprechen",
   subline,
   label,
+  hideArrow = false,
 }: FirmenflowButtonProps) {
   const ariaLabel = label ?? (typeof children === "string" ? children : undefined);
 
@@ -70,16 +72,18 @@ export function FirmenflowButton({
         <span className="ff-btn-title">{children}</span>
         {subline ? <span className="ff-btn-sub">{subline}</span> : null}
       </span>
-      <span className="ff-btn-action" aria-hidden="true">
-        <Image
-          src="/images/buttons/action-arrow.png"
-          alt=""
-          width={96}
-          height={96}
-          sizes="48px"
-          className="ff-btn-action-img"
-        />
-      </span>
+      {!hideArrow && (
+        <span className="ff-btn-action" aria-hidden="true">
+          <Image
+            src="/images/buttons/action-arrow.png"
+            alt=""
+            width={96}
+            height={96}
+            sizes="48px"
+            className="ff-btn-action-img"
+          />
+        </span>
+      )}
     </span>
   );
 

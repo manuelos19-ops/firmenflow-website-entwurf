@@ -20,10 +20,10 @@ type Modell = {
 const modelle: readonly Modell[] = [
   {
     id: "starter",
-    kicker: "Für den schnellen Start",
+    kicker: "Starter",
     title: "Onepager",
     price: "690 €",
-    priceNote: "netto einmalig",
+    priceNote: "einmalig",
     claim: "Eine Seite, die alles sagt.",
     text: "Ideal, wenn du neu startest oder deine alte Seite endlich ersetzen willst. Ich baue dir einen kompakten Auftritt, der auf dem Handy überzeugt – mit Texten, die nach dir klingen, und Bildern, die zu deinem Betrieb passen.",
     points: ["Aufbau, Struktur und Design aus einer Hand", "Texte geschrieben, Bilder eingebunden", "In 1–2 Wochen live, ohne Baukasten-Look"],
@@ -32,10 +32,10 @@ const modelle: readonly Modell[] = [
   },
   {
     id: "sorglos",
-    kicker: "Meine Empfehlung für volle Köpfe",
-    title: "Sorglos-Partnerschaft",
+    kicker: "Beliebt bei Betrieben",
+    title: "Sorglos",
     price: "690 €",
-    priceNote: "netto einmalig + 39 €/Monat",
+    priceNote: "+ 39 €/Monat",
     claim: "Deine Seite gehört dir. Die Technik liegt bei mir.",
     text: "Du kümmerst dich um deinen Betrieb, ich halte dir den Rücken frei: Hosting, Updates, Backups und 30 Minuten Änderungen im Monat. Eine kurze Nachricht genügt, ich setze um.",
     points: ["Volles Eigentum an Design und Code", "Premium-Hosting, Technik und SSL inklusive", "Monatlich kündbar, kein Risiko"],
@@ -44,13 +44,13 @@ const modelle: readonly Modell[] = [
   },
   {
     id: "rundum",
-    kicker: "Wenn alles aus einem Guss soll",
+    kicker: "Rundum",
     title: "Rundum-Sorglos",
-    price: "Absprache",
-    priceNote: "Foto ab 350 € · Profil ab 99 €",
+    price: "Individuell",
+    priceNote: "nach Kennenlernen",
     claim: "Website, Fotos und Google-Auftritt in einer Hand.",
-    text: "Ich komme zu dir, fotografiere Team und Betrieb und bringe parallel dein Google-Profil auf Stand. Den genauen Umfang klären wir im Kennenlernen – zum Festpreis, versprochen.",
-    points: ["Echte Fotos statt Stockbilder", "Google-Profil einrichten und betreuen", "Alles abgestimmt, ein Ansprechpartner"],
+    text: "Ich komme zu dir, fotografiere Team und Betrieb und bringe parallel dein Google-Profil auf Stand. Dazu alles aus Sorglos – abgestimmt, aus einer Hand, zum Festpreis.",
+    points: ["Alles aus Sorglos inklusive", "Echte Fotos statt Stockbilder", "Google-Profil einrichten und betreuen"],
     icons: ["foto", "mehr-bewertungen", "persoenlicher-ansprechpartner"],
     featured: false,
   },
@@ -93,8 +93,8 @@ export function WebsitePreise() {
                   </p>
                 </div>
                 <p>
-                  <span className="text-4xl sm:text-5xl font-display font-bold">{modell.price}</span>{" "}
-                  <span className={"text-xs " + (modell.featured ? "text-white/70" : "text-[var(--color-muted)]")}>{modell.priceNote}</span>
+                  <span className="block text-4xl sm:text-5xl font-display font-bold leading-none">{modell.price}</span>
+                  <span className={"mt-1 block text-xs font-semibold " + (modell.featured ? "text-white/70" : "text-[var(--color-muted)]")}>{modell.priceNote}</span>
                 </p>
                 <p className={"text-sm leading-relaxed " + (modell.featured ? "text-white/85" : "text-[var(--color-muted)]")}>
                   {modell.text}

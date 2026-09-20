@@ -55,6 +55,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 buttonIcon="video-einschaetzung"
                 subline="3–5 Minuten · meine Einschätzung für dich"
                 className="w-full"
+                hideArrow
               >
                 Kostenlose Video-Einschätzung
               </FirmenflowButton>
@@ -66,6 +67,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 href={hero.phoneTel}
                 buttonIcon="anrufen"
                 subline="Ohne Termin · persönlich mit mir"
+                hideArrow
               >
                 Mich anrufen
               </FirmenflowButton>
@@ -74,6 +76,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 external
                 buttonIcon="whatsapp"
                 subline="Kurz und unkompliziert"
+                hideArrow
               >
                 Mir schreiben
               </FirmenflowButton>
