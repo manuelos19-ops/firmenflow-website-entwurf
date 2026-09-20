@@ -163,33 +163,32 @@ export default function UeberManuPage() {
           <div className="space-y-4 text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
             <p>
               Die Firma gibt es seit ein paar Monaten. Websites baue ich seit Kurzem
-              hauptberuflich – vorher habe ich elf Jahre lang Betriebe geführt, aufgebaut
-              und vermarktet.
+              hauptberuflich. Vorher habe ich elf Jahre lang Betriebe geführt, aufgebaut
+              und vermarktet:
             </p>
-            <ul className="space-y-4 text-[var(--color-ink)]">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-[var(--color-ink)]">
               <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                <p className="font-display text-xl font-bold text-[var(--color-coral)] leading-none">
                   6 Jahre
                 </p>
-                <p className="mt-2 text-base sm:text-lg leading-relaxed">
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
                   Inhaber eines EMS-Fitnessstudios
                 </p>
               </li>
               <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                <p className="font-display text-xl font-bold text-[var(--color-coral)] leading-none">
                   2 Jahre
                 </p>
-                <p className="mt-2 text-base sm:text-lg leading-relaxed">
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
                   Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe
                 </p>
               </li>
               <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                <p className="font-display text-xl font-bold text-[var(--color-coral)] leading-none">
                   3 Jahre
                 </p>
-                <p className="mt-2 text-base sm:text-lg leading-relaxed">
-                  Marketing, Personal, Foto und Video bei LaserTag Evolution Düsseldorf –
-                  parallel dazu Aufbau von BattleKart Düsseldorf-Neuss
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
+                  Marketing und Aufbau von BattleKart Düsseldorf-Neuss
                 </p>
               </li>
             </ul>
@@ -286,6 +285,27 @@ export default function UeberManuPage() {
               </span>
             </li>
           </ul>
+        </section>
+
+        {/* Mein Werkzeugkasten */}
+        <section className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-paper)] p-7 sm:p-10 space-y-5">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)]">
+            Mein Werkzeugkasten
+          </h2>
+          <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
+            Womit ich täglich arbeite, gebe ich weiter: FlowScreen ist mein kostenloses
+            Screenshot-Tool für Windows. Screenshots machen, Mockups bauen, sensible
+            Stellen verpixeln – alles lokal auf deinem Rechner, ohne Cloud.
+          </p>
+          <div className="pt-1">
+            <FirmenflowButton
+              href="/flowscreen"
+              buttonIcon="flowscreen"
+              subline="Kostenlos, lokal ohne Cloud"
+            >
+              FlowScreen ansehen
+            </FirmenflowButton>
+          </div>
         </section>
 
         {/* Abschluss */}
