@@ -232,7 +232,7 @@ export function DirectWithManu() {
               >
                 <div
                   className={cn(
-                    "double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-8 bg-white border border-[var(--color-line)]/50 relative overflow-hidden flex flex-col h-full justify-between gap-6 transition-all duration-300",
+                    "double-bezel-inner rounded-[calc(2.25rem-0.375rem)] p-7 sm:p-8 bg-white border border-[var(--color-line)]/50 relative overflow-hidden flex flex-col h-full gap-6 transition-all duration-300",
                     item.border
                   )}
                 >
@@ -243,8 +243,8 @@ export function DirectWithManu() {
                     )} 
                   />
 
-                  <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                    <div className="flex items-center gap-4">
+                  <div className="relative z-10 flex flex-col gap-6">
+                    <div className="flex items-center gap-4 min-h-[3.5rem]">
                       <FirmenflowIcon
                         name={bentoIcons[index]}
                         size={56}
