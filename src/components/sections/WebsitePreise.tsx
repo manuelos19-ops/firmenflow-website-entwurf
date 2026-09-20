@@ -12,13 +12,13 @@ export function WebsitePreise() {
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-            Preise
+            Deine Investition
           </span>
           <h2 id="preise-heading" className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[var(--color-ink)] mt-2 leading-tight">
             Was es kostet
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] mt-3 leading-relaxed">
-            Klare Preise, Festpreis vor dem Start. Alle Preise netto.
+            Deine Website ist kein Kostenfaktor, sondern ein digitaler Mitarbeiter, der rund um die Uhr für dich arbeitet. Drei transparente Modelle. Alle Preise netto.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
@@ -27,9 +27,9 @@ export function WebsitePreise() {
               <FirmenflowIcon name="neue-website" size={44} decorative />
               <div>
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                  Einmalig
+                  Modell 1 · Starter
                 </span>
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Website</h3>
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Onepager</h3>
               </div>
             </div>
             <div className="flex items-baseline gap-2">
@@ -51,9 +51,6 @@ export function WebsitePreise() {
                 <span>Mehrseiter nach Kennenlernen zum Festpreis</span>
               </li>
             </ul>
-            <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-              Investition: Onepager ab 690 € netto. Immer zum garantierten Festpreis vor dem ersten Klick.
-            </p>
           </div>
 
           <div className="p-7 sm:p-8 rounded-3xl bg-[var(--color-plum)] text-white border-2 border-[var(--color-plum)] shadow-2xl space-y-5 relative overflow-hidden">
@@ -63,31 +60,39 @@ export function WebsitePreise() {
                 <FirmenflowIcon name="monatlich-kuendbar" size={44} decorative />
                 <div>
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                    Monatlich · meistgewählt
+                    Modell 2 · meine Empfehlung
                   </span>
-                  <h3 className="text-xl font-bold mt-1">Betreuung</h3>
+                  <h3 className="text-xl font-bold mt-1">Sorglos-Partnerschaft</h3>
                 </div>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-5xl font-display font-bold">39 €</span>
-                <span className="text-sm text-white/70">/ Monat</span>
+                <span className="text-sm text-white/70">ab</span>
+                <span className="text-5xl font-display font-bold">690 €</span>
+                <span className="text-sm text-white/70">netto einmalig</span>
               </div>
+              <p className="text-sm text-white/85 leading-relaxed">
+                Dazu 39 € im Monat: Ich kümmere mich um die Technik, du um deinen Betrieb.
+              </p>
               <ul className="space-y-2.5 text-sm text-white/90">
                 <li className="flex items-start gap-2.5">
+                  <FirmenflowIcon name="code-uebergabe" size={24} decorative />
+                  <span>Volles Eigentum an Design und Code</span>
+                </li>
+                <li className="flex items-start gap-2.5">
                   <FirmenflowIcon name="unternehmensprofil" size={24} decorative />
-                  <span>Hosting, Updates und Backups</span>
+                  <span>Premium-Hosting, Technik und SSL inklusive</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <FirmenflowIcon name="umsetzung-texte" size={24} decorative />
-                  <span>30 Minuten Änderungen im Monat</span>
+                  <span>30 Minuten Änderungen im Monat inklusive</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <FirmenflowIcon name="nachricht-senden" size={24} decorative />
-                  <span>Kurze Nachricht genügt</span>
+                  <span>Änderungen per kurzer Nachricht</span>
                 </li>
               </ul>
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/20 text-sm font-semibold">
-                Monatlich kündbar. Keine Mindestlaufzeit.
+                Monatlich kündbar. Kein Risiko, volle Freiheit.
               </div>
             </div>
           </div>
@@ -97,24 +102,17 @@ export function WebsitePreise() {
               <FirmenflowIcon name="angebot" size={44} decorative />
               <div>
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-muted)]">
-                  Wenn du willst
+                  Modell 3 · komplett abgedeckt
                 </span>
-                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Dazu buchbar</h3>
+                <h3 className="text-xl font-bold text-[var(--color-ink)] mt-1">Rundum-Sorglos</h3>
               </div>
             </div>
-            <div className="space-y-3">
-              <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-[var(--color-line)]">
-                <span className="text-sm text-[var(--color-ink)]">Fototermin vor Ort</span>
-                <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">350 €</span>
-              </div>
-              <div className="flex items-baseline justify-between gap-3">
-                <span className="text-sm text-[var(--color-ink)]">Lokalpräsenz 360°</span>
-                <span className="text-2xl font-display font-bold text-[var(--color-ink)] shrink-0">99 €</span>
-              </div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-sm text-[var(--color-muted)]">nach</span>
+              <span className="text-4xl font-display font-bold text-[var(--color-ink)]">Absprache</span>
             </div>
             <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-              Echte Fotos aus deinem Betrieb statt Stockbildern. Oder dein Google-Profil
-              einrichten lassen und monatlich betreuen.
+              Damit du komplett abgedeckt bist: echte Fotos aus deinem Betrieb statt Stockbildern (ab 350 €). Oder dein Google-Profil einrichten lassen und monatlich betreuen (ab 99 €). Den genauen Umfang klären wir im Kennenlernen zum Festpreis.
             </p>
             <ButtonLink href="/lokalpraesenz-360" variant="secondary" size="default" className="w-full">
               Lokalpräsenz 360° ansehen
