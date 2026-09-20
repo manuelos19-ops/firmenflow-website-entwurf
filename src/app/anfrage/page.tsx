@@ -85,15 +85,15 @@ export default function AnfragePage() {
               <div className="flex items-center gap-2">
                 <FirmenflowIcon name="termin" size={28} decorative />
                 <h3 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
-                  Du möchtest nicht tippen, sondern lieber direkt sprechen?
+                  Du möchtest lieber einen direkten Weg?
                 </h3>
               </div>
               <p className="text-xs sm:text-sm text-[var(--color-muted)]">
-                Ruf mich an, sichere dir einen freien 30-Minuten-Termin in meinem Kalender oder schreib mir unkompliziert per WhatsApp.
+                Ruf mich an, buch dir einen Termin, schreib mir per WhatsApp oder hol dir eine kostenlose Video-Einschätzung.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <FirmenflowButton
                 href="tel:015567277155"
                 buttonIcon="anrufen"
@@ -127,6 +127,16 @@ export default function AnfragePage() {
                   Schreib mir per WhatsApp
                 </FirmenflowButton>
               )}
+
+              <FirmenflowButton
+                href="/#website-check"
+                buttonIcon="video-einschaetzung"
+                size="compact"
+                subline="3–5 Minuten · per E-Mail"
+                className="w-full"
+              >
+                Kostenlose Video-Einschätzung für Website &amp; Google-Profil
+              </FirmenflowButton>
             </div>
           </div>
         </div>
