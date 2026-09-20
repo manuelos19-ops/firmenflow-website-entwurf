@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-/* 2. Switzer (Variable + Static) */
+/* 2. Switzer (Variable + Static, statische Schnitte nur bei Bedarf) */
 @font-face {
   font-family: "Switzer";
   src: url("/fonts/switzer/Switzer-Variable.woff2") format("woff2 supports variations"),
@@ -34,30 +34,6 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
-}
-
-@font-face {
-  font-family: "Switzer";
-  src: url("/fonts/switzer/Switzer-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Switzer";
-  src: url("/fonts/switzer/Switzer-Semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Switzer";
-  src: url("/fonts/switzer/Switzer-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
 }
 
 /* 3. Crimson Text (Editorial Serif) */
