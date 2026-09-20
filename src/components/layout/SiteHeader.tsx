@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -95,38 +94,6 @@ export function SiteHeader() {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <a
-              href="tel:015567277155"
-              className="ff-btn ff-btn--compact"
-              aria-label="Mich direkt anrufen: 0155 67277155"
-            >
-              <span className="ff-btn-core">
-                <span className="ff-btn-icon" aria-hidden="true">
-                  <Image
-                    src="/images/buttons/anrufen.png"
-                    alt=""
-                    width={96}
-                    height={96}
-                    sizes="48px"
-                    className="ff-btn-icon-img"
-                  />
-                </span>
-                <span className="ff-btn-copy">
-                  <span className="ff-btn-title">0155&nbsp;67277155</span>
-                  <span className="ff-btn-sub">Ohne Termin · persönlich mit mir</span>
-                </span>
-                <span className="ff-btn-action" aria-hidden="true">
-                  <Image
-                    src="/images/buttons/action-arrow.png"
-                    alt=""
-                    width={96}
-                    height={96}
-                    sizes="48px"
-                    className="ff-btn-action-img"
-                  />
-                </span>
-              </span>
-            </a>
             <ButtonLink
               href="/#projektanfrage"
               variant="primary"
