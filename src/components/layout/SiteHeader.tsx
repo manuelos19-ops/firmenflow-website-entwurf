@@ -94,9 +94,16 @@ export function SiteHeader() {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <ButtonLink 
-              href="/#projektanfrage" 
-              variant="primary" 
+            <a
+              href="tel:015567277155"
+              className="inline-flex items-center gap-2 text-xs xl:text-sm font-bold text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors whitespace-nowrap"
+              aria-label="Manu direkt anrufen: 0155 67277155"
+            >
+              <span aria-hidden="true">0155&nbsp;67277155</span>
+            </a>
+            <ButtonLink
+              href="/#projektanfrage"
+              variant="primary"
               size="default"
               className="text-xs sm:text-sm px-5 py-2.5 shadow-sm"
             >

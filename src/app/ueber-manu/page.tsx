@@ -166,21 +166,31 @@ export default function UeberManuPage() {
               hauptberuflich – vorher habe ich elf Jahre lang Betriebe geführt, aufgebaut
               und vermarktet.
             </p>
-            <ul className="space-y-3 text-[var(--color-ink)]">
-              <li className="flex gap-3">
-                <span className="font-mono text-sm font-bold text-[var(--color-coral)] shrink-0 pt-0.5">6 J.</span>
-                <span>Inhaber eines EMS-Fitnessstudios</span>
+            <ul className="space-y-4 text-[var(--color-ink)]">
+              <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                  6 Jahre
+                </p>
+                <p className="mt-2 text-base sm:text-lg leading-relaxed">
+                  Inhaber eines EMS-Fitnessstudios
+                </p>
               </li>
-              <li className="flex gap-3">
-                <span className="font-mono text-sm font-bold text-[var(--color-coral)] shrink-0 pt-0.5">2 J.</span>
-                <span>Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe</span>
+              <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                  2 Jahre
+                </p>
+                <p className="mt-2 text-base sm:text-lg leading-relaxed">
+                  Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe
+                </p>
               </li>
-              <li className="flex gap-3">
-                <span className="font-mono text-sm font-bold text-[var(--color-coral)] shrink-0 pt-0.5">3 J.</span>
-                <span>
+              <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-coral)] leading-none">
+                  3 Jahre
+                </p>
+                <p className="mt-2 text-base sm:text-lg leading-relaxed">
                   Marketing, Personal, Foto und Video bei LaserTag Evolution Düsseldorf –
                   parallel dazu Aufbau von BattleKart Düsseldorf-Neuss
-                </span>
+                </p>
               </li>
             </ul>
             <p>

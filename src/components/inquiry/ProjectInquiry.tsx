@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useSyncExternalStore } from "react";
 import { ArrowLeft, ArrowRight, RefreshCw } from "@/components/brand/FirmenflowUiIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { TOTAL_STEPS, initialInquiryState, inquiryReducer, migrateLegacyDraft } from "@/features/inquiry/reducer";
-import { inquirySchema, type InquiryPayload } from "@/features/inquiry/schema";
+import { inquirySchema } from "@/features/inquiry/schema";
 import { InquiryProgress } from "./InquiryProgress";
 import { BusinessStep } from "./steps/BusinessStep";
 import { ContactStep } from "./steps/ContactStep";
@@ -15,16 +15,20 @@ import type { InquiryDraft } from "@/features/inquiry/types";
 import { trackProjectInquirySubmit } from "@/lib/track-inquiry";
 import { scrollToElement } from "@/lib/scroll";
 
+const subscribeToHydration = () => () => undefined;
+
+function useEnhancedForm(): boolean {
+  return useSyncExternalStore(subscribeToHydration, () => true, () => false);
+}
+
 export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null }) {
   const [state, dispatch] = useReducer(inquiryReducer, undefined, initialInquiryState);
-  const [enhanced, setEnhanced] = useState(false);
+  const enhanced = useEnhancedForm();
   const formTopRef = useRef<HTMLDivElement>(null);
   const errorSummaryRef = useRef<HTMLDivElement>(null);
   const isFirstMount = useRef(true);
 
   useEffect(() => {
-    setEnhanced(true);
-
     // URL-Preselect verarbeiten (neu & alt, damit bestehende Links weiter funktionieren)
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
@@ -86,7 +90,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
 
     if (state.step === 0) {
       if ((state.data.services || []).length === 0 && !state.data.guidance) {
-        errors.services = "Leistungen: Bitte wähle mindestens eine Leistung aus – oder klicke auf „deine Empfehlung“.";
+        errors.services = "Leistungen: Bitte wähle mindestens eine Leistung aus oder klicke auf „deine Empfehlung“.";
       }
       if ((state.data.services || []).includes("website") && !state.data.websiteScope) {
         errors.websiteScope = "Website: Bitte gib an, ob es um eine neue oder deine bestehende Website geht.";
@@ -205,13 +209,15 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
 
   if (state.status === "success") {
     return (
-      <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 border border-[var(--color-line)] shadow-xl text-center space-y-6 text-[var(--color-ink)]">
+      <div className="relative overflow-hidden rounded-[2.5rem] border border-[var(--color-plum)]/10 bg-white p-8 text-center text-[var(--color-ink)] shadow-[0_24px_70px_rgba(72,35,97,0.12)] sm:p-12 md:p-16">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--color-coral)] via-fuchsia-500 to-violet-600" />
+        <div className="relative space-y-6">
         <div className="flex justify-center">
           <FirmenflowIcon name="erfolg" size={72} decorative />
         </div>
         <div className="space-y-2 max-w-md mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-[var(--color-ink)] font-display">
-            Anfrage ist bei Manu angekommen!
+            Deine Anfrage ist bei mir angekommen!
           </h3>
           <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
             Vielen Dank für dein Vertrauen. Ich schaue mir deine Angaben in Ruhe an und melde mich in der Regel innerhalb eines Werktags persönlich bei dir.
@@ -239,6 +245,7 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
             Neue Anfrage starten
           </button>
         </div>
+        </div>
       </div>
     );
   }
@@ -248,21 +255,24 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
       ref={formTopRef}
       id="projektanfrage"
       style={{ overflowAnchor: "none" }}
-      className="bg-white rounded-[2.5rem] p-6 sm:p-10 md:p-14 border border-[var(--color-line)] shadow-xl scroll-mt-24"
+      className="relative scroll-mt-24 overflow-hidden rounded-[2.5rem] border border-[var(--color-plum)]/10 bg-white p-6 shadow-[0_28px_80px_rgba(72,35,97,0.13)] sm:p-10 md:p-14"
     >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--color-coral)] via-fuchsia-500 to-violet-600" />
       <form
         action="/api/inquiry"
         method="post"
         onSubmit={handleSubmit}
         noValidate
-        className="space-y-8"
+        className="relative space-y-10"
       >
         {enhanced && <InquiryProgress step={state.step} />}
 
         {state.status === "error" && (
-          <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-sm space-y-3">
-            <p className="font-bold">Hinweis zur Übertragung</p>
-            <p>{state.serverErrorMessage || "Etwas hat nicht geklappt. Bitte versuche es erneut."}</p>
+          <div className="flex gap-3 rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800 shadow-sm">
+            <FirmenflowIcon name="fehler" size={36} decorative className="mt-0.5" />
+            <div className="space-y-2">
+              <p className="font-bold">Hinweis zur Übertragung</p>
+              <p>{state.serverErrorMessage || "Etwas hat nicht geklappt. Bitte versuche es erneut."}</p>
             {whatsappUrl && (
               <a
                 href={whatsappUrl}
@@ -273,11 +283,12 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
                 <span>Stattdessen direkt per WhatsApp schreiben →</span>
               </a>
             )}
+            </div>
           </div>
         )}
 
         {/* Steps container */}
-        <div className="min-h-[280px]">
+        <div className="min-h-[340px]">
           {(!enhanced || state.step === 0) && (
             <ServicesStep
               data={state.data}
@@ -337,12 +348,12 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
 
         {/* Navigation Buttons */}
         {enhanced ? (
-          <div className="pt-6 border-t border-[var(--color-line)] flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--color-line)] pt-6">
             {state.step > 0 ? (
               <button
                 type="button"
                 onClick={handleBack}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-paper)] transition-all cursor-pointer"
+                className="inline-flex min-h-12 items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-[var(--color-muted)] transition-all hover:bg-[var(--color-paper)] hover:text-[var(--color-ink)]"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Zurück</span>
@@ -355,8 +366,9 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-medium bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] transition-all shadow-md cursor-pointer ml-auto"
+                className="ml-auto inline-flex min-h-13 items-center gap-3 rounded-2xl border border-[var(--color-coral)]/70 bg-[linear-gradient(135deg,#351146,#21082f)] px-7 py-3.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(72,35,97,0.22),0_0_0_2px_rgba(239,57,216,0.10)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(72,35,97,0.28)] active:translate-y-px sm:text-base"
               >
+                <FirmenflowIcon name="handlungsempfehlung" size={30} decorative />
                 <span>Weiter</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -365,19 +377,22 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
                 <button
                   type="submit"
                   disabled={state.status === "submitting"}
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-medium bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] transition-all shadow-lg cursor-pointer disabled:opacity-50"
+                  className="inline-flex min-h-14 items-center gap-3 rounded-2xl border border-[var(--color-coral)]/70 bg-[linear-gradient(135deg,#351146,#21082f)] px-8 py-4 text-base font-bold text-white shadow-[0_14px_34px_rgba(72,35,97,0.24),0_0_0_2px_rgba(239,57,216,0.10)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(72,35,97,0.3)] active:translate-y-px disabled:cursor-wait disabled:opacity-55"
                 >
                   {state.status === "submitting" ? (
                     <>
                       <RefreshCw className="w-4 h-4 animate-spin" />
-                      <span>Wird an Manu gesendet …</span>
+                      <span>Wird an mich gesendet …</span>
                     </>
                   ) : (
-                    <span>Unverbindliche Anfrage senden</span>
+                    <>
+                      <FirmenflowIcon name="nachricht-senden" size={34} decorative />
+                      <span>Unverbindliche Anfrage an mich senden</span>
+                    </>
                   )}
                 </button>
                 <p className="text-xs text-[var(--color-muted)] max-w-sm sm:text-right">
-                  Du beauftragst damit noch keine Leistung. Ich melde mich persönlich über deinen gewählten Kontaktweg – in der Regel innerhalb eines Werktags.
+                  Du beauftragst damit noch keine Leistung. Ich melde mich persönlich über deinen gewählten Kontaktweg, in der Regel innerhalb eines Werktags.
                 </p>
               </div>
             )}
@@ -386,9 +401,10 @@ export function ProjectInquiry({ whatsappUrl }: { whatsappUrl?: string | null })
           <div className="pt-6 border-t border-[var(--color-line)]">
             <button
               type="submit"
-              className="w-full sm:w-auto px-8 py-4 rounded-full text-base font-medium bg-[var(--color-coral)] text-white hover:bg-[var(--color-coral-hover)] transition-all shadow-lg cursor-pointer"
+              className="inline-flex w-full min-h-14 items-center justify-center gap-3 rounded-2xl border border-[var(--color-coral)]/70 bg-[linear-gradient(135deg,#351146,#21082f)] px-8 py-4 text-base font-bold text-white shadow-[0_14px_34px_rgba(72,35,97,0.24)] transition-all hover:-translate-y-0.5 sm:w-auto"
             >
-              Anfrage an Manu senden
+              <FirmenflowIcon name="nachricht-senden" size={34} decorative />
+              Anfrage an mich senden
             </button>
           </div>
         )}

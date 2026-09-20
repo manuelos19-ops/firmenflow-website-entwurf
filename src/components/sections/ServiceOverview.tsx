@@ -303,25 +303,40 @@ export function ServiceOverview() {
           </div>
         </div>
 
-        {/* Bottom Trust Guarantee Bar: No Text Stress & Fixed Price Guarantee */}
+        {/* Bottom Trust Guarantee Bar: Festpreis + Gefällt-mir-Garantie */}
         <div className="mt-14 sm:mt-20 max-w-4xl mx-auto double-bezel-outer p-1.5 sm:p-2 rounded-[2rem] bg-black/[0.03] border border-black/[0.06] shadow-lg">
-          <div className="double-bezel-inner rounded-[calc(2rem-0.375rem)] p-6 sm:p-7 bg-white/95 border border-[var(--color-line)]/50 flex flex-col sm:flex-row items-center justify-between gap-5">
-            <div className="flex items-center gap-4 text-left">
-              <FirmenflowIcon name="festpreis" size={48} decorative />
-              <div>
-                <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
-                  Festpreis vorher. Texte inklusive.
-                </h4>
-                <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                  Du weißt vor dem Start, was es kostet. Texte, Layout und auf Wunsch die Fotos kommen von mir – du musst nichts vorbereiten.
-                </p>
+          <div className="double-bezel-inner rounded-[calc(2rem-0.375rem)] p-6 sm:p-7 bg-white/95 border border-[var(--color-line)]/50 space-y-4">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
+              <div className="flex items-center gap-4 text-left">
+                <FirmenflowIcon name="festpreis" size={48} decorative />
+                <div>
+                  <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
+                    Festpreis vorher. Texte inklusive.
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
+                    Du weißt vor dem Start, was es kostet. Texte, Layout und auf Wunsch die Fotos kommen von mir – du musst nichts vorbereiten.
+                  </p>
+                </div>
+              </div>
+              <div className="shrink-0 w-full sm:w-auto flex justify-start sm:justify-end">
+                <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm ring-1 ring-emerald-300/40">
+                  <Check className="w-4 h-4 text-emerald-600" />
+                  <span>Festpreis-Garantie</span>
+                </span>
               </div>
             </div>
-            <div className="shrink-0 w-full sm:w-auto flex justify-start sm:justify-end">
-              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm ring-1 ring-emerald-300/40">
-                <Check className="w-4 h-4 text-emerald-600" />
-                <span>Festpreis-Garantie</span>
-              </span>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[var(--color-line)]/60">
+              <div className="flex items-center gap-4 text-left">
+                <FirmenflowIcon name="freigabe" size={48} decorative />
+                <div>
+                  <h4 className="text-base sm:text-lg font-bold text-[var(--color-ink)] font-sans">
+                    Gefällt-mir-Garantie
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
+                    Wenn der Entwurf auf deinem Handy nicht genau so aussieht, wie du dir deinen Betrieb vorstellst, passen wir ihn an. Erst wenn du zu 100 % nickst, geht die Seite live – und keinen Tag früher. Ohne Zusatzkosten.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

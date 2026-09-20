@@ -9,6 +9,7 @@ import { Plus, Minus, ArrowRight } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
@@ -157,19 +158,15 @@ export function Faq() {
               </div>
             </div>
 
-            <div className="shrink-0 w-full sm:w-auto">
-              <MagneticButton>
-                <ButtonLink
-                  href={buildWhatsAppUrl()}
-                  external={true}
-                  variant="whatsapp"
-                  size="default"
-                  className="w-full sm:w-auto text-xs sm:text-sm px-6 py-3 shadow-md shadow-[#25D366]/25"
-                >
-                  <WhatsAppIcon className="w-4 h-4 text-white mr-1.5 shrink-0" />
-                  <span>WhatsApp an Manu</span>
-                </ButtonLink>
-              </MagneticButton>
+                        <div className="shrink-0 w-full sm:w-auto">
+              <FirmenflowButton
+                href={buildWhatsAppUrl()}
+                external
+                buttonIcon="whatsapp"
+                subline="Ich antworte meist innerhalb weniger Stunden"
+              >
+                Mir auf WhatsApp schreiben
+              </FirmenflowButton>
             </div>
           </div>
         </div>

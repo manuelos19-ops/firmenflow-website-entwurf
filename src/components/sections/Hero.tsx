@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { MagneticButton } from "@/components/effects/MagneticButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
@@ -47,50 +48,35 @@ export function Hero({ whatsappUrl }: HeroProps) {
           </p>
 
           {/* CTAs: Primär oben (mobil volle Breite), darunter Anrufen & WhatsApp IMMER nebeneinander */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-3.5 mb-2 sm:mb-4 w-full sm:w-auto">
-            <div className="hero-cta-wrap w-full sm:w-auto">
-              <MagneticButton className="w-full sm:w-auto">
-                <ButtonLink 
-                  href="#website-check" 
-                  variant="primary"
-                  size="lg"
-                  className="w-full sm:w-auto shadow-lg shadow-[var(--color-coral)]/25 text-sm sm:text-base px-5 sm:px-6 py-3 sm:py-3.5"
-                >
-                  <span>{hero.primaryCta}</span>
-                </ButtonLink>
-              </MagneticButton>
+          <div className="flex flex-col items-stretch gap-4 mb-2 sm:mb-4 w-full sm:w-auto max-w-xl">
+            <div className="hero-cta-wrap w-full">
+              <FirmenflowButton
+                href="#website-check"
+                buttonIcon="video-einschaetzung"
+                subline="3–5 Minuten · meine Einschätzung für dich"
+                className="w-full"
+              >
+                Kostenlose Video-Einschätzung
+              </FirmenflowButton>
             </div>
 
-            {/* Feste 2er-Gruppe: Manu anrufen & WhatsApp-Chat auf JEDER Bildschirmgröße garantiert nebeneinander */}
-            <div className="grid grid-cols-2 sm:flex sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto shrink-0">
-              <div className="hero-cta-wrap w-full sm:w-auto">
-                <MagneticButton className="w-full sm:w-auto">
-                  <ButtonLink 
-                    href={hero.phoneTel} 
-                    variant="secondary"
-                    size="lg"
-                    className="w-full sm:w-auto justify-center text-center !px-2.5 sm:!px-5 !py-3 sm:!py-3.5 text-xs sm:text-sm md:text-base whitespace-nowrap hover:border-[var(--color-plum)] [&_[data-arrow]]:hidden sm:[&_[data-arrow]]:inline-flex"
-                  >
-                    <FirmenflowIcon name="telefon" size={18} decorative priority className="shrink-0" />
-                    <span>{hero.secondaryCta}</span>
-                  </ButtonLink>
-                </MagneticButton>
-              </div>
-
-              <div className="hero-cta-wrap w-full sm:w-auto">
-                <MagneticButton className="w-full sm:w-auto">
-                  <ButtonLink 
-                    href={resolvedWhatsappUrl} 
-                    external
-                    variant="whatsapp"
-                    size="lg"
-                    className="w-full sm:w-auto justify-center text-center !px-2.5 sm:!px-5 !py-3 sm:!py-3.5 text-xs sm:text-sm md:text-base whitespace-nowrap shadow-lg shadow-[#25D366]/25 [&_[data-arrow]]:hidden sm:[&_[data-arrow]]:inline-flex"
-                  >
-                    <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
-                    <span>{hero.whatsappCta}</span>
-                  </ButtonLink>
-                </MagneticButton>
-              </div>
+            {/* Feste 2er-Gruppe: Mich anrufen & WhatsApp auf JEDER Bildschirmgröße garantiert nebeneinander */}
+            <div className="grid grid-cols-2 items-stretch gap-3 w-full">
+              <FirmenflowButton
+                href={hero.phoneTel}
+                buttonIcon="anrufen"
+                subline="Ohne Termin · persönlich mit mir"
+              >
+                Mich anrufen
+              </FirmenflowButton>
+              <FirmenflowButton
+                href={resolvedWhatsappUrl}
+                external
+                buttonIcon="whatsapp"
+                subline="Kurz und unkompliziert"
+              >
+                Mir schreiben
+              </FirmenflowButton>
             </div>
           </div>
 

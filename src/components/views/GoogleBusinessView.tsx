@@ -78,15 +78,12 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </div>
 
             <h1 className="g360-hero-title text-4xl sm:text-6xl md:text-7xl font-display font-extrabold text-[var(--color-ink)] leading-[1.06] tracking-tight">
-              Der erste Eindruck <br className="hidden sm:block" />
-              <span className="text-[var(--color-plum)]">passiert bei Google.</span> <br />
-              <span className="text-[var(--color-coral)] font-editorial italic font-normal">
-                Nicht in deinem Betrieb.
-              </span>
+              Dein Betrieb ist stark. <br />
+              <span className="text-[var(--color-plum)]">Auch online?</span>
             </h1>
 
             <p className="g360-hero-body text-xl sm:text-2xl text-[var(--color-ink)] font-semibold leading-relaxed">
-              Dein Google-Profil kann mehr als Öffnungszeiten anzeigen.
+              Wer dich noch nicht kennt, entscheidet bei Google – nicht bei dir im Laden.
             </p>
 
             <p className="g360-hero-body text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl">
@@ -123,6 +120,13 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
           {/* Right Column: INTERACTIVE GOOGLE MAPS SIMULATION (Vorher vs. Nachher) */}
           <div className="lg:col-span-5 flex flex-col items-center">
+            <p className="mb-3 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[var(--color-plum)] bg-white/80 border border-[var(--color-line)] rounded-full px-4 py-2 shadow-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-coral)] opacity-60" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--color-coral)]" />
+              </span>
+              <span>Tippe oben um – so wirkt der Unterschied:</span>
+            </p>
             {/* Simulation Tab Switcher */}
             <div className="w-full max-w-md bg-stone-100 p-1.5 rounded-2xl border border-[var(--color-line)] flex items-center justify-between mb-4 shadow-inner">
               <button
@@ -157,108 +161,60 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             {/* The Simulated Local Presence Card */}
             <div className="w-full max-w-md bg-white rounded-3xl border-2 border-[var(--color-line)] shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
               {/* Local Business Profile Preview Header */}
-              <div className="bg-gradient-to-r from-stone-50 to-stone-100 p-4 border-b border-stone-200 flex items-center justify-between">
+              <div className="bg-gradient-to-r from-stone-50 to-stone-100 p-4 border-b border-stone-200">
                 <div className="flex items-center gap-2.5">
                   <FirmenflowIcon name="unternehmensprofil" size={32} decorative />
                   <div>
-                    <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block">
-                      Brancheneintrag-Vorschau
-                    </span>
-                    <span className="text-xs font-semibold text-[var(--color-ink)]">
-                      {simulationMode === "before" ? "Ungepflegtes Profil mit Lücken" : "Sauber aufgesetzter & aktiv gepflegter Auftritt"}
-                    </span>
+                    <h4 className="text-xl font-bold font-sans text-[var(--color-ink)]">
+                      Dein Betrieb
+                      {simulationMode === "after" && (
+                        <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full ml-2 align-middle">
+                          Aktiv betreut
+                        </span>
+                      )}
+                    </h4>
+                    <p className="text-xs text-[var(--color-muted)] mt-0.5">
+                      Wesel &amp; Niederrhein · Fachbetrieb
+                    </p>
                   </div>
                 </div>
-                {simulationMode === "after" && (
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">
-                    <FirmenflowIcon name="profil-aufraeumen" size={16} decorative />
-                    <span>Vollständig eingerichtet</span>
-                  </span>
-                )}
               </div>
 
               {/* Profile Body */}
               <div className="p-6 space-y-4">
-                <div>
-                  <h4 className="text-xl font-bold font-sans text-[var(--color-ink)] flex items-center gap-2">
-                    <span>Dein Betrieb</span>
-                    {simulationMode === "after" && (
-                      <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
-                        Aktiv betreut
-                      </span>
-                    )}
-                  </h4>
-                  <p className="text-xs text-[var(--color-muted)] flex items-center gap-1 mt-0.5">
-                    <FirmenflowIcon name="unternehmensprofil" size={20} decorative />
-                    Wesel &amp; Niederrhein · Fachbetrieb
+                <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
+                  <FirmenflowIcon name="profil-aufraeumen" size={24} decorative />
+                  <p className="text-xs font-bold text-[var(--color-ink)] leading-snug">
+                    {simulationMode === "after"
+                      ? "Vollständige Angaben, verifizierte Kategorien, gepflegte Leistungen"
+                      : "Lückenhafte Angaben, falsche Hauptkategorie, fehlende Leistungen"}
                   </p>
                 </div>
 
-                {/* Profile Completeness & Quality */}
-                <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-stone-50 border border-stone-100">
-                  <FirmenflowIcon name="profil-aufraeumen" size={24} decorative />
-                  <div>
-                    <span className="text-xs font-bold text-[var(--color-ink)] block">
-                      {simulationMode === "after" ? "Vollständige Angaben & verifizierte Kategorien" : "Lückenhafte Angaben & falsche Hauptkategorie"}
-                    </span>
-                    <span className="text-[11px] text-[var(--color-muted)]">
-                      {simulationMode === "after" ? "Alle Kernbereiche, Leistungen & Kontaktwege gepflegt" : "Wichtige Suchbegriffe & Leistungen fehlen"}
-                    </span>
-                  </div>
-                </div>
-
                 {/* Status Indicator */}
-                <div className="space-y-2 text-xs">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-[var(--color-muted)] shrink-0" />
-                    {simulationMode === "after" ? (
-                      <span className="text-emerald-700 font-semibold">
-                        Jetzt geöffnet · Schließt um 18:00 Uhr
-                      </span>
-                    ) : (
-                      <span className="text-amber-700 font-semibold">
-                        Öffnungszeiten können abweichen (vor 2 Jahren aktualisiert)
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <FirmenflowIcon name="bewertungen-beantworten" size={20} decorative />
-                    {simulationMode === "after" ? (
-                      <span className="text-blue-700 font-semibold">
-                        100 % aller Bewertungen persönlich &amp; wertschätzend beantwortet
-                      </span>
-                    ) : (
-                      <span className="text-rose-600 font-medium">
-                        Keine Antworten auf Rezensionen vorhanden
-                      </span>
-                    )}
-                  </div>
+                <div className="flex items-center gap-2 text-xs">
+                  <Clock className="w-4 h-4 text-[var(--color-muted)] shrink-0" />
+                  {simulationMode === "after" ? (
+                    <span className="text-emerald-700 font-semibold">
+                      Jetzt geöffnet · Schließt um 18:00 Uhr
+                    </span>
+                  ) : (
+                    <span className="text-amber-700 font-semibold">
+                      Öffnungszeiten veraltet, Angaben lückenhaft
+                    </span>
+                  )}
                 </div>
 
-                {/* Review Management Snapshot */}
-                <div className="pt-3 border-t border-stone-100 text-xs space-y-2">
-                  <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
-                    Rezensions-Management:
-                  </span>
+                <div className="flex items-center gap-2 text-xs">
+                  <FirmenflowIcon name="bewertungen-beantworten" size={20} decorative />
                   {simulationMode === "after" ? (
-                    <div className="p-3 bg-emerald-50/70 border border-emerald-200 rounded-xl space-y-1.5">
-                      <p className="text-emerald-950 font-medium">
-                        Aktiver Feedback-Prozess &amp; persönliche Antworten auf Kundenfeedback
-                      </p>
-                      <p className="text-[11px] text-emerald-800">
-                        Zeigt potenziellen Kunden, dass der Betrieb aktiv erreichbar ist und Rückmeldungen ernst nimmt.
-                      </p>
-                    </div>
+                    <span className="font-semibold text-[var(--color-ink)]">
+                      5,0 ★ · 52 Bewertungen · alle persönlich beantwortet
+                    </span>
                   ) : (
-                    <div className="p-3 bg-rose-50/70 border border-rose-200 rounded-xl space-y-1">
-                      <p className="text-rose-950 font-medium">
-                        Keine Antworten auf Kundenfeedback oder Fragen
-                      </p>
-                      <p className="text-[11px] text-rose-600 italic">
-                        (Letzte Rezensionen seit Monaten unkommentiert – wirkt inaktiv)
-                      </p>
-                    </div>
+                    <span className="text-[var(--color-muted)]">
+                      3,4 ★ · 5 Bewertungen · keine Antworten
+                    </span>
                   )}
                 </div>
               </div>
@@ -448,14 +404,12 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             <div className="lg:col-span-5 bg-gradient-to-br from-amber-50/80 via-white to-amber-50/40 rounded-2xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-4 order-2 lg:order-1">
               <FirmenflowIcon name="mehr-bewertungen" size={48} decorative />
               <h4 className="text-lg font-bold text-[var(--color-ink)]">
-                Warum so wenige schreiben:
+                Warum kaum jemand positive Bewertungen schreibt:
               </h4>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-                Nicht aus Unzufriedenheit. Meistens fehlt im Moment einfach der Anstoß – und zu Hause denkt keiner mehr dran.
+                Zufriedene Kunden sind nicht unzufrieden, sie sind nur beschäftigt. Im Moment
+                fehlt der Anstoß – und zu Hause denkt keiner mehr an deine Google-Seite.
               </p>
-              <div className="p-3.5 bg-white border border-amber-300 rounded-xl text-xs text-amber-950 font-medium shadow-sm">
-                <strong>Regelkonform:</strong> Keine gekauften Bewertungen, kein Drängen. Nur echte Kunden, die von selbst schreiben.
-              </div>
             </div>
 
             <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
@@ -579,11 +533,11 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </span>
                 <div className="flex items-start gap-2 text-white/90 leading-relaxed">
                   <FirmenflowIcon name="lob" size={24} decorative />
-                  <span>9x Lob für Team-Freundlichkeit am Empfang.</span>
+                  <span>14x Lob für Beratung und Freundlichkeit am Empfang.</span>
                 </div>
                 <div className="flex items-start gap-2 text-white/90 leading-relaxed">
                   <FirmenflowIcon name="warnung" size={24} decorative />
-                  <span>2x Hinweis auf Wartezeiten bei Stoßzeiten am Samstag.</span>
+                  <span>8x Kritik an Wartezeiten am Samstagvormittag.</span>
                 </div>
               </div>
 
@@ -592,7 +546,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                   <FirmenflowIcon name="handlungsempfehlung" size={24} decorative />
                   <strong className="text-white">Mein Vorschlag:</strong>
                 </div>
-                Samstags zwischen 10:00 und 12:00 Uhr eine zusätzliche Kraft einteilen, um die Wartezeit an der Kasse zu halbieren.
+                Prüfen, ob sich samstags zwischen 10:00 und 12:00 Uhr die Abläufe an der Kasse entzerren lassen. Ob zusätzliche Besetzung oder andere Aufteilung sinnvoll ist, hängt von deinem Team und deinen Zahlen ab. Das schauen wir uns gemeinsam an.
               </div>
             </div>
           </div>
@@ -845,10 +799,6 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </ButtonLink>
               </MagneticButton>
             </div>
-
-            <p className="text-xs text-white/50 pt-2">
-              Streng richtlinienkonform · Keine gekauften Bewertungen · Persönlich mit Manu
-            </p>
           </div>
         </div>
 

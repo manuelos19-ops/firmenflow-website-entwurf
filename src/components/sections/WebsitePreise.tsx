@@ -51,6 +51,9 @@ export function WebsitePreise() {
                 <span>Mehrseiter nach Kennenlernen zum Festpreis</span>
               </li>
             </ul>
+            <p className="text-xs text-[var(--color-muted)] leading-relaxed">
+              Investition: Onepager ab 690 € netto. Immer zum garantierten Festpreis vor dem ersten Klick.
+            </p>
           </div>
 
           <div className="p-7 sm:p-8 rounded-3xl bg-[var(--color-plum)] text-white border-2 border-[var(--color-plum)] shadow-2xl space-y-5 relative overflow-hidden">
@@ -60,7 +63,7 @@ export function WebsitePreise() {
                 <FirmenflowIcon name="monatlich-kuendbar" size={44} decorative />
                 <div>
                   <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                    Monatlich
+                    Monatlich · meistgewählt
                   </span>
                   <h3 className="text-xl font-bold mt-1">Betreuung</h3>
                 </div>

@@ -1,6 +1,8 @@
 import type { InquiryDraft } from "@/features/inquiry/types";
 import { cn } from "@/lib/cn";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { Check } from "@/components/brand/FirmenflowUiIcon";
+import { InquiryChoiceCard } from "@/components/inquiry/InquiryChoiceCard";
 
 type StepProps = {
   data: InquiryDraft;
@@ -62,16 +64,22 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
 
   return (
     <fieldset className="space-y-6">
-      <legend className="text-xl sm:text-2xl font-bold text-[var(--color-ink)] mb-2">
-        Wobei darf ich dich unterstützen?
+      <legend className="mb-2 w-full text-xl font-bold text-[var(--color-ink)] sm:text-2xl">
+        <span className="flex items-center gap-3">
+          <span className="grid h-14 w-14 place-items-center rounded-2xl border border-[var(--color-plum)]/10 bg-[var(--color-plum)]/[0.04]">
+            <FirmenflowIcon name="beratung" size={50} decorative />
+          </span>
+          <span>Wobei darf ich dich unterstützen?</span>
+        </span>
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
-        Du kannst beides auswählen – viele Betriebe kombinieren Website und Google-Präsenz.
+        Du kannst beides auswählen. Viele Betriebe kombinieren Website und Google-Präsenz.
       </p>
 
       {errors.services && (
-        <p className="text-xs font-semibold text-rose-600" role="alert">
-          {errors.services}
+        <p id="services-error" className="flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+          <FirmenflowIcon name="warnung" size={22} decorative />
+          <span>{errors.services}</span>
         </p>
       )}
 
@@ -80,14 +88,13 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
           const isSelected = data.services?.includes(opt.value);
 
           return (
-            <label
+            <InquiryChoiceCard
               key={opt.value}
-              className={cn(
-                "relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl border-2 cursor-pointer transition-all duration-200",
-                isSelected
-                  ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 shadow-md"
-                  : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 hover:bg-[var(--color-paper)]/50"
-              )}
+              selected={Boolean(isSelected)}
+              title={opt.title}
+              description={opt.description}
+              icon={opt.iconName}
+              className="md:min-h-52 md:flex-col md:items-start"
             >
               <input
                 type="checkbox"
@@ -96,41 +103,24 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
                 checked={isSelected}
                 onChange={() => toggleService(opt.value)}
                 className="sr-only"
+                aria-checked={Boolean(isSelected)}
                 aria-describedby={errors.services ? "services-error" : undefined}
               />
-              <div className="space-y-4">
-                <FirmenflowIcon name={opt.iconName} size={56} decorative />
-                <h3 className="text-lg font-bold text-[var(--color-ink)]">{opt.title}</h3>
-                <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-                  {opt.description}
-                </p>
-              </div>
-
-              <div className="pt-6 mt-4 border-t border-[var(--color-line)] flex items-center gap-2">
-                <div
-                  className={cn(
-                    "w-5 h-5 rounded-md border-2 flex items-center justify-center transition-colors",
-                    isSelected ? "border-[var(--color-coral)] bg-[var(--color-coral)]" : "border-[var(--color-line)]"
-                  )}
-                >
-                  {isSelected && (
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="m5 12 5 5 9-9" />
-                    </svg>
-                  )}
-                </div>
-                <span className="text-xs font-semibold text-[var(--color-ink)]">
-                  {isSelected ? "Ausgewählt" : "Auswählen"}
-                </span>
-              </div>
-            </label>
+            </InquiryChoiceCard>
           );
         })}
       </div>
 
       {/* Beratungswunsch als dezente Alternative unterhalb der Karten */}
       <div className="pt-1">
-        <label className="flex items-center gap-3 p-4 rounded-xl border border-dashed border-[var(--color-line)] bg-[var(--color-paper)]/40 cursor-pointer transition-all hover:border-[var(--color-plum)]/40">
+        <label
+          className={cn(
+            "flex cursor-pointer items-center gap-3 rounded-xl border border-dashed p-4 transition-all",
+            data.guidance
+              ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5"
+              : "border-[var(--color-line)] bg-[var(--color-paper)]/40 hover:border-[var(--color-plum)]/40",
+          )}
+        >
           <input
             type="checkbox"
             name="guidance"
@@ -143,11 +133,23 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
               }
               onPatch(patch);
             }}
-            className="w-4 h-4 rounded border-[var(--color-line)] text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
+            className="sr-only"
           />
+          <span
+            aria-hidden="true"
+            className={cn(
+              "grid h-6 w-6 shrink-0 place-items-center rounded-lg border-2",
+              data.guidance
+                ? "border-[var(--color-coral)] bg-[var(--color-coral)] text-white"
+                : "border-[var(--color-plum)]/20 bg-white",
+            )}
+          >
+            {data.guidance ? <Check className="h-3.5 w-3.5" /> : null}
+          </span>
+          <FirmenflowIcon name="beratung" size={34} decorative />
           <span className="text-sm text-[var(--color-muted)]">
             Ich bin noch unsicher und möchte{" "}
-            <span className="font-semibold text-[var(--color-ink)]">deine Empfehlung</span> – gemeinsam finden wir das Passende.
+            <span className="font-semibold text-[var(--color-ink)]">deine Empfehlung</span>. Gemeinsam finden wir das Passende.
           </span>
         </label>
       </div>
@@ -166,9 +168,9 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
                 <label
                   key={scope.value}
                   className={cn(
-                    "flex flex-col gap-1 p-4 rounded-xl border cursor-pointer transition-all",
+                    "relative flex cursor-pointer items-start gap-3 rounded-xl border p-4 transition-all",
                     isSelected
-                      ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 font-semibold text-[var(--color-ink)]"
+                      ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 text-[var(--color-ink)] shadow-sm"
                       : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
                   )}
                 >
@@ -178,17 +180,30 @@ export function ServicesStep({ data, errors, onPatch }: StepProps) {
                     value={scope.value}
                     checked={isSelected}
                     onChange={() => onPatch({ websiteScope: scope.value })}
-                    className="w-4 h-4 text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
+                    className="sr-only"
                   />
-                  <span className="text-sm">{scope.label}</span>
-                  <span className="text-xs font-normal text-[var(--color-muted)]">{scope.hint}</span>
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border-2",
+                      isSelected
+                        ? "border-[var(--color-coral)] bg-[var(--color-coral)] text-white"
+                        : "border-[var(--color-plum)]/20 bg-white",
+                    )}
+                  >
+                    {isSelected ? <Check className="h-3 w-3" /> : null}
+                  </span>
+                  <span className="space-y-1">
+                    <span className="block text-sm font-semibold">{scope.label}</span>
+                    <span className="block text-xs font-normal text-[var(--color-muted)]">{scope.hint}</span>
+                  </span>
                 </label>
               );
             })}
           </div>
           {errors.websiteScope && (
-            <p id="websiteScope-error" className="text-xs font-semibold text-rose-600 flex items-center gap-1" role="alert">
-              <span>⚠️</span>
+            <p id="websiteScope-error" className="text-xs font-semibold text-rose-700 flex items-center gap-2" role="alert">
+              <FirmenflowIcon name="warnung" size={22} decorative />
               <span>{errors.websiteScope}</span>
             </p>
           )}

@@ -1,5 +1,6 @@
 import type { InquiryDraft } from "@/features/inquiry/types";
 import { cn } from "@/lib/cn";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 type StepProps = {
   data: InquiryDraft;
@@ -10,8 +11,13 @@ type StepProps = {
 export function BusinessStep({ data, errors, onPatch }: StepProps) {
   return (
     <fieldset className="space-y-6">
-      <legend className="text-xl sm:text-2xl font-bold text-[var(--color-ink)] mb-2">
-        Erzähl kurz von deinem Betrieb
+      <legend className="mb-2 w-full text-xl font-bold text-[var(--color-ink)] sm:text-2xl">
+        <span className="flex items-center gap-3">
+          <span className="grid h-14 w-14 place-items-center rounded-2xl border border-[var(--color-plum)]/10 bg-[var(--color-plum)]/[0.04]">
+            <FirmenflowIcon name="unternehmensprofil" size={50} decorative />
+          </span>
+          <span>Erzähl kurz von deinem Betrieb</span>
+        </span>
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
         Damit ich mich gezielt auf deine Branche und Region vorbereiten kann.
@@ -31,7 +37,7 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
             onChange={(e) => onPatch({ businessName: e.target.value })}
             placeholder="z. B. Bäckerei Müller oder Schreinerei Schmidt"
             className={cn(
-              "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+              "w-full rounded-2xl border bg-[var(--color-paper)]/45 px-4 py-3.5 text-sm text-[var(--color-ink)] outline-none transition-all placeholder:text-[var(--color-muted)]/50 focus:bg-white focus:ring-4 sm:text-base",
               errors.businessName
                 ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
                 : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
@@ -39,8 +45,8 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
             aria-describedby={errors.businessName ? "businessName-error" : undefined}
           />
           {errors.businessName && (
-            <p id="businessName-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
-              <span>⚠️</span>
+            <p id="businessName-error" className="mt-1 flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+              <FirmenflowIcon name="warnung" size={22} decorative />
               <span>{errors.businessName}</span>
             </p>
           )}
@@ -61,7 +67,7 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
               onChange={(e) => onPatch({ industry: e.target.value })}
               placeholder="z. B. Handwerk, Gastronomie, Dienstleistung"
               className={cn(
-                "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+                "w-full rounded-2xl border bg-[var(--color-paper)]/45 px-4 py-3.5 text-sm text-[var(--color-ink)] outline-none transition-all placeholder:text-[var(--color-muted)]/50 focus:bg-white focus:ring-4 sm:text-base",
                 errors.industry
                   ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
                   : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
@@ -69,8 +75,8 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
               aria-describedby={errors.industry ? "industry-error" : undefined}
             />
             {errors.industry && (
-              <p id="industry-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
-                <span>⚠️</span>
+              <p id="industry-error" className="mt-1 flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+                <FirmenflowIcon name="warnung" size={22} decorative />
                 <span>{errors.industry}</span>
               </p>
             )}
@@ -89,7 +95,7 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
               onChange={(e) => onPatch({ place: e.target.value })}
               placeholder="z. B. Wesel, Dinslaken, Hamminkeln"
               className={cn(
-                "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+                "w-full rounded-2xl border bg-[var(--color-paper)]/45 px-4 py-3.5 text-sm text-[var(--color-ink)] outline-none transition-all placeholder:text-[var(--color-muted)]/50 focus:bg-white focus:ring-4 sm:text-base",
                 errors.place
                   ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
                   : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
@@ -97,8 +103,8 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
               aria-describedby={errors.place ? "place-error" : undefined}
             />
             {errors.place && (
-              <p id="place-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
-                <span>⚠️</span>
+              <p id="place-error" className="mt-1 flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+                <FirmenflowIcon name="warnung" size={22} decorative />
                 <span>{errors.place}</span>
               </p>
             )}
@@ -119,7 +125,7 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
             onChange={(e) => onPatch({ currentWebsite: e.target.value })}
             placeholder="z. B. deine-aktuelle-seite.de"
             className={cn(
-              "w-full px-4 py-3.5 rounded-xl border bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:ring-2 transition-all text-sm sm:text-base outline-none",
+              "w-full rounded-2xl border bg-[var(--color-paper)]/45 px-4 py-3.5 text-sm text-[var(--color-ink)] outline-none transition-all placeholder:text-[var(--color-muted)]/50 focus:bg-white focus:ring-4 sm:text-base",
               errors.currentWebsite
                 ? "border-rose-500 bg-rose-50/30 focus:border-rose-600 focus:ring-rose-200"
                 : "border-[var(--color-line)] focus:border-[var(--color-coral)] focus:ring-[var(--color-coral)]/20"
@@ -127,8 +133,8 @@ export function BusinessStep({ data, errors, onPatch }: StepProps) {
             aria-describedby={errors.currentWebsite ? "currentWebsite-error" : undefined}
           />
           {errors.currentWebsite && (
-            <p id="currentWebsite-error" className="text-xs font-semibold text-rose-600 mt-1 flex items-center gap-1" role="alert">
-              <span>⚠️</span>
+            <p id="currentWebsite-error" className="mt-1 flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+              <FirmenflowIcon name="warnung" size={22} decorative />
               <span>{errors.currentWebsite}</span>
             </p>
           )}

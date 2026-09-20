@@ -1,5 +1,6 @@
 import type { InquiryDraft } from "@/features/inquiry/types";
-import { cn } from "@/lib/cn";
+import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { InquiryChoiceCard } from "@/components/inquiry/InquiryChoiceCard";
 
 type StepProps = {
   data: InquiryDraft;
@@ -9,17 +10,17 @@ type StepProps = {
 
 // Ziele konditional: nur die Sätze zeigen, die zu den gewählten Leistungen passen
 const websiteGoals = [
-  { value: "more-inquiries", label: "Mehr passende Anfragen erhalten" },
-  { value: "professional-presentation", label: "Meinen Betrieb professioneller präsentieren" },
-  { value: "clear-offer", label: "Leistungen verständlicher erklären" },
-  { value: "easy-contact", label: "Kontaktaufnahme erleichtern" },
+  { value: "more-inquiries", label: "Mehr passende Anfragen erhalten", icon: "mehr-anfragen" },
+  { value: "professional-presentation", label: "Meinen Betrieb professioneller präsentieren", icon: "referenzen-portfolio" },
+  { value: "clear-offer", label: "Leistungen verständlicher erklären", icon: "texte-copywriting" },
+  { value: "easy-contact", label: "Kontaktaufnahme erleichtern", icon: "nachricht-senden" },
 ] as const;
 
 const lokalGoals = [
-  { value: "better-findability", label: "Bei Google und Maps besser auffindbar sein" },
-  { value: "profile-current", label: "Mein Profil aktuell halten" },
-  { value: "reviews-handled", label: "Bewertungen zuverlässig beantworten lassen" },
-  { value: "less-daytoday", label: "Im Alltag weniger selbst erledigen müssen" },
+  { value: "better-findability", label: "Bei Google und Maps besser auffindbar sein", icon: "unternehmensprofil" },
+  { value: "profile-current", label: "Mein Profil aktuell halten", icon: "profil-aufraeumen" },
+  { value: "reviews-handled", label: "Bewertungen zuverlässig beantworten lassen", icon: "bewertungen-beantworten" },
+  { value: "less-daytoday", label: "Im Alltag weniger selbst erledigen müssen", icon: "monatlich-kuendbar" },
 ] as const;
 
 export function GoalsStep({ data, errors, onPatch }: StepProps) {
@@ -40,8 +41,13 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
 
   return (
     <fieldset className="space-y-6">
-      <legend className="text-xl sm:text-2xl font-bold text-[var(--color-ink)] mb-2">
-        Was soll sich für deinen Betrieb verbessern?
+      <legend className="mb-2 w-full text-xl font-bold text-[var(--color-ink)] sm:text-2xl">
+        <span className="flex items-center gap-3">
+          <span className="grid h-14 w-14 place-items-center rounded-2xl border border-[var(--color-plum)]/10 bg-[var(--color-plum)]/[0.04]">
+            <FirmenflowIcon name="handlungsempfehlung" size={50} decorative />
+          </span>
+          <span>Was soll sich für deinen Betrieb verbessern?</span>
+        </span>
       </legend>
       <p className="text-sm text-[var(--color-muted)]">
         Wähle alles aus, was für dich im Vordergrund steht.
@@ -56,24 +62,22 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
       </p>
 
       {errors.goals && (
-        <p className="text-xs font-semibold text-rose-600" role="alert">
-          {errors.goals}
+        <p className="flex items-center gap-2 text-xs font-semibold text-rose-700" role="alert">
+          <FirmenflowIcon name="warnung" size={22} decorative />
+          <span>{errors.goals}</span>
         </p>
       )}
 
-      <div className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {options.map((opt) => {
           const isChecked = data.goals?.includes(opt.value);
 
           return (
-            <label
+            <InquiryChoiceCard
               key={opt.value}
-              className={cn(
-                "flex items-center gap-3.5 p-4 rounded-xl border cursor-pointer transition-all",
-                isChecked
-                  ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 text-[var(--color-ink)] font-medium"
-                  : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
-              )}
+              selected={Boolean(isChecked)}
+              title={opt.label}
+              icon={opt.icon}
             >
               <input
                 type="checkbox"
@@ -81,10 +85,10 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
                 value={opt.value}
                 checked={isChecked}
                 onChange={() => toggleGoal(opt.value)}
-                className="w-5 h-5 rounded border-[var(--color-line)] text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
+                className="sr-only"
+                aria-checked={Boolean(isChecked)}
               />
-              <span className="text-sm sm:text-base text-[var(--color-ink)]">{opt.label}</span>
-            </label>
+            </InquiryChoiceCard>
           );
         })}
       </div>
@@ -94,25 +98,21 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
         <p className="block text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
           Dabei wünsche ich mir Unterstützung <span className="text-[var(--color-muted)] font-normal">(optional)</span>
         </p>
-        <label
-          className={cn(
-            "flex items-center gap-3.5 p-4 rounded-xl border cursor-pointer transition-all",
-            data.supportPhotoVideo
-              ? "border-[var(--color-coral)] bg-[var(--color-coral)]/5 text-[var(--color-ink)] font-medium"
-              : "border-[var(--color-line)] bg-white hover:border-[var(--color-plum)]/30 text-[var(--color-muted)]"
-          )}
+        <InquiryChoiceCard
+          selected={data.supportPhotoVideo}
+          title="Fotos und Imagefilm"
+          description="Team, Räumlichkeiten und Betrieb authentisch zeigen"
+          icon="foto"
         >
           <input
             type="checkbox"
             name="supportPhotoVideo"
             checked={data.supportPhotoVideo}
             onChange={(e) => onPatch({ supportPhotoVideo: e.target.checked })}
-            className="w-5 h-5 rounded border-[var(--color-line)] text-[var(--color-coral)] focus:ring-[var(--color-coral)]"
+            className="sr-only"
+            aria-checked={data.supportPhotoVideo}
           />
-          <span className="text-sm sm:text-base text-[var(--color-ink)]">
-            Fotos & Imagefilm (Team, Räumlichkeiten & Betrieb)
-          </span>
-        </label>
+        </InquiryChoiceCard>
       </div>
 
       {/* Goal Details */}
@@ -127,7 +127,7 @@ export function GoalsStep({ data, errors, onPatch }: StepProps) {
           value={data.goalDetails}
           onChange={(e) => onPatch({ goalDetails: e.target.value })}
           placeholder="Erzähle mir kurz, was dir besonders am Herzen liegt..."
-          className="w-full px-4 py-3.5 rounded-xl border border-[var(--color-line)] bg-white text-[var(--color-ink)] placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-coral)] focus:ring-2 focus:ring-[var(--color-coral)]/20 transition-all text-sm sm:text-base outline-none resize-none"
+          className="w-full resize-none rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)]/45 px-4 py-3.5 text-sm text-[var(--color-ink)] outline-none transition-all placeholder:text-[var(--color-muted)]/50 focus:border-[var(--color-plum)] focus:bg-white focus:ring-4 focus:ring-[var(--color-coral)]/10 sm:text-base"
           aria-describedby={errors.goalDetails ? "goalDetails-error" : undefined}
         />
         {errors.goalDetails && (
