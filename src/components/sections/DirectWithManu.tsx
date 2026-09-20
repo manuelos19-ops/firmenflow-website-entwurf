@@ -11,7 +11,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
-const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto", "festpreis"];
+const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto"];
 
 const bentoItems = [
   {
@@ -27,13 +27,6 @@ const bentoItems = [
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
     iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
-  },
-  {
-    title: "Handschlagqualität",
-    desc: "Ein Wort gilt. Was wir besprechen, halte ich fest. Und du erreichst mich persönlich per Telefon oder WhatsApp, nicht über ein Ticketsystem.",
-    gradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
-    border: "border-emerald-500/30 hover:border-emerald-500",
-    iconBg: "bg-emerald-100 text-emerald-700",
   },
 ];
 
@@ -219,8 +212,8 @@ export function DirectWithManu() {
           </div>
         </div>
 
-        {/* 3 Clean, Grounded Bento Value Cards - Double-Bezel Architecture */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* 2 Clean, Grounded Bento Value Cards - Double-Bezel Architecture */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {bentoItems.map((item, index) => {
             return (
               <div

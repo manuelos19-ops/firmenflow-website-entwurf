@@ -92,6 +92,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                   alt={portraitAssets.hero.alt}
                   fill
                   priority
+                  fetchPriority="high"
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 340px"
                 />
@@ -158,6 +159,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 alt={portraitAssets.hero.alt}
                 fill
                 priority
+                fetchPriority="high"
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
