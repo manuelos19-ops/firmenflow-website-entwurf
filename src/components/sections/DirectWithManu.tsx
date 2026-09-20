@@ -244,16 +244,18 @@ export function DirectWithManu() {
                   />
 
                   <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-                    <FirmenflowIcon
-                      name={bentoIcons[index]}
-                      size={56}
-                      decorative
-                    />
-
-                    <div>
-                      <h3 className="text-xl font-bold text-[var(--color-ink)] mb-2 font-sans group-hover:text-[var(--color-coral)] transition-colors">
+                    <div className="flex items-center gap-4">
+                      <FirmenflowIcon
+                        name={bentoIcons[index]}
+                        size={56}
+                        decorative
+                      />
+                      <h3 className="text-xl font-bold text-[var(--color-ink)] font-sans group-hover:text-[var(--color-coral)] transition-colors">
                         {item.title}
                       </h3>
+                    </div>
+
+                    <div>
                       <p className="text-sm text-[var(--color-muted)] leading-relaxed">
                         {item.desc}
                       </p>

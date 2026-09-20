@@ -21,9 +21,9 @@ export function JsonLd() {
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Küferweg 2a",
-      addressLocality: "Pulheim",
-      postalCode: "50259",
+      streetAddress: "Rosenheimshof 8",
+      addressLocality: "Wesel",
+      postalCode: "46485",
       addressCountry: "DE",
     },
     areaServed: [
