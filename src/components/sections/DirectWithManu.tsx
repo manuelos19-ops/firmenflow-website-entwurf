@@ -7,7 +7,7 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
 import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
-import { BrandIcon } from "@/components/brand/BrandIcon";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
@@ -82,7 +82,6 @@ export function DirectWithManu() {
           {/* Text Left */}
           <div className="lg:col-span-6 xl:col-span-7 max-w-2xl">
             <div className="badge-eyebrow text-[var(--color-coral)] mb-6">
-              <BrandIcon className="w-4 h-3.5" />
               <span>Persönlich mit Manu</span>
             </div>
             
@@ -99,25 +98,12 @@ export function DirectWithManu() {
               Ich mag kurze Wege und Lösungen, die im Alltag funktionieren. Du hast meine Handynummer, und dein Projekt bleibt Chefsache.
             </p>
 
-            {/* Quick Trust Highlights - High-End Frosted Pills */}
-            <div className="flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <FirmenflowIcon name="telefon" size={20} decorative />
-                <span>Direkter Draht via WhatsApp &amp; Telefon</span>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)] shadow-sm">
-                <FirmenflowIcon name="persoenlicher-ansprechpartner" size={20} decorative />
-                <span>Ein Ansprechpartner, keine Hotline</span>
-              </div>
+            {/* Weiter zum Werdegang */}
+            <div className="mt-6">
+              <ButtonLink href="/ueber-manu" variant="secondary" size="default">
+                Weiter zu meinem Werdegang
+              </ButtonLink>
             </div>
-
-            <Link
-              href="/ueber-manu"
-              className="inline-flex items-center gap-2 mt-6 font-semibold text-[var(--color-plum)] hover:text-[var(--color-coral)] underline decoration-[var(--color-plum)]/25 underline-offset-4 hover:decoration-[var(--color-coral)] transition-colors"
-            >
-              Mehr über mich und meinen Werdegang
-              <ArrowUpRight className="w-4 h-4 shrink-0" />
-            </Link>
           </div>
 
           {/* Organic Floating Post-it / Polaroid Moodboard Canvas */}

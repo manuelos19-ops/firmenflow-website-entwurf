@@ -506,27 +506,6 @@ export function ProjectsShowcase() {
             </div>
           </div>
         </div>
-        {/* Statische, immer gerenderte Projektliste.
-            Die Karten und die Leiste darüber zeigen jeweils nur das aktive Projekt,
-            sodass serverseitig nur ein einziger interner Projektlink im HTML steht.
-            Diese Liste macht alle Projektseiten verlinkt und auffindbar. */}
-        <nav
-          aria-label="Alle Projekte"
-          className="max-w-3xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm"
-        >
-          <span className="text-[var(--color-muted)] font-medium">Alle Projekte im Detail:</span>
-          {allProjects.map((project, idx) => (
-            <span key={project.slug} className="inline-flex items-center gap-2">
-              {idx > 0 && <span className="text-[var(--color-line)]" aria-hidden="true">·</span>}
-              <Link
-                href={`/projekte/${project.slug}`}
-                className="font-semibold text-[var(--color-plum)] hover:text-[var(--color-coral)] underline decoration-[var(--color-plum)]/25 underline-offset-4 hover:decoration-[var(--color-coral)] transition-colors rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-coral)]"
-              >
-                {project.name}
-              </Link>
-            </span>
-          ))}
-        </nav>
       </Container>
     </section>
   );

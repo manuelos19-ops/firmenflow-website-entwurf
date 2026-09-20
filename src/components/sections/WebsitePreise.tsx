@@ -2,36 +2,59 @@ import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import type { FirmenflowIconName } from "@/content/firmenflow-icons";
 
-const modelle = [
+type Modell = {
+  id: "starter" | "sorglos" | "rundum";
+  kicker: string;
+  title: string;
+  price: string;
+  priceNote: string;
+  claim: string;
+  text: string;
+  points: readonly string[];
+  icons: readonly FirmenflowIconName[];
+  featured: boolean;
+};
+
+const modelle: readonly Modell[] = [
   {
     id: "starter",
-    kicker: "Modell 1 · Starter",
+    kicker: "Für den schnellen Start",
     title: "Onepager",
     price: "690 €",
     priceNote: "netto einmalig",
-    text: "Der schnelle Einstieg: eine Seite, die alles sagt. Aufbau, Texte und Bilder inklusive.",
+    claim: "Eine Seite, die alles sagt.",
+    text: "Ideal, wenn du neu startest oder deine alte Seite endlich ersetzen willst. Ich baue dir einen kompakten Auftritt, der auf dem Handy überzeugt – mit Texten, die nach dir klingen, und Bildern, die zu deinem Betrieb passen.",
+    points: ["Aufbau, Struktur und Design aus einer Hand", "Texte geschrieben, Bilder eingebunden", "In 1–2 Wochen live, ohne Baukasten-Look"],
+    icons: ["struktur-wireframe", "texte-copywriting", "go-live"],
     featured: false,
   },
   {
     id: "sorglos",
-    kicker: "Modell 2 · meine Empfehlung",
+    kicker: "Meine Empfehlung für volle Köpfe",
     title: "Sorglos-Partnerschaft",
     price: "690 €",
     priceNote: "netto einmalig + 39 €/Monat",
-    text: "Die Seite gehört dir, die Technik liegt bei mir. Du kümmerst dich um deinen Betrieb.",
+    claim: "Deine Seite gehört dir. Die Technik liegt bei mir.",
+    text: "Du kümmerst dich um deinen Betrieb, ich halte dir den Rücken frei: Hosting, Updates, Backups und 30 Minuten Änderungen im Monat. Eine kurze Nachricht genügt, ich setze um.",
+    points: ["Volles Eigentum an Design und Code", "Premium-Hosting, Technik und SSL inklusive", "Monatlich kündbar, kein Risiko"],
+    icons: ["code-uebergabe", "umsetzung-texte", "monatlich-kuendbar"],
     featured: true,
   },
   {
     id: "rundum",
-    kicker: "Modell 3 · komplett abgedeckt",
+    kicker: "Wenn alles aus einem Guss soll",
     title: "Rundum-Sorglos",
     price: "Absprache",
     priceNote: "Foto ab 350 € · Profil ab 99 €",
-    text: "Echte Fotos plus Google-Profil mit Betreuung. Umfang klären wir im Kennenlernen zum Festpreis.",
+    claim: "Website, Fotos und Google-Auftritt in einer Hand.",
+    text: "Ich komme zu dir, fotografiere Team und Betrieb und bringe parallel dein Google-Profil auf Stand. Den genauen Umfang klären wir im Kennenlernen – zum Festpreis, versprochen.",
+    points: ["Echte Fotos statt Stockbilder", "Google-Profil einrichten und betreuen", "Alles abgestimmt, ein Ansprechpartner"],
+    icons: ["foto", "mehr-bewertungen", "persoenlicher-ansprechpartner"],
     featured: false,
   },
-] as const;
+];
 
 export function WebsitePreise() {
   return (
@@ -52,43 +75,42 @@ export function WebsitePreise() {
             Deine Website ist kein Kostenfaktor, sondern ein digitaler Mitarbeiter, der rund um die Uhr für dich arbeitet. Drei transparente Modelle. Alle Preise netto.
           </p>
         </div>
-        <ol className="relative max-w-3xl mx-auto">
-          <span aria-hidden="true" className="absolute left-[27px] sm:left-[31px] top-4 bottom-4 w-px bg-[var(--color-line)]" />
-          {modelle.map((modell, index) => (
-            <li key={modell.id} className="relative flex gap-4 sm:gap-6 pb-8 last:pb-0">
-              <span
-                aria-hidden="true"
-                className={"relative z-10 mt-1 flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border-2 shadow-md " + (modell.featured ? "border-[var(--color-coral)] bg-[var(--color-plum)] text-white" : "border-[var(--color-line)] bg-white")}
-              >
-                <FirmenflowIcon
-                  name={modell.id === "starter" ? "neue-website" : modell.id === "sorglos" ? "monatlich-kuendbar" : "angebot"}
-                  size={32}
-                  decorative
-                />
-                <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-coral)] text-[11px] font-bold text-white shadow">
-                  {index + 1}
-                </span>
-              </span>
-              <div
-                className={"flex-1 rounded-3xl border-2 p-6 sm:p-8 shadow-md space-y-3 " + (modell.featured ? "border-[var(--color-plum)] bg-[var(--color-plum)] text-white shadow-2xl" : "border-[var(--color-line)] bg-white")}
-              >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+          {modelle.map((modell) => (
+            <article
+              key={modell.id}
+              className={"flex flex-col rounded-[2rem] border-2 p-7 sm:p-8 shadow-md space-y-5 " + (modell.featured ? "border-[var(--color-plum)] bg-[var(--color-plum)] text-white shadow-2xl relative overflow-hidden lg:-my-3 lg:py-11" : "border-[var(--color-line)] bg-white")}
+            >
+              {modell.featured ? <div aria-hidden="true" className="absolute -top-20 -right-20 w-52 h-52 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" /> : null}
+              <div className="relative z-10 flex flex-col space-y-5 h-full">
                 <p className={"text-xs font-mono font-bold uppercase tracking-wider " + (modell.featured ? "text-[var(--color-coral)]" : "text-[var(--color-muted)]")}>
                   {modell.kicker}
                 </p>
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="text-xl sm:text-2xl font-bold">{modell.title}</h3>
-                  <p>
-                    <span className="text-3xl sm:text-4xl font-display font-bold">{modell.price}</span>{" "}
-                    <span className={"text-xs " + (modell.featured ? "text-white/70" : "text-[var(--color-muted)]")}>{modell.priceNote}</span>
+                <div>
+                  <h3 className="text-2xl font-bold">{modell.title}</h3>
+                  <p className={"font-editorial italic text-lg leading-snug mt-1 " + (modell.featured ? "text-white/85" : "text-[var(--color-plum)]")}>
+                    {modell.claim}
                   </p>
                 </div>
+                <p>
+                  <span className="text-4xl sm:text-5xl font-display font-bold">{modell.price}</span>{" "}
+                  <span className={"text-xs " + (modell.featured ? "text-white/70" : "text-[var(--color-muted)]")}>{modell.priceNote}</span>
+                </p>
                 <p className={"text-sm leading-relaxed " + (modell.featured ? "text-white/85" : "text-[var(--color-muted)]")}>
                   {modell.text}
                 </p>
+                <ul className="space-y-2.5 pt-1">
+                  {modell.points.map((punkt, i) => (
+                    <li key={punkt} className="flex items-start gap-2.5 text-sm leading-snug">
+                      <FirmenflowIcon name={modell.icons[i]} size={22} decorative className="mt-0.5 shrink-0" />
+                      <span className={modell.featured ? "text-white/90" : "text-[var(--color-ink)]/85"}>{punkt}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </li>
+            </article>
           ))}
-        </ol>
+        </div>
         <div className="max-w-3xl mx-auto mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
           <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" subline="Unverbindlich \u00b7 klarer nächster Schritt">
             Projekt mit mir besprechen
