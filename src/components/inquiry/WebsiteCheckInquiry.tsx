@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { 
   ArrowRight, 
-  Loader2, 
   Globe, 
   User, 
   Mail, 
@@ -11,8 +10,8 @@ import {
 } from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
 import { siteIdentity } from "@/config/site";
-import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { trackVideoAuditSubmit, trackMeetergoClick } from "@/lib/track-inquiry";
 
 interface WebsiteCheckInquiryProps {
@@ -252,24 +251,17 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
 
           {/* Submit Action */}
           <div className="pt-2 space-y-4">
-            <button
+            <FirmenflowButton
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 px-8 rounded-2xl font-bold text-base sm:text-lg text-white bg-[var(--color-coral)] hover:bg-[#e44d39] shadow-xl shadow-[var(--color-coral)]/25 hover:shadow-2xl hover:shadow-[var(--color-coral)]/30 transition-all flex items-center justify-center gap-3 cursor-pointer group active:scale-[0.99]"
+              buttonIcon="video-einschaetzung"
+              size="compact"
+              subline={isSubmitting ? "Bitte kurz warten" : "3–5 Minuten · per E-Mail"}
+              label={isSubmitting ? "Video-Anfrage wird verarbeitet" : "Kostenlose Video-Einschätzung anfordern"}
+              className="w-full"
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                  <span>Wird verarbeitet...</span>
-                </>
-              ) : (
-                <>
-                  <BrandIcon size="sm" variant="light" className="shrink-0" />
-                  <span>Kostenlose Video-Einschätzung anfordern</span>
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </>
-              )}
-            </button>
+              {isSubmitting ? "Wird verarbeitet …" : "Kostenlose Video-Einschätzung anfordern"}
+            </FirmenflowButton>
           </div>
         </form>
       ) : (

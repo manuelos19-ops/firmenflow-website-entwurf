@@ -127,6 +127,12 @@
   transform: translateY(1px) scale(0.99);
 }
 
+.ff-btn:disabled {
+  cursor: wait;
+  opacity: 0.62;
+  transform: none;
+}
+
 .ff-btn:focus-visible {
   outline: 3px solid var(--color-coral);
   outline-offset: 4px;

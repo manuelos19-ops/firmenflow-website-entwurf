@@ -42,6 +42,8 @@ type FirmenflowButtonProps = {
   label?: string;
   ariaExpanded?: boolean;
   ariaControls?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 };
 
 export function FirmenflowButton({
@@ -57,6 +59,8 @@ export function FirmenflowButton({
   label,
   ariaExpanded,
   ariaControls,
+  type = "button",
+  disabled = false,
 }: FirmenflowButtonProps) {
   const ariaLabel = label ?? (typeof children === "string" ? children : undefined);
   const classes = cn("ff-btn", size === "compact" && "ff-btn--compact", className);
@@ -135,7 +139,8 @@ export function FirmenflowButton({
 
   return (
     <button
-      type="button"
+      type={type}
+      disabled={disabled}
       className={classes}
       style={style}
       onClick={onClick}
