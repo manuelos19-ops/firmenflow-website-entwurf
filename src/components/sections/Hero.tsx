@@ -75,10 +75,10 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 href={resolvedWhatsappUrl}
                 external
                 buttonIcon="whatsapp"
-                subline="Kurz und unkompliziert"
+                subline="WhatsApp · kurz und unkompliziert"
                 hideArrow
               >
-                Mir schreiben
+                WhatsApp schreiben
               </FirmenflowButton>
             </div>
           </div>
