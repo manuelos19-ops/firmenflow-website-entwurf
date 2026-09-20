@@ -82,26 +82,26 @@ export function WebsitePreise() {
               className={"flex flex-col rounded-[2rem] border-2 p-7 sm:p-8 shadow-md space-y-5 " + (modell.featured ? "border-[var(--color-plum)] bg-[var(--color-plum)] text-white shadow-2xl relative overflow-hidden lg:-my-3 lg:py-11" : "border-[var(--color-line)] bg-white")}
             >
               {modell.featured ? <div aria-hidden="true" className="absolute -top-20 -right-20 w-52 h-52 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" /> : null}
-              <div className="relative z-10 flex flex-col space-y-5 h-full">
+              <div className="relative z-10 flex flex-col h-full">
                 <p className={"text-xs font-mono font-bold uppercase tracking-wider " + (modell.featured ? "text-[var(--color-coral)]" : "text-[var(--color-muted)]")}>
                   {modell.kicker}
                 </p>
-                <div>
+                <div className="mt-4">
                   <h3 className="text-2xl font-bold">{modell.title}</h3>
                   <p className={"font-editorial italic text-lg leading-snug mt-1 min-h-[3.5rem] " + (modell.featured ? "text-white/85" : "text-[var(--color-plum)]")}>
                     {modell.claim}
                   </p>
                 </div>
-                <p>
+                <p className="mt-4">
                   <span className="block text-4xl sm:text-5xl font-display font-bold leading-none">{modell.price}</span>
                   <span className={"mt-1 block text-xs font-semibold " + (modell.featured ? "text-white/70" : "text-[var(--color-muted)]")}>{modell.priceNote}</span>
                 </p>
-                <p className={"text-sm leading-relaxed " + (modell.featured ? "text-white/85" : "text-[var(--color-muted)]")}>
+                <p className={"mt-4 text-sm leading-relaxed min-h-[7rem] " + (modell.featured ? "text-white/85" : "text-[var(--color-muted)]")}>
                   {modell.text}
                 </p>
-                <ul className="space-y-2.5 pt-1">
+                <ul className="mt-4 space-y-2.5 pt-1">
                   {modell.points.map((punkt, i) => (
-                    <li key={punkt} className="flex items-start gap-2.5 text-sm leading-snug">
+                    <li key={punkt} className="flex items-start gap-2.5 text-sm leading-snug min-h-[2.5rem]">
                       <FirmenflowIcon name={modell.icons[i]} size={22} decorative className="mt-0.5 shrink-0" />
                       <span className={modell.featured ? "text-white/90" : "text-[var(--color-ink)]/85"}>{punkt}</span>
                     </li>
