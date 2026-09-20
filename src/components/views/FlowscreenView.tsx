@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { MagneticButton } from "@/components/effects/MagneticButton";
+import { FlowscreenCompareCards } from "@/components/flowscreen/FlowscreenCompareCards";
 import { FlowscreenDownloadButton } from "@/components/flowscreen/FlowscreenDownloadButton";
 import { FlowscreenStickyCta } from "@/components/flowscreen/FlowscreenStickyCta";
 import { FlowscreenTrustSection } from "@/components/flowscreen/FlowscreenTrustSection";
@@ -379,136 +380,7 @@ export function FlowscreenView() {
             </p>
           </div>
 
-          <div className="overflow-x-auto md:overflow-visible">
-            <div className="min-w-[720px] md:min-w-0 rounded-3xl border border-[var(--color-line)] bg-white shadow-sm overflow-hidden">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-[var(--color-line)] bg-stone-50/70 text-xs sm:text-sm font-semibold text-[var(--color-ink)]">
-                    <th className="py-4 px-6 w-1/3">Funktion / Kriterium</th>
-                    <th className="py-4 px-4 w-1/5 text-center text-[var(--color-muted)]">
-                      Windows Snipping Tool
-                    </th>
-                    <th className="py-4 px-4 w-1/5 text-center text-[var(--color-muted)]">ShareX</th>
-                    <th className="py-4 px-6 w-1/4 text-center bg-[var(--color-plum)]/5 text-[var(--color-plum)] font-bold">
-                      <span className="inline-flex items-center justify-center gap-2">
-                        <FlowscreenIcon name="app-icon-512" size={28} alt="FlowScreen App-Icon" />
-                        FlowScreen
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[var(--color-line)] text-xs sm:text-sm">
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      Canvas-Mockups &amp; Farbverläufe
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Macht Screenshots repräsentativ für Kunden
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-rose-500">
-                      <X className="w-5 h-5 mx-auto" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-rose-500">
-                      <X className="w-5 h-5 mx-auto" />
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
-                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      Automatischer Schrittzähler (1, 2, 3...)
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Für Schritt-für-Schritt-Anleitungen &amp; Bugreports
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-rose-500">
-                      <X className="w-5 h-5 mx-auto" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-amber-500 text-xs">
-                      Kompliziert
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
-                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      DSGVO-Zensur (Pixel-Blur &amp; Balken)
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Kundendaten &amp; Passwörter unkenntlich machen
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-rose-500">
-                      <X className="w-5 h-5 mx-auto" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-emerald-600">
-                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
-                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      Bedienung ohne Einarbeitung
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Sofort starten statt lange konfigurieren
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-emerald-600">
-                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-rose-500">
-                      <X className="w-5 h-5 mx-auto" />
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
-                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      100 % lokal (kein Cloud-Zwang)
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Screenshots verlassen deinen PC nicht
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-emerald-600">
-                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-amber-500 text-xs">
-                      Je nach Config
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-emerald-600 font-bold">
-                      <Check className="w-6 h-6 mx-auto text-emerald-600" />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td className="py-4 px-6 font-semibold text-[var(--color-ink)]">
-                      Kostenlose Vollversion &amp; Updates
-                      <span className="block text-xs font-normal text-[var(--color-muted)]">
-                        Kein Camtasia-Abo (ca. 40 €/Jahr) wie für Snagit nötig
-                      </span>
-                    </td>
-                    <td className="py-4 px-4 text-center text-emerald-600">
-                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
-                    </td>
-                    <td className="py-4 px-4 text-center text-emerald-600">
-                      <Check className="w-5 h-5 mx-auto text-emerald-600" />
-                    </td>
-                    <td className="py-4 px-6 text-center bg-[var(--color-plum)]/5 text-[var(--color-coral)] font-bold">
-                      Kostenlos (v{FLOWSCREEN_VERSION})
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <FlowscreenCompareCards />
         </div>
 
         {/* BENTO FEATURE GRID */}
