@@ -88,7 +88,7 @@ export function WebsitePreise() {
                 </p>
                 <div>
                   <h3 className="text-2xl font-bold">{modell.title}</h3>
-                  <p className={"font-editorial italic text-lg leading-snug mt-1 " + (modell.featured ? "text-white/85" : "text-[var(--color-plum)]")}>
+                  <p className={"font-editorial italic text-lg leading-snug mt-1 min-h-[3.5rem] " + (modell.featured ? "text-white/85" : "text-[var(--color-plum)]")}>
                     {modell.claim}
                   </p>
                 </div>
@@ -112,7 +112,7 @@ export function WebsitePreise() {
           ))}
         </div>
         <div className="max-w-3xl mx-auto mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
-          <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" subline="Unverbindlich \u00b7 klarer nächster Schritt">
+          <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" subline="Unverbindlich · klarer nächster Schritt">
             Projekt mit mir besprechen
           </FirmenflowButton>
           <ButtonLink href="/lokalpraesenz-360" variant="secondary" size="default">
