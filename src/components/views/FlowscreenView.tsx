@@ -85,7 +85,7 @@ export function FlowscreenView() {
   return (
     <main id="main" className="pt-28 sm:pt-36 pb-28 overflow-hidden bg-[var(--color-paper)]">
       <Container className="space-y-24 sm:space-y-36">
-        {/* Navigation & Status Badge */}
+        {/* Navigation */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--color-line)] pb-5">
           <Link
             href="/"
@@ -94,24 +94,6 @@ export function FlowscreenView() {
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             <span>Zurück zur Firmenflow Startseite</span>
           </Link>
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-3 py-1 rounded-full border border-[var(--color-coral)]/20">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
-              Windows 11 &amp; 10 · v{FLOWSCREEN_VERSION}
-            </span>
-          </div>
-{/* Creator Badge - Personal connection */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--color-line)]/50 text-xs font-semibold text-[var(--color-ink)] shadow-sm mb-6">
-            <Image
-              src={brandAssets.markLight}
-              alt="Firmenflow Markenzeichen"
-              width={24}
-              height={24}
-              className="w-6 h-6"
-            />
-            <span className="text-[var(--color-coral)] font-bold">vom Inhaber Manu</span>
-            <span className="text-[var(--color-muted)]">· FlowScreen {FLOWSCREEN_VERSION}</span>
-          </div>
         </div>
 
         {/* HERO SECTION */}
