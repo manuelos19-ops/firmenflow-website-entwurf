@@ -217,10 +217,10 @@ export function FlowscreenView() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-gradient-to-br from-slate-900 to-slate-800">
                 <Image
-                  src="/media/flowscreen/editor-preview.png"
+                  src="/media/flowscreen/flowscreen-mockup.webp"
                   alt="FlowScreen Benutzeroberfläche und Mockup-Editor"
-                  width={1400}
-                  height={880}
+                  width={2536}
+                  height={1520}
                   priority
                   className="w-full h-auto object-cover"
                 />

@@ -43,7 +43,7 @@ export const ASSET_PATHS = {
   firmenflowWordmark: "public/brand/firmenflow-wordmark.png",
   manuPortrait: "public/media/manu-hero.webp",
   flowscreenLogo: "public/media/flowscreen/flowscreen-logo.png",
-  flowscreenEditor: "public/media/flowscreen/editor-preview.png",
+  flowscreenEditor: "public/media/flowscreen/flowscreen-mockup.webp",
   displayFont: "public/fonts/space-grotesk/SpaceGrotesk-Variable.woff2",
   sansFont: "public/fonts/switzer/Switzer-Variable.woff2",
   serifFont: "public/fonts/crimson/CrimsonText-Italic.woff2",
