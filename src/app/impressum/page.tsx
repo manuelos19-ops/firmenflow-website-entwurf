@@ -94,17 +94,9 @@ export default function ImpressumPage() {
           </section>
 
           <section className="space-y-3 pt-6 border-t border-[var(--color-line)] text-xs text-[var(--color-muted)]">
+            <h2 className="text-sm font-bold text-[var(--color-ink)]">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
             <p>
-              EU-Streitschlichtung: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
-              <a
-                href="https://ec.europa.eu/consumers/odr/"
-                target="_blank"
-                rel="noreferrer"
-                className="underline hover:text-[var(--color-ink)]"
-              >
-                https://ec.europa.eu/consumers/odr/
-              </a>
-              . Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+              Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </section>
         </div>
