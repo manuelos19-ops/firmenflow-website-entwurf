@@ -1,14 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { MagneticButton } from "@/components/effects/MagneticButton";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Container } from "@/components/ui/Container";
 import { portraitAssets } from "@/content/assets";
 import { homeContent } from "@/content/site";
-import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 interface HeroProps {
   whatsappUrl: string | null;
@@ -66,6 +62,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
               <FirmenflowButton
                 href={hero.phoneTel}
                 buttonIcon="anrufen"
+                size="compact"
                 subline="Lass uns kurz sprechen"
                 hideArrow
               >
@@ -75,10 +72,11 @@ export function Hero({ whatsappUrl }: HeroProps) {
                 href={resolvedWhatsappUrl}
                 external
                 buttonIcon="whatsapp"
+                size="compact"
                 subline="Schnell & einfach"
                 hideArrow
               >
-                WhatsApp schreiben
+                Mir per WhatsApp schreiben
               </FirmenflowButton>
             </div>
           </div>

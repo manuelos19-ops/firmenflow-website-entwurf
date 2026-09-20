@@ -2,18 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { liveProjects, conceptProjects, type Project } from "@/content/projects";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import {
   ChevronLeft,
   ChevronRight,
   Pause,
-  Play,
-  ArrowRight
+  Play
 } from "@/components/brand/FirmenflowUiIcon";
 
 export function ProjectsShowcase() {
@@ -466,41 +465,43 @@ export function ProjectsShowcase() {
             <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
               {activeProject.kind === "live" ? (
                 <>
-                  <Link
+                  <FirmenflowButton
                     href={`/projekte/${activeProject.slug}`}
-                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
+                    buttonIcon="details"
+                    size="compact"
+                    className="w-full sm:w-auto"
                   >
-                    <span>Umsetzung im Detail</span>
-                    <ArrowRight className="w-4 h-4 text-white shrink-0" />
-                  </Link>
-                  <a
+                    Umsetzung im Detail
+                  </FirmenflowButton>
+                  <FirmenflowButton
                     href={activeProject.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+                    external
+                    buttonIcon="live-website"
+                    size="compact"
+                    className="w-full sm:w-auto"
                   >
-                    <span>Live-Website</span>
-                    <FirmenflowIcon name="externer-link" size={20} decorative />
-                  </a>
+                    Live-Website
+                  </FirmenflowButton>
                 </>
               ) : (
                 <>
-                  <Link
+                  <FirmenflowButton
                     href={`/projekte/${activeProject.slug}`}
-                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[var(--color-coral)]/25 active:scale-95 cursor-pointer text-center"
+                    buttonIcon="details"
+                    size="compact"
+                    className="w-full sm:w-auto"
                   >
-                    <span>Konzept im Detail</span>
-                    <ArrowRight className="w-4 h-4 text-white shrink-0" />
-                  </Link>
-                  <a
+                    Konzept im Detail
+                  </FirmenflowButton>
+                  <FirmenflowButton
                     href={activeProject.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-xs transition-all shadow-sm active:scale-95 cursor-pointer text-center"
+                    external
+                    buttonIcon="live-website"
+                    size="compact"
+                    className="w-full sm:w-auto"
                   >
-                    <span>Live-Demo</span>
-                    <FirmenflowIcon name="externer-link" size={20} decorative />
-                  </a>
+                    Live-Demo
+                  </FirmenflowButton>
                 </>
               )}
             </div>

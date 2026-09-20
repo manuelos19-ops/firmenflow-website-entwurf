@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { FirmenflowIconName } from "@/content/firmenflow-icons";
@@ -115,9 +114,13 @@ export function WebsitePreise() {
           <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" subline="Unverbindlich · klarer nächster Schritt">
             Projekt mit mir besprechen
           </FirmenflowButton>
-          <ButtonLink href="/lokalpraesenz-360" variant="secondary" size="default">
+          <FirmenflowButton
+            href="/lokalpraesenz-360"
+            buttonIcon="lokalpraesenz"
+            size="compact"
+          >
             Lokalpräsenz 360° ansehen
-          </ButtonLink>
+          </FirmenflowButton>
         </div>
       </Container>
     </section>

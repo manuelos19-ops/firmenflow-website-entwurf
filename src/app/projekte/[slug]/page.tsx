@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { Container } from "@/components/ui/Container";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { allProjects, getProject } from "@/content/projects";
@@ -254,13 +254,23 @@ export default async function ProjectPage({
 
           {/* Action CTAs */}
           <div className="pt-8 border-t border-[var(--color-line)] flex flex-col sm:flex-row gap-4">
-            <ButtonLink href={project.url} external variant="primary" size="lg" className="flex items-center justify-center gap-2">
-              <FirmenflowIcon name="externer-link" size={24} decorative />
-              <span>{project.kind === "live" ? "Live-Website ansehen" : "Live-Demo ansehen"}</span>
-            </ButtonLink>
-            <ButtonLink href="/#kontakt" variant="secondary" size="lg" className="flex items-center justify-center gap-2">
-              <span>Eigenes Projekt besprechen</span>
-            </ButtonLink>
+            <FirmenflowButton
+              href={project.url}
+              external
+              buttonIcon="live-website"
+              subline="Öffnet in einem neuen Tab"
+              className="w-full sm:w-auto"
+            >
+              {project.kind === "live" ? "Live-Website ansehen" : "Live-Demo ansehen"}
+            </FirmenflowButton>
+            <FirmenflowButton
+              href="/#kontakt"
+              buttonIcon="projekt-besprechen"
+              subline="Unverbindlich mit mir"
+              className="w-full sm:w-auto"
+            >
+              Eigenes Projekt besprechen
+            </FirmenflowButton>
           </div>
         </div>
       </Container>

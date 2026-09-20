@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { portraitAssets } from "@/content/assets";
@@ -298,12 +298,21 @@ export default function UeberManuPage() {
             und wenn nicht, auch das.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <ButtonLink href="/#projektanfrage" variant="primary" size="lg">
+            <FirmenflowButton
+              href="/#projektanfrage"
+              buttonIcon="projekt-besprechen"
+              subline="Persönlich mit mir"
+            >
               Unverbindlich anfragen
-            </ButtonLink>
-            <ButtonLink href={whatsappUrl} external variant="whatsapp" size="lg">
-              WhatsApp an Manu
-            </ButtonLink>
+            </FirmenflowButton>
+            <FirmenflowButton
+              href={whatsappUrl}
+              external
+              buttonIcon="whatsapp"
+              subline="Direkter Chat mit mir"
+            >
+              Mir per WhatsApp schreiben
+            </FirmenflowButton>
           </div>
         </section>
       </Container>

@@ -37,6 +37,7 @@ type FirmenflowButtonProps = {
   className?: string;
   style?: CSSProperties;
   buttonIcon?: FirmenflowButtonIcon;
+  size?: "default" | "compact";
   subline?: string;
   label?: string;
   hideArrow?: boolean;
@@ -50,11 +51,14 @@ export function FirmenflowButton({
   className,
   style,
   buttonIcon = "projekt-besprechen",
+  size = "default",
   subline,
   label,
   hideArrow = false,
 }: FirmenflowButtonProps) {
   const ariaLabel = label ?? (typeof children === "string" ? children : undefined);
+  const classes = cn("ff-btn", size === "compact" && "ff-btn--compact", className);
+  const imageSize = size === "compact" ? "36px" : "48px";
 
   const inner = (
     <span className="ff-btn-core">
@@ -64,7 +68,7 @@ export function FirmenflowButton({
           alt=""
           width={96}
           height={96}
-          sizes="48px"
+          sizes={imageSize}
           className="ff-btn-icon-img"
         />
       </span>
@@ -79,7 +83,7 @@ export function FirmenflowButton({
             alt=""
             width={96}
             height={96}
-            sizes="48px"
+            sizes={imageSize}
             className="ff-btn-action-img"
           />
         </span>
@@ -102,7 +106,7 @@ export function FirmenflowButton({
       return (
         <a
           href={href}
-          className={cn("ff-btn", className)}
+          className={classes}
           style={style}
           onClick={handleHashClick}
           aria-label={ariaLabel}
@@ -117,7 +121,7 @@ export function FirmenflowButton({
           href={href}
           target="_blank"
           rel="noreferrer"
-          className={cn("ff-btn", className)}
+          className={classes}
           style={style}
           onClick={onClick}
           aria-label={ariaLabel}
@@ -129,7 +133,7 @@ export function FirmenflowButton({
     return (
       <Link
         href={href}
-        className={cn("ff-btn", className)}
+        className={classes}
         style={style}
         onClick={onClick}
         aria-label={ariaLabel}
@@ -140,7 +144,7 @@ export function FirmenflowButton({
   }
 
   return (
-    <button type="button" className={cn("ff-btn", className)} style={style} onClick={onClick} aria-label={ariaLabel}>
+    <button type="button" className={classes} style={style} onClick={onClick} aria-label={ariaLabel}>
       {inner}
     </button>
   );

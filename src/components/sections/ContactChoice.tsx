@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { siteIdentity } from "@/config/site";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { ProjectInquiry } from "@/components/inquiry/ProjectInquiry";
 import { WebsiteCheckInquiry } from "@/components/inquiry/WebsiteCheckInquiry";
-import { ArrowRight, ChevronDown } from "@/components/brand/FirmenflowUiIcon";
+import { ChevronDown } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { trackMeetergoClick, trackWhatsAppClick } from "@/lib/track-inquiry";
@@ -117,37 +117,39 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     Ruf mich an, sichere dir einen freien 30-Minuten-Termin in meinem Kalender oder schreib mir unkompliziert per WhatsApp.
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                  <a
+                <div className="grid grid-cols-1 gap-2.5 pt-1 sm:grid-cols-3 md:grid-cols-1 xl:grid-cols-3">
+                  <FirmenflowButton
                     href="tel:015567277155"
-                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/20 text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                    buttonIcon="anrufen"
+                    size="compact"
+                    subline="Ohne Termin"
+                    className="w-full"
                   >
-                    <FirmenflowIcon name="telefon" size={16} decorative className="shrink-0" />
-                    <span>Anrufen</span>
-                  </a>
-                  <a
+                    Mich anrufen
+                  </FirmenflowButton>
+                  <FirmenflowButton
                     href={siteIdentity.meetergoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    external
+                    buttonIcon="kennenlernen"
+                    size="compact"
+                    subline="30 Minuten mit mir"
                     onClick={() => trackMeetergoClick("contact_section")}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[var(--color-coral)] hover:bg-[#e44d39] !text-white text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
-                    style={{ color: "#ffffff" }}
+                    className="w-full"
                   >
-                    <FirmenflowIcon name="termin" size={16} decorative />
-                    <span className="!text-white text-white">30 Min. Call</span>
-                    <ArrowRight className="w-3 h-3 text-white" />
-                  </a>
+                    Kostenlos kennenlernen
+                  </FirmenflowButton>
                   {whatsappUrl && (
-                    <a
+                    <FirmenflowButton
                       href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      external
+                      buttonIcon="whatsapp"
+                      size="compact"
+                      subline="Direkter Chat mit mir"
                       onClick={() => trackWhatsAppClick("contact_section")}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                      className="w-full"
                     >
-                      <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
-                      <span>WhatsApp</span>
-                    </a>
+                      Mir per WhatsApp schreiben
+                    </FirmenflowButton>
                   )}
                 </div>
               </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
@@ -223,8 +223,12 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <h2 className="text-2xl sm:text-3xl font-display font-bold">Lieber direkt umsetzen als lesen?</h2>
           <p className="text-white/85 max-w-xl mx-auto">Erzähl mir kurz, wo dein Betrieb steht. Ich sage dir ehrlich, was sich lohnt.</p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <ButtonLink href="/anfrage" variant="primary" size="lg">Projekt anfragen</ButtonLink>
-            <ButtonLink href="/lokalpraesenz-360" variant="secondary" size="lg">Lokalpräsenz 360° ansehen</ButtonLink>
+            <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" size="compact">
+              Projekt anfragen
+            </FirmenflowButton>
+            <FirmenflowButton href="/lokalpraesenz-360" buttonIcon="lokalpraesenz" size="compact">
+              Lokalpräsenz 360° ansehen
+            </FirmenflowButton>
           </div>
         </section>
       </Container>

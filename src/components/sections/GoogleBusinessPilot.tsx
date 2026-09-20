@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { homeContent } from "@/content/site";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { MagneticButton } from "@/components/effects/MagneticButton";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
 export function GoogleBusinessPilot() {
@@ -215,25 +214,20 @@ export function GoogleBusinessPilot() {
         {/* CTA & More Info Link */}
         <div className="flex flex-col items-center space-y-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <MagneticButton>
-              <ButtonLink 
-                href="#projektanfrage" 
-                variant="primary"
-                size="lg"
-                className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-7 py-3.5"
-              >
-                {homeContent.pilot.cta}
-              </ButtonLink>
-            </MagneticButton>
-
-            <ButtonLink
-              href="/lokalpraesenz-360"
-              variant="ghost"
-              size="lg"
-              className="text-white hover:text-[var(--color-coral)] hover:bg-white/10 text-sm sm:text-base border border-white/20 px-6 py-3.5"
+            <FirmenflowButton
+              href="#projektanfrage"
+              buttonIcon="lokalpraesenz"
             >
-              <span>Alle Details ansehen</span>
-            </ButtonLink>
+              {homeContent.pilot.cta}
+            </FirmenflowButton>
+
+            <FirmenflowButton
+              href="/lokalpraesenz-360"
+              buttonIcon="details"
+              size="compact"
+            >
+              Alle Details ansehen
+            </FirmenflowButton>
           </div>
           
           <p className="text-xs text-white/50 max-w-xl text-center leading-relaxed">

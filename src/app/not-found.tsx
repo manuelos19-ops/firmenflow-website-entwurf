@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { Container } from "@/components/ui/Container";
 
 export default function NotFound() {
@@ -19,12 +19,12 @@ export default function NotFound() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <ButtonLink href="/" variant="primary" size="lg">
+          <FirmenflowButton href="/" buttonIcon="navigation" size="compact">
             Zur Startseite
-          </ButtonLink>
-          <ButtonLink href="/#projektanfrage" variant="secondary" size="lg">
+          </FirmenflowButton>
+          <FirmenflowButton href="/#projektanfrage" buttonIcon="projekt-besprechen" size="compact">
             Projekt anfragen
-          </ButtonLink>
+          </FirmenflowButton>
         </div>
       </Container>
     </main>

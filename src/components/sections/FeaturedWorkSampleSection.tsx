@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
-import { ArrowRight } from "@/components/brand/FirmenflowUiIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 
 export function FeaturedWorkSampleSection() {
   return (
@@ -99,22 +98,21 @@ export function FeaturedWorkSampleSection() {
 
                 {/* CTAs */}
                 <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <Link
+                  <FirmenflowButton
                     href="/projekte/eiscafe-orrico"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[var(--color-coral)] hover:bg-[var(--color-coral-hover)] text-white font-bold text-sm shadow-md transition-all active:scale-95 text-center"
+                    buttonIcon="details"
+                    size="compact"
                   >
-                    <span>Umsetzung im Detail</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <a
+                    Umsetzung im Detail
+                  </FirmenflowButton>
+                  <FirmenflowButton
                     href="https://eiscafe-orrico.de/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[var(--color-line)] bg-[var(--color-paper)] hover:bg-white text-[var(--color-ink)] font-semibold text-sm transition-all shadow-sm active:scale-95 text-center"
+                    external
+                    buttonIcon="live-website"
+                    size="compact"
                   >
-                    <span>Live-Website öffnen</span>
-                    <FirmenflowIcon name="externer-link" size={16} decorative />
-                  </a>
+                    Live-Website öffnen
+                  </FirmenflowButton>
                 </div>
               </div>
 

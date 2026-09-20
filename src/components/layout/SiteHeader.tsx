@@ -3,10 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "@/components/brand/BrandMark";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { Container } from "@/components/ui/Container";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { cn } from "@/lib/cn";
-import { ArrowUpRight, MessageCircle } from "@/components/brand/FirmenflowUiIcon";
+import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
@@ -79,8 +78,8 @@ export function SiteHeader() {
             <BrandMark />
           </div>
 
-          {/* Desktop Nav (Consistent lg breakpoint) */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Hauptnavigation">
+          {/* Desktop Nav */}
+          <nav className="hidden xl:flex items-center gap-2" aria-label="Hauptnavigation">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -93,15 +92,14 @@ export function SiteHeader() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <ButtonLink
+          <div className="hidden xl:flex items-center gap-3 shrink-0">
+            <FirmenflowButton
               href="/#projektanfrage"
-              variant="primary"
-              size="default"
-              className="text-xs sm:text-sm px-5 py-2.5 shadow-sm"
+              buttonIcon="projekt-besprechen"
+              size="compact"
             >
               Kostenlos anfragen
-            </ButtonLink>
+            </FirmenflowButton>
           </div>
 
           {/* Mobile / Tablet Menu Toggle */}
@@ -111,7 +109,7 @@ export function SiteHeader() {
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden relative z-50 p-2 text-[var(--color-ink)] hover:text-[var(--color-coral)] focus-visible:outline-none rounded-xl"
+            className="xl:hidden relative z-50 p-2 text-[var(--color-ink)] hover:text-[var(--color-coral)] focus-visible:outline-none rounded-xl"
           >
             <span className="sr-only">{isOpen ? "Menü schließen" : "Menü öffnen"}</span>
             <div className="w-6 h-5 flex flex-col justify-between items-end">
@@ -142,7 +140,7 @@ export function SiteHeader() {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 lg:hidden animate-fade-in transition-all duration-500"
+          className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 xl:hidden animate-fade-in transition-all duration-500"
           aria-hidden="true"
         />
       )}
@@ -155,7 +153,7 @@ export function SiteHeader() {
           // position: relative und gewinnt gegen Tailwinds .fixed, wodurch das
           // geschlossene Menue im Textfluss bleibt und den Seiteninhalt nach
           // unten schiebt. Die Bezel-Optik ist deshalb hier als Utilities gesetzt.
-          "fixed inset-x-4 top-[4.75rem] z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] lg:hidden max-h-[calc(100vh-6rem)] overflow-y-auto rounded-[2rem] p-1.5 border border-black/[0.06] bg-[var(--color-paper)]/95 backdrop-blur-2xl shadow-2xl",
+          "fixed inset-x-4 top-[4.75rem] z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] xl:hidden max-h-[calc(100vh-6rem)] overflow-y-auto rounded-[2rem] p-1.5 border border-black/[0.06] bg-[var(--color-paper)]/95 backdrop-blur-2xl shadow-2xl",
           isOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         )}
         aria-hidden={!isOpen}
@@ -178,15 +176,15 @@ export function SiteHeader() {
           </nav>
 
           <div className="space-y-3 pt-2">
-            <ButtonLink
+            <FirmenflowButton
               href="/#projektanfrage"
-              variant="primary"
-              size="default"
-              className="w-full justify-center shadow-md shadow-[var(--color-coral)]/20"
+              buttonIcon="projekt-besprechen"
+              size="compact"
+              className="w-full"
               onClick={() => setIsOpen(false)}
             >
               Kostenlos anfragen
-            </ButtonLink>
+            </FirmenflowButton>
             <p className="text-center text-xs text-[var(--color-muted)] font-medium">
               Persönlich mit Manu · Wesel &amp; Niederrhein
             </p>

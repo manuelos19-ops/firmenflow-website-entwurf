@@ -3,9 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { MagneticButton } from "@/components/effects/MagneticButton";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
@@ -92,29 +90,22 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
             {/* CTAs */}
             <div className="g360-hero-cta flex flex-wrap items-center gap-4 pt-2">
-              <MagneticButton>
-                <ButtonLink
-                  href="/#website-check"
-                  variant="primary"
-                  size="lg"
-                  className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
-                >
-                  <span>Lokalpräsenz jetzt prüfen lassen</span>
-                </ButtonLink>
-              </MagneticButton>
+              <FirmenflowButton
+                href="/#website-check"
+                buttonIcon="lokalpraesenz"
+                subline="Meine Einschätzung für dich"
+              >
+                Lokalpräsenz jetzt prüfen lassen
+              </FirmenflowButton>
 
-              <MagneticButton>
-                <ButtonLink
-                  href={whatsappUrl}
-                  external={true}
-                  variant="whatsapp"
-                  size="lg"
-                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-6 py-4"
-                >
-                  <WhatsAppIcon className="w-5 h-5 text-white mr-2 shrink-0" />
-                  <span>WhatsApp an Manu</span>
-                </ButtonLink>
-              </MagneticButton>
+              <FirmenflowButton
+                href={whatsappUrl}
+                external
+                buttonIcon="whatsapp"
+                subline="Direkter Chat mit mir"
+              >
+                Mir per WhatsApp schreiben
+              </FirmenflowButton>
             </div>
           </div>
 
@@ -775,29 +766,22 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <MagneticButton>
-                <ButtonLink
-                  href="/#website-check"
-                  variant="primary"
-                  size="lg"
-                  className="shadow-xl shadow-[var(--color-coral)]/30 text-sm sm:text-base px-8 py-4"
-                >
-                  <span>Lokalpräsenz jetzt prüfen lassen</span>
-                </ButtonLink>
-              </MagneticButton>
+              <FirmenflowButton
+                href="/#website-check"
+                buttonIcon="lokalpraesenz"
+                subline="Meine Einschätzung für dich"
+              >
+                Lokalpräsenz jetzt prüfen lassen
+              </FirmenflowButton>
 
-              <MagneticButton>
-                <ButtonLink
-                  href={whatsappUrl}
-                  external={true}
-                  variant="whatsapp"
-                  size="lg"
-                  className="shadow-lg shadow-[#25D366]/25 text-sm sm:text-base px-7 py-4"
-                >
-                  <WhatsAppIcon className="w-5 h-5 text-white mr-2 shrink-0" />
-                  <span>WhatsApp an Manu</span>
-                </ButtonLink>
-              </MagneticButton>
+              <FirmenflowButton
+                href={whatsappUrl}
+                external
+                buttonIcon="whatsapp"
+                subline="Direkter Chat mit mir"
+              >
+                Mir per WhatsApp schreiben
+              </FirmenflowButton>
             </div>
           </div>
         </div>

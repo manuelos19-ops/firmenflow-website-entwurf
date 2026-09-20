@@ -8,19 +8,13 @@ import { cn } from "@/lib/cn";
 import { Plus, Minus, ArrowRight } from "@/components/brand/FirmenflowUiIcon";
 import { BrandIcon } from "@/components/brand/BrandIcon";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
-import { MagneticButton } from "@/components/effects/MagneticButton";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
-
-const categories = ["Alle Fragen", "Ablauf & Betreuung", "Kosten & Leistung", "Lokalpräsenz 360°"];
 
 export function Faq() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First FAQ open by default
-  const [activeCategory, setActiveCategory] = useState("Alle Fragen");
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -163,9 +157,10 @@ export function Faq() {
                 href={buildWhatsAppUrl()}
                 external
                 buttonIcon="whatsapp"
-                subline="Ich antworte meist innerhalb weniger Stunden"
+                size="compact"
+                subline="Direkter Chat mit mir"
               >
-                Mir auf WhatsApp schreiben
+                Mir per WhatsApp schreiben
               </FirmenflowButton>
             </div>
           </div>

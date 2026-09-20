@@ -3,8 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { MagneticButton } from "@/components/effects/MagneticButton";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { useGSAP, gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { BrandIcon } from "@/components/brand/BrandIcon";
@@ -224,16 +223,13 @@ export function StorySection() {
             </p>
 
             <div className="inline-block">
-              <MagneticButton>
-                <ButtonLink 
-                  href="#projektanfrage" 
-                  variant="primary"
-                  size="lg"
-                  className="shadow-xl shadow-[var(--color-coral)]/25 text-sm sm:text-base px-8 py-4"
-                >
-                  <span>Unverbindlich anfragen</span>
-                </ButtonLink>
-              </MagneticButton>
+              <FirmenflowButton
+                href="#projektanfrage"
+                buttonIcon="projekt-besprechen"
+                subline="Persönlich mit mir"
+              >
+                Unverbindlich anfragen
+              </FirmenflowButton>
             </div>
           </div>
         </div>

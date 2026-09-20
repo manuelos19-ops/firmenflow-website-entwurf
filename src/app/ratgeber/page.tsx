@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { getAllRatgeberPosts } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -182,12 +182,12 @@ export default function RatgeberPage() {
             Erzähl mir kurz, wo dein Betrieb steht. Ich sage dir ehrlich, was sich lohnt.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <ButtonLink href="/anfrage" variant="primary" size="lg">
+            <FirmenflowButton href="/anfrage" buttonIcon="projekt-besprechen" size="compact">
               Projekt anfragen
-            </ButtonLink>
-            <ButtonLink href="/lokalpraesenz-360" variant="secondary" size="lg">
+            </FirmenflowButton>
+            <FirmenflowButton href="/lokalpraesenz-360" buttonIcon="lokalpraesenz" size="compact">
               Lokalpräsenz 360° ansehen
-            </ButtonLink>
+            </FirmenflowButton>
           </div>
         </section>
       </Container>

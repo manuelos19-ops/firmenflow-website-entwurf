@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { Container } from "@/components/ui/Container";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 
@@ -31,9 +31,9 @@ export default function AnfrageErhaltenPage() {
         </div>
 
         <div className="pt-4">
-          <ButtonLink href="/" variant="primary" size="lg" className="shadow-xl shadow-[var(--color-coral)]/25 text-white font-bold">
+          <FirmenflowButton href="/" buttonIcon="navigation" size="compact">
             Zurück zur Startseite
-          </ButtonLink>
+          </FirmenflowButton>
         </div>
       </Container>
     </main>
