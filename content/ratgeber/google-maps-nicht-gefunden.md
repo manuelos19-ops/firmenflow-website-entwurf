@@ -4,7 +4,8 @@ description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere 
 date: "2026-09-21"
 category: "Lokale Sichtbarkeit"
 tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
-imageAlt: "Smartphone mit Google-Maps-Kartenausschnitt und drei lokalen Betriebseinträgen"
+image: "/images/ratgeber/google-maps-nicht-gefunden.webp"
+imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Google-Maps-Kartenausschnitt, 3D-Standort-Pin und 5-Sterne-Bewertungs-Badge"
 featured: "false"
 ---
 
