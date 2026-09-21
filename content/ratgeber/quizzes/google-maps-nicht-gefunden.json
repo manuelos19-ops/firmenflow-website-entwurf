@@ -1,0 +1,366 @@
+{
+  "title": "Selbst-Check: Warum wird dein Betrieb bei Google Maps nicht gefunden?",
+  "description": "Finde in wenigen Klicks heraus, warum deine Mitbewerber auf der Karte über dir stehen und an welchen Google-Hebeln dein Betrieb ansetzen muss.",
+  "questions": [
+    {
+      "id": "gm_b1",
+      "level": "basis",
+      "question": "Welche drei Hauptfaktoren bestimmen laut offizieller Google-Hilfe, wer im Kartenausschnitt auftaucht?",
+      "options": [
+        "Relevanz, Entfernung und Bekanntheit",
+        "Werbebudget, Alter der Website und Mitarbeiterzahl",
+        "Alphabetische Reihenfolge, Bundesland und Rechtsform"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google nennt ganz offiziell drei Faktoren: Relevanz (Passgenauigkeit), Entfernung (Standort) und Bekanntheit (Bewertungen & Erwähnungen)."
+    },
+    {
+      "id": "gm_b2",
+      "level": "basis",
+      "question": "An welchem der drei Google-Rankingfaktoren kann ein Betriebsinhaber selbst NICHTS ändern?",
+      "options": [
+        "An der Entfernung (deine Werkstatt steht, wo sie steht)",
+        "An der Relevanz (deine Profilangaben und Kategorien)",
+        "An der Bekanntheit (deine Kundenbewertungen und Web-Präsenz)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Entfernung zum Suchenden ist fix. Umso wichtiger ist es, bei Relevanz und Bekanntheit die Hausaufgaben gewissenhaft zu machen."
+    },
+    {
+      "id": "gm_b3",
+      "level": "basis",
+      "question": "Was kann passieren, wenn du dein Google-Profil nicht offiziell als Inhaber beanspruchst und bestätigst?",
+      "options": [
+        "Fremde können Öffnungszeiten ändern, falsche Nummern eintragen oder den Betrieb als geschlossen melden",
+        "Google löscht den Kartenausschnitt der gesamten Stadt",
+        "Das Finanzamt sperrt das Firmenkonto des Handwerksbetriebs"
+      ],
+      "correctIndex": 0,
+      "explanation": "Unbestätigte Profile sind offen. Jeder Nutzer kann falsche Angaben vorschlagen oder deinen Betrieb versehentlich als dauerhaft geschlossen melden."
+    },
+    {
+      "id": "gm_b4",
+      "level": "basis",
+      "question": "Was passiert laut Artikel, wenn deine Öffnungszeiten auf Google Maps an Feiertagen oder im Betriebsurlaub nicht stimmen?",
+      "options": [
+        "Kunden stehen vor verschlossener Tür, rufen beim nächsten Mal woanders an oder schreiben eine schlechte Bewertung",
+        "Google gleicht deine Schaufenster-Zeiten per Satellit automatisch ab",
+        "Kunden warten gerne vor der Tür, bis der Betriebsurlaub vorbei ist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer vor verschlossener Tür steht, ist verärgert. Google zeigt Öffnungszeiten prominent an – Feiertags- und Urlaubszeiten müssen aktuell sein."
+    },
+    {
+      "id": "gm_b5",
+      "level": "basis",
+      "question": "Wie lautet Googles Faustregel für die Auswahl passender Unternehmenskategorien im Profil?",
+      "options": [
+        "Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, nicht „Dieses Unternehmen HAT …“",
+        "Man sollte einfach alle 50 verfügbaren Handwerkskategorien auswählen",
+        "Kategorien sind völlig egal, Google liest nur das Impressum der Website"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer alles Mögliche einträgt, was er nebenbei auch anbietet, verwässert die Relevanz. Konzentriere dich auf das, was dein Unternehmen wirklich ist."
+    },
+    {
+      "id": "gm_b6",
+      "level": "basis",
+      "question": "Was passiert laut Artikel, wenn du selbst keine aktuellen Fotos in dein Google-Profil hochlädst?",
+      "options": [
+        "Du überlässt den ersten Eindruck den Kunden – oft mit verwackelten Handyfotos bei Regen oder Kassenbons",
+        "Google blendet automatisch ein neutrales weißes Schild ein",
+        "Das Google-Profil wird automatisch nach 14 Tagen gelöscht"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wenn der Inhaber keine guten Fotos liefert, zeigt Google die Schnappschüsse von Nutzern. Der erste Eindruck entscheidet aber vor dem ersten Satz Text."
+    },
+    {
+      "id": "gm_b7",
+      "level": "basis",
+      "question": "Wie viele lokale Betriebe hebt Google bei einer Smartphone-Suche standardmäßig direkt im Kartenausschnitt hervor?",
+      "options": [
+        "Genau 3 Betriebe („Local 3-Pack“)",
+        "Alle Betriebe der gesamten Region untereinander auf einer Liste",
+        "Immer genau 25 Betriebe"
+      ],
+      "correctIndex": 0,
+      "explanation": "Auf dem Smartphone sehen Suchende zuerst die Top 3 Betriebe im Kartenausschnitt. Wer hier nicht auftaucht, geht bei Neukunden meist leer aus."
+    },
+    {
+      "id": "gm_b8",
+      "level": "basis",
+      "question": "Warum müssen Name, Adresse und Telefonnummer (NAP) im gesamten Netz exakt übereinstimmen?",
+      "options": [
+        "Weil Google Informationen aus alten Branchenbüchern und Websites abgleicht und Widersprüche gegeneinander arbeiten",
+        "Weil die Bundesnetzagentur sonst die Telefonnummer sperrt",
+        "Weil Handys sonst keine Anrufe durchstellen können"
+      ],
+      "correctIndex": 0,
+      "explanation": "Findet Google an verschiedenen Stellen unterschiedliche Nummern oder Adressen, sinkt das Vertrauen des Algorithmus in die Richtigkeit deiner Daten."
+    },
+    {
+      "id": "gm_b9",
+      "level": "basis",
+      "question": "Was passiert laut Artikel, wenn ein Neukunde 400 Meter von deiner Werkstatt entfernt einen Notdienst sucht und du nicht in den Top 3 stehst?",
+      "options": [
+        "Er ruft einen der drei angezeigten Betriebe an, und du erfährst nie etwas von dem verpassten Auftrag",
+        "Google leitet den Anruf automatisch zu dir weiter",
+        "Der Kunde läuft die Straße zu Fuß ab und sucht dein Schild"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der Auftrag war da, landet aber beim Mitbewerber. Du merkst davon nichts, weil dein Telefon einfach still bleibt."
+    },
+    {
+      "id": "gm_b10",
+      "level": "basis",
+      "question": "Was empfiehlt der Fünf-Minuten-Selbsttest aus dem Artikel als allerersten Schritt?",
+      "options": [
+        "Das Handy nehmen und die eigene Leistung plus Ortsname (z. B. „Dachdecker Wesel“) bei Google Maps eintippen",
+        "Sofort ein teures Beratungsabo bei einer Großagentur abschließen",
+        "Alle bisherigen Google-Bewertungen vorsichtshalber löschen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der einfachste Test: Nimm dein Smartphone und tippe ein, was deine Kunden suchen. Stehst du in den ersten drei Treffern der Karte?"
+    },
+    {
+      "id": "gm_p1",
+      "level": "profi",
+      "question": "Welcher Durchschnittswert an Bewertungen ergab die Studie von „digital lokal“ (2025) bei Handwerksbetrieben (ohne Gastronomie)?",
+      "options": [
+        "Rund 28 Bewertungen pro Betrieb",
+        "Über 250 Bewertungen pro Betrieb",
+        "Nur etwa 3 Bewertungen pro Betrieb"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Auswertung von 1.009 Betrieben im Raum Stuttgart ergab abseits der Gastronomie einen Schnitt von rund 28 Bewertungen bei Handwerkern."
+    },
+    {
+      "id": "gm_p2",
+      "level": "profi",
+      "question": "Bei welchem durchschnittlichen Sterne-Wert lagen die Betriebe in der Handwerksstudie von „digital lokal“ branchenübergreifend?",
+      "options": [
+        "Bei 4,52 Sternen",
+        "Bei genau 3,00 Sternen",
+        "Bei 4,98 Sternen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der Durchschnitt lag bei 4,52 Sternen. Wer mit 3,5 Sternen oder nur 2 Bewertungen dasteht, fällt im direkten Vergleich sofort ab."
+    },
+    {
+      "id": "gm_p3",
+      "level": "profi",
+      "question": "Wie viel Prozent der Menschen nutzen laut der Claneo/Appinio-Studie (2025) primär Suchmaschinen für lokale Betriebe?",
+      "options": [
+        "65 Prozent (Suchmaschinen sind mit Abstand Platz 1 vor Social Media mit 10 %)",
+        "Nur 15 Prozent",
+        "99 Prozent"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Claneo/Appinio-Studie zeigt: 65 % der Suchenden nutzen Suchmaschinen, während soziale Medien wie Instagram nur auf 10 % kommen."
+    },
+    {
+      "id": "gm_p4",
+      "level": "profi",
+      "question": "Welchen Anteil erreichten KI-Chatbots in der Claneo/Appinio-Studie bei komplexeren Fragestellungen im Vergleich zu Google?",
+      "options": [
+        "38,55 Prozent für KI-Chatbots (fast gleichauf mit Google bei 40,29 Prozent)",
+        "Unter 2 Prozent",
+        "Über 90 Prozent"
+      ],
+      "correctIndex": 0,
+      "explanation": "KI-Chatbots holen rasant auf. Bei komplexen Fragen liegen sie mit knapp 39 % fast gleichauf mit Google – und greifen dabei auch auf Profil-Daten zu."
+    },
+    {
+      "id": "gm_p5",
+      "level": "profi",
+      "question": "Wo ist die Hauptkategorie deines Betriebs auf Google Maps für Besucher sichtbar?",
+      "options": [
+        "Direkt unter dem Firmennamen in der Profilansicht (z. B. „Dachdecker“ oder „Sanitärbetrieb“)",
+        "Nur ganz unten im Kleingedruckten der Karte",
+        "Überhaupt nicht, sie ist für Nutzer unsichtbar"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Hauptkategorie steht gut sichtbar direkt unter deinem Firmennamen. Du kannst sie dort sofort mit den Betrieben über dir vergleichen."
+    },
+    {
+      "id": "gm_p6",
+      "level": "profi",
+      "question": "Warum hat ein als „Bauunternehmen“ eingetragener Betrieb bei der Suche nach „Bad sanieren“ oft das Nachsehen?",
+      "options": [
+        "Weil ein spezialisierter Sanitärbetrieb für Google eine viel höhere Relevanz für diesen Suchbegriff besitzt",
+        "Weil Google Bauunternehmen grundsätzlich im Ranking benachteiligt",
+        "Weil für Bäder gesetzlich nur Fliesenleger zugelassen sind"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google bewertet die Relevanz: Ein gezielt als Sanitär- oder Heizungsbetrieb kategorisiertes Unternehmen rankt bei Sanitärthemen deutlich vor allgemeinen Firmen."
+    },
+    {
+      "id": "gm_p7",
+      "level": "profi",
+      "question": "Was zählt Google laut eigener offizieller Dokumentation ausdrücklich zum Rankingfaktor „Bekanntheit“?",
+      "options": [
+        "Die Anzahl und Qualität von Bewertungen sowie Erwähnungen und Links im Web",
+        "Die Höhe des monatlichen Budgets für bezahlte Google Ads",
+        "Die reine Anzahl der angestellten Mitarbeiter im Betrieb"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bekanntheit spiegelt wider, wie präsent dein Betrieb im Web ist: Rezensionen, Erwähnungen in lokalen Medien und Links tragen maßgeblich dazu bei."
+    },
+    {
+      "id": "gm_p8",
+      "level": "profi",
+      "question": "Welches Alter sollten Fotos in deinem Google-Profil laut dem 5-Minuten-Selbsttest maximal haben?",
+      "options": [
+        "Das neueste Foto sollte jünger als ein Jahr sein",
+        "Fotos müssen mindestens 10 Jahre alt sein, um Tradition zu beweisen",
+        "Das Alter der Fotos spielt für Google absolut keine Rolle"
+      ],
+      "correctIndex": 0,
+      "explanation": "Aktuelle Fotos signalisieren Google und Neukunden, dass der Betrieb aktiv ist. Ein Profil ohne neue Bilder wirkt schnell verwaist."
+    },
+    {
+      "id": "gm_p9",
+      "level": "profi",
+      "question": "Warum kann kein seriöser Web- oder SEO-Dienstleister eine feste Garantie auf Platz 1 bei Google Maps geben?",
+      "options": [
+        "Weil der Google-Algorithmus dynamisch ist und die Entfernung des Suchenden immer mitentscheidet",
+        "Weil Platz 1 bei Google Maps gesetzlich verboten ist",
+        "Weil Google Handwerksbetriebe grundsätzlich nicht auf Platz 1 lässt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Niemand besitzt den Google-Algorithmus. Platz 1 hängt vom Standort des Nutzers ab – Fleißarbeit und ein gepflegtes Profil sind aber die Pflicht-Basis."
+    },
+    {
+      "id": "gm_p10",
+      "level": "profi",
+      "question": "Was passiert, wenn ein alter Firmeneintrag von 2014 im Netz noch eine veraltete Vorwahl oder Handynummer führt?",
+      "options": [
+        "Die Daten widersprechen sich und mindern das Vertrauen des Google-Algorithmus in dein Profil",
+        "Google korrigiert die alte Telefonnummer automatisch im Hintergrund",
+        "Es verbessert das Ranking, weil mehrere verschiedene Nummern gelistet sind"
+      ],
+      "correctIndex": 0,
+      "explanation": "Inkonsistente Firmendaten (NAP) verwirren die Suchmaschine. Das Bereinigen alter Verzeichniseinträge ist mühsam, aber unerlässlich."
+    },
+    {
+      "id": "gm_p11",
+      "level": "profi",
+      "question": "Welche Handwerksbranchen wurden in der zitierten Studie von „digital lokal“ (2025) unter anderem untersucht?",
+      "options": [
+        "Elektriker, Dachdecker, Zimmerer sowie die SHK-Branche (Sanitär, Heizung, Klima)",
+        "Ausschließlich Großbäckereien und Friseursalons",
+        "Nur Automobil-Hersteller und Industriezulieferer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Studie analysierte gezielt 1.009 lokale Betriebe im Raum Stuttgart, darunter klassische Gewerke wie SHK, Elektro, Dach und Holzbau."
+    },
+    {
+      "id": "gm_p12",
+      "level": "profi",
+      "question": "Was bedeutet das Phänomen der sogenannten „Zero-Click-Searches“ für lokale Betriebe?",
+      "options": [
+        "Google liefert Adresse, Telefonnummer und Zeiten direkt in der Suche aus, ohne dass der Kunde die Website öffnet",
+        "Niemand klickt mehr auf Google-Ergebnisse",
+        "Smartphones blockieren künftig alle externen Website-Links"
+      ],
+      "correctIndex": 0,
+      "explanation": "Viele Neukunden rufen direkt aus Google Maps an oder schauen die Öffnungszeiten nach. Dein Profil ist oft die einzige Entscheidungsgrundlage."
+    },
+    {
+      "id": "gm_p13",
+      "level": "profi",
+      "question": "Wie viele kostenlose Video-Einschätzungen für Google-Profile bietet Manu pro Woche maximal an?",
+      "options": [
+        "Maximal 3 Video-Einschätzungen pro Woche, weil er sich jedes Profil persönlich ansieht",
+        "Unbegrenzt viele, weil eine KI die Videos vollautomatisch erzeugt",
+        "Genau 50 Stück pro Monat"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manu analysiert jedes Profil individuell und persönlich am Bildschirm. Daher ist das Kontingent auf 3 fundierte Video-Einschätzungen pro Woche limitiert."
+    },
+    {
+      "id": "gm_p14",
+      "level": "profi",
+      "question": "Was kostet die laufende Betreuung und Profilpflege mit „Lokalpräsenz 360°“ laut Artikel?",
+      "options": [
+        "Einrichtung ab 190 Euro, laufende Betreuung 99 Euro im Monat (monatlich kündbar)",
+        "Mindestens 2.500 Euro im Monat mit 2 Jahren Mindestvertragslaufzeit",
+        "Es ist grundsätzlich komplett kostenlos"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transparente Konditionen ohne Knebelverträge: Einrichtung ab 190 €, monatliche Pflege für 99 € und jederzeit monatlich kündbar."
+    },
+    {
+      "id": "gm_p15",
+      "level": "profi",
+      "question": "Warum ist das Antworten auf Google-Bewertungen laut Artikel so entscheidend für das Ranking und Neukunden?",
+      "options": [
+        "Weil Google aktive Interaktion belohnt und Neukunden sehen, wie wertschätzend du mit Kunden umgehst",
+        "Weil man durch Antworten negative Bewertungen sofort ungeschehen machen kann",
+        "Weil das Gesetz eine Beantwortung innerhalb von 24 Stunden vorschreibt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer auf Lob und Kritik freundlich reagiert, beweist Professionalität. Für Google ist die Antwort-Aktivität ein positives Vitalitäts-Signal."
+    },
+    {
+      "id": "gm_p16",
+      "level": "profi",
+      "question": "Was passiert, wenn ein Betrieb zwei Straßen weiter 30 Bewertungen hat und du nur 3?",
+      "options": [
+        "Der Mitbewerber wird im Ranking bevorzugt und gewinnt bei Suchenden sofort den Vertrauensvorsprung",
+        "Google verteilt die Bewertungen beider Betriebe gleichmäßig",
+        "Kunden rufen grundsätzlich den Betrieb mit weniger Bewertungen an"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bewertungsanzahl und Frische sind entscheidende Ranking- und Psychologiefaktoren. 30 positive Stimmen schlagen 3 Stimmen fast immer."
+    },
+    {
+      "id": "gm_p17",
+      "level": "profi",
+      "question": "Was empfiehlt der Artikel, um alte verstreute Branchenbucheinträge im Netz aufzuräumen?",
+      "options": [
+        "Alte Einträge systematisch aufspüren, einheitliche Angaben (Name, Adresse, Telefon) hinterlegen und Inkonsistenzen beseitigen",
+        "Einfach abwarten, bis die Einträge nach 20 Jahren von allein verfallen",
+        "Den Betriebsnamen jedes Jahr ändern"
+      ],
+      "correctIndex": 0,
+      "explanation": "Auch wenn es Fleißarbeit ist: Alle Verzeichnisse müssen dieselben Kontaktdaten führen, damit Google deinen Betrieb eindeutig zuordnet."
+    },
+    {
+      "id": "gm_p18",
+      "level": "profi",
+      "question": "Warum reicht eine topmoderne Website allein oft nicht aus, um lokale Aufträge zu sichern?",
+      "options": [
+        "Weil viele Kunden bei Google Maps hängenbleiben und die Website gar nicht erst sehen, wenn das Profil fehlt",
+        "Weil Websites auf Smartphones nicht mehr geladen werden können",
+        "Weil Google Websites von Handwerkern nicht mehr anzeigt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Eine gute Website nützt nichts, wenn Neukunden auf Google Maps vorher schon drei Konkurrenten sehen und dort direkt auf „Anrufen“ tippen."
+    },
+    {
+      "id": "gm_p19",
+      "level": "profi",
+      "question": "Was passiert, wenn Fremde in einem unbestätigten Profil eine falsche Telefonnummer vorschlagen und niemand widerspricht?",
+      "options": [
+        "Google übernimmt die Änderung nach einiger Zeit und Anrufe landen bei falschen Nummern",
+        "Google ruft den Inhaber sofort auf dem Festnetz an",
+        "Fremde Vorschläge werden von Google prinzipiell ignoriert"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bei offenen Profilen werden Nutzer-Änderungen nach Prüffristen oft übernommen. Schon landet der Anruf im Nirgendwo."
+    },
+    {
+      "id": "gm_p20",
+      "level": "profi",
+      "question": "Welcher Leitgedanke schließt den Artikel über die Sichtbarkeit bei Google Maps ab?",
+      "options": [
+        "Ein vollständiges und gepflegtes Profil ist die Grundvoraussetzung, um im lokalen Wettbewerb überhaupt mitzuspielen",
+        "Google Maps ist nur ein kurzlebiger Trend für Großstädte",
+        "Nur Betriebe mit eigener Marketing-Abteilung können auf Google Maps ranken"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer heute im Handwerk neue Kunden gewinnen will, muss sein Google-Profil als digitale Visitenkarte genauso ernst nehmen wie sein Werkzeug."
+    }
+  ]
+}

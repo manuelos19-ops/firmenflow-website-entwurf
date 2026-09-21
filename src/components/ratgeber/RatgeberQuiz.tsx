@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { RatgeberQuizData, RatgeberQuizQuestion } from "@/lib/ratgeber";
@@ -12,9 +12,19 @@ type RatgeberQuizProps = {
   quiz?: RatgeberQuizData;
 };
 
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
   const [state, setState] = useState<QuizState>("intro");
   const [mode, setMode] = useState<QuizMode>("kompakt");
+  const [activeQuestions, setActiveQuestions] = useState<RatgeberQuizQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -23,21 +33,24 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
     return null;
   }
 
-  // Fragen nach gewähltem Modus filtern
-  // Kompakt-Check: 5 Basis-Fragen
-  // Profi-Check: Alle 10 Fragen
-  const activeQuestions: RatgeberQuizQuestion[] = useMemo(() => {
-    if (mode === "kompakt") {
-      const basis = quiz.questions.filter((q) => q.level === "basis");
-      return basis.length > 0 ? basis.slice(0, 5) : quiz.questions.slice(0, 5);
-    }
-    return quiz.questions.slice(0, 10);
-  }, [quiz.questions, mode]);
-
   const currentQuestion = activeQuestions[currentIndex];
 
+  // Start mit zufälliger Frage-Rotation aus dem jeweiligen Pool:
+  // Kompakt-Check: 5 zufällige Fragen aus dem Basis-Pool (mind. 10 Fragen)
+  // Meister-Check: 10 zufällige Fragen aus dem Meister-Pool (mind. 20 Fragen)
   const handleStart = (chosenMode: QuizMode) => {
     setMode(chosenMode);
+    if (chosenMode === "kompakt") {
+      const pool = quiz.questions.filter((q) => q.level === "basis");
+      const source = pool.length > 0 ? pool : quiz.questions;
+      const shuffled = shuffleArray(source);
+      setActiveQuestions(shuffled.slice(0, 5));
+    } else {
+      const pool = quiz.questions.filter((q) => q.level === "profi");
+      const source = pool.length > 0 ? pool : quiz.questions;
+      const shuffled = shuffleArray(source);
+      setActiveQuestions(shuffled.slice(0, 10));
+    }
     setCurrentIndex(0);
     setSelectedOption(null);
     setScore(0);
@@ -45,7 +58,7 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
   };
 
   const handleSelectOption = (index: number) => {
-    if (selectedOption !== null) return; // Bereits geantwortet
+    if (selectedOption !== null || !currentQuestion) return;
     setSelectedOption(index);
     if (index === currentQuestion.correctIndex) {
       setScore((prev) => prev + 1);
@@ -63,14 +76,15 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
 
   const handleRestart = () => {
     setState("intro");
+    setActiveQuestions([]);
     setCurrentIndex(0);
     setSelectedOption(null);
     setScore(0);
   };
 
-  // Fortschrittsberechnung in Prozent
-  const progressPercent = Math.round(((currentIndex + 1) / activeQuestions.length) * 100);
-  const scorePercent = Math.round((score / activeQuestions.length) * 100);
+  const totalQuestions = activeQuestions.length || (mode === "kompakt" ? 5 : 10);
+  const progressPercent = Math.round(((currentIndex + 1) / totalQuestions) * 100);
+  const scorePercent = Math.round((score / totalQuestions) * 100);
 
   return (
     <section aria-label="Interaktives Ratgeber-Quiz" className="my-12">
@@ -118,7 +132,7 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
                       Kompakt-Check
                     </h3>
                     <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                      5 wichtige Alltagsfragen zu Ladezeit, Anrufen und typischen Website-Fehlern.
+                      5 zufällig ausgewählte Fragen zu den wichtigsten Grundlagen dieses Artikels.
                     </p>
                   </div>
                   <FirmenflowButton
@@ -136,13 +150,13 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
                 <div className="rounded-2xl border border-[var(--color-line)] bg-white p-5 flex flex-col justify-between space-y-4 shadow-sm hover:border-[var(--color-plum)]/40 transition-all">
                   <div className="space-y-1">
                     <span className="text-xs font-mono font-bold uppercase text-[var(--color-plum)]">
-                      🔍 Umfassend & Detailliert
+                      🏆 Eigenständiges Profi-Wissen
                     </span>
                     <h3 className="text-lg font-display font-bold text-[var(--color-ink)]">
-                      Profi-Check
+                      Meister-Check
                     </h3>
                     <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                      10 Fragen inklusive Google 3-Pack, Bewertungen, Ladezeit und Rechtssicherheit.
+                      10 vertiefende Fragen aus dem großen Fragenpool mit Fachwissen und Details.
                     </p>
                   </div>
                   <FirmenflowButton
@@ -153,14 +167,14 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
                     onClick={() => handleStart("profi")}
                     className="w-full justify-center"
                   >
-                    Profi-Check starten
+                    Meister-Check starten
                   </FirmenflowButton>
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-[var(--color-muted)] pt-2">
-              Keine Registrierung erforderlich · Sofortige Auswertung direkt hier im Beitrag
+              Großer Fragenpool · Bei jedem Durchlauf rotieren die Fragen zufällig
             </p>
           </div>
         )}
@@ -172,7 +186,7 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
             <div className="space-y-3">
               <div className="flex items-center justify-between text-xs font-mono font-bold text-[var(--color-muted)]">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-paper)] text-[var(--color-plum)]">
-                  {mode === "kompakt" ? "⚡ Kompakt-Check" : "🔍 Profi-Check"}
+                  {mode === "kompakt" ? "⚡ Kompakt-Check" : "🏆 Meister-Check"}
                 </span>
                 <span>
                   Frage {currentIndex + 1} von {activeQuestions.length}
@@ -292,13 +306,13 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
         {state === "result" && (
           <div className="relative z-10 space-y-8 text-center max-w-2xl mx-auto animate-in zoom-in-95 duration-400">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-paper)] border border-[var(--color-line)] text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-              <span>Auswertung abgeschlossen</span>
+              <span>{mode === "kompakt" ? "Kompakt-Check" : "Meister-Check"} beendet</span>
             </div>
 
             {/* Score-Anzeige */}
             <div className="space-y-3">
               <div className="inline-block px-6 py-3 rounded-3xl bg-[var(--color-plum)] text-white font-display font-bold text-3xl sm:text-5xl shadow-lg shadow-[var(--color-plum)]/20">
-                {score} / {activeQuestions.length}
+                {score} / {totalQuestions}
               </div>
               <p className="text-sm font-mono text-[var(--color-muted)]">
                 {scorePercent}% der Fragen richtig beantwortet
@@ -316,17 +330,17 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
               </h3>
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed text-center">
                 {scorePercent >= 80
-                  ? "Du weißt genau, worauf mobile Besucher und Google achten. Lass uns dafür sorgen, dass deine eigene Firmenwebsite diesen Spitzenstandard auch technisch und optisch widerspiegelt."
+                  ? "Du kennst die Hebel für Neukunden und Google ganz genau. Lass uns dafür sorgen, dass dein eigener digitaler Auftritt diesen Spitzenstandard auch technisch und optisch widerspiegelt."
                   : scorePercent >= 50
-                  ? "Du hast ein gutes Gespür für Kundenbedürfnisse. Bei 2–3 Punkten (z. B. Ladezeiten oder Google Maps) verliert dein Betrieb aktuell aber noch wertvolle Aufträge an die Konkurrenz."
-                  : "Neukunden suchen heute spontan auf dem Smartphone und entscheiden in wenigen Sekunden. Mit einer schnellen, modernen Seite und sauberem Google-Profil kannst du dich sofort von deinen Mitbewerbern absetzen."}
+                  ? "Du hast ein gutes Gespür für Kundenbedürfnisse. Bei einigen Feinheiten verliert dein Betrieb aktuell aber noch wertvolle Kundenanfragen an die Konkurrenz."
+                  : "Neukunden suchen heute spontan auf dem Smartphone und entscheiden in wenigen Sekunden. Mit einer schnellen, modernen Seite und sauberem Google-Profil setzt du dich sofort von deinen Mitbewerbern ab."}
               </p>
             </div>
 
             {/* Call to Action mit den 3D-Buttons */}
             <div className="space-y-4 pt-2">
               <p className="text-sm font-bold text-[var(--color-ink)]">
-                Möchtest du wissen, wie deine Website bei diesen Punkten abschneidet?
+                Möchtest du wissen, wie dein Betrieb bei diesen Punkten abschneidet?
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -350,14 +364,24 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
                 </FirmenflowButton>
               </div>
 
-              <div className="pt-4">
+              {/* Quiz-Wiederholung & Modus-Wechsel */}
+              <div className="pt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-mono font-bold">
+                <button
+                  type="button"
+                  onClick={() => handleStart(mode)}
+                  className="px-4 py-2 rounded-full bg-[var(--color-paper)] border border-[var(--color-line)] text-[var(--color-ink)] hover:bg-[var(--color-line)] transition-colors inline-flex items-center gap-1.5 shadow-sm"
+                >
+                  <span>Neue Fragen im {mode === "kompakt" ? "Kompakt-Check" : "Meister-Check"} rotieren</span>
+                  <span aria-hidden="true">↺</span>
+                </button>
+
                 <button
                   type="button"
                   onClick={handleRestart}
-                  className="text-xs font-mono font-bold text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors inline-flex items-center gap-1.5"
+                  className="text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors inline-flex items-center gap-1"
                 >
-                  <span>Quiz noch einmal wiederholen</span>
-                  <span aria-hidden="true">↺</span>
+                  <span>Anderen Modus wählen</span>
+                  <span aria-hidden="true">→</span>
                 </button>
               </div>
             </div>

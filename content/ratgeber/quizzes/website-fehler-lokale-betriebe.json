@@ -1,126 +1,366 @@
 {
-  "title": "Selbst-Check: Wie fit ist dein Betrieb digital?",
-  "description": "Finde in wenigen Klicks heraus, ob deine Website und dein Google-Profil Neukunden anziehen oder abschrecken.",
+  "title": "Selbst-Check: Die 5 typischen Website-Fehler",
+  "description": "Teste dein Wissen zu Ladezeiten, mobilen Anrufen und Google Maps. Finde heraus, ob deine Website Neukunden anzieht oder abschreckt.",
   "questions": [
     {
-      "id": "q1",
+      "id": "w_b1",
       "level": "basis",
-      "question": "Wie viele Sekunden Wartezeit toleriert über die Hälfte aller Besucher auf dem Smartphone, bevor sie abspringen?",
+      "question": "Wie viele Sekunden Ladezeit toleriert über die Hälfte der mobilen Suchenden laut Google web.dev maximal?",
       "options": [
         "Maximal 3 Sekunden",
         "Etwa 8 bis 10 Sekunden",
         "Beliebig lange, wenn die Handwerksarbeit gut ist"
       ],
       "correctIndex": 0,
-      "explanation": "Google belegt auf web.dev: Braucht eine mobile Website länger als 3 Sekunden zum Laden, brechen über 50 % der Suchenden den Besuch sofort ab und gehen zur Konkurrenz."
+      "explanation": "Google belegt auf web.dev: Dauert der Seitenaufbau länger als drei Sekunden, schließen über 50 % der Smartphone-Nutzer die Seite sofort wieder."
     },
     {
-      "id": "q2",
+      "id": "w_b2",
       "level": "basis",
-      "question": "Was sollte ein Kunde bei einem lokalen Fachbetrieb auf dem Smartphone als Erstes sehen?",
+      "question": "Was machen Neukunden laut dem Artikel meistens, wenn sie in einen Ort neu ziehen und einen Handwerker brauchen?",
       "options": [
-        "Einen direkten Anruf-Button mit Telefonnummer für den Daumen",
-        "Die ausführliche Chronik der Firmengründung seit 1985",
-        "Ein 8-teiliges Formular mit Pflichtfeldern für jede Kleinigkeit"
+        "Sie nehmen das Smartphone aus der Tasche und suchen bei Google",
+        "Sie fragen sofort den Nachbarn über den Gartenzaun",
+        "Sie warten auf Werbeflyer im Briefkasten"
       ],
       "correctIndex": 0,
-      "explanation": "Wer unterwegs einen Rohrbruch, ein defektes Garagentor oder Hunger hat, will nicht lange tippen. Ein klarer Klick-zum-Anrufen-Button bringt dir die meisten echten Aufträge."
+      "explanation": "Zugezogene und Neukunden kennen oft noch niemanden im Ort. Sie suchen bei akuten Problemen sofort mobil auf dem Handy nach einem Fachbetrieb."
     },
     {
-      "id": "q3",
+      "id": "w_b3",
       "level": "basis",
-      "question": "Wo suchen Menschen in deiner Region heute primär nach einem Betrieb in ihrer Nähe?",
+      "question": "Warum bemerkt ein Betriebsinhaber oft gar nicht, wie viele Aufträge ihm durch eine schlechte Website entgehen?",
       "options": [
-        "Direkt bei Google und Google Maps auf dem Handy",
-        "Im gedruckten Telefonbuch oder Branchenverzeichnis",
-        "Auf Flyern im eigenen Briefkasten"
+        "Weil das Telefon einfach stumm bleibt und abspringende Kunden sich nicht beschweren",
+        "Weil Google eine wöchentliche E-Mail mit verpassten Kunden schickt",
+        "Weil Kunden eine Beschwerdekarte in den Briefkasten werfen"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Statistischem Bundesamt und Konsumentenstudien ist das Smartphone das Standard-Suchgerät Nummer 1. Wer im Google-Kartenbereich fehlt, existiert für viele Neukunden gar nicht."
+      "explanation": "Wer auf deiner Seite genervt abspringt, beschwert sich nicht. Er ruft einfach die Konkurrenz an. Dein Telefon bleibt einfach stumm."
     },
     {
-      "id": "q4",
+      "id": "w_b4",
       "level": "basis",
-      "question": "Welcher Einstiegstext auf der Startseite überzeugt neue Kunden am schnellsten?",
+      "question": "Was ist laut Artikel für einen Handwerker auf dem Smartphone der wichtigste Button ganz oben?",
       "options": [
-        "„Herzlich willkommen auf unserer Homepage. Seit vielen Jahren stehen wir für Qualität.“",
-        "„Heizungswartung & Reparatur in Wesel und Umgebung. Jetzt kurz anrufen.“",
-        "„Wir freuen uns, Sie auf unserer virtuellen Unternehmenspräsenz begrüßen zu dürfen.“"
+        "Ein direkter Klick-zum-Anrufen-Button für den Daumen",
+        "Ein 8-teiliges Kontaktformular mit vielen Pflichtfeldern",
+        "Ein Download-Link für die Firmenbroschüre"
       ],
-      "correctIndex": 1,
-      "explanation": "Floskeln wie „Herzlich willkommen“ überfliegt jeder. Neukunden wollen in zwei Sekunden wissen: Was machst du, wo bist du tätig und wie kann ich dich kontaktieren?"
+      "correctIndex": 0,
+      "explanation": "Kunden mit Rohrbruch, defektem Tor oder Reparaturstau wollen nicht tippen. Ein direkter Daumen-Tipp zum Anrufen bringt die meisten Aufträge."
     },
     {
-      "id": "q5",
+      "id": "w_b5",
       "level": "basis",
-      "question": "Welche Fotos schaffen bei Neukunden das meiste Vertrauen?",
+      "question": "Welche Fotos überzeugen Neukunden bei einem lokalen Handwerksbetrieb am meisten?",
       "options": [
-        "Gekaufte Stockfotos mit lachenden amerikanischen Fotomodellen",
         "Echte Fotos von dir, deinen Mitarbeitern und deiner Arbeit vor Ort",
-        "Überhaupt keine Fotos, sondern nur Tabellen und technische Skizzen"
+        "Gekaufte Stockfotos mit amerikanischen Fotomodellen",
+        "Überhaupt keine Fotos, nur Text und Tabellen"
       ],
-      "correctIndex": 1,
-      "explanation": "Gekaufte Stockfotos erkennt jeder sofort – sie wirken unpersönlich. Echte Fotos von dir, deinem Team und deiner Werkstatt schaffen sofort Vertrauen und Nähe."
+      "correctIndex": 0,
+      "explanation": "Gekaufte Agenturfotos wirken unpersönlich und austauschbar. Echte Bilder aus der Werkstatt oder von der Baustelle schaffen sofort Vertrauen."
     },
     {
-      "id": "q6",
+      "id": "w_b6",
+      "level": "basis",
+      "question": "Wo suchen Menschen laut Statistischem Bundesamt (Destatis) heute primär nach lokalen Betrieben?",
+      "options": [
+        "Auf dem Smartphone von unterwegs oder vom Sofa aus",
+        "In den gedruckten Gelben Seiten im Flur",
+        "Auf Werbezetteln am Laternenpfahl"
+      ],
+      "correctIndex": 0,
+      "explanation": "Destatis-Erhebungen belegen seit Jahren: Das Smartphone ist in Deutschland das mit Abstand wichtigste Gerät für die tägliche Informationssuche."
+    },
+    {
+      "id": "w_b7",
+      "level": "basis",
+      "question": "Warum ist die Startseiten-Begrüßung „Herzlich willkommen auf unserer Homepage“ problematisch?",
+      "options": [
+        "Weil sie eine austauschbare Floskel ist, die auch zu einem Friseursalon passen würde",
+        "Weil Google Websites mit Begrüßungen im Ranking abstraft",
+        "Weil das Wort „Homepage“ im Internet verboten ist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Neukunden suchen eine Lösung. Die Überschrift muss sofort sagen, was du machst und wo du tätig bist, z. B. „Heizungswartung in Wesel“."
+    },
+    {
+      "id": "w_b8",
+      "level": "basis",
+      "question": "Wohin gehören laut Artikel Urkunden, Meisterbrief und Firmengeschichte auf deiner Website?",
+      "options": [
+        "Weiter nach unten auf der Seite als Beleg für gute Arbeit",
+        "Ganz nach oben als allererste Überschrift der Startseite",
+        "Auf eine separate, passwortgeschützte Seite"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Firmengeschichte ist wichtig, gehört aber nach unten. Sie belegt deine Kompetenz, sobald der Kunde weiß, was du überhaupt anbietest."
+    },
+    {
+      "id": "w_b9",
+      "level": "basis",
+      "question": "Was passiert laut Artikel, wenn deine Website vor allem für den Computerbildschirm von damals gebaut wurde?",
+      "options": [
+        "Sie ist auf modernen Handys schwer zu bedienen und Kunden springen ab",
+        "Google zeigt sie auf Handys automatisch fehlerfrei an",
+        "Besucher werden vom Browser automatisch an den Schreibtisch verwiesen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Viele alte Websites wurden für große Monitore gebaut. Auf dem Handy sind Schriften zu klein, Menüs verkantet und Nummern nicht anklickbar."
+    },
+    {
+      "id": "w_b10",
+      "level": "basis",
+      "question": "Welcher erste Schritt wird im schnellen Smartphone-Test für den eigenen Betrieb empfohlen?",
+      "options": [
+        "Die eigene Website heute Abend auf dem Handy öffnen und Ladezeit sowie Anruf-Button prüfen",
+        "Sofort eine teure Werbeagentur mit einem Redesign beauftragen",
+        "Die Website vorsichtshalber komplett offline nehmen"
+      ],
+      "correctIndex": 0,
+      "explanation": "In zwei Minuten auf dem eigenen Handy prüfen: Lädt die Seite sofort? Kann man mit einem Daumentipp anrufen? Versteht man sofort dein Angebot?"
+    },
+    {
+      "id": "w_p1",
       "level": "profi",
-      "question": "Wie viele lokale Betriebe hebt Google bei einer Smartphone-Suche direkt im Kartenblock hervor?",
+      "question": "Wie viele lokale Betriebe zeigt Google auf dem Smartphone bei lokaler Suche direkt im Kartenausschnitt an?",
       "options": [
         "Genau 3 Betriebe („Local 3-Pack“)",
         "Alle Betriebe der Stadt untereinander auf einer langen Liste",
         "Immer genau 10 Betriebe alphabetisch sortiert"
       ],
       "correctIndex": 0,
-      "explanation": "Google zeigt bei lokaler Suche mobil fast immer nur die Top 3 Betriebe direkt auf der Karte an. Wer auf Platz 4 oder tiefer landet, verliert bis zu 80 % der Klicks."
+      "explanation": "Google blendet auf dem Handy meist nur die Top 3 Betriebe im Kartenausschnitt ein. Wer hier fehlt, wird von vielen Neukunden gar nicht wahrgenommen."
     },
     {
-      "id": "q7",
+      "id": "w_p2",
       "level": "profi",
-      "question": "Wie reagieren Neukunden laut Studien auf Betriebe, die auf Google-Bewertungen antworten?",
+      "question": "Wie viel Prozent der Befragten lesen laut der zitierten BrightLocal-Konsumentenstudie vorab Online-Bewertungen?",
       "options": [
-        "Über 80 % der Kunden wählen bevorzugt Betriebe, die auf Bewertungen reagieren",
-        "Antworten des Inhabers sind den Kunden völlig egal",
-        "Antworten wirken aufdringlich und schrecken Kunden eher ab"
+        "97 Prozent der Befragten",
+        "Etwa 50 Prozent der Befragten",
+        "Nur rund 20 Prozent der Befragten"
       ],
       "correctIndex": 0,
-      "explanation": "Die BrightLocal-Studie zeigt: Kunden achten nicht nur auf die Sterne, sondern vor allem darauf, wie der Inhaber mit Feedback umgeht. Ein freundlicher Kommentar beweist Zuverlässigkeit."
+      "explanation": "In der jährlichen BrightLocal-Konsumentenbefragung gaben 97 % der Kunden an, Bewertungen lokaler Betriebe vor einer Entscheidung zu lesen."
     },
     {
-      "id": "q8",
+      "id": "w_p3",
       "level": "profi",
-      "question": "Was bremst mobile Handwerker-Websites in der Praxis am häufigsten extrem aus?",
+      "question": "Wie viel Prozent der Kunden wählen laut BrightLocal bevorzugt Betriebe, die auch auf Bewertungen antworten?",
       "options": [
-        "Unkomprimierte 15-Megabyte-Fotos direkt von der Smartphone-Kamera",
-        "Einige Textabsätze mit Beschreibungen der Leistungen",
-        "Die Schriftart der Hauptüberschrift"
+        "80 Prozent der Kunden",
+        "35 Prozent der Kunden",
+        "Nur 10 Prozent der Kunden"
       ],
       "correctIndex": 0,
-      "explanation": "Oft laden Betriebe Fotos mit 5 bis 15 MB direkt hoch. Ohne moderne WebP-Kompression dauert das Laden im Mobilfunknetz viele Sekunden. Moderne Seiten komprimieren Fotos auf unter 100 KB."
+      "explanation": "80 % der Kunden entscheiden sich bevorzugt für Betriebe, die auf Bewertungen reagieren. Das belegt Zuverlässigkeit und echten Kundenservice."
     },
     {
-      "id": "q9",
+      "id": "w_p4",
       "level": "profi",
-      "question": "Was passiert, wenn deine Öffnungszeiten auf Google Maps nicht mit der Realität übereinstimmen?",
+      "question": "Wie lautet das konkrete Praxis-Beispiel aus dem Artikel für eine klare Startseiten-Überschrift eines Heizungsbetriebs?",
       "options": [
-        "Kunden stehen vor verschlossener Tür, sind frustriert und hinterlassen 1-Stern-Bewertungen",
-        "Google gleicht die Zeiten automatisch über Nacht mit deinem Schaufenster ab",
-        "Kunden warten einfach geduldig und rufen später noch einmal an"
+        "„Heizungswartung und Reparaturen in Wesel und Umgebung. Ruf uns an.“",
+        "„Willkommen beim Meisterbetrieb für behagliche Wärme seit 1974.“",
+        "„Ihr kompetenter Partner für Energie, Tradition und Zukunft.“"
       ],
       "correctIndex": 0,
-      "explanation": "Falsche Öffnungszeiten sind einer der häufigsten Gründe für schlechte Spontan-Bewertungen auf Google Maps. Besonders an Brückentagen und im Betriebsurlaub müssen diese stimmen."
+      "explanation": "Der Artikel empfiehlt ganz konkret: Nenne dein Gewerk, deinen Ort und eine direkte Handlungsaufforderung, statt vager Werbeslogans."
     },
     {
-      "id": "q10",
+      "id": "w_p5",
       "level": "profi",
-      "question": "Warum müssen Schriftarten wie Google Fonts lokal auf dem eigenen Webserver liegen?",
+      "question": "Warum vertrauen Kunden echten Fotos aus der Werkstatt mehr als Model-Bildern mit perfekten Models?",
       "options": [
-        "Weil das ungefragte Nachladen aus den USA gegen DSGVO und TDDDG verstößt",
-        "Weil Google sonst monatlich Lizenzgebühren für jede Schriftart abbucht",
-        "Weil die Website sonst nur auf Englisch angezeigt wird"
+        "Weil sie sehen wollen, wer tatsächlich vor ihrer Haustür steht und ins Haus kommt",
+        "Weil Model-Fotos gegen Handwerkskammer-Richtlinien verstoßen",
+        "Weil Stockfotos die Ladezeit der Website immer zerstören"
       ],
       "correctIndex": 0,
-      "explanation": "Wer Schriften von US-Servern lädt, überträgt unbemerkt die IP-Adresse des Besuchers ohne Einwilligung. Bei modernen, sauberen Websites liegen alle Schriften datenschutzsicher auf dem eigenen Server."
+      "explanation": "Handwerk ist Vertrauenssache. Kunden lassen Handwerker in ihr privates Zuhause – sie wollen echte Menschen sehen, keine anonymen Fotomodelle."
+    },
+    {
+      "id": "w_p6",
+      "level": "profi",
+      "question": "Was ist laut Artikel die Folge, wenn deine Angaben auf Google Maps nicht mit deiner Website übereinstimmen?",
+      "options": [
+        "Du verspielst das Vertrauen der Neukunden, bevor sie überhaupt deine Seite besuchen",
+        "Google löscht deine Website automatisch aus dem Suchindex",
+        "Kunden bekommen automatisch einen Rabatt angezeigt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Widersprüchliche Öffnungszeiten oder abweichende Telefonnummern stiften Verwirrung und kosten sofort das Vertrauen von Neukunden."
+    },
+    {
+      "id": "w_p7",
+      "level": "profi",
+      "question": "Warum scheitern aufwendige Kontaktformulare mit vielen Feldern bei mobilen Handwerkskunden?",
+      "options": [
+        "Weil das Ausfüllen auf der Bildschirmtastatur unterwegs viel zu umständlich ist",
+        "Weil Handys keine Formulare übermitteln können",
+        "Weil Online-Formulare gesetzlich verboten sind"
+      ],
+      "correctIndex": 0,
+      "explanation": "Niemand tippt am Smartphone gerne lange Texte in winzige Formularfelder. Je weniger Hürden, desto mehr Anfragen erhält dein Betrieb."
+    },
+    {
+      "id": "w_p8",
+      "level": "profi",
+      "question": "Welche technische Auswirkung hat jede Sekunde zusätzlicher Ladezeit auf eine Firmenwebsite?",
+      "options": [
+        "Die Abbruchrate steigt messbar an und Google straft langsame Seiten im Ranking ab",
+        "Die Seite wird automatisch sicherer vor Hackerangriffen",
+        "Es hat auf dem Smartphone heutzutage keinerlei Auswirkungen mehr"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google belegt auf web.dev: Jede Sekunde Verzögerung senkt die Zufriedenheit und treibt die Absprungrate von Neukunden rasant in die Höhe."
+    },
+    {
+      "id": "w_p9",
+      "level": "profi",
+      "question": "Was bedeutet die Feststellung aus dem Artikel: „Die Leute fragen selten den Nachbarn über den Zaun“?",
+      "options": [
+        "Neuzugezogene und jüngere Kunden recherchieren Fachbetriebe heute selbstständig online",
+        "Nachbarn reden in Deutschland grundsätzlich nicht mehr miteinander",
+        "Mundpropaganda und Empfehlungen existieren überhaupt nicht mehr"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stammkunden empfehlen weiter, aber Neukunden und Zugezogene nutzen bei akuten Problemen sofort die Google-Suche auf dem Smartphone."
+    },
+    {
+      "id": "w_p10",
+      "level": "profi",
+      "question": "Was bietet Manu lokalen Betrieben im Artikel als kostenlose Ersteinschätzung an?",
+      "options": [
+        "Ein 3 bis 5 Minuten langes persönliches Video mit sachlicher Analyse der Schwachstellen",
+        "Einen 50-seitigen automatisierten Standard-PDF-Bericht",
+        "Ein zweistündiges Verkaufsgespräch vor Ort"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manu ruft deine Seite wie ein Kunde auf und zeigt dir in einem 3 bis 5 Minuten Video ganz sachlich, wo Kunden abspringen und was du tun kannst."
+    },
+    {
+      "id": "w_p11",
+      "level": "profi",
+      "question": "Welcher Vorteil entsteht für Handwerksbetriebe bei Firmenflow durch Festpreise vor Projektstart?",
+      "options": [
+        "Volle Planungssicherheit und keine unvorhergesehenen Kosten ohne Agenturtheater",
+        "Man muss die Rechnung erst nach fünf Jahren begleichen",
+        "Die Website wird dadurch automatisch billiger als ein kostenloser Baukasten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein klarer Festpreis vor Beginn verhindert Kostenfallen und böse Überraschungen, wie man sie von klassischen Werbeagenturen kennt."
+    },
+    {
+      "id": "w_p12",
+      "level": "profi",
+      "question": "Was ist laut Artikel der Unterschied zwischen Stammkunden und Neukunden bei der Website-Nutzung?",
+      "options": [
+        "Stammkunden kennen die Qualität bereits; Neukunden beurteilen dich rein nach dem ersten Online-Eindruck",
+        "Stammkunden nutzen nur Computer, Neukunden ausschließlich Tablets",
+        "Neukunden interessieren sich überhaupt nicht für die Erreichbarkeit"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stammkunden rufen an, weil sie deine Arbeit kennen. Neukunden sehen im ersten Moment nur deinen Auftritt – und dieser entscheidet über den Anruf."
+    },
+    {
+      "id": "w_p13",
+      "level": "profi",
+      "question": "Warum sollten Telefonnummern auf mobilen Websites zwingend als direkter Link (`tel:`) hinterlegt sein?",
+      "options": [
+        "Damit sich bei einem Fingertipp sofort die Telefon-App öffnet, ohne die Nummer abtippen zu müssen",
+        "Weil Google nur so die Vorwahl der Stadt für die Karte auslesen kann",
+        "Weil das Telefonieren über den Internet-Browser sonst gebührenpflichtig ist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein Daumentipp muss genügen. Muss ein Kunde die Nummer erst auf einen Zettel schreiben oder merken, brechen viele genervt ab."
+    },
+    {
+      "id": "w_p14",
+      "level": "profi",
+      "question": "Was empfiehlt der Artikel für die Textgestaltung auf der Startseite eines Meisterbetriebs?",
+      "options": [
+        "Klare, ehrliche Sprache zu Angebot und Region statt geschwollener Werbetexte",
+        "Möglichst lange Schachtelsätze mit vielen unverständlichen Fachbegriffen",
+        "Nur Bilder ohne jegliche erklärenden Texte"
+      ],
+      "correctIndex": 0,
+      "explanation": "Verständliche, ehrliche Sprache ohne Fachchinesisch überzeugt Kunden am schnellsten davon, dass du der richtige Betrieb bist."
+    },
+    {
+      "id": "w_p15",
+      "level": "profi",
+      "question": "Welche Rolle spielt die regionale Verankerung (z. B. „Wesel und Umgebung“) in der Website-Überschrift?",
+      "options": [
+        "Sie signalisiert Suchenden und Google sofort die regionale Nähe und Zuständigkeit",
+        "Sie schränkt den Kundenkreis unnötig ein und sollte immer weggelassen werden",
+        "Sie ist gesetzlich nur im Impressum der Website vorgeschrieben"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lokale Kunden wollen jemanden aus ihrer Region. Die Ortsnennung gibt sofort Sicherheit und stärkt gleichzeitig die regionale Google-Auffindbarkeit."
+    },
+    {
+      "id": "w_p16",
+      "level": "profi",
+      "question": "Warum ist ein Google-Unternehmensprofil für lokale Betriebe genauso wichtig wie die eigene Website?",
+      "options": [
+        "Weil Google Maps bei lokaler Suche meist vor den regulären Website-Links auf dem Handy erscheint",
+        "Weil Google Websites ohne Maps-Profil nach 30 Tagen sperrt",
+        "Weil man nur mit einem Google-Profil Rechnungen schreiben kann"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google Maps dominiert den Smartphone-Bildschirm. Website und Google-Profil gehören fest zusammen, um Kunden lückenlos abzuholen."
+    },
+    {
+      "id": "w_p17",
+      "level": "profi",
+      "question": "Was passiert mit Kundenanfragen, wenn die Öffnungszeiten im Google-Profil nicht stimmen?",
+      "options": [
+        "Kunden rufen verärgert bei einem Konkurrenten an, der verlässlich erreichbar ist",
+        "Google leitet den Anruf automatisch auf die private Handynummer um",
+        "Die Kunden hinterlassen aus Mitleid eine positive 5-Sterne-Bewertung"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer vor verschlossener Tür steht oder niemanden erreicht, wählt sofort die nächste Nummer in der Google-Liste."
+    },
+    {
+      "id": "w_p18",
+      "level": "profi",
+      "question": "Welche Aufgaben übernimmt Firmenflow laut Artikel bei der Erstellung einer neuen Website?",
+      "options": [
+        "Aufbau, verständliche Texte schreiben, technische Umsetzung und auf Wunsch Fotos vor Ort",
+        "Nur das Versenden von automatischen Mahnungen",
+        "Ausschließlich das Schalten teurer Google-Werbeanzeigen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Firmenflow übernimmt den kompletten Prozess: Struktur, Texte, Technik und auf Wunsch sogar authentische Fotos direkt im Betrieb."
+    },
+    {
+      "id": "w_p19",
+      "level": "profi",
+      "question": "Welcher Grundsatz gilt für den Austausch und die Zusammenarbeit mit Firmenflow?",
+      "options": [
+        "Alles unverbindlich und Persönlich mit Manu",
+        "Alles streng anonym über ein externes Callcenter",
+        "Ausschließlich über ein unpersönliches Support-Ticketsystem"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bei Firmenflow gibt es kein Agenturtheater. Die Beratung und Umsetzung erfolgt immer direkt und Persönlich mit Manu."
+    },
+    {
+      "id": "w_p20",
+      "level": "profi",
+      "question": "Was ist das Hauptfazit des Artikels über veraltete Websites lokaler Betriebe?",
+      "options": [
+        "Gute Handwerksarbeit verdient einen Auftritt, der neue Kunden anzieht statt sie wegzuschicken",
+        "Lokale Handwerker brauchen in der heutigen Zeit überhaupt keine Website mehr",
+        "Nur weltweite Großkonzerne müssen auf mobile Ladezeiten achten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Deine Arbeit ist erstklassig – und genau das muss deine Website Neukunden auf dem Handy innerhalb von zwei Sekunden beweisen."
     }
   ]
 }
