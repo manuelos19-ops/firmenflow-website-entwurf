@@ -49,9 +49,14 @@ const FAQ_ITEMS: FaqItem[] = [
       "Nein. Ausnahmslos 0 % Cloud. FlowScreen arbeitet zu 100 % lokal auf deinem Rechner. Es gibt keinen Telemetrie-Zwang, keinen Login-Account und keine externen Server, die deine Bilddaten sehen. Das macht FlowScreen absolut DSGVO-konform für sensible Betriebs- und Kundendaten.",
   },
   {
+    question: "Was ist der Schnellmodus (Strg+M)?",
+    answer:
+      "Der Schnellmodus ist neu in v1.2.0: Du ziehst mit dem Hotkey Strg+M eine Auswahl auf – und sie landet sofort als Datei auf der Festplatte, ganz ohne Editor. Ordner, Dateiname-Prefix, Format (PNG/JPEG) und Qualität stellst du einmalig im eigenen Schnellmodus-Tab ein. Ideal, wenn du viele Screenshots für Dokus oder Tickets brauchst.",
+  },
+  {
     question: "Wie funktionieren die Updates?",
     answer:
-      "FlowScreen prüft im Hintergrund automatisch über unser öffentliches GitHub-Repository, ob eine neue Version veröffentlicht wurde. Wenn ein Update bereitsteht, wirst du direkt in der App informiert und kannst es mit einem Klick laden und installieren.",
+      "FlowScreen prüft max. 1x am Tag automatisch über unser öffentliches GitHub-Repository, ob eine neue Version da ist – auch ohne offenen Editor (Dialog + Tray-Hinweis). Die Installer-Version lädt das Update im Hintergrund und installiert es per Klick. Die Portable-Version kann sich nicht selbst ersetzen und verlinkt stattdessen auf die Download-Seite. Jedes Update lässt sich überspringen oder auf Später schieben; übersprungene Versionen holst du in den Einstellungen jederzeit zurück.",
   },
   {
     question: "Was bedeutet die Meldung beim ersten Start unter Windows?",
@@ -61,7 +66,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Was ist der Unterschied zwischen Installer und Portable?",
     answer:
-      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und unterstützt automatische Updates. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick.",
+      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und installiert Updates automatisch per Klick. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick – und meldet neue Versionen mit Link auf die Download-Seite. Beide prüfen max. 1x am Tag und lassen sich Updates überspringen.",
   },
   {
     question: "Läuft FlowScreen auch unter Windows 10?",
@@ -391,6 +396,21 @@ export function FlowscreenView() {
               </p>
             </div>
 
+            <div className="p-8 rounded-3xl bg-gradient-to-br from-[var(--color-coral)]/12 via-white to-[var(--color-plum)]/10 border-2 border-[var(--color-coral)]/40 shadow-md hover:shadow-lg transition-shadow space-y-4 relative">
+              <span className="absolute -top-3 left-6 rounded-full bg-[var(--color-coral)] px-3 py-0.5 text-[11px] font-extrabold uppercase tracking-wider text-white shadow">
+                Neu in v{FLOWSCREEN_VERSION}
+              </span>
+              <FlowscreenIcon name="screenshot-aufnahme" size={72} decorative />
+              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
+                ⚡ Schnellmodus: Strg+M
+              </h3>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                Auswahl aufziehen – <strong>sofort als Datei gespeichert</strong>, ganz ohne Editor.
+                Eigener Ordner, Dateiname, PNG/JPEG. Perfekt für: schnell 20 Screenshots für Doku & Tickets,
+                ohne einen einzigen Klick zu viel.
+              </p>
+            </div>
+
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
               <FlowscreenIcon name="schrittzaehler" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
@@ -448,46 +468,7 @@ export function FlowscreenView() {
           </div>
         </div>
 
-        {/* 3-STEP WORKFLOW */}
-        <div className="rounded-3xl bg-stone-900 text-white p-8 sm:p-14 lg:p-16 space-y-12 shadow-xl">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[var(--color-coral)]">
-              Workflow in Sekundenschnelle
-            </p>
-            <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight">
-              In 3 Schritten zum Kunden-Wow.
-            </h2>
-            <p className="text-sm sm:text-base text-stone-300">
-              Vom einfachen Schnappschuss zur professionellen Dokumentation in unter fünf Sekunden.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-4xl font-display font-extrabold text-[var(--color-coral)]">01</div>
-              <h3 className="text-lg font-bold text-white">Aufnehmen</h3>
-              <p className="text-sm text-stone-300 leading-relaxed">
-                Drücke die Druck-Taste oder wähle mit der Maus den exakten Fensterbereich oder Desktop-Ausschnitt.
-              </p>
-            </div>
-
-            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-4xl font-display font-extrabold text-[var(--color-plum-light)]">02</div>
-              <h3 className="text-lg font-bold text-white">Veredeln</h3>
-              <p className="text-sm text-stone-300 leading-relaxed">
-                Aktiviere das Canvas-Mockup, klicke 1-2 Schritte ein und verpixle vertrauliche Zahlen mit der Zensur.
-              </p>
-            </div>
-
-            <div className="space-y-4 bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-4xl font-display font-extrabold text-emerald-400">03</div>
-              <h3 className="text-lg font-bold text-white">Kopieren &amp; Teilen</h3>
-              <p className="text-sm text-stone-300 leading-relaxed">
-                Mit einem Klick in die Zwischenablage kopieren und direkt in Slack, E-Mail oder Angebot einfügen.
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* 3-STEP WORKFLOW – entfernt: unnötiger Part laut Manu (21.09.2026) */}
 
         {/* DOWNLOAD OPTIONS & SYSTEM REQS */}
         <div id="download" className="space-y-12">

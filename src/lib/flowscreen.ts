@@ -1,6 +1,6 @@
-export const FLOWSCREEN_VERSION = "1.1.1";
-export const FLOWSCREEN_SIZE_LABEL = "~80 MB";
-export const FLOWSCREEN_SIZE_LABEL_SHORT = "80 MB";
+export const FLOWSCREEN_VERSION = "1.2.0";
+export const FLOWSCREEN_SIZE_LABEL = "~84 MB";
+export const FLOWSCREEN_SIZE_LABEL_SHORT = "84 MB";
 export const FLOWSCREEN_OS_LABEL = "Windows 11 & Windows 10 (64-Bit)";
 
 export const FLOWSCREEN_GITHUB_OWNER = "manuelos19-ops";
@@ -9,16 +9,27 @@ export const FLOWSCREEN_RELEASES_URL = `https://github.com/${FLOWSCREEN_GITHUB_O
 export const FLOWSCREEN_RELEASE_TAG_URL = `https://github.com/${FLOWSCREEN_GITHUB_OWNER}/${FLOWSCREEN_GITHUB_REPO}/releases/tag/v${FLOWSCREEN_VERSION}`;
 
 /**
- * SHA256-Hashes der Release-Dateien v1.1.1.
- * Quelle: GitHub Releases API `digest`-Feld (Stand 17.09.2026).
+ * SHA256-Hashes der Release-Dateien v1.2.0.
+ * Quelle: lokale dist-Builds (Stand 21.09.2026).
  * Bei jedem neuen Release HIER + in der Verify-Seite aktualisieren.
  */
 export const FLOWSCREEN_HASHES = {
-  setup: "e846f02e0fa5e50e130f5074af4658a989f6aef1c328b5710be2823e48ac552e",
-  portable: "777bce14e0fa62f6a2d0145795430fa4d4a20f1d438e687085a546fdf8f5f461",
+  setup: "ad0c0f429b85fd9bd35c93144b4acfc9d6a5528b7b602ffd4dde0b9c6dfdbbfa",
+  portable: "3eaca2c966a17043677b45126be0266b1039da86b46ceedcf6c293cc12fe7eec",
 } as const;
 
 export const FLOWSCREEN_CHANGELOG = [
+  {
+    version: "1.2.0",
+    date: "21.09.2026",
+    title: "Schnellmodus, Update-Dialoge & Portable-Download",
+    items: [
+      "Schnellmodus (Strg+M): Auswahl direkt als Datei speichern, ohne Editor",
+      "Auto-Updates max. 1x/Tag mit Dialog, Tray-Hinweis, Überspringen & Später",
+      "Portable meldet neue Versionen mit Link auf die Download-Seite",
+      "Tray-Klick öffnet nur den Editor, kein Autostart-Snip mehr",
+    ],
+  },
   {
     version: "1.1.1",
     date: "17.09.2026",
@@ -48,19 +59,18 @@ export const FLOWSCREEN_FILE_NAMES = {
 } as const;
 
 export const FLOWSCREEN_FILE_SIZES = {
-  setup: 83502523,
-  portable: 83126383,
+  setup: 83559938,
+  portable: 83183964,
 } as const;
 
 /**
- * VirusTotal-Ergebnis (manuell verifiziert, Stand 17.09.2026).
- * Setup v1.1.1: 0/46 Erkennungen. Portable v1.1.1: 0/44 Erkennungen.
- * Hinweis: Viele Scanner waren zum Pruefzeitpunkt noch im Timeout,
- * daher faellt der Nenner kleiner aus als bei v1.1.0 (0/67 bzw. 0/66).
+ * VirusTotal-Ergebnis v1.2.0 (API-Upload + Analyse, Stand 21.09.2026).
+ * Setup: 0/68 Erkennungen (1 Timeout: Skyhigh). Portable: 0/65 (4 Timeouts).
+ * Timeouts = Scanner hat 83 MB nicht im Zeitfenster geschafft, kein Treffer.
  */
 export const FLOWSCREEN_VIRUSTOTAL = {
-  portable: { clean: 44, total: 44, verifiedAt: "17.09.2026" },
-  setup: { clean: 46, total: 46, verifiedAt: "17.09.2026" },
+  portable: { clean: 65, total: 65, verifiedAt: "21.09.2026" },
+  setup: { clean: 68, total: 68, verifiedAt: "21.09.2026" },
 } as const;
 
 /** VirusTotal-Analyseseite für einen Datei-Hash (Datei-Upload NICHT nötig zum Ansehen). */
