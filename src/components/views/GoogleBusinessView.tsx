@@ -746,6 +746,47 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           </div>
         </div>
 
+        {/* RATGEBER & SELBST-CHECK HIGHLIGHT - Lokale Sichtbarkeit */}
+        <div className="g360-card-reveal p-8 sm:p-12 rounded-[2.5rem] bg-gradient-to-b from-white via-white to-[var(--color-paper)] border border-[var(--color-line)] shadow-md space-y-6 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--color-line)] pb-5">
+            <div className="space-y-1">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+                <FirmenflowIcon name="struktur-wireframe" size={18} decorative />
+                <span>Ratgeber &amp; Selbst-Check · Lokale Sichtbarkeit</span>
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-display font-bold text-[var(--color-ink)]">
+                Warum dein Betrieb bei Google Maps nicht gefunden wird
+              </h3>
+            </div>
+            <span className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[var(--color-paper)] border border-[var(--color-line)] text-xs font-mono font-bold text-[var(--color-plum)]">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+              Inkl. 2-Minuten-Quiz
+            </span>
+          </div>
+
+          <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
+            Ein Kunde steht 400 Meter von deiner Werkstatt entfernt, sucht auf dem Smartphone nach deiner Leistung und bekommt drei Mitbewerber angezeigt? In diesem ausführlichen Ratgeber erfährst du die häufigsten Ursachen für das Google-Verschwinden – und kannst dein Wissen im <strong>interaktiven Kompakt- &amp; Meister-Check</strong> direkt selbst auf die Probe stellen.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
+            <FirmenflowButton
+              href="/ratgeber/google-maps-nicht-gefunden"
+              buttonIcon="details"
+              subline="5 &amp; 10 Fragen Selbst-Check"
+            >
+              Ratgeber lesen &amp; Quiz starten
+            </FirmenflowButton>
+
+            <Link
+              href="/ratgeber"
+              className="text-xs sm:text-sm font-bold text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors inline-flex items-center gap-1"
+            >
+              <span>Alle Ratgeber zu Website &amp; Google ansehen</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+
         {/* CLOSING CTA CARD - High Converting Finish */}
         <div className="g360-card-reveal relative bg-gradient-to-b from-[var(--color-plum)] to-[#240632] text-white rounded-[2.5rem] p-8 sm:p-16 shadow-2xl text-center max-w-4xl mx-auto space-y-6 overflow-hidden border border-white/20">
           <div className="absolute -top-32 -left-32 w-80 h-80 bg-[var(--color-coral)]/25 rounded-full blur-3xl pointer-events-none" />

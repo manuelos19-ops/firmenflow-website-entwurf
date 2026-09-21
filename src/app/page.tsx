@@ -11,6 +11,7 @@ import { ServiceOverview } from "@/components/sections/ServiceOverview";
 import { WebsitePreise } from "@/components/sections/WebsitePreise";
 import { Process } from "@/components/sections/Process";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
+import { RatgeberTeaserSection } from "@/components/sections/RatgeberTeaserSection";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function HomePage() {
@@ -30,6 +31,7 @@ export default function HomePage() {
       <WebsitePreise />
       <GoogleBusinessPilot />
       <ProjectsShowcase />
+      <RatgeberTeaserSection />
       <DirectWithManu />
       <Process />
       <Faq />

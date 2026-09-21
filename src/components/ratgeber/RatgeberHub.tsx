@@ -161,6 +161,22 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
 
       {/* Hauptspalte: Suche + Artikel-Ansicht */}
       <section className="space-y-6">
+        {/* Feature-Banner: Interaktive Quizzes */}
+        <div className="rounded-3xl border border-[var(--color-line)] bg-gradient-to-r from-[var(--color-plum)]/[0.05] via-[var(--color-coral)]/[0.08] to-transparent p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+          <div className="space-y-1.5">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[var(--color-line)] text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+              Neu: Interaktive Selbst-Checks
+            </span>
+            <p className="text-sm sm:text-base font-bold text-[var(--color-ink)] leading-snug">
+              Praxiswissen zum Mitmachen: In jedem Beitrag steckt ein interaktiver Kompakt- &amp; Meister-Check mit wechselnden Fragen.
+            </p>
+          </div>
+          <span className="shrink-0 text-xs font-mono font-bold text-[var(--color-plum)] bg-white px-3.5 py-2 rounded-xl border border-[var(--color-line)] shadow-sm">
+            Kostenlos &amp; ohne Anmeldung
+          </span>
+        </div>
+
         {/* Suchleiste */}
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[var(--color-muted)]">
@@ -245,6 +261,12 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                     href={`/ratgeber/${post.slug}`}
                     className="block relative aspect-[16/9] w-full overflow-hidden bg-[var(--color-paper)]"
                   >
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-white/50 text-[var(--color-ink)] font-mono text-xs font-bold shadow-md">
+                        <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+                        Inkl. interaktivem Quiz
+                      </span>
+                    </div>
                     <Image
                       src={post.image}
                       alt={post.imageAlt || post.title}
@@ -255,7 +277,7 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                   </Link>
                 )}
                 <div className="p-7 sm:p-9 space-y-4">
-                  {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit */}
+                  {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit · Quiz-Badge */}
                   <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-medium text-[var(--color-muted)]">
                     <span className="px-2.5 py-0.5 rounded-full bg-[var(--color-paper)] text-[var(--color-plum)] font-bold">
                       {post.category}
@@ -266,6 +288,8 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                     <span>von Manu</span>
                     <span>·</span>
                     <span>{post.readingMinutes} Min. Lesezeit</span>
+                    <span>·</span>
+                    <span className="text-[var(--color-coral)] font-bold">⚡ 5 &amp; 10 Fragen Check</span>
                   </div>
 
                   <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] leading-tight">
@@ -281,14 +305,15 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                     {post.description}
                   </p>
 
-                  {/* Nur ein einziger Button: zum Lesen! */}
+                  {/* 3D-Button: zum Lesen & Quiz starten! */}
                   <div className="pt-2">
                     <FirmenflowButton
                       href={`/ratgeber/${post.slug}`}
-                      buttonIcon="details"
+                      buttonIcon="flowscreen"
                       size="compact"
+                      subline="Inkl. interaktivem Selbst-Check"
                     >
-                      Beitrag lesen
+                      Beitrag lesen &amp; Quiz starten
                     </FirmenflowButton>
                   </div>
                 </div>
