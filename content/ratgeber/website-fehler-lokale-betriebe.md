@@ -9,11 +9,11 @@ imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Ladezeit-Tacho, Goog
 featured: "true"
 ---
 
-Deine Stammkunden wissen, was sie an dir haben. Sie kennen deine Zuverlässigkeit, deine saubere Arbeit und rufen dich an, wenn etwas repariert, gebaut oder gebacken werden muss.
+Deine Stammkunden wissen, was sie an dir haben. Sie rufen dich an, wenn etwas repariert, gebaut oder gebacken werden muss, und sie fragen vorher nicht nach einer Website.
 
 Schwieriger wird es bei Menschen, die neu in deinen Ort gezogen sind oder dringend einen Fachbetrieb in ihrer Nähe suchen. Diese Leute fragen selten den Nachbarn über den Zaun. Sie nehmen das Smartphone aus der Tasche und suchen bei Google.
 
-In genau diesem Moment entscheidet sich alles. Diese Kunden kennen deine jahrelange Erfahrung und deinen Meisterbrief noch nicht. Sie sehen im ersten Augenblick nur deinen Auftritt auf dem Handybildschirm. Ist die Seite unübersichtlich, langsam oder veraltet, wischt der Daumen in zwei Sekunden weiter zur Konkurrenz. Du merkst davon überhaupt nichts, weil dein Telefon einfach stumm bleibt.
+Diese Kunden kennen deine Jahre im Betrieb und deinen Meisterbrief noch nicht. Sie sehen im ersten Augenblick nur deinen Auftritt auf dem Handybildschirm. Ist die Seite unübersichtlich, langsam oder veraltet, wischt der Daumen in zwei Sekunden weiter zur Konkurrenz. Du merkst davon überhaupt nichts, weil dein Telefon einfach stumm bleibt.
 
 Aus meiner täglichen Arbeit mit Betrieben in Wesel und am Niederrhein fallen mir fünf Fehler immer wieder auf.
 
@@ -21,11 +21,11 @@ Aus meiner täglichen Arbeit mit Betrieben in Wesel und am Niederrhein fallen mi
 
 Wenn jemandem am Wochenende ein Rohr platzt, das Garagentor streikt oder jemand morgens schnell die Öffnungszeiten deiner Bäckerei nachsehen will, setzt sich niemand an einen Schreibtisch vor einen Computer. Fast jeder sucht unterwegs oder vom Sofa aus auf dem Handy.
 
-Das Statistische Bundesamt (Destatis) erfasst diese Entwicklung seit Jahren in seinen Berichten zur Internetnutzung: Das Smartphone ist in Deutschland das mit Abstand wichtigste Gerät für die tägliche Informationssuche geworden.
+Das Statistische Bundesamt erfasst diese Entwicklung seit Jahren: 97 Prozent der Menschen in Deutschland nutzen das Internet. Wer heute einen Betrieb sucht, sucht ihn online, und in den allermeisten Fällen unterwegs auf dem Telefon.
 
-Wenn deine Seite auf dem Telefon erst einmal fünf oder acht Sekunden lädt, während weiße Flächen stehen bleiben, wartet heute niemand mehr. Google belegt in seinen technischen Analysen zu Website-Geschwindigkeiten auf web.dev sehr deutlich, dass mehr als die Hälfte aller mobilen Besucher eine Seite sofort wieder schließen, wenn der Seitenaufbau länger als drei Sekunden dauert.
+Wenn deine Seite auf dem Telefon erst einmal fünf oder acht Sekunden lädt, während weiße Flächen stehen bleiben, wartet heute niemand mehr. In Googles technischer Dokumentation auf web.dev steht dazu ein Wert, den die BBC an der eigenen Website gemessen hat: Für jede zusätzliche Sekunde Ladezeit verlor sie weitere 10 Prozent ihrer Nutzer.
 
-Jede Sekunde Wartezeit kostet dich Kunden. Eine Handwerker-Website muss auf dem Smartphone sofort reagieren.
+Auf dem Smartphone entscheiden diese Sekunden darüber, ob der Kunde deine Seite überhaupt zu sehen bekommt.
 
 ## Fehler 2: Versteckte Telefonnummern und komplizierte Formulare
 
@@ -43,7 +43,7 @@ Wenn der Weg zu dir Mühe kostet, verliert der Kunde die Geduld und ruft den nä
 
 ## Fehler 3: Seelenlose Katalogfotos statt deiner echten Werkstatt
 
-Handwerk und lokale Betriebe leben von Vertrauen. Niemand lässt jemanden in sein Haus, wenn das Bauchgefühl nicht stimmt.
+Niemand lässt einen Fremden in sein Haus, wenn das Bauchgefühl nicht stimmt. Genau darüber entscheiden deine Bilder.
 
 Ein großer Fehler sind gekaufte Katalogfotos. Viele kennen diese Bilder: Drei strahlende Fotomodelle mit blütenweißen Bauhelmen, die noch nie ein Werkzeug in der Hand hatten.
 
@@ -55,7 +55,7 @@ Viele Unternehmer pflegen ihre Website, vergessen aber ihr Google-Unternehmenspr
 
 Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit drei Betrieben an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
 
-In der großen jährlichen Konsumentenbefragung von BrightLocal gaben 97 Prozent der Befragten an, vor einer Entscheidung die Kundenbewertungen lokaler Betriebe zu lesen. 80 Prozent der Kunden entscheiden sich zudem bevorzugt für Betriebe, die auf Bewertungen auch antworten. Deine eigene Website und dein Google-Kartenprofil gehören fest zusammen.
+In der jährlichen Konsumentenbefragung von BrightLocal, zuletzt im Februar 2026 mit 1.002 Befragten in den USA, gaben 97 Prozent an, vor einer Entscheidung die Bewertungen lokaler Betriebe zu lesen. 80 Prozent wählen eher einen Betrieb, der auf alle seine Bewertungen antwortet. Eine vergleichbare Erhebung für Deutschland gibt es in dieser Größe nicht, das Verhalten dürfte hier aber ähnlich sein.
 
 Wenn diese Aufgaben neben dem Tagesgeschäft liegen bleiben, unterstütze ich dich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360). Ich richte dein Google-Profil ein, bringe es auf Stand und kümmere mich um die laufende Pflege.
 
@@ -86,7 +86,7 @@ Wenn du feststellst, dass deine Seite vor allem für den Computerbildschirm von 
 
 ## Wie wirkt dein Betrieb aktuell auf Neukunden?
 
-Wenn du wissen möchtest, wie deine Website und dein Google-Profil im Moment auf Neukunden wirken: Ich nehme mir gerne die Zeit für eine kostenlose Video-Einschätzung von drei bis fünf Minuten.
+Für eine kostenlose Video-Einschätzung von drei bis fünf Minuten nehme ich mir gerne die Zeit.
 
 Ich rufe deine Seite auf, schaue sie mir wie ein Kunde an und zeige dir im Video ganz sachlich, an welchen Stellen Kunden abspringen und was du verbessern kannst.
 
@@ -100,7 +100,7 @@ Bei Firmenflow kümmere ich mich um [neue Websites und die Überarbeitung besteh
 
 ## Geprüfte Quellen und Belege
 
-1. **Google Web.dev:** [Analyse zu Ladezeiten und Nutzerverhalten](https://web.dev/learn/performance/why-speed-matters) (Offizielle Dokumentation von Google zu Performance und Nutzerabbrüchen bei mobilen Ladezeiten)
-2. **BrightLocal:** [Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/) (Umfassende Konsumentenstudie zu Bewertungen und Google-Profilen bei lokalen Betrieben)
-3. **Statistisches Bundesamt (Destatis):** [Erhebungen zur IT- und Internetnutzung in Deutschland](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/IT-Nutzung/_inhalt.html) (Offizielle statistische Daten zur mobilen Gerätenutzung in der Bevölkerung)
+1. **Google Web.dev:** [Why speed matters](https://web.dev/learn/performance/why-speed-matters) (Offizielle Dokumentation von Google zu Ladezeit und Nutzerverhalten, mit den dort genannten Messwerten von BBC, Vodafone und Rakuten)
+2. **BrightLocal:** [Local Consumer Review Survey 2026](https://www.brightlocal.com/research/local-consumer-review-survey/) (Befragung von 1.002 Verbraucherinnen und Verbrauchern in den USA, veröffentlicht am 11. Februar 2026)
+3. **Statistisches Bundesamt (Destatis):** [Erhebungen zur IT- und Internetnutzung in Deutschland](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/IT-Nutzung/_inhalt.html) (Offizielle Daten zur Internetnutzung der Bevölkerung)
 4. **Google Unternehmensprofil:** [Google Business Profile Plattform](https://business.google.com/de/business-profile/) (Zentrale Plattform für Unternehmensdaten und die Sichtbarkeit in Google Maps)
