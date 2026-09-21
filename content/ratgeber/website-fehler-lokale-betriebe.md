@@ -35,9 +35,13 @@ Trotzdem muss man auf vielen Seiten regelrecht suchen. Die Telefonnummer steht i
 
 Wer lokal auf dem Smartphone sucht, hat ein konkretes Anliegen und will schnell eine Lösung. Mache die Kontaktaufnahme passend zum Anliegen einfach:
 
-* Ein gut sichtbarer Knopf zum Anrufen, der sich direkt mit einem Daumentipp wählen lässt.
-* Eine unkomplizierte Nachricht per WhatsApp für schnelle Rückfragen.
-* Klare Beschriftungen auf Knöpfen, zum Beispiel „Reparatur anfragen“ statt eines unpersönlichen „Senden“.
+::karten::
+
+| Kontaktweg | So sieht es auf dem Handy aus |
+| --- | --- |
+| Anrufen | Ein gut sichtbarer Knopf, der sich direkt mit einem Daumentipp wählen lässt |
+| WhatsApp | Eine unkomplizierte Nachricht für schnelle Rückfragen, ohne Formular |
+| Beschriftung | „Reparatur anfragen“ auf dem Knopf statt eines unpersönlichen „Senden“ |
 
 Wenn der Weg zu dir Mühe kostet, verliert der Kunde die Geduld und ruft den nächsten Betrieb an.
 

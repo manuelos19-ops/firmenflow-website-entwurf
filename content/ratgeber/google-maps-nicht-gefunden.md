@@ -27,6 +27,8 @@ Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zu
 
 Was im Kartenausschnitt zu deinem Betrieb steht, stammt aus deinem Google-Unternehmensprofil, im Alltag meist kurz Google-Profil genannt. Google erklärt auf seiner eigenen Hilfeseite ziemlich offen, wovon es abhängt, wer dort auftaucht:
 
+::karten: Die drei Faktoren nennt Google selbst in seiner Hilfe zum Unternehmensprofil.::
+
 | Faktor | Was Google prüft | Was du beeinflussen kannst |
 | --- | --- | --- |
 | Relevanz | Wie gut dein Profil zu dem passt, was jemand eingetippt hat | Kategorie, Leistungen, Beschreibung |

@@ -19,23 +19,36 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
   const [animate, setAnimate] = useState(false);
   const [inView, setInView] = useState(false);
 
+  // Erst im nächsten Frame beobachten, damit die Startposition (scaleX 0)
+  // sicher einen eigenen Paint bekommt. Sonst landen "is-js" und "is-in" im
+  // selben Render und der Browser überspringt die Animation.
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setAnimate(true);
+  }, []);
+
+  useEffect(() => {
+    if (!animate) return;
     const el = wrapRef.current;
     if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setInView(true);
-          io.disconnect();
-        }
-      },
-      { threshold: 0.2 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
+    let io: IntersectionObserver | undefined;
+    const raf = requestAnimationFrame(() => {
+      io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            setInView(true);
+            io?.disconnect();
+          }
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+      );
+      io.observe(el);
+    });
+    return () => {
+      cancelAnimationFrame(raf);
+      io?.disconnect();
+    };
+  }, [animate]);
 
   const valueIndex = head.length - 1;
   const items = rows.map((r) => ({

@@ -44,6 +44,7 @@ export type RatgeberSection =
   | { kind: "list"; items: string[]; variant: "check" | "bullet" }
   | { kind: "quote"; html: string }
   | { kind: "chart"; head: string[]; rows: string[][]; caption?: string }
+  | { kind: "cards"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "cta"; html: string };
 
 const RATGEBER_DIR = "content/ratgeber";
@@ -118,6 +119,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   let paraBuffer: string[] = [];
   let tableRows: string[][] = [];
   let chartNext: string | null = null;
+  let cardsNext: string | null = null;
   let headingCount = 0;
   let leadDone = false;
 
@@ -175,6 +177,11 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       chartNext = null;
       return;
     }
+    if (cardsNext !== null) {
+      sections.push({ kind: "cards", head, rows: body, caption: cardsNext || undefined });
+      cardsNext = null;
+      return;
+    }
     sections.push({ kind: "text", html: table });
   };
   for (const line of lines) {
@@ -215,6 +222,14 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       closeList();
       closeTable();
       chartNext = (chartMark[1] || "").trim();
+      continue;
+    }
+    const cardsMark = trimmed.match(/^::karten(?::\s*(.*?))?::$/);
+    if (cardsMark) {
+      flushPara();
+      closeList();
+      closeTable();
+      cardsNext = (cardsMark[1] || "").trim();
       continue;
     }
     if (/^\|/.test(trimmed)) {
