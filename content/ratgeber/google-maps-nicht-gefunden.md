@@ -2,6 +2,7 @@
 title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
 description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, plus Selbsttest."
 date: "2026-09-21"
+updated: "2026-09-22"
 category: "Lokale Sichtbarkeit"
 tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
 image: "/images/ratgeber/google-maps-nicht-gefunden.webp"
@@ -20,6 +21,7 @@ Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zu
 * Google entscheidet über Relevanz, Entfernung und Bekanntheit, wer im Kartenausschnitt erscheint. Zwei davon hängen an deinem Profil.
 * Am häufigsten fehlt es an einem dieser fünf Punkte: kein eigenes Profil, falsche Öffnungszeiten, unpassende Kategorie, keine Fotos, zu wenige Bewertungen.
 * Mit dem Selbsttest am Ende findest du in fünf Minuten heraus, welcher Punkt bei dir offen ist.
+* In meiner eigenen Erhebung über 198 Weseler Betriebe hat fast jeder zweite mindestens eine dieser Lücken.
 
 ## Was Google entscheidet, wenn jemand in deiner Nähe sucht
 
@@ -70,6 +72,37 @@ Google formuliert es in seiner Hilfe so: Je mehr Rezensionen und positive Bewert
 Eine Untersuchung von digital lokal hat im Juli und August 2025 insgesamt 1.009 Betriebe aus neun Branchen im Raum Stuttgart ausgewertet, darunter Elektriker, Dachdecker und Zimmerer sowie die SHK-Branche. Im Schnitt kam ein Betrieb auf 63 Bewertungen. Rechnet man die Gastronomie heraus, die mit Abstand vorne liegt, bleiben rund 28 Bewertungen. Die durchschnittliche Bewertung lag branchenübergreifend bei 4,52 Sternen.
 
 Wenn du bei drei Bewertungen stehst und der Wettbewerber bei dreißig, entscheidet das mit, wer oben in der Karte auftaucht. Und es entscheidet, wen der Kunde anruft, wenn er beide sieht.
+
+## Wie es in Wesel tatsächlich aussieht
+
+Damit das nicht bei allgemeinen Zahlen bleibt, habe ich am 22. September 2026 nachgesehen, wie es vor der eigenen Haustür steht. Über die Schnittstelle von Google Maps habe ich zwölf Branchen im Raum Wesel abgefragt und die 198 Betriebe ausgewertet, die Google dabei ausgibt.
+
+**97 dieser 198 Betriebe haben mindestens eine der Lücken aus diesem Artikel.** Das ist fast jeder zweite.
+
+Im Einzelnen: 48 Betriebe (24 Prozent) haben keine Website im Profil hinterlegt. Bei 26 Betrieben (13 Prozent) fehlen die Öffnungszeiten. 12 Betriebe haben keine einzige Bewertung, 57 haben weniger als zehn. Der Median liegt bei 26 Bewertungen, der Sterneschnitt bei 4,61.
+
+Wie weit die Branchen auseinanderliegen, ist der eigentliche Befund:
+
+| Branche | Betriebe | Bewertungen im Median |
+| --- | --- | --- |
+| Fliesenleger | 9 | 4 |
+| Elektriker | 19 | 6 |
+| Tischler und Schreiner | 8 | 6 |
+| Maler und Lackierer | 13 | 8 |
+| Physiotherapie | 20 | 11 |
+| Dachdecker | 13 | 12 |
+| Garten- und Landschaftsbau | 20 | 12 |
+| Heizung und Sanitär | 20 | 25 |
+| Fahrschule | 16 | 49 |
+| KFZ-Werkstatt | 20 | 50 |
+| Friseur | 20 | 86 |
+| Bäckerei | 20 | 132 |
+
+Eine Bäckerei in Wesel kommt im Mittel auf 132 Bewertungen, ein Elektriker auf 6. Dahinter steckt, wie oft Kunden von sich aus etwas schreiben: beim Bäcker jede Woche jemand, beim Elektriker einmal nach der Sanierung. Für dich heißt das: Im Handwerk liegst du mit zwanzig Bewertungen deutlich über dem Ortsschnitt. Als Bäckerei oder Friseur bist du damit unsichtbar.
+
+Zur Einordnung des Werts: Die eingangs genannte Stuttgarter Untersuchung kommt ohne Gastronomie auf rund 28 Bewertungen, mein Weseler Median liegt bei 26. Die Größenordnung passt also.
+
+Zwei Einschränkungen gehören dazu. Erstens zeigt diese Abfrage die Betriebe, die Google für diese Suchbegriffe ausgibt, nicht alle Betriebe, die es in Wesel gibt. Zweitens fehlen darin genau die Betriebe, die überhaupt kein Profil haben. Die echten Zahlen dürften also eher schlechter aussehen als meine.
 
 ## Deine Angaben müssen überall gleich stehen
 
@@ -125,3 +158,4 @@ Platz eins bei Google kann dir niemand seriös versprechen, ich auch nicht. Ein 
 2. **Google Unternehmensprofil-Hilfe:** [Richtlinien für die Präsentation Ihres Unternehmens auf Google](https://support.google.com/business/answer/3038177?hl=de) (Offizielle Vorgaben zur Auswahl von Haupt- und Zusatzkategorien)
 3. **digital lokal:** [Google-Bewertungen-Studie 2025](https://www.digital-lokal.de/blog/google-bewertungen-studie-2025/) (1.009 Betriebe aus neun Branchen im Raum Stuttgart, erhoben im Juli und August 2025)
 4. **Claneo mit Appinio:** [State of Search Studie 2025](https://www.claneo.com/de/state-of-search-studie/) (Panel-Befragung von 2.000 Personen, je 1.000 in Deutschland und den USA, erhoben am 1. und 2. April 2025)
+5. **Eigene Erhebung:** 198 Betriebe aus zwölf Branchen im Raum Wesel, abgefragt am 22. September 2026 über die Google Places API. Ausgewertet wurden Bewertungsanzahl, Sterneschnitt, hinterlegte Website und Öffnungszeiten.
