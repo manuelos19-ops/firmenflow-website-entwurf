@@ -115,6 +115,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   let inList = false;
   let listItems: string[] = [];
   let paraBuffer: string[] = [];
+  let tableRows: string[][] = [];
   let headingCount = 0;
   let leadDone = false;
 
@@ -150,11 +151,31 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       listItems = [];
     }
   };
+
+  const closeTable = () => {
+    if (tableRows.length === 0) return;
+    const [head, ...rest] = tableRows;
+    const body = rest.filter((r) => !r.every((c) => /^:?-{2,}:?$/.test(c)));
+    tableRows = [];
+    if (body.length === 0) return;
+    const th =
+      'class="text-left align-top font-display font-bold text-[var(--color-ink)] border-b-2 border-[var(--color-line)] py-3 pr-4 last:pr-0"';
+    const td =
+      'class="align-top text-[var(--color-ink)] border-b border-[var(--color-line)] py-3 pr-4 last:pr-0"';
+    const thead = `<thead><tr>${head.map((c) => `<th ${th}>${inlineMarkdown(c)}</th>`).join("")}</tr></thead>`;
+    const tbody = `<tbody>${body
+      .map((r) => `<tr>${r.map((c) => `<td ${td}>${inlineMarkdown(c)}</td>`).join("")}</tr>`)
+      .join("")}</tbody>`;
+    const table = `<div class="overflow-x-auto rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8"><table class="w-full border-collapse text-sm sm:text-base">${thead}${tbody}</table></div>`;
+    html.push(table);
+    sections.push({ kind: "text", html: table });
+  };
   for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed || trimmed === "---") {
       flushPara();
       closeList();
+      closeTable();
       continue;
     }
     const h2 = trimmed.match(/^##\s+(.+)/);
@@ -162,6 +183,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     if (h2) {
       flushPara();
       closeList();
+      closeTable();
       headingCount += 1;
       const id = slugify(h2[1]);
       headings.push({ id, text: h2[1], level: 2 });
@@ -172,11 +194,24 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     if (h3) {
       flushPara();
       closeList();
+      closeTable();
       const id = slugify(h3[1]);
       headings.push({ id, text: h3[1], level: 3 });
       const h = `<h3 id="${id}" class="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] scroll-mt-28 pt-2">${inlineMarkdown(h3[1])}</h3>`;
       html.push(h);
       sections.push({ kind: "text", html: h });
+      continue;
+    }
+    if (/^\|/.test(trimmed)) {
+      flushPara();
+      closeList();
+      tableRows.push(
+        trimmed
+          .replace(/^\|/, "")
+          .replace(/\|$/, "")
+          .split("|")
+          .map((c) => c.trim()),
+      );
       continue;
     }
     if (/^[-*]\s+/.test(trimmed)) {
@@ -193,6 +228,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     if (/^>\s?/.test(trimmed)) {
       flushPara();
       closeList();
+      closeTable();
       const quote = `<blockquote>${inlineMarkdown(trimmed.replace(/^>\s?/, ""))}</blockquote>`;
       html.push(quote);
       sections.push({ kind: "quote", html: quote });
@@ -201,6 +237,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     if (/^\d+[.)]\s+/.test(trimmed)) {
       flushPara();
       closeList();
+      closeTable();
       const p = `<p>${inlineMarkdown(trimmed)}</p>`;
       html.push(p);
       sections.push({ kind: "text", html: p });
@@ -209,12 +246,14 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     if (/^Autor:/.test(trimmed)) {
       flushPara();
       closeList();
+      closeTable();
       const p = `<p class="ratgeber-fine">${inlineMarkdown(trimmed)}</p>`;
       html.push(p);
       sections.push({ kind: "text", html: p });
       continue;
     }
     closeList();
+      closeTable();
     if (
       trimmed.startsWith("*„") ||
       trimmed.startsWith("*\"") ||
@@ -230,6 +269,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   }
   flushPara();
   closeList();
+      closeTable();
   return { html: html.join("\n"), headings, sections };
 }
 

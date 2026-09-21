@@ -32,6 +32,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       authors: ["Manuel Landeck"],
       images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Firmenflow`,
+      description: post.description,
+      images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
+    },
   };
 }
 
@@ -121,7 +127,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "BlogPosting",
     "@id": `${baseUrl}/ratgeber/${post.slug}#article`,
     headline: post.title,
     description: post.description,

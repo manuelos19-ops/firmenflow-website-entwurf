@@ -15,13 +15,21 @@ Genau das passiert jeden Tag, und es fällt niemandem auf, weil das Telefon einf
 
 Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zusammen mit deinem Ort ein, also zum Beispiel „Dachdecker Wesel“, „Bäckerei Hamminkeln“ oder „Physiotherapie Xanten“. Stehst du in den ersten drei Treffern auf der Karte?
 
+## Kurz gesagt
+
+* Google entscheidet über Relevanz, Entfernung und Bekanntheit, wer im Kartenausschnitt erscheint. Zwei davon hängen an deinem Profil.
+* Am häufigsten fehlt es an einem dieser fünf Punkte: kein eigenes Profil, falsche Öffnungszeiten, unpassende Kategorie, keine Fotos, zu wenige Bewertungen.
+* Mit dem Selbsttest am Ende findest du in fünf Minuten heraus, welcher Punkt bei dir offen ist.
+
 ## Was Google entscheidet, wenn jemand in deiner Nähe sucht
 
 Google erklärt das auf seiner eigenen Hilfeseite ziemlich offen. Drei Dinge bestimmen, wer im Kartenausschnitt auftaucht:
 
-* Relevanz: wie gut dein Profil zu dem passt, was jemand eingetippt hat.
-* Entfernung: wie weit dein Betrieb vom Suchenden weg ist.
-* Bekanntheit: wie bekannt dein Betrieb ist. Google zählt dazu unter anderem, wie viele Bewertungen du hast und wer im Netz auf dich verweist.
+| Faktor | Was Google prüft | Was du beeinflussen kannst |
+| --- | --- | --- |
+| Relevanz | Wie gut dein Profil zu dem passt, was jemand eingetippt hat | Kategorie, Leistungen, Beschreibung |
+| Entfernung | Wie weit dein Betrieb vom Suchenden entfernt ist | Nichts |
+| Bekanntheit | Wie bekannt dein Betrieb ist, unter anderem über Bewertungen und Verweise im Netz | Bewertungen, Einträge, Erwähnungen |
 
 An der Entfernung kann keiner etwas ändern, deine Werkstatt steht, wo sie steht. Die anderen beiden hängen daran, was in deinem Profil steht und was andere Leute über dich schreiben. Google schreibt dazu selbst, dass Betriebe mit korrekten und vollständigen Angaben eher in den lokalen Ergebnissen erscheinen. Das ist Fleißarbeit, und sie bleibt bei den meisten Betrieben liegen.
 
@@ -31,7 +39,7 @@ An der Entfernung kann keiner etwas ändern, deine Werkstatt steht, wo sie steht
 
 Google legt Einträge zum Teil selbst an, aus Kartendaten, alten Verzeichnissen und Hinweisen von Nutzern. Dein Betrieb kann also längst bei Google stehen, ohne dass du je etwas angelegt hast.
 
-Solange niemand die Inhaberschaft bestätigt hat, ist dieses Profil offen. Fremde können Öffnungszeiten ändern, eine andere Telefonnummer vorschlagen oder den Betrieb als dauerhaft geschlossen melden. Ich sehe regelmäßig Profile, die seit Jahren mitlaufen und denen niemand gehört. Der Inhaber weiß meistens nichts davon.
+Solange niemand die Inhaberschaft bestätigt hat, ist dieses Profil offen. Fremde können Öffnungszeiten ändern, eine andere Telefonnummer vorschlagen oder den Betrieb als dauerhaft geschlossen melden. Solche Profile laufen teils über Jahre mit, ohne dass der Inhaber überhaupt davon weiß.
 
 ### Grund 2: Die Öffnungszeiten stimmen nicht
 
@@ -78,6 +86,8 @@ Bei der Suche nach einem Restaurant oder einem Geschäft vor Ort führt der Weg 
 Verschoben hat sich die Art der Antwort. Google liefert immer mehr davon direkt in der Suche aus, ohne dass jemand eine Website öffnet: den Kartenausschnitt mit drei Betrieben, Sterne, Öffnungszeiten, einen Knopf zum Anrufen. Parallel wächst die Nutzung von KI-Chatbots. In derselben Befragung greifen 21 Prozent bei der Informationssuche darauf zurück, bei komplexeren Fragen liegen sie mit 38,55 Prozent fast gleichauf mit Google (40,29 Prozent).
 
 Was in deinem Profil steht, ist für viele Kunden damit schon die ganze Entscheidungsgrundlage. Deine Website bekommen sie in dem Moment gar nicht zu sehen. Eine gute Seite und ein leeres Google-Profil ergeben zusammen einen Betrieb, den niemand findet.
+
+Andersherum genauso: Wer dich über die Karte findet und dann auf einer langsamen Seite landet, springt dort ab. Die häufigsten Gründe dafür stehen in [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe).
 
 ## Der Fünf-Minuten-Selbsttest
 

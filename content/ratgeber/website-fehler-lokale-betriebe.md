@@ -57,6 +57,8 @@ Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bä
 
 In der jährlichen Konsumentenbefragung von BrightLocal, zuletzt im Februar 2026 mit 1.002 Befragten in den USA, gaben 97 Prozent an, vor einer Entscheidung die Bewertungen lokaler Betriebe zu lesen. 80 Prozent wählen eher einen Betrieb, der auf alle seine Bewertungen antwortet. Eine vergleichbare Erhebung für Deutschland gibt es in dieser Größe nicht, das Verhalten dürfte hier aber ähnlich sein.
 
+Warum Betriebe im Kartenausschnitt gar nicht erst auftauchen, habe ich getrennt aufgeschrieben: [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden).
+
 Wenn diese Aufgaben neben dem Tagesgeschäft liegen bleiben, unterstütze ich dich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360). Ich richte dein Google-Profil ein, bringe es auf Stand und kümmere mich um die laufende Pflege.
 
 ## Fehler 5: Begrüßungsfloskeln statt klarer Antworten
