@@ -26,7 +26,7 @@ export function FlowscreenTrustSection() {
             Geprüft sauber – verifiziere es selbst
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-muted)]">
-            Offizielle SHA256-Hashes · v{FLOWSCREEN_VERSION} · Kein Konto, keine Cloud
+            Offizielle SHA256-Hashes · v{FLOWSCREEN_VERSION}
           </p>
         </div>
       </div>
@@ -75,8 +75,7 @@ export function FlowscreenTrustSection() {
       </ul>
 
       <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-        Vom Inhaber persönlich geprüft und virenfrei – lade einfach herunter und lege los. Bei der
-        Windows-Warnung beim ersten Start: „Weitere Informationen“ → „Trotzdem ausführen“.
+        Von mir geprüft und virenfrei – lade einfach herunter und lege los.
       </p>
     </div>
   );

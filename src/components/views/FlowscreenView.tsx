@@ -156,8 +156,7 @@ export function FlowscreenView() {
           </div>
 
           <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
-            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL}. Beim ersten Start einmal: SmartScreen
-            → „Weitere Informationen“ → „Trotzdem ausführen“.
+            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL}
           </p>
 
           {/* Trust Pills */}
@@ -391,17 +390,6 @@ export function FlowscreenView() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
-              <FlowscreenIcon name="lupe-zoom" size={72} decorative />
-              <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
-                Lupen-Werkzeug &amp; Zoom
-              </h3>
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Kleine Menüeinträge, Schriftzüge oder UI-Details sofort ins Auge stechen lassen. Die Lupe hebt wichtige
-                Bereiche mit einem runden Zoom-Spotlight und Kontur hervor.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm hover:shadow-md transition-shadow space-y-4">
               <FlowscreenIcon name="vektor-editor" size={72} decorative />
               <h3 className="text-xl font-display font-bold text-[var(--color-ink)]">
                 Voller Vektor-Editor
@@ -552,8 +540,7 @@ export function FlowscreenView() {
           <div className="text-center pt-2 space-y-2">
             <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
               <strong className="text-[var(--color-ink)]">Für wen ist was?</strong> Fester Büro-PC → Setup. Laptop
-              ohne Admin-Rechte oder USB-Stick → Portable. Beim ersten Start einmal: „Weitere Informationen“ →{" "}
-              „Trotzdem ausführen“.
+              ohne Admin-Rechte oder USB-Stick → Portable.
             </p>
             <FlowscreenTrustSection />
             <a
@@ -668,10 +655,6 @@ export function FlowscreenView() {
           />
 
           <div className="space-y-4 max-w-2xl mx-auto relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90 border border-white/20">
-              <FlowscreenIcon name="app-logo" size={24} alt="FlowScreen" />
-              <span>Persönlich mit Manu · Firmenflow</span>
-            </div>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
               Mach deine Screenshots zum Aushängeschild.
             </h2>
