@@ -1,6 +1,6 @@
 ---
 title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
-description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, und ein Selbsttest fürs Handy."
+description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, plus Selbsttest."
 date: "2026-09-21"
 category: "Lokale Sichtbarkeit"
 tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
@@ -23,7 +23,7 @@ Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zu
 
 ## Was Google entscheidet, wenn jemand in deiner Nähe sucht
 
-Google erklärt das auf seiner eigenen Hilfeseite ziemlich offen. Drei Dinge bestimmen, wer im Kartenausschnitt auftaucht:
+Was im Kartenausschnitt zu deinem Betrieb steht, stammt aus deinem Google-Unternehmensprofil, im Alltag meist kurz Google-Profil genannt. Google erklärt auf seiner eigenen Hilfeseite ziemlich offen, wovon es abhängt, wer dort auftaucht:
 
 | Faktor | Was Google prüft | Was du beeinflussen kannst |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Wer vor verschlossener Tür steht, ruft beim nächsten Mal woanders an. Und manc
 
 Ein Betrieb, der als allgemeines Bauunternehmen geführt wird, hat es bei „Bad sanieren“ schwerer als der Sanitärbetrieb zwei Straßen weiter, der genau dafür eingetragen ist.
 
-Die Hauptkategorie kannst du dir selbst ansehen. Sie steht auf deinem Maps-Eintrag direkt unter dem Betriebsnamen, an der Stelle, wo bei anderen „Gaststätte“ oder „Dachdecker“ steht. Das geht genauso bei den Betrieben, die gerade über dir stehen. Dieser Vergleich zeigt oft schon, woran es liegt.
+Die Hauptkategorie kannst du dir selbst ansehen. Sie steht auf deinem Google-Profil direkt unter dem Betriebsnamen, an der Stelle, wo bei anderen „Gaststätte“ oder „Dachdecker“ steht. Das geht genauso bei den Betrieben, die gerade über dir stehen. Dieser Vergleich zeigt oft schon, woran es liegt.
 
 Schwieriger wird es darunter. Neben der Hauptkategorie lassen sich weitere Kategorien hinterlegen, und die zeigt Maps in der normalen Ansicht nicht an. Google gibt dazu eine Faustregel, die in der Praxis die meisten Fehler erklärt: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, und nicht „Dieses Unternehmen HAT …“. Wer alles einträgt, was er nebenbei auch anbietet, verwässert damit genau die Zuordnung, die er eigentlich schärfen wollte.
 

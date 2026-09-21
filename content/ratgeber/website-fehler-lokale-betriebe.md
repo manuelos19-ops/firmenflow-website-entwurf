@@ -1,6 +1,6 @@
 ---
 title: "Die 5 typischen Website-Fehler lokaler Betriebe: Warum Neukunden mit dem Daumen weiterscrollen"
-description: "Deine Stammkunden kennen deine Arbeit. Neue Kunden sehen nur deinen Auftritt auf dem Handy. Fünf typische Website-Fehler lokaler Betriebe und was du selbst prüfen kannst."
+description: "Neue Kunden sehen von deinem Betrieb zuerst das Handydisplay. Fünf typische Website-Fehler lokaler Betriebe und was du in zwei Minuten selbst prüfen kannst."
 date: "2026-09-19"
 category: "Website & Vertrauen"
 tags: [Website, Google-Profil, Handwerk, Wesel, Ladezeit]
