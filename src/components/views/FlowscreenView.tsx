@@ -16,7 +16,6 @@ import {
   FLOWSCREEN_CHANGELOG,
   FLOWSCREEN_OS_LABEL,
   FLOWSCREEN_RELEASES_URL,
-  FLOWSCREEN_SIZE_LABEL,
   FLOWSCREEN_VERSION,
 } from "@/lib/flowscreen";
 import {
@@ -138,7 +137,7 @@ export function FlowscreenView() {
                 className="shadow-xl shadow-[var(--color-coral)]/25 text-base sm:text-lg px-8 py-4.5"
               >
                 <Download className="w-5 h-5 mr-2 shrink-0" />
-                <span>FlowScreen kostenlos laden · {FLOWSCREEN_SIZE_LABEL}</span>
+                <span>FlowScreen kostenlos laden</span>
               </FlowscreenDownloadButton>
             </MagneticButton>
 
@@ -157,16 +156,12 @@ export function FlowscreenView() {
           </div>
 
           <p className="text-xs sm:text-sm text-[var(--color-muted)] max-w-xl mx-auto">
-            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL} · {FLOWSCREEN_SIZE_LABEL} Download. Beim ersten Start einmal: SmartScreen
+            Kein Konto · Keine Cloud · {FLOWSCREEN_OS_LABEL}. Beim ersten Start einmal: SmartScreen
             → „Weitere Informationen“ → „Trotzdem ausführen“.
           </p>
 
           {/* Trust Pills */}
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-4 text-xs sm:text-sm font-medium text-[var(--color-muted)]">
-            <span className="inline-flex items-center gap-1.5">
-              <FlowscreenIcon name="lokal-ohne-cloud" size={24} decorative />
-              100 % Offline &amp; Kein Cloud-Zwang
-            </span>
             <span className="inline-flex items-center gap-1.5">
               <FlowscreenIcon name="screenshot-aufnahme" size={24} decorative />
               Druck-Taste &amp; Tastenkürzel
@@ -212,38 +207,6 @@ export function FlowscreenView() {
                   priority
                   className="w-full h-auto object-cover"
                 />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 text-left">
-              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="mb-2 flex items-center gap-2">
-                  <FlowscreenIcon name="canvas-mockup" size={40} decorative />
-                  <span className="text-[var(--color-coral)] font-bold text-sm">1-Klick Mockup Canvas</span>
-                </div>
-                <p className="text-xs text-[var(--color-muted)]">
-                  Fügt edle Farbverläufe, Eckenrundungen und weiche Schlagschatten direkt um deinen Screenshot.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="mb-2 flex items-center gap-2">
-                  <FlowscreenIcon name="schrittzaehler" size={40} decorative />
-                  <span className="text-[var(--color-plum)] font-bold text-sm">Automatischer Schrittzähler</span>
-                </div>
-                <p className="text-xs text-[var(--color-muted)]">
-                  Klicke auf Elemente – FlowScreen generiert aufsteigende Zahlenkreise (1, 2, 3...) für Tutorials.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/90 border border-[var(--color-line)] shadow-sm">
-                <div className="mb-2 flex items-center gap-2">
-                  <FlowscreenIcon name="dsgvo-verpixelung" size={40} decorative />
-                  <span className="text-emerald-600 font-bold text-sm">DSGVO Zensur &amp; Blur</span>
-                </div>
-                <p className="text-xs text-[var(--color-muted)]">
-                  Verpixelung oder solide Schwärzung mit einer Mausbewegung. Keine Kundendaten mehr leaken.
-                </p>
               </div>
             </div>
           </div>
@@ -352,9 +315,6 @@ export function FlowscreenView() {
         {/* COMPARISON TABLE: Why FlowScreen is better */}
         <div className="space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-coral)] uppercase">
-              Vergleich &amp; Mehrwert
-            </p>
             <div className="flex items-center justify-center gap-3 pt-1">
               <FlowscreenIcon name="app-icon-512" size={56} alt="FlowScreen App-Icon" priority />
               <span className="text-sm font-bold text-[var(--color-plum)]">FlowScreen v{FLOWSCREEN_VERSION}</span>
@@ -373,14 +333,11 @@ export function FlowscreenView() {
         {/* BENTO FEATURE GRID */}
         <div className="space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <p className="text-xs sm:text-sm font-bold tracking-wide text-[var(--color-plum)] uppercase">
-              Alles an Bord
-            </p>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
               Die Werkzeuge, die du täglich brauchst.
             </h2>
             <p className="text-base sm:text-lg text-[var(--color-muted)]">
-              Kein Schnickschnack. Jedes Feature löst ein konkretes Problem beim Erklären, Zeigen und Dokumentieren.
+              Jedes Feature löst ein konkretes Problem beim Erklären, Zeigen und Dokumentieren.
             </p>
           </div>
 
@@ -496,7 +453,7 @@ export function FlowscreenView() {
                   <div className="w-12 h-12 rounded-2xl bg-[var(--color-plum)]/10 text-[var(--color-plum)] flex items-center justify-center">
                     <Monitor className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION} · {FLOWSCREEN_SIZE_LABEL}</span>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION}</span>
                 </div>
 
                 <div className="space-y-2">
@@ -547,7 +504,7 @@ export function FlowscreenView() {
                   <div className="w-12 h-12 rounded-2xl bg-stone-100 text-[var(--color-ink)] flex items-center justify-center">
                     <HardDrive className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION} · {FLOWSCREEN_SIZE_LABEL}</span>
+                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">v{FLOWSCREEN_VERSION}</span>
                 </div>
 
                 <div className="space-y-2">

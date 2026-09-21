@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { cn } from "@/lib/cn";
 import { ArrowUpRight } from "@/components/brand/FirmenflowUiIcon";
+import { scrollToId } from "@/lib/scroll";
 
 const navigation = [
   { label: "Leistungen", href: "/#leistungen" },
@@ -19,10 +21,23 @@ const navigation = [
 ] as const;
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsOpen(false);
+    if (href.startsWith("/#") && pathname === "/") {
+      e.preventDefault();
+      const id = href.replace("/#", "");
+      try {
+        window.history.pushState(null, "", href);
+      } catch {}
+      scrollToId(id);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,6 +99,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-[var(--color-ink)]/75 hover:text-[var(--color-coral)] hover:bg-black/[0.03] active:scale-[0.97] transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
               >
                 {item.label}
@@ -164,7 +180,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-base font-semibold text-[var(--color-ink)] hover:text-[var(--color-coral)] transition-colors flex items-center justify-between py-3.5"
               >
                 <span>{item.label}</span>

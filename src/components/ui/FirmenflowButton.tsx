@@ -85,18 +85,25 @@ export function FirmenflowButton({
     </span>
   );
 
+  const isSamePageHash =
+    !!href &&
+    (href.startsWith("#") ||
+      (typeof window !== "undefined" && window.location.pathname === "/" && href.startsWith("/#")));
+
   const handleHashClick = (e: React.MouseEvent) => {
-    if (!href || !href.startsWith("#")) return;
+    if (!href) return;
+    const targetId = href.startsWith("/#") ? href.slice(2) : href.startsWith("#") ? href.slice(1) : "";
+    if (!targetId) return;
     e.preventDefault();
     try {
-      window.history.replaceState(null, "", href);
+      window.history.replaceState(null, "", href.startsWith("/#") ? href.slice(1) : href);
     } catch {}
-    scrollToId(href.slice(1));
+    scrollToId(targetId);
     if (onClick) onClick();
   };
 
   if (href) {
-    if (href.startsWith("#")) {
+    if (isSamePageHash) {
       return (
         <a
           href={href}

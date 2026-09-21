@@ -83,18 +83,23 @@ export function ButtonLink({
     />
   );
 
-  const isHashLink = !!href && href.startsWith("#");
+  const isSamePageHash =
+    !!href &&
+    (href.startsWith("#") ||
+      (typeof window !== "undefined" && window.location.pathname === "/" && href.startsWith("/#")));
 
   const handleHashClick = (e: MouseEvent) => {
-    if (!href || !href.startsWith("#")) return;
+    if (!href) return;
+    const targetId = href.startsWith("/#") ? href.slice(2) : href.startsWith("#") ? href.slice(1) : "";
+    if (!targetId) return;
     e.preventDefault();
-    try { window.history.replaceState(null, "", href); } catch {}
-    scrollToId(href.slice(1));
+    try { window.history.replaceState(null, "", href.startsWith("/#") ? href.slice(1) : href); } catch {}
+    scrollToId(targetId);
     if (onClick) onClick(e);
   };
 
   if (href) {
-    if (isHashLink) {
+    if (isSamePageHash) {
       return (
         <a href={href} className={classes} onClick={handleHashClick}>
           {sheen}
