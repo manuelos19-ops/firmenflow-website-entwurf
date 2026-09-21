@@ -14,8 +14,8 @@ export const FLOWSCREEN_RELEASE_TAG_URL = `https://github.com/${FLOWSCREEN_GITHU
  * Bei jedem neuen Release HIER + in der Verify-Seite aktualisieren.
  */
 export const FLOWSCREEN_HASHES = {
-  setup: "20d13610528782375ab0b82049a88fa8c9723e2db3d390dac5385e2211be4dbb",
-  portable: "04ab8da1a68edb18b83e107ae71fa2337d9dcc913c053ffd2a92413a5a59cc70",
+  setup: "205138c043b79dcc3f412817b16ac6f1431ecffb2e3032056cd0900c32ece9ab",
+  portable: "6596fca7cac6ca86b1ef273db6cf4e83014dcca966a5168325199b2cf86910bc",
 } as const;
 
 export const FLOWSCREEN_CHANGELOG = [
@@ -59,8 +59,8 @@ export const FLOWSCREEN_FILE_NAMES = {
 } as const;
 
 export const FLOWSCREEN_FILE_SIZES = {
-  setup: 83560072,
-  portable: 83184082,
+  setup: 83559900,
+  portable: 83183926,
 } as const;
 
 /**
