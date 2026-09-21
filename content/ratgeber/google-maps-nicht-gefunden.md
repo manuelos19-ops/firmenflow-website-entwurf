@@ -1,0 +1,116 @@
+---
+title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
+description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, und ein Selbsttest fürs Handy."
+date: "2026-09-21"
+category: "Lokale Sichtbarkeit"
+tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
+imageAlt: "Smartphone mit Google-Maps-Kartenausschnitt und drei lokalen Betriebseinträgen"
+featured: "false"
+---
+
+Ein Kunde steht vierhundert Meter von deiner Werkstatt entfernt, tippt „Heizung Notdienst Wesel“ in sein Handy und bekommt drei andere Betriebe angezeigt. Der Auftrag war da. Er ist nur woanders gelandet, und du erfährst davon nie etwas.
+
+Genau das passiert jeden Tag, und es fällt niemandem auf, weil das Telefon einfach still bleibt. Es gibt keine verpasste Anfrage, die man sehen könnte.
+
+Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zusammen mit deinem Ort ein, also zum Beispiel „Dachdecker Wesel“, „Bäckerei Hamminkeln“ oder „Physiotherapie Xanten“. Stehst du in den ersten drei Treffern auf der Karte?
+
+## Was Google entscheidet, wenn jemand in deiner Nähe sucht
+
+Google erklärt das auf seiner eigenen Hilfeseite ziemlich offen. Drei Dinge bestimmen, wer im Kartenausschnitt auftaucht:
+
+* Relevanz: wie gut dein Profil zu dem passt, was jemand eingetippt hat.
+* Entfernung: wie weit dein Betrieb vom Suchenden weg ist.
+* Bekanntheit: wie bekannt dein Betrieb ist. Google zählt dazu unter anderem, wie viele Bewertungen du hast und wer im Netz auf dich verweist.
+
+An der Entfernung kann keiner etwas ändern, deine Werkstatt steht, wo sie steht. Die anderen beiden hängen daran, was in deinem Profil steht und was andere Leute über dich schreiben. Google schreibt dazu selbst, dass Betriebe mit korrekten und vollständigen Angaben eher in den lokalen Ergebnissen erscheinen. Das ist Fleißarbeit, und sie bleibt bei den meisten Betrieben liegen.
+
+## Die fünf Gründe, warum du nicht auftauchst
+
+### Grund 1: Es gibt kein Profil, oder eines, das dir nicht gehört
+
+Google legt Einträge zum Teil selbst an, aus Kartendaten, alten Verzeichnissen und Hinweisen von Nutzern. Dein Betrieb kann also längst bei Google stehen, ohne dass du je etwas angelegt hast.
+
+Solange niemand die Inhaberschaft bestätigt hat, ist dieses Profil offen. Fremde können Öffnungszeiten ändern, eine andere Telefonnummer vorschlagen oder den Betrieb als dauerhaft geschlossen melden. Ich sehe regelmäßig Profile, die seit Jahren mitlaufen und denen niemand gehört. Der Inhaber weiß meistens nichts davon.
+
+### Grund 2: Die Öffnungszeiten stimmen nicht
+
+Feiertage, Betriebsferien, der Samstag, den du vor zwei Jahren umgestellt hast. Google zeigt die Öffnungszeiten direkt im Suchergebnis an, noch vor deiner Website, und nennt sie ausdrücklich als eine der Angaben, die vollständig und aktuell sein sollten. Dazu gehören auch die abweichenden Zeiten an Feiertagen.
+
+Wer vor verschlossener Tür steht, ruft beim nächsten Mal woanders an. Und manchmal schreibt er vorher noch eine Bewertung.
+
+### Grund 3: Die Kategorie passt nicht zu dem, was du machst
+
+Über die Kategorie ordnet Google deinen Betrieb überhaupt erst einer Suchanfrage zu. An ihr hängt die Relevanz aus dem ersten Abschnitt.
+
+Ein Betrieb, der als allgemeines Bauunternehmen geführt wird, hat es bei „Bad sanieren“ schwerer als der Sanitärbetrieb zwei Straßen weiter, der genau dafür eingetragen ist.
+
+Die Hauptkategorie kannst du dir selbst ansehen. Sie steht auf deinem Maps-Eintrag direkt unter dem Betriebsnamen, an der Stelle, wo bei anderen „Gaststätte“ oder „Dachdecker“ steht. Das geht genauso bei den Betrieben, die gerade über dir stehen. Dieser Vergleich zeigt oft schon, woran es liegt.
+
+Schwieriger wird es darunter. Neben der Hauptkategorie lassen sich weitere Kategorien hinterlegen, und die zeigt Maps in der normalen Ansicht nicht an. Google gibt dazu eine Faustregel, die in der Praxis die meisten Fehler erklärt: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, und nicht „Dieses Unternehmen HAT …“. Wer alles einträgt, was er nebenbei auch anbietet, verwässert damit genau die Zuordnung, die er eigentlich schärfen wollte.
+
+### Grund 4: Keine Fotos, oder nur das Logo
+
+Google nennt Fotos als die Möglichkeit, potenziellen Kunden zu zeigen, was du anbietest. Sie stehen im Profil weit oben und werden angesehen, bevor jemand den ersten Satz liest.
+
+Wer selbst keine hochlädt, überlässt das den Kunden. Dann besteht dein erster Eindruck aus einem Handyfoto der Fassade bei Regen und einem abfotografierten Kassenbon.
+
+### Grund 5: Zu wenige Bewertungen, und niemand antwortet
+
+Google formuliert es in seiner Hilfe so: Je mehr Rezensionen und positive Bewertungen ein Unternehmen erhält, desto besser kann das Ranking ausfallen.
+
+Eine Untersuchung von digital lokal hat im Juli und August 2025 insgesamt 1.009 Betriebe aus neun Branchen im Raum Stuttgart ausgewertet, darunter Elektriker, Dachdecker und Zimmerer sowie die SHK-Branche. Im Schnitt kam ein Betrieb auf 63 Bewertungen. Rechnet man die Gastronomie heraus, die mit Abstand vorne liegt, bleiben rund 28 Bewertungen. Die durchschnittliche Bewertung lag branchenübergreifend bei 4,52 Sternen.
+
+Wenn du bei drei Bewertungen stehst und der Wettbewerber bei dreißig, entscheidet das mit, wer oben in der Karte auftaucht. Und es entscheidet, wen der Kunde anruft, wenn er beide sieht.
+
+## Deine Angaben müssen überall gleich stehen
+
+Name, Adresse, Telefonnummer. Auf deinem Google-Profil, auf deiner Website, im Branchenverzeichnis und in dem Eintrag von 2014, den damals mal jemand für dich angelegt hat.
+
+Google zieht sich Informationen aus vielen Quellen zusammen. Wenn deine Nummer an vier Stellen unterschiedlich steht oder die alte Adresse noch irgendwo lebt, arbeitet das gegeneinander.
+
+Das aufzuräumen ist stumpfe Arbeit. Man sucht alte Einträge, korrigiert sie einzeln und wartet, bis die Änderungen durchlaufen, und genau deshalb macht es kaum jemand freiwillig.
+
+## Warum das gerade jetzt zählt
+
+Bei der Suche nach einem Restaurant oder einem Geschäft vor Ort führt der Weg weiterhin über die Suchmaschine. Die Agentur Claneo hat dazu im April 2025 gemeinsam mit dem Marktforschungsinstitut Appinio 2.000 Menschen befragt, je 1.000 in Deutschland und den USA. Suchmaschinen kommen dabei auf 65 Prozent, Instagram folgt mit 10 Prozent.
+
+Verschoben hat sich die Art der Antwort. Google liefert immer mehr davon direkt in der Suche aus, ohne dass jemand eine Website öffnet: den Kartenausschnitt mit drei Betrieben, Sterne, Öffnungszeiten, einen Knopf zum Anrufen. Parallel wächst die Nutzung von KI-Chatbots. In derselben Befragung greifen 21 Prozent bei der Informationssuche darauf zurück, bei komplexeren Fragen liegen sie mit 38,55 Prozent fast gleichauf mit Google (40,29 Prozent).
+
+Was in deinem Profil steht, ist für viele Kunden damit schon die ganze Entscheidungsgrundlage. Deine Website bekommen sie in dem Moment gar nicht zu sehen. Eine gute Seite und ein leeres Google-Profil ergeben zusammen einen Betrieb, den niemand findet.
+
+## Der Fünf-Minuten-Selbsttest
+
+Nimm dein Handy und geh die Punkte einmal durch. Du brauchst dafür keinen Computer und keine Zugangsdaten.
+
+* Taucht dein Betrieb bei deiner Leistung plus Ortsname in den ersten drei Treffern auf der Karte auf?
+* Steht auf deinem Profil noch der Hinweis, dass ein Inhaber dieses Unternehmen beanspruchen kann?
+* Sind deine Feiertagszeiten für die nächsten Monate hinterlegt?
+* Beschreibt deine Hauptkategorie das, womit du tatsächlich dein Geld verdienst?
+* Ist dein neuestes Foto jünger als ein Jahr?
+* Wie viele Bewertungen hast du im Vergleich zu den beiden Betrieben, die über dir stehen?
+* Wann hast du zuletzt auf eine Bewertung geantwortet?
+
+Jedes Nein ist ein möglicher Grund, warum der Kunde von vorhin bei jemand anderem gelandet ist.
+
+## Ich schaue mir dein Profil an
+
+Wenn du wissen willst, wie dein Betrieb bei Google gerade dasteht, schreib mir deinen Betriebsnamen und deinen Ort. Mehr brauche ich nicht.
+
+Du bekommst von mir eine kurze Video-Einschätzung von drei bis fünf Minuten. Darin zeige ich dir am Bildschirm, was fehlt, was falsch eingetragen ist und was ich an deiner Stelle zuerst anfassen würde. Das kostet dich nichts und verpflichtet dich zu nichts. Ich schaffe im Moment drei davon pro Woche, weil ich mir jedes Profil selbst ansehe.
+
+Wenn du die Arbeit danach abgeben willst, übernehme ich sie mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360). Ich richte dein Profil ein oder räume ein bestehendes auf, beantworte neue Bewertungen in deinem Ton und fasse dir einmal im Monat zusammen, was Kunden schreiben. Einrichtung ab 190 Euro, Betreuung 99 Euro im Monat, monatlich kündbar.
+
+Platz eins bei Google kann dir niemand seriös versprechen, ich auch nicht. Ein vollständiges und gepflegtes Profil ist die Voraussetzung dafür, überhaupt mitzuspielen.
+
+* **Video-Einschätzung anfragen:** Schreib mir kurz eine Nachricht oder melde dich per WhatsApp.
+* **Kurzer Anruf:** Du erreichst mich unter **0155 67277155**.
+* Alles unverbindlich und **Persönlich mit Manu**.
+
+*Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
+
+## Geprüfte Quellen und Belege
+
+1. **Google Unternehmensprofil-Hilfe:** [Ranking in lokalen Suchergebnissen auf Google verbessern](https://support.google.com/business/answer/7091?hl=de) (Offizielle Dokumentation von Google zu Relevanz, Entfernung und Bekanntheit sowie zu Öffnungszeiten, Fotos und Bewertungen)
+2. **Google Unternehmensprofil-Hilfe:** [Richtlinien für die Präsentation Ihres Unternehmens auf Google](https://support.google.com/business/answer/3038177?hl=de) (Offizielle Vorgaben zur Auswahl von Haupt- und Zusatzkategorien)
+3. **digital lokal:** [Google-Bewertungen-Studie 2025](https://www.digital-lokal.de/blog/google-bewertungen-studie-2025/) (1.009 Betriebe aus neun Branchen im Raum Stuttgart, erhoben im Juli und August 2025)
+4. **Claneo mit Appinio:** [State of Search Studie 2025](https://www.claneo.com/de/state-of-search-studie/) (Panel-Befragung von 2.000 Personen, je 1.000 in Deutschland und den USA, erhoben am 1. und 2. April 2025)
