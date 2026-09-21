@@ -43,6 +43,7 @@ export type RatgeberSection =
   | { kind: "heading"; id: string; text: string; index: number }
   | { kind: "list"; items: string[]; variant: "check" | "bullet" }
   | { kind: "quote"; html: string }
+  | { kind: "chart"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "cta"; html: string };
 
 const RATGEBER_DIR = "content/ratgeber";
@@ -116,6 +117,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   let listItems: string[] = [];
   let paraBuffer: string[] = [];
   let tableRows: string[][] = [];
+  let chartNext: string | null = null;
   let headingCount = 0;
   let leadDone = false;
 
@@ -168,6 +170,11 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       .join("")}</tbody>`;
     const table = `<div class="overflow-x-auto rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8"><table class="w-full border-collapse text-sm sm:text-base">${thead}${tbody}</table></div>`;
     html.push(table);
+    if (chartNext !== null) {
+      sections.push({ kind: "chart", head, rows: body, caption: chartNext || undefined });
+      chartNext = null;
+      return;
+    }
     sections.push({ kind: "text", html: table });
   };
   for (const line of lines) {
@@ -200,6 +207,14 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       const h = `<h3 id="${id}" class="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] scroll-mt-28 pt-2">${inlineMarkdown(h3[1])}</h3>`;
       html.push(h);
       sections.push({ kind: "text", html: h });
+      continue;
+    }
+    const chartMark = trimmed.match(/^::chart(?::\s*(.*?))?::$/);
+    if (chartMark) {
+      flushPara();
+      closeList();
+      closeTable();
+      chartNext = (chartMark[1] || "").trim();
       continue;
     }
     if (/^\|/.test(trimmed)) {

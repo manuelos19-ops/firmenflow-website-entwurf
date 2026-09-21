@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { RatgeberQuiz } from "@/components/ratgeber/RatgeberQuiz";
+import { RatgeberChart } from "@/components/ratgeber/RatgeberChart";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -104,6 +105,9 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
         ))}
       </ul>
     );
+  }
+  if (section.kind === "chart") {
+    return <RatgeberChart head={section.head} rows={section.rows} caption={section.caption} />;
   }
   if (section.kind === "quote") {
     return (

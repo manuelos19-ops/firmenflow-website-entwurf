@@ -83,6 +83,8 @@ Im Einzelnen: 48 Betriebe (24 Prozent) haben keine Website im Profil hinterlegt.
 
 Wie weit die Branchen auseinanderliegen, ist der eigentliche Befund:
 
+::chart: Eigene Erhebung, 198 Betriebe im Raum Wesel, abgefragt am 22. September 2026.::
+
 | Branche | Betriebe | Bewertungen im Median |
 | --- | --- | --- |
 | Fliesenleger | 9 | 4 |
