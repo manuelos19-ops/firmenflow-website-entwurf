@@ -14,8 +14,8 @@ export const FLOWSCREEN_RELEASE_TAG_URL = `https://github.com/${FLOWSCREEN_GITHU
  * Bei jedem neuen Release HIER + in der Verify-Seite aktualisieren.
  */
 export const FLOWSCREEN_HASHES = {
-  setup: "ad0c0f429b85fd9bd35c93144b4acfc9d6a5528b7b602ffd4dde0b9c6dfdbbfa",
-  portable: "3eaca2c966a17043677b45126be0266b1039da86b46ceedcf6c293cc12fe7eec",
+  setup: "20d13610528782375ab0b82049a88fa8c9723e2db3d390dac5385e2211be4dbb",
+  portable: "04ab8da1a68edb18b83e107ae71fa2337d9dcc913c053ffd2a92413a5a59cc70",
 } as const;
 
 export const FLOWSCREEN_CHANGELOG = [
@@ -59,18 +59,18 @@ export const FLOWSCREEN_FILE_NAMES = {
 } as const;
 
 export const FLOWSCREEN_FILE_SIZES = {
-  setup: 83559938,
-  portable: 83183964,
+  setup: 83560072,
+  portable: 83184082,
 } as const;
 
 /**
  * VirusTotal-Ergebnis v1.2.0 (API-Upload + Analyse, Stand 21.09.2026).
- * Setup: 0/68 Erkennungen (1 Timeout: Skyhigh). Portable: 0/65 (4 Timeouts).
- * Timeouts = Scanner hat 83 MB nicht im Zeitfenster geschafft, kein Treffer.
+ * Setup: 0/66 Erkennungen (3 Timeouts). Portable: 0/66 (2 Timeouts + 1 Failure).
+ * Timeouts/Failures = Scanner hat 83 MB nicht im Zeitfenster geschafft, kein Treffer.
  */
 export const FLOWSCREEN_VIRUSTOTAL = {
-  portable: { clean: 65, total: 65, verifiedAt: "21.09.2026" },
-  setup: { clean: 68, total: 68, verifiedAt: "21.09.2026" },
+  portable: { clean: 66, total: 66, verifiedAt: "21.09.2026" },
+  setup: { clean: 66, total: 66, verifiedAt: "21.09.2026" },
 } as const;
 
 /** VirusTotal-Analyseseite für einen Datei-Hash (Datei-Upload NICHT nötig zum Ansehen). */
