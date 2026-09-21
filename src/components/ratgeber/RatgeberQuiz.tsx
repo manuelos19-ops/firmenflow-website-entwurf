@@ -35,22 +35,35 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
 
   const currentQuestion = activeQuestions[currentIndex];
 
-  // Start mit zufälliger Frage-Rotation aus dem jeweiligen Pool:
-  // Kompakt-Check: 5 zufällige Fragen aus dem Basis-Pool (mind. 10 Fragen)
-  // Meister-Check: 10 zufällige Fragen aus dem Meister-Pool (mind. 20 Fragen)
+  // Start mit zufälliger Frage- und Antwort-Rotation:
+  // 1. Fragen aus dem jeweiligen Pool zufällig auswählen (5 für Kompakt, 10 für Meister)
+  // 2. Antwort-Optionen (Position 1 bis 3) für jede Frage frisch durchmischen und correctIndex dynamisch berechnen
   const handleStart = (chosenMode: QuizMode) => {
     setMode(chosenMode);
+    let selectedRaw: RatgeberQuizQuestion[] = [];
     if (chosenMode === "kompakt") {
       const pool = quiz.questions.filter((q) => q.level === "basis");
       const source = pool.length > 0 ? pool : quiz.questions;
-      const shuffled = shuffleArray(source);
-      setActiveQuestions(shuffled.slice(0, 5));
+      selectedRaw = shuffleArray(source).slice(0, 5);
     } else {
       const pool = quiz.questions.filter((q) => q.level === "profi");
       const source = pool.length > 0 ? pool : quiz.questions;
-      const shuffled = shuffleArray(source);
-      setActiveQuestions(shuffled.slice(0, 10));
+      selectedRaw = shuffleArray(source).slice(0, 10);
     }
+
+    // Antworten für jede Frage zufällig durchmischen und neuen correctIndex ermitteln
+    const randomizedQuestions = selectedRaw.map((q) => {
+      const correctAnswerText = q.options[q.correctIndex];
+      const shuffledOptions = shuffleArray(q.options);
+      const newCorrectIndex = shuffledOptions.indexOf(correctAnswerText);
+      return {
+        ...q,
+        options: shuffledOptions,
+        correctIndex: newCorrectIndex >= 0 ? newCorrectIndex : 0,
+      };
+    });
+
+    setActiveQuestions(randomizedQuestions);
     setCurrentIndex(0);
     setSelectedOption(null);
     setScore(0);
