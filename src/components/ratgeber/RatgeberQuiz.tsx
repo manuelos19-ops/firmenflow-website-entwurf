@@ -100,7 +100,7 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
   const scorePercent = Math.round((score / totalQuestions) * 100);
 
   return (
-    <section aria-label="Interaktives Ratgeber-Quiz" className="my-12">
+    <section id="selbst-check" aria-label="Interaktives Ratgeber-Quiz" className="my-12 scroll-mt-28">
       <div className="rounded-[2.5rem] border border-[var(--color-line)] bg-gradient-to-b from-white via-white to-[var(--color-paper)] p-6 sm:p-10 md:p-12 shadow-md relative overflow-hidden">
         
         {/* Dekorativer Hintergrund-Glow */}

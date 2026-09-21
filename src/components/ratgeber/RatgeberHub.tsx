@@ -277,7 +277,7 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                   </Link>
                 )}
                 <div className="p-7 sm:p-9 space-y-4">
-                  {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit · Quiz-Badge */}
+                  {/* Prägnante Meta-Leiste: Datum · von Manu · Lesezeit */}
                   <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-medium text-[var(--color-muted)]">
                     <span className="px-2.5 py-0.5 rounded-full bg-[var(--color-paper)] text-[var(--color-plum)] font-bold">
                       {post.category}
@@ -288,8 +288,6 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                     <span>von Manu</span>
                     <span>·</span>
                     <span>{post.readingMinutes} Min. Lesezeit</span>
-                    <span>·</span>
-                    <span className="text-[var(--color-coral)] font-bold">⚡ 5 &amp; 10 Fragen Check</span>
                   </div>
 
                   <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] leading-tight">

@@ -196,6 +196,24 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           </div>
         )}
 
+        {post.quiz && (
+          <div className="rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)] p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm shadow-sm">
+            <div className="flex items-start gap-3">
+              <FirmenflowIcon name="info-hinweis" size={24} decorative className="mt-0.5 shrink-0" />
+              <p className="text-[var(--color-ink)] leading-snug">
+                <strong className="text-[var(--color-plum)]">Tipp zum Mitmachen:</strong> Lies den Artikel in Ruhe durch und teste dein Wissen am Ende im interaktiven Selbst-Check.
+              </p>
+            </div>
+            <a
+              href="#selbst-check"
+              className="inline-flex items-center gap-1 shrink-0 self-end sm:self-center text-xs font-mono font-bold text-[var(--color-coral)] hover:text-[var(--color-plum)] hover:underline whitespace-nowrap transition-colors pl-9 sm:pl-0"
+            >
+              <span>Direkt zum Quiz</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        )}
+
         <article className="space-y-8">
           {post.sections.map((section, i) => (
             <RatgeberBlock key={i} section={section} />
