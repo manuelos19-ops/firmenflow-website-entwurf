@@ -1,0 +1,126 @@
+{
+  "title": "Selbst-Check: Wie fit ist dein Betrieb digital?",
+  "description": "Finde in wenigen Klicks heraus, ob deine Website und dein Google-Profil Neukunden anziehen oder abschrecken.",
+  "questions": [
+    {
+      "id": "q1",
+      "level": "basis",
+      "question": "Wie viele Sekunden Wartezeit toleriert über die Hälfte aller Besucher auf dem Smartphone, bevor sie abspringen?",
+      "options": [
+        "Maximal 3 Sekunden",
+        "Etwa 8 bis 10 Sekunden",
+        "Beliebig lange, wenn die Handwerksarbeit gut ist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google belegt auf web.dev: Braucht eine mobile Website länger als 3 Sekunden zum Laden, brechen über 50 % der Suchenden den Besuch sofort ab und gehen zur Konkurrenz."
+    },
+    {
+      "id": "q2",
+      "level": "basis",
+      "question": "Was sollte ein Kunde bei einem lokalen Fachbetrieb auf dem Smartphone als Erstes sehen?",
+      "options": [
+        "Einen direkten Anruf-Button mit Telefonnummer für den Daumen",
+        "Die ausführliche Chronik der Firmengründung seit 1985",
+        "Ein 8-teiliges Formular mit Pflichtfeldern für jede Kleinigkeit"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer unterwegs einen Rohrbruch, ein defektes Garagentor oder Hunger hat, will nicht lange tippen. Ein klarer Klick-zum-Anrufen-Button bringt dir die meisten echten Aufträge."
+    },
+    {
+      "id": "q3",
+      "level": "basis",
+      "question": "Wo suchen Menschen in deiner Region heute primär nach einem Betrieb in ihrer Nähe?",
+      "options": [
+        "Direkt bei Google und Google Maps auf dem Handy",
+        "Im gedruckten Telefonbuch oder Branchenverzeichnis",
+        "Auf Flyern im eigenen Briefkasten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Statistischem Bundesamt und Konsumentenstudien ist das Smartphone das Standard-Suchgerät Nummer 1. Wer im Google-Kartenbereich fehlt, existiert für viele Neukunden gar nicht."
+    },
+    {
+      "id": "q4",
+      "level": "basis",
+      "question": "Welcher Einstiegstext auf der Startseite überzeugt neue Kunden am schnellsten?",
+      "options": [
+        "„Herzlich willkommen auf unserer Homepage. Seit vielen Jahren stehen wir für Qualität.“",
+        "„Heizungswartung & Reparatur in Wesel und Umgebung. Jetzt kurz anrufen.“",
+        "„Wir freuen uns, Sie auf unserer virtuellen Unternehmenspräsenz begrüßen zu dürfen.“"
+      ],
+      "correctIndex": 1,
+      "explanation": "Floskeln wie „Herzlich willkommen“ überfliegt jeder. Neukunden wollen in zwei Sekunden wissen: Was machst du, wo bist du tätig und wie kann ich dich kontaktieren?"
+    },
+    {
+      "id": "q5",
+      "level": "basis",
+      "question": "Welche Fotos schaffen bei Neukunden das meiste Vertrauen?",
+      "options": [
+        "Gekaufte Stockfotos mit lachenden amerikanischen Fotomodellen",
+        "Echte Fotos von dir, deinen Mitarbeitern und deiner Arbeit vor Ort",
+        "Überhaupt keine Fotos, sondern nur Tabellen und technische Skizzen"
+      ],
+      "correctIndex": 1,
+      "explanation": "Gekaufte Stockfotos erkennt jeder sofort – sie wirken unpersönlich. Echte Fotos von dir, deinem Team und deiner Werkstatt schaffen sofort Vertrauen und Nähe."
+    },
+    {
+      "id": "q6",
+      "level": "profi",
+      "question": "Wie viele lokale Betriebe hebt Google bei einer Smartphone-Suche direkt im Kartenblock hervor?",
+      "options": [
+        "Genau 3 Betriebe („Local 3-Pack“)",
+        "Alle Betriebe der Stadt untereinander auf einer langen Liste",
+        "Immer genau 10 Betriebe alphabetisch sortiert"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google zeigt bei lokaler Suche mobil fast immer nur die Top 3 Betriebe direkt auf der Karte an. Wer auf Platz 4 oder tiefer landet, verliert bis zu 80 % der Klicks."
+    },
+    {
+      "id": "q7",
+      "level": "profi",
+      "question": "Wie reagieren Neukunden laut Studien auf Betriebe, die auf Google-Bewertungen antworten?",
+      "options": [
+        "Über 80 % der Kunden wählen bevorzugt Betriebe, die auf Bewertungen reagieren",
+        "Antworten des Inhabers sind den Kunden völlig egal",
+        "Antworten wirken aufdringlich und schrecken Kunden eher ab"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die BrightLocal-Studie zeigt: Kunden achten nicht nur auf die Sterne, sondern vor allem darauf, wie der Inhaber mit Feedback umgeht. Ein freundlicher Kommentar beweist Zuverlässigkeit."
+    },
+    {
+      "id": "q8",
+      "level": "profi",
+      "question": "Was bremst mobile Handwerker-Websites in der Praxis am häufigsten extrem aus?",
+      "options": [
+        "Unkomprimierte 15-Megabyte-Fotos direkt von der Smartphone-Kamera",
+        "Einige Textabsätze mit Beschreibungen der Leistungen",
+        "Die Schriftart der Hauptüberschrift"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oft laden Betriebe Fotos mit 5 bis 15 MB direkt hoch. Ohne moderne WebP-Kompression dauert das Laden im Mobilfunknetz viele Sekunden. Moderne Seiten komprimieren Fotos auf unter 100 KB."
+    },
+    {
+      "id": "q9",
+      "level": "profi",
+      "question": "Was passiert, wenn deine Öffnungszeiten auf Google Maps nicht mit der Realität übereinstimmen?",
+      "options": [
+        "Kunden stehen vor verschlossener Tür, sind frustriert und hinterlassen 1-Stern-Bewertungen",
+        "Google gleicht die Zeiten automatisch über Nacht mit deinem Schaufenster ab",
+        "Kunden warten einfach geduldig und rufen später noch einmal an"
+      ],
+      "correctIndex": 0,
+      "explanation": "Falsche Öffnungszeiten sind einer der häufigsten Gründe für schlechte Spontan-Bewertungen auf Google Maps. Besonders an Brückentagen und im Betriebsurlaub müssen diese stimmen."
+    },
+    {
+      "id": "q10",
+      "level": "profi",
+      "question": "Warum müssen Schriftarten wie Google Fonts lokal auf dem eigenen Webserver liegen?",
+      "options": [
+        "Weil das ungefragte Nachladen aus den USA gegen DSGVO und TDDDG verstößt",
+        "Weil Google sonst monatlich Lizenzgebühren für jede Schriftart abbucht",
+        "Weil die Website sonst nur auf Englisch angezeigt wird"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer Schriften von US-Servern lädt, überträgt unbemerkt die IP-Adresse des Besuchers ohne Einwilligung. Bei modernen, sauberen Websites liegen alle Schriften datenschutzsicher auf dem eigenen Server."
+    }
+  ]
+}

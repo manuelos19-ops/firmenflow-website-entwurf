@@ -15,10 +15,26 @@ export type RatgeberPostMeta = {
   featured?: boolean;
 };
 
+export type RatgeberQuizQuestion = {
+  id: string;
+  level: "basis" | "profi";
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+};
+
+export type RatgeberQuizData = {
+  title: string;
+  description: string;
+  questions: RatgeberQuizQuestion[];
+};
+
 export type RatgeberPost = RatgeberPostMeta & {
   html: string;
   headings: { id: string; text: string; level: 2 | 3 }[];
   sections: RatgeberSection[];
+  quiz?: RatgeberQuizData;
 };
 
 export type RatgeberSection =
@@ -223,6 +239,17 @@ function readPostFile(file: string): RatgeberPost {
   const slug = path.basename(file, ".md");
   const words = body.split(/\s+/).filter(Boolean).length;
   const { html, headings, sections } = markdownToHtml(body);
+
+  const quizPath = path.join(process.cwd(), RATGEBER_DIR, "quizzes", `${slug}.json`);
+  let quiz: RatgeberQuizData | undefined = undefined;
+  if (fs.existsSync(quizPath)) {
+    try {
+      quiz = JSON.parse(fs.readFileSync(quizPath, "utf8"));
+    } catch (e) {
+      console.error(`Fehler beim Laden des Quiz für ${slug}:`, e);
+    }
+  }
+
   return {
     slug,
     title: data.title ?? slug,
@@ -238,6 +265,7 @@ function readPostFile(file: string): RatgeberPost {
     html,
     headings,
     sections,
+    quiz,
   };
 }
 

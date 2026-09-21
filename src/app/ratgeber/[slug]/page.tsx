@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { RatgeberQuiz } from "@/components/ratgeber/RatgeberQuiz";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -194,6 +195,9 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
             <RatgeberBlock key={i} section={section} />
           ))}
         </article>
+
+        {post.quiz && <RatgeberQuiz quiz={post.quiz} />}
+
         {related.length > 0 && (
           <section className="space-y-4 pt-6 border-t border-[var(--color-line)]">
             <h2 className="text-xl font-display font-bold text-[var(--color-ink)]">
