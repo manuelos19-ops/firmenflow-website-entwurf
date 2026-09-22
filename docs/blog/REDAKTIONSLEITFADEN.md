@@ -50,9 +50,9 @@ Bildkonzept und Alt-Text können folgen, sobald ein tatsächliches Bild vorliegt
 
 ## Quiz-Standard pro Artikel
 
-Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interaktives Wissens-Quiz unter `content/ratgeber/quizzes/<slug>.json`:
-- **Zwei Spielmodi:** 10 Basis-Fragen für den 5-Fragen-Kompakt-Check und 10 Profi-Fragen für den 10-Fragen-Meister-Check.
-- **Dynamische Zufalls-Rotation:** Bei jedem Durchgang werden die Fragen neu ausgewählt und alle Antworten auf Position 1–3 zufällig geshuffelt (keine feste Position 1).
+Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interaktives Wissens-Quiz unter `content/ratgeber/quizzes/<slug>.json` mit mindestens 30 Fragen:
+- **Zwei Spielmodi:** Mindestens 10 Basis-Fragen für den 5-Fragen-Kompakt-Check und mindestens 20 Profi-Fragen für den 10-Fragen-Meister-Check (Zufallsauswahl für maximale Abwechslung).
+- **Dynamische Zufalls-Rotation:** Bei jedem Durchgang werden die Fragen frisch durchmischt und alle Antworten auf Position 1–3 zufällig rotiert (keine feste Position 1).
 - **Lese-Tipp-Banner:** Automatischer Hinweis über dem geöffneten Artikel mit direkter Sprungmarke `#selbst-check` zum Quiz.
 - **Analytics:** Automatische Vercel Custom Events bei Start und Abschluss.
 

@@ -241,6 +241,126 @@
       ],
       "correctIndex": 0,
       "explanation": "Der gesamte Prozess muss daumenfreundlich sein: Finden, Vertrauen fassen, in unter zwei Minuten per Klick melden. Jedes Hindernis kostet dich den Bewerber."
+    },
+    {
+      "id": "az_p11",
+      "level": "profi",
+      "question": "Welche tägliche Beschäftigung liegt laut JIM-Studie 2025 bei Jugendlichen direkt hinter der Smartphone-Nutzung?",
+      "options": [
+        "Musik hören (76 Prozent täglich)",
+        "Tageszeitung lesen (über 80 Prozent)",
+        "Briefe und Postkarten schreiben"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mit 76 % täglicher Nutzung liegt Musikhören auf Platz 2, gefolgt von Online-Videos (56 %). Gedruckte Zeitungen spielen mit kaum messbaren Werten praktisch keine Rolle mehr."
+    },
+    {
+      "id": "az_p12",
+      "level": "profi",
+      "question": "Mit wem konkurriert ein lokaler Handwerksbetrieb heute laut Artikel am schärfsten um Auszubildende?",
+      "options": [
+        "Mit dem Handwerksbetrieb zwei Orte weiter, der sich auf dem Smartphone moderner präsentiert",
+        "Ausschließlich mit multinationalen DAX-Konzernen in Übersee",
+        "Nur mit Universitäten im Ausland"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der Wettbewerb findet regional statt. Wenn der Betrieb im Nachbarort Fotos vom Team zeigt und eine WhatsApp-Bewerbung anbietet, gewinnt er den Azubi."
+    },
+    {
+      "id": "az_p13",
+      "level": "profi",
+      "question": "Was bedeutet es für einen Bewerber, wenn auf einer Karriereseite eine feste Antwortzeit versprochen wird?",
+      "options": [
+        "Es signalisiert Verbindlichkeit, Wertschätzung und einen verlässlichen Chef",
+        "Dass der Betrieb keine Arbeit hat und den ganzen Tag am Telefon sitzt",
+        "Dass ein automatischer Chatbot die Ausbildung leitet"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer schreibt: 'Wir melden uns innerhalb von 24 Stunden bei dir', nimmt Bewerbern die Angst vor dem Ungewissen und zeigt echten Respekt für die Initiative."
+    },
+    {
+      "id": "az_p14",
+      "level": "profi",
+      "question": "Warum scheitern viele Betriebe bei der Ansprache erfahrener Gesellen mit festem Job?",
+      "options": [
+        "Weil Gesellen nach Feierabend keine Lust haben, am PC mühsam Lebensläufe hochzuladen",
+        "Weil Gesellen im Handwerk grundsätzlich niemals den Betrieb wechseln",
+        "Weil erfahrene Handwerker kein Smartphone besitzen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein wechselwilliger Geselle schaut sich abends diskret auf dem Sofa um. Er meldet sich nur, wenn er mit zwei Sätzen unkompliziert Kontakt aufnehmen kann."
+    },
+    {
+      "id": "az_p15",
+      "level": "profi",
+      "question": "Welche Angabe zum Arbeitstag ist laut Artikel für Bewerber besonders wertvoll?",
+      "options": [
+        "Konkrete Uhrzeiten für Arbeitsbeginn und Feierabend sowie die typische Teamgröße",
+        "Ein philosophischer Text über die Historie der Handwerkszunft im Mittelalter",
+        "Die genaue Quadratmeterzahl des Firmenparkplatzes"
+      ],
+      "correctIndex": 0,
+      "explanation": "Transparenz schafft Sicherheit: Wann geht es morgens los? Wie läuft der Tag ab? Was bedeutet Feierabend? Das sind die echten Fragen im Kopf von Berufseinsteigern."
+    },
+    {
+      "id": "az_p16",
+      "level": "profi",
+      "question": "Warum ist das sogenannte 'Matching-Problem' im Handwerk so gravierend?",
+      "options": [
+        "Weil 54.000 freie Lehrstellen und 40.000 suchende Bewerber online oft schlichtweg nicht zueinander finden",
+        "Weil Handwerksberufe gesetzlich nur noch per Losverfahren vergeben werden",
+        "Weil Lehrlinge nur noch in Großstädten mit über 1 Million Einwohnern arbeiten dürfen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Es gibt junge Menschen, die eine Lehrstelle suchen. Aber wenn Betriebe im Netz unsichtbar sind oder mit Formularen abschrecken, kommen Angebot und Nachfrage nicht zusammen."
+    },
+    {
+      "id": "az_p17",
+      "level": "profi",
+      "question": "Was passiert, wenn ein Bewerber bei Google nach deinem Firmennamen plus 'Ausbildung' sucht und nichts findet?",
+      "options": [
+        "Er bricht die Recherche ab und bewirbt sich bei einem Mitbewerber mit sichtbarer Seite",
+        "Er beauftragt einen Detektiv, um deine Werkstatt zu finden",
+        "Er ruft sofort bei der örtlichen Handwerkskammer an, um dich zu melden"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bewerber investieren heute keine detektivische Arbeit. Wer online nicht als Ausbildungsbetrieb auffindbar ist, existiert für sie als Ausbildungsoption nicht."
+    },
+    {
+      "id": "az_p18",
+      "level": "profi",
+      "question": "Welche psychologische Wirkung haben echte Fotos der Werkstatt und des Fuhrparks?",
+      "options": [
+        "Sie beweisen Realität und nehmen dem Bewerber das Gefühl, vor einer bösen Überraschung zu stehen",
+        "Sie verringern die Klickzahlen, weil Handwerksbilder unmodern wirken",
+        "Sie führen automatisch zu einer Abmahnung durch Bildagenturen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein Betrieb, den man vorab sieht, wirkt greifbar und menschlich. Bewerber können sich vorstellen, dort einzusteigen, statt vor einer anonymen Fassade zu stehen."
+    },
+    {
+      "id": "az_p19",
+      "level": "profi",
+      "question": "Wie lange verbringen volljährige Jugendliche (18–19 Jahre) laut JIM-Studie täglich am Smartphone?",
+      "options": [
+        "Durchschnittlich 278 Minuten – mehr als 4,5 Stunden jeden Tag",
+        "Exakt 30 Minuten",
+        "Unter 10 Minuten, weil sie arbeiten müssen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bei älteren Jugendlichen und jungen Erwachsenen steigt die Nutzungsdauer auf über 4,5 Stunden täglich. Das Smartphone ist ihr zentraler Zugang zur Außenwelt."
+    },
+    {
+      "id": "az_p20",
+      "level": "profi",
+      "question": "Warum ist die Aussage 'Die Jugend will heute einfach nicht mehr arbeiten' laut Analyse zu kurz gegriffen?",
+      "options": [
+        "Weil tausende Bewerber leer ausgehen, während Betriebe veraltete Kanäle nutzen und Einstiegshürden aufbauen",
+        "Weil Jugendliche laut Statistik 60 Stunden pro Woche ehrenamtlich arbeiten",
+        "Weil es im Handwerk überhaupt keinen Mangel an Nachwuchskräften gibt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Über 40.000 Jugendliche blieben unversorgt. Betriebe, die Hürden abbauen, auf Augenhöhe kommunizieren und mobil auffindbar sind, finden nach wie vor motivierte Auszubildende."
     }
   ]
 }
