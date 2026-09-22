@@ -43,24 +43,6 @@ const themen = [
   },
 ] as const;
 
-const ablauf = [
-  {
-    icon: "analyse",
-    title: "Verstehen",
-    body: "Jeder Beitrag startet mit einer Situation aus dem Betriebsalltag und erklärt, was dahintersteckt – in einfachen Worten.",
-  },
-  {
-    icon: "struktur-wireframe",
-    title: "Einordnen",
-    body: "Du erfährst, welche Folgen ein Problem haben kann und welche Stellschrauben es gibt – ehrlich, ohne Panikmache.",
-  },
-  {
-    icon: "umsetzung-texte",
-    title: "Selbst prüfen",
-    body: "Konkrete Prüfpunkte zum Selbstmachen: Was du heute nachschauen kannst, steht immer direkt im Beitrag.",
-  },
-] as const;
-
 export default function RatgeberPage() {
   const baseUrl = getSiteUrl().origin;
   const posts = getAllRatgeberPosts();
@@ -143,31 +125,6 @@ export default function RatgeberPage() {
                 <FirmenflowIcon name={thema.icon} size={48} decorative />
                 <h3 className="font-bold text-[var(--color-ink)]">{thema.title}</h3>
                 <p className="text-sm text-[var(--color-muted)] leading-relaxed">{thema.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Struktur der Beiträge */}
-        <section className="space-y-6" aria-labelledby="ratgeber-lesen">
-          <SectionHeading
-            eyebrow="So lesen sich die Beiträge"
-            title="Kurz, konkret, zum Selbstmachen."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {ablauf.map((schritt, index) => (
-              <div
-                key={schritt.title}
-                className="rounded-3xl border border-[var(--color-line)] bg-white p-6 space-y-3 shadow-sm"
-              >
-                <div className="flex items-center justify-between">
-                  <FirmenflowIcon name={schritt.icon} size={48} decorative />
-                  <span className="text-xs font-mono font-bold text-[var(--color-muted)]">
-                    0{index + 1}
-                  </span>
-                </div>
-                <h3 className="font-bold text-[var(--color-ink)]">{schritt.title}</h3>
-                <p className="text-sm text-[var(--color-muted)] leading-relaxed">{schritt.body}</p>
               </div>
             ))}
           </div>

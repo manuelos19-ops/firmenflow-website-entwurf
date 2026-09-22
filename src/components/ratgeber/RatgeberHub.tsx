@@ -129,34 +129,6 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
             ))}
           </div>
         </div>
-
-        {/* Box 3: Dezent persönliche Box zu Manu */}
-        <div className="rounded-3xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 space-y-3">
-          <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-            Persönlich mit Manu
-          </p>
-          <p className="text-xs text-[var(--color-ink)] leading-relaxed">
-            Fragen zu deiner Website oder deinem Google-Profil? Schreib mir einfach kurz per WhatsApp oder ruf an.
-          </p>
-          <div className="pt-1 flex flex-col gap-1.5 text-xs font-bold text-[var(--color-plum)]">
-            <a
-              href="https://wa.me/4915567277155"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[var(--color-coral)] transition-colors inline-flex items-center gap-1.5"
-            >
-              <span>WhatsApp-Nachricht senden</span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a
-              href="tel:015567277155"
-              className="hover:text-[var(--color-coral)] transition-colors inline-flex items-center gap-1.5"
-            >
-              <span>0155 67277155 anrufen</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
       </aside>
 
       {/* Hauptspalte: Suche + Artikel-Ansicht */}
