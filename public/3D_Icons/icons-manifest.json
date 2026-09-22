@@ -1,0 +1,722 @@
+[
+  {
+    "id": "01-kennenlernen",
+    "title": "Kennenlernen",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "01-kennenlernen.png",
+    "webpFilename": "01-kennenlernen.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-kennenlernen.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-kennenlernen.webp"
+  },
+  {
+    "id": "01-neue-website",
+    "title": "Neue Website",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "01-neue-website.png",
+    "webpFilename": "01-neue-website.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-neue-website.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-neue-website.webp"
+  },
+  {
+    "id": "01-relaunch",
+    "title": "Relaunch",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "01-relaunch.png",
+    "webpFilename": "01-relaunch.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-relaunch.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/01-relaunch.webp"
+  },
+  {
+    "id": "02-designentwurf",
+    "title": "Designentwurf",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "02-designentwurf.png",
+    "webpFilename": "02-designentwurf.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-designentwurf.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-designentwurf.webp"
+  },
+  {
+    "id": "02-foto",
+    "title": "Foto",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "02-foto.png",
+    "webpFilename": "02-foto.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-foto.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-foto.webp"
+  },
+  {
+    "id": "02-mobile-first",
+    "title": "Mobile First",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "02-mobile-first.png",
+    "webpFilename": "02-mobile-first.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-mobile-first.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/02-mobile-first.webp"
+  },
+  {
+    "id": "03-bewertungen",
+    "title": "Bewertungen",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "03-bewertungen.png",
+    "webpFilename": "03-bewertungen.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-bewertungen.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-bewertungen.webp"
+  },
+  {
+    "id": "03-ladezeit-performance",
+    "title": "Ladezeit Performance",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "03-ladezeit-performance.png",
+    "webpFilename": "03-ladezeit-performance.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-ladezeit-performance.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-ladezeit-performance.webp"
+  },
+  {
+    "id": "03-umsetzung-und-texte",
+    "title": "Umsetzung Und Texte",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "03-umsetzung-und-texte.png",
+    "webpFilename": "03-umsetzung-und-texte.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-umsetzung-und-texte.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/03-umsetzung-und-texte.webp"
+  },
+  {
+    "id": "04-analyse",
+    "title": "Analyse",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "04-analyse.png",
+    "webpFilename": "04-analyse.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-analyse.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-analyse.webp"
+  },
+  {
+    "id": "04-mehr-anfragen",
+    "title": "Mehr Anfragen",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "04-mehr-anfragen.png",
+    "webpFilename": "04-mehr-anfragen.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-mehr-anfragen.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-mehr-anfragen.webp"
+  },
+  {
+    "id": "04-persoenlicher-ansprechpartner",
+    "title": "Persoenlicher Ansprechpartner",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "04-persoenlicher-ansprechpartner.png",
+    "webpFilename": "04-persoenlicher-ansprechpartner.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-persoenlicher-ansprechpartner.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/04-persoenlicher-ansprechpartner.webp"
+  },
+  {
+    "id": "05-festpreis",
+    "title": "Festpreis",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "05-festpreis.png",
+    "webpFilename": "05-festpreis.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-festpreis.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-festpreis.webp"
+  },
+  {
+    "id": "05-go-live",
+    "title": "Go Live",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "05-go-live.png",
+    "webpFilename": "05-go-live.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-go-live.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-go-live.webp"
+  },
+  {
+    "id": "05-struktur-wireframe",
+    "title": "Struktur Wireframe",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "05-struktur-wireframe.png",
+    "webpFilename": "05-struktur-wireframe.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-struktur-wireframe.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/05-struktur-wireframe.webp"
+  },
+  {
+    "id": "06-monatlich-kuendbar",
+    "title": "Monatlich Kuendbar",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "06-monatlich-kuendbar.png",
+    "webpFilename": "06-monatlich-kuendbar.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-monatlich-kuendbar.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-monatlich-kuendbar.webp"
+  },
+  {
+    "id": "06-seo-schutz",
+    "title": "Seo Schutz",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "06-seo-schutz.png",
+    "webpFilename": "06-seo-schutz.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-seo-schutz.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-seo-schutz.webp"
+  },
+  {
+    "id": "06-warnung",
+    "title": "Warnung",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "06-warnung.png",
+    "webpFilename": "06-warnung.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-warnung.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/06-warnung.webp"
+  },
+  {
+    "id": "07-aktionspfeil",
+    "title": "Aktionspfeil",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "07-aktionspfeil.png",
+    "webpFilename": "07-aktionspfeil.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-aktionspfeil.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-aktionspfeil.webp"
+  },
+  {
+    "id": "07-domain-eigentum",
+    "title": "Domain Eigentum",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "07-domain-eigentum.png",
+    "webpFilename": "07-domain-eigentum.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-domain-eigentum.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-domain-eigentum.webp"
+  },
+  {
+    "id": "07-unternehmensprofil",
+    "title": "Unternehmensprofil",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "07-unternehmensprofil.png",
+    "webpFilename": "07-unternehmensprofil.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-unternehmensprofil.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/07-unternehmensprofil.webp"
+  },
+  {
+    "id": "08-code-uebergabe",
+    "title": "Code Uebergabe",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "08-code-uebergabe.png",
+    "webpFilename": "08-code-uebergabe.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-code-uebergabe.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-code-uebergabe.webp"
+  },
+  {
+    "id": "08-faq-plus",
+    "title": "Faq Plus",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "08-faq-plus.png",
+    "webpFilename": "08-faq-plus.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-faq-plus.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-faq-plus.webp"
+  },
+  {
+    "id": "08-monatsreport",
+    "title": "Monatsreport",
+    "category": "Prozess & Website",
+    "folder": "01_Prozess_und_Website",
+    "filename": "08-monatsreport.png",
+    "webpFilename": "08-monatsreport.webp",
+    "png": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-monatsreport.png",
+    "webp": "./01_Firmenflow/3D_Icons/01_Prozess_und_Website/08-monatsreport.webp"
+  },
+  {
+    "id": "01-info-hinweis",
+    "title": "Info Hinweis",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "01-info-hinweis.png",
+    "webpFilename": "01-info-hinweis.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/01-info-hinweis.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/01-info-hinweis.webp"
+  },
+  {
+    "id": "02-erfolg",
+    "title": "Erfolg",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "02-erfolg.png",
+    "webpFilename": "02-erfolg.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/02-erfolg.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/02-erfolg.webp"
+  },
+  {
+    "id": "03-warnung",
+    "title": "Warnung",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "03-warnung.png",
+    "webpFilename": "03-warnung.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/03-warnung.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/03-warnung.webp"
+  },
+  {
+    "id": "04-fehler",
+    "title": "Fehler",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "04-fehler.png",
+    "webpFilename": "04-fehler.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/04-fehler.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/04-fehler.webp"
+  },
+  {
+    "id": "05-formular",
+    "title": "Formular",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "05-formular.png",
+    "webpFilename": "05-formular.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/05-formular.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/05-formular.webp"
+  },
+  {
+    "id": "06-upload-datei-senden",
+    "title": "Upload Datei Senden",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "06-upload-datei-senden.png",
+    "webpFilename": "06-upload-datei-senden.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/06-upload-datei-senden.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/06-upload-datei-senden.webp"
+  },
+  {
+    "id": "07-navigation-orientierung",
+    "title": "Navigation Orientierung",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "07-navigation-orientierung.png",
+    "webpFilename": "07-navigation-orientierung.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/07-navigation-orientierung.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/07-navigation-orientierung.webp"
+  },
+  {
+    "id": "08-datenschutz",
+    "title": "Datenschutz",
+    "category": "Hinweis & Status",
+    "folder": "02_Hinweis_und_Status",
+    "filename": "08-datenschutz.png",
+    "webpFilename": "08-datenschutz.webp",
+    "png": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/08-datenschutz.png",
+    "webp": "./01_Firmenflow/3D_Icons/02_Hinweis_und_Status/08-datenschutz.webp"
+  },
+  {
+    "id": "01-telefon",
+    "title": "Telefon",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "01-telefon.png",
+    "webpFilename": "01-telefon.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/01-telefon.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/01-telefon.webp"
+  },
+  {
+    "id": "02-email",
+    "title": "Email",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "02-email.png",
+    "webpFilename": "02-email.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/02-email.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/02-email.webp"
+  },
+  {
+    "id": "03-termin",
+    "title": "Termin",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "03-termin.png",
+    "webpFilename": "03-termin.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/03-termin.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/03-termin.webp"
+  },
+  {
+    "id": "04-nachricht-senden",
+    "title": "Nachricht Senden",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "04-nachricht-senden.png",
+    "webpFilename": "04-nachricht-senden.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/04-nachricht-senden.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/04-nachricht-senden.webp"
+  },
+  {
+    "id": "05-download",
+    "title": "Download",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "05-download.png",
+    "webpFilename": "05-download.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/05-download.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/05-download.webp"
+  },
+  {
+    "id": "06-externer-link",
+    "title": "Externer Link",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "06-externer-link.png",
+    "webpFilename": "06-externer-link.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/06-externer-link.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/06-externer-link.webp"
+  },
+  {
+    "id": "07-suche",
+    "title": "Suche",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "07-suche.png",
+    "webpFilename": "07-suche.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/07-suche.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/07-suche.webp"
+  },
+  {
+    "id": "08-faq",
+    "title": "Faq",
+    "category": "Kontakt & Aktion",
+    "folder": "03_Kontakt_und_Aktion",
+    "filename": "08-faq.png",
+    "webpFilename": "08-faq.webp",
+    "png": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/08-faq.png",
+    "webp": "./01_Firmenflow/3D_Icons/03_Kontakt_und_Aktion/08-faq.webp"
+  },
+  {
+    "id": "01-profil-einrichten",
+    "title": "Profil Einrichten",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "01-profil-einrichten.png",
+    "webpFilename": "01-profil-einrichten.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/01-profil-einrichten.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/01-profil-einrichten.webp"
+  },
+  {
+    "id": "02-profil-aufraeumen",
+    "title": "Profil Aufraeumen",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "02-profil-aufraeumen.png",
+    "webpFilename": "02-profil-aufraeumen.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/02-profil-aufraeumen.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/02-profil-aufraeumen.webp"
+  },
+  {
+    "id": "03-bewertungen-beantworten",
+    "title": "Bewertungen Beantworten",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "03-bewertungen-beantworten.png",
+    "webpFilename": "03-bewertungen-beantworten.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/03-bewertungen-beantworten.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/03-bewertungen-beantworten.webp"
+  },
+  {
+    "id": "04-mehr-bewertungen",
+    "title": "Mehr Bewertungen",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "04-mehr-bewertungen.png",
+    "webpFilename": "04-mehr-bewertungen.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/04-mehr-bewertungen.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/04-mehr-bewertungen.webp"
+  },
+  {
+    "id": "05-lob",
+    "title": "Lob",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "05-lob.png",
+    "webpFilename": "05-lob.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/05-lob.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/05-lob.webp"
+  },
+  {
+    "id": "06-wiederkehrendes-problem",
+    "title": "Wiederkehrendes Problem",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "06-wiederkehrendes-problem.png",
+    "webpFilename": "06-wiederkehrendes-problem.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/06-wiederkehrendes-problem.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/06-wiederkehrendes-problem.webp"
+  },
+  {
+    "id": "07-handlungsempfehlung",
+    "title": "Handlungsempfehlung",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "07-handlungsempfehlung.png",
+    "webpFilename": "07-handlungsempfehlung.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/07-handlungsempfehlung.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/07-handlungsempfehlung.webp"
+  },
+  {
+    "id": "08-team-schulung",
+    "title": "Team Schulung",
+    "category": "Lokalpräsenz 360",
+    "folder": "04_Lokalpraesenz_360",
+    "filename": "08-team-schulung.png",
+    "webpFilename": "08-team-schulung.webp",
+    "png": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/08-team-schulung.png",
+    "webp": "./01_Firmenflow/3D_Icons/04_Lokalpraesenz_360/08-team-schulung.webp"
+  },
+  {
+    "id": "01-video",
+    "title": "Video",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "01-video.png",
+    "webpFilename": "01-video.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/01-video.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/01-video.webp"
+  },
+  {
+    "id": "02-texte-copywriting",
+    "title": "Texte Copywriting",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "02-texte-copywriting.png",
+    "webpFilename": "02-texte-copywriting.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/02-texte-copywriting.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/02-texte-copywriting.webp"
+  },
+  {
+    "id": "03-social-media",
+    "title": "Social Media",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "03-social-media.png",
+    "webpFilename": "03-social-media.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/03-social-media.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/03-social-media.webp"
+  },
+  {
+    "id": "04-blog-news",
+    "title": "Blog News",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "04-blog-news.png",
+    "webpFilename": "04-blog-news.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/04-blog-news.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/04-blog-news.webp"
+  },
+  {
+    "id": "05-newsletter",
+    "title": "Newsletter",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "05-newsletter.png",
+    "webpFilename": "05-newsletter.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/05-newsletter.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/05-newsletter.webp"
+  },
+  {
+    "id": "06-referenzen-portfolio",
+    "title": "Referenzen Portfolio",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "06-referenzen-portfolio.png",
+    "webpFilename": "06-referenzen-portfolio.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/06-referenzen-portfolio.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/06-referenzen-portfolio.webp"
+  },
+  {
+    "id": "07-markenauftritt",
+    "title": "Markenauftritt",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "07-markenauftritt.png",
+    "webpFilename": "07-markenauftritt.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/07-markenauftritt.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/07-markenauftritt.webp"
+  },
+  {
+    "id": "08-kampagne",
+    "title": "Kampagne",
+    "category": "Marketing & Content",
+    "folder": "05_Marketing",
+    "filename": "08-kampagne.png",
+    "webpFilename": "08-kampagne.webp",
+    "png": "./01_Firmenflow/3D_Icons/05_Marketing/08-kampagne.png",
+    "webp": "./01_Firmenflow/3D_Icons/05_Marketing/08-kampagne.webp"
+  },
+  {
+    "id": "01-beratung",
+    "title": "Beratung",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "01-beratung.png",
+    "webpFilename": "01-beratung.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/01-beratung.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/01-beratung.webp"
+  },
+  {
+    "id": "02-angebot",
+    "title": "Angebot",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "02-angebot.png",
+    "webpFilename": "02-angebot.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/02-angebot.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/02-angebot.webp"
+  },
+  {
+    "id": "03-vertrag",
+    "title": "Vertrag",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "03-vertrag.png",
+    "webpFilename": "03-vertrag.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/03-vertrag.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/03-vertrag.webp"
+  },
+  {
+    "id": "04-freigabe",
+    "title": "Freigabe",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "04-freigabe.png",
+    "webpFilename": "04-freigabe.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/04-freigabe.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/04-freigabe.webp"
+  },
+  {
+    "id": "05-rechnung",
+    "title": "Rechnung",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "05-rechnung.png",
+    "webpFilename": "05-rechnung.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/05-rechnung.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/05-rechnung.webp"
+  },
+  {
+    "id": "06-support",
+    "title": "Support",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "06-support.png",
+    "webpFilename": "06-support.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/06-support.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/06-support.webp"
+  },
+  {
+    "id": "07-feedback",
+    "title": "Feedback",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "07-feedback.png",
+    "webpFilename": "07-feedback.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/07-feedback.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/07-feedback.webp"
+  },
+  {
+    "id": "08-weiterempfehlung",
+    "title": "Weiterempfehlung",
+    "category": "Projekt & Beratung",
+    "folder": "06_Projekt_und_Beratung",
+    "filename": "08-weiterempfehlung.png",
+    "webpFilename": "08-weiterempfehlung.webp",
+    "png": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/08-weiterempfehlung.png",
+    "webp": "./01_Firmenflow/3D_Icons/06_Projekt_und_Beratung/08-weiterempfehlung.webp"
+  },
+  {
+    "id": "01-responsive-design",
+    "title": "Responsive Design",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "01-responsive-design.png",
+    "webpFilename": "01-responsive-design.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/01-responsive-design.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/01-responsive-design.webp"
+  },
+  {
+    "id": "02-performance-ladezeit",
+    "title": "Performance Ladezeit",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "02-performance-ladezeit.png",
+    "webpFilename": "02-performance-ladezeit.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/02-performance-ladezeit.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/02-performance-ladezeit.webp"
+  },
+  {
+    "id": "03-seo",
+    "title": "Seo",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "03-seo.png",
+    "webpFilename": "03-seo.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/03-seo.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/03-seo.webp"
+  },
+  {
+    "id": "04-barrierefreiheit",
+    "title": "Barrierefreiheit",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "04-barrierefreiheit.png",
+    "webpFilename": "04-barrierefreiheit.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/04-barrierefreiheit.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/04-barrierefreiheit.webp"
+  },
+  {
+    "id": "05-wartung-updates",
+    "title": "Wartung Updates",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "05-wartung-updates.png",
+    "webpFilename": "05-wartung-updates.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/05-wartung-updates.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/05-wartung-updates.webp"
+  },
+  {
+    "id": "06-sicherheit-ssl",
+    "title": "Sicherheit Ssl",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "06-sicherheit-ssl.png",
+    "webpFilename": "06-sicherheit-ssl.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/06-sicherheit-ssl.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/06-sicherheit-ssl.webp"
+  },
+  {
+    "id": "07-analyse",
+    "title": "Analyse",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "07-analyse.png",
+    "webpFilename": "07-analyse.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/07-analyse.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/07-analyse.webp"
+  },
+  {
+    "id": "08-backup",
+    "title": "Backup",
+    "category": "Technik & Performance",
+    "folder": "07_Technik_und_Performance",
+    "filename": "08-backup.png",
+    "webpFilename": "08-backup.webp",
+    "png": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/08-backup.png",
+    "webp": "./01_Firmenflow/3D_Icons/07_Technik_und_Performance/08-backup.webp"
+  }
+]
