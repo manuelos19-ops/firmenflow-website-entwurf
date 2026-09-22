@@ -4,6 +4,35 @@ Alle wesentlichen Änderungen am Projekt **Firmenflow Website Entwurf** werden i
 
 ---
 
+## [v0.5.0] – 2026-09-23 (Ratgeber-Plattform, Dynamisches Quiz-System, Social Hub & Micro-UI)
+
+### 🚀 Ratgeber & Content-Hub (`/ratgeber`)
+- **3 fundierte Ratgeber online:** Google Maps Sichtbarkeit, Website-Fehler & Azubi-Gewinnung im Handwerk.
+- **Interaktives Wissens-Quiz-System:** Dynamischer Fragenpool mit Zufallsauswahl (5 vs. 10 Fragen) und vollständigem Antwort-Shuffle (keine feste Antwortposition).
+- **Lese-Tipp-Banner:** Oben in Artikeln platziert mit Sprungmarke direkt zum Quiz.
+- **Native Web Share API & WhatsApp-Buttons:** Schnelles Teilen inklusive automatischer UTM-Kampagnen-Parameter.
+- **Mobile Polish:** Horizontales Überlaufen von Großzahlen (z. B. 54.000) behoben, Kachelhöhen ausbalanciert, typografische Abstände für Untertitel optimiert.
+- **Bild-Assets:** Echtes 3D-Cover für Azubis-Artikel und 3 abwechselnde Autorenfotos von Manu eingebunden.
+
+### 📱 Social Media, Instagram Hub & Tracking
+- **Bio-Landingpage (`/start`):** Schnelle, fokussierte Profilseite für Social-Media-Besucher mit 1-Klick-Links zu Ratgebern, Quiz und Erstgespräch.
+- **Vanity-Redirects:** `/bio` und `/tipps` leiten nahtlos auf `/start`.
+- **`UtmCleaner`:** Automatische optische Bereinigung der Adresszeile von `utm_*`-Parametern nach 600 ms bei voller Erfassung in Vercel Analytics & GA4.
+- **Vercel Custom Events:** Tracking für Ratgeber-Klicks, Teilen-Aktionen und Quiz-Interaktionen.
+- **Hashtag-Standard 2026:** Obergrenze von 3 bis maximal 5 hochrelevanten Tags in allen Content-Dokumenten implementiert.
+
+### 💎 Design & Micro-UI
+- **Neue 3D-Icon-Buttons:** Buttons mit dynamischem Gradient-Rahmen und Glascontainer für 3D-Icons eingeführt.
+- **Tonalitäts-Harmonisierung:** Konsequente Durchsetzung von **„Persönlich mit Manu“** / **„persönlich mit mir“** auf allen Ebenen.
+
+---
+
+## [v0.4.0] – 2026-09-17 (Firmenflow 3D-Iconbibliothek & Consent-Härtung)
+- **3D-Icon-Integration:** 60 optimierte 512px-PNG-Derivate integriert via `FirmenflowIcon` & `FlowscreenIcon`.
+- **Consent-Gate:** Google Analytics lädt erst nach ausdrücklicher Einwilligung; Widerrufs-Button im Fließtext der Datenschutzerklärung eingebunden.
+
+---
+
 ## [v0.3.0] – 2026-08-24 (Catchy Design-Upgrade & Typografie-Trio)
 
 ### 🎨 Typografie

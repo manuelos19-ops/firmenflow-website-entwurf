@@ -1,31 +1,37 @@
-# Fortschritt
+# Fortschritt (Stand: 23.09.2026)
 
-## Was funktioniert (verifiziert 17.09.2026)
+## Was funktioniert & live ist
 
-- Firmenflow-Iconintegration auf allen Seiten (Start, Lokalpräsenz 360°, Über Manu, Anfrage + erhalten, 5 Projektseiten, FlowScreen).
-- TypeScript fehlerfrei, Produktionsbuild erfolgreich (25 Routen).
-- Gezielter ESLint ohne neue Icon-Fehler.
-- GA4 + Consent live verifiziert: kein Laden vor Einwilligung, Laden nach „Alle akzeptieren“, Widerruf löscht `_ga*`, CSP erlaubt GA, Datenschutz dokumentiert alles.
-- Commits `f8ba9b7` + `d76df31` gepusht, Arbeitsbaum sauber.
+- **Ratgeber- und Blog-Plattform:**
+  - 3 fertige Artikel online (`google-maps-nicht-gefunden`, `website-fehler-lokale-betriebe`, `azubis-finden-handwerk`).
+  - Maßgeschneiderte Wissens-Quizzes (5 & 10 Fragen) mit dynamischer Antwort-Rotation und Zufallsfragen pro Durchgang.
+  - Native Web Share API und WhatsApp-Teilen mit automatischen UTM-Parametern.
+  - Lese-Tipp-Banner über Artikeln mit Direkt-Sprungmarke zum Quiz.
+  - Kachel- und Typografie-Polish (54.000 Zahl bricht nicht mehr aus, ausgerichtete Kachelhöhen, vergrößerte Abstände).
+  - 3 echte Autoren-Porträts von Manu abwechselnd im Einsatz.
+- **Social Media & Landingpages:**
+  - Dedizierte Instagram-Bio-Landingpage `/start` mit Vanity-Redirects (`/bio`, `/tipps`).
+  - `UtmCleaner`-Infrastruktur (Vercel & GA4 erfassen Daten, Adresszeile wird nach 600 ms bereinigt).
+  - Post 01 (Google Maps) und Post 02 (Website-Fehler): jeweils 7 Karussell-Slides (1080×1350) + 3 Storys (1080×1920) im offiziellen CI gerendert.
+  - Hashtag-Strategie auf den offiziellen 2026-Standard begrenzt (ausnahmslos 3–5 gezielte Tags).
+- **Technischer Unterbau & Performance:**
+  - Next.js 16 App Router mit statischem Export/SSG und Turbopack-Kompatibilität.
+  - Vercel Custom Event Tracking für Ratgeber- und Quiz-Interaktionen.
+  - DSGVO-Consent-Gate verifiziert (kein GA4 vor Klick auf „Alle akzeptieren“, vollständige Synchronisation in `/datenschutz`).
+  - Neue Micro-UI Buttons mit 3D-Glas-Icons und Gradient-Rahmen.
+
+## Zuletzt abgeschlossene Meilensteine
+
+- `23.09.2026`: Instagram Post 02 Karussell (7 Slides) & 3 Storys inkl. Umfrage-Sticker-Feld gerendert; 2026 Hashtag-Obergrenze (3–5 Tags) etabliert.
+- `22.09.2026`: Helles Manu-Hero-Foto mit Cache-Busting eingepflegt; Azubi-Cover & Autorenfotos in Ratgeber eingebunden.
+- `22.09.2026`: Dynamisches Ratgeber-Quiz mit Zufalls-Rotation und vollständigem Antwort-Shuffle ausgerollt.
+- `21.09.2026`: Instagram Bio-Landingpage `/start` und Vanity-Redirects integriert; Vercel Custom Events aktiviert.
+- `19.09.2026`: Memory Bank und Redaktionsrichtlinien angelegt.
+- `17.09.2026`: 60 Firmenflow 3D-Icons (512px Derivate) integriert und GA4-Consent verifiziert.
 
 ## Was noch offen ist
 
-- [ ] Echte Browser-Sichtprüfung Desktop/Mobil (Icons, Transparenz, Beschnitt, Formulare).
-- [ ] `Faq.tsx`: ungenutzte `categories`/`activeCategory`/`setActiveCategory` entscheiden/entfernen.
-- [ ] `react-hooks/set-state-in-effect` in `ProjectInquiry.tsx` + `CookieConsent.tsx` separat fixen (Logik nicht ohne Auftrag ändern).
-- [ ] Optional: CMP-Erkennbarkeit erhöhen (technisches Consent-Cookie zusätzlich zu `localStorage`) — nur auf Wunsch, inkl. Datenschutz-Sync.
-
-## Bekannte Probleme
-
-- Einzeldatei-ESLint timet in dieser Umgebung oft nach 30 s aus.
-- Dev-/Prod-Server binden lokal keine Ports (Sandbox-Limit); Live-Verifikation via Fetch + statischem Build.
-- Manuelles Vercel-Deploy aus der Sandbox hängt in Timeouts → nur Auto-Deploy via Push.
-- Scanner ohne Consent-Klick melden GA/CMP fälschlich als fehlend (erwartbar, kein Bug).
-
-## Entscheidungs-Historie
-
-- 16.09.2026: Iconbibliothek (72 Icons + FlowScreen-Paket) bereitgestellt; Vorgabe: nur verwendete Icons kopieren, keine Platzhalter.
-- 17.09.2026: 60 Icons als 512px-Derivate übernommen (~58 MB → ~11,8 MB); Originale unangetastet.
-- 17.09.2026: Alt-Strategie auf `decorative`-Standard umgestellt (keine Slug-Vorlesung).
-- 17.09.2026: GA/Cookie-Prüfung → Verhalten korrekt, keine Änderung.
-- 19.09.2026: Memory Bank eingerichtet (diese Dateien).
+- [ ] Teil 3 der Instagram-Serie („Azubis finden im Handwerk“) konzipieren und rendern.
+- [ ] Langzeit-Monitoring der Vercel- und GA4-Custom-Events (Quiz-Starts vs. Abschlüsse).
+- [ ] Weitere regionale Fallstudien oder Praxisbeispiele für zukünftige Ratgeber vorbereiten.
+- [ ] Regelmäßige Prüfung der externen Quellenlinks auf Aktualität.
