@@ -151,10 +151,6 @@ Wenn du die Arbeit danach abgeben willst, übernehme ich sie mit [Lokalpräsenz 
 
 Platz eins bei Google kann dir niemand seriös versprechen, ich auch nicht. Ein vollständiges und gepflegtes Profil ist die Voraussetzung dafür, überhaupt mitzuspielen.
 
-* **Video-Einschätzung anfragen:** Schreib mir kurz eine Nachricht oder melde dich per WhatsApp.
-* **Kurzer Anruf:** Du erreichst mich unter **0155 67277155**.
-* Alles unverbindlich und **Persönlich mit Manu**.
-
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 
 ## Geprüfte Quellen und Belege

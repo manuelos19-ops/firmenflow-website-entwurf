@@ -106,10 +106,6 @@ Ich rufe deine Seite auf, schaue sie mir wie ein Kunde an und zeige dir im Video
 
 Bei Firmenflow kümmere ich mich um [neue Websites und die Überarbeitung bestehender Seiten](https://www.firmenflow.de/#leistungen). Ich übernehme den Aufbau, schreibe die Texte und setze die Seite technisch um. Auf Wunsch komme ich für Fotos zu dir. Zuerst schauen wir gemeinsam, was dein Betrieb braucht.
 
-* **Video-Einschätzung anfragen:** Schreib mir einfach kurz eine Nachricht oder melde dich per WhatsApp.
-* **Kurzer Anruf:** Du erreichst mich unter **0155 67277155**.
-* Alles unverbindlich und **Persönlich mit Manu**.
-
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 
 ## Geprüfte Quellen und Belege
