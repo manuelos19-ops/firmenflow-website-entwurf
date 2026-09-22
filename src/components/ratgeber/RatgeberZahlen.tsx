@@ -50,7 +50,9 @@ function Kachel({ raw, text, delay, run, armed }: { raw: string; text: string; d
     return () => cancelAnimationFrame(id);
   }, [armed, run, zahl, delay]);
 
-  const anzeige = zahl === null || wert === null ? raw : `${prefix}${wert}${suffix}`;
+  // Tausenderpunkte erhalten: "54.000" darf beim Zaehlen nicht zu "54000" werden.
+  const formatiert = wert === null ? "" : wert.toLocaleString("de-DE");
+  const anzeige = zahl === null || wert === null ? raw : `${prefix}${formatiert}${suffix}`;
 
   return (
     <div className="flex flex-col rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-5 sm:p-6">
