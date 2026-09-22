@@ -696,7 +696,9 @@ html.consent-decided #cookie-consent-banner {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   background: rgba(255, 255, 255, 0.08);
-  color: var(--color-coral);
+  /* Aufgehelltes Korall: Das normale Korall erreicht auf Plum nur 3,75:1,
+     zu wenig für 10-px-Schrift. #ff9a8c kommt auf rund 5,3:1. */
+  color: #ff9a8c;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 

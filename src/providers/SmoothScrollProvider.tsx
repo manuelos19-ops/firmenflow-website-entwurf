@@ -4,7 +4,14 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { ReactLenis, useLenis } from "lenis/react";
 import type { ReactNode } from "react";
-import { NAV_OFFSET } from "@/lib/scroll";
+import { lenisOffset, resolveAnchor } from "@/lib/scroll";
+
+type LenisInstance = NonNullable<ReturnType<typeof useLenis>>;
+
+function scrollToAnchor(lenis: LenisInstance, el: HTMLElement, options: Record<string, unknown>) {
+  const target = resolveAnchor(el);
+  lenis.scrollTo(target, { ...options, offset: lenisOffset(target) });
+}
 
 function LenisBridge() {
   const lenis = useLenis();
@@ -38,7 +45,7 @@ function LenisBridge() {
       const targetId = decodeURIComponent(hash.replace(/^#/, ""));
       const el = document.getElementById(targetId);
       if (el) {
-        lenis.scrollTo(el, { offset: -NAV_OFFSET, duration: 1.0 });
+        scrollToAnchor(lenis, el, { duration: 1.0 });
       }
     };
 
@@ -66,7 +73,7 @@ function LenisBridge() {
               : href;
             window.history.pushState(null, "", nextUrl);
           } catch {}
-          lenis.scrollTo(el, { offset: -NAV_OFFSET, duration: 1.0 });
+          scrollToAnchor(lenis, el, { duration: 1.0 });
         }
       }
     };
@@ -96,7 +103,7 @@ function LenisBridge() {
         setTimeout(() => {
           const el = document.getElementById(targetId);
           if (el) {
-            lenis.scrollTo(el, { offset: -NAV_OFFSET, immediate: false, duration: 0.8 });
+            scrollToAnchor(lenis, el, { immediate: false, duration: 0.8 });
           }
         }, delay)
       );

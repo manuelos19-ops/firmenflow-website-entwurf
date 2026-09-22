@@ -38,7 +38,6 @@ export function ProjectsShowcase() {
   // Calculate active index based on rotation
   const normalizedRotation = ((rotation % 360) + 360) % 360;
   const activeIndex = Math.round((360 - normalizedRotation) / anglePerCard) % totalCards;
-  const activeProject = allProjects[activeIndex];
 
   // Adjust 3D radius based on screen width
   useEffect(() => {
@@ -395,27 +394,41 @@ export function ProjectsShowcase() {
           style={{ contain: "layout" }}
         >
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-[var(--color-line)]/60">
-            <div className="min-h-[72px] flex flex-col justify-center">
-              <div className="flex items-center gap-3 mb-1.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">
-                  Projekt {activeIndex + 1} von {totalCards}
-                </span>
-                <span className={cn(
-                  "px-2.5 py-0.5 text-[11px] font-semibold rounded-full",
-                  activeProject.kind === "live"
-                    ? "bg-emerald-100 text-emerald-800"
-                    : "bg-[var(--color-plum)]/10 text-[var(--color-plum)]"
-                )}>
-                  {activeProject.badge}
-                </span>
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-display text-[var(--color-ink)] font-bold truncate max-w-[270px] sm:max-w-md">
-                {activeProject.name}
-              </h3>
-              <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-1">
-                <FirmenflowIcon name="referenzen-portfolio" size={20} decorative />
-                {activeProject.region} · {activeProject.sector}
-              </p>
+            {/* Alle Projekte liegen übereinander, nur das aktive ist sichtbar.
+                So richtet sich die Höhe nach dem längsten Eintrag und bleibt beim
+                Drehen gleich. Sonst rutscht auf dem Handy alles darunter mit. */}
+            <div className="grid [grid-template-areas:'stack'] min-w-0">
+              {allProjects.map((project, index) => (
+                <div
+                  key={project.slug}
+                  aria-hidden={index !== activeIndex}
+                  className={cn(
+                    "[grid-area:stack] min-h-[72px] flex flex-col justify-center min-w-0",
+                    index !== activeIndex && "invisible"
+                  )}
+                >
+                  <div className="flex items-center gap-3 mb-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-coral)]">
+                      Projekt {index + 1} von {totalCards}
+                    </span>
+                    <span className={cn(
+                      "px-2.5 py-0.5 text-[11px] font-semibold rounded-full",
+                      project.kind === "live"
+                        ? "bg-emerald-100 text-emerald-800"
+                        : "bg-[var(--color-plum)]/10 text-[var(--color-plum)]"
+                    )}>
+                      {project.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-display text-[var(--color-ink)] font-bold truncate max-w-[270px] sm:max-w-md">
+                    {project.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[var(--color-muted)] flex items-center gap-1.5 mt-1">
+                    <FirmenflowIcon name="referenzen-portfolio" size={20} decorative />
+                    {project.region} · {project.sector}
+                  </p>
+                </div>
+              ))}
             </div>
 
             {/* Orbit Navigation Buttons */}
@@ -454,57 +467,68 @@ export function ProjectsShowcase() {
             </div>
           </div>
 
-          <div className="pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 min-h-[56px]">
-            <div className="min-h-[44px] flex items-center max-w-lg">
-              <p className="text-sm text-[var(--color-muted)] leading-relaxed line-clamp-2">
-                {activeProject.summary}
-              </p>
-            </div>
-
-            {/* Action Buttons: Internal Details Link + Direct External Website */}
-            <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-              {activeProject.kind === "live" ? (
-                <>
-                  <FirmenflowButton
-                    href={`/projekte/${activeProject.slug}`}
-                    buttonIcon="details"
-                    size="compact"
-                    className="w-full sm:w-auto"
-                  >
-                    Umsetzung im Detail
-                  </FirmenflowButton>
-                  <FirmenflowButton
-                    href={activeProject.url}
-                    external
-                    buttonIcon="live-website"
-                    size="compact"
-                    className="w-full sm:w-auto"
-                  >
-                    Live-Website
-                  </FirmenflowButton>
-                </>
-              ) : (
-                <>
-                  <FirmenflowButton
-                    href={`/projekte/${activeProject.slug}`}
-                    buttonIcon="details"
-                    size="compact"
-                    className="w-full sm:w-auto"
-                  >
-                    Konzept im Detail
-                  </FirmenflowButton>
-                  <FirmenflowButton
-                    href={activeProject.url}
-                    external
-                    buttonIcon="live-website"
-                    size="compact"
-                    className="w-full sm:w-auto"
-                  >
-                    Live-Demo
-                  </FirmenflowButton>
-                </>
+          <div className="grid [grid-template-areas:'stack']">
+            {allProjects.map((project, index) => (
+              <div
+              key={project.slug}
+              aria-hidden={index !== activeIndex}
+              className={cn(
+                "[grid-area:stack] pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 min-h-[56px]",
+                index !== activeIndex && "invisible"
               )}
-            </div>
+            >
+                <div className="min-h-[44px] flex items-center max-w-lg">
+                  <p className="text-sm text-[var(--color-muted)] leading-relaxed line-clamp-2">
+                    {project.summary}
+                  </p>
+                </div>
+
+                {/* Action Buttons: Internal Details Link + Direct External Website */}
+                <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+                  {project.kind === "live" ? (
+                    <>
+                      <FirmenflowButton
+                        href={`/projekte/${project.slug}`}
+                        buttonIcon="details"
+                        size="compact"
+                        className="w-full sm:w-auto"
+                      >
+                        Umsetzung im Detail
+                      </FirmenflowButton>
+                      <FirmenflowButton
+                        href={project.url}
+                        external
+                        buttonIcon="live-website"
+                        size="compact"
+                        className="w-full sm:w-auto"
+                      >
+                        Live-Website
+                      </FirmenflowButton>
+                    </>
+                  ) : (
+                    <>
+                      <FirmenflowButton
+                        href={`/projekte/${project.slug}`}
+                        buttonIcon="details"
+                        size="compact"
+                        className="w-full sm:w-auto"
+                      >
+                        Konzept im Detail
+                      </FirmenflowButton>
+                      <FirmenflowButton
+                        href={project.url}
+                        external
+                        buttonIcon="live-website"
+                        size="compact"
+                        className="w-full sm:w-auto"
+                      >
+                        Live-Demo
+                      </FirmenflowButton>
+                    </>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

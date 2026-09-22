@@ -67,21 +67,22 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
   return (
     <section 
       ref={containerRef} 
-      id="kontakt" 
-      className="relative pt-32 pb-36 md:pt-40 md:pb-44 bg-gradient-to-b from-transparent via-[var(--color-plum)] via-15% to-[var(--color-plum)] text-white overflow-hidden scroll-mt-24"
+      id="kontakt"
+      data-anchor-target="#kontakt-start"
+      className="relative pt-32 pb-36 md:pt-40 md:pb-44 bg-[linear-gradient(to_bottom,transparent,var(--color-plum)_7rem)] text-white overflow-hidden scroll-mt-24"
     >
       <Container className="relative z-20">
         {/* Section Header */}
-        <div className="contact-reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
+        <div id="kontakt-start" className="contact-reveal text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <span className="badge-eyebrow-dark mb-4">
             <BrandIcon variant="light" className="w-4 h-3.5" />
-            <span>Lass uns sprechen</span>
+            <span>Kontakt</span>
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display leading-[1.08] mb-4">
             Lass uns sprechen. Wie es für dich am besten passt.
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-            Ganz gleich, ob du kurz anrufst, mir eine WhatsApp schreibst oder dir eine Video-Einschätzung holst: Du sprichst immer persönlich mit mir – transparent, auf Augenhöhe und ohne Verkaufsdruck.
+            Ob du kurz anrufst, mir auf WhatsApp schreibst oder dir erst eine Video-Einschätzung holst: Am anderen Ende bin immer ich. Und niemand ruft dich danach dreimal an, um dir etwas zu verkaufen.
           </p>
         </div>
 
@@ -92,7 +93,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
           </div>
 
           {/* Alternative Optionen: Direktkontakt & Video-Check */}
-          <div className="pt-2 space-y-4">
+          <div id="direkt" className="pt-2 space-y-4">
             <div className="flex items-center gap-4 my-2">
               <div className="h-px bg-white/10 flex-1" />
               <span className="text-xs uppercase tracking-widest text-white/50 font-semibold font-mono">
@@ -154,7 +155,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
 
               {/* Option B: Video-Einschätzung */}
               <div id="website-check" className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between gap-4 scroll-mt-28">
-                <div id="videoanalyse" className="sr-only" />
+                <div id="videoanalyse" data-anchor-target="#website-check" className="sr-only" />
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2">
                     <FirmenflowIcon name="video-website-check" size={24} decorative />

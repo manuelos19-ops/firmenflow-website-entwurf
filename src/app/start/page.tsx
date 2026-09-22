@@ -112,7 +112,7 @@ export default function StartPage() {
 
           {/* Erstgespräch buchen (Signature Button) */}
           <Link
-            href="/#kontakt"
+            href="/#direkt"
             className="group block relative rounded-2xl p-0.5 bg-gradient-to-r from-[#FF8878] via-[#CF5CC2] to-[#8B62CF] shadow-md shadow-[#482361]/15 hover:shadow-lg hover:shadow-[#482361]/25 hover:-translate-y-0.5 transition-all duration-200"
           >
             <div className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-[calc(1rem-2px)] bg-gradient-to-r from-[#4E2338] to-[#3A1C28] text-white">
@@ -143,7 +143,7 @@ export default function StartPage() {
         {/* 3. Kostenloser Video-Check */}
         <section>
           <Link
-            href="/#kontakt"
+            href="/#videoanalyse"
             className="group block p-5 rounded-2xl bg-white border border-[#E7E2DC] hover:border-[#FF705D]/50 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
           >
             <div className="flex items-start gap-4">
