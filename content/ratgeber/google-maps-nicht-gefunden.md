@@ -1,5 +1,6 @@
 ---
 title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
+metaTitle: "Bei Google Maps nicht gefunden: 5 Gründe"
 description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, plus Selbsttest."
 date: "2026-09-21"
 updated: "2026-09-22"

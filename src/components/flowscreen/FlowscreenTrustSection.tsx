@@ -1,5 +1,3 @@
-"use client";
-
 import { FlowscreenIcon } from "@/components/brand/FirmenflowIcon";
 import {
   FLOWSCREEN_HASHES,
@@ -46,10 +44,11 @@ export function FlowscreenTrustSection() {
           <a
             href={getFlowscreenVirusTotalUrl("setup")}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="font-semibold text-[var(--color-coral)] hover:underline underline-offset-4"
           >
-            Ergebnis ansehen
+            <span>Ergebnis ansehen</span>
+            <span className="sr-only"> (öffnet in neuem Tab)</span>
           </a>
         </li>
         <li className="flex items-center justify-between gap-3 flex-wrap rounded-xl bg-white border border-emerald-500/30 px-3.5 py-2.5">
@@ -66,10 +65,11 @@ export function FlowscreenTrustSection() {
           <a
             href={getFlowscreenVirusTotalUrl("portable")}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="font-semibold text-[var(--color-coral)] hover:underline underline-offset-4"
           >
-            Ergebnis ansehen
+            <span>Ergebnis ansehen</span>
+            <span className="sr-only"> (öffnet in neuem Tab)</span>
           </a>
         </li>
       </ul>

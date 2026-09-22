@@ -8,6 +8,7 @@ import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { RatgeberQuiz } from "@/components/ratgeber/RatgeberQuiz";
 import { RatgeberChart } from "@/components/ratgeber/RatgeberChart";
 import { RatgeberKarten } from "@/components/ratgeber/RatgeberKarten";
+import { RatgeberZahlen } from "@/components/ratgeber/RatgeberZahlen";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -20,12 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getRatgeberPost(slug);
   if (!post) return {};
+  const metaTitle = post.metaTitle ?? post.title;
   return {
-    title: post.title,
+    title: metaTitle,
     description: post.description,
     alternates: { canonical: `/ratgeber/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Firmenflow`,
+      title: `${metaTitle} | Firmenflow`,
       description: post.description,
       url: `/ratgeber/${post.slug}`,
       locale: "de_DE",
@@ -36,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Firmenflow`,
+      title: `${metaTitle} | Firmenflow`,
       description: post.description,
       images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
     },
@@ -109,6 +111,9 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
   }
   if (section.kind === "chart") {
     return <RatgeberChart head={section.head} rows={section.rows} caption={section.caption} />;
+  }
+  if (section.kind === "stats") {
+    return <RatgeberZahlen head={section.head} rows={section.rows} caption={section.caption} />;
   }
   if (section.kind === "cards") {
     return <RatgeberKarten head={section.head} rows={section.rows} caption={section.caption} />;

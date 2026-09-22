@@ -413,8 +413,6 @@ export function FlowscreenView() {
           </div>
         </div>
 
-        {/* 3-STEP WORKFLOW – entfernt: unnötiger Part laut Manu (21.09.2026) */}
-
         {/* DOWNLOAD OPTIONS & SYSTEM REQS */}
         <div id="download" className="space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">

@@ -8,8 +8,13 @@ type RatgeberChartProps = {
   caption?: string;
 };
 
+/** Zellen kommen als HTML aus dem Parser (escaped, mit Fett/Kursiv/Links). */
+function plain(html: string): string {
+  return html.replace(/<[^>]*>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+}
+
 function toNumber(value: string): number {
-  const cleaned = value.replace(/\./g, "").replace(",", ".").replace(/[^\d.-]/g, "");
+  const cleaned = plain(value).replace(/\./g, "").replace(",", ".").replace(/[^\d.-]/g, "");
   const n = Number.parseFloat(cleaned);
   return Number.isFinite(n) ? n : 0;
 }
@@ -60,7 +65,10 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
   const max = Math.max(...items.map((i) => i.value), 1);
 
   return (
-    <figure className="ff-chart m-0" ref={wrapRef}>
+    <figure
+      ref={wrapRef}
+      className={["ff-chart m-0", animate ? "is-js" : "", inView ? "is-in" : ""].filter(Boolean).join(" ")}
+    >
       <style>{`
         @keyframes ffGrow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
         .ff-chart .ff-bar { transform-origin: left center; }
@@ -69,26 +77,21 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
         .ff-chart.is-js .ff-val { opacity: 0; transition: opacity .3s ease; }
         .ff-chart.is-js.is-in .ff-val { opacity: 1; }
       `}</style>
-      <div
-        className={[
-          "rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8",
-          animate ? "is-js" : "",
-          inView ? "is-in" : "",
-        ].join(" ")}
-      >
+      <div className="rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8">
         <div
           className="flex items-baseline justify-between gap-4 pb-4 mb-4 border-b border-[var(--color-line)]"
         >
-          <span className="font-display font-bold text-[var(--color-ink)]">{head[0]}</span>
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
-            {head[valueIndex]}
-          </span>
+          <span className="font-display font-bold text-[var(--color-ink)]" dangerouslySetInnerHTML={{ __html: head[0] }} />
+          <span
+            className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]"
+            dangerouslySetInnerHTML={{ __html: head[valueIndex] }}
+          />
         </div>
 
         <div
           role="img"
-          aria-label={`${head[valueIndex]} nach ${head[0]}: ${items
-            .map((i) => `${i.label} ${i.raw}`)
+          aria-label={`${head[valueIndex].replace(/<[^>]*>/g, "")} nach ${head[0].replace(/<[^>]*>/g, "")}: ${items
+            .map((i) => `${i.label.replace(/<[^>]*>/g, "")} ${i.raw.replace(/<[^>]*>/g, "")}`)
             .join(", ")}.`}
           className="grid gap-3"
         >
@@ -96,15 +99,17 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
             const pct = Math.max((item.value / max) * 100, 1.5);
             const mix = Math.round((item.value / max) * 100);
             return (
-              <div key={item.label} className="grid grid-cols-[minmax(0,1fr)] sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-center gap-x-4 gap-y-1">
+              <div key={plain(item.label)} className="grid grid-cols-[minmax(0,1fr)] sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-center gap-x-4 gap-y-1">
                 <div className="min-w-0">
-                  <span className="block text-sm sm:text-base font-semibold text-[var(--color-ink)] leading-snug">
-                    {item.label}
-                  </span>
+                  <span
+                    className="block text-sm sm:text-base font-semibold text-[var(--color-ink)] leading-snug"
+                    dangerouslySetInnerHTML={{ __html: item.label }}
+                  />
                   {item.meta && (
-                    <span className="block text-xs text-[var(--color-muted)]">
-                      {item.meta} {head[1]}
-                    </span>
+                    <span
+                      className="block text-xs text-[var(--color-muted)]"
+                      dangerouslySetInnerHTML={{ __html: `${item.meta} ${head[1]}` }}
+                    />
                   )}
                 </div>
                 <div className="flex items-center gap-3 min-w-0">
@@ -121,9 +126,8 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
                   <span
                     className="ff-val font-display font-bold text-sm sm:text-base tabular-nums text-[var(--color-ink)] w-10 text-right shrink-0"
                     style={{ transitionDelay: `${i * 55 + 400}ms` }}
-                  >
-                    {item.raw}
-                  </span>
+                    dangerouslySetInnerHTML={{ __html: item.raw }}
+                  />
                 </div>
               </div>
             );
@@ -140,24 +144,22 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
                   <tr>
                     {head.map((h) => (
                       <th
-                        key={h}
+                        key={plain(h)}
                         className="text-left align-top font-display font-bold text-[var(--color-ink)] border-b-2 border-[var(--color-line)] py-2 pr-4 last:pr-0"
-                      >
-                        {h}
-                      </th>
+                        dangerouslySetInnerHTML={{ __html: h }}
+                      />
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {rows.map((r) => (
-                    <tr key={r[0]}>
+                    <tr key={plain(r[0])}>
                       {r.map((c, ci) => (
                         <td
                           key={ci}
                           className="align-top text-[var(--color-ink)] border-b border-[var(--color-line)] py-2 pr-4 last:pr-0 tabular-nums"
-                        >
-                          {c}
-                        </td>
+                          dangerouslySetInnerHTML={{ __html: c }}
+                        />
                       ))}
                     </tr>
                   ))}

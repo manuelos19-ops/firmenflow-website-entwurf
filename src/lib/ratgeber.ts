@@ -4,6 +4,7 @@ import path from "node:path";
 export type RatgeberPostMeta = {
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   date: string;
   updated?: string;
@@ -45,6 +46,7 @@ export type RatgeberSection =
   | { kind: "quote"; html: string }
   | { kind: "chart"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "cards"; head: string[]; rows: string[][]; caption?: string }
+  | { kind: "stats"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "cta"; html: string };
 
 const RATGEBER_DIR = "content/ratgeber";
@@ -120,6 +122,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   let tableRows: string[][] = [];
   let chartNext: string | null = null;
   let cardsNext: string | null = null;
+  let statsNext: string | null = null;
   let headingCount = 0;
   let leadDone = false;
 
@@ -156,12 +159,21 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     }
   };
 
+  const resetCustomTable = () => {
+    chartNext = null;
+    cardsNext = null;
+    statsNext = null;
+  };
+
   const closeTable = () => {
     if (tableRows.length === 0) return;
     const [head, ...rest] = tableRows;
     const body = rest.filter((r) => !r.every((c) => /^:?-{2,}:?$/.test(c)));
     tableRows = [];
-    if (body.length === 0) return;
+    if (body.length === 0) {
+      resetCustomTable();
+      return;
+    }
     const th =
       'class="text-left align-top font-display font-bold text-[var(--color-ink)] border-b-2 border-[var(--color-line)] py-3 pr-4 last:pr-0"';
     const td =
@@ -172,14 +184,24 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       .join("")}</tbody>`;
     const table = `<div class="overflow-x-auto rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8"><table class="w-full border-collapse text-sm sm:text-base">${thead}${tbody}</table></div>`;
     html.push(table);
+    // Zellen fuer die Komponenten durch inlineMarkdown schicken: das escaped
+    // HTML und setzt Fett, Kursiv und Links um. Die Komponenten rendern sie
+    // deshalb via dangerouslySetInnerHTML.
+    const headHtml = head.map((c) => inlineMarkdown(c));
+    const bodyHtml = body.map((r) => r.map((c) => inlineMarkdown(c)));
     if (chartNext !== null) {
-      sections.push({ kind: "chart", head, rows: body, caption: chartNext || undefined });
+      sections.push({ kind: "chart", head: headHtml, rows: bodyHtml, caption: chartNext || undefined });
       chartNext = null;
       return;
     }
     if (cardsNext !== null) {
-      sections.push({ kind: "cards", head, rows: body, caption: cardsNext || undefined });
+      sections.push({ kind: "cards", head: headHtml, rows: bodyHtml, caption: cardsNext || undefined });
       cardsNext = null;
+      return;
+    }
+    if (statsNext !== null) {
+      sections.push({ kind: "stats", head: headHtml, rows: bodyHtml, caption: statsNext || undefined });
+      statsNext = null;
       return;
     }
     sections.push({ kind: "text", html: table });
@@ -222,6 +244,14 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       closeList();
       closeTable();
       chartNext = (chartMark[1] || "").trim();
+      continue;
+    }
+    const statsMark = trimmed.match(/^::zahlen(?::\s*(.*?))?::$/);
+    if (statsMark) {
+      flushPara();
+      closeList();
+      closeTable();
+      statsNext = (statsMark[1] || "").trim();
       continue;
     }
     const cardsMark = trimmed.match(/^::karten(?::\s*(.*?))?::$/);
@@ -323,6 +353,7 @@ function readPostFile(file: string): RatgeberPost {
   return {
     slug,
     title: data.title ?? slug,
+    metaTitle: data.metaTitle,
     description: data.description ?? "",
     date: data.date ?? "2026-09-19",
     updated: data.updated,

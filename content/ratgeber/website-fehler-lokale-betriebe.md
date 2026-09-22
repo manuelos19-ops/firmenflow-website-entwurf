@@ -1,5 +1,6 @@
 ---
 title: "Die 5 typischen Website-Fehler lokaler Betriebe: Warum Neukunden mit dem Daumen weiterscrollen"
+metaTitle: "5 Website-Fehler, die Betriebe Kunden kosten"
 description: "Neue Kunden sehen von deinem Betrieb zuerst das Handydisplay. Fünf typische Website-Fehler lokaler Betriebe und was du in zwei Minuten selbst prüfen kannst."
 date: "2026-09-19"
 category: "Website & Vertrauen"
@@ -59,7 +60,14 @@ Viele Unternehmer pflegen ihre Website, vergessen aber ihr Google-Unternehmenspr
 
 Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit drei Betrieben an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
 
-In der jährlichen Konsumentenbefragung von BrightLocal, zuletzt im Februar 2026 mit 1.002 Befragten in den USA, gaben 97 Prozent an, vor einer Entscheidung die Bewertungen lokaler Betriebe zu lesen. 80 Prozent wählen eher einen Betrieb, der auf alle seine Bewertungen antwortet. Eine vergleichbare Erhebung für Deutschland gibt es in dieser Größe nicht, das Verhalten dürfte hier aber ähnlich sein.
+Wie stark Bewertungen die Entscheidung tragen, zeigt die jährliche Konsumentenbefragung von BrightLocal:
+
+::zahlen: BrightLocal, Local Consumer Review Survey 2026, 1.002 Befragte in den USA. Eine vergleichbare Erhebung für Deutschland gibt es in dieser Größe nicht, das Verhalten dürfte hier aber ähnlich sein.::
+
+| Wert | Bedeutung |
+| --- | --- |
+| 97 % | lesen vor einer Entscheidung die Bewertungen lokaler Betriebe |
+| 80 % | wählen eher einen Betrieb, der auf alle seine Bewertungen antwortet |
 
 Warum Betriebe im Kartenausschnitt gar nicht erst auftauchen, habe ich getrennt aufgeschrieben: [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden).
 

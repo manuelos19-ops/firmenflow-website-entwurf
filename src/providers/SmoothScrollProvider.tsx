@@ -27,9 +27,11 @@ function LenisBridge() {
     }
   }, []);
 
-  // Auf Hash-Änderungen auf derselben Seite reagieren (z.B. bei Klick auf /#kontakt)
+  // Auf Hash-Änderungen und Klicks auf In-Page-Links (z.B. /#kontakt auf "/") reagieren,
+  // da Next.js pushState nutzt und window.onhashchange dadurch allein nicht feuert
   useEffect(() => {
     if (!lenis) return;
+
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (!hash) return;
@@ -39,8 +41,42 @@ function LenisBridge() {
         lenis.scrollTo(el, { offset: -NAV_OFFSET, duration: 1.0 });
       }
     };
+
+    const handleDocumentClick = (e: MouseEvent) => {
+      if (e.button !== 0 || e.ctrlKey || e.shiftKey || e.altKey || e.metaKey) return;
+      const target = (e.target as HTMLElement | null)?.closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (!href) return;
+
+      const isCurrentPageHash =
+        href.startsWith("#") ||
+        (href.startsWith("/#") && typeof window !== "undefined" && window.location.pathname === "/");
+
+      if (isCurrentPageHash) {
+        const hash = href.startsWith("/#") ? href.slice(2) : href.slice(1);
+        if (!hash) return;
+        const targetId = decodeURIComponent(hash);
+        const el = document.getElementById(targetId);
+        if (el) {
+          e.preventDefault();
+          try {
+            const nextUrl = href.startsWith("#")
+              ? `${window.location.pathname}${href}`
+              : href;
+            window.history.pushState(null, "", nextUrl);
+          } catch {}
+          lenis.scrollTo(el, { offset: -NAV_OFFSET, duration: 1.0 });
+        }
+      }
+    };
+
     window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    document.addEventListener("click", handleDocumentClick, { capture: true });
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      document.removeEventListener("click", handleDocumentClick, { capture: true });
+    };
   }, [lenis]);
 
   // Bei jedem Routenwechsel (pathname) Scroll-Position zuverlässig nach oben zurücksetzen
