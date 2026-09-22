@@ -14,7 +14,7 @@ export const brandAssets = {
 } as const;
 
 export const portraitAssets = {
-  hero: { src: "/media/manu-hero.webp", alt: "Manu lächelt mit seinem Smartphone in der Hand" },
+  hero: { src: "/media/manu-hero-portrait.webp", alt: "Manu lächelt mit seinem Smartphone in der Hand" },
   about: { src: "/media/manu-about.webp", alt: "Manu im persönlichen Gesprächsporträt" },
   contact: { src: "/media/manu-contact.webp", alt: "Manu in entspannter Haltung im Außenbereich" },
 } as const;

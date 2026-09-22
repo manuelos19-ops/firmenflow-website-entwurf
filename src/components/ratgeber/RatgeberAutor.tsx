@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { portraitAssets } from "@/content/assets";
 
 /**
  * Autorenbox unter jedem Ratgeber-Artikel. Belegt die Erfahrung mit konkreten
@@ -19,7 +20,7 @@ export function RatgeberAutor({ slug }: RatgeberAutorProps) {
       <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 sm:items-start">
         <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border border-[var(--color-line)] shadow-sm bg-[var(--color-paper)]">
           <Image
-            src="/media/manu-hero.webp"
+            src={portraitAssets.hero.src}
             alt="Manuel Landeck, Inhaber von Firmenflow"
             fill
             sizes="(max-width: 640px) 80px, 96px"

@@ -10,9 +10,9 @@ const photos = [
     caption: "Manuel Landeck • Firmenflow",
   },
   {
-    src: "/media/authors/manu-smartphone.jpg",
+    src: "/media/authors/manu-hero-portrait.jpg",
     alt: "Manu mit Smartphone bei der Arbeit",
-    caption: "Deine Nachricht landet direkt bei mir",
+    caption: "Deine Nachricht landet persönlich bei mir",
   },
   {
     src: "/media/authors/manu-camera-hasselblad.jpg",

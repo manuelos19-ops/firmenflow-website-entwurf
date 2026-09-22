@@ -41,7 +41,7 @@ export type PilotVariant = keyof typeof PILOT.cards;
 
 export const ASSET_PATHS = {
   firmenflowWordmark: "public/brand/firmenflow-wordmark.png",
-  manuPortrait: "public/media/manu-hero.webp",
+  manuPortrait: "public/media/manu-hero-portrait.webp",
   flowscreenLogo: "public/media/flowscreen/flowscreen-logo.png",
   flowscreenEditor: "public/media/flowscreen/flowscreen-mockup.webp",
   displayFont: "public/fonts/space-grotesk/SpaceGrotesk-Variable.woff2",

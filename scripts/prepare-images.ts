@@ -11,7 +11,7 @@ async function main() {
   const contactSource = process.env.FIRMENFLOW_CONTACT_SOURCE || defaultContactSource;
 
   const jobs = [
-    { source: heroSource, target: "public/media/manu-hero.webp", width: 1400, height: 1700 },
+    { source: heroSource, target: "public/media/manu-hero-portrait.webp", width: 1400, height: 1700 },
     { source: aboutSource, target: "public/media/manu-about.webp", width: 1200, height: 1440 },
     { source: contactSource, target: "public/media/manu-contact.webp", width: 1200, height: 1440 },
   ] as const;
