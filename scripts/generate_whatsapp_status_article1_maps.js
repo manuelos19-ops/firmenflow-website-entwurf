@@ -27,7 +27,7 @@ const htmlContent = `<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Firmenflow WhatsApp Status - Ratgeber Artikel 1 Google Maps</title>
+  <title>Firmenflow WhatsApp Status - Ratgeber Teil 1 Google Maps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -130,62 +130,73 @@ const htmlContent = `<!DOCTYPE html>
       letter-spacing: -0.01em;
     }
 
-    .badge-pill {
+    /* Markanter Serien-Badge im Header */
+    .series-header-badge {
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(16px);
-      border: 1.5px solid #E7E2DC;
+      background: linear-gradient(135deg, #482361 0%, #3B1B50 100%);
+      border: 1.5px solid rgba(255, 112, 93, 0.45);
       border-radius: 999px;
-      padding: 12px 24px;
-      box-shadow: 0 6px 20px rgba(72, 35, 97, 0.06);
+      padding: 10px 22px;
+      box-shadow: 0 6px 20px rgba(72, 35, 97, 0.25);
     }
 
     .app-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
       object-fit: contain;
     }
 
-    .badge-text {
+    .series-header-text {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
-      font-weight: 700;
-      color: #653683;
-      letter-spacing: 0.04em;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
-    .badge-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #FF705D;
-      box-shadow: 0 0 10px #FF705D;
+    .series-header-text span {
+      color: #FF705D;
     }
 
-    /* 2. Headline & Hook */
+    /* 2. Headline & Serien-Banner */
     .hero-text-block {
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
 
-    .kicker-pill {
-      align-self: flex-start;
-      display: inline-flex;
+    .series-kicker-row {
+      display: flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(255, 112, 93, 0.12);
-      border: 1.5px solid rgba(255, 112, 93, 0.32);
-      border-radius: 999px;
-      padding: 9px 20px;
+      gap: 12px;
+    }
+
+    .series-pill-number {
+      background: linear-gradient(135deg, #FF705D 0%, #FA5D48 100%);
+      color: #FFFFFF;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
+      font-weight: 800;
+      padding: 8px 18px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 14px rgba(255, 112, 93, 0.35);
+      text-transform: uppercase;
+    }
+
+    .series-pill-category {
+      background: rgba(101, 54, 131, 0.1);
+      border: 1.5px solid rgba(101, 54, 131, 0.26);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 19px;
       font-weight: 700;
-      color: #D34330;
+      color: #653683;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -221,7 +232,7 @@ const htmlContent = `<!DOCTYPE html>
     /* 3. Centerpiece Showcase Visual */
     .visual-card {
       width: 952px;
-      height: 540px;
+      height: 530px;
       border-radius: 32px;
       background: linear-gradient(145deg, #FFFFFF 0%, #F6F2EC 100%);
       border: 2px solid #EAE5DF;
@@ -257,9 +268,13 @@ const htmlContent = `<!DOCTYPE html>
       gap: 10px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 21px;
-      font-weight: 700;
+      font-weight: 800;
       color: #17131A;
       box-shadow: 0 6px 20px rgba(72, 35, 97, 0.12);
+    }
+
+    .float-tag-top span.badge-num {
+      color: #FF705D;
     }
 
     .float-tag-bottom {
@@ -281,7 +296,7 @@ const htmlContent = `<!DOCTYPE html>
       box-shadow: 0 10px 28px rgba(72, 35, 97, 0.35);
     }
 
-    /* 4. Three Core Points (Menschlich, verstaendlich, klar strukturiert) */
+    /* 4. Three Core Points */
     .points-stack {
       display: flex;
       flex-direction: column;
@@ -450,17 +465,18 @@ const htmlContent = `<!DOCTYPE html>
         </div>
       </div>
 
-      <div class="badge-pill">
+      <!-- Prominenter Serien-Badge -->
+      <div class="series-header-badge">
         <img src="${appIconBase64}" alt="Firmenflow" class="app-icon">
-        <span class="badge-text">Artikel 1</span>
-        <span class="badge-dot"></span>
+        <span class="series-header-text">Teil <span>01</span></span>
       </div>
     </div>
 
-    <!-- 2. Headline & Hook -->
+    <!-- 2. Headline & Serien-Banner -->
     <div class="hero-text-block">
-      <div class="kicker-pill">
-        <span>📍 TEIL 1 &bull; LOKALE SICHTBARKEIT</span>
+      <div class="series-kicker-row">
+        <div class="series-pill-number">TEIL 01</div>
+        <div class="series-pill-category">RATGEBER-REIHE &bull; LOKALE SICHTBARKEIT</div>
       </div>
       <h1 class="headline">
         Warum dein Betrieb bei<br><span class="headline-highlight">Google Maps</span> nicht gefunden wird.
@@ -474,14 +490,14 @@ const htmlContent = `<!DOCTYPE html>
     <div class="visual-card">
       <img src="${mapsImgBase64}" alt="Google Maps Sichtbarkeit" class="visual-image">
       <div class="float-tag-top">
-        <span>📍 198 Betriebe am Niederrhein analysiert</span>
+        <span>📍 <span class="badge-num">TEIL 1:</span> GOOGLE MAPS</span>
       </div>
       <div class="float-tag-bottom">
         <span>⚠️ Fast jeder 2. Betrieb verliert Anfragen</span>
       </div>
     </div>
 
-    <!-- 4. Three Core Points (Menschlich, verstaendlich, klar) -->
+    <!-- 4. Three Core Points (Menschlich, verstaendlich, Wissen im Quiz vertiefen) -->
     <div class="points-stack">
       <!-- Punkt 1: Inhaber-Bestaetigung -->
       <div class="point-card">
@@ -490,7 +506,7 @@ const htmlContent = `<!DOCTYPE html>
         </div>
         <div class="point-body">
           <span class="point-title">1. Profil nie als Inhaber bestätigt</span>
-          <span class="point-text">Google legt Betriebe oft selbst an. Ohne Zugriff verschenkst du wertvolle Aufträge.</span>
+          <span class="point-text">Google legt Betriebe oft selbst an. Wer keine Inhaberschaft hat, verschenkt Aufträge.</span>
         </div>
         <div class="point-tag tag-coral">Offenes Profil</div>
       </div>
@@ -502,21 +518,21 @@ const htmlContent = `<!DOCTYPE html>
         </div>
         <div class="point-body">
           <span class="point-title">2. Falsche Zeiten oder Kategorie</span>
-          <span class="point-text">Veraltete Öffnungszeiten und unpassende Branchen stufen dein Profil herab.</span>
+          <span class="point-text">Veraltete Öffnungszeiten und unpassende Branchen führen dazu, dass Google andere vorzieht.</span>
         </div>
         <div class="point-tag tag-coral">Ranking-Bremse</div>
       </div>
 
-      <!-- Punkt 3: Interaktives Quiz zum Artikel -->
+      <!-- Punkt 3: Wissen im Quiz vertiefen (KORRIGIERT: Wissen vertiefen!) -->
       <div class="point-card">
         <div class="point-icon-box">
-          <img src="${iconQuizBase64}" alt="Interaktives Quiz">
+          <img src="${iconQuizBase64}" alt="Wissen im Quiz vertiefen">
         </div>
         <div class="point-body">
-          <span class="point-title">3. Inkl. 2 interaktiver Quizzes</span>
-          <span class="point-text">Finde mit dem 5-Fragen-Kompakt-Check in 2 Minuten heraus, was bei dir fehlt.</span>
+          <span class="point-title">3. Wissen im Quiz vertiefen</span>
+          <span class="point-text">Vertiefe dein Wissen direkt im Artikel: mit dem Kompakt- oder Meister-Check.</span>
         </div>
-        <div class="point-tag tag-plum">Direkt testen</div>
+        <div class="point-tag tag-plum">Wissen vertiefen</div>
       </div>
     </div>
 
@@ -524,14 +540,14 @@ const htmlContent = `<!DOCTYPE html>
     <div class="cta-card">
       <div class="cta-left">
         <div class="cta-eyebrow">
-          <span>🔥 ARTIKEL 1 &bull; JETZT KOSTENLOS LESEN</span>
+          <span>🔥 TEIL 1 JETZT KOSTENLOS LESEN</span>
         </div>
         <div class="cta-url">
           firmenflow.de/<span>ratgeber</span>
         </div>
       </div>
       <div class="cta-button">
-        <span>Artikel lesen</span>
+        <span>Teil 1 lesen</span>
         <span class="cta-button-arrow">&rarr;</span>
       </div>
     </div>
@@ -541,10 +557,10 @@ const htmlContent = `<!DOCTYPE html>
 
 const HTML_MAPS_ARTICLE_PATH = path.join(__dirname, 'whatsapp_status_article1_maps.html');
 fs.writeFileSync(HTML_MAPS_ARTICLE_PATH, htmlContent, 'utf-8');
-console.log('✅ HTML article 1 file written:', HTML_MAPS_ARTICLE_PATH);
+console.log('✅ HTML article 1 series file written:', HTML_MAPS_ARTICLE_PATH);
 
 (async () => {
-  console.log('🚀 Rendering Article 1 WhatsApp Status graphic with Playwright...');
+  console.log('🚀 Rendering Article 1 Series WhatsApp Status graphic with Playwright...');
   const browser = await chromium.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--allow-file-access-from-files']
@@ -567,7 +583,7 @@ console.log('✅ HTML article 1 file written:', HTML_MAPS_ARTICLE_PATH);
   await page.screenshot({ path: outPng, type: 'png' });
   await page.screenshot({ path: outJpgBrain, type: 'jpeg', quality: 95 });
 
-  console.log('✅ Article 1 status graphic rendered successfully:');
+  console.log('✅ Article 1 series status graphic rendered successfully:');
   console.log('   - ' + outJpg);
   console.log('   - ' + outJpgBrain);
 
