@@ -25,6 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getRatgeberPost(slug);
   if (!post) return {};
   const metaTitle = post.metaTitle ?? post.title;
+  const baseUrl = getSiteUrl().origin;
+  const imageUrl = post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : undefined;
   return {
     title: metaTitle,
     description: post.description,
@@ -37,13 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       authors: ["Manuel Landeck"],
-      images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
+      images: imageUrl ? [{ url: imageUrl, alt: post.imageAlt }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: `${metaTitle} | Firmenflow`,
       description: post.description,
-      images: post.image ? [{ url: post.image, alt: post.imageAlt }] : undefined,
+      images: imageUrl ? [{ url: imageUrl, alt: post.imageAlt }] : undefined,
     },
   };
 }
@@ -272,7 +274,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           </section>
         )}
 
-        <RatgeberAutor />
+        <RatgeberAutor slug={post.slug} />
 
         <section className="rounded-[2rem] bg-[var(--color-plum)] text-white p-8 sm:p-10 text-center space-y-4 shadow-xl">
           <h2 className="text-2xl sm:text-3xl font-display font-bold">Lieber direkt umsetzen als lesen?</h2>

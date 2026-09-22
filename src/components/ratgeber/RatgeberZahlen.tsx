@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/cn";
 
 type RatgeberZahlenProps = {
   head: string[];
@@ -67,9 +68,21 @@ function Kachel({ raw, text, delay, run, armed }: { raw: string; text: string; d
         });
   const anzeige = zahl === null || wert === null ? raw : `${prefix}${formatiert}${suffix}`;
 
+  const isLong = anzeige.length >= 6;
+  const isMedium = anzeige.length >= 4;
+
   return (
-    <div className="flex flex-col rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-5 sm:p-6">
-      <span className="font-display font-bold leading-none tabular-nums text-[var(--color-coral)] text-[clamp(2.75rem,9vw,3.75rem)]">
+    <div className="flex flex-col min-w-0 rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-5 sm:p-6 overflow-hidden">
+      <span
+        className={cn(
+          "font-display font-bold leading-none tabular-nums text-[var(--color-coral)] tracking-tight truncate",
+          isLong
+            ? "text-[clamp(1.75rem,4vw,2.4rem)]"
+            : isMedium
+            ? "text-[clamp(2.15rem,5.5vw,3rem)]"
+            : "text-[clamp(2.5rem,7vw,3.5rem)]"
+        )}
+      >
         {anzeige}
       </span>
       <span
@@ -112,7 +125,13 @@ export function RatgeberZahlen({ head, rows, caption }: RatgeberZahlenProps) {
   const spalten = rows.length === 2 ? "sm:grid-cols-2" : rows.length >= 3 ? "sm:grid-cols-3" : "";
 
   return (
-    <figure className="m-0" ref={wrapRef}>
+    <figure className="m-0 my-6 sm:my-8" ref={wrapRef}>
+      {caption && (
+        <figcaption className="mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-[var(--color-muted)] leading-relaxed flex items-start sm:items-center gap-2.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-coral)] shrink-0 mt-1 sm:mt-0" aria-hidden="true" />
+          <span>{caption}</span>
+        </figcaption>
+      )}
       <div
         className={`grid gap-4 ${spalten}`}
         role="img"
@@ -129,9 +148,6 @@ export function RatgeberZahlen({ head, rows, caption }: RatgeberZahlenProps) {
           />
         ))}
       </div>
-      {caption && (
-        <figcaption className="mt-3 text-sm text-[var(--color-muted)]">{caption}</figcaption>
-      )}
       <span className="sr-only">
         {head.map(plain).join(", ")}: {rows.map((r) => r.map(plain).join(" ")).join("; ")}
       </span>

@@ -233,7 +233,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       closeTable();
       const id = slugify(h3[1]);
       headings.push({ id, text: h3[1], level: 3 });
-      const h = `<h3 id="${id}" class="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] scroll-mt-28 pt-2">${inlineMarkdown(h3[1])}</h3>`;
+      const h = `<h3 id="${id}" class="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] scroll-mt-28 pt-5 sm:pt-7 pb-1.5">${inlineMarkdown(h3[1])}</h3>`;
       html.push(h);
       sections.push({ kind: "text", html: h });
       continue;

@@ -50,18 +50,28 @@ export function RatgeberKarten({ head, rows, caption }: RatgeberKartenProps) {
   // nur eine Zeile braucht. Ohne subgrid-Unterstuetzung bleibt es beim Flex-Layout.
   const mitFuss = lastIndex > 1;
   const gridColsClass =
-    rows.length === 2 ? "sm:grid-cols-2" : rows.length === 1 ? "sm:grid-cols-1" : "sm:grid-cols-3";
+    rows.length === 1
+      ? "grid-cols-1"
+      : rows.length === 2 || rows.length === 4
+      ? "sm:grid-cols-2"
+      : "sm:grid-cols-3";
 
   return (
     <figure
       ref={wrapRef}
-      className={["ff-karten m-0", animate ? "is-js" : "", inView ? "is-in" : ""].filter(Boolean).join(" ")}
+      className={["ff-karten m-0 my-6 sm:my-8", animate ? "is-js" : "", inView ? "is-in" : ""].filter(Boolean).join(" ")}
     >
       <style>{`
         @keyframes ffRise { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
         .ff-karten.is-js .ff-karte { opacity: 0; }
         .ff-karten.is-js.is-in .ff-karte { animation: ffRise .6s cubic-bezier(.22,1,.36,1) both; }
       `}</style>
+      {caption && (
+        <figcaption className="mb-4 sm:mb-6 text-sm sm:text-base font-medium text-[var(--color-muted)] leading-relaxed flex items-center gap-2.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-coral)] shrink-0" aria-hidden="true" />
+          <span>{caption}</span>
+        </figcaption>
+      )}
       <div
         role="list"
         className={[
@@ -87,17 +97,19 @@ export function RatgeberKarten({ head, rows, caption }: RatgeberKartenProps) {
                 .join(" ")}
               style={{ animationDelay: `${i * 90}ms` }}
             >
-              <p
-                className="text-[11px] font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]"
-                dangerouslySetInnerHTML={{ __html: head[0] }}
-              />
-              <h3
-                className="font-display font-bold text-xl text-[var(--color-ink)] mt-1 mb-3"
-                dangerouslySetInnerHTML={{ __html: row[0] }}
-              />
+              <div className="mb-3 sm:min-h-[4.75rem] flex flex-col justify-start">
+                <p
+                  className="text-[11px] font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] mb-1"
+                  dangerouslySetInnerHTML={{ __html: head[0] }}
+                />
+                <h3
+                  className="font-display font-bold text-lg sm:text-xl text-[var(--color-ink)] leading-snug"
+                  dangerouslySetInnerHTML={{ __html: row[0] }}
+                />
+              </div>
               {lastIndex === 1 && head[1] && (
                 <p
-                  className="text-[11px] font-mono font-medium uppercase tracking-wider text-[var(--color-muted)] mb-1"
+                  className="text-[11px] font-mono font-medium uppercase tracking-wider text-[var(--color-muted)] mb-1.5"
                   dangerouslySetInnerHTML={{ __html: head[1] }}
                 />
               )}
@@ -106,7 +118,7 @@ export function RatgeberKarten({ head, rows, caption }: RatgeberKartenProps) {
                 dangerouslySetInnerHTML={{ __html: row[1] }}
               />
               {lastIndex > 1 && (
-                <div className="mt-4 pt-4 border-t border-[var(--color-line)]">
+                <div className="mt-4 pt-4 border-t border-[var(--color-line)] mt-auto">
                   <p
                     className="text-[11px] uppercase tracking-wider text-[var(--color-muted)] mb-1"
                     dangerouslySetInnerHTML={{ __html: head[lastIndex] }}
@@ -125,9 +137,6 @@ export function RatgeberKarten({ head, rows, caption }: RatgeberKartenProps) {
           );
         })}
       </div>
-      {caption && (
-        <figcaption className="mt-3 text-sm text-[var(--color-muted)]">{caption}</figcaption>
-      )}
     </figure>
   );
 }

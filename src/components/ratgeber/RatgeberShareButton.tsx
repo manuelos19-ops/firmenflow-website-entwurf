@@ -113,8 +113,10 @@ export function RatgeberShareButton({
     }
   };
 
+  const cleanSlug = url.split("/").filter(Boolean).pop() || "ratgeber";
+  const whatsappTargetUrl = `${url}?utm_source=whatsapp&utm_medium=share_button&utm_campaign=${encodeURIComponent(cleanSlug)}`;
   const shareText = encodeURIComponent(
-    `${title} – Spannender Ratgeber von Firmenflow:\n${url}`
+    `${title} – Spannender Ratgeber von Firmenflow:\n${whatsappTargetUrl}`
   );
   const whatsappUrl = `https://api.whatsapp.com/send?text=${shareText}`;
 

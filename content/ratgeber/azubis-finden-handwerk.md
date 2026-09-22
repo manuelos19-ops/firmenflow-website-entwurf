@@ -5,6 +5,7 @@ description: "Anzeige geschaltet, kein Anruf. Wo dein nächster Azubi wirklich s
 date: "2026-09-22"
 category: "Mitarbeiter finden"
 tags: [Azubis, Mitarbeiter, Karriereseite, Handwerk, Wesel]
+image: "/images/ratgeber/azubis-finden-handwerk.jpg"
 imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Bewerbungsnachricht, Werkzeug-Symbol und Zeitungsstapel im Hintergrund"
 featured: "false"
 ---

@@ -67,7 +67,7 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
   return (
     <figure
       ref={wrapRef}
-      className={["ff-chart m-0", animate ? "is-js" : "", inView ? "is-in" : ""].filter(Boolean).join(" ")}
+      className={["ff-chart m-0 my-6 sm:my-8", animate ? "is-js" : "", inView ? "is-in" : ""].filter(Boolean).join(" ")}
     >
       <style>{`
         @keyframes ffGrow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
@@ -77,6 +77,12 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
         .ff-chart.is-js .ff-val { opacity: 0; transition: opacity .3s ease; }
         .ff-chart.is-js.is-in .ff-val { opacity: 1; }
       `}</style>
+      {caption && (
+        <figcaption className="mb-4 sm:mb-6 text-sm sm:text-base font-medium text-[var(--color-muted)] leading-relaxed flex items-center gap-2.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-coral)] shrink-0" aria-hidden="true" />
+          <span>{caption}</span>
+        </figcaption>
+      )}
       <div className="rounded-3xl bg-white border border-[var(--color-line)] shadow-sm p-6 sm:p-8">
         <div
           className="flex items-baseline justify-between gap-4 pb-4 mb-4 border-b border-[var(--color-line)]"
@@ -168,9 +174,6 @@ export function RatgeberChart({ head, rows, caption }: RatgeberChartProps) {
           </div>
         </details>
       </div>
-      {caption && (
-        <figcaption className="mt-3 text-sm text-[var(--color-muted)]">{caption}</figcaption>
-      )}
     </figure>
   );
 }
