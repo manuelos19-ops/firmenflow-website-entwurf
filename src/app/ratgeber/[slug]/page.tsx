@@ -9,6 +9,7 @@ import { RatgeberQuiz } from "@/components/ratgeber/RatgeberQuiz";
 import { RatgeberChart } from "@/components/ratgeber/RatgeberChart";
 import { RatgeberKarten } from "@/components/ratgeber/RatgeberKarten";
 import { RatgeberZahlen } from "@/components/ratgeber/RatgeberZahlen";
+import { RatgeberShareButton } from "@/components/ratgeber/RatgeberShareButton";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -193,7 +194,15 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <p className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">{post.category} · {post.readingMinutes} Min. Lesezeit</p>
           <h1 className="text-3xl sm:text-5xl font-display font-bold text-[var(--color-ink)] leading-[1.1]">{post.title}</h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">{post.description}</p>
-          <p className="text-sm text-[var(--color-muted)]">Von Manu · {formatDate(post.date)}</p>
+          <div className="flex flex-wrap items-center gap-2.5 text-sm text-[var(--color-muted)]">
+            <span>Von Manu · {formatDate(post.date)}</span>
+            <span aria-hidden="true" className="text-[var(--color-line)]">·</span>
+            <RatgeberShareButton
+              title={post.title}
+              description={post.description}
+              url={`${baseUrl}/ratgeber/${post.slug}`}
+            />
+          </div>
         </header>
 
         {post.image && (

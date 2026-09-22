@@ -9,6 +9,7 @@ import { FlowscreenCompareCards } from "@/components/flowscreen/FlowscreenCompar
 import { FlowscreenDownloadButton } from "@/components/flowscreen/FlowscreenDownloadButton";
 import { FlowscreenStickyCta } from "@/components/flowscreen/FlowscreenStickyCta";
 import { FlowscreenTrustSection } from "@/components/flowscreen/FlowscreenTrustSection";
+import { FlowscreenFounderQuote } from "@/components/flowscreen/FlowscreenFounderQuote";
 import { cn } from "@/lib/cn";
 import { brandAssets } from "@/content/assets";
 import { FirmenflowIcon, FlowscreenIcon } from "@/components/brand/FirmenflowIcon";
@@ -209,6 +210,9 @@ export function FlowscreenView() {
               </div>
             </div>
           </div>
+
+          {/* Gründer-Zitat & Macher-Hintergrund */}
+          <FlowscreenFounderQuote />
 
           {/* ECHTE EINBLICKE intro */}
           <div className="pt-10 max-w-5xl mx-auto text-left">
