@@ -14,7 +14,7 @@
   - `/ratgeber/website-fehler-lokale-betriebe` (Google- & BBC-Ladezeitwerte, Destatis)
   - `/ratgeber/azubis-finden-handwerk` (Handwerkskammer, Destatis, 60-Sekunden-Bewerbung)
 - **Interaktives Wissens-Quiz-System:**
-  - Jede Ratgeber-Seite besitzt ein maßgeschneidertes Quiz (Kompakt-Check: 5 Fragen / Profi-Meistercheck: 10 Fragen).
+  - Alle 3 Ratgeber-Seiten besitzen nun ein maßgeschneidertes Quiz (Kompakt-Check: 5 Fragen / Profi-Meistercheck: 10 Fragen).
   - Fragenpool mit Zufallsauswahl und vollständigem Antworten-Shuffle (dynamische Rotation der Optionen 1–3 bei jedem Durchgang).
   - Lese-Tipp-Banner über dem geöffneten Artikel mit Anker-Sprungmarke direkt zum Quiz.
   - Native Web Share API und WhatsApp-Teilen-Buttons mit integriertem Kampagnen-Tracking.

@@ -48,6 +48,14 @@ Suchintention und ein natürliches Fokus-Thema festlegen; Suchvolumen und Keywor
 
 Bildkonzept und Alt-Text können folgen, sobald ein tatsächliches Bild vorliegt. Kein Alt-Text, der ein noch nicht vorhandenes Bild als existierend beschreibt. Veröffentlichungsdatum erst bei Veröffentlichung setzen. Technische Umsetzung, strukturierte Daten und visuelle Prüfung gesondert behandeln.
 
+## Quiz-Standard pro Artikel
+
+Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interaktives Wissens-Quiz unter `content/ratgeber/quizzes/<slug>.json`:
+- **Zwei Spielmodi:** 10 Basis-Fragen für den 5-Fragen-Kompakt-Check und 10 Profi-Fragen für den 10-Fragen-Meister-Check.
+- **Dynamische Zufalls-Rotation:** Bei jedem Durchgang werden die Fragen neu ausgewählt und alle Antworten auf Position 1–3 zufällig geshuffelt (keine feste Position 1).
+- **Lese-Tipp-Banner:** Automatischer Hinweis über dem geöffneten Artikel mit direkter Sprungmarke `#selbst-check` zum Quiz.
+- **Analytics:** Automatische Vercel Custom Events bei Start und Abschluss.
+
 ## Arbeitsablauf und Freigabe
 
 Recherche, Entwurf, Fakten-/Quellenprüfung und redaktionelle Gegenprüfung; bei Bedarf Subagents. Entwurf samt Quellen und SEO-Paket für Manu bereitstellen. Artikel nur als lokale Entwürfe außerhalb öffentlicher Website-Verzeichnisse ablegen. Keine Veröffentlichung, kein Deployment und keine Änderungen an öffentlichem Blog, Navigation oder Sitemap ohne ausdrücklichen Auftrag. Nach Fertigstellung Manu über den prüfbaren Entwurf informieren.
