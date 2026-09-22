@@ -34,6 +34,21 @@ const nextConfig: NextConfig = {
         destination: "/links",
         permanent: false,
       },
+      {
+        source: "/start",
+        destination: "/?utm_source=instagram&utm_medium=bio&utm_campaign=bio_erstgespraech#kontakt",
+        permanent: false,
+      },
+      {
+        source: "/tipps",
+        destination: "/ratgeber?utm_source=instagram&utm_medium=bio&utm_campaign=bio_ratgeber_hub",
+        permanent: false,
+      },
+      {
+        source: "/bio",
+        destination: "/links?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub",
+        permanent: false,
+      },
     ];
   },
   async headers() {
