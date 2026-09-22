@@ -73,9 +73,10 @@ export function RatgeberAutor({ slug }: RatgeberAutorProps) {
           </h2>
           <p className="text-sm sm:text-base text-[var(--color-ink)] leading-relaxed">
             Elf Jahre im Betrieb, bevor ich Websites gebaut habe: sechs Jahre Inhaber eines
-            EMS-Fitnessstudios, zwei Jahre Geschäftsführer einer selbst gebauten Lasertag-Arena,
-            danach Marketing, Digitalisierung, Foto und Video im größeren Maßstab. Heute mache ich
-            das für lokale Betriebe in Wesel und am Niederrhein.
+            EMS-Fitnessstudios, zwei Jahre Geschäftsführer meiner selbst aufgebauten Lasertag-Arena
+            in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf
+            und BattleKart Düsseldorf-Neuss. Heute baue ich Websites und Google-Profile für
+            Betriebe in Wesel und am Niederrhein.
           </p>
           <p className="text-sm">
             <Link

@@ -81,7 +81,7 @@ export default function StartPage() {
           </p>
 
           <p className="text-sm text-[#746D76] leading-relaxed mt-3.5 max-w-md mx-auto">
-            Ich helfe Handwerkern und lokalen Betrieben dabei, online gefunden zu werden und echte Kundenanfragen zu gewinnen.
+            Ich baue Websites und Google-Profile für Betriebe am Niederrhein. Damit dich die Leute finden, die gerade nach dir suchen, und dann auch anrufen.
           </p>
         </section>
 
@@ -102,7 +102,7 @@ export default function StartPage() {
                 Schreib mir auf WhatsApp
               </div>
               <div className="text-xs text-stone-600 mt-0.5">
-                Kurze Frage oder Projekt besprechen • Unverbindlich
+                Kurze Frage oder konkretes Projekt • Ich antworte selbst
               </div>
             </div>
             <span className="text-stone-400 group-hover:text-emerald-700 transition-colors text-lg pr-1">
@@ -119,7 +119,7 @@ export default function StartPage() {
               <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 p-1.5 group-hover:scale-105 transition-transform">
                 <Image
                   src="/3D_Icons/01_Prozess_und_Website/04-persoenlicher-ansprechpartner.webp"
-                  alt="Persönlich mit Manu"
+                  alt="Erstgespräch"
                   width={44}
                   height={44}
                   className="object-contain"
@@ -127,10 +127,10 @@ export default function StartPage() {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-sm sm:text-base font-bold leading-tight">
-                  Persönlich mit Manu
+                  Erstgespräch vereinbaren
                 </div>
                 <div className="text-xs text-rose-100/80 mt-0.5">
-                  30 Min. Erstgespräch sichern • Kostenlos
+                  30 Minuten • Kostenlos und unverbindlich
                 </div>
               </div>
               <span className="text-[#FF8878] text-lg font-bold pr-2 group-hover:translate-x-1 transition-transform">
@@ -159,15 +159,15 @@ export default function StartPage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm sm:text-base font-bold text-[#17131A] group-hover:text-[#653683] transition-colors">
-                    Kostenloser Video-Check für deinen Betrieb
+                    Video-Check für deinen Betrieb
                   </h2>
                   <span className="text-xs text-[#FF705D] font-bold">Gratis</span>
                 </div>
                 <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed mt-1">
-                  Nenne mir deine Website oder deinen Firmennamen. Ich nehme ein 5-Minuten-Screenvideo für dich auf und zeige dir ehrlich, wo du bei Google Maps oder auf deiner Website Anfragen verlierst.
+                  Schick mir deine Website oder deinen Firmennamen. Ich nehme ein 5-Minuten-Video von meinem Bildschirm auf und zeige dir, wo du bei Google Maps oder auf deiner Website Anfragen verlierst.
                 </p>
                 <div className="mt-3 text-xs font-bold text-[#FF705D] flex items-center gap-1 group-hover:text-[#653683] transition-colors">
-                  <span>Video-Check unverbindlich anfordern</span>
+                  <span>Video-Check anfordern</span>
                   <span>➔</span>
                 </div>
               </div>
@@ -192,12 +192,31 @@ export default function StartPage() {
           {/* Interaktiver Foto-Slider */}
           <ManuPhotoSlider />
 
-          <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed pt-1">
-            Elf Jahre im eigenen Betrieb, bevor ich Websites gebaut habe: sechs Jahre Inhaber eines Fitnessstudios, zwei Jahre Geschäftsführer einer Lasertag-Arena. Ich kenne den Druck, wenn am Monatsende die Zahlen stimmen müssen und Kunden anrufen müssen.
+          <p className="text-xs sm:text-sm text-[#17131A] font-semibold leading-relaxed pt-1">
+            Bevor ich Websites gebaut habe, war ich elf Jahre im Betrieb:
+          </p>
+
+          <ul className="space-y-2 text-xs sm:text-sm text-[#746D76] leading-relaxed">
+            <li className="flex gap-2.5">
+              <span className="text-[#FF705D] font-bold shrink-0 w-12">6 Jahre</span>
+              <span>Inhaber eines EMS-Fitnessstudios</span>
+            </li>
+            <li className="flex gap-2.5">
+              <span className="text-[#FF705D] font-bold shrink-0 w-12">2 Jahre</span>
+              <span>Geschäftsführer meiner selbst aufgebauten Lasertag-Arena in Leverkusen</span>
+            </li>
+            <li className="flex gap-2.5">
+              <span className="text-[#FF705D] font-bold shrink-0 w-12">3 Jahre</span>
+              <span>Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss</span>
+            </li>
+          </ul>
+
+          <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed">
+            Ich weiß, wie es ist, wenn das Telefon still bleibt und am Monatsende trotzdem Miete und Löhne rausgehen. Deshalb frage ich bei jeder Website zuerst: Ruft danach jemand an?
           </p>
 
           <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed">
-            Heute unterstütze ich Handwerker und Betriebe in Wesel und am Niederrhein bei Websites und lokaler Google-Maps-Sichtbarkeit. Persönlich mit mir, auf Augenhöhe und ohne Agentur-Floskeln.
+            Heute baue ich Websites und Google-Profile für Betriebe in Wesel und am Niederrhein, ob Friseur, Heizungsbauer oder Eiscafé. Du sprichst dabei die ganze Zeit mit mir, von der ersten Nachricht bis zur fertigen Seite.
           </p>
 
           <div className="pt-1">
@@ -219,7 +238,7 @@ export default function StartPage() {
                 Kostenlose Ratgeber & Checklisten
               </h2>
               <p className="text-xs text-[#746D76]">
-                Praxis-Wissen für Handwerker & Betriebe am Niederrhein
+                Zum Nachlesen und Selbermachen
               </p>
             </div>
             <Link
@@ -288,7 +307,7 @@ export default function StartPage() {
                   </span>
                 </div>
                 <p className="text-xs text-[#746D76] leading-relaxed mt-0.5">
-                  Kostenlose Desktop-App für Windows 11. Screenshots blitzschnell aufnehmen, beschriften und teilen. Lokal, ohne Konto und ohne Cloud.
+                  Meine Screenshot-App für Windows 11: aufnehmen, beschriften, teilen. Läuft lokal, ohne Konto und ohne Cloud.
                 </p>
               </div>
               <span className="text-stone-400 group-hover:text-[#653683] text-lg pr-1">

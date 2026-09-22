@@ -79,7 +79,7 @@ export const homeContent = {
 export const faqItems = [
   {
     question: "Firmenflow ist noch jung – warum sollte ich dir vertrauen?",
-    answer: "Faire Frage. Deshalb sage ich es offen: Die Firma ist neu, meine Erfahrung nicht. Ich habe elf Jahre Betriebe geführt und vermarktet – sechs Jahre eigenes Studio, zwei Jahre Geschäftsführung einer selbst gebauten Arena, danach Marketing, Digitalisierung, Foto und Video im größeren Maßstab. Was ich dort gemacht habe – Texte, Fotos und Videos, technische Abläufe, Digitalisierung, Kundengespräche – mache ich heute u. a. für andere. Dazu: Festpreis vor dem Start, monatlich kündbare Betreuung, Domain und Code gehören dir. Wenn es nicht passt, bist du in keinem Vertrag gefangen."
+    answer: "Faire Frage. Deshalb sage ich es offen: Die Firma ist neu, meine Erfahrung nicht. Ich war elf Jahre im Betrieb: sechs Jahre mit eigenem EMS-Studio, zwei Jahre als Geschäftsführer meiner selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre in der Geschäftsführung von Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss. Was ich dort gemacht habe – Texte, Fotos und Videos, technische Abläufe, Digitalisierung, Kundengespräche – mache ich heute u. a. für andere. Dazu: Festpreis vor dem Start, monatlich kündbare Betreuung, Domain und Code gehören dir. Wenn es nicht passt, bist du in keinem Vertrag gefangen."
   },
   {
     question: "Arbeitest du nur in Wesel und am Niederrhein?",

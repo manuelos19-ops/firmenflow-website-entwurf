@@ -12,7 +12,7 @@ const photos = [
   {
     src: "/media/authors/manu-smartphone.jpg",
     alt: "Manu mit Smartphone bei der Arbeit",
-    caption: "Immer direkt erreichbar für Betriebe",
+    caption: "Deine Nachricht landet direkt bei mir",
   },
   {
     src: "/media/authors/manu-camera-hasselblad.jpg",

@@ -12,7 +12,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Über Manu – elf Jahre Betrieb, jetzt Websites für lokale Unternehmen",
   description:
-    "Manuel Landeck: sechs Jahre eigenes Fitnessstudio, Geschäftsführer einer selbst gebauten Lasertag-Arena, Aufbau von BattleKart Düsseldorf-Neuss. Warum ich heute Websites für Betriebe am Niederrhein baue.",
+    "Manuel Landeck: sechs Jahre eigenes Fitnessstudio, eigene Lasertag-Arena in Leverkusen, Geschäftsführung bei Lasertag Evolution und BattleKart Düsseldorf. Warum ich heute Websites für Betriebe am Niederrhein baue.",
   alternates: {
     canonical: "/ueber-manu",
   },
@@ -44,7 +44,7 @@ export default function UeberManuPage() {
     image: `${baseUrl}${portraitAssets.about.src}`,
     jobTitle: "Webdesigner und Dienstleister für lokale Sichtbarkeit",
     description:
-      "Elf Jahre Erfahrung im eigenen und fremden Betrieb: sechs Jahre Inhaber eines EMS-Fitnessstudios, zwei Jahre Geschäftsführer einer selbst gebauten Lasertag-Arena, zuletzt Marketing und Aufbau von BattleKart Düsseldorf-Neuss.",
+      "Elf Jahre Erfahrung im eigenen und fremden Betrieb: sechs Jahre Inhaber eines EMS-Fitnessstudios, zwei Jahre Geschäftsführer einer selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss, dort mit Schwerpunkt Marketing und Aufbau.",
     knowsAbout: [
       "Webdesign",
       "Google-Unternehmensprofil",
@@ -180,7 +180,7 @@ export default function UeberManuPage() {
                   2 Jahre
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
-                  Geschäftsführer einer Lasertag-Arena, die ich selbst gebaut habe
+                  Geschäftsführer meiner Lasertag-Arena in Leverkusen, die ich selbst aufgebaut habe
                 </p>
               </li>
               <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
@@ -188,14 +188,15 @@ export default function UeberManuPage() {
                   3 Jahre
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
-                  Marketing und Aufbau von BattleKart Düsseldorf-Neuss
+                  Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss
                 </p>
               </li>
             </ul>
             <p>
-              Was ich dort gemacht habe, ist ziemlich genau das, was ich heute u. a. anbiete:
-              Marketing, Digitalisierung, Fotos und Videos, technische Abläufe, Kundengespräche.
-              Der Unterschied ist, dass ich es jetzt für andere mache statt für den eigenen Laden.
+              BattleKart Düsseldorf-Neuss habe ich mit aufgebaut, vor allem das Marketing.
+              Was ich in diesen Jahren gemacht habe, ist ziemlich genau das, was ich heute
+              anbiete: Marketing, Digitalisierung, Fotos und Videos, technische Abläufe,
+              Kundengespräche. Nur eben für andere Betriebe.
             </p>
           </div>
         </section>
