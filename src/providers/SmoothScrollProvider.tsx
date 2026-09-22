@@ -91,13 +91,16 @@ function LenisBridge() {
 
     if (hash) {
       const targetId = decodeURIComponent(hash.replace(/^#/, ""));
-      const timer = setTimeout(() => {
-        const el = document.getElementById(targetId);
-        if (el) {
-          lenis.scrollTo(el, { offset: -NAV_OFFSET, immediate: false, duration: 0.9 });
-        }
-      }, isFirstMount ? 150 : 60);
-      return () => clearTimeout(timer);
+      const delays = isFirstMount ? [150, 400, 800, 1400] : [100, 350, 750, 1200];
+      const timers = delays.map((delay) =>
+        setTimeout(() => {
+          const el = document.getElementById(targetId);
+          if (el) {
+            lenis.scrollTo(el, { offset: -NAV_OFFSET, immediate: false, duration: 0.8 });
+          }
+        }, delay)
+      );
+      return () => timers.forEach((t) => clearTimeout(t));
     }
 
     if (hasPathnameChanged && !isFirstMount) {

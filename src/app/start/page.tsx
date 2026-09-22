@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { ManuPhotoSlider } from "@/components/start/ManuPhotoSlider";
 
 export const metadata: Metadata = {
   title: "Firmenflow · Instagram Startseite",
@@ -31,19 +32,6 @@ const guides = [
     sub: "Warum PDFs scheitern und was wirklich zieht",
     href: "/ratgeber/azubis-finden-handwerk",
     icon: "/3D_Icons/01_Prozess_und_Website/04-persoenlicher-ansprechpartner.webp",
-  },
-];
-
-const showcases = [
-  {
-    name: "Eiscafé Orrico",
-    sector: "Gastronomie & Eiscafé",
-    href: "/projekte/eiscafe-orrico",
-  },
-  {
-    name: "Autotransport Alex",
-    sector: "Logistik & Fahrzeugtransport",
-    href: "/projekte/autotransport-alex",
   },
 ];
 
@@ -187,7 +175,43 @@ export default function StartPage() {
           </Link>
         </section>
 
-        {/* 4. Handwerker-Ratgeber & Checklisten */}
+        {/* 4. Wer ich bin (Über Manu mit Foto-Slider) */}
+        <section className="bg-white rounded-3xl p-5 sm:p-6 border border-[#E7E2DC] shadow-sm space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-base sm:text-lg font-bold text-[#17131A] font-heading">
+              Wer ich bin
+            </h2>
+            <Link
+              href="/ueber-manu"
+              className="text-xs font-bold text-[#653683] hover:text-[#FF705D] transition-colors"
+            >
+              Mein Weg ➔
+            </Link>
+          </div>
+
+          {/* Interaktiver Foto-Slider */}
+          <ManuPhotoSlider />
+
+          <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed pt-1">
+            Elf Jahre im eigenen Betrieb, bevor ich Websites gebaut habe: sechs Jahre Inhaber eines Fitnessstudios, zwei Jahre Geschäftsführer einer Lasertag-Arena. Ich kenne den Druck, wenn am Monatsende die Zahlen stimmen müssen und Kunden anrufen müssen.
+          </p>
+
+          <p className="text-xs sm:text-sm text-[#746D76] leading-relaxed">
+            Heute unterstütze ich Handwerker und Betriebe in Wesel und am Niederrhein bei Websites und lokaler Google-Maps-Sichtbarkeit. Persönlich mit mir, auf Augenhöhe und ohne Agentur-Floskeln.
+          </p>
+
+          <div className="pt-1">
+            <Link
+              href="/ueber-manu"
+              className="text-xs font-semibold text-[#653683] hover:text-[#FF705D] transition-colors inline-flex items-center gap-1"
+            >
+              <span>Mehr über meine Stationen lesen</span>
+              <span>➔</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* 5. Handwerker-Ratgeber & Checklisten */}
         <section className="bg-white rounded-3xl p-5 sm:p-6 border border-[#E7E2DC] shadow-sm space-y-4">
           <div className="flex items-center justify-between">
             <div>
@@ -238,7 +262,7 @@ export default function StartPage() {
           </div>
         </section>
 
-        {/* 5. FlowScreen Windows-Tool */}
+        {/* 6. FlowScreen Windows 11 App */}
         <section>
           <Link
             href="/flowscreen"
@@ -248,7 +272,7 @@ export default function StartPage() {
               <div className="w-12 h-12 rounded-xl bg-purple-50 border border-purple-200/60 flex items-center justify-center shrink-0 p-1.5 group-hover:scale-105 transition-transform">
                 <Image
                   src="/brand/app-icons/flowscreen-app-icon-3d.png"
-                  alt="FlowScreen"
+                  alt="FlowScreen für Windows 11"
                   width={44}
                   height={44}
                   className="object-contain"
@@ -257,14 +281,14 @@ export default function StartPage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm sm:text-base font-bold text-[#17131A] group-hover:text-[#653683] transition-colors">
-                    FlowScreen für Windows
+                    FlowScreen • Windows 11 App
                   </h2>
                   <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
                     Kostenlos
                   </span>
                 </div>
                 <p className="text-xs text-[#746D76] leading-relaxed mt-0.5">
-                  Screenshots blitzschnell erfassen, beschriften und teilen. Ohne Konto und ohne Cloud.
+                  Kostenlose Desktop-App für Windows 11. Screenshots blitzschnell aufnehmen, beschriften und teilen. Lokal, ohne Konto und ohne Cloud.
                 </p>
               </div>
               <span className="text-stone-400 group-hover:text-[#653683] text-lg pr-1">
@@ -272,38 +296,6 @@ export default function StartPage() {
               </span>
             </div>
           </Link>
-        </section>
-
-        {/* 6. Regionale Showcases */}
-        <section className="space-y-2.5 pt-2">
-          <div className="flex items-center justify-between px-1">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-[#746D76]">
-              Referenzen am Niederrhein
-            </h2>
-            <Link
-              href="/#projekte"
-              className="text-xs font-bold text-[#653683] hover:text-[#FF705D] transition-colors"
-            >
-              Mehr Projekte ➔
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2.5">
-            {showcases.map((project) => (
-              <Link
-                key={project.href}
-                href={project.href}
-                className="group p-3 rounded-xl bg-white border border-[#E7E2DC] hover:border-[#FF705D]/40 hover:bg-[#FCFAF7] transition-all shadow-sm"
-              >
-                <div className="text-xs font-bold text-[#17131A] group-hover:text-[#653683] transition-colors truncate">
-                  {project.name}
-                </div>
-                <div className="text-[11px] text-[#746D76] truncate mt-0.5">
-                  {project.sector}
-                </div>
-              </Link>
-            ))}
-          </div>
         </section>
 
         {/* 7. Footer & Rechtliches */}

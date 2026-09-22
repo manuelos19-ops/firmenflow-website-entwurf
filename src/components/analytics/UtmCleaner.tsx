@@ -19,7 +19,8 @@ function UtmCleanerInner() {
     if (hasUtm) {
       // Allow analytics trackers (GA4, Vercel Analytics) 600ms to register parameters
       const timer = setTimeout(() => {
-        const cleanUrl = pathname || "/";
+        const hash = typeof window !== "undefined" ? window.location.hash : "";
+        const cleanUrl = `${pathname || "/"}${hash}`;
         window.history.replaceState({}, "", cleanUrl);
       }, 600);
 
