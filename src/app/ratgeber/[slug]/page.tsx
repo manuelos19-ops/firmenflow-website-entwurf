@@ -9,7 +9,9 @@ import { RatgeberQuiz } from "@/components/ratgeber/RatgeberQuiz";
 import { RatgeberChart } from "@/components/ratgeber/RatgeberChart";
 import { RatgeberKarten } from "@/components/ratgeber/RatgeberKarten";
 import { RatgeberZahlen } from "@/components/ratgeber/RatgeberZahlen";
+import { RatgeberAutor } from "@/components/ratgeber/RatgeberAutor";
 import { RatgeberShareButton } from "@/components/ratgeber/RatgeberShareButton";
+import { RatgeberViewTracker } from "@/components/ratgeber/RatgeberViewTracker";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -178,6 +180,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
 
   return (
     <main id="main" className="pt-36 sm:pt-44 pb-28">
+      <RatgeberViewTracker slug={post.slug} title={post.title} category={post.category} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Container className="max-w-3xl space-y-10">
@@ -268,6 +271,8 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
             </div>
           </section>
         )}
+
+        <RatgeberAutor />
 
         <section className="rounded-[2rem] bg-[var(--color-plum)] text-white p-8 sm:p-10 text-center space-y-4 shadow-xl">
           <h2 className="text-2xl sm:text-3xl font-display font-bold">Lieber direkt umsetzen als lesen?</h2>

@@ -18,6 +18,12 @@ Diese Kunden kennen deine Jahre im Betrieb und deinen Meisterbrief noch nicht. S
 
 Aus meiner täglichen Arbeit mit Betrieben in Wesel und am Niederrhein fallen mir fünf Fehler immer wieder auf.
 
+## Kurz gesagt
+
+* Neukunden sehen von deinem Betrieb zuerst das Handydisplay. Was dort langsam lädt oder unklar ist, kostet dich den Anruf.
+* Die fünf häufigsten Fehler: lange Ladezeit, versteckte Telefonnummer, gekaufte Katalogfotos, kein gepflegtes Google-Profil, Begrüßungsfloskeln statt klarer Angaben.
+* Mit dem Smartphone-Test am Ende prüfst du in zwei Minuten, welcher davon auf dich zutrifft.
+
 ## Fehler 1: Die lange Ladezeit auf dem Smartphone
 
 Wenn jemandem am Wochenende ein Rohr platzt, das Garagentor streikt oder jemand morgens schnell die Öffnungszeiten deiner Bäckerei nachsehen will, setzt sich niemand an einen Schreibtisch vor einen Computer. Fast jeder sucht unterwegs oder vom Sofa aus auf dem Handy.
@@ -53,6 +59,8 @@ Niemand lässt einen Fremden in sein Haus, wenn das Bauchgefühl nicht stimmt. G
 Ein großer Fehler sind gekaufte Katalogfotos. Viele kennen diese Bilder: Drei strahlende Fotomodelle mit blütenweißen Bauhelmen, die noch nie ein Werkzeug in der Hand hatten.
 
 Kunden erkennen solche Bilder sofort. Es wirkt künstlich und fremd. Man fragt sich unwillkürlich, ob es den Betrieb wirklich vor Ort gibt. Ein ehrliches Foto von dir bei der Arbeit, von deiner Werkstatt, deinen Fahrzeugen oder einem fertigen Projekt überzeugt viel stärker als jedes gekaufte Hochglanzfoto. Kunden vor Ort wollen sehen, wer tatsächlich zu ihnen nach Hause kommt.
+
+Das gilt genauso für Bewerber. Wer bei dir anfangen soll, will vorher sehen, wo und mit wem er arbeitet: [Azubis und Mitarbeiter finden](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk).
 
 ## Fehler 4: Keine Verbindung zu Google Maps
 

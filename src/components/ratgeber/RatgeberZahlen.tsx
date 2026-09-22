@@ -14,16 +14,22 @@ function plain(html: string): string {
 }
 
 /** Trennt "97 %" in die Zahl 97 und den Rest " %". */
-function splitWert(raw: string): { zahl: number | null; prefix: string; suffix: string } {
+function splitWert(raw: string): {
+  zahl: number | null;
+  prefix: string;
+  suffix: string;
+  nachkomma: number;
+} {
   const m = plain(raw).match(/^(\D*?)([\d.,]+)(.*)$/);
-  if (!m) return { zahl: null, prefix: "", suffix: raw };
+  if (!m) return { zahl: null, prefix: "", suffix: raw, nachkomma: 0 };
   const zahl = Number.parseFloat(m[2].replace(/\./g, "").replace(",", "."));
-  if (!Number.isFinite(zahl)) return { zahl: null, prefix: "", suffix: raw };
-  return { zahl, prefix: m[1], suffix: m[3] };
+  if (!Number.isFinite(zahl)) return { zahl: null, prefix: "", suffix: raw, nachkomma: 0 };
+  const komma = m[2].split(",")[1];
+  return { zahl, prefix: m[1], suffix: m[3], nachkomma: komma ? komma.length : 0 };
 }
 
 function Kachel({ raw, text, delay, run, armed }: { raw: string; text: string; delay: number; run: boolean; armed: boolean }) {
-  const { zahl, prefix, suffix } = splitWert(raw);
+  const { zahl, prefix, suffix, nachkomma } = splitWert(raw);
   const [wert, setWert] = useState<number | null>(null);
 
   // Ein einziger Effekt fuer den ganzen Lebenszyklus: ohne Animation bleibt
@@ -43,15 +49,22 @@ function Kachel({ raw, text, delay, run, armed }: { raw: string; text: string; d
     let id = 0;
     const tick = () => {
       const p = Math.min(Math.max((performance.now() - t0) / dauer, 0), 1);
-      setWert(Math.round(zahl * (1 - Math.pow(1 - p, 3))));
+      setWert(zahl * (1 - Math.pow(1 - p, 3)));
       if (p < 1) id = requestAnimationFrame(tick);
     };
     id = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(id);
   }, [armed, run, zahl, delay]);
 
-  // Tausenderpunkte erhalten: "54.000" darf beim Zaehlen nicht zu "54000" werden.
-  const formatiert = wert === null ? "" : wert.toLocaleString("de-DE");
+  // Deutsche Schreibweise erhalten: "54.000" behaelt den Tausenderpunkt,
+  // "4,52" behaelt die zwei Nachkommastellen.
+  const formatiert =
+    wert === null
+      ? ""
+      : wert.toLocaleString("de-DE", {
+          minimumFractionDigits: nachkomma,
+          maximumFractionDigits: nachkomma,
+        });
   const anzeige = zahl === null || wert === null ? raw : `${prefix}${formatiert}${suffix}`;
 
   return (

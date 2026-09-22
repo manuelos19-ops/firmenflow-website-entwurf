@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import type { RatgeberQuizData, RatgeberQuizQuestion } from "@/lib/ratgeber";
@@ -68,6 +69,13 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
     setSelectedOption(null);
     setScore(0);
     setState("active");
+
+    try {
+      track("ratgeber_quiz_start", {
+        quizTitle: quiz.title,
+        mode: chosenMode,
+      });
+    } catch {}
   };
 
   const handleSelectOption = (index: number) => {
@@ -84,6 +92,15 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
       setSelectedOption(null);
     } else {
       setState("result");
+      try {
+        track("ratgeber_quiz_complete", {
+          quizTitle: quiz.title,
+          mode,
+          score,
+          total: activeQuestions.length,
+          scorePercent: Math.round((score / activeQuestions.length) * 100),
+        });
+      } catch {}
     }
   };
 

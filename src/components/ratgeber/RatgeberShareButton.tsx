@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { track } from "@vercel/analytics";
 import { Share2, Check, MessageCircle, ExternalLink } from "@/components/brand/FirmenflowUiIcon";
 import { cn } from "@/lib/cn";
 
@@ -63,6 +64,12 @@ export function RatgeberShareButton({
           text: description ? `${title} – ${description}` : title,
           url: shareUrl,
         });
+        try {
+          track("ratgeber_share_click", {
+            title,
+            method: "native",
+          });
+        } catch {}
       } catch (err) {
         // User aborted share sheet -> do nothing
         if ((err as Error).name !== "AbortError") {
@@ -90,6 +97,12 @@ export function RatgeberShareButton({
         document.execCommand("copy");
         document.body.removeChild(textarea);
       }
+      try {
+        track("ratgeber_share_click", {
+          title,
+          method: "copy",
+        });
+      } catch {}
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
@@ -141,7 +154,15 @@ export function RatgeberShareButton({
             target="_blank"
             rel="noopener noreferrer"
             role="menuitem"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              try {
+                track("ratgeber_share_click", {
+                  title,
+                  method: "whatsapp",
+                });
+              } catch {}
+              setMenuOpen(false);
+            }}
             className="flex items-center gap-2.5 w-full px-2.5 py-2 rounded-xl text-xs font-semibold text-[var(--color-ink)] hover:bg-[#25D366]/10 hover:text-[#128C7E] transition-colors"
           >
             <span className="w-6 h-6 rounded-lg bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0">

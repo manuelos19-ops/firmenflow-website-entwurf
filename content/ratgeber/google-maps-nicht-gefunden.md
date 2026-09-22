@@ -68,6 +68,8 @@ Google nennt Fotos als die Möglichkeit, potenziellen Kunden zu zeigen, was du a
 
 Wer selbst keine hochlädt, überlässt das den Kunden. Dann besteht dein erster Eindruck aus einem Handyfoto der Fassade bei Regen und einem abfotografierten Kassenbon.
 
+Dieselben Fotos entscheiden übrigens auch darüber, ob sich jemand bei dir bewirbt: [Azubis und Mitarbeiter finden](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk).
+
 ### Grund 5: Zu wenige Bewertungen, und niemand antwortet
 
 Google formuliert es in seiner Hilfe so: Je mehr Rezensionen und positive Bewertungen ein Unternehmen erhält, desto besser kann das Ranking ausfallen.

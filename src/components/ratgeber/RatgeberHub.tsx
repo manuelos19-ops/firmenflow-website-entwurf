@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import type { RatgeberPostMeta } from "@/lib/ratgeber";
@@ -117,6 +118,16 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
               <Link
                 key={post.slug}
                 href={`/ratgeber/${post.slug}`}
+                onClick={() => {
+                  try {
+                    track("ratgeber_card_click", {
+                      slug: post.slug,
+                      title: post.title,
+                      category: post.category,
+                      trigger: "sidebar",
+                    });
+                  } catch {}
+                }}
                 className="group block p-2.5 -mx-1.5 rounded-xl hover:bg-[var(--color-paper)] transition-all"
               >
                 <p className="text-xs text-[var(--color-muted)]">
@@ -231,6 +242,16 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                 {post.image && (
                   <Link
                     href={`/ratgeber/${post.slug}`}
+                    onClick={() => {
+                      try {
+                        track("ratgeber_card_click", {
+                          slug: post.slug,
+                          title: post.title,
+                          category: post.category,
+                          trigger: "image",
+                        });
+                      } catch {}
+                    }}
                     className="block relative aspect-[16/9] w-full overflow-hidden bg-[var(--color-paper)]"
                   >
                     <div className="absolute top-4 left-4 z-10">
@@ -265,6 +286,16 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                   <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-ink)] leading-tight">
                     <Link
                       href={`/ratgeber/${post.slug}`}
+                      onClick={() => {
+                        try {
+                          track("ratgeber_card_click", {
+                            slug: post.slug,
+                            title: post.title,
+                            category: post.category,
+                            trigger: "title",
+                          });
+                        } catch {}
+                      }}
                       className="hover:text-[var(--color-coral)] transition-colors"
                     >
                       {post.title}
@@ -279,6 +310,16 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                   <div className="pt-2">
                     <FirmenflowButton
                       href={`/ratgeber/${post.slug}`}
+                      onClick={() => {
+                        try {
+                          track("ratgeber_card_click", {
+                            slug: post.slug,
+                            title: post.title,
+                            category: post.category,
+                            trigger: "button",
+                          });
+                        } catch {}
+                      }}
                       buttonIcon="flowscreen"
                       size="compact"
                       subline="Inkl. interaktivem Selbst-Check"
