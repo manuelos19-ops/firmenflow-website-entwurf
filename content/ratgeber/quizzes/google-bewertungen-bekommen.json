@@ -19,12 +19,12 @@
       "level": "basis",
       "question": "Was bringt der eigene Bewertungslink deinem Kunden?",
       "options": [
-        "Er landet mit einem Tipp direkt im Bewertungsfeld und muss dein Profil nicht erst suchen",
+        "Er kann über den Link eine Rezension schreiben, ohne dein Profil erst suchen zu müssen",
         "Er bekommt automatisch einen Rabatt auf den nächsten Auftrag",
         "Er kann die Bewertung ohne Sterne und ohne Text abschicken"
       ],
       "correctIndex": 0,
-      "explanation": "Der Link führt direkt zum Bewertungsfeld. Das Suchen nach dem richtigen Profil fällt weg."
+      "explanation": "Über den Link können Kunden eine Rezension für dein Profil verfassen. Das Suchen nach dem richtigen Profil fällt weg."
     },
     {
       "id": "gb_b3",
@@ -103,12 +103,12 @@
       "level": "basis",
       "question": "Solltest du auf Bewertungen antworten?",
       "options": [
-        "Ja, Google empfiehlt es ausdrücklich, am besten kurz und freundlich",
+        "Ja, Google empfiehlt es als Best Practice, am besten kurz und freundlich",
         "Nein, Antworten sind bei Google nicht erlaubt",
         "Nur auf Bewertungen mit fünf Sternen"
       ],
       "correctIndex": 0,
-      "explanation": "Google empfiehlt als Best Practice, auf Rezensionen zu antworten, kurz, freundlich und mit Namen oder Initialen unterschrieben."
+      "explanation": "Google empfiehlt als Best Practice, auf Rezensionen zu antworten, kurz und freundlich. Jedem öffentlich danken musst du laut Google aber nicht."
     },
     {
       "id": "gb_b10",
@@ -125,7 +125,7 @@
     {
       "id": "gb_p1",
       "level": "profi",
-      "question": "Was sagt die Google-Hilfe zum Zusammenhang zwischen Rezensionen und der Platzierung in der lokalen Suche?",
+      "question": "Was sagt die Google-Hilfe zum Zusammenhang zwischen Rezensionen und der Platzierung in den lokalen Suchergebnissen?",
       "options": [
         "Je mehr Rezensionen und positive Bewertungen, desto besser kann das Ranking in lokalen Suchergebnissen ausfallen",
         "Rezensionen haben keinerlei Einfluss auf die lokale Suche",
@@ -204,14 +204,14 @@
         "Google zählt dann nur die ersten drei Bewertungen"
       ],
       "correctIndex": 0,
-      "explanation": "In den Richtlinien steht ausdrücklich, dass Händler negative Rezensionen nicht verhindern und Kunden nicht gezielt um positive Rezensionen bitten dürfen."
+      "explanation": "In den Richtlinien steht, dass Händler negative Rezensionen nicht verhindern und Kunden nicht gezielt um positive Rezensionen bitten dürfen. Wer nur die Zufriedenen fragt, bittet im Ergebnis gezielt um positive Bewertungen."
     },
     {
       "id": "gb_p8",
       "level": "profi",
       "question": "Deine Schwester will dir eine Bewertung schreiben. Was sagt Google dazu?",
       "options": [
-        "Bewertungen aus familiären Beziehungen beruhen auf einem Interessenkonflikt und sind nicht erlaubt",
+        "Google nennt familiäre Beziehungen als Beispiel für einen Interessenkonflikt, und solche Beiträge sind nicht zulässig",
         "Erlaubt, solange sie mit vollem Namen schreibt",
         "Erlaubt, wenn sie mindestens vier Sterne vergibt"
       ],
@@ -236,7 +236,7 @@
       "question": "Was braucht Werbung per E-Mail laut dem BGH-Urteil grundsätzlich?",
       "options": [
         "Eine Einwilligung des Empfängers",
-        "Eine Genehmigung der Handwerkskammer",
+        "Eine Genehmigung vom Ordnungsamt",
         "Eine Unterschrift auf Papier"
       ],
       "correctIndex": 0,
@@ -276,7 +276,7 @@
         "Deine Antwort ist nur für dich sichtbar"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Google-Hilfe wird der Verfasser benachrichtigt, sobald du geantwortet hast. Deine Antwort ist öffentlich sichtbar."
+      "explanation": "Google prüft jede Antwort, in der Regel innerhalb von zehn Minuten. Danach steht sie öffentlich unter der Bewertung, und der Verfasser wird benachrichtigt."
     },
     {
       "id": "gb_p14",
@@ -293,14 +293,14 @@
     {
       "id": "gb_p15",
       "level": "profi",
-      "question": "Wie sollen Antworten auf Bewertungen laut Google unterschrieben sein?",
+      "question": "Wie soll eine Antwort auf eine kritische Bewertung laut Google unterschrieben sein?",
       "options": [
         "Mit deinem Namen oder deinen Initialen",
         "Gar nicht, Unterschriften sind verboten",
         "Mit Telefonnummer und Preisliste"
       ],
       "correctIndex": 0,
-      "explanation": "Google rät, die Antwort mit dem eigenen Namen oder den Initialen zu unterschreiben. Das wirkt persönlicher."
+      "explanation": "Bei kritischen Bewertungen rät Google, die Antwort mit dem eigenen Namen oder den Initialen zu unterschreiben."
     },
     {
       "id": "gb_p16",
@@ -353,14 +353,14 @@
     {
       "id": "gb_p20",
       "level": "profi",
-      "question": "Ein Kunde möchte seine negative Bewertung ändern, wenn du ihm die Anfahrt erlässt. Wie sieht Google das?",
+      "question": "Du bietest einem Kunden an, ihm die Anfahrt zu erlassen, wenn er seine negative Bewertung ändert. Wie sieht Google das?",
       "options": [
         "Verboten: Anreize für die Überarbeitung oder Entfernung einer negativen Rezension sind nicht erlaubt",
-        "Erlaubt, weil der Kunde es selbst vorschlägt",
+        "Erlaubt, wenn der Kunde zustimmt",
         "Erlaubt, wenn die Anfahrt unter fünfzig Euro kostet"
       ],
       "correctIndex": 0,
-      "explanation": "Google verbietet Anreize auch dann, wenn es um die Überarbeitung oder Entfernung einer negativen Rezension geht."
+      "explanation": "Google verbietet Anreize auch dann, wenn es um die Änderung oder Entfernung einer negativen Rezension geht."
     }
   ]
 }
