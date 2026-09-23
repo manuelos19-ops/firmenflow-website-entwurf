@@ -47,7 +47,10 @@ export type RatgeberSection =
   | { kind: "chart"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "cards"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "stats"; head: string[]; rows: string[][]; caption?: string }
+  | { kind: "note"; title: string; paragraphs: string[]; image?: RatgeberNoteImage }
   | { kind: "cta"; html: string };
+
+export type RatgeberNoteImage = { src: string; alt: string; caption?: string };
 
 const RATGEBER_DIR = "content/ratgeber";
 
@@ -125,6 +128,29 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   let statsNext: string | null = null;
   let headingCount = 0;
   let leadDone = false;
+  // Hinweisbox: ::hinweis: Titel:: ... ::/hinweis::, darin Absaetze und
+  // optional ein Bild als ![Alt](/pfad.webp "Bildunterschrift").
+  let note: { title: string; paragraphs: string[]; buffer: string[]; image?: RatgeberNoteImage } | null = null;
+
+  const flushNotePara = () => {
+    if (!note || note.buffer.length === 0) return;
+    note.paragraphs.push(inlineMarkdown(note.buffer.join(" ").trim()));
+    note.buffer = [];
+  };
+
+  const closeNote = () => {
+    if (!note) return;
+    flushNotePara();
+    const { title, paragraphs, image } = note;
+    note = null;
+    const figure = image
+      ? `<figure><img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy" />${
+          image.caption ? `<figcaption>${image.caption}</figcaption>` : ""
+        }</figure>`
+      : "";
+    html.push(`<aside><p><strong>${inlineMarkdown(title)}</strong></p>${paragraphs.map((t) => `<p>${t}</p>`).join("")}${figure}</aside>`);
+    sections.push({ kind: "note", title: inlineMarkdown(title), paragraphs, image });
+  };
 
   const flushPara = () => {
     if (paraBuffer.length === 0) return;
@@ -208,6 +234,32 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   };
   for (const line of lines) {
     const trimmed = line.trim();
+    if (note) {
+      if (/^::\/hinweis::$/.test(trimmed)) {
+        closeNote();
+        continue;
+      }
+      if (!trimmed) {
+        flushNotePara();
+        continue;
+      }
+      const img = trimmed.match(/^!\[([^\]]*)\]\((\S+)(?:\s+"([^"]*)")?\)$/);
+      if (img) {
+        flushNotePara();
+        note.image = { src: img[2], alt: img[1], caption: img[3] ? inlineMarkdown(img[3]) : undefined };
+        continue;
+      }
+      note.buffer.push(trimmed);
+      continue;
+    }
+    const noteMark = trimmed.match(/^::hinweis(?::\s*(.*?))?::$/);
+    if (noteMark) {
+      flushPara();
+      closeList();
+      closeTable();
+      note = { title: (noteMark[1] || "").trim(), paragraphs: [], buffer: [] };
+      continue;
+    }
     if (!trimmed || trimmed === "---") {
       flushPara();
       closeList();
@@ -330,6 +382,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   flushPara();
   closeList();
       closeTable();
+  closeNote();
   return { html: html.join("\n"), headings, sections };
 }
 

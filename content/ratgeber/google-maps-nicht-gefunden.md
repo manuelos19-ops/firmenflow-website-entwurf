@@ -3,7 +3,7 @@ title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten 
 metaTitle: "Bei Google Maps nicht gefunden: 5 Gründe"
 description: "Jemand sucht deine Leistung in deinem Ort und findet nur deine Mitbewerber? Das sind die häufigsten Gründe dafür, plus ein Selbsttest für dein Google-Profil."
 date: "2026-09-21"
-updated: "2026-09-22"
+updated: "2026-09-23"
 category: "Lokale Sichtbarkeit"
 tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
 image: "/images/ratgeber/google-maps-nicht-gefunden.webp"
@@ -16,6 +16,16 @@ Ein Kunde steht vierhundert Meter von deiner Werkstatt entfernt, tippt „Heizun
 Genau das passiert jeden Tag, und es fällt niemandem auf, weil das Telefon einfach still bleibt. Es gibt keine verpasste Anfrage, die man sehen könnte.
 
 Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zusammen mit deinem Ort ein, also zum Beispiel „Dachdecker Wesel“, „Bäckerei Hamminkeln“ oder „Physiotherapie Xanten“. Stehst du ganz oben auf der Karte, bevor jemand auf „Weitere Orte“ tippen muss?
+
+::hinweis: Drei oder vier Einträge?::
+
+Als ich im September 2026 auf meinem Samsung Galaxy S26 Ultra in Chrome gesucht habe, zeigte Google vier Betriebe im Kartenausschnitt. Das blieb so im Inkognito-Modus und auch bei einer Suche in München. Am PC waren es bei derselben Suche drei, dazu kamen Anzeigen mit dem Hinweis „Gesponsert“.
+
+Google probiert solche Darstellungen laufend aus. Für deinen Test spielt die genaue Zahl keine Rolle. Du willst in dem Kasten stehen, den der Kunde sieht, ohne auf „Weitere Orte“ zu tippen.
+
+![Google-Suche nach Zahnarzt Wesel auf dem Smartphone: Kartenausschnitt mit vier Zahnarztpraxen, Namen und Adressen unkenntlich gemacht](/images/ratgeber/google-maps-vier-eintraege-smartphone.webp "Suche „zahnarzt wesel“, Samsung Galaxy S26 Ultra, Chrome, 23. September 2026. Namen und Adressen habe ich unkenntlich gemacht. Google und das Google-Logo sind Marken von Google LLC.")
+
+::/hinweis::
 
 ## Kurz gesagt
 

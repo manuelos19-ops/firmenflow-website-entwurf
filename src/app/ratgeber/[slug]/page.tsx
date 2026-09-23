@@ -10,6 +10,7 @@ import { RatgeberChart } from "@/components/ratgeber/RatgeberChart";
 import { RatgeberKarten } from "@/components/ratgeber/RatgeberKarten";
 import { RatgeberZahlen } from "@/components/ratgeber/RatgeberZahlen";
 import { RatgeberAutor } from "@/components/ratgeber/RatgeberAutor";
+import { RatgeberHinweis } from "@/components/ratgeber/RatgeberHinweis";
 import { RatgeberShareButton } from "@/components/ratgeber/RatgeberShareButton";
 import { RatgeberViewTracker } from "@/components/ratgeber/RatgeberViewTracker";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
@@ -123,6 +124,9 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
   if (section.kind === "cards") {
     return <RatgeberKarten head={section.head} rows={section.rows} caption={section.caption} />;
   }
+  if (section.kind === "note") {
+    return <RatgeberHinweis title={section.title} paragraphs={section.paragraphs} image={section.image} />;
+  }
   if (section.kind === "quote") {
     return (
       <blockquote className="rounded-3xl bg-[var(--color-plum)]/[0.06] border border-[var(--color-plum)]/20 p-6 sm:p-8">
@@ -200,7 +204,7 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
           <h1 className="text-3xl sm:text-5xl font-display font-bold text-[var(--color-ink)] leading-[1.1]">{post.title}</h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">{post.description}</p>
           <div className="flex flex-wrap items-center gap-2.5 text-sm text-[var(--color-muted)]">
-            <span>Von Manu · {formatDate(post.date)}</span>
+            <span>Von Manu · {formatDate(post.date)}{post.updated && post.updated !== post.date ? ` · aktualisiert am ${formatDate(post.updated)}` : ""}</span>
             <span aria-hidden="true" className="text-[var(--color-line)]">·</span>
             <RatgeberShareButton
               title={post.title}
