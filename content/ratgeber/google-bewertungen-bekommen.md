@@ -133,7 +133,7 @@ Das Fragen kann dir keiner abnehmen, das machst du oder dein Team beim Kunden. D
 
 Mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360) räume ich dein Google-Profil einmalig auf, das kostet 190 Euro. Danach übernehme ich in der Betreuung für 99 Euro im Monat die laufende Arbeit: Ich lese jede neue Bewertung, antworte in deinem Ton und halte dein Profil aktuell, ohne dass du daran denken musst.
 
-Einmal im Monat bekommst du von mir eine ausführliche Auswertung. Du siehst darin, was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. So weißt du, was bei dir schon gut läuft und woran sich Kunden stören. Dazu gebe ich dir konkrete Tipps, was du im Betrieb verbessern kannst. Die kommen aus eigener Erfahrung, denn ich habe elf Jahre lang Betriebe geführt, aufgebaut und vermarktet, darunter mein eigenes Fitnessstudio und meine eigene Lasertag-Arena.
+Einmal im Monat bekommst du von mir eine ausführliche Auswertung. Du siehst darin, was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. So weißt du, was bei dir schon gut läuft und woran sich Kunden stören. Dazu gebe ich dir konkrete Tipps, was du im Betrieb verbessern kannst. Die kommen aus eigener Erfahrung, denn ich habe fast zehn Jahre lang Betriebe geführt, aufgebaut und vermarktet, darunter mein eigenes Fitnessstudio und meine eigene Lasertag-Arena.
 
 Die Betreuung ist monatlich kündbar. Wenn mehrere Leute bei dir Kundenkontakt haben, zeige ich deinem Team in einer kurzen Schulung für 150 Euro, wann und wie es fragt, ohne dass es sich nach Betteln anfühlt. Alle Preise sind netto.
 
