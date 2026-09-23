@@ -1,0 +1,366 @@
+{
+  "title": "Selbst-Check: Weißt du, wie du richtig um Google-Bewertungen bittest?",
+  "description": "Finde heraus, ob du beim Fragen nach Bewertungen etwas verschenkst und wo die Regeln von Google liegen.",
+  "questions": [
+    {
+      "id": "gb_b1",
+      "level": "basis",
+      "question": "Wo findest du deinen eigenen Bewertungslink bei Google?",
+      "options": [
+        "In deinem Unternehmensprofil unter „Rezensionen lesen“ und dann „Mehr Rezensionen erhalten“",
+        "Nur über eine kostenpflichtige Zusatzsoftware von Drittanbietern",
+        "Google verschickt ihn einmal im Jahr per Post an alle Betriebe"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Google-Hilfe rufst du dein Unternehmensprofil auf, wählst „Rezensionen lesen“ und dann „Mehr Rezensionen erhalten“. Dort kannst du den Link kopieren."
+    },
+    {
+      "id": "gb_b2",
+      "level": "basis",
+      "question": "Was bringt der eigene Bewertungslink deinem Kunden?",
+      "options": [
+        "Er landet mit einem Tipp direkt im Bewertungsfeld und muss dein Profil nicht erst suchen",
+        "Er bekommt automatisch einen Rabatt auf den nächsten Auftrag",
+        "Er kann die Bewertung ohne Sterne und ohne Text abschicken"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der Link führt direkt zum Bewertungsfeld. Das Suchen nach dem richtigen Profil fällt weg."
+    },
+    {
+      "id": "gb_b3",
+      "level": "basis",
+      "question": "Darfst du deinen Kunden für eine Bewertung einen kleinen Rabatt anbieten?",
+      "options": [
+        "Nein, Google verbietet Anreize wie Rabatte oder Gratisleistungen für Bewertungen",
+        "Ja, solange der Rabatt unter zehn Euro liegt",
+        "Ja, wenn der Kunde dafür fünf Sterne vergibt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google nennt Anreize wie kostenlose oder vergünstigte Produkte oder Dienstleistungen als Gegenleistung für Rezensionen eine gefälschte Interaktion, die streng verboten ist."
+    },
+    {
+      "id": "gb_b4",
+      "level": "basis",
+      "question": "Wann fällt die Frage nach einer Bewertung laut Artikel am leichtesten?",
+      "options": [
+        "Wenn der Kunde gerade selbst etwas Positives gesagt hat, etwa bei der Abnahme",
+        "Direkt beim ersten Anruf, bevor der Auftrag vergeben ist",
+        "Ein Jahr nach dem Auftrag, wenn die Rechnung längst bezahlt ist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hat der Kunde gerade selbst gelobt, greifst du nur auf, was er ohnehin gesagt hat. Du musst nichts verkaufen."
+    },
+    {
+      "id": "gb_b5",
+      "level": "basis",
+      "question": "Warum empfiehlt der Artikel, den Link erst am Abend zu schicken?",
+      "options": [
+        "Google verbietet, Kunden zur Bewertung aufzufordern oder unter Druck zu setzen, während sie noch vor Ort sind",
+        "Weil Google Bewertungen tagsüber nicht annimmt",
+        "Weil abends geschriebene Bewertungen mehr Sterne zählen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Google-Richtlinien verbieten Druck vor Ort. Mit dem Link am Abend hat der Kunde Ruhe, und du stehst nicht daneben."
+    },
+    {
+      "id": "gb_b6",
+      "level": "basis",
+      "question": "Was braucht ein Kunde, um eine Rezension bei Google zu schreiben?",
+      "options": [
+        "Er muss in einem Google-Konto angemeldet sein",
+        "Er muss eine Rechnung von dir hochladen",
+        "Er braucht eine Freischaltung durch den Betrieb"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Google-Hilfe müssen Kunden in einem Google-Konto angemeldet sein, um eine Rezension zu verfassen."
+    },
+    {
+      "id": "gb_b7",
+      "level": "basis",
+      "question": "Worum bittest du in der Beispielnachricht aus dem Artikel?",
+      "options": [
+        "Um eine ehrliche Meinung, also was gefallen hat und was nicht",
+        "Ausdrücklich um fünf Sterne",
+        "Um einen vorformulierten Text, den der Kunde nur einfügt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Nachricht bittet um das, was gefallen hat und was nicht. Wer um fünf Sterne bittet, versucht die Bewertung zu beeinflussen, und das untersagt Google."
+    },
+    {
+      "id": "gb_b8",
+      "level": "basis",
+      "question": "Wie viele Bewertungen hat ein Elektriker im Raum Wesel im Median laut der Erhebung im Artikel?",
+      "options": [
+        "6",
+        "132",
+        "50"
+      ],
+      "correctIndex": 0,
+      "explanation": "In der eigenen Erhebung über 198 Betriebe im Raum Wesel liegt der Median bei Elektrikern bei 6 Bewertungen. 132 ist der Wert der Bäckereien."
+    },
+    {
+      "id": "gb_b9",
+      "level": "basis",
+      "question": "Solltest du auf Bewertungen antworten?",
+      "options": [
+        "Ja, Google empfiehlt es ausdrücklich, am besten kurz und freundlich",
+        "Nein, Antworten sind bei Google nicht erlaubt",
+        "Nur auf Bewertungen mit fünf Sternen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google empfiehlt als Best Practice, auf Rezensionen zu antworten, kurz, freundlich und mit Namen oder Initialen unterschrieben."
+    },
+    {
+      "id": "gb_b10",
+      "level": "basis",
+      "question": "Welche Folge nennt Google für Bewertungen, die durch Anreize entstanden sind?",
+      "options": [
+        "Sie werden aus Google Maps entfernt",
+        "Sie werden doppelt gezählt",
+        "Sie bekommen ein Abzeichen als geprüfte Bewertung"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut den Google-Richtlinien sind durch Anreize motivierte Rezensionen nicht zulässig und werden aus Google Maps entfernt."
+    },
+    {
+      "id": "gb_p1",
+      "level": "profi",
+      "question": "Was sagt die Google-Hilfe zum Zusammenhang zwischen Rezensionen und der Platzierung in der lokalen Suche?",
+      "options": [
+        "Je mehr Rezensionen und positive Bewertungen, desto besser kann das Ranking in lokalen Suchergebnissen ausfallen",
+        "Rezensionen haben keinerlei Einfluss auf die lokale Suche",
+        "Ab zwanzig Rezensionen ist ein Platz ganz oben garantiert"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google schreibt: Je mehr Rezensionen und positive Bewertungen ein Unternehmen erhält, desto besser kann das Ranking ausfallen. Ein „kann“, keine Garantie."
+    },
+    {
+      "id": "gb_p2",
+      "level": "profi",
+      "question": "Zu welchem der drei Google-Faktoren für die lokale Suche zählt die Anzahl der Rezensionen?",
+      "options": [
+        "Zur Bekanntheit",
+        "Zur Entfernung",
+        "Zur Relevanz"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Google-Hilfe basiert die Bekanntheit unter anderem auf der Anzahl der Rezensionen, die ein Unternehmen erhalten hat."
+    },
+    {
+      "id": "gb_p3",
+      "level": "profi",
+      "question": "Wo kannst du den QR-Code für Rezensionen laut Google derzeit erzeugen?",
+      "options": [
+        "Nur in einem Computerbrowser, nicht am Handy",
+        "Nur in der Google-Maps-App am Handy",
+        "Nur über den Google-Support am Telefon"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google schreibt, dass QR-Codes für Rezensionen derzeit nur in einem Computerbrowser und nicht auf Mobilgeräten generiert werden können."
+    },
+    {
+      "id": "gb_p4",
+      "level": "profi",
+      "question": "Welche Einsatzorte für Link oder QR-Code nennt Google selbst?",
+      "options": [
+        "Belege, Dankeschön-E-Mails, das Ende eines Chats und ausgedruckt im Geschäft",
+        "Nur die eigene Website, sonst nichts",
+        "Fremde Google-Profile von Mitbewerbern"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Google-Hilfe nennt Belege, Dankeschön-E-Mails, das Ende einer Chatinteraktion und den ausgedruckten QR-Code im Geschäft."
+    },
+    {
+      "id": "gb_p5",
+      "level": "profi",
+      "question": "Ein Mitarbeiter soll pro Woche fünf Bewertungen „einsammeln“. Wie sieht Google das?",
+      "options": [
+        "Verboten: Mitarbeitern eine bestimmte Anzahl an Rezensionen vorzugeben, nennt Google ausdrücklich",
+        "Erlaubt, solange die Kunden echt sind",
+        "Erlaubt, wenn der Mitarbeiter dafür keinen Bonus bekommt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Zu den verbotenen Praktiken zählt Google Händler, die Mitarbeiter auffordern, eine bestimmte Anzahl von Rezensionen zu erbitten."
+    },
+    {
+      "id": "gb_p6",
+      "level": "profi",
+      "question": "Darfst du Kunden bitten, in ihrer Bewertung einen bestimmten Mitarbeiter zu nennen?",
+      "options": [
+        "Nein, Vorgaben zum Inhalt, auch zu genannten Personen, sind laut Google nicht erlaubt",
+        "Ja, das macht die Bewertung glaubwürdiger",
+        "Ja, aber nur beim Meister, nicht bei Azubis"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google verbietet, Rezensionen mit bestimmten Inhalten zu erbitten, einschließlich Inhalten, in denen bestimmtes Personal benannt wird."
+    },
+    {
+      "id": "gb_p7",
+      "level": "profi",
+      "question": "Du fragst nur die Kunden nach einer Bewertung, bei denen alles glatt lief. Was ist das Problem?",
+      "options": [
+        "Google verbietet, Kunden gezielt um positive Rezensionen zu bitten oder negative zu verhindern",
+        "Es gibt kein Problem, das ist die empfohlene Vorgehensweise",
+        "Google zählt dann nur die ersten drei Bewertungen"
+      ],
+      "correctIndex": 0,
+      "explanation": "In den Richtlinien steht ausdrücklich, dass Händler negative Rezensionen nicht verhindern und Kunden nicht gezielt um positive Rezensionen bitten dürfen."
+    },
+    {
+      "id": "gb_p8",
+      "level": "profi",
+      "question": "Deine Schwester will dir eine Bewertung schreiben. Was sagt Google dazu?",
+      "options": [
+        "Bewertungen aus familiären Beziehungen beruhen auf einem Interessenkonflikt und sind nicht erlaubt",
+        "Erlaubt, solange sie mit vollem Namen schreibt",
+        "Erlaubt, wenn sie mindestens vier Sterne vergibt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google nennt familiäre Beziehungen und frühere Beschäftigung als Beispiele für einen Interessenkonflikt. Solche Inhalte sind nicht zulässig."
+    },
+    {
+      "id": "gb_p9",
+      "level": "profi",
+      "question": "Was hat der Bundesgerichtshof im Urteil vom 10. Juli 2018 entschieden?",
+      "options": [
+        "Eine Kundenzufriedenheitsbefragung in einer E-Mail zählt als Werbung, auch wenn mit der E-Mail die Rechnung verschickt wird",
+        "Bewertungsanfragen per E-Mail sind immer und ohne Einschränkung erlaubt",
+        "Google muss jede negative Bewertung auf Wunsch löschen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der BGH hat 2018 entschieden (VI ZR 225/17), dass eine Kundenzufriedenheitsbefragung in einer E-Mail auch dann Werbung ist, wenn mit derselben E-Mail eine Rechnung kommt."
+    },
+    {
+      "id": "gb_p10",
+      "level": "profi",
+      "question": "Was braucht Werbung per E-Mail laut dem BGH-Urteil grundsätzlich?",
+      "options": [
+        "Eine Einwilligung des Empfängers",
+        "Eine Genehmigung der Handwerkskammer",
+        "Eine Unterschrift auf Papier"
+      ],
+      "correctIndex": 0,
+      "explanation": "Werbung per E-Mail braucht grundsätzlich eine Einwilligung. Wer seine Abläufe rechtlich absichern will, fragt bei der Handwerkskammer oder einem Anwalt nach."
+    },
+    {
+      "id": "gb_p11",
+      "level": "profi",
+      "question": "Welche Vorgehensweise schlägt der Artikel für den Alltag vor?",
+      "options": [
+        "Im Gespräch fragen, ob du den Link schicken darfst, und ihn nur schicken, wenn der Kunde das möchte",
+        "Den Link ungefragt unter jede Rechnungsmail hängen",
+        "Alle Kontakte aus dem Handy per Massennachricht anschreiben"
+      ],
+      "correctIndex": 0,
+      "explanation": "Persönlich fragen, den Link nur auf Wunsch schicken. Eine ungefragte Bitte unter jeder Rechnungsmail lässt du besser weg."
+    },
+    {
+      "id": "gb_p12",
+      "level": "profi",
+      "question": "Ein Kunde hat kein Gmail-Postfach. Kann er trotzdem eine Bewertung schreiben?",
+      "options": [
+        "Ja, ein Google-Konto lässt sich auch mit einer E-Mail-Adresse einrichten, die nicht zu Gmail gehört",
+        "Nein, ohne Gmail-Adresse geht es nicht",
+        "Nur, wenn du ihm dein eigenes Google-Konto leihst"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google weist darauf hin, dass sich ein Google-Konto auch mit einer E-Mail-Adresse einrichten lässt, die nicht zu Gmail gehört."
+    },
+    {
+      "id": "gb_p13",
+      "level": "profi",
+      "question": "Was passiert, wenn du auf eine Bewertung antwortest?",
+      "options": [
+        "Der Verfasser der Rezension wird benachrichtigt",
+        "Die Bewertung wird automatisch gelöscht",
+        "Deine Antwort ist nur für dich sichtbar"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Google-Hilfe wird der Verfasser benachrichtigt, sobald du geantwortet hast. Deine Antwort ist öffentlich sichtbar."
+    },
+    {
+      "id": "gb_p14",
+      "level": "profi",
+      "question": "Was schreibt Google über eine Mischung aus positivem und negativem Feedback?",
+      "options": [
+        "Sie wirkt oft vertrauenswürdiger",
+        "Sie führt automatisch zur Sperrung des Profils",
+        "Sie senkt die Platzierung in jedem Fall"
+      ],
+      "correctIndex": 0,
+      "explanation": "In der Google-Hilfe steht, dass eine Mischung aus positivem und negativem Feedback oft vertrauenswürdiger wirkt."
+    },
+    {
+      "id": "gb_p15",
+      "level": "profi",
+      "question": "Wie sollen Antworten auf Bewertungen laut Google unterschrieben sein?",
+      "options": [
+        "Mit deinem Namen oder deinen Initialen",
+        "Gar nicht, Unterschriften sind verboten",
+        "Mit Telefonnummer und Preisliste"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google rät, die Antwort mit dem eigenen Namen oder den Initialen zu unterschreiben. Das wirkt persönlicher."
+    },
+    {
+      "id": "gb_p16",
+      "level": "profi",
+      "question": "Wie viele der 198 ausgewerteten Betriebe im Raum Wesel hatten weniger als zehn Bewertungen?",
+      "options": [
+        "57",
+        "12",
+        "132"
+      ],
+      "correctIndex": 0,
+      "explanation": "57 der 198 Betriebe hatten weniger als zehn Bewertungen, 12 hatten gar keine."
+    },
+    {
+      "id": "gb_p17",
+      "level": "profi",
+      "question": "Welche Branche lag in der Weseler Erhebung mit 132 Bewertungen im Median vorne?",
+      "options": [
+        "Bäckerei",
+        "Fliesenleger",
+        "Dachdecker"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bäckereien kamen im Median auf 132 Bewertungen, Fliesenleger auf 4 und Dachdecker auf 12."
+    },
+    {
+      "id": "gb_p18",
+      "level": "profi",
+      "question": "Was schlägt der Artikel vor, damit du den Link immer griffbereit hast?",
+      "options": [
+        "Ihn einmal als Notiz oder als Textbaustein in WhatsApp Business speichern",
+        "Ihn jedes Mal neu bei Google anfordern",
+        "Ihn auswendig lernen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Einmal gespeichert, kannst du den Link nach jedem Auftrag in Sekunden verschicken."
+    },
+    {
+      "id": "gb_p19",
+      "level": "profi",
+      "question": "Was darf ein Betrieb laut Google ausdrücklich?",
+      "options": [
+        "Kunden zu Beiträgen ermuntern, die auf einer echten Erfahrung beruhen, ohne Anreize und ohne die Bewertung zu beeinflussen",
+        "Bewertungen im Namen seiner Kunden selbst schreiben",
+        "Negative Bewertungen gegen einen Gutschein zurückkaufen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google erlaubt, um Beiträge zu echten Erfahrungen zu bitten, solange keine Anreize geboten werden und die Bewertung nicht beeinflusst wird."
+    },
+    {
+      "id": "gb_p20",
+      "level": "profi",
+      "question": "Ein Kunde möchte seine negative Bewertung ändern, wenn du ihm die Anfahrt erlässt. Wie sieht Google das?",
+      "options": [
+        "Verboten: Anreize für die Überarbeitung oder Entfernung einer negativen Rezension sind nicht erlaubt",
+        "Erlaubt, weil der Kunde es selbst vorschlägt",
+        "Erlaubt, wenn die Anfahrt unter fünfzig Euro kostet"
+      ],
+      "correctIndex": 0,
+      "explanation": "Google verbietet Anreize auch dann, wenn es um die Überarbeitung oder Entfernung einer negativen Rezension geht."
+    }
+  ]
+}

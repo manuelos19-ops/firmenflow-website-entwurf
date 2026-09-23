@@ -1,6 +1,6 @@
 # Firmenflow: Redaktionsleitfaden für den Ratgeber
 
-Stand: 23.09.2026. Grundlage: ausdrückliche Vorgaben von Manu. Gilt für alle Firmenflow-Ratgeberartikel unter `/ratgeber`. Social-Grafiken (Instagram, WhatsApp-Status) folgen eigenen Vorgaben, siehe Abschnitt „Social Media“.
+Stand: 23.09.2026 (Ablauf über die Redaktion). Grundlage: ausdrückliche Vorgaben von Manu. Gilt für alle Firmenflow-Ratgeberartikel unter `/ratgeber`. Social-Grafiken (Instagram, WhatsApp-Status) folgen eigenen Vorgaben, siehe Abschnitt „Social Media“.
 
 ## Ziel und Zielgruppe
 
@@ -90,12 +90,14 @@ Instagram-Karussells, Storys und WhatsApp-Status entstehen ausschließlich mit d
 
 ## Arbeitsablauf und Freigabe
 
-1. Thema vorschlagen oder vorgegeben bekommen.
-2. Kurze Gliederung mit Schmerzpunkten und Quellen zur Freigabe vorlegen. Erst nach Freigabe schreiben.
-3. Artikel direkt als `content/ratgeber/<slug>.md` anlegen, Quiz unter `content/ratgeber/quizzes/<slug>.json`.
-4. Quellen aufrufen und prüfen, Humanizer-Durchgang, Vorschau lokal prüfen.
-5. **Nicht committen, nicht pushen, nicht veröffentlichen**, bis Manu es ausdrücklich sagt. Ein Push auf `master` geht sofort live.
-6. Nach Veröffentlichung die Notiz im Obsidian-Vault unter `02 - Firmenflow/Blog` aktualisieren.
+Seit 23.09.2026 entstehen neue Artikel im Ordner `D:\KI Projekte\01_Marke_und_Websites\Firmenflow Redaktion` (Skills `ratgeber-lauf` und `ratgeber-freigabe`, Regeln in dessen `CLAUDE.md`). Drei Artikel pro Woche.
+
+1. Manu gibt die Themenliste frei (`themen/backlog.md` in der Redaktion). Das ersetzt die Freigabe jeder einzelnen Gliederung.
+2. Recherche mit Belegliste: jede Zahl und jede Aussage mit wörtlicher Stelle aus der Quelle.
+3. Artikel als `content/ratgeber/<slug>.md`, Quiz unter `content/ratgeber/quizzes/<slug>.json`, Titelbild und Social-Grafiken über den Renderer.
+4. Humanizer-Durchgang, Prüfskript (Belege, Links, Zahlen, Sprache), Build, unabhängiger Prüfer, Ansicht im Handy-Format.
+5. Commit nur auf einem eigenen Zweig `ratgeber/<slug>`, Vercel baut daraus eine Vorschau. **Auf `master` erst nach Manus „freigeben“.** Ein Push auf `master` geht sofort live.
+6. Nach Veröffentlichung Online-Prüfung und Notiz im Obsidian-Vault unter `02 - Firmenflow/Blog`.
 
 Frühere Entwürfe, das Bildkonzept zum ersten Artikel und der Blog-Audit vom 22.09.2026 liegen in `docs/blog/archiv/` und gelten nicht mehr als Vorgabe.
 
