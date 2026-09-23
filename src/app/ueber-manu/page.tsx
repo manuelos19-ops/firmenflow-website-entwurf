@@ -10,14 +10,14 @@ import { getSiteUrl } from "@/lib/site-url";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Über Manu – elf Jahre Betrieb, jetzt Websites für lokale Unternehmen",
+  title: "Über Manu: fast zehn Jahre Betrieb, jetzt Websites für lokale Unternehmen",
   description:
-    "Manuel Landeck: sechs Jahre eigenes Fitnessstudio, eigene Lasertag-Arena in Leverkusen, Geschäftsführung bei Lasertag Evolution und BattleKart Düsseldorf. Warum ich heute Websites für Betriebe am Niederrhein baue.",
+    "Manuel Landeck: vier Jahre eigenes Fitnessstudio, eigene Lasertag-Arena in Leverkusen, Geschäftsführung bei Lasertag Evolution und BattleKart Düsseldorf. Warum ich heute Websites für Betriebe am Niederrhein baue.",
   alternates: {
     canonical: "/ueber-manu",
   },
   openGraph: {
-    title: "Über Manu – elf Jahre Betrieb, jetzt Websites | Firmenflow",
+    title: "Über Manu: fast zehn Jahre Betrieb, jetzt Websites | Firmenflow",
     description:
       "Warum ich vom eigenen Betrieb zu Websites für lokale Unternehmen gewechselt bin – und was das für dich bedeutet.",
     url: "/ueber-manu",
@@ -44,7 +44,7 @@ export default function UeberManuPage() {
     image: `${baseUrl}${portraitAssets.about.src}`,
     jobTitle: "Webdesigner und Dienstleister für lokale Sichtbarkeit",
     description:
-      "Elf Jahre Erfahrung im eigenen und fremden Betrieb: sechs Jahre Inhaber eines EMS-Fitnessstudios, zwei Jahre Geschäftsführer einer selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss, dort mit Schwerpunkt Marketing und Aufbau.",
+      "Fast zehn Jahre Erfahrung im eigenen und fremden Betrieb: vier Jahre Inhaber eines EMS-Fitnessstudios, zwei Jahre Geschäftsführer einer selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss, dort mit Schwerpunkt Marketing und Aufbau.",
     knowsAbout: [
       "Webdesign",
       "Google-Unternehmensprofil",
@@ -117,7 +117,7 @@ export default function UeberManuPage() {
             </span>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-[var(--color-ink)] leading-[1.06] tracking-tight">
-              Elf Jahre Betrieb. <br />
+              Fast zehn Jahre Betrieb. <br />
               <span className="text-[var(--color-coral)] font-editorial italic font-normal">
                 Jetzt baue ich Websites dafür.
               </span>
@@ -163,13 +163,13 @@ export default function UeberManuPage() {
           <div className="space-y-4 text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
             <p>
               Die Firma gibt es seit ein paar Monaten. Websites baue ich seit Kurzem
-              hauptberuflich. Vorher habe ich elf Jahre lang Betriebe geführt, aufgebaut
+              hauptberuflich. Vorher habe ich fast zehn Jahre lang Betriebe geführt, aufgebaut
               und vermarktet:
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-[var(--color-ink)]">
               <li className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper)] p-5 sm:p-6">
                 <p className="font-display text-xl font-bold text-[var(--color-coral)] leading-none">
-                  6 Jahre
+                  4 Jahre
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink)]">
                   Inhaber eines EMS-Fitnessstudios

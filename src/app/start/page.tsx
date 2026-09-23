@@ -193,12 +193,12 @@ export default function StartPage() {
           <ManuPhotoSlider />
 
           <p className="text-xs sm:text-sm text-[#17131A] font-semibold leading-relaxed pt-1">
-            Bevor ich Websites gebaut habe, war ich elf Jahre im Betrieb:
+            Bevor ich Websites gebaut habe, war ich fast zehn Jahre im Betrieb:
           </p>
 
           <ul className="space-y-2 text-xs sm:text-sm text-[#746D76] leading-relaxed">
             <li className="flex gap-2.5">
-              <span className="text-[#FF705D] font-bold shrink-0 w-12">6 Jahre</span>
+              <span className="text-[#FF705D] font-bold shrink-0 w-12">4 Jahre</span>
               <span>Inhaber eines EMS-Fitnessstudios</span>
             </li>
             <li className="flex gap-2.5">

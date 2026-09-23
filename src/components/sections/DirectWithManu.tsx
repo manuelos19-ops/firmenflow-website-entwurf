@@ -15,8 +15,8 @@ const bentoIcons: FirmenflowIconName[] = ["persoenlicher-ansprechpartner", "foto
 
 const bentoItems = [
   {
-    title: "Elf Jahre im Betrieb",
-    desc: "Sechs Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer meiner selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss. Rechnungen, Personal und Kundengespräche kenne ich aus dem eigenen Alltag.",
+    title: "Fast zehn Jahre im Betrieb",
+    desc: "Vier Jahre eigenes Fitnessstudio, zwei Jahre Geschäftsführer meiner selbst aufgebauten Lasertag-Arena in Leverkusen, drei Jahre Teil der Geschäftsführung bei Lasertag Evolution Düsseldorf und BattleKart Düsseldorf-Neuss. Rechnungen, Personal und Kundengespräche kenne ich aus dem eigenen Alltag.",
     gradient: "from-[var(--color-plum)]/20 via-[var(--color-plum)]/5 to-transparent",
     border: "border-[var(--color-plum)]/30 hover:border-[var(--color-plum)]",
     iconBg: "bg-[var(--color-plum)]/10 text-[var(--color-plum)]",
