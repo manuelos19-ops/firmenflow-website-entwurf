@@ -131,7 +131,11 @@ Jedes Nein ist eine Stelle, an der zufriedene Kunden gerade nichts schreiben.
 
 Das Fragen kann dir keiner abnehmen, das machst du oder dein Team beim Kunden. Den Rest kann ich übernehmen.
 
-Mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360) räume ich dein Google-Profil einmalig auf, das kostet 190 Euro. In der Betreuung für 99 Euro im Monat beantworte ich danach jede neue Bewertung in deinem Ton und schicke dir einmal im Monat einen kurzen Bericht mit einem konkreten Vorschlag. Monatlich kündbar. Wenn mehrere Leute bei dir Kundenkontakt haben, zeige ich deinem Team in einer kurzen Schulung für 150 Euro, wann und wie es fragt, ohne dass es sich nach Betteln anfühlt. Alle Preise sind netto.
+Mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360) räume ich dein Google-Profil einmalig auf, das kostet 190 Euro. Danach übernehme ich in der Betreuung für 99 Euro im Monat die laufende Arbeit: Ich lese jede neue Bewertung, antworte in deinem Ton und halte dein Profil aktuell, ohne dass du daran denken musst.
+
+Einmal im Monat bekommst du von mir eine ausführliche Auswertung. Du siehst darin, was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. So weißt du, was bei dir schon gut läuft und woran sich Kunden stören. Dazu gebe ich dir konkrete Tipps, was du im Betrieb verbessern kannst. Die kommen aus eigener Erfahrung, denn ich habe elf Jahre lang Betriebe geführt, aufgebaut und vermarktet, darunter mein eigenes Fitnessstudio und meine eigene Lasertag-Arena.
+
+Die Betreuung ist monatlich kündbar. Wenn mehrere Leute bei dir Kundenkontakt haben, zeige ich deinem Team in einer kurzen Schulung für 150 Euro, wann und wie es fragt, ohne dass es sich nach Betteln anfühlt. Alle Preise sind netto.
 
 Wenn du erst einmal wissen willst, wie dein Profil gerade dasteht, schreib mir deinen Betriebsnamen und deinen Ort. Dann schaue ich es mir an.
 
