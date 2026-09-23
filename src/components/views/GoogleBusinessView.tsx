@@ -81,11 +81,11 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
             </h1>
 
             <p className="g360-hero-body text-xl sm:text-2xl text-[var(--color-ink)] font-semibold leading-relaxed">
-              Wer dich noch nicht kennt, entscheidet bei Google – nicht bei dir im Laden.
+              Wer dich noch nicht kennt, entscheidet bei Google, bevor er je bei dir im Betrieb steht.
             </p>
 
             <p className="g360-hero-body text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl">
-              Egal ob Bäckerei, Handyladen oder Heizungsbauer: Wer am Niederrhein sucht, schaut zuerst auf Google Maps. Sterne, Fotos, letzte Bewertung – in drei Sekunden steht fest, wer angerufen wird. <strong>Ich sorge dafür, dass dein Auftritt vollständig, aktuell und vertrauenswürdig wirkt.</strong>
+              Egal ob Bäckerei, Handyladen oder Heizungsbauer: Wer am Niederrhein sucht, schaut zuerst auf Google Maps. Sterne, Fotos, letzte Bewertung: Daran entscheidet sich schnell, wer angerufen wird. <strong>Ich sorge dafür, dass dein Auftritt vollständig, aktuell und vertrauenswürdig wirkt.</strong>
             </p>
 
             {/* CTAs */}
@@ -116,7 +116,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-coral)] opacity-60" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--color-coral)]" />
               </span>
-              <span>Tippe oben um – so wirkt der Unterschied:</span>
+              <span>Tippe oben um, dann siehst du den Unterschied:</span>
             </p>
             {/* Simulation Tab Switcher */}
             <div className="w-full max-w-md bg-stone-100 p-1.5 rounded-2xl border border-[var(--color-line)] flex items-center justify-between mb-4 shadow-inner">
@@ -211,7 +211,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               </div>
             </div>
             <p className="text-[11px] text-stone-400 text-center mt-2.5">
-              Beispielhafte Profilvorschau – keine Kundenergebnisse oder Ranking-Zusage.
+              Beispielhafte Profilvorschau, keine Kundenergebnisse und keine Zusage für Platzierungen.
             </p>
           </div>
         </div>
@@ -255,9 +255,9 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <ul className="space-y-3 text-xs sm:text-sm text-[var(--color-ink)]">
                   {[
                     "Profil einrichten oder ein vorhandenes übernehmen",
-                    "Name, Adresse, Telefon überall identisch – Google mag Widersprüche nicht",
-                    "Die richtige Hauptkategorie – wichtige Grundlage für die lokale Einordnung",
-                    "Öffnungszeiten, die stimmen – Google wertet das inzwischen mit",
+                    "Name, Adresse und Telefon überall identisch, damit sich keine Angaben widersprechen",
+                    "Die richtige Hauptkategorie als Grundlage für die lokale Einordnung",
+                    "Öffnungszeiten, die stimmen, auch an Feiertagen",
                     "Echte Fotos aus deinem Betrieb, keine Stockbilder",
                   ].map((pt) => (
                     <li key={pt} className="flex items-start gap-2.5">
@@ -299,7 +299,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <ul className="space-y-3 text-xs sm:text-sm text-[var(--color-ink)]">
                   {[
                     "Positive Bewertungen bleiben monatelang unkommentiert",
-                    "Kritik bleibt unbeantwortet – oder kommt zu spät",
+                    "Kritik bleibt unbeantwortet oder wird zu spät beantwortet",
                     "Antworten klingen wie aus der Vorlage",
                     "Niemand wertet aus, was Kunden eigentlich sagen",
                   ].map((pt) => (
@@ -313,7 +313,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
 
               <div className="pt-6 mt-6 border-t border-stone-100 relative z-10">
                 <span className="text-xs font-semibold text-[var(--color-plum)] block">
-                  Ich kümmere mich drum – und sage dir, was drinsteht.
+                  Ich kümmere mich drum und sage dir, was drinsteht.
                 </span>
               </div>
             </div>
@@ -347,7 +347,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               </h3>
 
               <p className="text-base text-[var(--color-muted)] leading-relaxed">
-                Auf Wunsch übernehme ich das komplett. Neue Bewertung kommt rein, ich lese sie, ich antworte – in deinem Namen und in deinem Ton.
+                Auf Wunsch übernehme ich das komplett. Neue Bewertung kommt rein, ich lese sie, ich antworte in deinem Namen und in deinem Ton.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -385,7 +385,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 <li className="flex items-center gap-2">✓ Auf das eingehen, was der Kunde wirklich erwähnt hat</li>
                 <li className="flex items-center gap-2">✓ Bei Kritik: sachlich, kurz, ohne Rechtfertigung</li>
                 <li className="flex items-center gap-2">✓ Bei heiklen Fällen frage ich dich vorher</li>
-                <li className="flex items-center gap-2">✓ Immer derselbe Ton – egal wer gerade schreibt</li>
+                <li className="flex items-center gap-2">✓ Immer derselbe Ton, egal wer gerade schreibt</li>
               </ul>
             </div>
           </div>
@@ -398,8 +398,8 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 Warum kaum jemand positive Bewertungen schreibt:
               </h4>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-                Zufriedene Kunden sind nicht unzufrieden, sie sind nur beschäftigt. Im Moment
-                fehlt der Anstoß – und zu Hause denkt keiner mehr an deine Google-Seite.
+                Zufriedene Kunden haben einfach anderes zu tun. Im Moment
+                fehlt der Anstoß, und zu Hause denkt keiner mehr an deine Google-Seite.
               </p>
             </div>
 
@@ -421,7 +421,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 {[
                   {
                     title: "Der richtige Moment",
-                    desc: "Am Tresen. Nach dem Auftrag. Bei der Abholung. Da, wo der Kunde gerade zufrieden ist – nicht drei Tage später per Mail.",
+                    desc: "Am Tresen, nach dem Auftrag, bei der Abholung: Da, wo der Kunde gerade zufrieden ist, fragst du, ob du ihm den Bewertungslink schicken darfst. Schreiben kann er später in Ruhe.",
                   },
                   {
                     title: "Sätze, die du wirklich sagen würdest",
@@ -481,7 +481,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                     <span>Kritikpunkte &amp; Schulungsbedarf:</span>
                   </div>
                   <p className="text-xs text-rose-950 leading-relaxed">
-                    Taucht Kritik an Wartezeiten oder Service mehrfach auf, bekommst du ein klares Signal, wo Abläufe haken oder Mitarbeiter Unterstützung brauchen – bevor es dauerhaft Sterne kostet.
+                    Taucht Kritik an Wartezeiten oder Service mehrfach auf, bekommst du ein klares Signal, wo Abläufe haken oder Mitarbeiter Unterstützung brauchen, bevor es dauerhaft Sterne kostet.
                   </p>
                 </div>
               </div>
@@ -554,10 +554,10 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               Dein Team macht mit
             </h3>
             <p className="text-sm sm:text-base text-amber-900/85 leading-relaxed">
-              Am Ende fragt nicht du, sondern dein Team. In einer kurzen Schulung gehe ich mit deinen Leuten durch:
+              Im Alltag fragt meistens dein Team. In einer kurzen Schulung gehe ich mit deinen Leuten durch:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-amber-950 font-medium">
-              <span className="flex items-center gap-2">✓ Wann man fragt – und wann besser nicht</span>
+              <span className="flex items-center gap-2">✓ Wann man fragt und wann besser nicht</span>
               <span className="flex items-center gap-2">✓ Wie man es anspricht, ohne aufdringlich zu wirken</span>
               <span className="flex items-center gap-2">✓ Welche Sätze sich im Alltag bewährt haben</span>
               <span className="flex items-center gap-2">✓ Was man sagt, wenn sich jemand beschwert</span>
@@ -584,7 +584,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               {
                 num: "01",
                 title: "Profil aufbauen",
-                desc: "Noch kein Google-Profil? Ich lege es an – mit allen Angaben, Leistungen und echten Fotos.",
+                desc: "Noch kein Google-Profil? Ich lege es an, mit allen Angaben, Leistungen und echten Fotos.",
                 iconName: "profil-einrichten" as const,
               },
               {
@@ -608,7 +608,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
               {
                 num: "05",
                 title: "Auswertung",
-                desc: "Was Kunden immer wieder loben – und was sich an Kritik häuft.",
+                desc: "Was Kunden immer wieder loben und wo sich Kritik häuft.",
                 iconName: "lob" as const,
               },
               {
@@ -679,7 +679,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
                 </div>
               </div>
               <p className="text-xs text-[var(--color-muted)] leading-relaxed">
-                Kategorien, Angaben, Leistungen, Beschreibung und Verifizierung. Bilder lieferst du – oder wir machen einen Fototermin.
+                Kategorien, Angaben, Leistungen, Beschreibung und Verifizierung. Bilder lieferst du, oder ich mache bei dir einen Fototermin.
               </p>
             </div>
 
@@ -765,7 +765,7 @@ export function GoogleBusinessView({ whatsappUrl }: GoogleBusinessViewProps) {
           </div>
 
           <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-            Ein Kunde steht 400 Meter von deiner Werkstatt entfernt, sucht auf dem Smartphone nach deiner Leistung und bekommt drei Mitbewerber angezeigt? In diesem ausführlichen Ratgeber erfährst du die häufigsten Ursachen für das Google-Verschwinden – und kannst dein Wissen im <strong>interaktiven Kompakt- &amp; Meister-Check</strong> direkt selbst auf die Probe stellen.
+            Ein Kunde steht 400 Meter von deiner Werkstatt entfernt, sucht auf dem Smartphone nach deiner Leistung und bekommt nur deine Mitbewerber angezeigt? In diesem Ratgeber erfährst du die häufigsten Gründe dafür und kannst dein Wissen im <strong>interaktiven Kompakt- &amp; Meister-Check</strong> direkt selbst auf die Probe stellen.
           </p>
 
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2">

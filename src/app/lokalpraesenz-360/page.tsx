@@ -3,25 +3,25 @@ import { GoogleBusinessView } from "@/components/views/GoogleBusinessView";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Lokalpräsenz 360° – Google-Unternehmensprofil & Bewertungen optimieren",
+  title: "Lokalpräsenz 360°: Google-Unternehmensprofil und Bewertungen optimieren",
   description:
-    "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und berichte monatlich. Für Betriebe am Niederrhein. 99 €/Monat, monatlich kündbar.",
+    "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und werte monatlich aus. Am Niederrhein, 99 € netto im Monat, monatlich kündbar.",
   alternates: {
     canonical: "/lokalpraesenz-360",
   },
   openGraph: {
-    title: "Lokalpräsenz 360° – Google-Unternehmensprofil & Bewertungen optimieren | Firmenflow",
+    title: "Lokalpräsenz 360°: Google-Unternehmensprofil und Bewertungen optimieren | Firmenflow",
     description:
-      "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und berichte monatlich. Für Betriebe am Niederrhein. 99 €/Monat, monatlich kündbar.",
+      "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und werte monatlich aus. Am Niederrhein, 99 € netto im Monat, monatlich kündbar.",
     url: "/lokalpraesenz-360",
     locale: "de_DE",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lokalpräsenz 360° – Google-Unternehmensprofil & Bewertungen optimieren | Firmenflow",
+    title: "Lokalpräsenz 360°: Google-Unternehmensprofil und Bewertungen optimieren | Firmenflow",
     description:
-      "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und berichte monatlich. Für Betriebe am Niederrhein. 99 €/Monat, monatlich kündbar.",
+      "Ich richte dein Google-Profil ein, beantworte jede Bewertung in deinem Ton und werte monatlich aus. Am Niederrhein, 99 € netto im Monat, monatlich kündbar.",
   },
 };
 
