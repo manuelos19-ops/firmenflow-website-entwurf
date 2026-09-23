@@ -144,12 +144,12 @@ Andersherum genauso: Wer dich über die Karte findet und dann auf einer langsame
 Nimm dein Handy und geh die Punkte einmal durch. Du brauchst dafür keinen Computer und keine Zugangsdaten.
 
 * Taucht dein Betrieb bei deiner Leistung plus Ortsname ganz oben auf der Karte auf, ohne dass jemand auf „Weitere Orte“ tippen muss?
-* Steht auf deinem Profil noch der Hinweis, dass ein Inhaber dieses Unternehmen beanspruchen kann?
+* Hast du dein Profil als Inhaber bestätigt?
 * Sind deine Feiertagszeiten für die nächsten Monate hinterlegt?
 * Beschreibt deine Hauptkategorie das, womit du tatsächlich dein Geld verdienst?
 * Ist dein neuestes Foto jünger als ein Jahr?
-* Wie viele Bewertungen hast du im Vergleich zu den beiden Betrieben, die über dir stehen?
-* Wann hast du zuletzt auf eine Bewertung geantwortet?
+* Hast du mindestens so viele Bewertungen wie die Betriebe, die über dir stehen?
+* Hast du auf deine letzten Bewertungen geantwortet?
 
 Jedes Nein ist ein möglicher Grund, warum der Kunde von vorhin bei jemand anderem gelandet ist.
 

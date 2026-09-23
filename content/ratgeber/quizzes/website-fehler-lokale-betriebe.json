@@ -36,19 +36,19 @@
         "Weil Kunden eine Beschwerdekarte in den Briefkasten werfen"
       ],
       "correctIndex": 0,
-      "explanation": "Wer auf deiner Seite genervt abspringt, beschwert sich nicht. Er ruft einfach die Konkurrenz an. Dein Telefon bleibt einfach stumm."
+      "explanation": "Wer auf deiner Seite genervt abspringt, beschwert sich nicht. Er ruft die Konkurrenz an, und dein Telefon bleibt stumm."
     },
     {
       "id": "w_b4",
       "level": "basis",
-      "question": "Was ist laut Artikel für einen Handwerker auf dem Smartphone der wichtigste Button ganz oben?",
+      "question": "Wie sollte die Telefonnummer auf deiner Website am Handy aussehen?",
       "options": [
-        "Ein direkter Klick-zum-Anrufen-Button für den Daumen",
-        "Ein 8-teiliges Kontaktformular mit vielen Pflichtfeldern",
-        "Ein Download-Link für die Firmenbroschüre"
+        "Als gut sichtbarer Knopf, der mit einem Daumentipp anruft",
+        "Klein im Fließtext ganz unten auf der Seite",
+        "Nur im Impressum, damit die Startseite aufgeräumt bleibt"
       ],
       "correctIndex": 0,
-      "explanation": "Kunden mit Rohrbruch, defektem Tor oder Reparaturstau wollen nicht tippen. Ein direkter Daumen-Tipp zum Anrufen bringt die meisten Aufträge."
+      "explanation": "Wer mit Rohrbruch oder streikendem Garagentor sucht, will nichts abtippen. Ein Knopf, der direkt anruft, nimmt ihm genau diese Hürde."
     },
     {
       "id": "w_b5",
@@ -65,26 +65,26 @@
     {
       "id": "w_b6",
       "level": "basis",
-      "question": "Wo suchen Menschen laut Statistischem Bundesamt (Destatis) heute primär nach lokalen Betrieben?",
+      "question": "Wie viel Prozent der Menschen zwischen 16 und 74 Jahren nutzen laut Statistischem Bundesamt das Internet?",
       "options": [
-        "Auf dem Smartphone von unterwegs oder vom Sofa aus",
-        "In den gedruckten Gelben Seiten im Flur",
-        "Auf Werbezetteln am Laternenpfahl"
+        "97 Prozent",
+        "Etwa 60 Prozent",
+        "Rund 35 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Destatis-Erhebungen belegen seit Jahren: Das Smartphone ist in Deutschland das mit Abstand wichtigste Gerät für die tägliche Informationssuche."
+      "explanation": "Laut Destatis nutzen 97 Prozent der 16- bis 74-Jährigen das Internet. Wer heute einen Betrieb sucht, sucht ihn also fast immer online."
     },
     {
       "id": "w_b7",
       "level": "basis",
-      "question": "Warum ist die Startseiten-Begrüßung „Herzlich willkommen auf unserer Homepage“ problematisch?",
+      "question": "Warum hilft ein Einstieg wie „Herzlich willkommen, seit vielen Jahren stehen wir für Qualität“ dem Kunden nicht?",
       "options": [
-        "Weil sie eine austauschbare Floskel ist, die auch zu einem Friseursalon passen würde",
+        "Weil genau diesen Satz auch jeder Mitbewerber schreiben könnte",
         "Weil Google Websites mit Begrüßungen im Ranking abstraft",
-        "Weil das Wort „Homepage“ im Internet verboten ist"
+        "Weil Kunden Höflichkeit auf Websites grundsätzlich stört"
       ],
       "correctIndex": 0,
-      "explanation": "Neukunden suchen eine Lösung. Die Überschrift muss sofort sagen, was du machst und wo du tätig bist, z. B. „Heizungswartung in Wesel“."
+      "explanation": "Wer auf deiner Seite landet, hat ein Problem und will wissen, ob du es löst. Die erste Überschrift sollte sagen, was du machst und wo, z. B. „Heizungswartung und Reparaturen in Wesel und Umgebung“."
     },
     {
       "id": "w_b8",
@@ -163,24 +163,24 @@
       "level": "profi",
       "question": "Wie lautet das konkrete Praxis-Beispiel aus dem Artikel für eine klare Startseiten-Überschrift eines Heizungsbetriebs?",
       "options": [
-        "„Heizungswartung und Reparaturen in Wesel und Umgebung. Ruf uns an.“",
+        "„Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an …“",
         "„Willkommen beim Meisterbetrieb für behagliche Wärme seit 1974.“",
         "„Ihr kompetenter Partner für Energie, Tradition und Zukunft.“"
       ],
       "correctIndex": 0,
-      "explanation": "Der Artikel empfiehlt ganz konkret: Nenne dein Gewerk, deinen Ort und eine direkte Handlungsaufforderung, statt vager Werbeslogans."
+      "explanation": "Leistung, Ort und ein klarer nächster Schritt. Die beiden anderen Sätze klingen nett, sagen dem Kunden aber nicht, ob du sein Problem löst."
     },
     {
       "id": "w_p5",
       "level": "profi",
-      "question": "Warum vertrauen Kunden echten Fotos aus der Werkstatt mehr als Model-Bildern mit perfekten Models?",
+      "question": "Warum wirken echte Fotos aus deinem Betrieb stärker als gekaufte Bilder mit Fotomodellen?",
       "options": [
         "Weil sie sehen wollen, wer tatsächlich vor ihrer Haustür steht und ins Haus kommt",
         "Weil Model-Fotos gegen Handwerkskammer-Richtlinien verstoßen",
         "Weil Stockfotos die Ladezeit der Website immer zerstören"
       ],
       "correctIndex": 0,
-      "explanation": "Handwerk ist Vertrauenssache. Kunden lassen Handwerker in ihr privates Zuhause – sie wollen echte Menschen sehen, keine anonymen Fotomodelle."
+      "explanation": "Wer einen Handwerker ins Haus lässt, will vorher wissen, wer da kommt. Gekaufte Bilder erkennen Kunden sofort, und dann fragen sie sich, ob es den Betrieb vor Ort überhaupt gibt."
     },
     {
       "id": "w_p6",
@@ -233,14 +233,14 @@
     {
       "id": "w_p10",
       "level": "profi",
-      "question": "Was bietet Manu lokalen Betrieben im Artikel als kostenlose Ersteinschätzung an?",
+      "question": "Was biete ich dir am Ende des Artikels als kostenlose Einschätzung an?",
       "options": [
-        "Ein 3 bis 5 Minuten langes persönliches Video mit sachlicher Analyse der Schwachstellen",
-        "Einen 50-seitigen automatisierten Standard-PDF-Bericht",
+        "Ein 3 bis 5 Minuten langes Video, in dem ich deine Seite wie ein Kunde durchgehe",
+        "Einen 50-seitigen automatisch erzeugten PDF-Bericht",
         "Ein zweistündiges Verkaufsgespräch vor Ort"
       ],
       "correctIndex": 0,
-      "explanation": "Manu ruft deine Seite wie ein Kunde auf und zeigt dir in einem 3 bis 5 Minuten Video ganz sachlich, wo Kunden abspringen und was du tun kannst."
+      "explanation": "Ich rufe deine Seite auf dem Handy auf und zeige dir im Video, wo Kunden abspringen und was ich an deiner Stelle zuerst ändern würde."
     },
     {
       "id": "w_p11",
@@ -264,7 +264,7 @@
         "Neukunden interessieren sich überhaupt nicht für die Erreichbarkeit"
       ],
       "correctIndex": 0,
-      "explanation": "Stammkunden rufen an, weil sie deine Arbeit kennen. Neukunden sehen im ersten Moment nur deinen Auftritt – und dieser entscheidet über den Anruf."
+      "explanation": "Stammkunden rufen an, weil sie deine Arbeit kennen. Neukunden sehen im ersten Moment nur deinen Auftritt auf dem Handy, und der entscheidet über den Anruf."
     },
     {
       "id": "w_p13",
@@ -341,14 +341,14 @@
     {
       "id": "w_p19",
       "level": "profi",
-      "question": "Welcher Grundsatz gilt für den Austausch und die Zusammenarbeit mit Firmenflow?",
+      "question": "Welche Beschriftung ist auf dem Kontaktknopf besser?",
       "options": [
-        "Alles unverbindlich und Persönlich mit Manu",
-        "Alles streng anonym über ein externes Callcenter",
-        "Ausschließlich über ein unpersönliches Support-Ticketsystem"
+        "„Reparatur anfragen“",
+        "„Senden“",
+        "„Formular abschicken“"
       ],
       "correctIndex": 0,
-      "explanation": "Bei Firmenflow gibt es kein Agenturtheater. Die Beratung und Umsetzung erfolgt immer direkt und Persönlich mit Manu."
+      "explanation": "Die Beschriftung sagt dem Kunden, was als Nächstes passiert. „Reparatur anfragen“ passt zu seinem Anliegen, „Senden“ könnte auf jedem Formular stehen."
     },
     {
       "id": "w_p20",
@@ -360,7 +360,7 @@
         "Nur weltweite Großkonzerne müssen auf mobile Ladezeiten achten"
       ],
       "correctIndex": 0,
-      "explanation": "Deine Arbeit ist erstklassig – und genau das muss deine Website Neukunden auf dem Handy innerhalb von zwei Sekunden beweisen."
+      "explanation": "Deine Arbeit kann noch so gut sein. Neukunden sehen zuerst deine Seite auf dem Handy, und die muss ihnen in wenigen Sekunden zeigen, dass sie bei dir richtig sind."
     }
   ]
 }

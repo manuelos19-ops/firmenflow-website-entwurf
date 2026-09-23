@@ -3,6 +3,7 @@ title: "Die 5 typischen Website-Fehler lokaler Betriebe: Warum Neukunden mit dem
 metaTitle: "5 Website-Fehler, die Betriebe Kunden kosten"
 description: "Neue Kunden sehen von deinem Betrieb zuerst das Handydisplay. Fünf typische Website-Fehler lokaler Betriebe und was du in zwei Minuten selbst prüfen kannst."
 date: "2026-09-19"
+updated: "2026-09-23"
 category: "Website & Vertrauen"
 tags: [Website, Google-Profil, Handwerk, Wesel, Ladezeit]
 image: "/images/ratgeber/website-fehler-lokale-betriebe.webp"
@@ -28,7 +29,7 @@ Aus meiner täglichen Arbeit mit Betrieben in Wesel und am Niederrhein fallen mi
 
 Wenn jemandem am Wochenende ein Rohr platzt, das Garagentor streikt oder jemand morgens schnell die Öffnungszeiten deiner Bäckerei nachsehen will, setzt sich niemand an einen Schreibtisch vor einen Computer. Fast jeder sucht unterwegs oder vom Sofa aus auf dem Handy.
 
-Das Statistische Bundesamt erfasst diese Entwicklung seit Jahren: 97 Prozent der Menschen in Deutschland nutzen das Internet. Wer heute einen Betrieb sucht, sucht ihn online, und in den allermeisten Fällen unterwegs auf dem Telefon.
+Laut Statistischem Bundesamt nutzen 97 Prozent der Menschen zwischen 16 und 74 Jahren das Internet. Wer heute einen Betrieb sucht, sucht ihn also online, und zwar meistens auf dem Gerät, das er sowieso in der Hand hat.
 
 Wenn deine Seite auf dem Telefon erst einmal fünf oder acht Sekunden lädt, während weiße Flächen stehen bleiben, wartet heute niemand mehr. In Googles technischer Dokumentation auf web.dev steht dazu ein Wert, den die BBC an der eigenen Website gemessen hat: Für jede zusätzliche Sekunde Ladezeit verlor sie weitere 10 Prozent ihrer Nutzer.
 
@@ -40,7 +41,7 @@ Wer vor Ort einen Betrieb sucht, will keine langen Aufsätze lesen. Er will wiss
 
 Trotzdem muss man auf vielen Seiten regelrecht suchen. Die Telefonnummer steht irgendwo im Fließtext ganz unten und lässt sich auf dem Handy nicht antippen. Wer ein Kontaktformular nutzen will, wird oft gezwungen, technische Details in Pflichtfelder einzutragen, die er noch gar nicht kennt.
 
-Wer lokal auf dem Smartphone sucht, hat ein konkretes Anliegen und will schnell eine Lösung. Mache die Kontaktaufnahme passend zum Anliegen einfach:
+Wer lokal auf dem Smartphone sucht, hat ein konkretes Anliegen und will schnell eine Lösung. Mach es ihm so einfach wie möglich, dich zu erreichen:
 
 ::karten::
 
@@ -54,7 +55,7 @@ Wenn der Weg zu dir Mühe kostet, verliert der Kunde die Geduld und ruft den nä
 
 ## Fehler 3: Seelenlose Katalogfotos statt deiner echten Werkstatt
 
-Niemand lässt einen Fremden in sein Haus, wenn das Bauchgefühl nicht stimmt. Genau darüber entscheiden deine Bilder.
+Niemand lässt einen Fremden ins Haus, wenn das Bauchgefühl nicht stimmt. Und niemand bestellt die Hochzeitstorte bei einer Bäckerei, die er nicht einschätzen kann. Über dieses Bauchgefühl entscheiden deine Bilder.
 
 Ein großer Fehler sind gekaufte Katalogfotos. Viele kennen diese Bilder: Drei strahlende Fotomodelle mit blütenweißen Bauhelmen, die noch nie ein Werkzeug in der Hand hatten.
 
@@ -66,7 +67,7 @@ Das gilt genauso für Bewerber. Wer bei dir anfangen soll, will vorher sehen, wo
 
 Viele Unternehmer pflegen ihre Website, vergessen aber ihr Google-Unternehmensprofil völlig.
 
-Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit einer Handvoll Betriebe an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
+Das kostet dich Aufträge. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit einer Handvoll Betriebe an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
 
 Wie stark Bewertungen die Entscheidung tragen, zeigt die jährliche Konsumentenbefragung von BrightLocal:
 
@@ -83,14 +84,17 @@ Wenn diese Aufgaben neben dem Tagesgeschäft liegen bleiben, unterstütze ich di
 
 ## Fehler 5: Begrüßungsfloskeln statt klarer Antworten
 
-Schau dir einmal die Startseite deines eigenen Betriebs an. Beginnt der erste Text mit:
-*„Herzlich willkommen. Seit vielen Jahren stehen wir für Qualität, Kompetenz und Zuverlässigkeit.“*?
+Schau dir einmal die Startseite deines eigenen Betriebs an. Beginnt der erste Text ungefähr so?
 
-Das ist freundlich gedacht, hilft dem Kunden auf dem Smartphone aber nicht weiter. Das könnte auf fast jeder Firmenwebsite stehen. Wer auf deiner Seite landet, hat ein Problem und sucht eine Lösung.
+*„Herzlich willkommen. Seit vielen Jahren stehen wir für Qualität, Kompetenz und Zuverlässigkeit.“*
+
+Das ist freundlich gedacht, hilft dem Kunden auf dem Smartphone aber nicht weiter. Genau diesen Satz könnte auch jeder deiner Mitbewerber schreiben. Wer auf deiner Seite landet, hat ein Problem und will wissen, ob du es löst.
 
 Lies einmal nur die erste Überschrift deiner Website. Wenn sie genauso gut zu einem Friseursalon passen würde wie zu deinem Handwerksbetrieb, solltest du konkreter werden. Schreibe gleich auf der Startseite, was du anbietest und wo du tätig bist. Für einen Heizungsbetrieb sieht ein klarer Einstieg so aus:
 
-*„Heizungswartung und Reparaturen in Wesel und Umgebung. Ruf uns an und beschreibe kurz, was mit deiner Heizung los ist.“*
+*„Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an und beschreiben Sie kurz, was mit Ihrer Heizung los ist.“*
+
+Ob du deine Kunden duzt oder siezt, entscheidest du. Bei Hausbesitzern, die ihre Heizung warten lassen, ist das Sie meistens die sichere Wahl.
 
 Deine Firmengeschichte und deine Urkunden sind wichtig, gehören aber weiter nach unten auf die Seite. Sie dienen als Beleg für deine gute Arbeit, sobald der Kunde weiß, was du anbietest.
 
@@ -110,7 +114,7 @@ Wenn du feststellst, dass deine Seite vor allem für den Computerbildschirm von 
 
 Für eine kostenlose Video-Einschätzung von drei bis fünf Minuten nehme ich mir gerne die Zeit.
 
-Ich rufe deine Seite auf, schaue sie mir wie ein Kunde an und zeige dir im Video ganz sachlich, an welchen Stellen Kunden abspringen und was du verbessern kannst.
+Ich rufe deine Seite auf dem Handy auf, schaue sie mir an wie ein Kunde und zeige dir im Video, an welchen Stellen Kunden abspringen und was ich an deiner Stelle zuerst ändern würde.
 
 Bei Firmenflow kümmere ich mich um [neue Websites und die Überarbeitung bestehender Seiten](https://www.firmenflow.de/#leistungen). Ich übernehme den Aufbau, schreibe die Texte und setze die Seite technisch um. Auf Wunsch komme ich für Fotos zu dir. Zuerst schauen wir gemeinsam, was dein Betrieb braucht.
 

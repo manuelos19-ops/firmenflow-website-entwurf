@@ -5,14 +5,14 @@
     {
       "id": "az_b1",
       "level": "basis",
-      "question": "Wie viel Prozent der 12- bis 19-Jährigen nutzen laut offizieller JIM-Studie täglich ein Smartphone?",
+      "question": "Wie viel Prozent der 12- bis 19-Jährigen nutzen laut JIM-Studie 2025 täglich ein Smartphone?",
       "options": [
-        "95 Prozent – fast ausnahmslos alle",
+        "95 Prozent, also fast alle",
         "Etwa 50 Prozent, viele bevorzugen PCs",
         "Unter 20 Prozent, Jugendliche lesen meistens Zeitung"
       ],
       "correctIndex": 0,
-      "explanation": "Die repräsentative JIM-Studie belegt: 95 % aller Jugendlichen besitzen ein eigenes Smartphone und nutzen es täglich – durchschnittlich knapp 4 Stunden lang."
+      "explanation": "Die JIM-Studie befragt jedes Jahr 1.200 Jugendliche. 95 Prozent besitzen ein eigenes Smartphone und nutzen es täglich, im Schnitt knapp vier Stunden."
     },
     {
       "id": "az_b2",
@@ -48,12 +48,12 @@
         "Keine einzige, alle Plätze wurden besetzt"
       ],
       "correctIndex": 0,
-      "explanation": "Bundesweit blieben 54.000 Lehrstellen unbesetzt – im Handwerk fand fast jede fünfte betriebliche Ausbildungsstelle keinen passenden Bewerber."
+      "explanation": "Bundesweit blieben 54.000 Lehrstellen unbesetzt. Im Handwerk fand fast jede fünfte betriebliche Ausbildungsstelle niemanden."
     },
     {
       "id": "az_b5",
       "level": "basis",
-      "question": "Was macht ein 16-Jähriger fast immer als Erstes, bevor er sich bei einem Betrieb bewirbt?",
+      "question": "Was macht ein Bewerber laut Artikel, bevor er sich bei einem Betrieb meldet?",
       "options": [
         "Er tippt den Betriebsnamen auf seinem Smartphone bei Google ein",
         "Er fährt persönlich im Anzug auf den Betriebshof",
@@ -89,45 +89,45 @@
     {
       "id": "az_b8",
       "level": "basis",
-      "question": "Warum ist das Weglassen von Gehaltsangaben auf der Karriereseite ein häufiger Fehler?",
+      "question": "Warum solltest du auf der Karriereseite sagen, was man bei dir verdient?",
       "options": [
-        "Weil Bewerber die Bezahlung ohne konkrete Zahl automatisch auf den niedrigsten Wert schätzen",
-        "Weil Google Websites ohne Gehaltstabelle im Ranking sperrt",
-        "Weil Gehälter im Handwerk laut Gesetz geheim bleiben müssen"
+        "Weil Bewerber ohne Zahl eher mit dem Schlechtesten rechnen",
+        "Weil Google Stellenangebote ohne Gehalt sperrt",
+        "Weil Löhne im Handwerk gesetzlich veröffentlicht werden müssen"
       ],
       "correctIndex": 0,
-      "explanation": "Wer keine Zahl oder Spanne nennt, verliert Interessenten an Betriebe, die offen kommunizieren. Ohne Angabe vermuten Bewerber meist Unterbezahlung."
+      "explanation": "Eine Zahl oder Spanne reicht, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, füllt der Bewerber die Lücke selbst, und zwar selten zu deinen Gunsten."
     },
     {
       "id": "az_b9",
       "level": "basis",
-      "question": "Was sollte ganz oben auf einer überzeugenden Handwerker-Karriereseite stehen?",
+      "question": "Wie beantwortest du auf der Karriereseite die Frage „Wer ist der Chef?“",
       "options": [
         "Ein echtes Foto vom Chef und ein paar ehrliche Sätze auf Augenhöhe",
         "Ein PDF-Download der Handwerksordnung von 1953",
         "Ein Standard-Foto von amerikanischen Fotomodellen mit Bauhelm"
       ],
       "correctIndex": 0,
-      "explanation": "Bewerber wollen den Menschen sehen, bei dem sie täglich anfangen und arbeiten. Authentische Bilder schlagen jedes anonyme Agenturfoto."
+      "explanation": "Bewerber wollen den Menschen sehen, bei dem sie anfangen. Ein echtes Foto von dir und drei Sätze in deinen Worten sagen mehr als jedes gekaufte Bild."
     },
     {
       "id": "az_b10",
       "level": "basis",
       "question": "Wann suchen wechselwillige Gesellen (z. B. mit 34 Jahren) meist nach neuen Betrieben?",
       "options": [
-        "Abends auf dem Sofa ganz diskret auf dem Smartphone",
+        "Abends auf dem Sofa, auf dem Handy",
         "Morgens um 7 Uhr im Pausenraum vor den Kollegen",
-        "Über das Arbeitsamt mit gedrucktem Lebenslauf"
+        "Nur mit ausgedrucktem Lebenslauf beim Arbeitsamt"
       ],
       "correctIndex": 0,
-      "explanation": "Fachkräfte in Festanstellung kündigen nicht ins Blaue. Sie prüfen Betriebe abends auf dem Handy und melden sich nur, wenn es ohne bürokratischen Aufwand geht."
+      "explanation": "Wer einen festen Job hat, schaut sich nebenbei um. Er meldet sich nur, wenn das ohne großen Aufwand geht, am besten mit zwei Sätzen."
     },
     {
       "id": "az_p1",
       "level": "profi",
       "question": "Wie hoch ist laut Berufsbildungsbericht 2025 der Anteil unbesetzter Lehrstellen im Handwerk?",
       "options": [
-        "Rund 18 Prozent – fast jede fünfte betriebliche Ausbildungsstelle blieb leer",
+        "Rund 18 Prozent, fast jede fünfte betriebliche Ausbildungsstelle blieb leer",
         "Weniger als 2 Prozent",
         "Über 65 Prozent aller Stellen"
       ],
@@ -144,7 +144,7 @@
         "Über 300.000 Bewerber"
       ],
       "correctIndex": 0,
-      "explanation": "Obwohl 54.000 Stellen leer blieben, fanden 40.000 junge Menschen keinen Platz. Das Problem ist das sogenannte 'Matching': Beide Seiten finden online nicht zueinander."
+      "explanation": "Obwohl 54.000 Stellen leer blieben, fanden 40.000 junge Menschen keinen Platz. Betriebe und Bewerber finden also oft nicht zueinander."
     },
     {
       "id": "az_p3",
@@ -156,91 +156,91 @@
         "Über 8 Stunden reine Arbeitszeit"
       ],
       "correctIndex": 0,
-      "explanation": "Die JIM-Studie ermittelte 231 Minuten tägliche Smartphone-Nutzung – bei Volljährigen steigt dieser Wert sogar auf 278 Minuten (über 4,5 Stunden)."
+      "explanation": "Die JIM-Studie misst 231 Minuten Bildschirmzeit am Smartphone pro Tag. Bei den 18- und 19-Jährigen sind es 278 Minuten, also über viereinhalb Stunden."
     },
     {
       "id": "az_p4",
       "level": "profi",
-      "question": "Was signalisiert eine Betriebswebsite von 2014 mit veralteten News einem jungen Bewerber?",
+      "question": "Was liest ein junger Bewerber aus einer Website, deren letzte Neuigkeit die Weihnachtsfeier von 2016 ist?",
       "options": [
         "Dass in diesem Betrieb wichtige Dinge liegen bleiben und Modernität fehlt",
         "Dass der Betrieb besonders viel Tradition und Beständigkeit hat",
         "Dass der Chef sich ganz auf die Ausbildung konzentriert"
       ],
       "correctIndex": 0,
-      "explanation": "Eine Website, auf der die letzte Neuigkeit von einer Weihnachtsfeier vor acht Jahren stammt, wirkt wie ein Mahnmal für aufgeschobene Aufgaben."
+      "explanation": "Die Seite sagt nichts über die Arbeit und viel über den Umgang mit Dingen, die liegen bleiben. Genau so liest sie ein Bewerber."
     },
     {
       "id": "az_p5",
       "level": "profi",
-      "question": "Welche 4 konkreten Fragen muss eine funktionierende Karriereseite zwingend beantworten?",
+      "question": "Welche vier Fragen sollte eine Karriereseite beantworten?",
       "options": [
         "Wer ist der Chef, wie läuft der Tag ab, was verdient man und wie bewirbt man sich?",
         "Welche Rechtsform hat die GmbH, wo sitzt das Amtsgericht, wie hoch ist das Stammkapital und wer ist Steuerberater?",
         "Welche DIN-Normen gelten im Betrieb, wer liefert das Rohmaterial, wie groß ist das Lager und wo parkt der LKW?"
       ],
       "correctIndex": 0,
-      "explanation": "Diese vier Fragen sind die entscheidenden Hürden im Kopf des Bewerbers. Wer sie ehrlich beantwortet, hebt sich von 90 % aller Mitbewerber ab."
+      "explanation": "Diese vier Fragen stellt sich jeder Bewerber, bevor er sich meldet. Auf vielen Betriebsseiten bleiben sie offen, und wer sie beantwortet, fällt auf."
     },
     {
       "id": "az_p6",
       "level": "profi",
-      "question": "Was prüfen Eltern oft sehr gründlich, wenn ihr Sohn oder ihre Tochter einen Betrieb ins Auge fasst?",
+      "question": "Was sehen Eltern, wenn sie deinen Betrieb googeln, bevor ihr Kind sich bewirbt?",
       "options": [
-        "Das Google-Unternehmensprofil samt der Antworten des Inhabers auf Rezensionen",
-        "Den HR-Handelsregisterauszug beim Amtsgericht",
-        "Die Markenanmeldung beim Deutschen Patent- und Markenamt"
+        "Dein Google-Profil mit den Bewertungen und deinen Antworten darauf",
+        "Deinen Handelsregisterauszug beim Amtsgericht",
+        "Deine Markenanmeldung beim Patentamt"
       ],
       "correctIndex": 0,
-      "explanation": "Eltern googeln mit. Zwei schlechte, unbeantwortete Rezensionen von Ex-Mitarbeitern reichen oft schon, damit Eltern von einer Bewerbung bei dir abraten."
+      "explanation": "Eltern googeln mit, und zwar gründlicher. Eine unbeantwortete Kritik von einem Ex-Mitarbeiter lesen sie als Auskunft darüber, wie es sich bei dir arbeitet. Eine sachliche Antwort von dir ändert dieses Bild."
     },
     {
       "id": "az_p7",
       "level": "profi",
-      "question": "Warum ist die Phrase 'Wir bieten ein motiviertes Team und flache Hierarchien' wirkungslos?",
+      "question": "Warum bringt der Satz „Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ wenig?",
       "options": [
-        "Weil es eine ungeprüfte Floskel ist, die auf jeder x-beliebigen Firmenwebsite steht",
-        "Weil Jugendliche flache Hierarchien ablehnen",
-        "Weil das Wort 'Team' im Handwerk unüblich ist"
+        "Weil er auf jeder Firmenseite stehen könnte und nichts davon überprüfbar ist",
+        "Weil Jugendliche keine Abwechslung wollen",
+        "Weil das Wort „Team“ im Handwerk unüblich ist"
       ],
       "correctIndex": 0,
-      "explanation": "Floskeln schaffen kein Vertrauen. Was wirklich zählt, sind greifbare Fakten: Feste Arbeitszeiten, moderner Fuhrpark, Ausbildungsvergütung und echte Gesichter."
+      "explanation": "Überprüfbar sind konkrete Angaben: wann der Tag anfängt, wie viele im Team sind, was man verdient, dazu echte Fotos von Werkstatt, Fahrzeugen und Leuten."
     },
     {
       "id": "az_p8",
       "level": "profi",
-      "question": "Was passiert, wenn die Einstiegshürde zur Bewerbung künstlich hoch gehalten wird (z. B. langes Anschreiben)?",
+      "question": "Was passiert, wenn die Bewerbung bei dir ein Anschreiben und ein langes Formular verlangt?",
       "options": [
-        "Man erhält am Ende oft nur die Bewerber, die andernorts schon mehrfach durchgefallen sind",
-        "Man erhält ausschließlich die motiviertesten Einser-Schüler der Region",
+        "Du verlierst die Jugendlichen, die sich spontan gemeldet hätten",
+        "Du bekommst nur noch die besten Schüler der Region",
         "Die Handwerkskammer belohnt den Betrieb mit einem Förderbonus"
       ],
       "correctIndex": 0,
-      "explanation": "Begehrte Talente und wechselwillige Gesellen haben Optionen. Wenn deine Hürde zu hoch ist, gehen sie dorthin, wo man sich mit zwei Sätzen melden kann."
+      "explanation": "Ein Sechzehnjähriger hat keinen Drucker und keine Lust auf vierzehn Pflichtfelder. Eine kurze Nachricht mit Namen und einem Satz reicht, danach rufst du zurück."
     },
     {
       "id": "az_p9",
       "level": "profi",
-      "question": "Warum rechnet sich eine moderne Karriereseite betriebswirtschaftlich oft schneller als Kunden-Websites?",
+      "question": "Warum rechnet sich eine Karriereseite anders als eine Seite für Neukunden?",
       "options": [
-        "Weil eine unbesetzte Fachkraftstelle jeden Monat tausende Euro ungenutzten Umsatz kostet",
-        "Weil Karriereseiten von der Steuer zu 200 Prozent erlassen werden",
-        "Weil Google für Karriereseiten monatlich Prämien auszahlt"
+        "Weil eine unbesetzte Stelle jeden Monat Aufträge und Umsatz kostet",
+        "Weil Karriereseiten steuerlich doppelt absetzbar sind",
+        "Weil Google für Karriereseiten Prämien auszahlt"
       ],
       "correctIndex": 0,
-      "explanation": "Wenn Aufträge wegen Personalmangel abgelehnt werden müssen, verliert der Betrieb jeden Monat bares Geld. Schon eine einzige erfolgreiche Einstellung zahlt die Website um ein Vielfaches zurück."
+      "explanation": "Fehlt dir ein Mitarbeiter, schiebst du Aufträge, vertröstest Kunden, und dein Team macht Überstunden. Das kostet jeden Monat Geld, auch wenn es auf keiner Rechnung steht."
     },
     {
       "id": "az_p10",
       "level": "profi",
-      "question": "Was ist der wichtigste Hebel im '5-Minuten-Selbsttest' für deinen eigenen Betrieb?",
+      "question": "Welche Frage gehört in den Fünf-Minuten-Selbsttest aus dem Artikel?",
       "options": [
-        "Ob sich ein Interessent auf dem Smartphone in unter 2 Minuten ohne Anschreiben bei dir melden kann",
-        "Ob das Impressum mit einer Times-New-Roman-Schrift formatiert ist",
-        "Ob die Website im Firefox-Browser auf Windows 98 fehlerfrei lädt"
+        "Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?",
+        "Ist das Impressum in Times New Roman gesetzt?",
+        "Lädt die Seite auf einem Computer mit Windows 98?"
       ],
       "correctIndex": 0,
-      "explanation": "Der gesamte Prozess muss daumenfreundlich sein: Finden, Vertrauen fassen, in unter zwei Minuten per Klick melden. Jedes Hindernis kostet dich den Bewerber."
+      "explanation": "Der Selbsttest geht die Seite so durch, wie ein Bewerber es tut: finden, Vertrauen fassen, sich melden. Jede Hürde auf diesem Weg kostet dich Bewerbungen."
     },
     {
       "id": "az_p11",
@@ -252,7 +252,7 @@
         "Briefe und Postkarten schreiben"
       ],
       "correctIndex": 0,
-      "explanation": "Mit 76 % täglicher Nutzung liegt Musikhören auf Platz 2, gefolgt von Online-Videos (56 %). Gedruckte Zeitungen spielen mit kaum messbaren Werten praktisch keine Rolle mehr."
+      "explanation": "Musikhören liegt mit 76 Prozent auf Platz 2, gefolgt von Videos im Internet mit 56 Prozent. Zeitungen spielen bei der täglichen Nutzung kaum eine Rolle."
     },
     {
       "id": "az_p12",
@@ -269,98 +269,98 @@
     {
       "id": "az_p13",
       "level": "profi",
-      "question": "Was bedeutet es für einen Bewerber, wenn auf einer Karriereseite eine feste Antwortzeit versprochen wird?",
+      "question": "Warum solltest du auf der Karriereseite sagen, wann du dich zurückmeldest?",
       "options": [
         "Es signalisiert Verbindlichkeit, Wertschätzung und einen verlässlichen Chef",
         "Dass der Betrieb keine Arbeit hat und den ganzen Tag am Telefon sitzt",
         "Dass ein automatischer Chatbot die Ausbildung leitet"
       ],
       "correctIndex": 0,
-      "explanation": "Wer schreibt: 'Wir melden uns innerhalb von 24 Stunden bei dir', nimmt Bewerbern die Angst vor dem Ungewissen und zeigt echten Respekt für die Initiative."
+      "explanation": "Ein Satz wie „Ich melde mich innerhalb von zwei Tagen bei dir“ nimmt dem Bewerber die Unsicherheit. Wichtig ist nur, dass du ihn auch einhältst."
     },
     {
       "id": "az_p14",
       "level": "profi",
-      "question": "Warum scheitern viele Betriebe bei der Ansprache erfahrener Gesellen mit festem Job?",
+      "question": "Warum melden sich erfahrene Gesellen mit festem Job selten über lange Bewerbungsformulare?",
       "options": [
-        "Weil Gesellen nach Feierabend keine Lust haben, am PC mühsam Lebensläufe hochzuladen",
-        "Weil Gesellen im Handwerk grundsätzlich niemals den Betrieb wechseln",
+        "Weil sie abends am Handy suchen und keinen Lebenslauf hochladen wollen",
+        "Weil Gesellen im Handwerk nie den Betrieb wechseln",
         "Weil erfahrene Handwerker kein Smartphone besitzen"
       ],
       "correctIndex": 0,
-      "explanation": "Ein wechselwilliger Geselle schaut sich abends diskret auf dem Sofa um. Er meldet sich nur, wenn er mit zwei Sätzen unkompliziert Kontakt aufnehmen kann."
+      "explanation": "Wer mit 34 und festem Job schaut, tut das abends auf dem Sofa. Er schreibt zwei Sätze, wenn er kann. Mehr Aufwand nimmt er selten auf sich."
     },
     {
       "id": "az_p15",
       "level": "profi",
       "question": "Welche Angabe zum Arbeitstag ist laut Artikel für Bewerber besonders wertvoll?",
       "options": [
-        "Konkrete Uhrzeiten für Arbeitsbeginn und Feierabend sowie die typische Teamgröße",
-        "Ein philosophischer Text über die Historie der Handwerkszunft im Mittelalter",
-        "Die genaue Quadratmeterzahl des Firmenparkplatzes"
+        "Wann der Arbeitstag beginnt, womit man anfängt und wie viele im Team sind",
+        "Ein Text über die Geschichte der Handwerkszunft im Mittelalter",
+        "Die genaue Größe des Firmenparkplatzes"
       ],
       "correctIndex": 0,
-      "explanation": "Transparenz schafft Sicherheit: Wann geht es morgens los? Wie läuft der Tag ab? Was bedeutet Feierabend? Das sind die echten Fragen im Kopf von Berufseinsteigern."
+      "explanation": "Wann geht es morgens los? Wie läuft der Tag ab? Was heißt Feierabend? Das sind die Fragen, die sich Berufseinsteiger stellen."
     },
     {
       "id": "az_p16",
       "level": "profi",
-      "question": "Warum ist das sogenannte 'Matching-Problem' im Handwerk so gravierend?",
+      "question": "Was zeigen 54.000 unbesetzte Lehrstellen und gleichzeitig 40.000 Bewerber ohne Platz?",
       "options": [
-        "Weil 54.000 freie Lehrstellen und 40.000 suchende Bewerber online oft schlichtweg nicht zueinander finden",
-        "Weil Handwerksberufe gesetzlich nur noch per Losverfahren vergeben werden",
-        "Weil Lehrlinge nur noch in Großstädten mit über 1 Million Einwohnern arbeiten dürfen"
+        "Dass Betriebe und Bewerber oft nicht zueinander finden",
+        "Dass Ausbildungsplätze per Losverfahren vergeben werden",
+        "Dass es für jede Stelle genug Bewerber gibt"
       ],
       "correctIndex": 0,
-      "explanation": "Es gibt junge Menschen, die eine Lehrstelle suchen. Aber wenn Betriebe im Netz unsichtbar sind oder mit Formularen abschrecken, kommen Angebot und Nachfrage nicht zusammen."
+      "explanation": "Es gibt junge Leute, die suchen. Wenn ein Betrieb im Netz nicht zu finden ist oder mit Formularen abschreckt, kommen die beiden Seiten nicht zusammen."
     },
     {
       "id": "az_p17",
       "level": "profi",
-      "question": "Was passiert, wenn ein Bewerber bei Google nach deinem Firmennamen plus 'Ausbildung' sucht und nichts findet?",
+      "question": "Was passiert, wenn ein Bewerber bei Google nach deinem Firmennamen plus „Ausbildung“ sucht und nichts findet?",
       "options": [
         "Er bricht die Recherche ab und bewirbt sich bei einem Mitbewerber mit sichtbarer Seite",
         "Er beauftragt einen Detektiv, um deine Werkstatt zu finden",
         "Er ruft sofort bei der örtlichen Handwerkskammer an, um dich zu melden"
       ],
       "correctIndex": 0,
-      "explanation": "Bewerber investieren heute keine detektivische Arbeit. Wer online nicht als Ausbildungsbetrieb auffindbar ist, existiert für sie als Ausbildungsoption nicht."
+      "explanation": "Wer als Ausbildungsbetrieb online nicht auftaucht, fällt bei Bewerbern durch, bevor sie überhaupt anfragen."
     },
     {
       "id": "az_p18",
       "level": "profi",
-      "question": "Welche psychologische Wirkung haben echte Fotos der Werkstatt und des Fuhrparks?",
+      "question": "Was bewirken echte Fotos von Werkstatt, Fahrzeugen und Team bei Bewerbern?",
       "options": [
-        "Sie beweisen Realität und nehmen dem Bewerber das Gefühl, vor einer bösen Überraschung zu stehen",
-        "Sie verringern die Klickzahlen, weil Handwerksbilder unmodern wirken",
-        "Sie führen automatisch zu einer Abmahnung durch Bildagenturen"
+        "Sie zeigen, wie es bei dir wirklich aussieht, bevor jemand zum ersten Mal vorbeikommt",
+        "Sie schrecken ab, weil Werkstattbilder unmodern wirken",
+        "Sie führen automatisch zu Abmahnungen durch Bildagenturen"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Betrieb, den man vorab sieht, wirkt greifbar und menschlich. Bewerber können sich vorstellen, dort einzusteigen, statt vor einer anonymen Fassade zu stehen."
+      "explanation": "Ein Betrieb, den man vorher sieht, ist kein unbekanntes Risiko mehr. Bewerber können sich vorstellen, dort anzufangen."
     },
     {
       "id": "az_p19",
       "level": "profi",
-      "question": "Wie lange verbringen volljährige Jugendliche (18–19 Jahre) laut JIM-Studie täglich am Smartphone?",
+      "question": "Wie lange nutzen 18- und 19-Jährige laut JIM-Studie täglich ihr Smartphone?",
       "options": [
-        "Durchschnittlich 278 Minuten – mehr als 4,5 Stunden jeden Tag",
-        "Exakt 30 Minuten",
-        "Unter 10 Minuten, weil sie arbeiten müssen"
+        "Durchschnittlich 278 Minuten, also über viereinhalb Stunden",
+        "Etwa 30 Minuten",
+        "Unter 10 Minuten"
       ],
       "correctIndex": 0,
-      "explanation": "Bei älteren Jugendlichen und jungen Erwachsenen steigt die Nutzungsdauer auf über 4,5 Stunden täglich. Das Smartphone ist ihr zentraler Zugang zur Außenwelt."
+      "explanation": "Mit dem Alter steigt die Nutzung: Bei den 12- und 13-Jährigen sind es 166 Minuten, bei den Volljährigen 278."
     },
     {
       "id": "az_p20",
       "level": "profi",
-      "question": "Warum ist die Aussage 'Die Jugend will heute einfach nicht mehr arbeiten' laut Analyse zu kurz gegriffen?",
+      "question": "Warum greift der Satz „Die Jugend will heute nicht mehr arbeiten“ laut den Zahlen im Artikel zu kurz?",
       "options": [
-        "Weil tausende Bewerber leer ausgehen, während Betriebe veraltete Kanäle nutzen und Einstiegshürden aufbauen",
+        "Weil 40.000 Bewerber keinen Platz gefunden haben, obwohl 54.000 Stellen frei blieben",
         "Weil Jugendliche laut Statistik 60 Stunden pro Woche ehrenamtlich arbeiten",
-        "Weil es im Handwerk überhaupt keinen Mangel an Nachwuchskräften gibt"
+        "Weil es im Handwerk gar keinen Mangel an Nachwuchs gibt"
       ],
       "correctIndex": 0,
-      "explanation": "Über 40.000 Jugendliche blieben unversorgt. Betriebe, die Hürden abbauen, auf Augenhöhe kommunizieren und mobil auffindbar sind, finden nach wie vor motivierte Auszubildende."
+      "explanation": "Es gibt Jugendliche, die eine Lehrstelle suchen und keine finden. Wer sichtbar ist und die Hürde niedrig hält, hat bessere Chancen, dass einer davon bei ihm landet."
     }
   ]
 }

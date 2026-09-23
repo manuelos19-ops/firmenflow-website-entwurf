@@ -48,7 +48,7 @@
         "Kunden warten gerne vor der Tür, bis der Betriebsurlaub vorbei ist"
       ],
       "correctIndex": 0,
-      "explanation": "Wer vor verschlossener Tür steht, ist verärgert. Google zeigt Öffnungszeiten prominent an – Feiertags- und Urlaubszeiten müssen aktuell sein."
+      "explanation": "Wer vor verschlossener Tür steht, ist verärgert. Google zeigt die Öffnungszeiten direkt im Suchergebnis an, deshalb müssen auch Feiertage und Betriebsferien stimmen."
     },
     {
       "id": "gm_b5",
@@ -67,12 +67,12 @@
       "level": "basis",
       "question": "Was passiert laut Artikel, wenn du selbst keine aktuellen Fotos in dein Google-Profil hochlädst?",
       "options": [
-        "Du überlässt den ersten Eindruck den Kunden – oft mit verwackelten Handyfotos bei Regen oder Kassenbons",
+        "Du überlässt den ersten Eindruck den Kunden, oft mit verwackelten Handyfotos bei Regen oder Kassenbons",
         "Google blendet automatisch ein neutrales weißes Schild ein",
         "Das Google-Profil wird automatisch nach 14 Tagen gelöscht"
       ],
       "correctIndex": 0,
-      "explanation": "Wenn der Inhaber keine guten Fotos liefert, zeigt Google die Schnappschüsse von Nutzern. Der erste Eindruck entscheidet aber vor dem ersten Satz Text."
+      "explanation": "Wenn du keine Fotos lieferst, zeigt Google die Schnappschüsse von Kunden. Die Bilder stehen weit oben und werden angesehen, bevor jemand den ersten Satz liest."
     },
     {
       "id": "gm_b7",
@@ -149,14 +149,14 @@
     {
       "id": "gm_p3",
       "level": "profi",
-      "question": "Wie viel Prozent der Menschen nutzen laut der Claneo/Appinio-Studie (2025) primär Suchmaschinen für lokale Betriebe?",
+      "question": "Welchen Anteil erreichen Suchmaschinen laut Claneo/Appinio (2025), wenn Menschen ein Restaurant oder Geschäft vor Ort suchen?",
       "options": [
-        "65 Prozent (Suchmaschinen sind mit Abstand Platz 1 vor Social Media mit 10 %)",
+        "65 Prozent, weit vor Instagram mit 10 Prozent",
         "Nur 15 Prozent",
         "99 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Die Claneo/Appinio-Studie zeigt: 65 % der Suchenden nutzen Suchmaschinen, während soziale Medien wie Instagram nur auf 10 % kommen."
+      "explanation": "In der Befragung von 2.000 Menschen in Deutschland und den USA kommen Suchmaschinen auf 65 Prozent, Instagram folgt mit 10 Prozent."
     },
     {
       "id": "gm_p4",
@@ -168,7 +168,7 @@
         "Über 90 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "KI-Chatbots holen rasant auf. Bei komplexen Fragen liegen sie mit knapp 39 % fast gleichauf mit Google – und greifen dabei auch auf Profil-Daten zu."
+      "explanation": "Bei komplexeren Fragen liegen KI-Chatbots mit 38,55 Prozent fast gleichauf mit Google (40,29 Prozent). Bei der Informationssuche insgesamt greifen 21 Prozent darauf zurück."
     },
     {
       "id": "gm_p5",
@@ -192,7 +192,7 @@
         "Weil für Bäder gesetzlich nur Fliesenleger zugelassen sind"
       ],
       "correctIndex": 0,
-      "explanation": "Google bewertet die Relevanz: Ein gezielt als Sanitär- oder Heizungsbetrieb kategorisiertes Unternehmen rankt bei Sanitärthemen deutlich vor allgemeinen Firmen."
+      "explanation": "Über die Kategorie ordnet Google deinen Betrieb einer Suche zu. Wer genau als Sanitärbetrieb eingetragen ist, passt besser zu „Bad sanieren“ als ein allgemeines Bauunternehmen."
     },
     {
       "id": "gm_p7",
@@ -228,7 +228,7 @@
         "Weil Google Handwerksbetriebe grundsätzlich nicht auf Platz 1 lässt"
       ],
       "correctIndex": 0,
-      "explanation": "Niemand besitzt den Google-Algorithmus. Platz 1 hängt vom Standort des Nutzers ab – Fleißarbeit und ein gepflegtes Profil sind aber die Pflicht-Basis."
+      "explanation": "Wer oben steht, hängt auch davon ab, wo der Suchende gerade ist, und daran kann niemand etwas ändern. Ein vollständiges und gepflegtes Profil ist die Voraussetzung, überhaupt mitzuspielen."
     },
     {
       "id": "gm_p10",
@@ -269,14 +269,14 @@
     {
       "id": "gm_p13",
       "level": "profi",
-      "question": "Wie viele kostenlose Video-Einschätzungen für Google-Profile bietet Manu pro Woche maximal an?",
+      "question": "Wie viele kostenlose Video-Einschätzungen für Google-Profile schaffe ich pro Woche?",
       "options": [
-        "Maximal 3 Video-Einschätzungen pro Woche, weil er sich jedes Profil persönlich ansieht",
-        "Unbegrenzt viele, weil eine KI die Videos vollautomatisch erzeugt",
-        "Genau 50 Stück pro Monat"
+        "Drei, weil ich mir jedes Profil selbst ansehe",
+        "Unbegrenzt viele, weil eine KI die Videos erzeugt",
+        "Genau 50 pro Monat"
       ],
       "correctIndex": 0,
-      "explanation": "Manu analysiert jedes Profil individuell und persönlich am Bildschirm. Daher ist das Kontingent auf 3 fundierte Video-Einschätzungen pro Woche limitiert."
+      "explanation": "Ich sehe mir jedes Profil selbst am Bildschirm an und nehme das Video persönlich auf. Deshalb schaffe ich im Moment drei pro Woche."
     },
     {
       "id": "gm_p14",
@@ -293,26 +293,26 @@
     {
       "id": "gm_p15",
       "level": "profi",
-      "question": "Warum ist das Antworten auf Google-Bewertungen laut Artikel so entscheidend für das Ranking und Neukunden?",
+      "question": "Warum lohnt es sich, auf Google-Bewertungen zu antworten?",
       "options": [
-        "Weil Google aktive Interaktion belohnt und Neukunden sehen, wie wertschätzend du mit Kunden umgehst",
-        "Weil man durch Antworten negative Bewertungen sofort ungeschehen machen kann",
-        "Weil das Gesetz eine Beantwortung innerhalb von 24 Stunden vorschreibt"
+        "Google empfiehlt es für das lokale Ranking, und Neukunden sehen, wie du mit Kritik umgehst",
+        "Weil eine Antwort negative Bewertungen automatisch löscht",
+        "Weil das Gesetz eine Antwort innerhalb von 24 Stunden vorschreibt"
       ],
       "correctIndex": 0,
-      "explanation": "Wer auf Lob und Kritik freundlich reagiert, beweist Professionalität. Für Google ist die Antwort-Aktivität ein positives Vitalitäts-Signal."
+      "explanation": "Google nennt das Beantworten von Rezensionen auf seiner Hilfeseite zum lokalen Ranking. Und Neukunden lesen deine Antworten mit."
     },
     {
       "id": "gm_p16",
       "level": "profi",
       "question": "Was passiert, wenn ein Betrieb zwei Straßen weiter 30 Bewertungen hat und du nur 3?",
       "options": [
-        "Der Mitbewerber wird im Ranking bevorzugt und gewinnt bei Suchenden sofort den Vertrauensvorsprung",
+        "Der Mitbewerber hat bessere Chancen, oben zu stehen, und wirkt vertrauenswürdiger",
         "Google verteilt die Bewertungen beider Betriebe gleichmäßig",
         "Kunden rufen grundsätzlich den Betrieb mit weniger Bewertungen an"
       ],
       "correctIndex": 0,
-      "explanation": "Bewertungsanzahl und Frische sind entscheidende Ranking- und Psychologiefaktoren. 30 positive Stimmen schlagen 3 Stimmen fast immer."
+      "explanation": "Google schreibt selbst: Je mehr Rezensionen und positive Bewertungen, desto besser kann das Ranking ausfallen. Und wer beide Betriebe sieht, vergleicht."
     },
     {
       "id": "gm_p17",
@@ -343,12 +343,12 @@
       "level": "profi",
       "question": "Was passiert, wenn Fremde in einem unbestätigten Profil eine falsche Telefonnummer vorschlagen und niemand widerspricht?",
       "options": [
-        "Google übernimmt die Änderung nach einiger Zeit und Anrufe landen bei falschen Nummern",
+        "Die Änderung kann übernommen werden, und Anrufe landen bei der falschen Nummer",
         "Google ruft den Inhaber sofort auf dem Festnetz an",
-        "Fremde Vorschläge werden von Google prinzipiell ignoriert"
+        "Vorschläge von Fremden ignoriert Google grundsätzlich"
       ],
       "correctIndex": 0,
-      "explanation": "Bei offenen Profilen werden Nutzer-Änderungen nach Prüffristen oft übernommen. Schon landet der Anruf im Nirgendwo."
+      "explanation": "Solange niemand die Inhaberschaft bestätigt hat, ist das Profil offen. Fremde können Änderungen vorschlagen, und im schlimmsten Fall klingelt dann ein anderes Telefon."
     },
     {
       "id": "gm_p20",

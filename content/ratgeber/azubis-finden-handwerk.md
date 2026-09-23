@@ -3,6 +3,7 @@ title: "Azubis und Mitarbeiter finden: Warum die Anzeige im Wochenblatt niemande
 metaTitle: "Azubis finden: Warum Zeitungsanzeigen verpuffen"
 description: "Anzeige geschaltet, kein Anruf. Wo dein nächster Azubi wirklich sucht, was er über dich findet, und wie dein Betrieb auf dem Handy für Bewerber aussieht."
 date: "2026-09-22"
+updated: "2026-09-23"
 category: "Mitarbeiter finden"
 tags: [Azubis, Mitarbeiter, Karriereseite, Handwerk, Wesel]
 image: "/images/ratgeber/azubis-finden-handwerk.webp"
@@ -52,7 +53,7 @@ Früher hat sich der Betrieb den Azubi ausgesucht. Heute ist es andersherum, und
 | 18 % | aller betrieblich gemeldeten Ausbildungsstellen im Handwerk fanden niemanden |
 | 93 | Bewerber kamen rechnerisch auf 100 gemeldete betriebliche Stellen |
 
-Knapp jede fünfte Lehrstelle im Handwerk blieb leer, rund 19.000 Plätze. Gleichzeitig standen 40.000 Bewerber am Ende ohne Ausbildungsplatz da. Es fehlt also an beidem: an jungen Leuten und daran, dass sie und die Betriebe überhaupt voneinander erfahren.
+Knapp jede fünfte Lehrstelle im Handwerk blieb leer, rund 19.000 Plätze. Gleichzeitig standen 40.000 Bewerber am Ende ohne Ausbildungsplatz da. Es fehlen also junge Leute, und die, die es gibt, finden oft nicht zu den Betrieben, die sie suchen.
 
 Du konkurrierst damit um jeden Bewerber mit dem Betrieb zwei Orte weiter. Und der Vergleich findet auf dem Handy statt.
 
@@ -62,21 +63,21 @@ Er tippt deinen Betriebsnamen ein. Das machen auch die Eltern, und zwar gründli
 
 ### Er findet nichts
 
-Kein Eintrag, keine Seite. Für einen Erwachsenen heißt das „die machen wohl kein Internet". Für einen Sechzehnjährigen heißt es, dass es den Betrieb vermutlich nicht mehr gibt.
+Kein Eintrag, keine Seite. Ein Erwachsener denkt: „Die machen wohl kein Internet.“ Ein Sechzehnjähriger denkt, dass es den Betrieb vermutlich nicht mehr gibt.
 
 ### Er findet eine Seite von 2014
 
-Drei Schriftarten, ein Besucherzähler, die letzte Neuigkeit von der Weihnachtsfeier vor acht Jahren. Die Seite sagt nichts über die Arbeit und viel über den Umgang mit Dingen, die liegen bleiben.
+Drei Schriftarten, ein Besucherzähler, als letzte Neuigkeit die Weihnachtsfeier von 2016. Die Seite sagt nichts über die Arbeit und viel über den Umgang mit Dingen, die liegen bleiben.
 
 ### Er findet dein Google-Profil
 
-Darin zwei Bewertungen, davon eine von einem verärgerten Ex-Mitarbeiter, unbeantwortet seit zwei Jahren. Was dort steht, liest er als Auskunft darüber, wie es sich bei dir arbeitet.
+Darin zwei Bewertungen, davon eine von einem verärgerten Ex-Mitarbeiter, unbeantwortet seit zwei Jahren. Was dort steht, liest er als Auskunft darüber, wie es sich bei dir arbeitet. Seine Eltern auch. Eine sachliche Antwort von dir unter der Kritik ändert dieses Bild mehr als jede Stellenanzeige.
 
 Wie du prüfst, was Google über dich ausgibt, steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden). Die häufigsten Schwachstellen der Website selbst stehen in [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe).
 
 ## Was auf eine Karriereseite gehört
 
-Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jeder Bewerber stellt und die kaum ein Betrieb beantwortet.
+Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jeder Bewerber stellt und die auf vielen Betriebsseiten offenbleiben.
 
 ::karten: Vier Fragen, die vor der Bewerbung im Kopf des Bewerbers stehen.::
 
@@ -84,16 +85,16 @@ Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jede
 | --- | --- |
 | Wer ist der Chef? | Ein Foto von dir und drei Sätze in deinen Worten. Er will den Menschen sehen, bei dem er anfängt |
 | Wie läuft ein Tag ab? | Wann Arbeitsbeginn ist, womit angefangen wird, wie viele im Team sind, was Feierabend heißt |
-| Was verdient man? | Eine Zahl oder eine Spanne. Wer sie weglässt, wird auf den niedrigsten Wert geschätzt |
+| Was verdient man? | Eine Zahl oder eine Spanne, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, rechnet der Bewerber mit dem Schlechtesten |
 | Wie bewirbt man sich? | Ein Weg, ein Klick, eine Antwortzeit, die du auch einhältst |
 
-Der Unterschied zu „Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten" ist, dass diese vier Antworten überprüfbar sind. Fotos von deiner Werkstatt, deinen Fahrzeugen und deinen Leuten machen den Rest. Ein Betrieb, den man sieht, wirkt anders als einer, der nur behauptet.
+Der Unterschied zu „Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ ist, dass diese vier Antworten überprüfbar sind. Fotos von deiner Werkstatt, deinen Fahrzeugen und deinen Leuten machen den Rest. Ein Betrieb, den man sieht, wirkt anders als einer, der nur behauptet.
 
 ## Die Bewerbungshürde
 
 Ein Sechzehnjähriger schreibt kein Anschreiben als PDF. Er hat keinen Drucker, keinen Briefumschlag und keine Lust, ein Formular mit vierzehn Pflichtfeldern auszufüllen.
 
-Was funktioniert, ist eine Nachricht bei WhatsApp mit Namen und einem Satz dazu, warum er anruft. Danach meldest du dich zurück. Wer die Hürde oben lässt, bekommt am Ende genau die Bewerbungen, die andernorts schon durchgefallen sind.
+Was er schreibt, ist eine Nachricht bei WhatsApp mit seinem Namen und einem Satz dazu, warum er sich meldet. Danach rufst du zurück. Wer die Hürde hoch lässt, verliert genau die Jugendlichen, die sich spontan gemeldet hätten.
 
 Dasselbe gilt für Gesellen. Wer sich mit 34 und festem Job umschaut, tut das abends auf dem Sofa am Handy. Er lädt keinen Lebenslauf hoch. Er schreibt zwei Sätze, wenn er kann.
 
@@ -101,19 +102,19 @@ Dasselbe gilt für Gesellen. Wer sich mit 34 und festem Job umschaut, tut das ab
 
 Nimm dein Handy und geh die Punkte durch, so wie es ein Bewerber tun würde.
 
-* Findest du bei deinem Betriebsnamen plus „Ausbildung" überhaupt etwas von dir?
+* Findest du bei deinem Betriebsnamen plus „Ausbildung“ überhaupt etwas von dir?
 * Hat deine Website eine Seite, auf der offene Stellen stehen?
-* Steht dort ein Foto von dir und deinen Leuten, oder ein gekauftes Bild?
+* Steht dort ein echtes Foto von dir und deinen Leuten?
 * Steht dort, was man verdient?
 * Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?
-* Wie alt ist die letzte Änderung auf deiner Seite?
-* Was steht in deinen Google-Bewertungen über die Arbeit bei dir?
+* Ist die letzte Änderung auf deiner Seite jünger als ein Jahr?
+* Hast du auf kritische Google-Bewertungen geantwortet, gerade auf die von ehemaligen Mitarbeitern?
 
 Jedes Nein ist ein Grund, warum ein Bewerber, der dich fast gefragt hätte, es dann doch gelassen hat.
 
 ## Wenn du das angehen willst
 
-Eine Karriereseite ist oft der Anlass, überhaupt mit einer Website anzufangen. Sie rechnet sich anders als eine Seite für Neukunden: Eine unbesetzte Stelle kostet dich jeden Monat Umsatz, den du nicht abarbeiten kannst.
+Eine Karriereseite kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Sie rechnet sich anders als eine Seite für Neukunden. Eine unbesetzte Stelle heißt: Aufträge schieben, Kunden vertrösten, Überstunden für den Rest vom Team. Das kostet dich jeden Monat Umsatz, auch wenn es auf keiner Rechnung steht.
 
 Bei Firmenflow baue ich die Seite auf, schreibe die Texte und komme auf Wunsch für die Fotos zu dir in den Betrieb. Ein Onepager startet bei 690 Euro netto, ein Fototermin liegt bei 350 Euro. Hosting und Änderungen kosten 39 Euro im Monat, monatlich kündbar.
 
