@@ -168,7 +168,7 @@ export function CookieConsent() {
                 id={descId}
                 className="text-[11px] sm:text-xs text-[var(--color-muted)] leading-relaxed"
               >
-                Wir nutzen essenzielle Cookies für den Betrieb der Website sowie – mit deiner Einwilligung – Google Analytics zur Optimierung. Du kannst deine Auswahl jederzeit anpassen. Details in unserer{" "}
+                Wir nutzen essenzielle Cookies für den Betrieb der Website sowie, mit deiner Einwilligung, Google Analytics zur Optimierung. Du kannst deine Auswahl jederzeit anpassen. Details in unserer{" "}
                 <Link
                   href="/datenschutz"
                   className="underline font-medium text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors"

@@ -354,7 +354,7 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
             <div className="rounded-3xl bg-white border border-[var(--color-line)] p-6 sm:p-8 space-y-3 shadow-sm text-left">
               <h3 className="text-lg sm:text-xl font-display font-bold text-[var(--color-ink)] text-center">
                 {scorePercent >= 80
-                  ? "🏆 Hervorragend – Digitaler Meisterbetrieb!"
+                  ? "🏆 Hervorragend: Digitaler Meisterbetrieb!"
                   : scorePercent >= 50
                   ? "📈 Solide Basis mit spürbarem Neukunden-Potenzial"
                   : "💡 Hier liegt bares Geld auf der Straße"}

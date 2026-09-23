@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Über Manu: fast zehn Jahre Betrieb, jetzt Websites | Firmenflow",
     description:
-      "Warum ich vom eigenen Betrieb zu Websites für lokale Unternehmen gewechselt bin – und was das für dich bedeutet.",
+      "Warum ich vom eigenen Betrieb zu Websites für lokale Unternehmen gewechselt bin und was das für dich bedeutet.",
     url: "/ueber-manu",
     locale: "de_DE",
     type: "profile",
@@ -125,7 +125,7 @@ export default function UeberManuPage() {
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
               Manuel Landeck, Wesel und Niederrhein. Ich mache Websites und Google-Profile
-              für kleine Betriebe – und weiß aus eigener Erfahrung, wie so ein Betrieb läuft.
+              für kleine Betriebe und weiß aus eigener Erfahrung, wie so ein Betrieb läuft.
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function UeberManuPage() {
             </p>
             <p>
               Den Ausschlag gab aber etwas anderes. Durch die Arbeit hatte ich ständig mit
-              Unternehmern zu tun – Lieferanten, Partner, Betriebe nebenan. Und mir ist immer
+              Unternehmern zu tun: Lieferanten, Partner, Betriebe nebenan. Und mir ist immer
               wieder dasselbe aufgefallen: Da stecken Leute seit Jahren Arbeit in ihren Betrieb,
               und im Netz findet man sie kaum. Keine Website oder eine von vor zehn Jahren.
               Ein Google-Profil, das seit der Eröffnung niemand angefasst hat.
@@ -213,12 +213,12 @@ export default function UeberManuPage() {
             {([
               {
                 title: "Das erste Gespräch kostet nichts",
-                body: "Etwa 30 Minuten, am Telefon oder bei einem Kaffee. Danach weißt du, was sinnvoll wäre und was es kostet. Natürlich kannst du es auch selbst versuchen – aber rechne ehrlich: Wochen an Abenden und Wochenenden, dazu Baukasten-Look und halbfertige Texte. Die meisten kommen nach so einem Versuch zu mir, nur mit weniger Geduld und mehr Frust im Gepäck.",
+                body: "Etwa 30 Minuten, am Telefon oder bei einem Kaffee. Danach weißt du, was sinnvoll wäre und was es kostet. Natürlich kannst du es auch selbst versuchen. Aber rechne ehrlich: Wochen an Abenden und Wochenenden, dazu Baukasten-Look und halbfertige Texte. Die meisten kommen nach so einem Versuch zu mir, nur mit weniger Geduld und mehr Frust im Gepäck.",
                 iconName: "kennenlernen" as const,
               },
               {
                 title: "Monatlich kündbar",
-                body: "Keine Mindestlaufzeit, keine zwölf Monate. Du wirst merken, wie viel dir abgenommen wird – Hosting, Updates, kleine Änderungen per kurzer Nachricht. Die meisten fragen sich nach ein paar Wochen eher, warum sie das nicht schon früher abgegeben haben.",
+                body: "Keine Mindestlaufzeit, keine zwölf Monate. Du wirst merken, wie viel dir abgenommen wird: Hosting, Updates, kleine Änderungen per kurzer Nachricht. Die meisten fragen sich nach ein paar Wochen eher, warum sie das nicht schon früher abgegeben haben.",
                 iconName: "monatlich-kuendbar" as const,
               },
               {
@@ -256,7 +256,7 @@ export default function UeberManuPage() {
           </h2>
           <ul className="space-y-3 text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
             <li className="flex gap-3">
-              <span className="text-[var(--color-coral)] font-bold shrink-0">—</span>
+              <span className="text-[var(--color-coral)] font-bold shrink-0" aria-hidden="true">×</span>
               <span>
                 <strong className="text-[var(--color-ink)]">Keine Ranking-Garantien.</strong>{" "}
                 Wer dir Platz eins bei Google verspricht, weiß es entweder nicht besser oder
@@ -264,24 +264,24 @@ export default function UeberManuPage() {
               </span>
             </li>
             <li className="flex gap-3">
-              <span className="text-[var(--color-coral)] font-bold shrink-0">—</span>
+              <span className="text-[var(--color-coral)] font-bold shrink-0" aria-hidden="true">×</span>
               <span>
                 <strong className="text-[var(--color-ink)]">Keine gekauften Bewertungen.</strong>{" "}
                 Das verstößt gegen Googles Richtlinien und fliegt früher oder später auf.
               </span>
             </li>
             <li className="flex gap-3">
-              <span className="text-[var(--color-coral)] font-bold shrink-0">—</span>
+              <span className="text-[var(--color-coral)] font-bold shrink-0" aria-hidden="true">×</span>
               <span>
                 <strong className="text-[var(--color-ink)]">Keine Jahresverträge.</strong>{" "}
                 Wenn die Arbeit gut ist, brauche ich keine Laufzeit, die dich festhält.
               </span>
             </li>
             <li className="flex gap-3">
-              <span className="text-[var(--color-coral)] font-bold shrink-0">—</span>
+              <span className="text-[var(--color-coral)] font-bold shrink-0" aria-hidden="true">×</span>
               <span>
                 <strong className="text-[var(--color-ink)]">Keine Projekte, die ich nicht kann.</strong>{" "}
-                Große Portale oder Schnittstellen zu Warenwirtschaft – dafür sage ich
+                Große Portale oder Schnittstellen zu Warenwirtschaft? Dafür sage ich
                 dir lieber, wen du fragen solltest.
               </span>
             </li>
@@ -296,7 +296,7 @@ export default function UeberManuPage() {
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
             Womit ich täglich arbeite, gebe ich weiter: FlowScreen ist mein kostenloses
             Screenshot-Tool für Windows. Screenshots machen, Mockups bauen, sensible
-            Stellen verpixeln – alles lokal auf deinem Rechner, ohne Cloud.
+            Stellen verpixeln, alles lokal auf deinem Rechner, ohne Cloud.
           </p>
           <div className="pt-1">
             <FirmenflowButton
@@ -315,7 +315,7 @@ export default function UeberManuPage() {
             Lass uns kurz sprechen.
           </h2>
           <p className="text-base sm:text-lg text-white/85 max-w-xl mx-auto leading-relaxed">
-            Erzähl mir, was du vorhast. Ich sage dir ehrlich, ob ich der Richtige dafür bin –
+            Erzähl mir, was du vorhast. Ich sage dir ehrlich, ob ich der Richtige dafür bin,
             und wenn nicht, auch das.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">

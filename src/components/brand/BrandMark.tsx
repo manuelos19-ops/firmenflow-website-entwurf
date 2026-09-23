@@ -30,7 +30,7 @@ export function BrandMark({
   return (
     <Link 
       href="/" 
-      aria-label="Firmenflow – für deine Lokalpräsenz" 
+      aria-label="Firmenflow, für deine Lokalpräsenz" 
       className={cn("inline-flex items-center group focus-visible:outline-none select-none", className)}
     >
       <div className={cn(
@@ -40,7 +40,7 @@ export function BrandMark({
       )}>
         <Image
           src={logoSrc}
-          alt="Firmenflow – für deine Lokalpräsenz."
+          alt="Firmenflow, für deine Lokalpräsenz."
           fill
           priority
           className="object-contain object-left"

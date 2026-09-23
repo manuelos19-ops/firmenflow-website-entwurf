@@ -27,7 +27,7 @@ const storySteps: StoryStep[] = [
     number: "01",
     tag: "01 · Typische Ausgangslage",
     tagVariant: "problem",
-    title: "Gute Arbeit vor Ort – aber online unvollständig oder veraltet.",
+    title: "Gute Arbeit vor Ort, aber online unvollständig oder veraltet.",
     body: "Der Betrieb läuft oft über Empfehlungen, doch wer online nach Öffnungszeiten oder Leistungen sucht, findet veraltete Angaben oder eine Seite, die auf dem Smartphone kaum lesbar ist.",
     image: "/media/story/story-1-unsichtbar.webp",
     imageAlt: "Illustration: Beispielhafte Szene eines Betriebs mit veralteter Online-Präsenz",
@@ -121,7 +121,7 @@ export function StorySection() {
             So wird aus einem veralteten Auftritt ein starker digitaler erster Eindruck.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Wie Website, authentische Fotos und dein Google-Profil in der Praxis zusammenspielen – ehrlich, nachvollziehbar und ohne Agenturtheater.
+            Wie Website, authentische Fotos und dein Google-Profil in der Praxis zusammenspielen: ehrlich, nachvollziehbar und ohne Agenturtheater.
           </p>
         </div>
 
@@ -219,7 +219,7 @@ export function StorySection() {
               Passt das zu deinem Betrieb? Frag einfach nach.
             </p>
             <p className="text-xs sm:text-sm text-[var(--color-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
-              Schick mir deine Seite oder deinen Google-Eintrag per WhatsApp – ich sage dir ehrlich, ob sich etwas lohnt und was es kosten würde. Dauert keine zwei Minuten.
+              Schick mir deine Seite oder deinen Google-Eintrag per WhatsApp. Ich sage dir ehrlich, ob sich etwas lohnt und was es kosten würde. Dauert keine zwei Minuten.
             </p>
 
             <div className="inline-block">

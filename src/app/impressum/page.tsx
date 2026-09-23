@@ -6,7 +6,7 @@ import { legalContent } from "@/content/legal";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von Firmenflow – Manuel Landeck.",
+  description: "Impressum von Firmenflow, Manuel Landeck.",
   alternates: {
     canonical: "/impressum",
   },
@@ -34,7 +34,7 @@ export default function ImpressumPage() {
             <p>
               {legalContent.legalName}
               <br />
-              Firmenflow – Webdesign
+              Firmenflow (Webdesign)
               <br />
               {legalContent.street}
               <br />
@@ -43,7 +43,7 @@ export default function ImpressumPage() {
             <div className="p-4 rounded-xl bg-[var(--color-paper)] border border-[var(--color-line)] text-xs sm:text-sm text-[var(--color-ink)] flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-[var(--color-coral)] shrink-0 mt-0.5" />
               <span>
-                <strong>Neuer Firmensitz:</strong> Rosenheimshof 8, 46485 Wesel – mitten im Servicegebiet. Persönliche Vor-Ort-Betreuung und Termine für Kunden direkt in Wesel, Dinslaken, Voerde, Moers und im gesamten Raum Niederrhein.
+                <strong>Neuer Firmensitz:</strong> Rosenheimshof 8, 46485 Wesel, mitten im Servicegebiet. Persönliche Vor-Ort-Betreuung und Termine für Kunden direkt in Wesel, Dinslaken, Voerde, Moers und im gesamten Raum Niederrhein.
               </span>
             </div>
           </section>

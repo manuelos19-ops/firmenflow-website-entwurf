@@ -167,7 +167,7 @@ export function GoogleBusinessPilot() {
             </div>
 
             <div className="p-3.5 rounded-2xl bg-gray-50 border border-gray-100 text-xs text-gray-700 italic">
-              „Google-Bewertungen sind mehr als Marketing – sie sind dein direkter Blick in die echte Zufriedenheit deiner Kunden.“
+              „Google-Bewertungen sind mehr als Marketing. Sie sind dein direkter Blick in die echte Zufriedenheit deiner Kunden.“
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export function GoogleBusinessPilot() {
                 <FirmenflowIcon name="bewertungen-beantworten" size={56} decorative className="mb-4" />
                 <h3 className="text-lg font-bold font-sans text-white mb-2">2. Bewertungen beantworten</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                  Jede neue Bewertung bekommt eine Antwort in deinem Ton – auch die unangenehmen. Dazu ein Ablauf, mit dem zufriedene Kunden überhaupt erst eine schreiben.
+                  Jede neue Bewertung bekommt eine Antwort in deinem Ton, auch die unangenehmen. Dazu ein Ablauf, mit dem zufriedene Kunden überhaupt erst eine schreiben.
                 </p>
               </div>
             </div>

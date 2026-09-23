@@ -30,7 +30,7 @@ const FAQ_ENTRIES = [
   {
     question: "Was ist der Unterschied zwischen Installer und Portable?",
     answer:
-      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und unterstützt automatische Updates. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick.",
+      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und unterstützt automatische Updates. Die Portable-Version läuft sofort ohne Installation, perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick.",
   },
   {
     question: "Läuft FlowScreen auch unter Windows 10?",
@@ -40,7 +40,7 @@ const FAQ_ENTRIES = [
   {
     question: "Brauche ich Administratorrechte für die Installation?",
     answer:
-      "Für die Portable-Version nicht – einfach herunterladen und starten. Nur die Setup-Version mit Startmenü-Eintrag und Drucktasten-Integration kann je nach Firmenrichtlinie Admin-Rechte erfordern.",
+      "Für die Portable-Version nicht. Einfach herunterladen und starten. Nur die Setup-Version mit Startmenü-Eintrag und Drucktasten-Integration kann je nach Firmenrichtlinie Admin-Rechte erfordern.",
   },
 ];
 

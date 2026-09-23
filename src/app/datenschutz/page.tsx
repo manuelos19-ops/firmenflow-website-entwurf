@@ -8,7 +8,7 @@ import { CookieSettingsButton } from "@/components/consent/CookieSettingsButton"
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
   description:
-    "Datenschutzerklärung von Firmenflow – Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme, Terminbuchung, Cookie-Einstellungen und Webanalyse (Google Analytics).",
+    "Datenschutzerklärung von Firmenflow: Informationen zur Verarbeitung deiner Daten bei Kontaktaufnahme, Terminbuchung, Cookie-Einstellungen und Webanalyse (Google Analytics).",
   alternates: {
     canonical: "/datenschutz",
   },
@@ -49,7 +49,7 @@ export default function DatenschutzPage() {
             <div className="p-4 rounded-xl bg-[var(--color-paper)] border border-[var(--color-line)] text-[var(--color-ink)]">
               <strong>{legalContent.legalName}</strong>
               <br />
-              Firmenflow – Webdesign &amp; Lokalpräsenz
+              Firmenflow (Webdesign &amp; Lokalpräsenz)
               <br />
               {legalContent.street}
               <br />
@@ -262,7 +262,7 @@ export default function DatenschutzPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-[var(--color-ink)]">10. Allgemeine Speicherdauer</h2>
             <p>
-              Deine personenbezogenen Daten verbleiben bei mir, bis der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Projektanfrage). Zwingende gesetzliche Bestimmungen – insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen (z. B. nach HGB oder AO bei erteilten Aufträgen) – bleiben unberührt. Nach Ablauf dieser Fristen werden die Daten routinemäßig und datenschutzkonform gelöscht.
+              Deine personenbezogenen Daten verbleiben bei mir, bis der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Projektanfrage). Zwingende gesetzliche Bestimmungen, insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen (z. B. nach HGB oder AO bei erteilten Aufträgen), bleiben unberührt. Nach Ablauf dieser Fristen werden die Daten routinemäßig und datenschutzkonform gelöscht.
             </p>
           </section>
 

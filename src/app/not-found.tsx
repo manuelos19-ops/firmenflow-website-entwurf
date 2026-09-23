@@ -14,7 +14,7 @@ export default function NotFound() {
             Hier ist der Flow kurz abgebogen.
           </h1>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
-            Die gesuchte Seite existiert leider nicht oder wurde verschoben. Kein Problem – hier kommst du direkt wieder auf den richtigen Pfad.
+            Die gesuchte Seite existiert leider nicht oder wurde verschoben. Kein Problem, hier kommst du direkt wieder auf den richtigen Pfad.
           </p>
         </div>
 

@@ -51,12 +51,12 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Was ist der Schnellmodus (Strg+M)?",
     answer:
-      "Der Schnellmodus ist neu in v1.2.0: Du ziehst mit dem Hotkey Strg+M eine Auswahl auf – und sie landet sofort als Datei auf der Festplatte, ganz ohne Editor. Ordner, Dateiname-Prefix, Format (PNG/JPEG) und Qualität stellst du einmalig im eigenen Schnellmodus-Tab ein. Ideal, wenn du viele Screenshots für Dokus oder Tickets brauchst.",
+      "Der Schnellmodus ist neu in v1.2.0: Du ziehst mit dem Hotkey Strg+M eine Auswahl auf, und sie landet sofort als Datei auf der Festplatte, ganz ohne Editor. Ordner, Dateiname-Prefix, Format (PNG/JPEG) und Qualität stellst du einmalig im eigenen Schnellmodus-Tab ein. Ideal, wenn du viele Screenshots für Dokus oder Tickets brauchst.",
   },
   {
     question: "Wie funktionieren die Updates?",
     answer:
-      "FlowScreen prüft max. 1x am Tag automatisch über unser öffentliches GitHub-Repository, ob eine neue Version da ist – auch ohne offenen Editor (Dialog + Tray-Hinweis). Die Installer-Version lädt das Update im Hintergrund und installiert es per Klick. Die Portable-Version kann sich nicht selbst ersetzen und verlinkt stattdessen auf die Download-Seite. Jedes Update lässt sich überspringen oder auf Später schieben; übersprungene Versionen holst du in den Einstellungen jederzeit zurück.",
+      "FlowScreen prüft max. 1x am Tag automatisch über unser öffentliches GitHub-Repository, ob eine neue Version da ist, auch ohne offenen Editor (Dialog + Tray-Hinweis). Die Installer-Version lädt das Update im Hintergrund und installiert es per Klick. Die Portable-Version kann sich nicht selbst ersetzen und verlinkt stattdessen auf die Download-Seite. Jedes Update lässt sich überspringen oder auf Später schieben; übersprungene Versionen holst du in den Einstellungen jederzeit zurück.",
   },
   {
     question: "Was bedeutet die Meldung beim ersten Start unter Windows?",
@@ -66,12 +66,12 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Was ist der Unterschied zwischen Installer und Portable?",
     answer:
-      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und installiert Updates automatisch per Klick. Die Portable-Version läuft sofort ohne Installation – perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick – und meldet neue Versionen mit Link auf die Download-Seite. Beide prüfen max. 1x am Tag und lassen sich Updates überspringen.",
+      "Die Installer-Version (Setup.exe) richtet FlowScreen mit Desktop- und Startmenü-Verknüpfung ein und installiert Updates automatisch per Klick. Die Portable-Version läuft sofort ohne Installation, perfekt für Firmen-Laptops ohne Admin-Rechte oder direkt vom USB-Stick und meldet neue Versionen mit Link auf die Download-Seite. Beide prüfen max. 1x am Tag und lassen sich Updates überspringen.",
   },
   {
     question: "Läuft FlowScreen auch unter Windows 10?",
     answer:
-      "Ja. FlowScreen läuft auf Windows 11 und Windows 10 (64-Bit). Für die Portable-Version brauchst du keine Administratorrechte – einfach herunterladen und starten.",
+      "Ja. FlowScreen läuft auf Windows 11 und Windows 10 (64-Bit). Für die Portable-Version brauchst du keine Administratorrechte. Einfach herunterladen und starten.",
   },
   {
     question: "Brauche ich Administratorrechte für die Installation?",
@@ -123,7 +123,7 @@ export function FlowscreenView() {
             Snipping Tool ist zu basic, ShareX für Einsteiger schnell überfordernd und Web-Tools laden deine
             Screenshots in fremde Clouds.{" "}
             <strong className="text-[var(--color-ink)] font-semibold">FlowScreen</strong> vereint blitzschnelle
-            Bildschirmfotos mit 1-Klick-Canvas-Mockups, automatischem Schrittzähler, DSGVO-Zensur und Vektor-Editor –{" "}
+            Bildschirmfotos mit 1-Klick-Canvas-Mockups, automatischem Schrittzähler, DSGVO-Zensur und Vektor-Editor,{" "}
             <span className="text-[var(--color-coral)] font-semibold">100 % lokal und kostenlos</span>.
           </p>
 
@@ -224,7 +224,7 @@ export function FlowscreenView() {
                 So sieht Arbeiten mit FlowScreen aus.
               </h2>
               <p className="text-base sm:text-lg text-[var(--color-muted)]">
-                Keine Stockfotos – echte Screenshots aus dem laufenden Editor.
+                Keine Stockfotos, echte Screenshots aus dem laufenden Editor.
               </p>
             </div>
 
@@ -250,7 +250,7 @@ export function FlowscreenView() {
                 <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                   Rechts das Mockup-Panel: <strong>Presets</strong> wie Social, Clean oder Phone,
                   dazu <strong>Browser- und Geräte-Rahmen</strong> (Safari, Chrome, iPhone,
-                  Android, Tablet). Hintergrund als Verlauf, eigene Farbe oder Bild – Feinschliff
+                  Android, Tablet). Hintergrund als Verlauf, eigene Farbe oder Bild. Feinschliff
                   über Padding, Ecken, Winkel und Schatten, optional mit 3D-Tilt.
                 </p>
               </div>
@@ -263,13 +263,13 @@ export function FlowscreenView() {
                   02 · Erklären &amp; Markieren
                 </p>
                 <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-[var(--color-ink)] leading-tight">
-                  Pfeile, Rahmen, Kreise – alles bleibt verschiebbar.
+                  Pfeile, Rahmen, Kreise: alles bleibt verschiebbar.
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                   Vektor statt Pixel: <strong>Pfeile</strong> zeigen wohin,{" "}
                   <strong>Rahmen</strong> fassen Wichtiges ein, <strong>Kreise</strong> heben
                   Details hervor. Dazu der <strong>Schrittzähler</strong> für nummerierte
-                  Anleitungen (1, 2, 3 …) – jedes Element lässt sich anklicken, verschieben und
+                  Anleitungen (1, 2, 3 …). Jedes Element lässt sich anklicken, verschieben und
                   umfärben, bis zum Export.
                 </p>
               </div>
@@ -306,7 +306,7 @@ export function FlowscreenView() {
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                   Unten die <strong>Zensur-Leiste</strong>: <strong>Mosaik</strong> (echtes
-                  Verpixeln), <strong>Blur</strong> oder <strong>Schwarz</strong> – Namen und
+                  Verpixeln), <strong>Blur</strong> oder <strong>Schwarz</strong>: Namen und
                   Kundendaten sind unwiderruflich weg, ideal für die DSGVO. Dazu{" "}
                   <strong>Textblöcke</strong> in allen Farben, Größen und Schriften.
                 </p>
@@ -365,7 +365,7 @@ export function FlowscreenView() {
                 ⚡ Schnellmodus: Strg+M
               </h3>
               <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                Auswahl aufziehen – <strong>sofort als Datei gespeichert</strong>, ganz ohne Editor.
+                Auswahl aufziehen, <strong>sofort als Datei gespeichert</strong>, ganz ohne Editor.
                 Eigener Ordner, Dateiname, PNG/JPEG. Perfekt für: schnell 20 Screenshots für Doku & Tickets,
                 ohne einen einzigen Klick zu viel.
               </p>
@@ -378,7 +378,7 @@ export function FlowscreenView() {
               </h3>
               <p className="text-sm text-[var(--color-muted)] leading-relaxed">
                 Klicke auf den Button, dann auf das Eingabefeld, dann auf Speichern. FlowScreen setzt automatisch
-                aufsteigende Nummernbubbles (1, 2, 3...) – ohne dass du jedes Mal die Zahl tippen musst.
+                aufsteigende Nummernbubbles (1, 2, 3 …), ohne dass du jedes Mal die Zahl tippen musst.
               </p>
             </div>
 
@@ -400,7 +400,7 @@ export function FlowscreenView() {
               </h3>
               <p className="text-sm text-[var(--color-muted)] leading-relaxed">
                 Keine festen Pixel-Striche: Pfeile, Rechtecke, Notizen und Text bleiben jederzeit anklickbar,
-                verschiebbar, skalierbar und farblich anpassbar – bis du final exportierst.
+                verschiebbar, skalierbar und farblich anpassbar, bis du final exportierst.
               </p>
             </div>
 

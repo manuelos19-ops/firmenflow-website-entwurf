@@ -102,7 +102,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               Kostenlose Video-Einschätzung für Website &amp; Google-Profil
             </h3>
             <p className="text-sm sm:text-base text-[var(--color-muted)] max-w-2xl leading-relaxed">
-              Trage einfach deine Webadresse oder den Namen deines Betriebs ein. Ich schaue mir deinen aktuellen Auftritt und dein Google-Unternehmensprofil persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Verbesserungsmöglichkeiten direkt ins Postfach – <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
+              Trage einfach deine Webadresse oder den Namen deines Betriebs ein. Ich schaue mir deinen aktuellen Auftritt und dein Google-Unternehmensprofil persönlich an und sende dir eine ehrliche 3- bis 5-minütige Video-Einschätzung mit konkreten Verbesserungsmöglichkeiten direkt ins Postfach, <strong>unkompliziert, ohne Termin und ohne langes Vorgespräch.</strong>
             </p>
           </div>
 
@@ -256,7 +256,7 @@ export function WebsiteCheckInquiry({ className }: WebsiteCheckInquiryProps) {
               disabled={isSubmitting}
               buttonIcon="video-einschaetzung"
               size="compact"
-              subline={isSubmitting ? "Bitte kurz warten" : "3–5 Minuten · per E-Mail"}
+              subline={isSubmitting ? "Bitte kurz warten" : "3 bis 5 Minuten · per E-Mail"}
               label={isSubmitting ? "Video-Anfrage wird verarbeitet" : "Kostenlose Video-Einschätzung anfordern"}
               className="w-full"
             >

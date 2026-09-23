@@ -314,7 +314,7 @@ export function ServiceOverview() {
                     Festpreis vorher. Texte inklusive.
                   </h4>
                   <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                    Du weißt vor dem Start, was es kostet. Texte, Layout und auf Wunsch die Fotos kommen von mir – du musst nichts vorbereiten.
+                    Du weißt vor dem Start, was es kostet. Texte, Layout und auf Wunsch die Fotos kommen von mir. Du musst nichts vorbereiten.
                   </p>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export function ServiceOverview() {
                     Gefällt-mir-Garantie
                   </h4>
                   <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                    Wenn der Entwurf auf deinem Handy nicht genau so aussieht, wie du dir deinen Betrieb vorstellst, passen wir ihn an. Erst wenn du zu 100 % nickst, geht die Seite live – und keinen Tag früher. Ohne Zusatzkosten.
+                    Wenn der Entwurf auf deinem Handy nicht genau so aussieht, wie du dir deinen Betrieb vorstellst, passen wir ihn an. Erst wenn du zu 100 % nickst, geht die Seite live, und keinen Tag früher. Ohne Zusatzkosten.
                   </p>
                 </div>
               </div>

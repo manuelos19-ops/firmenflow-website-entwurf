@@ -25,13 +25,13 @@ export async function generateMetadata({
   const kindLabel = project.badge;
 
   return {
-    title: `${project.name} – ${kindLabel}`,
+    title: `${project.name}: ${kindLabel}`,
     description: project.summary,
     alternates: {
       canonical: `/projekte/${project.slug}`,
     },
     openGraph: {
-      title: `${project.name} – ${kindLabel} | Firmenflow`,
+      title: `${project.name}: ${kindLabel} | Firmenflow`,
       description: project.summary,
       // Kein eigenes OG-Bild: die Projektbilder sind Handy-Screenshots im
       // Hochformat und wuerden in der 1200x630-Vorschau beschnitten. Ohne
@@ -81,8 +81,8 @@ export default async function ProjectPage({
     "@type": "CreativeWork",
     "@id": `${baseUrl}/projekte/${project.slug}#detail`,
     url: `${baseUrl}/projekte/${project.slug}`,
-    name: `${project.name} – Webdesign & Lokalpräsenz`,
-    headline: `${project.name} – ${project.badge}`,
+    name: `${project.name}: Webdesign & Lokalpräsenz`,
+    headline: `${project.name}: ${project.badge}`,
     description: project.summary,
     image: `${baseUrl}${project.image}`,
     inLanguage: "de-DE",
@@ -168,7 +168,7 @@ export default async function ProjectPage({
             <FirmenflowIcon name="referenzen-portfolio" size={28} decorative />
             <div className="space-y-2">
               <h2 className="font-bold text-base sm:text-lg text-[var(--color-ink)]">
-                Konzeptentwurf – kein realer Kundenauftrag
+                Konzeptentwurf, kein realer Kundenauftrag
               </h2>
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
                 &bdquo;{project.name}&ldquo; ist ein von mir frei gestalteter Entwurf, um zu zeigen,

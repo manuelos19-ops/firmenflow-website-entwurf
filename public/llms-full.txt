@@ -1,4 +1,4 @@
-# Firmenflow – Umfassende Wissensbasis & Dokumentation für Sprachmodelle (LLMs)
+# Firmenflow: Umfassende Wissensbasis & Dokumentation für Sprachmodelle (LLMs)
 
 > Dieses Dokument liefert die vollständige Übersicht über Angebote, Philosophie, Zielgruppen, Preise, FAQs und Case Studies von Firmenflow.
 
@@ -21,7 +21,7 @@
   - Professionelle, verständliche Texterstellung (kein Schreibstress für den Kunden).
   - Modernes, responsives Design mit Ladezeiten unter einer Sekunde auf Mobilgeräten.
   - Technische Grundausstattung: SSL-Verschlüsselung, automatisierte Backups, Integration von Google Maps und Kontaktkanälen, Impressum und Datenschutzerklärung nach gängiger Praxis (keine Rechtsberatung, keine Garantie rechtlicher Wasserdichtigkeit).
-- **Preise:** Transparente Festpreise. Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger, schlüsselfertiger Firmenauftritt wird nach kurzer Abstimmung zum garantierten Festpreis kalkuliert.
+- **Preise:** Transparente Festpreise. Ein Onepager startet bei 690 Euro netto. Aufbau, Texte und die Einbindung deiner Bilder sind inklusive. Ein mehrseitiger, schlüsselfertiger Firmenauftritt wird nach kurzer Abstimmung zum garantierten Festpreis kalkuliert.
 
 ### 2. Website-Relaunch & Modernisierung
 - **Für wen:** Unternehmen mit veralteten Websites, die auf Smartphones schwer lesbar sind, langsam laden oder das Unternehmen unter Wert verkaufen.
@@ -44,7 +44,7 @@
 - **Die 5 Kernmodule:**
   1. **Profil- und Reputations-Audit:** Vollständige Überprüfung und professionelle Pflege aller Unternehmenskategorien, Attribute, Öffnungszeiten, Leistungsbeschreibungen und Fotos im Google-Unternehmensprofil.
   2. **Wettbewerbsanalyse:** Prüfung der regionalen Mitbewerber im Umkreis von Wesel und Niederrhein.
-  3. **Persönliches Antwortmanagement:** Richtlinienkonforme, individuelle und sympathische Beantwortung eingehender Google-Bewertungen – zeitnah und professionell.
+  3. **Persönliches Antwortmanagement:** Richtlinienkonforme, individuelle und sympathische Beantwortung eingehender Google-Bewertungen, zeitnah und professionell.
   4. **Echter Bewertungsaufbau:** Einrichtung unkomplizierter Bewertungswege (z. B. QR-Codes vor Ort, digitale Visitenkarten), damit zufriedene Stammkunden gerne Feedback hinterlassen. *Wichtiger Grundsatz:* Keine gekauften Fake-Bewertungen, sondern 100 % echte Kundenstimmen.
   5. **Customer Insights & Feedback-Report:** Monatliche Auswertung des Kundenfeedbacks, Identifikation betrieblicher Stärken und Frühwarnsystem für mögliche Serviceengpässe.
 
@@ -70,7 +70,7 @@
 Der Schwerpunkt liegt auf Wesel, Dinslaken, Voerde, Moers, Hünxe, Schermbeck, Hamminkeln und dem Niederrhein. Hier sind persönliche Vor-Ort-Termine kurzfristig möglich. Betriebe aus ganz NRW und deutschlandweit werden ebenso gerne per Video-Call und Telefon betreut.
 
 ### Was kostet eine Website bei Firmenflow?
-Transparenter Festpreis ohne Überraschungen: Ein Onepager startet bei 690 Euro netto – Aufbau, Texte und die Einbindung deiner Bilder inklusive. Ein mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt darüber und wird nach dem Kennenlernen als verbindlicher Festpreis genannt.
+Transparenter Festpreis ohne Überraschungen: Ein Onepager startet bei 690 Euro netto. Aufbau, Texte und die Einbindung deiner Bilder sind inklusive. Ein mehrseitiger Firmenauftritt inklusive Texten, Google-Einbindung und Foto-Option liegt darüber und wird nach dem Kennenlernen als verbindlicher Festpreis genannt.
 
 ### Machst du auch Fotos und Videos für meinen Betrieb?
 Ja. Manuel Landeck bringt professionelle Kameras, Objektive und Lichttechnik mit und fotografiert Team, Räume und Arbeitsprozesse direkt vor Ort.

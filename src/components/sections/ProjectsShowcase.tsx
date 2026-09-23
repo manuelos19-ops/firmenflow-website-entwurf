@@ -200,10 +200,10 @@ export function ProjectsShowcase() {
             <span>Projekte</span>
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-[var(--color-ink)] leading-[1.08] mb-4 sm:mb-5">
-            Schau dir an, was ich baue – live zum Anklicken.
+            Schau dir an, was ich baue, live zum Anklicken.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-            Drei davon sind echte, öffentlich erreichbare Websites. Zwei sind freie Entwürfe für Branchen, für die ich noch keinen Kunden hatte – klar gekennzeichnet, damit du weißt, was du siehst. Klick dich einfach durch.
+            Drei davon sind echte, öffentlich erreichbare Websites. Zwei sind freie Entwürfe für Branchen, für die ich noch keinen Kunden hatte, klar gekennzeichnet, damit du weißt, was du siehst. Klick dich einfach durch.
           </p>
         </div>
 

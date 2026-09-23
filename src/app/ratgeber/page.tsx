@@ -9,14 +9,14 @@ import { getSiteUrl } from "@/lib/site-url";
 import { RatgeberHub } from "@/components/ratgeber/RatgeberHub";
 
 export const metadata: Metadata = {
-  title: "Ratgeber – Praxiswissen für lokale Betriebe in Wesel & NRW",
+  title: "Ratgeber: Praxiswissen für lokale Betriebe in Wesel & NRW",
   description:
     "Der Firmenflow-Ratgeber: verständliches Praxiswissen zu Website, Google-Profil und Anfragen für lokale Betriebe. Persönlich mit Manu, ohne Agenturtheater.",
   alternates: {
     canonical: "/ratgeber",
   },
   openGraph: {
-    title: "Firmenflow Ratgeber – Praxiswissen für lokale Betriebe | Firmenflow",
+    title: "Firmenflow Ratgeber: Praxiswissen für lokale Betriebe | Firmenflow",
     description:
       "Verständliches Praxiswissen zu Website, Google-Profil und Anfragen. Persönlich mit Manu aus Wesel.",
     url: "/ratgeber",
@@ -29,12 +29,12 @@ const themen = [
   {
     icon: "neue-website",
     title: "Website & Vertrauen",
-    body: "Was deine Website über deinen Betrieb erzählt, bevor du ein Wort gesagt hast – und woran Besucher merken, ob sie dir vertrauen können.",
+    body: "Was deine Website über deinen Betrieb erzählt, bevor du ein Wort gesagt hast, und woran Besucher merken, ob sie dir vertrauen können.",
   },
   {
     icon: "unternehmensprofil",
     title: "Google-Profil & Bewertungen",
-    body: "Wie dein Google-Auftritt wirkt, wenn jemand dich zum ersten Mal sucht – und was du selbst aktuell halten kannst.",
+    body: "Wie dein Google-Auftritt wirkt, wenn jemand dich zum ersten Mal sucht, und was du selbst aktuell halten kannst.",
   },
   {
     icon: "mehr-anfragen",

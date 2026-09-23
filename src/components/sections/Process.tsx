@@ -117,7 +117,7 @@ export function Process() {
             Der Weg zu deiner neuen Website.
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed">
-            Kein Warten auf Rückmeldungen aus einer Agentur. Jeder Schritt geht über meinen Tisch – deshalb geht es schnell.
+            Kein Warten auf Rückmeldungen aus einer Agentur. Jeder Schritt geht über meinen Tisch, deshalb geht es schnell.
           </p>
         </div>
 

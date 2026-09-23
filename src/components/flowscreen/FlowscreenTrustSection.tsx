@@ -21,7 +21,7 @@ export function FlowscreenTrustSection() {
         <FlowscreenIcon name="lokal-ohne-cloud" size={40} decorative />
         <div>
           <h3 className="text-lg sm:text-xl font-bold text-[var(--color-ink)]">
-            Geprüft sauber – verifiziere es selbst
+            Geprüft sauber: verifiziere es selbst
           </h3>
           <p className="text-xs sm:text-sm text-[var(--color-muted)]">
             Offizielle SHA256-Hashes · v{FLOWSCREEN_VERSION}
@@ -75,7 +75,7 @@ export function FlowscreenTrustSection() {
       </ul>
 
       <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-        Von mir geprüft und virenfrei – lade einfach herunter und lege los.
+        Von mir geprüft und virenfrei. Lade einfach herunter und lege los.
       </p>
     </div>
   );

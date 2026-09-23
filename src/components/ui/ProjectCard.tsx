@@ -63,7 +63,7 @@ export function ProjectCard({
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors"
-              aria-label={`${project.name} – Live-Website ansehen (öffnet in neuem Tab)`}
+              aria-label={`${project.name}: Live-Website ansehen (öffnet in neuem Tab)`}
             >
               <span>Website besuchen</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -75,7 +75,7 @@ export function ProjectCard({
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm font-bold text-[var(--color-plum)] hover:text-[var(--color-coral)] transition-colors"
-            aria-label={`${project.name} – Entwurfsvorschau ansehen (öffnet in neuem Tab)`}
+            aria-label={`${project.name}: Entwurfsvorschau ansehen (öffnet in neuem Tab)`}
           >
             <span>Vorschau ansehen</span>
             <ArrowUpRight className="w-4 h-4" />

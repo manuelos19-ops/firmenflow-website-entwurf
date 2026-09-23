@@ -77,7 +77,7 @@ export function FlowscreenFounderQuote() {
               >
                 <Image
                   src="/media/portraits/manu-flowscreen-quote.jpg"
-                  alt="Manuel Landeck – Entwickler von FlowScreen"
+                  alt="Manuel Landeck, Entwickler von FlowScreen"
                   fill
                   sizes="(max-width: 768px) 192px, 230px"
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -126,7 +126,7 @@ export function FlowscreenFounderQuote() {
                 „Ganz ehrlich: Ich habe ewig nach einem Screenshot-Tool für Windows gesucht, das nicht aussieht wie aus den 90ern, mich nicht mit 80 Menüs erschlägt oder gleich ein 40-Euro-Abo will.“
               </p>
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-                Irgendwann hatte ich die Schnauze voll – und hab mir das Ding einfach selbst gebaut. Keine Cloud, kein Registrierungs-Zwang, blitzschnelle 1-Klick-Mockups für saubere Kundenpräsentationen.
+                Irgendwann hatte ich die Schnauze voll und hab mir das Ding einfach selbst gebaut. Keine Cloud, kein Registrierungs-Zwang, blitzschnelle 1-Klick-Mockups für saubere Kundenpräsentationen.
               </p>
             </blockquote>
 

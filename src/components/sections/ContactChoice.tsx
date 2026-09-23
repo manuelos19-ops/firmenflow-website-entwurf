@@ -164,7 +164,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     </h3>
                   </div>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
-                    Ich schaue mir deine Website und dein Google-Unternehmensprofil an und schicke dir eine 3–5-Minuten-Video-Auswertung – unverbindlich per E-Mail.
+                    Ich schaue mir deine Website und dein Google-Unternehmensprofil an und schicke dir eine Video-Auswertung von 3 bis 5 Minuten, unverbindlich per E-Mail.
                   </p>
                 </div>
                 <div className="w-full">
@@ -172,7 +172,7 @@ export function ContactChoice({ whatsappUrl }: ContactChoiceProps) {
                     onClick={() => setVideoOpen((v) => !v)}
                     buttonIcon="video-einschaetzung"
                     size="compact"
-                    subline={videoOpen ? undefined : "3–5 Minuten · per E-Mail"}
+                    subline={videoOpen ? undefined : "3 bis 5 Minuten · per E-Mail"}
                     className="w-full"
                     ariaExpanded={videoOpen}
                     ariaControls="website-check-form-wrapper"

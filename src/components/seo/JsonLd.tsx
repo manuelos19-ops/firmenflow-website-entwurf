@@ -88,7 +88,7 @@ export function JsonLd() {
             "@type": "Service",
             name: "Foto- & Videoaufnahmen vor Ort",
             description:
-              "Teamfotos, Räumlichkeiten und kurze Imagefilme direkt im Betrieb aufgenommen – keine Stockbilder.",
+              "Teamfotos, Räumlichkeiten und kurze Imagefilme direkt im Betrieb aufgenommen, keine Stockbilder.",
           },
         },
       ],
@@ -100,7 +100,7 @@ export function JsonLd() {
     "@type": "WebSite",
     "@id": `${baseUrl}/#website`,
     url: baseUrl,
-    name: "Firmenflow – Webdesign persönlich mit Manu",
+    name: "Firmenflow: Webdesign persönlich mit Manu",
     publisher: {
       "@id": `${baseUrl}/#organization`,
     },

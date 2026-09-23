@@ -34,7 +34,7 @@ export const liveProjects: readonly Project[] = [
     factsApproved: true,
     image: "/media/projects/eiscafe-orrico-phone.webp",
     nature: "Traditioneller Familienbetrieb in Hamminkeln am Niederrhein, der seit 1986 eigenes Eis herstellt und bei Gästen aus der gesamten Region bekannt ist.",
-    scope: "Design und Struktur für Smartphones, klare Texte zur handwerklichen Eisherstellung, drei regionale Radrouten und Vorbereitung der neuen Speise- und Eiskarte für Anfang 2027 – sauber umgesetzt ohne Cookie-Banner.",
+    scope: "Design und Struktur für Smartphones, klare Texte zur handwerklichen Eisherstellung, drei regionale Radrouten und Vorbereitung der neuen Speise- und Eiskarte für Anfang 2027, sauber umgesetzt ohne Cookie-Banner.",
     verifiable: "Öffne die Seite auf dem Smartphone: Sie lädt sofort, lässt sich komplett mit dem Daumen bedienen und kommt ohne störendes Cookie-Fenster aus.",
     highlights: [
       {
@@ -88,7 +88,7 @@ export const liveProjects: readonly Project[] = [
   },
   {
     slug: "climanu-wetter",
-    name: "cliManu – Wetter Web-App",
+    name: "cliManu: Wetter Web-App",
     sector: "Web-App & Dashboard",
     region: "Deutschlandweit",
     url: "https://www.climanu.de/",
@@ -128,7 +128,7 @@ export const conceptProjects: readonly Project[] = [
     region: "Niederrhein",
     url: "https://handwerksbaeckerei-demo.vercel.app/",
     kind: "concept",
-    badge: "Konzeptentwurf – kein Kundenauftrag",
+    badge: "Konzeptentwurf, kein Kundenauftrag",
     summary: "Ein frei gestalteter Konzeptentwurf für eine Handwerksbäckerei mit digitaler Auslage, Torten-Konfigurator und regionaler Bildsprache (fiktiver Betrieb).",
     factsApproved: true,
     image: "/media/projects/baeckerei-goldkruste-phone.webp",
@@ -160,7 +160,7 @@ export const conceptProjects: readonly Project[] = [
     region: "Hamburger Speicherstadt",
     url: "https://kaesekuchen-cafe-demo.vercel.app/",
     kind: "concept",
-    badge: "Konzeptentwurf – kein Kundenauftrag",
+    badge: "Konzeptentwurf, kein Kundenauftrag",
     summary: "Ein frei gestalteter Konzeptentwurf für ein Specialty-Coffee-Café mit digitaler Karte, Bewertungen und mobilem Fokus (fiktiver Betrieb).",
     factsApproved: true,
     image: "/media/projects/cafe-goldstueck-phone.webp",

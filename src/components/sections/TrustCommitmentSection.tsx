@@ -25,12 +25,12 @@ const commitments: Commitment[] = [
   {
     iconName: "domain-eigentum",
     title: "Die Domain läuft auf dich",
-    detail: "Deine Webadresse gehört dir und bleibt dein Eigentum – unabhängig davon, ob wir langfristig zusammenarbeiten.",
+    detail: "Deine Webadresse gehört dir und bleibt dein Eigentum, unabhängig davon, ob wir langfristig zusammenarbeiten.",
   },
   {
     iconName: "monatlich-kuendbar",
     title: "Betreuung monatlich kündbar",
-    detail: "Keine 12- oder 24-Monats-Verträge. Du bleibst, weil der Service dir den Rücken freihält – nicht wegen einer Klausel.",
+    detail: "Keine 12- oder 24-Monats-Verträge. Du bleibst, weil der Service dir den Rücken freihält, nicht wegen einer Klausel.",
   },
   {
     iconName: "code-uebergabe",
@@ -56,7 +56,7 @@ export function TrustCommitmentSection() {
             Du weißt vorher, worauf du dich einlässt.
           </h2>
           <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed max-w-xl mx-auto">
-            Fünf feste Vereinbarungen für eine Zusammenarbeit auf Augenhöhe – verbindlich, transparent und ohne Agentur-Klauseln.
+            Fünf feste Vereinbarungen für eine Zusammenarbeit auf Augenhöhe: verbindlich, transparent und ohne Agentur-Klauseln.
           </p>
         </div>
 

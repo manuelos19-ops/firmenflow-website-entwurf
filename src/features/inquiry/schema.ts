@@ -94,7 +94,7 @@ export const inquirySchema = z
       context.addIssue({
         code: "custom",
         path: ["services"],
-        message: "Bitte wähle mindestens eine Leistung aus – oder klicke auf „Empfehlung von Manu“.",
+        message: "Bitte wähle mindestens eine Leistung aus oder klicke auf „Empfehlung von Manu“.",
       });
     }
     // Website-Vorhaben nur prüfen, wenn Website gewählt

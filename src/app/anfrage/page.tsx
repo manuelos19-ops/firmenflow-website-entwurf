@@ -10,7 +10,7 @@ import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Anfrage – In 4 kurzen Schritten zum klaren nächsten Schritt",
+  title: "Anfrage: In 4 kurzen Schritten zum klaren nächsten Schritt",
   description:
     "Unverbindliche Anfrage für Website und Lokalpräsenz 360° in Wesel & am Niederrhein. Frei kombinierbar und persönlich mit mir, ohne Verpflichtung.",
   alternates: {
@@ -132,7 +132,7 @@ export default function AnfragePage() {
                 href="/#website-check"
                 buttonIcon="video-einschaetzung"
                 size="compact"
-                subline="3–5 Minuten · per E-Mail"
+                subline="3 bis 5 Minuten · per E-Mail"
                 className="w-full"
               >
                 Kostenlose Video-Einschätzung für Website &amp; Google-Profil

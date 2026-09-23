@@ -23,7 +23,7 @@ const bentoItems = [
   },
   {
     title: "Blick für Bild & Wirkung",
-    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das im ersten Moment sein kann. Du musst nicht modeln können: Wir fangen authentische Alltagsmomente deines Betriebs beiläufig ein – und glaube mir, die Scheu vor der Kamera ist schneller weg, als du „lächeln“ sagen kannst.",
+    desc: "Ich stehe selbst vor der Kamera und weiß, wie unangenehm das im ersten Moment sein kann. Du musst nicht modeln können: Wir fangen authentische Alltagsmomente deines Betriebs beiläufig ein, und glaube mir, die Scheu vor der Kamera ist schneller weg, als du „lächeln“ sagen kannst.",
     gradient: "from-[var(--color-coral)]/20 via-[var(--color-coral)]/5 to-transparent",
     border: "border-[var(--color-coral)]/30 hover:border-[var(--color-coral)]",
     iconBg: "bg-[var(--color-coral)]/10 text-[var(--color-coral)]",
@@ -84,7 +84,7 @@ export function DirectWithManu() {
             </h2>
             
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-5">
-              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen, den Betrieb am Laufen halten. Deshalb rede ich Klartext: Ich sage dir, was es bringt, was es kostet und was ich davon halte – auch wenn das heißt, dir von etwas abzuraten.
+              Ich kenne den Alltag von Selbstständigen: Rechnungen schreiben, Verantwortung tragen, den Betrieb am Laufen halten. Deshalb rede ich Klartext: Ich sage dir, was es bringt, was es kostet und was ich davon halte, auch wenn das heißt, dir von etwas abzuraten.
             </p>
 
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed mb-8">
@@ -136,7 +136,7 @@ export function DirectWithManu() {
                 <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden bg-stone-100">
                   <Image
                     src="/media/portraits/manu-nature-seated.webp"
-                    alt="Manu – Gründer von Firmenflow"
+                    alt="Manu, Gründer von Firmenflow"
                     fill
                     className="object-cover object-[50%_15%] scale-[1.15] transition-transform duration-500 group-hover:scale-[1.2]"
                     sizes="250px"
@@ -147,7 +147,7 @@ export function DirectWithManu() {
                 {/* Polaroid Caption Note */}
                 <div className="pt-3 px-1 flex flex-col gap-2">
                   <p className="font-editorial italic text-xs sm:text-sm font-semibold text-[var(--color-ink)] leading-snug">
-                    „Eine gute Website muss nicht kompliziert sein – sie muss funktionieren.“
+                    „Eine gute Website muss nicht kompliziert sein. Sie muss funktionieren.“
                   </p>
                   <div className="flex items-center justify-center pt-1.5 border-t border-stone-100">
                     <span className="text-[10px] font-mono font-bold text-[var(--color-coral)] bg-[var(--color-coral)]/10 px-2.5 py-0.5 rounded-full">
@@ -187,7 +187,7 @@ export function DirectWithManu() {
                 <div className="relative w-full h-[180px] sm:h-[200px] rounded-xl overflow-hidden bg-stone-100">
                   <Image
                     src="/media/portraits/manu-green-door-vertical.webp"
-                    alt="Manu – Persönlich mit Manu"
+                    alt="Porträt von Manu, Firmenflow"
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="250px"

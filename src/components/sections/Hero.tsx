@@ -49,7 +49,7 @@ export function Hero({ whatsappUrl }: HeroProps) {
               <FirmenflowButton
                 href="#website-check"
                 buttonIcon="video-einschaetzung"
-                subline="3–5 Minuten · meine Einschätzung für dich"
+                subline="3 bis 5 Minuten · meine Einschätzung für dich"
                 className="w-full"
               >
                 Kostenlose Video-Einschätzung

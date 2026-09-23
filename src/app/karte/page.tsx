@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { QrRedirect } from "@/components/analytics/QrRedirect";
 
 export const metadata: Metadata = {
-  title: "Firmenflow – Visitenkarte",
+  title: "Firmenflow: Visitenkarte",
   robots: {
     index: false,
     follow: false,

@@ -48,7 +48,7 @@ export function Faq() {
               <FirmenflowIcon name="faq-plus" size={72} decorative />
             </div>
             <p className="text-base sm:text-lg text-[var(--color-muted)] leading-relaxed max-w-2xl mx-auto">
-              Hier findest du direkte Antworten auf die wichtigsten Fragen zu Ablauf, Kosten und Zusammenarbeit – ehrlich und ohne Kleingedrucktes.
+              Hier findest du direkte Antworten auf die wichtigsten Fragen zu Ablauf, Kosten und Zusammenarbeit, ehrlich und ohne Kleingedrucktes.
             </p>
           </div>
 
@@ -147,7 +147,7 @@ export function Faq() {
                   Deine Frage war nicht dabei?
                 </h4>
                 <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                  Schreib mir einfach persönlich auf WhatsApp – ich antworte meist innerhalb weniger Stunden.
+                  Schreib mir einfach persönlich auf WhatsApp. Ich antworte meist innerhalb weniger Stunden.
                 </p>
               </div>
             </div>
