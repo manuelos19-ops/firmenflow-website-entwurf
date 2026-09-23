@@ -1,7 +1,7 @@
 ---
 title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
 metaTitle: "Bei Google Maps nicht gefunden: 5 Gründe"
-description: "Jemand sucht deine Leistung in deinem Ort und bekommt drei andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, plus Selbsttest."
+description: "Jemand sucht deine Leistung in deinem Ort und findet nur andere Betriebe. Die häufigsten Gründe, warum dein Google-Profil nicht auftaucht, plus Selbsttest."
 date: "2026-09-21"
 updated: "2026-09-22"
 category: "Lokale Sichtbarkeit"
@@ -11,11 +11,11 @@ imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Google-Maps-Kartenau
 featured: "false"
 ---
 
-Ein Kunde steht vierhundert Meter von deiner Werkstatt entfernt, tippt „Heizung Notdienst Wesel“ in sein Handy und bekommt drei andere Betriebe angezeigt. Der Auftrag war da. Er ist nur woanders gelandet, und du erfährst davon nie etwas.
+Ein Kunde steht vierhundert Meter von deiner Werkstatt entfernt, tippt „Heizung Notdienst Wesel“ in sein Handy und bekommt andere Betriebe angezeigt. Der Auftrag war da. Er ist nur woanders gelandet, und du erfährst davon nie etwas.
 
 Genau das passiert jeden Tag, und es fällt niemandem auf, weil das Telefon einfach still bleibt. Es gibt keine verpasste Anfrage, die man sehen könnte.
 
-Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zusammen mit deinem Ort ein, also zum Beispiel „Dachdecker Wesel“, „Bäckerei Hamminkeln“ oder „Physiotherapie Xanten“. Stehst du in den ersten drei Treffern auf der Karte?
+Mach den Test, bevor du weiterliest. Nimm dein Handy und tippe deine Leistung zusammen mit deinem Ort ein, also zum Beispiel „Dachdecker Wesel“, „Bäckerei Hamminkeln“ oder „Physiotherapie Xanten“. Stehst du ganz oben auf der Karte, bevor jemand auf „Weitere Orte“ tippen muss?
 
 ## Kurz gesagt
 
@@ -123,7 +123,7 @@ Das aufzuräumen ist stumpfe Arbeit. Man sucht alte Einträge, korrigiert sie ei
 
 Bei der Suche nach einem Restaurant oder einem Geschäft vor Ort führt der Weg weiterhin über die Suchmaschine. Die Agentur Claneo hat dazu im April 2025 gemeinsam mit dem Marktforschungsinstitut Appinio 2.000 Menschen befragt, je 1.000 in Deutschland und den USA. Suchmaschinen kommen dabei auf 65 Prozent, Instagram folgt mit 10 Prozent.
 
-Verschoben hat sich die Art der Antwort. Google liefert immer mehr davon direkt in der Suche aus, ohne dass jemand eine Website öffnet: den Kartenausschnitt mit drei Betrieben, Sterne, Öffnungszeiten, einen Knopf zum Anrufen. Parallel wächst die Nutzung von KI-Chatbots. In derselben Befragung greifen 21 Prozent bei der Informationssuche darauf zurück, bei komplexeren Fragen liegen sie mit 38,55 Prozent fast gleichauf mit Google (40,29 Prozent).
+Verschoben hat sich die Art der Antwort. Google liefert immer mehr davon direkt in der Suche aus, ohne dass jemand eine Website öffnet: den Kartenausschnitt mit den ersten Betrieben, Sterne, Öffnungszeiten, einen Knopf zum Anrufen. Parallel wächst die Nutzung von KI-Chatbots. In derselben Befragung greifen 21 Prozent bei der Informationssuche darauf zurück, bei komplexeren Fragen liegen sie mit 38,55 Prozent fast gleichauf mit Google (40,29 Prozent).
 
 Was in deinem Profil steht, ist für viele Kunden damit schon die ganze Entscheidungsgrundlage. Deine Website bekommen sie in dem Moment gar nicht zu sehen. Eine gute Seite und ein leeres Google-Profil ergeben zusammen einen Betrieb, den niemand findet.
 
@@ -133,7 +133,7 @@ Andersherum genauso: Wer dich über die Karte findet und dann auf einer langsame
 
 Nimm dein Handy und geh die Punkte einmal durch. Du brauchst dafür keinen Computer und keine Zugangsdaten.
 
-* Taucht dein Betrieb bei deiner Leistung plus Ortsname in den ersten drei Treffern auf der Karte auf?
+* Taucht dein Betrieb bei deiner Leistung plus Ortsname ganz oben auf der Karte auf, ohne dass jemand auf „Weitere Orte“ tippen muss?
 * Steht auf deinem Profil noch der Hinweis, dass ein Inhaber dieses Unternehmen beanspruchen kann?
 * Sind deine Feiertagszeiten für die nächsten Monate hinterlegt?
 * Beschreibt deine Hauptkategorie das, womit du tatsächlich dein Geld verdienst?

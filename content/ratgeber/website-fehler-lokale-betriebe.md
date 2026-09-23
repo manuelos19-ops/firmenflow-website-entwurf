@@ -66,7 +66,7 @@ Das gilt genauso für Bewerber. Wer bei dir anfangen soll, will vorher sehen, wo
 
 Viele Unternehmer pflegen ihre Website, vergessen aber ihr Google-Unternehmensprofil völlig.
 
-Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit drei Betrieben an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
+Das ist verschenktes Geld. Wenn jemand bei Google nach einem Dachdecker oder Bäcker in seiner Stadt sucht, zeigt Google fast immer zuerst den Stadtplan mit einer Handvoll Betriebe an. Wer hier nicht auftaucht, wird von vielen Neukunden gar nicht erst wahrgenommen. Stehen dort zudem falsche Öffnungszeiten oder veraltete Informationen, verspielst du Vertrauen, bevor der Kunde überhaupt auf deiner Website landet.
 
 Wie stark Bewertungen die Entscheidung tragen, zeigt die jährliche Konsumentenbefragung von BrightLocal:
 

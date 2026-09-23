@@ -79,12 +79,12 @@
       "level": "basis",
       "question": "Wie viele lokale Betriebe hebt Google bei einer Smartphone-Suche standardmäßig direkt im Kartenausschnitt hervor?",
       "options": [
-        "Genau 3 Betriebe („Local 3-Pack“)",
+        "Meist 3 Betriebe („Local 3-Pack“)",
         "Alle Betriebe der gesamten Region untereinander auf einer Liste",
         "Immer genau 25 Betriebe"
       ],
       "correctIndex": 0,
-      "explanation": "Auf dem Smartphone sehen Suchende zuerst die Top 3 Betriebe im Kartenausschnitt. Wer hier nicht auftaucht, geht bei Neukunden meist leer aus."
+      "explanation": "Suchende sehen im Kartenausschnitt zuerst meist drei Betriebe, je nach Suche und Gerät auch mal vier. Oft steht eine Anzeige mit dem Hinweis „Gesponsert“ davor. Wer hier nicht auftaucht, geht bei Neukunden meist leer aus."
     },
     {
       "id": "gm_b8",
@@ -101,9 +101,9 @@
     {
       "id": "gm_b9",
       "level": "basis",
-      "question": "Was passiert laut Artikel, wenn ein Neukunde 400 Meter von deiner Werkstatt entfernt einen Notdienst sucht und du nicht in den Top 3 stehst?",
+      "question": "Was passiert laut Artikel, wenn ein Neukunde 400 Meter von deiner Werkstatt entfernt einen Notdienst sucht und du nicht ganz oben auf der Karte stehst?",
       "options": [
-        "Er ruft einen der drei angezeigten Betriebe an, und du erfährst nie etwas von dem verpassten Auftrag",
+        "Er ruft einen der angezeigten Betriebe an, und du erfährst nie etwas von dem verpassten Auftrag",
         "Google leitet den Anruf automatisch zu dir weiter",
         "Der Kunde läuft die Straße zu Fuß ab und sucht dein Schild"
       ],
@@ -120,7 +120,7 @@
         "Alle bisherigen Google-Bewertungen vorsichtshalber löschen"
       ],
       "correctIndex": 0,
-      "explanation": "Der einfachste Test: Nimm dein Smartphone und tippe ein, was deine Kunden suchen. Stehst du in den ersten drei Treffern der Karte?"
+      "explanation": "Der einfachste Test: Nimm dein Smartphone und tippe ein, was deine Kunden suchen. Stehst du ganz oben auf der Karte, bevor jemand auf „Weitere Orte“ tippen muss?"
     },
     {
       "id": "gm_p1",
@@ -336,7 +336,7 @@
         "Weil Google Websites von Handwerkern nicht mehr anzeigt"
       ],
       "correctIndex": 0,
-      "explanation": "Eine gute Website nützt nichts, wenn Neukunden auf Google Maps vorher schon drei Konkurrenten sehen und dort direkt auf „Anrufen“ tippen."
+      "explanation": "Eine gute Website nützt nichts, wenn Neukunden auf Google Maps vorher schon deine Konkurrenten sehen und dort direkt auf „Anrufen“ tippen."
     },
     {
       "id": "gm_p19",

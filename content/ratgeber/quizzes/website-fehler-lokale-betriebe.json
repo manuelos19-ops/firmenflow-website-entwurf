@@ -5,14 +5,14 @@
     {
       "id": "w_b1",
       "level": "basis",
-      "question": "Wie viele Sekunden Ladezeit toleriert über die Hälfte der mobilen Suchenden laut Google web.dev maximal?",
+      "question": "Wie viele Nutzer verlor die BBC laut Googles web.dev für jede zusätzliche Sekunde Ladezeit?",
       "options": [
-        "Maximal 3 Sekunden",
-        "Etwa 8 bis 10 Sekunden",
-        "Beliebig lange, wenn die Handwerksarbeit gut ist"
+        "Etwa 10 Prozent",
+        "Etwa 1 Prozent",
+        "Keine, solange die Inhalte gut sind"
       ],
       "correctIndex": 0,
-      "explanation": "Google belegt auf web.dev: Dauert der Seitenaufbau länger als drei Sekunden, schließen über 50 % der Smartphone-Nutzer die Seite sofort wieder."
+      "explanation": "Auf web.dev nennt Google einen Messwert der BBC: Für jede zusätzliche Sekunde Ladezeit verlor sie weitere 10 Prozent ihrer Nutzer."
     },
     {
       "id": "w_b2",
@@ -127,12 +127,12 @@
       "level": "profi",
       "question": "Wie viele lokale Betriebe zeigt Google auf dem Smartphone bei lokaler Suche direkt im Kartenausschnitt an?",
       "options": [
-        "Genau 3 Betriebe („Local 3-Pack“)",
+        "Meist 3 Betriebe („Local 3-Pack“)",
         "Alle Betriebe der Stadt untereinander auf einer langen Liste",
         "Immer genau 10 Betriebe alphabetisch sortiert"
       ],
       "correctIndex": 0,
-      "explanation": "Google blendet auf dem Handy meist nur die Top 3 Betriebe im Kartenausschnitt ein. Wer hier fehlt, wird von vielen Neukunden gar nicht wahrgenommen."
+      "explanation": "Google blendet im Kartenausschnitt meist drei Betriebe ein, je nach Suche und Gerät auch mal vier. Oft steht eine Anzeige mit dem Hinweis „Gesponsert“ davor. Wer hier fehlt, wird von vielen Neukunden gar nicht wahrgenommen."
     },
     {
       "id": "w_p2",
@@ -211,12 +211,12 @@
       "level": "profi",
       "question": "Welche technische Auswirkung hat jede Sekunde zusätzlicher Ladezeit auf eine Firmenwebsite?",
       "options": [
-        "Die Abbruchrate steigt messbar an und Google straft langsame Seiten im Ranking ab",
+        "Mehr Besucher springen ab, bevor sie die Seite überhaupt sehen",
         "Die Seite wird automatisch sicherer vor Hackerangriffen",
         "Es hat auf dem Smartphone heutzutage keinerlei Auswirkungen mehr"
       ],
       "correctIndex": 0,
-      "explanation": "Google belegt auf web.dev: Jede Sekunde Verzögerung senkt die Zufriedenheit und treibt die Absprungrate von Neukunden rasant in die Höhe."
+      "explanation": "Die Messwerte auf Googles web.dev zeigen es: Mit jeder Sekunde Wartezeit gehen mehr Besucher verloren. Bei der BBC waren es 10 Prozent pro zusätzlicher Sekunde."
     },
     {
       "id": "w_p9",
