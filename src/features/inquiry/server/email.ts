@@ -3,6 +3,7 @@ import nodemailer from "nodemailer";
 import type { InquiryPayload } from "../schema";
 import type { AuditInquiryPayload } from "../audit-schema";
 import { escapeHtml } from "./escape-html";
+import { siteIdentity } from "@/config/site";
 
 export type MailResult = { id: string };
 
@@ -466,7 +467,7 @@ export async function sendAuditEmail(payload: AuditInquiryPayload): Promise<Mail
             </tr>
             <tr>
               <td align="center" class="ff-btn">
-                ${mailButton("https://cal.meetergo.com/manu-1/30-min-meeting-mit-manu", isVideo ? "M\u00f6chtest du direkt sprechen? Termin buchen \u2192" : "Hier deinen Termin ausw\u00e4hlen \u2192", "#FF705D", "#FFFFFF")}
+                ${mailButton(siteIdentity.meetergoUrl, isVideo ? "M\u00f6chtest du pers\u00f6nlich sprechen? Termin buchen \u2192" : "Hier deinen Termin ausw\u00e4hlen \u2192", "#FF705D", "#FFFFFF")}
               </td>
             </tr>
           </table>

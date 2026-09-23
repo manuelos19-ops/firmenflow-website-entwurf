@@ -4,5 +4,5 @@ export const siteIdentity = {
   legalName: "Manuel Landeck",
   slogan: "für deine Lokalpräsenz",
   region: "Wesel & Niederrhein",
-  meetergoUrl: process.env.NEXT_PUBLIC_MEETERGO_URL || "https://cal.meetergo.com/manu-1/30-min-meeting-mit-manu",
+  meetergoUrl: process.env.NEXT_PUBLIC_MEETERGO_URL || "https://cal.meetergo.com/firmenflow-manu",
 } as const;
