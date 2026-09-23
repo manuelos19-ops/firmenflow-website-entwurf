@@ -53,14 +53,14 @@
     {
       "id": "gb_b5",
       "level": "basis",
-      "question": "Warum empfiehlt der Artikel, den Link erst am Abend zu schicken?",
+      "question": "Was verbietet Google, wenn du einen Kunden vor Ort nach einer Bewertung fragst?",
       "options": [
-        "Google verbietet, Kunden zur Bewertung aufzufordern oder unter Druck zu setzen, während sie noch vor Ort sind",
-        "Weil Google Bewertungen tagsüber nicht annimmt",
-        "Weil abends geschriebene Bewertungen mehr Sterne zählen"
+        "Ihn aufzufordern oder zu drängen, die Bewertung noch vor Ort zu schreiben",
+        "Überhaupt nach einer Bewertung zu fragen",
+        "Ihm den Bewertungslink später per Nachricht zu schicken"
       ],
       "correctIndex": 0,
-      "explanation": "Die Google-Richtlinien verbieten Druck vor Ort. Mit dem Link am Abend hat der Kunde Ruhe, und du stehst nicht daneben."
+      "explanation": "Fragen darfst du vor Ort. Google untersagt, Kunden aufzufordern oder unter Druck zu setzen, die Bewertung zu schreiben, während sie noch vor Ort sind. Deshalb kommt der Link später."
     },
     {
       "id": "gb_b6",

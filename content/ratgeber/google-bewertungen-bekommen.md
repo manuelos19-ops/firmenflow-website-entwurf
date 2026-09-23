@@ -18,7 +18,7 @@ Zwei Straßen weiter hat ein anderer Betrieb achtzig Bewertungen, du hast neun. 
 
 * Im Handwerk sind Google-Bewertungen rar. Ein Elektriker im Raum Wesel hat im Median 6, ein Fliesenleger 4.
 * Über deinen eigenen Bewertungslink kann der Kunde eine Rezension schreiben, ohne dein Profil erst suchen zu müssen. Google stellt ihn dir im Profil bereit.
-* Fragen ist erlaubt. Belohnungen, gezieltes Bitten um gute Bewertungen und Druck vor Ort verbietet Google ausdrücklich.
+* Fragen ist erlaubt, auch direkt beim Kunden. Belohnungen, gezieltes Bitten um gute Bewertungen und die Aufforderung, die Bewertung noch vor Ort zu schreiben, verbietet Google.
 * Im Selbsttest am Ende siehst du, ob du beim Fragen etwas verschenkst.
 
 ## Wie viele Bewertungen in deiner Branche üblich sind
@@ -74,7 +74,7 @@ Ein Satz reicht, zum Beispiel so:
 
 > „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Wenn Sie zwei Minuten Zeit haben, hilft mir eine ehrliche Bewertung bei Google sehr.“
 
-Dass der Link erst am Abend kommt, ist mein Vorschlag und keine Vorgabe von Google. Google verbietet in seinen Richtlinien, Kunden aufzufordern oder unter Druck zu setzen, die Bewertung zu schreiben, während sie noch vor Ort sind. Ob das Wohnzimmer des Kunden bei der Abnahme genauso zählt wie der eigene Betrieb, sagt Google nicht. Mit dem Link am Abend bist du auf der sicheren Seite, und der Kunde hat Ruhe.
+Die Frage selbst darfst du ruhig vor Ort stellen. Was Google in seinen Richtlinien untersagt, ist etwas anderes: Kunden aufzufordern oder unter Druck zu setzen, die Bewertung zu schreiben, während sie noch vor Ort sind. Du fragst also, ob der Kunde bewerten möchte, und schickst den Link später. Dann schreibt er in Ruhe, und niemand steht daneben, während er tippt.
 
 Die Nachricht dazu kann so aussehen:
 
@@ -94,7 +94,7 @@ Um Bewertungen bitten darfst du. Google erlaubt ausdrücklich, Kunden zu Beiträ
 | --- | --- |
 | Belohnungen | Kein Rabatt, keine Gratis-Wartung, kein Gutschein als Dankeschön für eine Bewertung |
 | Gezielt um Lob bitten | Kunden gezielt um positive Bewertungen bitten oder negative verhindern, etwa indem du nur fragst, wo alles glatt lief |
-| Druck vor Ort | Kunden nicht vor Ort auffordern oder drängen, die Bewertung gleich zu schreiben, zum Beispiel indem du danebenstehst |
+| Schreiben vor Ort | Den Kunden auffordern oder drängen, die Bewertung gleich an Ort und Stelle zu schreiben. Fragen darfst du, das Schreiben kommt später |
 | Vorgaben zum Inhalt | Keinen Text vorschreiben, keine bestimmten Namen verlangen, deinen Leuten keine Stückzahlen vorgeben |
 
 Bei der Belohnung ist die Versuchung am größten, weil sie so harmlos wirkt. Google nennt Anreize wie kostenlose oder vergünstigte Produkte oder Dienstleistungen als Gegenleistung für Rezensionen eine gefälschte Interaktion, die streng verboten ist. Solche Bewertungen werden laut Google aus Google Maps entfernt. Das gilt genauso, wenn du jemandem etwas anbietest, damit er eine negative Bewertung ändert oder löscht.
