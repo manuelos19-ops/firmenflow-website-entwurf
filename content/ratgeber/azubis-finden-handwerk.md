@@ -6,8 +6,8 @@ date: "2026-09-22"
 updated: "2026-09-23"
 category: "Mitarbeiter finden"
 tags: [Azubis, Mitarbeiter, Karriereseite, Handwerk, Wesel]
-image: "/images/ratgeber/azubis-finden-handwerk.webp"
-imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Bewerbungsnachricht, Werkzeug-Symbol und Zeitungsstapel im Hintergrund"
+image: "/images/ratgeber/azubis-finden-handwerk-titel.webp"
+imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: null Rückmeldungen auf die Zeitungsanzeige, 95 Prozent der 12- bis 19-Jährigen täglich am Smartphone, er googelt dich und die Eltern auch"
 featured: "false"
 ---
 

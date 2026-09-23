@@ -22,7 +22,7 @@
   - Kachel `54.000` im Azubi-Artikel bricht mobil nicht mehr aus dem Container aus (`min-w-0`, responsive Schriftgröße).
   - Kacheln rechts und links auf exakt gleicher Höhe ausbalanciert (`grid items-stretch`).
   - Optischer Freiraum vor Zwischenüberschriften (z. B. „Vier Fragen, die vor der Bewerbung...“) vergrößert.
-  - Eigenes 3D-Cover-Bild für den Azubi-Artikel (`public/images/ratgeber/azubis-finden-handwerk.webp`).
+  - Titelbilder aller drei Artikel seit 23.09.2026 im Social-Stil (drei Glaskarten mit 3D-Objekten), `public/images/ratgeber/<slug>-titel.webp`, erzeugt mit `Instagram Firmenflow/vorlagen/render.js`.
 
 ### 2. Visuelles System & Autoren-Präsenz
 - **Echte Fotos statt 3D-Avatare:**
@@ -35,7 +35,7 @@
 - **Dedizierte Bio-Seite `/start`:**
   - Schlanker, extrem schneller Mobile-First-Hub für Instagram-Besucher mit Vorstellung von Manu, Direktzugriff auf Ratgeber, Wissens-Quiz und Kontakt.
 - **Redirects in `next.config.ts`:**
-  - Weiterleitungen (geprüft 23.09.2026): `/bio` → `/links?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub`, `/tipps` → `/ratgeber?…&utm_campaign=bio_ratgeber_hub`. `/start` ist eine eigene Seite ohne Weiterleitung. Offen: ob `/start` oder `/links` die Bio-Seite sein soll.
+  - `/start` ist die einzige Bio-Seite (Entscheidung Manu, 23.09.2026). Weiterleitungen: `/bio` → `/start?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub`, `/links` und `/linktree` → `/start`, `/tipps` → `/ratgeber?…&utm_campaign=bio_ratgeber_hub`. Die frühere Seite `/links` ist entfernt.
 
 ### 4. Tracking & Kampagnen-Infrastruktur
 - **`UtmCleaner`-Komponente:**

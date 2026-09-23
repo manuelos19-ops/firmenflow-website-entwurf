@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/linktree",
-        destination: "/links",
+        destination: "/start",
         permanent: false,
       },
 
@@ -42,7 +42,13 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/bio",
-        destination: "/links?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub",
+        destination: "/start?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub",
+        permanent: false,
+      },
+      {
+        // Frühere Linkseite, seit 23.09.2026 ist /start die einzige Bio-Seite
+        source: "/links",
+        destination: "/start",
         permanent: false,
       },
     ];

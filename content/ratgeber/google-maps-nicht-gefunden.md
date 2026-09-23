@@ -6,8 +6,8 @@ date: "2026-09-21"
 updated: "2026-09-23"
 category: "Lokale Sichtbarkeit"
 tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
-image: "/images/ratgeber/google-maps-nicht-gefunden.webp"
-imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Google-Maps-Kartenausschnitt, 3D-Standort-Pin und 5-Sterne-Bewertungs-Badge"
+image: "/images/ratgeber/google-maps-nicht-gefunden-titel.webp"
+imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 3 Faktoren entscheiden laut Google, 97 von 198 Betrieben im Raum Wesel haben eine Lücke im Google-Profil, 26 Bewertungen im Median"
 featured: "false"
 ---
 

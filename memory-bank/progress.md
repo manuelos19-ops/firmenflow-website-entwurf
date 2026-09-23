@@ -10,7 +10,7 @@
   - Kachel- und Typografie-Polish (54.000 Zahl bricht nicht mehr aus, ausgerichtete Kachelhöhen, vergrößerte Abstände).
   - 3 echte Autoren-Porträts von Manu abwechselnd im Einsatz.
 - **Social Media & Landingpages:**
-  - Bio-Seiten `/links` (Ziel von `/bio`) und `/start`, dazu `/tipps` → `/ratgeber`.
+  - Bio-Seite `/start` (Ziel von `/bio`, `/links`, `/linktree`), dazu `/tipps` → `/ratgeber`.
   - `UtmCleaner`-Infrastruktur (Vercel & GA4 erfassen Daten, Adresszeile wird nach 600 ms bereinigt).
   - Post 01 (Google Maps) und Post 02 (Website-Fehler) sind im alten Stil online (4:5). Seit 23.09.2026 neuer Stil und ein gemeinsamer Renderer in `Instagram Firmenflow/vorlagen/render.js`. Post 03 (Azubis) und die WhatsApp-Status für Post 02 sind im neuen Stil fertig.
   - Hashtag-Strategie auf den offiziellen 2026-Standard begrenzt (ausnahmslos 3–5 gezielte Tags).

@@ -6,8 +6,8 @@ date: "2026-09-19"
 updated: "2026-09-23"
 category: "Website & Vertrauen"
 tags: [Website, Google-Profil, Handwerk, Wesel, Ladezeit]
-image: "/images/ratgeber/website-fehler-lokale-betriebe.webp"
-imageAlt: "3D-Erklärgrafik für Firmenflow: Smartphone mit Ladezeit-Tacho, Google Maps Standort-Pin und Anruf-Symbol"
+image: "/images/ratgeber/website-fehler-lokale-betriebe-titel.webp"
+imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 10 Prozent weniger Nutzer pro Sekunde Ladezeit, ein Daumentipp muss zum Anrufen reichen, echte Fotos statt Katalogbildern"
 featured: "true"
 ---
 

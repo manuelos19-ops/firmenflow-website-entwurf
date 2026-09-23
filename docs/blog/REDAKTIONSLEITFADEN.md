@@ -71,6 +71,8 @@ Artikel liegen als Markdown in `content/ratgeber/<slug>.md`. Der Parser (`src/li
 | Hinweisbox | `::hinweis: Titel::` … `::/hinweis::`, darin Absätze und optional `![Alt](/pfad.webp "Bildunterschrift")` | eigene Beobachtung mit Datum und Gerät, Aktualisierungen |
 | Selbsttest | Aufzählung, deren Punkte mit „?“ enden | wird als Checkliste dargestellt. Jede Frage so stellen, dass „Nein“ das Problem ist |
 
+**Titelbild:** 1600 × 900, drei Glaskarten mit 3D-Objekten und je einer belegten Zahl oder Kernaussage aus dem Artikel. Erzeugt über den Social-Renderer (`titelbild` in der `post.json`), als WebP unter `public/images/ratgeber/<slug>-titel.webp`. Den Artikeltitel nicht aufs Bild schreiben, er steht direkt darüber.
+
 Frontmatter: `title` (H1, darf lang sein), `metaTitle` (kurz, für Google und Vorschau), `description` (unter 160 Zeichen, erscheint auch als Einleitung unter der H1), `date`, `updated` (nur bei echter inhaltlicher Änderung), `category`, `tags`, `image` (WebP in `public/images/ratgeber/`), `imageAlt`, `featured`.
 
 Autorenbox und CTA-Kasten kommen automatisch aus der Artikelvorlage. Keine eigene Autorenzeile mit „Manu macht …“.
