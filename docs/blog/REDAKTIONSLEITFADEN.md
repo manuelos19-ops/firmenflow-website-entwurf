@@ -1,6 +1,6 @@
 # Firmenflow: Redaktionsleitfaden für den Ratgeber
 
-Stand: 19.09.2026. Grundlage: ausdrückliche Vorgaben von Manu in dieser Unterhaltung. Gilt für diesen und künftige Firmenflow-Blogartikel. Bereichsname „Firmenflow Ratgeber“ ist ein Arbeitstitel.
+Stand: 23.09.2026. Grundlage: ausdrückliche Vorgaben von Manu. Gilt für alle Firmenflow-Ratgeberartikel unter `/ratgeber`. Social-Grafiken (Instagram, WhatsApp-Status) folgen eigenen Vorgaben, siehe Abschnitt „Social Media“.
 
 ## Ziel und Zielgruppe
 
@@ -27,6 +27,8 @@ Vor Übergabe den Text mit dem global installierten Skill `humanizer` prüfen un
 5. Direkt umsetzbare Verbesserungen anbieten. Der Leser soll selbst etwas prüfen oder verbessern können.
 6. Sinnvoll auf eine passende Firmenflow-Leistung überleiten. Umfang der Unterstützung aus dem tatsächlichen Problem ableiten; kleine Korrektur, Modernisierung und Neubau ehrlich unterscheiden.
 7. Mit einer klaren, niedrigschwelligen Handlungsaufforderung abschließen. Bestehende Angebote und Linkziele vor Nutzung prüfen.
+
+**Nicht mehr verwenden (Vorgabe von Manu, 22.09.2026):** den Aufzählungsblock am Ende mit „Kurz schreiben: Schick mir deinen Betriebsnamen …“, „Kurzer Anruf: Du erreichst mich unter …“ und „Alles unverbindlich und Persönlich mit Manu“. Der CTA-Kasten der Seite und die Autorenbox übernehmen das.
 
 Dieses Prinzip soll einheitlich bleiben, der Text aber nicht wie eine immer gleiche Schablone wirken. Nicht zwanghaft jeden Artikel auf fünf Punkte oder eine feste Wortzahl bringen.
 
@@ -56,14 +58,43 @@ Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interakti
 - **Lese-Tipp-Banner:** Automatischer Hinweis über dem geöffneten Artikel mit direkter Sprungmarke `#selbst-check` zum Quiz.
 - **Analytics:** Automatische Vercel Custom Events bei Start und Abschluss.
 
+## Aufbau und Bausteine im Markdown
+
+Artikel liegen als Markdown in `content/ratgeber/<slug>.md`. Der Parser (`src/lib/ratgeber.ts`) kennt diese Bausteine:
+
+| Baustein | Schreibweise | Wofür |
+| --- | --- | --- |
+| Kurzfassung | `## Kurz gesagt` mit 3 bis 4 Aufzählungspunkten direkt nach dem Einstieg | Antwort vorweg, auch für KI-Suchen |
+| Balkendiagramm | `::chart: Bildunterschrift mit Quelle::` in der Zeile vor einer Tabelle | Vergleich von Zahlen, letzte Spalte = Wert |
+| Karten | `::karten: Bildunterschrift::` vor einer Tabelle | 2 bis 4 gleichrangige Punkte |
+| Zahlenkacheln | `::zahlen: Quelle::` vor einer Tabelle mit Spalten Wert / Bedeutung | 2 bis 3 belegte Kennzahlen, zählen animiert hoch |
+| Hinweisbox | `::hinweis: Titel::` … `::/hinweis::`, darin Absätze und optional `![Alt](/pfad.webp "Bildunterschrift")` | eigene Beobachtung mit Datum und Gerät, Aktualisierungen |
+| Selbsttest | Aufzählung, deren Punkte mit „?“ enden | wird als Checkliste dargestellt. Jede Frage so stellen, dass „Nein“ das Problem ist |
+
+Frontmatter: `title` (H1, darf lang sein), `metaTitle` (kurz, für Google und Vorschau), `description` (unter 160 Zeichen, erscheint auch als Einleitung unter der H1), `date`, `updated` (nur bei echter inhaltlicher Änderung), `category`, `tags`, `image` (WebP in `public/images/ratgeber/`), `imageAlt`, `featured`.
+
+Autorenbox und CTA-Kasten kommen automatisch aus der Artikelvorlage. Keine eigene Autorenzeile mit „Manu macht …“.
+
+## Formulierungen, die sich bewährt haben
+
+- **Google Maps:** keine feste Zahl für den Kartenausschnitt. Google zeigt je nach Gerät drei oder vier Einträge, oft mit einer Anzeige davor (geprüft am 23.09.2026). Formulierung: „ganz oben auf der Karte, ohne dass jemand auf ‚Weitere Orte‘ tippen muss“.
+- **Destatis:** „97 Prozent der Menschen zwischen 16 und 74 Jahren nutzen das Internet“. Nicht „mobil“.
+- **BrightLocal:** immer als US-Befragung kennzeichnen.
+- **Ladezeit:** Auf web.dev belegt ist der BBC-Wert (10 Prozent weniger Nutzer pro zusätzlicher Sekunde). Die oft zitierte Aussage „über 50 Prozent springen nach 3 Sekunden ab“ steht dort nicht.
+
+## Social Media
+
+Instagram-Karussells, Storys und WhatsApp-Status entstehen ausschließlich mit dem Renderer im Ordner `D:\KI Projekte\01_Marke_und_Websites\Instagram Firmenflow` (`vorlagen/render.js`, Vorgaben in `vorlagen/FORMAT_SPEZIFIKATIONEN.md`). Keine eigenen Grafik-Generatoren im Website-Projekt anlegen.
+
 ## Arbeitsablauf und Freigabe
 
-Recherche, Entwurf, Fakten-/Quellenprüfung und redaktionelle Gegenprüfung; bei Bedarf Subagents. Entwurf samt Quellen und SEO-Paket für Manu bereitstellen. Artikel nur als lokale Entwürfe außerhalb öffentlicher Website-Verzeichnisse ablegen. Keine Veröffentlichung, kein Deployment und keine Änderungen an öffentlichem Blog, Navigation oder Sitemap ohne ausdrücklichen Auftrag. Nach Fertigstellung Manu über den prüfbaren Entwurf informieren.
+1. Thema vorschlagen oder vorgegeben bekommen.
+2. Kurze Gliederung mit Schmerzpunkten und Quellen zur Freigabe vorlegen. Erst nach Freigabe schreiben.
+3. Artikel direkt als `content/ratgeber/<slug>.md` anlegen, Quiz unter `content/ratgeber/quizzes/<slug>.json`.
+4. Quellen aufrufen und prüfen, Humanizer-Durchgang, Vorschau lokal prüfen.
+5. **Nicht committen, nicht pushen, nicht veröffentlichen**, bis Manu es ausdrücklich sagt. Ein Push auf `master` geht sofort live.
+6. Nach Veröffentlichung die Notiz im Obsidian-Vault unter `02 - Firmenflow/Blog` aktualisieren.
 
-## Aktuelle Ablage
+Frühere Entwürfe, das Bildkonzept zum ersten Artikel und der Blog-Audit vom 22.09.2026 liegen in `docs/blog/archiv/` und gelten nicht mehr als Vorgabe.
 
-- Entwürfe: `docs/blog/entwuerfe/`
-- SEO-Paket und Quellenprotokoll: beim jeweiligen Entwurf mit Suffix `-redaktionscheck.md`
-- Erster Artikel: `2026-09-19-website-fehler-lokale-betriebe.md`
-
-Angebote werden anhand des jeweils aktuellen Website-Standes geprüft. Die Datei dokumentiert redaktionelle Regeln, keine dauerhaft gültigen Preise oder technischen Google-Regeln.
+Angebote und Preise werden anhand des jeweils aktuellen Website-Standes geprüft. Diese Datei dokumentiert redaktionelle Regeln, keine dauerhaft gültigen Preise oder technischen Google-Regeln.

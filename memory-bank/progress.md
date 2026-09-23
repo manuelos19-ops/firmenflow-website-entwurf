@@ -10,9 +10,9 @@
   - Kachel- und Typografie-Polish (54.000 Zahl bricht nicht mehr aus, ausgerichtete Kachelhöhen, vergrößerte Abstände).
   - 3 echte Autoren-Porträts von Manu abwechselnd im Einsatz.
 - **Social Media & Landingpages:**
-  - Dedizierte Instagram-Bio-Landingpage `/start` mit Vanity-Redirects (`/bio`, `/tipps`).
+  - Bio-Seiten `/links` (Ziel von `/bio`) und `/start`, dazu `/tipps` → `/ratgeber`.
   - `UtmCleaner`-Infrastruktur (Vercel & GA4 erfassen Daten, Adresszeile wird nach 600 ms bereinigt).
-  - Post 01 (Google Maps) und Post 02 (Website-Fehler): jeweils 7 Karussell-Slides (1080×1350) + 3 Storys (1080×1920) im offiziellen CI gerendert.
+  - Post 01 (Google Maps) und Post 02 (Website-Fehler) sind im alten Stil online (4:5). Seit 23.09.2026 neuer Stil und ein gemeinsamer Renderer in `Instagram Firmenflow/vorlagen/render.js`. Post 03 (Azubis) und die WhatsApp-Status für Post 02 sind im neuen Stil fertig.
   - Hashtag-Strategie auf den offiziellen 2026-Standard begrenzt (ausnahmslos 3–5 gezielte Tags).
 - **Technischer Unterbau & Performance:**
   - Next.js 16 App Router mit statischem Export/SSG und Turbopack-Kompatibilität.
@@ -31,7 +31,7 @@
 
 ## Was noch offen ist
 
-- [ ] Teil 3 der Instagram-Serie („Azubis finden im Handwerk“) konzipieren und rendern.
+- [ ] Teil 3 der Instagram-Serie („Azubis finden“) posten, Grafiken liegen in `Instagram Firmenflow/posts/03_azubis/`.
 - [ ] Langzeit-Monitoring der Vercel- und GA4-Custom-Events (Quiz-Starts vs. Abschlüsse).
 - [ ] Weitere regionale Fallstudien oder Praxisbeispiele für zukünftige Ratgeber vorbereiten.
 - [ ] Regelmäßige Prüfung der externen Quellenlinks auf Aktualität.

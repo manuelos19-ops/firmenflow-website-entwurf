@@ -1,0 +1,183 @@
+{
+  "auditDate": "2026-09-22",
+  "directory": "content/ratgeber",
+  "totalPosts": 3,
+  "averageScore": 94.7,
+  "posts": [
+    {
+      "file": "google-maps-nicht-gefunden.md",
+      "published": true,
+      "score": 98,
+      "categories": {
+        "content_quality": {
+          "score": 29,
+          "max": 30
+        },
+        "seo_optimization": {
+          "score": 25,
+          "max": 25
+        },
+        "eeat_signals": {
+          "score": 14,
+          "max": 15
+        },
+        "technical_elements": {
+          "score": 15,
+          "max": 15
+        },
+        "ai_citation_readiness": {
+          "score": 15,
+          "max": 15
+        }
+      },
+      "metrics": {
+        "words": 1638,
+        "amstad": 58.1,
+        "h2": 8,
+        "h3": 5,
+        "internalLinks": 3,
+        "externalLinks": 4,
+        "sources": 5,
+        "visuals": 2,
+        "image": true
+      },
+      "issues": {
+        "critical": [],
+        "high": [],
+        "medium": [],
+        "low": [
+          "Autorenbiografie fehlt auf der Seite"
+        ]
+      }
+    },
+    {
+      "file": "website-fehler-lokale-betriebe.md",
+      "published": true,
+      "score": 94,
+      "categories": {
+        "content_quality": {
+          "score": 25,
+          "max": 30
+        },
+        "seo_optimization": {
+          "score": 25,
+          "max": 25
+        },
+        "eeat_signals": {
+          "score": 14,
+          "max": 15
+        },
+        "technical_elements": {
+          "score": 15,
+          "max": 15
+        },
+        "ai_citation_readiness": {
+          "score": 15,
+          "max": 15
+        }
+      },
+      "metrics": {
+        "words": 1103,
+        "amstad": 59.1,
+        "h2": 7,
+        "h3": 0,
+        "internalLinks": 4,
+        "externalLinks": 4,
+        "sources": 4,
+        "visuals": 2,
+        "image": true
+      },
+      "issues": {
+        "critical": [],
+        "high": [],
+        "medium": [
+          "Keine Kurzfassung am Artikelanfang"
+        ],
+        "low": [
+          "Keine eigenen Daten",
+          "Autorenbiografie fehlt auf der Seite"
+        ]
+      }
+    },
+    {
+      "file": "azubis-finden-handwerk.md",
+      "published": false,
+      "score": 92,
+      "categories": {
+        "content_quality": {
+          "score": 28,
+          "max": 30
+        },
+        "seo_optimization": {
+          "score": 24,
+          "max": 25
+        },
+        "eeat_signals": {
+          "score": 14,
+          "max": 15
+        },
+        "technical_elements": {
+          "score": 11,
+          "max": 15
+        },
+        "ai_citation_readiness": {
+          "score": 15,
+          "max": 15
+        }
+      },
+      "metrics": {
+        "words": 1018,
+        "amstad": 64.4,
+        "h2": 8,
+        "h3": 0,
+        "internalLinks": 3,
+        "externalLinks": 3,
+        "sources": 3,
+        "visuals": 3,
+        "image": false
+      },
+      "issues": {
+        "critical": [],
+        "high": [
+          "Kein Beitragsbild, dadurch kein og:image",
+          "Verwaist: keine eingehenden internen Links"
+        ],
+        "medium": [
+          "Keine H3-Ebene trotz acht H2"
+        ],
+        "low": [
+          "Autorenbiografie fehlt auf der Seite"
+        ]
+      }
+    }
+  ],
+  "siteChecks": {
+    "robotsTxt": "AI-Crawler ausdruecklich erlaubt",
+    "sitemap": "beide veroeffentlichten Artikel mit lastmod",
+    "schema": "BlogPosting, Person, Organization, BreadcrumbList",
+    "rendering": "serverseitig",
+    "lcpMobile": "1.9s",
+    "performanceScore": 99
+  },
+  "cannibalization": [
+    {
+      "topic": "Google Maps / Unternehmensprofil",
+      "posts": [
+        "website-fehler-lokale-betriebe.md",
+        "google-maps-nicht-gefunden.md"
+      ],
+      "recommendation": "differentiate",
+      "note": "Unterschiedliche Suchabsicht, bereits gegenseitig verlinkt"
+    }
+  ],
+  "orphans": [
+    "azubis-finden-handwerk.md"
+  ],
+  "deadEnds": [],
+  "stale": [],
+  "notChecked": [
+    "Search Console",
+    "GA4",
+    "CrUX-Felddaten"
+  ]
+}

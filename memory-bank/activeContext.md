@@ -2,7 +2,7 @@
 
 ## Aktueller Fokus
 
-- Instagram-Content-Engine: Teil 1 (Google Maps) und Teil 2 (Website-Fehler) mit jeweils 7 Karussell-Slides (4:5) und 3 Begleit-Storys (9:16) sowie Posting-Dokumenten fertiggestellt.
+- Social Media (Instagram und WhatsApp-Status) läuft über einen eigenen Ordner: `D:\KI Projekte\01_Marke_und_Websites\Instagram Firmenflow`. Maßgeblich sind dort `README.md`, `vorlagen/FORMAT_SPEZIFIKATIONEN.md` und `vorlagen/render.js`. Seit 23.09.2026 gilt ein neuer Stil (3:4, Glaskacheln, erste und letzte Folie kräftiges Plum, dazwischen hell). Alte Vorlagen und Generatoren liegen dort in `_archiv/` und werden nicht mehr genutzt.
 - Ratgeber- und Blog-Plattform auf `firmenflow.de` ist live, mit 3 Artikeln, individuellem Wissens-Quiz-System und Vercel Custom Event Tracking.
 - Alle Marken- und Tonalitätsrichtlinien sind im Code und im Content synchronisiert („Persönlich mit Manu“, keine KI-Phrasen, saubere mobile Typografie).
 
@@ -12,7 +12,7 @@
 - **3 vollständige Fachartikel mit echten Quellen veröffentlicht:**
   - `/ratgeber/google-maps-nicht-gefunden` (BrightLocal-, Google- und Vor-Ort-Daten)
   - `/ratgeber/website-fehler-lokale-betriebe` (Google- & BBC-Ladezeitwerte, Destatis)
-  - `/ratgeber/azubis-finden-handwerk` (Handwerkskammer, Destatis, 60-Sekunden-Bewerbung)
+  - `/ratgeber/azubis-finden-handwerk` (JIM-Studie 2025, Ausbildungsmarktbilanz der Bundesagentur für Arbeit 2024/25, Berufsbildungsbericht 2025)
 - **Interaktives Wissens-Quiz-System:**
   - Alle 3 Ratgeber-Seiten besitzen nun ein maßgeschneidertes Quiz (Kompakt-Check: 5 Fragen / Profi-Meistercheck: 10 Fragen).
   - Fragenpool mit Zufallsauswahl und vollständigem Antworten-Shuffle (dynamische Rotation der Optionen 1–3 bei jedem Durchgang).
@@ -22,7 +22,7 @@
   - Kachel `54.000` im Azubi-Artikel bricht mobil nicht mehr aus dem Container aus (`min-w-0`, responsive Schriftgröße).
   - Kacheln rechts und links auf exakt gleicher Höhe ausbalanciert (`grid items-stretch`).
   - Optischer Freiraum vor Zwischenüberschriften (z. B. „Vier Fragen, die vor der Bewerbung...“) vergrößert.
-  - Eigenes 3D-Cover-Bild für den Azubi-Artikel (`azubis_handwerk_1790109695860.jpg`).
+  - Eigenes 3D-Cover-Bild für den Azubi-Artikel (`public/images/ratgeber/azubis-finden-handwerk.webp`).
 
 ### 2. Visuelles System & Autoren-Präsenz
 - **Echte Fotos statt 3D-Avatare:**
@@ -35,7 +35,7 @@
 - **Dedizierte Bio-Seite `/start`:**
   - Schlanker, extrem schneller Mobile-First-Hub für Instagram-Besucher mit Vorstellung von Manu, Direktzugriff auf Ratgeber, Wissens-Quiz und Kontakt.
 - **Redirects in `next.config.ts`:**
-  - `/bio`, `/tipps` leiten 307-temporär auf `/start`.
+  - Weiterleitungen (geprüft 23.09.2026): `/bio` → `/links?utm_source=instagram&utm_medium=bio&utm_campaign=bio_hub`, `/tipps` → `/ratgeber?…&utm_campaign=bio_ratgeber_hub`. `/start` ist eine eigene Seite ohne Weiterleitung. Offen: ob `/start` oder `/links` die Bio-Seite sein soll.
 
 ### 4. Tracking & Kampagnen-Infrastruktur
 - **`UtmCleaner`-Komponente:**
@@ -47,13 +47,15 @@
 
 ## Nächste Schritte
 
-- Teil 3 des Instagram-Contents (Azubis finden im Handwerk) vorbereiten.
+- Teil 3 (Azubis) ist fertig gerendert in `Instagram Firmenflow/posts/03_azubis/` und wartet auf Freigabe zum Posten.
 - Vercel Analytics Dashboard auf eingehende Custom Events und Quiz-Abschlüsse prüfen.
 - Feedback zur Bio-Seite `/start` sammeln und Konversionsrate über UTM-Parameter analysieren.
 
 ## Laufende Entscheidungen & Guardrails
 
 - **Wortwahl:** Ausnahmslos **„Persönlich mit Manu“** bzw. **„persönlich mit mir“**. Niemals „direkt mit Manu“.
-- **Hashtags:** Maximal 3 bis 5 gezielte Hashtags pro Instagram-Beitrag (2026 Standard).
+- **Hashtags:** Instagram erlaubt seit Dezember 2025 höchstens 5 Hashtags pro Beitrag. Wir nutzen 3 bis 5.
+- **Social-Grafiken:** nur über `Instagram Firmenflow/vorlagen/render.js`. Keine eigenen Generatoren im Website-Projekt.
+- **Ratgeber:** Regeln in `docs/blog/REDAKTIONSLEITFADEN.md`. Nicht committen oder pushen, bevor Manu es sagt.
 - **Tracking & Datenschutz:** Jede Tracking-Änderung verlangt sofortige Synchronisation der `/datenschutz` und Erhalt des Widerrufs-Buttons.
 - **Auto-Deploy:** Produktives Deployment läuft ausschließlich automatisiert über Git-Pushes auf den `master`-Branch via Vercel.
