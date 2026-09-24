@@ -19,7 +19,7 @@ Mach den Test: Tipp deine Leistung und deinen Ort ein, etwa „Dachdecker Wesel�
 
 * Google entscheidet vor allem nach Relevanz, Entfernung und Bekanntheit, wer auf der Karte erscheint. An der Entfernung kannst du nichts ändern, an den anderen beiden schon.
 * Typische Lücken im Profil: nicht bestätigt, Öffnungszeiten oder Website fehlen, unpassende Kategorie, keine eigenen Fotos, zu wenige Bewertungen.
-* Mit dem Selbsttest findest du heraus, was bei dir fehlt. Darunter steht, was du tun kannst.
+* Mit dem Selbsttest findest du heraus, was bei dir fehlt. Darunter steht, wie es sein sollte.
 
 ## Der Selbsttest
 
@@ -43,9 +43,9 @@ Für deinen Betrieb kann es bei Google schon ein Profil geben, das du nie selbst
 
 Das Profil ist als deins bestätigt. Ein bestätigter Betrieb wird laut Google mit größerer Wahrscheinlichkeit angezeigt. So kommst du dahin ([Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de)):
 
-* Profil vorhanden: In der Google Maps App im Profil unter „Info“ auf „Inhaberschaft für dieses Unternehmen geltend machen“ tippen. Steht dort dieser Punkt, ist das Profil noch nicht bestätigt.
 * Noch kein Profil: über business.google.com/add anlegen.
-* Schon von jemand anderem bestätigt, etwa einer früheren Agentur: bei ihr die Inhaberschaft beantragen.
+* Profil da, aber nicht bestätigt: Steht in der Google Maps App im Profil unter „Info“ der Punkt „Inhaberschaft für dieses Unternehmen geltend machen“, tippst du darauf.
+* Von jemand anderem bestätigt, etwa einer früheren Agentur: bei ihr die Inhaberschaft beantragen.
 
 ::/fehler::
 
@@ -75,7 +75,7 @@ Lädst du selbst keine hoch, gibt es entweder gar kein Bild, oder dein erster Ei
 
 ::loesung::
 
-Mit Fotos zeigst du potenziellen Kunden, was du anbietest. Im Profil sind echte Bilder von Werkstatt, Team und fertigen Arbeiten, und neue Aufträge liefern laufend neue Motive. Dieselben Fotos helfen übrigens auch bei der Suche nach [Azubis und Mitarbeitern](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk).
+Mit Fotos zeigst du potenziellen Kunden, was du anbietest. Im Profil sind echte Bilder von Werkstatt, Team und fertigen Arbeiten, und neue Aufträge liefern laufend neue Motive. Dieselben Fotos kannst du auch für die Suche nach [Azubis und Mitarbeitern](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk) nutzen.
 
 ::/fehler::
 
@@ -85,7 +85,7 @@ Zur Bekanntheit zählt Google auch die Anzahl der Bewertungen: Je mehr Bewertung
 
 ::loesung::
 
-Du fragst jeden Kunden nach einer ehrlichen Bewertung und antwortest auf die, die du hast. Damit zeigst du, dass du das Feedback deiner Kunden schätzt. Wie das geht, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen).
+Du fragst jeden Kunden nach einer ehrlichen Bewertung. Und du antwortest auf die, die du hast: Damit zeigst du laut Google, dass du das Feedback deiner Kunden schätzt. Wie das geht, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen).
 
 ::/fehler::
 

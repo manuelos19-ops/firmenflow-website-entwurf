@@ -165,7 +165,7 @@
       "options": [
         "Die Leute vorher fragen",
         "Nichts, Fotos vom Team sind immer erlaubt",
-        "Die Gesichter unkenntlich machen"
+        "Die Fotos erst nach einem Jahr hochladen"
       ],
       "correctIndex": 0,
       "explanation": "Frag dein Team, bevor die Bilder auf die Seite kommen."
@@ -185,14 +185,14 @@
     {
       "id": "az_p6",
       "level": "profi",
-      "question": "Warum nennst du auf der Karriereseite eine Antwortzeit, die du auch einhältst?",
+      "question": "Welche Mediennutzung dominiert laut JIM-Studie den Alltag der 12- bis 19-Jährigen?",
       "options": [
-        "Damit Bewerber wissen, wann sie von dir hören",
-        "Weil das gesetzlich vorgeschrieben ist",
-        "Damit sich weniger Leute bewerben"
+        "Die Nutzung des Smartphones",
+        "Das Lesen von Zeitungen",
+        "Das Hören von Radio"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst."
+      "explanation": "Bei der täglichen Medienbeschäftigung dominiert laut JIM-Studie die Nutzung des Smartphones."
     },
     {
       "id": "az_p7",
@@ -221,14 +221,14 @@
     {
       "id": "az_p9",
       "level": "profi",
-      "question": "Was hilft, damit sich auch ein Geselle mit festem Job meldet?",
+      "question": "Was sollte auf der Karriereseite zur Frage „Was verdient man?“ stehen?",
       "options": [
-        "Ein schneller Weg wie eine WhatsApp-Nachricht statt Bewerbungsmappe",
-        "Ein ausführliches Online-Formular",
-        "Nur Bewerbungen per Post"
+        "Eine Zahl oder Spanne, bei Azubis die Vergütung pro Lehrjahr",
+        "„Bezahlung nach Vereinbarung“",
+        "Gar nichts, das klärt man im Gespräch"
       ],
       "correctIndex": 0,
-      "explanation": "Ein kurzer Weg hilft auch einem Gesellen, der sich neben dem Job umschaut."
+      "explanation": "Fehlt die Zahl, muss der Bewerber raten."
     },
     {
       "id": "az_p10",

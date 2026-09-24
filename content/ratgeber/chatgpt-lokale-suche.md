@@ -28,7 +28,7 @@ Frag ChatGPT einmal selbst nach deiner Leistung und deinem Ort, am besten mehrma
 * Stimmen deine Öffnungszeiten bei Google, auch für die nächsten Feiertage?
 * Beschreibt deine Hauptkategorie das, womit du tatsächlich dein Geld verdienst?
 * Stehen Name, Adresse und Telefonnummer bei werkenntdenbesten.de, Gelbe Seiten und Das Örtliche genauso wie im Google-Profil?
-* Hat dein Webdesigner geprüft, ob OpenAI deine Website lesen darf?
+* Darf der Suchroboter von OpenAI deine Website lesen?
 
 ## Die fünf Fehler und wie es richtig aussieht
 
@@ -46,7 +46,7 @@ Das Profil ist als deins bestätigt. In der Google Maps App tippst du dafür im 
 
 ::fehler: Öffnungszeiten veraltet | termin::
 
-Wer „jetzt“ oder „heute Abend“ sucht, will wissen, ob jemand erreichbar ist. Stimmen die Zeiten nicht, ruft der Kunde an, wenn keiner da ist.
+Wer „jetzt“ oder „heute Abend“ sucht, will wissen, ob jemand erreichbar ist. Stimmen die Zeiten nicht, ruft der Kunde womöglich an, wenn keiner da ist.
 
 ::loesung::
 
@@ -76,12 +76,12 @@ Name, Adresse und Telefonnummer stehen in diesen Verzeichnissen, im Google-Profi
 
 ::fehler: Website für OpenAI gesperrt | neue-website::
 
-Damit eine Website in den Suchergebnissen von ChatGPT erscheinen kann, nennt OpenAI in seiner [Hilfe](https://help.openai.com/en/articles/9237897-chatgpt-search) zwei Bedingungen. Ist eine davon nicht erfüllt, kann deine Seite dort nicht erscheinen.
+Damit eine Website in den Suchergebnissen von ChatGPT erscheinen kann, nennt OpenAI in seiner [Hilfe](https://help.openai.com/en/articles/9237897-chatgpt-search) zwei Bedingungen.
 
 ::loesung::
 
 * Der Suchroboter von OpenAI, der OAI-SearchBot, darf deine Website lesen.
-* Der Anbieter, bei dem deine Website liegt, lässt seine Zugriffe zu.
+* Der Anbieter, bei dem deine Website liegt, lässt die Zugriffe dieses Suchroboters zu.
 
 ::/fehler::
 
@@ -101,11 +101,11 @@ Nimm das als Hinweis. NeuRank verkauft selbst Beratung zu KI-Suchen, und es war 
 
 ## Ich schaue mir dein Profil an
 
-Wenn du wissen willst, wie dein Betrieb bei Google dasteht, schreib mir Betriebsnamen und Ort. Du bekommst von mir eine kostenlose Video-Einschätzung von drei bis fünf Minuten, in der ich dir zeige, was fehlt und was ich zuerst angehen würde.
+Alles, was oben unter „So sollte es sein“ steht, setze ich für dich um. Wenn du wissen willst, wie dein Betrieb bei Google dasteht, schreib mir Betriebsnamen und Ort. Du bekommst von mir eine kostenlose Video-Einschätzung von drei bis fünf Minuten, in der ich dir zeige, was fehlt und was ich zuerst angehen würde.
 
 Willst du die Arbeit abgeben, übernehme ich sie mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360): Profil anlegen für 290 Euro oder ein bestehendes aufräumen für 190 Euro. In der Betreuung für 99 Euro im Monat beantworte ich jede neue Bewertung in deinem Ton und halte dein Profil aktuell.
 
-Einmal im Monat bekommst du eine ausführliche Auswertung: was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. Dazu gebe ich dir konkrete Tipps für deinen Betrieb, aus fast zehn Jahren, in denen ich selbst Betriebe geführt, aufgebaut und vermarktet habe. Die Betreuung ist monatlich kündbar, alle Preise sind netto. Die Punkte zu deiner Website setze ich ebenfalls für dich um, am Handy wie am PC.
+Einmal im Monat bekommst du eine ausführliche Auswertung: was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. Dazu gebe ich dir konkrete Tipps für deinen Betrieb, aus fast zehn Jahren, in denen ich selbst Betriebe geführt, aufgebaut und vermarktet habe. Die Betreuung ist monatlich kündbar, alle Preise sind netto.
 
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 

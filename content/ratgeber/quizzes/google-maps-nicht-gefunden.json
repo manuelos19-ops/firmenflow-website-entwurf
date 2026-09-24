@@ -153,7 +153,7 @@
       "options": [
         "Ob deine Website eingetragen ist",
         "Ob dein Lieblingsfoto das Titelbild ist",
-        "Ob Mitbewerber dich bewertet haben"
+        "Wie viele Mitarbeiter deine Mitbewerber haben"
       ],
       "correctIndex": 0,
       "explanation": "Im Profil sollte auch deine Website stehen."
@@ -168,7 +168,7 @@
         "Mit gar niemandem"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Blick auf die Betriebe über dir zeigt oft, woran es liegt."
+      "explanation": "Ein Blick auf die Betriebe über dir lohnt sich."
     },
     {
       "id": "gm_p5",

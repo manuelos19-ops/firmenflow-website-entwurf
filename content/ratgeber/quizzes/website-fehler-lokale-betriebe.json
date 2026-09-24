@@ -127,12 +127,12 @@
       "level": "profi",
       "question": "Was zeigen die Beispiele von Rakuten und Vodafone auf Googles Seite web.dev?",
       "options": [
-        "Nachdem die Seiten schneller wurden, stieg der Umsatz",
+        "Nachdem sie ihre Seiten verbessert hatten, stieg der Umsatz",
         "Langsame Seiten verkaufen besser",
-        "Die Ladezeit spielte keine Rolle"
+        "Die Leistung der Seite spielte keine Rolle"
       ],
       "correctIndex": 0,
-      "explanation": "Laut web.dev stieg bei beiden der Umsatz, nachdem sie an der Leistung ihrer Seiten gearbeitet hatten."
+      "explanation": "Laut web.dev investierte Rakuten 24 in die Core Web Vitals, Vodafone verbesserte seine Ladezeit, und bei beiden stieg danach der Umsatz."
     },
     {
       "id": "w_p2",

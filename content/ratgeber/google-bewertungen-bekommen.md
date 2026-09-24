@@ -35,11 +35,11 @@ Geh die fünf Fragen einmal ehrlich durch. Zu jedem Nein steht darunter, wie es 
 
 ::fehler: Kein Bewertungslink griffbereit | externer-link::
 
-Ohne Link muss der Kunde dein Profil erst selbst suchen, bevor er schreiben kann. Das ist ein Schritt mehr, bei dem er es womöglich auf später verschiebt.
+Ohne eigenen Link muss der Kunde dein Profil erst selbst suchen, bevor er eine Bewertung schreiben kann.
 
 ::loesung::
 
-Dein eigener Bewertungslink liegt als Notiz oder Textbaustein in WhatsApp Business bereit. Über ihn schreibt der Kunde eine Bewertung, ohne dein Profil suchen zu müssen. So holst du ihn laut [Google-Hilfe](https://support.google.com/business/answer/16816815?hl=de):
+Dein eigener Bewertungslink liegt als Notiz oder Textbaustein in WhatsApp Business bereit. So holst du ihn laut [Google-Hilfe](https://support.google.com/business/answer/16816815?hl=de):
 
 1. Dein Google-Profil aufrufen, angemeldet mit dem Google-Konto, mit dem du es verwaltest.
 2. „Rezensionen lesen“ antippen.
@@ -52,23 +52,23 @@ Den passenden QR-Code für Visitenkarte oder Übergabeprotokoll bekommst du an d
 
 ::fehler: Du fragst gar nicht | kennenlernen::
 
-Das Lob beim Abschied landet nicht von allein bei Google. Die Frage muss von dir kommen.
+Das Lob beim Abschied landet nicht von allein bei Google. Oft braucht es dafür eine kurze Frage von dir.
 
 ::loesung::
 
 Du fragst, wenn der Kunde gerade selbst etwas Positives gesagt hat: bei der Abnahme, bei der Schlüsselübergabe, wenn er sich für die schnelle Hilfe bedankt. Ein Satz reicht: „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Eine ehrliche Bewertung bei Google hilft mir sehr.“
 
-Am Abend schickst du den Link, dann schreibt er in Ruhe: „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
+Am Abend schickst du den Link, so kann er in Ruhe schreiben: „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
 
 ::/fehler::
 
 ::fehler: Du fragst nur die Zufriedenen | lob::
 
-Google verbietet, gezielt um positive Bewertungen zu bitten oder negative zu verhindern ([Richtlinien](https://support.google.com/contributionpolicy/answer/7400114?hl=de)). Wer nur die Kunden fragt, bei denen alles glatt lief, kommt dem gefährlich nahe.
+Google verbietet, Kunden gezielt um positive Bewertungen zu bitten oder negative zu verhindern, etwa indem du nur die fragst, bei denen alles glatt lief ([Richtlinien](https://support.google.com/contributionpolicy/answer/7400114?hl=de)).
 
 ::loesung::
 
-Du fragst jeden Kunden, auch nach einem holprigen Auftrag, zum Beispiel beim Abschlussgespräch: „Wie zufrieden sind Sie am Ende? Ich freue mich über eine ehrliche Bewertung.“ Das „und was nicht“ in deiner Nachricht ist Absicht: Du bittest um eine ehrliche Meinung, keine fünf Sterne.
+Du fragst jeden Kunden, auch nach einem holprigen Auftrag, zum Beispiel beim Abschlussgespräch: „Wie zufrieden sind Sie am Ende? Ich freue mich über eine ehrliche Bewertung.“ Schreib in deine Nachricht ruhig „was Ihnen gefallen hat und was nicht“. Du bittest um eine ehrliche Meinung, keine fünf Sterne.
 
 ::/fehler::
 
@@ -79,7 +79,7 @@ Um Bewertungen bitten darfst du, solange du nichts dafür anbietest und die Bewe
 ::loesung::
 
 * Keine Gegenleistung: kein Rabatt, keine Gratis-Wartung, kein Gutschein als Dankeschön.
-* Kein Druck: Du darfst den Kunden nicht auffordern oder drängen, die Bewertung noch vor Ort zu schreiben. Fragen darfst du dort, geschrieben wird später.
+* Kein Druck: Du darfst den Kunden nicht auffordern oder drängen, die Bewertung noch vor Ort zu schreiben.
 * Keine Vorgaben: kein vorgeschriebener Text, keine Namen bestimmter Mitarbeiter, keine Stückzahlen für dein Team.
 * Keine Familienrunde: Familiäre Beziehungen und eine aktuelle oder frühere Beschäftigung nennt Google als Beispiele für einen Interessenkonflikt. Deine Gesellen und deine Schwester schreiben also keine Bewertung.
 
@@ -117,7 +117,7 @@ Laut [Google](https://support.google.com/business/answer/7091?hl=de) kann deine 
 | KFZ-Werkstatt | 50 |
 | Bäckerei | 132 |
 
-Als Elektriker oder Fliesenleger liegst du mit fünfzehn ehrlichen Bewertungen also schon über dem Median. Eine Kampagne brauchst du dafür nicht. Es hilft, über Monate jeden Kunden zu fragen. Einzelne Werte beruhen allerdings auf wenigen Betrieben, bei den Fliesenlegern auf neun.
+Als Elektriker oder Fliesenleger liegst du mit fünfzehn ehrlichen Bewertungen also schon über dem Median. Eine Kampagne brauchst du dafür nicht. Einzelne Werte beruhen allerdings auf wenigen Betrieben, bei den Fliesenlegern auf neun.
 
 ## Wenn du das abgeben willst
 

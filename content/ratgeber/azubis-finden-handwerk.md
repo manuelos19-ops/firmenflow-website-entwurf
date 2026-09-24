@@ -33,7 +33,7 @@ Nimm dein Handy und geh die fünf Fragen durch, so wie es ein Bewerber tun könn
 
 ::fehler: Bewerber finden nichts | analyse::
 
-Findet ein Bewerber gar nichts, denkt er womöglich, dass es den Betrieb nicht mehr gibt. Findet er deinen Betrieb, aber nichts zur Ausbildung, bleibt die wichtigste Frage offen.
+Findet ein Bewerber gar nichts, denkt er womöglich, dass es den Betrieb nicht mehr gibt. Findet er deinen Betrieb, aber nichts zur Ausbildung, fehlt die Seite mit offenen Stellen.
 
 ::loesung::
 
@@ -43,16 +43,18 @@ Bei deinem Betriebsnamen plus „Ausbildung“ findet man dein Google-Profil und
 
 ::fehler: Keine Seite mit offenen Stellen | neue-website::
 
-„Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ kann jeder schreiben. Ohne eigene Seite erfährt ein Bewerber nicht, wer du bist und was ihn erwartet.
+Ohne eigene Seite muss ein Bewerber raten, wer du bist, wie ein Tag bei dir aussieht und was er verdient.
 
 ::loesung::
 
-Eine Seite mit offenen Stellen, oft Karriereseite genannt, beantwortet vier Fragen, und zwar überprüfbar:
+Eine Seite mit offenen Stellen, oft Karriereseite genannt, beantwortet vier Fragen:
 
 * Wer ist der Chef? Ein Foto von dir und drei Sätze in deinen Worten.
 * Wie läuft ein Tag ab? Wann Arbeitsbeginn ist, womit angefangen wird, wie viele im Team sind, was Feierabend heißt.
 * Was verdient man? Eine Zahl oder eine Spanne, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, muss der Bewerber raten.
 * Wie bewirbt man sich? Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst.
+
+„Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ kann jeder schreiben. Diese vier Antworten dagegen sind überprüfbar.
 
 ::/fehler::
 
@@ -94,7 +96,7 @@ Die 93 Bewerber auf 100 betriebliche Stellen nennt die [Bundesagentur für Arbei
 
 ## Wenn du das angehen willst
 
-Eine Seite mit offenen Stellen kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Bei Firmenflow baue ich die Seite auf, für Handy und PC, schreibe die Texte und komme auf Wunsch zum Fotografieren zu dir nach Wesel und Umgebung.
+Eine Seite mit offenen Stellen kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Bei Firmenflow baue ich die Seite, die am Handy und am PC funktioniert, schreibe die Texte und komme auf Wunsch zum Fotografieren zu dir nach Wesel und Umgebung.
 
 Ein Onepager, also eine Website auf einer einzigen Seite, startet bei 690 Euro netto. Ein Auftritt mit mehreren Seiten, etwa mit einer eigenen Seite für offene Stellen, liegt darüber, den Festpreis nenne ich dir vorher. Der Fototermin kostet 350 Euro. Für Hosting, also den Betrieb der Website im Netz, Updates und 30 Minuten Änderungen kommen 39 Euro im Monat dazu, monatlich kündbar. Alle Preise sind netto.
 
