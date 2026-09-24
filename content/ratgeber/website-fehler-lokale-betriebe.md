@@ -19,11 +19,11 @@ Wer neu in den Ort gezogen ist oder dringend einen Fachbetrieb braucht, sucht vi
 
 * Fünf Stellen prüfst du in zwei Minuten selbst: Ladezeit, Telefonnummer, Fotos, Google-Profil und die erste Überschrift.
 * Am wichtigsten: Die Seite muss schnell laden, und die Nummer muss sich mit einem Tipp anrufen lassen.
-* Zu jedem Punkt steht unten, was du oder dein Webdesigner tun könnt.
+* Zu jedem Punkt steht unten, wie es richtig aussieht.
 
 ## Der Smartphone-Test
 
-Nimm jetzt dein Handy und öffne deine eigene Website, am besten im Mobilfunknetz statt im WLAN. Dann geh die fünf Fragen durch.
+Nimm jetzt dein Handy und öffne deine eigene Website, am besten im Mobilfunknetz statt im WLAN. Dann geh die fünf Fragen durch. Zu jedem Nein steht darunter, wie es sein sollte.
 
 * Baut sich die Seite sofort auf?
 * Kannst du deine Telefonnummer mit einem Daumentipp anrufen?
@@ -31,49 +31,63 @@ Nimm jetzt dein Handy und öffne deine eigene Website, am besten im Mobilfunknet
 * Stimmen deine Angaben mit deinem Google-Profil überein?
 * Versteht jemand sofort, was du anbietest und wo du tätig bist?
 
-## Was du bei einem Nein tun kannst
+## Die fünf Fehler und wie es richtig aussieht
 
-### Die Seite lädt langsam
+::fehler: Die Seite lädt langsam | ladezeit-performance::
 
 Jede Sekunde zählt. Auf Googles Entwicklerseite [web.dev](https://web.dev/learn/performance/why-speed-matters) steht ein Wert, den die BBC, eine große britische Nachrichtenseite, an der eigenen Website gemessen hat: Für jede zusätzliche Sekunde Ladezeit verlor sie weitere 10 Prozent ihrer Nutzer.
 
-Lass deine Seite mit Googles kostenlosem Test [PageSpeed Insights](https://pagespeed.web.dev/) prüfen. Den Bericht musst du nicht verstehen. Schick den Link deinem Webdesigner und frag, was er daraus macht.
+::loesung::
 
-### Die Nummer lässt sich nicht antippen
+Die Seite steht am Handy sofort da, auch unterwegs im Mobilfunknetz. Ob sie irgendwo hakt, zeigt Googles kostenloser Test [PageSpeed Insights](https://pagespeed.web.dev/).
 
-Wer vor Ort einen Betrieb sucht, will wissen, ob du sein Problem löst und wie er dich erreicht. Steht die Nummer nur irgendwo im Text oder verlangt das Formular Angaben, die der Kunde noch gar nicht kennt, ruft er vielleicht lieber woanders an. Bitte deinen Webdesigner um diese drei Dinge:
+::/fehler::
 
-::karten::
+::fehler: Die Nummer lässt sich nicht antippen | telefon::
 
-| Kontaktweg | So sollte es auf dem Handy aussehen |
-| --- | --- |
-| Anrufen | Ein gut sichtbarer Knopf, der sich mit einem Daumentipp wählen lässt |
-| WhatsApp | Eine schnelle Nachricht für Rückfragen, ohne Formular |
-| Beschriftung | „Reparatur anfragen“ auf dem Knopf statt eines unpersönlichen „Senden“ |
+Wer vor Ort einen Betrieb sucht, will wissen, ob du sein Problem löst und wie er dich erreicht. Steht die Nummer nur irgendwo im Text oder verlangt das Formular Angaben, die der Kunde noch gar nicht kennt, ruft er vielleicht lieber woanders an.
 
-### Nur gekaufte Fotos
+::loesung::
 
-Drei strahlende Fotomodelle mit blütenweißen Bauhelmen erkennt jeder als Katalogbild. Wer einen Handwerker ins Haus lässt, will sehen, wer da kommt. Ein ehrliches Foto von dir bei der Arbeit, von deiner Werkstatt oder einem fertigen Projekt überzeugt mehr.
+* Ein gut sichtbarer Knopf zum Anrufen, ein Daumentipp reicht.
+* WhatsApp für schnelle Rückfragen, ohne Formular.
+* Auf dem Knopf steht „Reparatur anfragen“ statt eines unpersönlichen „Senden“.
 
-### Google-Profil und Website passen nicht zusammen
+::/fehler::
 
-Weichen Nummer, Adresse oder Öffnungszeiten im Google-Profil von deiner Website ab, ist eine der beiden Angaben falsch. Laut [Google-Hilfe](https://support.google.com/business/answer/7091?hl=de) wird ein Profil mit falschen Angaben möglicherweise nicht bei passenden Suchen aus deiner Gegend angezeigt. Gleich die Angaben ab. Hast du dein Profil noch nicht übernommen, findest du in der Google Maps App im Profil unter „Info“ den Punkt „Inhaberschaft für dieses Unternehmen geltend machen“. Mehr dazu steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden).
+::fehler: Nur gekaufte Fotos | foto::
 
-### Floskeln statt klarer Angaben
+Drei strahlende Fotomodelle mit blütenweißen Bauhelmen erkennt jeder als Katalogbild. Wer einen Handwerker ins Haus lässt, will sehen, wer da kommt.
 
-Beginnt deine Startseite so?
+::loesung::
 
-*„Herzlich willkommen. Seit vielen Jahren stehen wir für Qualität, Kompetenz und Zuverlässigkeit.“*
+Echte Fotos von dir bei der Arbeit, von deiner Werkstatt, deinen Fahrzeugen und fertigen Projekten.
 
-Diesen Satz könnte jeder deiner Mitbewerber schreiben. Nenn gleich oben deine Leistung und deinen Ort, etwa so:
+::/fehler::
 
-*„Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an und beschreiben Sie kurz, was mit Ihrer Heizung los ist.“*
+::fehler: Google-Profil und Website passen nicht zusammen | unternehmensprofil::
 
-Firmengeschichte und Urkunden gehören weiter nach unten. Sie belegen deine gute Arbeit, sobald der Kunde weiß, worum es geht.
+Weichen Nummer, Adresse oder Öffnungszeiten im Google-Profil von deiner Website ab, ist eine der beiden Angaben falsch. Laut [Google-Hilfe](https://support.google.com/business/answer/7091?hl=de) wird ein Profil mit falschen Angaben möglicherweise nicht bei passenden Suchen aus deiner Gegend angezeigt.
+
+::loesung::
+
+Name, Adresse, Telefonnummer und Öffnungszeiten stehen im Google-Profil genauso wie auf der Website, und das Profil ist als deins bestätigt. Wie du es übernimmst, steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden).
+
+::/fehler::
+
+::fehler: Floskeln statt klarer Angaben | texte-copywriting::
+
+Beginnt deine Startseite mit „Herzlich willkommen. Seit vielen Jahren stehen wir für Qualität, Kompetenz und Zuverlässigkeit“? Diesen Satz könnte jeder deiner Mitbewerber schreiben.
+
+::loesung::
+
+Gleich oben stehen deine Leistung und dein Ort, etwa so: „Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an und beschreiben Sie kurz, was mit Ihrer Heizung los ist.“ Firmengeschichte und Urkunden kommen weiter unten, als Beleg für deine gute Arbeit.
+
+::/fehler::
 
 ## Wie wirkt dein Betrieb auf Neukunden?
 
-Hol dir eine [kostenlose Video-Einschätzung](https://www.firmenflow.de/anfrage) von drei bis fünf Minuten für Website und Google-Profil. Ich rufe deine Seite auf dem Handy auf, schaue sie mir an wie ein Kunde und zeige dir, wo Kunden hängen bleiben könnten und was ich zuerst ändern würde.
+Alles, was oben unter „So sollte es sein“ steht, setze ich für dich um. Hol dir vorher gern eine [kostenlose Video-Einschätzung](https://www.firmenflow.de/anfrage) von drei bis fünf Minuten für Website und Google-Profil. Ich rufe deine Seite auf dem Handy auf, schaue sie mir an wie ein Kunde und zeige dir, wo Kunden hängen bleiben könnten und was ich zuerst ändern würde.
 
 Bei Firmenflow baue ich [neue Websites und überarbeite bestehende](https://www.firmenflow.de/#leistungen). Ich übernehme Struktur, Texte und Technik und fotografiere auf Wunsch bei dir vor Ort. Du kennst Umfang und Festpreis vor dem ersten Handgriff, und online geht die Seite erst nach deiner Freigabe. Um dein Google-Profil kümmere ich mich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360).
 
@@ -83,5 +97,5 @@ Bei Firmenflow baue ich [neue Websites und überarbeite bestehende](https://www.
 
 1. **Google web.dev:** [Why speed matters](https://web.dev/learn/performance/why-speed-matters) (BBC-Wert im Artikel, Vodafone und Rakuten im Quiz)
 2. **Google Unternehmensprofil-Hilfe:** [Ranking in lokalen Suchergebnissen auf Google verbessern](https://support.google.com/business/answer/7091?hl=de) (vollständige und korrekte Angaben)
-3. **Google Unternehmensprofil-Hilfe:** [Ihr Unternehmensprofil hinzufügen oder Anspruch darauf erheben](https://support.google.com/business/answer/2911778?hl=de) (Profil übernehmen)
+3. **Google Unternehmensprofil-Hilfe:** [Ihr Unternehmensprofil hinzufügen oder Anspruch darauf erheben](https://support.google.com/business/answer/2911778?hl=de) (im Quiz: Profil übernehmen)
 4. **Statistisches Bundesamt (Destatis):** [Erhebungen zur IT- und Internetnutzung in Deutschland](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/IT-Nutzung/_inhalt.html) (im Quiz: Internetnutzung der 16- bis 74-Jährigen)

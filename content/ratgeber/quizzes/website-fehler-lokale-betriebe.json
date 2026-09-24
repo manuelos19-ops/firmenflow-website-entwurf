@@ -269,14 +269,14 @@
     {
       "id": "w_p13",
       "level": "profi",
-      "question": "Was tust du mit dem Bericht von PageSpeed Insights, wenn du ihn nicht verstehst?",
+      "question": "Was zeigt dir Googles kostenloser Test PageSpeed Insights?",
       "options": [
-        "Den Link deinem Webdesigner schicken und fragen, was er daraus macht",
-        "Den Bericht ignorieren, er ist nur für Google",
-        "Die Website sofort abschalten"
+        "Ob deine Seite beim Laden irgendwo hakt",
+        "Wie viele Kunden dich angerufen haben",
+        "Welche Mitbewerber es in deinem Ort gibt"
       ],
       "correctIndex": 0,
-      "explanation": "Den Bericht musst du nicht verstehen. Dein Webdesigner kann damit arbeiten."
+      "explanation": "PageSpeed Insights zeigt, ob deine Seite beim Laden irgendwo hakt."
     },
     {
       "id": "w_p14",
@@ -353,14 +353,14 @@
     {
       "id": "w_p20",
       "level": "profi",
-      "question": "Worum bittest du deinen Webdesigner, wenn sich die Nummer auf dem Handy nicht antippen lässt?",
+      "question": "Was gehört neben dem Anruf-Knopf zu einem einfachen Kontaktweg am Handy?",
       "options": [
-        "Sie als gut sichtbaren Knopf anzulegen, der mit einem Daumentipp anruft",
-        "Die Nummer ganz zu entfernen",
-        "Die Nummer als Bild einzufügen"
+        "WhatsApp für schnelle Rückfragen, ohne Formular",
+        "Ein Formular mit vielen Pflichtfeldern",
+        "Eine Faxnummer"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Knopf, der mit einem Daumentipp anruft, erspart dem Kunden das Abtippen."
+      "explanation": "WhatsApp eignet sich für schnelle Rückfragen, ganz ohne Formular."
     }
   ]
 }

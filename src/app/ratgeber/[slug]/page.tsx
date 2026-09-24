@@ -11,6 +11,7 @@ import { RatgeberKarten } from "@/components/ratgeber/RatgeberKarten";
 import { RatgeberZahlen } from "@/components/ratgeber/RatgeberZahlen";
 import { RatgeberAutor } from "@/components/ratgeber/RatgeberAutor";
 import { RatgeberHinweis } from "@/components/ratgeber/RatgeberHinweis";
+import { RatgeberFehler } from "@/components/ratgeber/RatgeberFehler";
 import { RatgeberShareButton } from "@/components/ratgeber/RatgeberShareButton";
 import { RatgeberViewTracker } from "@/components/ratgeber/RatgeberViewTracker";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
@@ -126,6 +127,19 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
   }
   if (section.kind === "note") {
     return <RatgeberHinweis title={section.title} paragraphs={section.paragraphs} image={section.image} />;
+  }
+  if (section.kind === "fault") {
+    return (
+      <RatgeberFehler
+        id={section.id}
+        number={section.number}
+        title={section.title}
+        icon={section.icon}
+        problem={section.problem}
+        solution={section.solution}
+        solutionList={section.solutionList}
+      />
+    );
   }
   if (section.kind === "quote") {
     return (

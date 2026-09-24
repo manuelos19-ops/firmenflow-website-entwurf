@@ -48,6 +48,7 @@ export type RatgeberSection =
   | { kind: "cards"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "stats"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "note"; title: string; paragraphs: string[]; image?: RatgeberNoteImage }
+  | { kind: "fault"; id: string; number: number; title: string; icon: string; problem: string[]; solution: string[]; solutionList: string[] }
   | { kind: "cta"; html: string };
 
 export type RatgeberNoteImage = { src: string; alt: string; caption?: string };
@@ -131,6 +132,43 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   // Hinweisbox: ::hinweis: Titel:: ... ::/hinweis::, darin Absaetze und
   // optional ein Bild als ![Alt](/pfad.webp "Bildunterschrift").
   let note: { title: string; paragraphs: string[]; buffer: string[]; image?: RatgeberNoteImage } | null = null;
+
+  // Fehler-Karte: ::fehler: Titel | icon-name:: … Problem … ::loesung:: … Lösung … ::/fehler::
+  // Die Lösung darf Absätze und eine Aufzählung enthalten. Karten werden fortlaufend nummeriert.
+  let fault: {
+    title: string;
+    icon: string;
+    problem: string[];
+    solution: string[];
+    solutionList: string[];
+    buffer: string[];
+    inSolution: boolean;
+  } | null = null;
+  let faultCount = 0;
+
+  const flushFaultPara = () => {
+    if (!fault || fault.buffer.length === 0) return;
+    const p = inlineMarkdown(fault.buffer.join(" ").trim());
+    (fault.inSolution ? fault.solution : fault.problem).push(p);
+    fault.buffer = [];
+  };
+
+  const closeFault = () => {
+    if (!fault) return;
+    flushFaultPara();
+    const { title, icon, problem, solution, solutionList } = fault;
+    fault = null;
+    faultCount += 1;
+    const id = slugify(title);
+    headings.push({ id, text: title, level: 3 });
+    html.push(
+      `<section><h3 id="${id}">${inlineMarkdown(title)}</h3>${problem.map((t) => `<p>${t}</p>`).join("")}` +
+        `<p><strong>So sollte es sein:</strong></p>${solution.map((t) => `<p>${t}</p>`).join("")}` +
+        (solutionList.length ? `<ul>${solutionList.map((t) => `<li>${t}</li>`).join("")}</ul>` : "") +
+        `</section>`,
+    );
+    sections.push({ kind: "fault", id, number: faultCount, title: inlineMarkdown(title), icon, problem, solution, solutionList });
+  };
 
   const flushNotePara = () => {
     if (!note || note.buffer.length === 0) return;
@@ -250,6 +288,36 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
         continue;
       }
       note.buffer.push(trimmed);
+      continue;
+    }
+    if (fault) {
+      if (/^::\/fehler::$/.test(trimmed)) {
+        closeFault();
+        continue;
+      }
+      if (/^::loesung::$/.test(trimmed)) {
+        flushFaultPara();
+        fault.inSolution = true;
+        continue;
+      }
+      if (!trimmed) {
+        flushFaultPara();
+        continue;
+      }
+      if (fault.inSolution && /^[-*]\s+/.test(trimmed)) {
+        flushFaultPara();
+        fault.solutionList.push(inlineMarkdown(trimmed.replace(/^[-*]\s+/, "")));
+        continue;
+      }
+      fault.buffer.push(trimmed);
+      continue;
+    }
+    const faultMark = trimmed.match(/^::fehler:\s*(.+?)(?:\s*\|\s*([a-z-]+))?::$/);
+    if (faultMark) {
+      flushPara();
+      closeList();
+      closeTable();
+      fault = { title: faultMark[1].trim(), icon: faultMark[2] || "fehler", problem: [], solution: [], solutionList: [], buffer: [], inSolution: false };
       continue;
     }
     const noteMark = trimmed.match(/^::hinweis(?::\s*(.*?))?::$/);
@@ -383,6 +451,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   closeList();
       closeTable();
   closeNote();
+  closeFault();
   return { html: html.join("\n"), headings, sections };
 }
 
