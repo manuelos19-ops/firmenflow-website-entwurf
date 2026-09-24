@@ -24,7 +24,7 @@ const modelle: readonly Modell[] = [
     price: "690 €",
     priceNote: "einmalig",
     claim: "Eine Seite, die alles sagt.",
-    text: "Ideal, wenn du neu startest oder deine alte Seite endlich ersetzen willst. Ich baue dir einen kompakten Auftritt, der auf dem Handy überzeugt, mit Texten, die nach dir klingen, und Bildern, die zu deinem Betrieb passen.",
+    text: "Ideal, wenn du neu startest oder deine alte Seite endlich ersetzen willst. Ich baue dir einen kompakten Auftritt, der auf dem Handy und am PC überzeugt, mit Texten, die nach dir klingen, und Bildern, die zu deinem Betrieb passen.",
     points: ["Aufbau, Struktur und Design aus einer Hand", "Texte geschrieben, Bilder eingebunden", "In 1 bis 2 Wochen live, ohne Baukasten-Look"],
     icons: ["struktur-wireframe", "texte-copywriting", "go-live"],
     featured: false,

@@ -18,7 +18,7 @@ Wer neu in den Ort gezogen ist oder dringend einen Fachbetrieb braucht, sucht vi
 ## Kurz gesagt
 
 * Fünf Stellen prüfst du in zwei Minuten selbst: Ladezeit, Telefonnummer, Fotos, Google-Profil und die erste Überschrift.
-* Am wichtigsten: Die Seite muss schnell laden, und die Nummer muss sich mit einem Tipp anrufen lassen.
+* Am wichtigsten: Die Seite muss schnell laden, und die Nummer muss sich mit einem Tipp anrufen lassen. Am PC muss natürlich alles genauso stimmen.
 * Zu jedem Punkt steht unten, wie es richtig aussieht.
 
 ## Der Smartphone-Test
@@ -39,7 +39,7 @@ Jede Sekunde zählt. Auf Googles Entwicklerseite [web.dev](https://web.dev/learn
 
 ::loesung::
 
-Die Seite steht am Handy sofort da, auch unterwegs im Mobilfunknetz. Ob sie irgendwo hakt, zeigt Googles kostenloser Test [PageSpeed Insights](https://pagespeed.web.dev/).
+Die Seite steht am Handy sofort da, auch unterwegs im Mobilfunknetz, und am PC genauso. Ob sie irgendwo hakt, zeigt Googles kostenloser Test [PageSpeed Insights](https://pagespeed.web.dev/).
 
 ::/fehler::
 
@@ -87,9 +87,9 @@ Gleich oben stehen deine Leistung und dein Ort, etwa so: „Heizungswartung und 
 
 ## Wie wirkt dein Betrieb auf Neukunden?
 
-Alles, was oben unter „So sollte es sein“ steht, setze ich für dich um. Hol dir vorher gern eine [kostenlose Video-Einschätzung](https://www.firmenflow.de/anfrage) von drei bis fünf Minuten für Website und Google-Profil. Ich rufe deine Seite auf dem Handy auf, schaue sie mir an wie ein Kunde und zeige dir, wo Kunden hängen bleiben könnten und was ich zuerst ändern würde.
+Alles, was oben unter „So sollte es sein“ steht, setze ich für dich um. Hol dir vorher gern eine [kostenlose Video-Einschätzung](https://www.firmenflow.de/anfrage) von drei bis fünf Minuten für Website und Google-Profil. Ich rufe deine Seite auf dem Handy und am PC auf, schaue sie mir an wie ein Kunde und zeige dir, wo Kunden hängen bleiben könnten und was ich zuerst ändern würde.
 
-Bei Firmenflow baue ich [neue Websites und überarbeite bestehende](https://www.firmenflow.de/#leistungen). Ich übernehme Struktur, Texte und Technik und fotografiere auf Wunsch bei dir vor Ort. Du kennst Umfang und Festpreis vor dem ersten Handgriff, und online geht die Seite erst nach deiner Freigabe. Um dein Google-Profil kümmere ich mich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360).
+Bei Firmenflow baue ich [neue Websites und überarbeite bestehende](https://www.firmenflow.de/#leistungen), die am Handy und am PC gleich gut funktionieren. Ich übernehme Struktur, Texte und Technik und fotografiere auf Wunsch bei dir vor Ort. Du kennst Umfang und Festpreis vor dem ersten Handgriff, und online geht die Seite erst nach deiner Freigabe. Um dein Google-Profil kümmere ich mich mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360).
 
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 

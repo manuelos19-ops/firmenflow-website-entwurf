@@ -22,7 +22,7 @@ Muss ich mich jetzt auch noch um KI kümmern? Das meiste davon ist Arbeit, die s
 
 ## Der Selbsttest
 
-Frag ChatGPT einmal selbst nach deiner Leistung und deinem Ort, am besten mehrmals, denn die Antworten fallen nicht jedes Mal gleich aus. Dann geh diese fünf Fragen durch. Zu jedem Nein steht darunter, was du tun kannst.
+Frag ChatGPT einmal selbst nach deiner Leistung und deinem Ort, am besten mehrmals, denn die Antworten fallen nicht jedes Mal gleich aus. Dann geh diese fünf Fragen durch. Zu jedem Nein steht darunter, wie es sein sollte.
 
 * Hast du dein Google-Profil als Inhaber bestätigt?
 * Stimmen deine Öffnungszeiten bei Google, auch für die nächsten Feiertage?
@@ -30,29 +30,60 @@ Frag ChatGPT einmal selbst nach deiner Leistung und deinem Ort, am besten mehrma
 * Stehen Name, Adresse und Telefonnummer bei werkenntdenbesten.de, Gelbe Seiten und Das Örtliche genauso wie im Google-Profil?
 * Hat dein Webdesigner geprüft, ob OpenAI deine Website lesen darf?
 
-## Was du bei einem Nein tun kannst
+## Die fünf Fehler und wie es richtig aussieht
 
 Über dein Google-Profil finden Kunden dich laut Google in der Google Suche und auf Google Maps. Genau dorthin führten viele Links in den ChatGPT-Antworten.
 
-### Profil nicht bestätigt
+::fehler: Profil nicht bestätigt | profil-einrichten::
 
-Öffne die Google Maps App, such deinen Betrieb und tipp im Profil unter „Info“ auf „Inhaberschaft für dieses Unternehmen geltend machen“. Gibt es noch gar kein Profil, legst du eins über business.google.com/add an. Beides steht in der [Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de). Erst danach kannst du die Angaben selbst pflegen, und auf [Bewertungen antworten](https://support.google.com/business/answer/3474050?hl=de) kannst du erst nach der Bestätigung.
+Für deinen Betrieb kann es bei Google schon ein Profil geben, das du nie selbst angelegt hast. Solange es nicht bestätigt ist, kannst du die Angaben nicht selbst pflegen, und auf [Bewertungen antworten](https://support.google.com/business/answer/3474050?hl=de) kannst du erst nach der Bestätigung.
 
-### Öffnungszeiten veraltet
+::loesung::
 
-Wer „jetzt“ oder „heute Abend“ sucht, will wissen, ob jemand erreichbar ist. Trag die aktuellen Zeiten ein und dazu [spezielle Öffnungszeiten](https://support.google.com/business/answer/7091?hl=de) für Feiertage und Betriebsferien. Sonst ruft der Kunde an, wenn keiner da ist.
+Das Profil ist als deins bestätigt. In der Google Maps App tippst du dafür im Profil unter „Info“ auf „Inhaberschaft für dieses Unternehmen geltend machen“. Gibt es noch gar kein Profil, legst du eins über business.google.com/add an. Beides steht in der [Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de).
 
-### Kategorie passt nicht
+::/fehler::
+
+::fehler: Öffnungszeiten veraltet | termin::
+
+Wer „jetzt“ oder „heute Abend“ sucht, will wissen, ob jemand erreichbar ist. Stimmen die Zeiten nicht, ruft der Kunde an, wenn keiner da ist.
+
+::loesung::
+
+Im Profil stehen die aktuellen Zeiten und [spezielle Öffnungszeiten](https://support.google.com/business/answer/7091?hl=de) für Feiertage und Betriebsferien.
+
+::/fehler::
+
+::fehler: Kategorie passt nicht | analyse::
 
 Die Hauptkategorie sagt Google, was für ein Betrieb du bist. Ein Sanitärbetrieb, der als allgemeines Bauunternehmen eingetragen ist, passt zum Beispiel schlechter zur Suche nach „Bad sanieren“ als einer, der genau dafür eingetragen ist.
 
-### Alte Angaben in Verzeichnissen
+::loesung::
 
-Perplexity, eine andere KI-Suche, hat im selben Test oft Bewertungsportale und Verzeichnisse zitiert, allen voran werkenntdenbesten.de, Gelbe Seiten und Das Örtliche. Steht dort noch eine alte Adresse oder Nummer, kann die KI genau die weitergeben. Such deinen Betrieb dort und sorg dafür, dass Name, Adresse und Telefonnummer überall gleich stehen, auch auf deiner Website.
+Die Hauptkategorie beschreibt genau das, womit du dein Geld verdienst.
 
-### Website für OpenAI gesperrt
+::/fehler::
 
-Damit eine Website in den Suchergebnissen von ChatGPT erscheinen kann, nennt OpenAI in seiner [Hilfe](https://help.openai.com/en/articles/9237897-chatgpt-search) zwei Bedingungen. Der Suchroboter von OpenAI, der OAI-SearchBot, muss sie lesen dürfen. Und der Anbieter, bei dem deine Website liegt, muss seine Zugriffe zulassen. Beides kann dein Webdesigner prüfen.
+::fehler: Alte Angaben in Verzeichnissen | profil-aufraeumen::
+
+Perplexity, eine andere KI-Suche, hat im selben Test oft Bewertungsportale und Verzeichnisse zitiert, allen voran werkenntdenbesten.de, Gelbe Seiten und Das Örtliche. Steht dort noch eine alte Adresse oder Nummer, kann die KI genau die weitergeben.
+
+::loesung::
+
+Name, Adresse und Telefonnummer stehen in diesen Verzeichnissen, im Google-Profil und auf deiner Website überall gleich.
+
+::/fehler::
+
+::fehler: Website für OpenAI gesperrt | neue-website::
+
+Damit eine Website in den Suchergebnissen von ChatGPT erscheinen kann, nennt OpenAI in seiner [Hilfe](https://help.openai.com/en/articles/9237897-chatgpt-search) zwei Bedingungen. Ist eine davon nicht erfüllt, kann deine Seite dort nicht erscheinen.
+
+::loesung::
+
+* Der Suchroboter von OpenAI, der OAI-SearchBot, darf deine Website lesen.
+* Der Anbieter, bei dem deine Website liegt, lässt seine Zugriffe zu.
+
+::/fehler::
 
 Mehr zum Google-Profil steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden) und in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen), mehr zur Website in [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe).
 
@@ -74,7 +105,7 @@ Wenn du wissen willst, wie dein Betrieb bei Google dasteht, schreib mir Betriebs
 
 Willst du die Arbeit abgeben, übernehme ich sie mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360): Profil anlegen für 290 Euro oder ein bestehendes aufräumen für 190 Euro. In der Betreuung für 99 Euro im Monat beantworte ich jede neue Bewertung in deinem Ton und halte dein Profil aktuell.
 
-Einmal im Monat bekommst du eine ausführliche Auswertung: was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. Dazu gebe ich dir konkrete Tipps für deinen Betrieb, aus fast zehn Jahren, in denen ich selbst Betriebe geführt, aufgebaut und vermarktet habe. Die Betreuung ist monatlich kündbar, alle Preise sind netto.
+Einmal im Monat bekommst du eine ausführliche Auswertung: was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. Dazu gebe ich dir konkrete Tipps für deinen Betrieb, aus fast zehn Jahren, in denen ich selbst Betriebe geführt, aufgebaut und vermarktet habe. Die Betreuung ist monatlich kündbar, alle Preise sind netto. Die Punkte zu deiner Website setze ich ebenfalls für dich um, am Handy wie am PC.
 
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 

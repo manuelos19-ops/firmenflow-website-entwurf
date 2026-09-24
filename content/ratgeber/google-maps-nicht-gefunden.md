@@ -23,7 +23,7 @@ Mach den Test: Tipp deine Leistung und deinen Ort ein, etwa „Dachdecker Wesel�
 
 ## Der Selbsttest
 
-Nimm dein Handy und geh die fünf Fragen durch. Zu jedem Nein steht darunter, was du tun kannst.
+Nimm dein Handy und geh die fünf Fragen durch. Zu jedem Nein steht darunter, wie es sein sollte.
 
 * Hast du dein Profil als Inhaber bestätigt?
 * Stehen deine Öffnungszeiten, auch für Feiertage, und deine Website im Profil?
@@ -31,31 +31,63 @@ Nimm dein Handy und geh die fünf Fragen durch. Zu jedem Nein steht darunter, wa
 * Hast du eigene Fotos im Profil, die zeigen, wie es bei dir aussieht?
 * Hast du mindestens so viele Bewertungen wie die anderen Betriebe auf der Karte?
 
-## Was du bei einem Nein tun kannst
+## Die fünf Fehler und wie es richtig aussieht
 
 Laut [Google-Hilfe](https://support.google.com/business/answer/7091?hl=de) werden Betriebe mit vollständigen und korrekten Angaben mit größerer Wahrscheinlichkeit in den lokalen Suchergebnissen angezeigt.
 
-### Profil nicht bestätigt
+::fehler: Profil nicht bestätigt | profil-einrichten::
 
-Öffne die Google Maps App, such deinen Betrieb und tipp im Profil auf „Info“. Steht dort „Inhaberschaft für dieses Unternehmen geltend machen“, ist das Profil noch nicht bestätigt, und du kannst es über diesen Punkt übernehmen. Gibt es noch gar kein Profil, legst du eins über business.google.com/add an. Hat schon jemand anderes das Profil bestätigt, etwa eine frühere Agentur, kannst du bei ihr die Inhaberschaft beantragen ([Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de)). Ein bestätigter Betrieb wird laut Google mit größerer Wahrscheinlichkeit angezeigt, und erst danach kannst du die Angaben selbst ändern.
+Für deinen Betrieb kann es bei Google schon ein Profil geben, das du nie selbst angelegt hast. Solange es nicht als deins bestätigt ist, kannst du die Angaben nicht selbst ändern.
 
-### Öffnungszeiten oder Website fehlen
+::loesung::
 
-Feiertage, Betriebsferien, der Samstag, den du vor zwei Jahren umgestellt hast. Google nennt dafür eigens die „speziellen Öffnungszeiten“. Trag sie in deinem Profil ein, sonst steht der Kunde im schlimmsten Fall vor verschlossener Tür. Trag dort auch deine Website ein, falls sie fehlt.
+Das Profil ist als deins bestätigt. Ein bestätigter Betrieb wird laut Google mit größerer Wahrscheinlichkeit angezeigt. So kommst du dahin ([Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de)):
 
-### Kategorie passt nicht
+* Profil vorhanden: In der Google Maps App im Profil unter „Info“ auf „Inhaberschaft für dieses Unternehmen geltend machen“ tippen. Steht dort dieser Punkt, ist das Profil noch nicht bestätigt.
+* Noch kein Profil: über business.google.com/add anlegen.
+* Schon von jemand anderem bestätigt, etwa einer früheren Agentur: bei ihr die Inhaberschaft beantragen.
+
+::/fehler::
+
+::fehler: Öffnungszeiten oder Website fehlen | termin::
+
+Feiertage, Betriebsferien, der Samstag, den du vor zwei Jahren umgestellt hast. Stimmen die Zeiten nicht, steht der Kunde im schlimmsten Fall vor verschlossener Tür.
+
+::loesung::
+
+Im Profil stehen die aktuellen Öffnungszeiten und, wie Google sie nennt, die „speziellen Öffnungszeiten“ für Feiertage und Betriebsferien. Und deine Website ist eingetragen.
+
+::/fehler::
+
+::fehler: Kategorie passt nicht | analyse::
 
 Über die Kategorie ordnet Google deinen Betrieb einer Suche zu. Ein Betrieb, der als allgemeines Bauunternehmen geführt wird, hat es bei „Bad sanieren“ schwerer als der Sanitärbetrieb, der genau dafür eingetragen ist.
 
-Deine Hauptkategorie steht auf deinem Profil unter dem Betriebsnamen. Vergleich sie mit den Betrieben, die über dir stehen. Google gibt dazu eine Faustregel: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, nicht „Dieses Unternehmen HAT …“ ([Richtlinien](https://support.google.com/business/answer/3038177?hl=de)). Wähl lieber wenige, möglichst genaue Kategorien als alles, was du nebenbei anbietest.
+::loesung::
 
-### Keine eigenen Fotos
+Die Hauptkategorie, die im Profil unter dem Betriebsnamen steht, beschreibt, womit du dein Geld verdienst. Google gibt dazu eine Faustregel: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, nicht „Dieses Unternehmen HAT …“ ([Richtlinien](https://support.google.com/business/answer/3038177?hl=de)). Lieber wenige, möglichst genaue Kategorien als alles, was du nebenbei anbietest. Zum Vergleich lohnt ein Blick auf die Betriebe, die über dir stehen.
 
-Mit Fotos zeigst du potenziellen Kunden, was du anbietest. Lädst du selbst keine hoch, gibt es entweder gar kein Bild, oder dein erster Eindruck besteht aus dem, was Kunden fotografiert haben. Ein paar echte Bilder von Werkstatt, Team und fertigen Arbeiten reichen für den Anfang, und neue Aufträge liefern laufend neue Motive.
+::/fehler::
 
-### Zu wenige Bewertungen
+::fehler: Keine eigenen Fotos | foto::
 
-Zur Bekanntheit zählt Google auch die Anzahl der Bewertungen: Je mehr Bewertungen ein Betrieb bekommt und je positiver sie sind, desto besser kann seine Platzierung in den Ergebnissen mit Karte ausfallen. Wie du ehrlich zu mehr davon kommst, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen). Antworte auch auf die Bewertungen, die du hast. Damit zeigst du, dass du das Feedback deiner Kunden schätzt.
+Lädst du selbst keine hoch, gibt es entweder gar kein Bild, oder dein erster Eindruck besteht aus dem, was Kunden fotografiert haben.
+
+::loesung::
+
+Mit Fotos zeigst du potenziellen Kunden, was du anbietest. Im Profil sind echte Bilder von Werkstatt, Team und fertigen Arbeiten, und neue Aufträge liefern laufend neue Motive. Dieselben Fotos helfen übrigens auch bei der Suche nach [Azubis und Mitarbeitern](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk).
+
+::/fehler::
+
+::fehler: Zu wenige Bewertungen | mehr-bewertungen::
+
+Zur Bekanntheit zählt Google auch die Anzahl der Bewertungen: Je mehr Bewertungen ein Betrieb bekommt und je positiver sie sind, desto besser kann seine Platzierung in den Ergebnissen mit Karte ausfallen.
+
+::loesung::
+
+Du fragst jeden Kunden nach einer ehrlichen Bewertung und antwortest auf die, die du hast. Damit zeigst du, dass du das Feedback deiner Kunden schätzt. Wie das geht, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen).
+
+::/fehler::
 
 ## Wie es in Wesel tatsächlich aussieht
 

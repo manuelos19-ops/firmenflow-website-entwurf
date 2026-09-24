@@ -17,11 +17,11 @@ Du hast eine Anzeige im Wochenblatt geschaltet und keine einzige Rückmeldung be
 
 * 95 Prozent der 12- bis 19-Jährigen nutzen ihr Smartphone täglich. Zeitungen spielen bei ihrer täglichen Nutzung kaum eine Rolle.
 * 2024/25 kamen rechnerisch 93 Bewerber auf 100 betriebliche Ausbildungsstellen. Rechnerisch gab es also mehr gemeldete Stellen als Bewerber.
-* Was du tun kannst: eine Seite mit offenen Stellen, echte Fotos, ein einfacher Weg zur Bewerbung und Antworten auf Kritik bei Google.
+* So sollte es sein: eine Seite mit offenen Stellen, echte Fotos, ein einfacher Weg zur Bewerbung und Antworten auf Kritik bei Google.
 
 ## Der Selbsttest
 
-Nimm dein Handy und geh die fünf Fragen durch, so wie es ein Bewerber tun könnte. Zu jedem Nein steht darunter, was du tun kannst.
+Nimm dein Handy und geh die fünf Fragen durch, so wie es ein Bewerber tun könnte. Zu jedem Nein steht darunter, wie es sein sollte.
 
 * Findest du bei Google etwas von dir, wenn du deinen Betriebsnamen plus „Ausbildung“ eintippst?
 * Hast du auf deiner Website eine Seite mit offenen Stellen?
@@ -29,38 +29,62 @@ Nimm dein Handy und geh die fünf Fragen durch, so wie es ein Bewerber tun könn
 * Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?
 * Ist jede kritische Google-Bewertung von dir beantwortet?
 
-## Was du bei einem Nein tun kannst
+## Die fünf Fehler und wie es richtig aussieht
 
-### Er findet nichts
+::fehler: Bewerber finden nichts | analyse::
 
-Findet ein Bewerber gar nichts, denkt er womöglich, dass es den Betrieb nicht mehr gibt. Fang dann mit dem Google-Profil an: [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden). Findet er deinen Betrieb, aber nichts zur Ausbildung, fehlt die Seite mit offenen Stellen.
+Findet ein Bewerber gar nichts, denkt er womöglich, dass es den Betrieb nicht mehr gibt. Findet er deinen Betrieb, aber nichts zur Ausbildung, bleibt die wichtigste Frage offen.
 
-### Es gibt keine Seite mit offenen Stellen
+::loesung::
 
-Eine solche Seite, oft Karriereseite genannt, sollte vier Fragen beantworten:
+Bei deinem Betriebsnamen plus „Ausbildung“ findet man dein Google-Profil und eine Seite mit offenen Stellen. Wie das Profil vollständig wird, steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden).
 
-::karten: Vier Fragen, die eine Karriereseite beantworten sollte.::
+::/fehler::
 
-| Frage | Was darauf gehört |
-| --- | --- |
-| Wer ist der Chef? | Ein Foto von dir und drei Sätze in deinen Worten |
-| Wie läuft ein Tag ab? | Wann Arbeitsbeginn ist, womit angefangen wird, wie viele im Team sind, was Feierabend heißt |
-| Was verdient man? | Eine Zahl oder eine Spanne, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, muss der Bewerber raten |
-| Wie bewirbt man sich? | Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst |
+::fehler: Keine Seite mit offenen Stellen | neue-website::
 
-„Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ kann jeder schreiben. Diese vier Antworten dagegen sind überprüfbar.
+„Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ kann jeder schreiben. Ohne eigene Seite erfährt ein Bewerber nicht, wer du bist und was ihn erwartet.
 
-### Keine echten Fotos
+::loesung::
 
-Mach mit dem Handy ein paar Bilder von deiner Werkstatt, deinen Fahrzeugen und deinem Team bei der Arbeit, nachdem du die Leute gefragt hast. Solche Fotos zeigen, wie es bei dir wirklich aussieht, bevor jemand zum ersten Mal vorbeikommt.
+Eine Seite mit offenen Stellen, oft Karriereseite genannt, beantwortet vier Fragen, und zwar überprüfbar:
 
-### Die Bewerbung ist zu umständlich
+* Wer ist der Chef? Ein Foto von dir und drei Sätze in deinen Worten.
+* Wie läuft ein Tag ab? Wann Arbeitsbeginn ist, womit angefangen wird, wie viele im Team sind, was Feierabend heißt.
+* Was verdient man? Eine Zahl oder eine Spanne, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, muss der Bewerber raten.
+* Wie bewirbt man sich? Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst.
 
-Ein Anschreiben als PDF oder ein Formular mit vierzehn Pflichtfeldern hält einen Sechzehnjährigen womöglich ab. Eine WhatsApp-Nachricht ist schneller geschrieben. Schreib deine Nummer auf die Seite, dazu einen Satz wie: „Schick mir deinen Namen und warum du dich meldest, ich rufe zurück.“ Das hilft auch einem Gesellen, der sich neben dem Job umschaut.
+::/fehler::
 
-### Kritik steht unbeantwortet da
+::fehler: Keine echten Fotos | foto::
 
-Eine verärgerte Bewertung von einem Ex-Mitarbeiter, seit zwei Jahren unbeantwortet: Wer so etwas liest, zieht womöglich Schlüsse darüber, wie es sich bei dir arbeitet. Eine sachliche Antwort zeigt, dass du dich kümmerst. Wie das geht, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen).
+Ohne echte Bilder weiß ein Bewerber nicht, wie es bei dir aussieht, bevor er zum ersten Mal vorbeikommt.
+
+::loesung::
+
+Auf der Seite sind echte Bilder von deiner Werkstatt, deinen Fahrzeugen und deinem Team bei der Arbeit. Die kannst du mit dem Handy selbst machen, nachdem du die Leute gefragt hast.
+
+::/fehler::
+
+::fehler: Bewerbung zu umständlich | nachricht-senden::
+
+Ein Anschreiben als PDF oder ein Formular mit vierzehn Pflichtfeldern hält einen Sechzehnjährigen womöglich ab. Eine WhatsApp-Nachricht ist schneller geschrieben.
+
+::loesung::
+
+Auf der Seite stehen deine WhatsApp-Nummer und ein Satz wie: „Schick mir deinen Namen und warum du dich meldest, ich rufe zurück.“ Das hilft auch einem Gesellen, der sich neben dem Job umschaut.
+
+::/fehler::
+
+::fehler: Kritik bleibt unbeantwortet | bewertungen-beantworten::
+
+Eine verärgerte Bewertung von einem Ex-Mitarbeiter, seit zwei Jahren unbeantwortet: Wer so etwas liest, zieht womöglich Schlüsse darüber, wie es sich bei dir arbeitet.
+
+::loesung::
+
+Jede kritische Bewertung hat eine sachliche Antwort von dir. Die zeigt, dass du dich kümmerst. Wie das geht, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen).
+
+::/fehler::
 
 ## Woher die Zahlen stammen
 
@@ -70,7 +94,7 @@ Die 93 Bewerber auf 100 betriebliche Stellen nennt die [Bundesagentur für Arbei
 
 ## Wenn du das angehen willst
 
-Eine Seite mit offenen Stellen kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Bei Firmenflow baue ich die Seite auf, schreibe die Texte und komme auf Wunsch zum Fotografieren zu dir nach Wesel und Umgebung.
+Eine Seite mit offenen Stellen kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Bei Firmenflow baue ich die Seite auf, für Handy und PC, schreibe die Texte und komme auf Wunsch zum Fotografieren zu dir nach Wesel und Umgebung.
 
 Ein Onepager, also eine Website auf einer einzigen Seite, startet bei 690 Euro netto. Ein Auftritt mit mehreren Seiten, etwa mit einer eigenen Seite für offene Stellen, liegt darüber, den Festpreis nenne ich dir vorher. Der Fototermin kostet 350 Euro. Für Hosting, also den Betrieb der Website im Netz, Updates und 30 Minuten Änderungen kommen 39 Euro im Monat dazu, monatlich kündbar. Alle Preise sind netto.
 

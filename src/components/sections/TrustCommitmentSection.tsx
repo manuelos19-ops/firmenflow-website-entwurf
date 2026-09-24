@@ -20,7 +20,7 @@ const commitments: Commitment[] = [
   {
     iconName: "freigabe",
     title: "Online erst nach deiner Freigabe",
-    detail: "Wir prüfen den Entwurf gemeinsam auf deinem Handy. Erst wenn du nickst, geht deine Seite öffentlich live.",
+    detail: "Wir prüfen den Entwurf gemeinsam auf deinem Handy und am PC. Erst wenn du nickst, geht deine Seite öffentlich live.",
   },
   {
     iconName: "domain-eigentum",

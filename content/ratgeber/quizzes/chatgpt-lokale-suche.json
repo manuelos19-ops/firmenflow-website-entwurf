@@ -125,26 +125,26 @@
     {
       "id": "ki_p1",
       "level": "profi",
-      "question": "Wie viele lokale Anfragen hat NeuRank für die Untersuchung gestellt?",
+      "question": "Was trägst du im Google-Profil für Feiertage und Betriebsferien ein?",
       "options": [
-        "800",
-        "80",
-        "8.000"
+        "Spezielle Öffnungszeiten",
+        "Nichts, Google weiß das von allein",
+        "Einen Hinweis im Firmennamen"
       ],
       "correctIndex": 0,
-      "explanation": "NeuRank stellte im Juni 2026 insgesamt 800 lokale Anfragen, je zur Hälfte an ChatGPT und Perplexity, jeweils über einen technischen Zugang für Programmierer."
+      "explanation": "Google nennt ausdrücklich die speziellen Öffnungszeiten, etwa für Feiertage."
     },
     {
       "id": "ki_p2",
       "level": "profi",
-      "question": "Welchen Anteil der Quellen machten Bewertungsportale bei ChatGPT aus?",
+      "question": "Wo erscheinen Anzeigen in ChatGPT laut OpenAI?",
       "options": [
-        "0,6 Prozent",
-        "38 Prozent",
-        "30,5 Prozent"
+        "Unter der Antwort, als gesponsert gekennzeichnet",
+        "Mitten in der Antwort, ohne Kennzeichnung",
+        "Nur als Werbe-E-Mail"
       ],
       "correctIndex": 0,
-      "explanation": "Bewertungsportale kamen bei ChatGPT nur auf 0,6 Prozent, bei Perplexity auf 30,5 Prozent."
+      "explanation": "Laut OpenAI erscheinen Anzeigen unter der Antwort, als gesponsert gekennzeichnet und sichtbar getrennt."
     },
     {
       "id": "ki_p3",
@@ -173,26 +173,26 @@
     {
       "id": "ki_p5",
       "level": "profi",
-      "question": "Wie oft wurde die NeuRank-Untersuchung durchgeführt?",
+      "question": "Was ist Perplexity?",
       "options": [
-        "Einmal, im Juni 2026, als Momentaufnahme",
-        "Jeden Monat seit 2020",
-        "Täglich in Echtzeit"
+        "Eine andere KI-Suche",
+        "Ein Branchenverzeichnis wie Gelbe Seiten",
+        "Eine Funktion von Google Maps"
       ],
       "correctIndex": 0,
-      "explanation": "Es war eine einzige Erhebung im Juni 2026. Die Zahlen sind eine Momentaufnahme."
+      "explanation": "Perplexity ist eine KI-Suche wie ChatGPT. In der Untersuchung zitierte sie oft Bewertungsportale und Verzeichnisse."
     },
     {
       "id": "ki_p6",
       "level": "profi",
-      "question": "Wie viele Branchen und Städte umfasste die Untersuchung?",
+      "question": "Was bedeutet es, wenn im Profil in der Google Maps App unter „Info“ der Punkt „Inhaberschaft für dieses Unternehmen geltend machen“ steht?",
       "options": [
-        "Zehn Branchen in zwanzig deutschen Städten",
-        "Eine Branche in einer Stadt",
-        "Hundert Branchen weltweit"
+        "Das Profil ist noch nicht bestätigt, und du kannst es übernehmen",
+        "Das Profil wurde gelöscht",
+        "Der Punkt ist nur Werbung"
       ],
       "correctIndex": 0,
-      "explanation": "Gefragt wurde nach zehn Branchen in zwanzig deutschen Städten."
+      "explanation": "Über diesen Punkt übernimmst du ein Profil, das noch nicht bestätigt ist."
     },
     {
       "id": "ki_p7",
@@ -329,14 +329,14 @@
     {
       "id": "ki_p18",
       "level": "profi",
-      "question": "Was hat OpenAI im August 2026 für Europa angekündigt?",
+      "question": "Warum hilft ein gepflegtes Google-Profil auch bei ChatGPT?",
       "options": [
-        "Anzeigen in ChatGPT in 31 europäischen Ländern, darunter Deutschland",
-        "Ein kostenloses Verzeichnis für Handwerker",
-        "Das Ende der Websuche in ChatGPT"
+        "Weil viele Links in den ChatGPT-Antworten zu Google Maps führten, wo Kunden dein Profil sehen",
+        "Weil ChatGPT nur Google-Profile liest",
+        "Weil Google ChatGPT gehört"
       ],
       "correctIndex": 0,
-      "explanation": "OpenAI hat angekündigt, Anzeigen in ChatGPT auf 31 europäische Länder auszuweiten, darunter Deutschland."
+      "explanation": "Mehr als jede dritte ChatGPT-Quelle war in der Untersuchung ein Maps-Link, und auf Google Maps finden Kunden dich über dein Profil."
     },
     {
       "id": "ki_p19",

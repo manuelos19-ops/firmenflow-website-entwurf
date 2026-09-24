@@ -48,7 +48,7 @@ export type RatgeberSection =
   | { kind: "cards"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "stats"; head: string[]; rows: string[][]; caption?: string }
   | { kind: "note"; title: string; paragraphs: string[]; image?: RatgeberNoteImage }
-  | { kind: "fault"; id: string; number: number; title: string; icon: string; problem: string[]; solution: string[]; solutionList: string[] }
+  | { kind: "fault"; id: string; number: number; title: string; icon: string; problem: string[]; solution: string[]; solutionList: string[]; solutionOrdered: boolean; solutionAfter: string[] }
   | { kind: "cta"; html: string };
 
 export type RatgeberNoteImage = { src: string; alt: string; caption?: string };
@@ -141,6 +141,8 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     problem: string[];
     solution: string[];
     solutionList: string[];
+    solutionOrdered: boolean;
+    solutionAfter: string[];
     buffer: string[];
     inSolution: boolean;
   } | null = null;
@@ -149,14 +151,16 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
   const flushFaultPara = () => {
     if (!fault || fault.buffer.length === 0) return;
     const p = inlineMarkdown(fault.buffer.join(" ").trim());
-    (fault.inSolution ? fault.solution : fault.problem).push(p);
+    // Absätze nach einer Liste stehen in der Lösung unter der Liste.
+    const ziel = !fault.inSolution ? fault.problem : fault.solutionList.length ? fault.solutionAfter : fault.solution;
+    ziel.push(p);
     fault.buffer = [];
   };
 
   const closeFault = () => {
     if (!fault) return;
     flushFaultPara();
-    const { title, icon, problem, solution, solutionList } = fault;
+    const { title, icon, problem, solution, solutionList, solutionOrdered, solutionAfter } = fault;
     fault = null;
     faultCount += 1;
     const id = slugify(title);
@@ -164,10 +168,11 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
     html.push(
       `<section><h3 id="${id}">${inlineMarkdown(title)}</h3>${problem.map((t) => `<p>${t}</p>`).join("")}` +
         `<p><strong>So sollte es sein:</strong></p>${solution.map((t) => `<p>${t}</p>`).join("")}` +
-        (solutionList.length ? `<ul>${solutionList.map((t) => `<li>${t}</li>`).join("")}</ul>` : "") +
+        (solutionList.length ? `<${solutionOrdered ? "ol" : "ul"}>${solutionList.map((t) => `<li>${t}</li>`).join("")}</${solutionOrdered ? "ol" : "ul"}>` : "") +
+        solutionAfter.map((t) => `<p>${t}</p>`).join("") +
         `</section>`,
     );
-    sections.push({ kind: "fault", id, number: faultCount, title: inlineMarkdown(title), icon, problem, solution, solutionList });
+    sections.push({ kind: "fault", id, number: faultCount, title: inlineMarkdown(title), icon, problem, solution, solutionList, solutionOrdered, solutionAfter });
   };
 
   const flushNotePara = () => {
@@ -304,9 +309,10 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
         flushFaultPara();
         continue;
       }
-      if (fault.inSolution && /^[-*]\s+/.test(trimmed)) {
+      if (fault.inSolution && /^([-*]|\d+[.)])\s+/.test(trimmed)) {
         flushFaultPara();
-        fault.solutionList.push(inlineMarkdown(trimmed.replace(/^[-*]\s+/, "")));
+        if (/^\d/.test(trimmed)) fault.solutionOrdered = true;
+        fault.solutionList.push(inlineMarkdown(trimmed.replace(/^([-*]|\d+[.)])\s+/, "")));
         continue;
       }
       fault.buffer.push(trimmed);
@@ -317,7 +323,7 @@ function markdownToHtml(body: string): { html: string; headings: RatgeberPost["h
       flushPara();
       closeList();
       closeTable();
-      fault = { title: faultMark[1].trim(), icon: faultMark[2] || "fehler", problem: [], solution: [], solutionList: [], buffer: [], inSolution: false };
+      fault = { title: faultMark[1].trim(), icon: faultMark[2] || "fehler", problem: [], solution: [], solutionList: [], solutionOrdered: false, solutionAfter: [], buffer: [], inSolution: false };
       continue;
     }
     const noteMark = trimmed.match(/^::hinweis(?::\s*(.*?))?::$/);

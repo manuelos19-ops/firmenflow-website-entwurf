@@ -305,26 +305,26 @@
     {
       "id": "gb_p16",
       "level": "profi",
-      "question": "Wie viele der 198 ausgewerteten Betriebe im Raum Wesel hatten weniger als zehn Bewertungen?",
+      "question": "Wann schickst du den Bewertungslink am besten?",
       "options": [
-        "57",
-        "12",
-        "132"
+        "Später, etwa am Abend, damit der Kunde in Ruhe schreibt",
+        "Sofort, während du noch daneben stehst",
+        "Nie, der Kunde soll selbst suchen"
       ],
       "correctIndex": 0,
-      "explanation": "57 der 198 Betriebe hatten weniger als zehn Bewertungen, 12 hatten gar keine."
+      "explanation": "Vor Ort fragen, später schicken. Dann schreibt der Kunde in Ruhe."
     },
     {
       "id": "gb_p17",
       "level": "profi",
-      "question": "Welche Branche lag in der Weseler Erhebung mit 132 Bewertungen im Median vorne?",
+      "question": "Wie viele ehrliche Bewertungen reichen einem Elektriker im Raum Wesel, um über dem Median seiner Branche zu liegen?",
       "options": [
-        "Bäckerei",
-        "Fliesenleger",
-        "Dachdecker"
+        "Schon fünfzehn",
+        "Mindestens zweihundert",
+        "Genau eine"
       ],
       "correctIndex": 0,
-      "explanation": "Bäckereien kamen im Median auf 132 Bewertungen, Fliesenleger auf 4 und Dachdecker auf 12."
+      "explanation": "Elektriker im Raum Wesel haben im Median 6 Bewertungen. Mit fünfzehn liegst du darüber."
     },
     {
       "id": "gb_b11",

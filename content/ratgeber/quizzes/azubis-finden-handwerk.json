@@ -149,26 +149,26 @@
     {
       "id": "az_p3",
       "level": "profi",
-      "question": "Wie lang ist laut JIM-Studie die tägliche Bildschirmzeit am Smartphone bei Jugendlichen, die sie am Gerät ablesen können?",
+      "question": "Warum erreichst du Jugendliche eher am Handy als über die Zeitung?",
       "options": [
-        "231 Minuten, knapp vier Stunden",
-        "Etwa 45 Minuten pro Woche",
-        "Über acht Stunden"
+        "Weil fast alle täglich ihr Smartphone nutzen und Zeitungen kaum eine Rolle spielen",
+        "Weil Jugendliche keine Zeitung lesen dürfen",
+        "Weil Zeitungen keine Stellenanzeigen drucken"
       ],
       "correctIndex": 0,
-      "explanation": "Über alle einbezogenen Befragten liegt die tägliche Bildschirmzeit bei 231 Minuten."
+      "explanation": "Laut JIM-Studie nutzen fast alle 12- bis 19-Jährigen täglich ihr Smartphone, Zeitungen spielen bei der täglichen Nutzung kaum eine Rolle."
     },
     {
       "id": "az_p4",
       "level": "profi",
-      "question": "Welche tägliche Bildschirmzeit am Smartphone nennt die JIM-Studie für Zwölf- bis 13-Jährige?",
+      "question": "Was tust du, bevor du Fotos von deinem Team veröffentlichst?",
       "options": [
-        "166 Minuten",
-        "16 Minuten",
-        "600 Minuten"
+        "Die Leute vorher fragen",
+        "Nichts, Fotos vom Team sind immer erlaubt",
+        "Die Gesichter unkenntlich machen"
       ],
       "correctIndex": 0,
-      "explanation": "Die Jüngsten in der Befragung kommen auf 166 Minuten am Tag."
+      "explanation": "Frag dein Team, bevor die Bilder auf die Seite kommen."
     },
     {
       "id": "az_p5",
@@ -185,74 +185,74 @@
     {
       "id": "az_p6",
       "level": "profi",
-      "question": "Wie viele Bewerber kamen im Vorjahr der Bilanz 2024/25 rechnerisch auf 100 betriebliche Stellen?",
+      "question": "Warum nennst du auf der Karriereseite eine Antwortzeit, die du auch einhältst?",
       "options": [
-        "86",
-        "150",
-        "10"
+        "Damit Bewerber wissen, wann sie von dir hören",
+        "Weil das gesetzlich vorgeschrieben ist",
+        "Damit sich weniger Leute bewerben"
       ],
       "correctIndex": 0,
-      "explanation": "Im Vorjahr waren es rechnerisch 86 Bewerber auf 100 Stellen."
+      "explanation": "Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst."
     },
     {
       "id": "az_p7",
       "level": "profi",
-      "question": "Wie viel Prozent der gemeldeten Bewerber blieben laut Bilanz 2024/25 ohne Ausbildungsstelle oder alternatives Angebot?",
+      "question": "Was denkt ein Bewerber womöglich, wenn er über deinen Betrieb gar nichts findet?",
       "options": [
-        "9 Prozent",
-        "90 Prozent",
-        "0 Prozent"
+        "Dass es den Betrieb nicht mehr gibt",
+        "Dass du besonders beliebt bist",
+        "Dass du nur Stammkunden annimmst"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Bundesagentur blieben 9 Prozent der gemeldeten Bewerberinnen und Bewerber ohne Stelle oder Alternative."
+      "explanation": "Findet er gar nichts, denkt er womöglich, dass es den Betrieb nicht mehr gibt."
     },
     {
       "id": "az_p8",
       "level": "profi",
-      "question": "Wie viele Jugendliche wurden für die JIM-Studie 2025 befragt?",
+      "question": "Was ist eine Karriereseite?",
       "options": [
-        "1.200 Jugendliche zwischen zwölf und 19 Jahren",
-        "12 Jugendliche aus einer Schulklasse",
-        "Alle Jugendlichen in Deutschland"
+        "Eine Seite mit offenen Stellen und allem, was Bewerber wissen wollen",
+        "Ein Profil bei einer Jobbörse",
+        "Ein Aushang im Betrieb"
       ],
       "correctIndex": 0,
-      "explanation": "Befragt wurden 1.200 Jugendliche im Alter von zwölf bis 19 Jahren."
+      "explanation": "Eine Seite mit offenen Stellen, oft Karriereseite genannt, beantwortet die vier Fragen der Bewerber."
     },
     {
       "id": "az_p9",
       "level": "profi",
-      "question": "In welchem Zeitraum wurde die JIM-Studie 2025 erhoben?",
+      "question": "Was hilft, damit sich auch ein Geselle mit festem Job meldet?",
       "options": [
-        "Vom 2. Juni bis 12. Juli 2025",
-        "Im Dezember 2024",
-        "Über zehn Jahre verteilt"
+        "Ein schneller Weg wie eine WhatsApp-Nachricht statt Bewerbungsmappe",
+        "Ein ausführliches Online-Formular",
+        "Nur Bewerbungen per Post"
       ],
       "correctIndex": 0,
-      "explanation": "Die Befragung lief vom 2. Juni bis 12. Juli 2025."
+      "explanation": "Ein kurzer Weg hilft auch einem Gesellen, der sich neben dem Job umschaut."
     },
     {
       "id": "az_p10",
       "level": "profi",
-      "question": "Welche tägliche Bildschirmzeit am Smartphone nennt die JIM-Studie für volljährige Jugendliche?",
+      "question": "Was fehlt, wenn Bewerber deinen Betrieb finden, aber nichts zur Ausbildung?",
       "options": [
-        "278 Minuten, über viereinhalb Stunden",
-        "27 Minuten",
-        "Genauso viel wie die Jüngsten"
+        "Eine Seite mit offenen Stellen",
+        "Ein neues Logo",
+        "Eine Anzeige im Wochenblatt"
       ],
       "correctIndex": 0,
-      "explanation": "Mit dem Alter steigt die Bildschirmzeit, bei den Volljährigen auf 278 Minuten."
+      "explanation": "Findet ein Bewerber deinen Betrieb, aber nichts zur Ausbildung, fehlt die Seite mit offenen Stellen."
     },
     {
       "id": "az_p11",
       "level": "profi",
-      "question": "Wie viel Prozent der 12- bis 19-Jährigen besitzen laut JIM-Studie ein eigenes Smartphone?",
+      "question": "Womit kannst du echte Fotos für die Karriereseite selbst machen?",
       "options": [
-        "95 Prozent",
-        "45 Prozent",
-        "15 Prozent"
+        "Mit dem eigenen Handy",
+        "Nur mit einer Profi-Kamera",
+        "Gar nicht, das muss ein Fotograf machen"
       ],
       "correctIndex": 0,
-      "explanation": "95 Prozent besitzen ein eigenes Gerät."
+      "explanation": "Die Bilder von Werkstatt, Fahrzeugen und Team kannst du mit dem Handy selbst machen, nachdem du die Leute gefragt hast."
     },
     {
       "id": "az_p12",

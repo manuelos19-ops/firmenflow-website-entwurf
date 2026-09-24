@@ -138,6 +138,8 @@ function RatgeberBlock({ section }: { section: RatgeberSection }) {
         problem={section.problem}
         solution={section.solution}
         solutionList={section.solutionList}
+        solutionOrdered={section.solutionOrdered}
+        solutionAfter={section.solutionAfter}
       />
     );
   }

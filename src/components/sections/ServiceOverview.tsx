@@ -333,7 +333,7 @@ export function ServiceOverview() {
                     Gefällt-mir-Garantie
                   </h4>
                   <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-0.5">
-                    Wenn der Entwurf auf deinem Handy nicht genau so aussieht, wie du dir deinen Betrieb vorstellst, passen wir ihn an. Erst wenn du zu 100 % nickst, geht die Seite live, und keinen Tag früher. Ohne Zusatzkosten.
+                    Wenn der Entwurf auf deinem Handy und am PC nicht genau so aussieht, wie du dir deinen Betrieb vorstellst, passen wir ihn an. Erst wenn du zu 100 % nickst, geht die Seite live, und keinen Tag früher. Ohne Zusatzkosten.
                   </p>
                 </div>
               </div>

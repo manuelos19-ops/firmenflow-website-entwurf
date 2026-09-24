@@ -21,7 +21,7 @@ export const homeContent = {
       slug: "neue-website",
       title: "Neue Website von Grund auf",
       body: "Vom leeren Bildschirm bis zur fertigen Seite: Struktur, Texte, Bilder, Technik. Du schaust dir den Entwurf an und sagst, was du anders willst. Wenn es passt, geht sie live.",
-      points: ["Kein Text-Stress für dich", "Kein Baukasten-Look", "Schnell auf dem Handy", "Transparenter Festpreis"],
+      points: ["Kein Text-Stress für dich", "Kein Baukasten-Look", "Schnell auf Handy und PC", "Transparenter Festpreis"],
     },
     {
       slug: "relaunch",
@@ -55,7 +55,7 @@ export const homeContent = {
     { 
       number: "02", 
       title: "Struktur & Design-Entwurf", 
-      body: "Ich baue die Struktur und einen ersten klickbaren Entwurf. Du siehst auf deinem Handy, wie die Seite wirkt, bevor ich sie fertig baue."
+      body: "Ich baue die Struktur und einen ersten klickbaren Entwurf. Du siehst auf deinem Handy und am PC, wie die Seite wirkt, bevor ich sie fertig baue."
     },
     { 
       number: "03", 
@@ -95,7 +95,7 @@ export const faqItems = [
   },
   { 
     question: "Was passiert, wenn mir der Entwurf nicht gefällt?", 
-    answer: "Dann sagst du es mir, dafür ist der Entwurf da. Du siehst die Seite auf deinem Handy, bevor sie fertig gebaut wird, und wir passen sie an, bis sie zu dir passt. Erst nach deiner Freigabe geht sie live. Und falls wir grundsätzlich nicht zusammenpassen, merkst du das schon im kostenlosen Kennenlernen, nicht erst auf der Rechnung." 
+    answer: "Dann sagst du es mir, dafür ist der Entwurf da. Du siehst die Seite auf deinem Handy und am PC, bevor sie fertig gebaut wird, und wir passen sie an, bis sie zu dir passt. Erst nach deiner Freigabe geht sie live. Und falls wir grundsätzlich nicht zusammenpassen, merkst du das schon im kostenlosen Kennenlernen, nicht erst auf der Rechnung." 
   },
   { 
     question: "Wie viel Zeit muss ich selbst in das Projekt investieren?", 

@@ -29,6 +29,12 @@ Leser aus der Zielgruppe haben die ersten Artikel abgebrochen: zu viele Studien 
 - **„Laut Google“ einmal pro Quelle.** Die Quellenliste steht unten.
 - **Geprüft wird genauso streng wie vorher.** Was im Artikel keinen Platz hat, darf belegt ins Quiz.
 
+### Fehler-Karten, Zielzustand und Desktop (Vorgabe von Manu, 24.09.2026)
+
+- **Die Hilfe steht in Fehler-Karten.** Unter „Die fünf Fehler und wie es richtig aussieht“ bekommt jede Selbsttest-Frage eine Karte: `::fehler: Titel | icon::`, darunter „Woran es hakt“, dann `::loesung::` mit dem Zielzustand, dann `::/fehler::`. Icons nur aus `src/content/firmenflow-icons.ts`.
+- **Die Lösung beschreibt, wie es sein sollte,** nicht wen der Leser beauftragen soll. Also „Ein gut sichtbarer Knopf zum Anrufen, ein Daumentipp reicht.“ statt „Bitte deinen Webdesigner um …“. Umsetzen kann Manu das. Im Angebot steht das einmal: „Alles, was oben unter ‚So sollte es sein‘ steht, setze ich für dich um.“
+- **Desktop gehört immer dazu.** Wo es um Manus Leistung geht (Website, Entwurf, Video-Einschätzung), stehen Handy und PC gemeinsam, etwa „am Handy und am PC“. Das Handy hat Vorrang in den Beispielen, es darf aber nie der Eindruck entstehen, Firmenflow baue nur Handy-Seiten.
+
 ## Wiederkehrendes redaktionelles Prinzip
 
 1. Mit einer nachvollziehbaren Kundensituation und einer konkreten Frage einsteigen, kurz.
@@ -68,6 +74,7 @@ Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interakti
 - **Dynamische Zufalls-Rotation:** Bei jedem Durchgang werden die Fragen frisch durchmischt und alle Antworten auf Position 1–3 zufällig rotiert (keine feste Position 1).
 - **Lese-Tipp-Banner:** Automatischer Hinweis über dem geöffneten Artikel mit direkter Sprungmarke `#selbst-check` zum Quiz.
 - **Analytics:** Automatische Vercel Custom Events bei Start und Abschluss.
+- **Profi-Fragen: Praxiswissen statt Rate-Zahlen** (Manu, 24.09.2026). Sie dürfen über den Artikel hinausgehen, sollen aber mit Nachdenken oder Praxiswissen lösbar sein. Keine Nachkommazahlen, Erhebungszeiträume oder Randwerte aus Studien, die man nur raten kann. Höchstens fünf von 20 Profi-Fragen fragen eine Zahl ab.
 - **Detailwissen gehört ins Quiz** (seit 24.09.2026). Fragen dürfen Belegtes abfragen, das nicht im Artikel steht. Jede Frage ist in der `belege.json` des Laufs einem Beleg zugeordnet. Basis-Fragen lassen sich mit dem Artikel beantworten, Profi-Fragen dürfen tiefer gehen.
 
 ## Aufbau und Bausteine im Markdown
@@ -81,6 +88,7 @@ Artikel liegen als Markdown in `content/ratgeber/<slug>.md`. Der Parser (`src/li
 | Karten | `::karten: Bildunterschrift::` vor einer Tabelle | 2 bis 4 gleichrangige Punkte |
 | Zahlenkacheln | `::zahlen: Quelle::` vor einer Tabelle mit Spalten Wert / Bedeutung | 2 bis 3 belegte Kennzahlen, zählen animiert hoch |
 | Hinweisbox | `::hinweis: Titel::` … `::/hinweis::`, darin Absätze und optional `![Alt](/pfad.webp "Bildunterschrift")` | eigene Beobachtung mit Datum und Gerät, Aktualisierungen |
+| Fehler-Karte | `::fehler: Titel \| icon::` … `::loesung::` … `::/fehler::`, in der Lösung Absätze, `*`-Liste oder nummerierte Schritte | eine Karte pro Selbsttest-Frage: Problem, dann „So sollte es sein“. Standard in jedem Artikel |
 | Selbsttest | Aufzählung, deren Punkte mit „?“ enden, 4 bis 5 Fragen | wird als Checkliste dargestellt. Jede Frage so stellen, dass „Nein“ das Problem ist. Steht früh im Artikel, danach folgt, was bei einem Nein zu tun ist |
 
 **Titelbild:** 1600 × 900, drei Glaskarten mit 3D-Objekten und je einer belegten Zahl oder Kernaussage aus dem Artikel. Erzeugt über den Social-Renderer (`titelbild` in der `post.json`), als WebP unter `public/images/ratgeber/<slug>-titel.webp`. Den Artikeltitel nicht aufs Bild schreiben, er steht direkt darüber.

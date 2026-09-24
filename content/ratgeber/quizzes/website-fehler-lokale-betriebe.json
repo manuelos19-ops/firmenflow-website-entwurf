@@ -125,26 +125,26 @@
     {
       "id": "w_p1",
       "level": "profi",
-      "question": "Um wie viel Prozent steigerte Rakuten 24 laut web.dev den Umsatz pro Besucher?",
+      "question": "Was zeigen die Beispiele von Rakuten und Vodafone auf Googles Seite web.dev?",
       "options": [
-        "Um 53,37 Prozent",
-        "Um 5 Prozent",
-        "Gar nicht"
+        "Nachdem die Seiten schneller wurden, stieg der Umsatz",
+        "Langsame Seiten verkaufen besser",
+        "Die Ladezeit spielte keine Rolle"
       ],
       "correctIndex": 0,
-      "explanation": "Laut web.dev investierte Rakuten 24 in die Core Web Vitals und steigerte den Umsatz pro Besucher um 53,37 Prozent."
+      "explanation": "Laut web.dev stieg bei beiden der Umsatz, nachdem sie an der Leistung ihrer Seiten gearbeitet hatten."
     },
     {
       "id": "w_p2",
       "level": "profi",
-      "question": "Welche Umsatzsteigerung nennt web.dev für Vodafone nach einer schnelleren Ladezeit?",
+      "question": "Wie sollte deine Website am PC funktionieren?",
       "options": [
-        "8 Prozent",
-        "80 Prozent",
-        "0 Prozent"
+        "Genauso gut wie am Handy",
+        "Egal, es zählt nur das Handy",
+        "Nur als verkleinerte Handy-Version"
       ],
       "correctIndex": 0,
-      "explanation": "Laut web.dev verbesserte Vodafone einen Ladezeit-Messwert um 31 Prozent und steigerte den Umsatz um 8 Prozent."
+      "explanation": "Die Seite muss am Handy und am PC gleich gut funktionieren."
     },
     {
       "id": "w_p3",

@@ -10,6 +10,8 @@ type RatgeberFehlerProps = {
   problem: string[];
   solution: string[];
   solutionList: string[];
+  solutionOrdered?: boolean;
+  solutionAfter?: string[];
 };
 
 function Haken({ className = "" }: { className?: string }) {
@@ -28,8 +30,9 @@ function Haken({ className = "" }: { className?: string }) {
  * darunter „Woran es hakt“ und eine Kachel „So sollte es sein“ mit der Lösung.
  * Texte kommen als HTML aus dem Parser (escaped, mit Fett/Kursiv/Links).
  */
-export function RatgeberFehler({ id, number, title, icon, problem, solution, solutionList }: RatgeberFehlerProps) {
+export function RatgeberFehler({ id, number, title, icon, problem, solution, solutionList, solutionOrdered = false, solutionAfter = [] }: RatgeberFehlerProps) {
   const iconName = (icon in firmenflowIconPaths ? icon : "fehler") as FirmenflowIconName;
+  const Liste = solutionOrdered ? "ol" : "ul";
 
   return (
     <article className="rounded-[2rem] bg-white border border-[var(--color-line)] shadow-md overflow-hidden">
@@ -79,15 +82,31 @@ export function RatgeberFehler({ id, number, title, icon, problem, solution, sol
             />
           ))}
           {solutionList.length > 0 && (
-            <ul className="space-y-2.5">
+            <Liste className="space-y-2.5">
               {solutionList.map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-sm sm:text-base leading-relaxed text-[var(--color-ink)]">
-                  <Haken className="mt-0.5 h-5 w-5 text-[0.7rem]" />
+                  {solutionOrdered ? (
+                    <span
+                      aria-hidden="true"
+                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-[0.7rem] font-bold text-white"
+                    >
+                      {i + 1}
+                    </span>
+                  ) : (
+                    <Haken className="mt-0.5 h-5 w-5 text-[0.7rem]" />
+                  )}
                   <span dangerouslySetInnerHTML={{ __html: item }} />
                 </li>
               ))}
-            </ul>
+            </Liste>
           )}
+          {solutionAfter.map((p, i) => (
+            <p
+              key={i}
+              className="text-sm sm:text-base leading-relaxed text-[var(--color-ink)]"
+              dangerouslySetInnerHTML={{ __html: p }}
+            />
+          ))}
         </div>
       </div>
     </article>

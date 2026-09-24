@@ -23,7 +23,7 @@ Zwei Straßen weiter hat ein anderer Betrieb achtzig Bewertungen, du hast neun. 
 
 ## Der Selbsttest
 
-Geh die fünf Fragen einmal ehrlich durch. Zu jedem Nein steht darunter, was du tun kannst.
+Geh die fünf Fragen einmal ehrlich durch. Zu jedem Nein steht darunter, wie es sein sollte.
 
 * Hast du deinen Bewertungslink so gespeichert, dass du ihn in zehn Sekunden verschicken kannst?
 * Hast du im letzten Monat mindestens einen Kunden persönlich um eine Bewertung gebeten?
@@ -31,47 +31,69 @@ Geh die fünf Fragen einmal ehrlich durch. Zu jedem Nein steht darunter, was du 
 * Kommst du ohne Rabatte oder Geschenke für Bewertungen aus?
 * Hast du auf deine letzten Bewertungen geantwortet?
 
-## Dein eigener Bewertungslink
+## Die fünf Fehler und wie es richtig aussieht
 
-Über diesen Link schreibt der Kunde eine Bewertung, ohne dein Profil erst suchen zu müssen. So kommst du laut [Google-Hilfe](https://support.google.com/business/answer/16816815?hl=de) daran:
+::fehler: Kein Bewertungslink griffbereit | externer-link::
+
+Ohne Link muss der Kunde dein Profil erst selbst suchen, bevor er schreiben kann. Das ist ein Schritt mehr, bei dem er es womöglich auf später verschiebt.
+
+::loesung::
+
+Dein eigener Bewertungslink liegt als Notiz oder Textbaustein in WhatsApp Business bereit. Über ihn schreibt der Kunde eine Bewertung, ohne dein Profil suchen zu müssen. So holst du ihn laut [Google-Hilfe](https://support.google.com/business/answer/16816815?hl=de):
 
 1. Dein Google-Profil aufrufen, angemeldet mit dem Google-Konto, mit dem du es verwaltest.
 2. „Rezensionen lesen“ antippen.
 3. „Mehr Rezensionen erhalten“ auswählen.
 4. „Kopieren“ wählen.
 
-Speicher den Link als Notiz oder als Textbaustein in WhatsApp Business. Den passenden QR-Code für Visitenkarte oder Übergabeprotokoll bekommst du an derselben Stelle, allerdings nur am PC, nicht am Handy.
+Den passenden QR-Code für Visitenkarte oder Übergabeprotokoll bekommst du an derselben Stelle, allerdings nur am PC, nicht am Handy.
 
-## Wann und wie du fragst
+::/fehler::
 
-Am leichtesten fällt die Frage, wenn der Kunde gerade selbst etwas Positives gesagt hat: bei der Abnahme, bei der Schlüsselübergabe, wenn er sich für die schnelle Hilfe bedankt. Ein Satz reicht:
+::fehler: Du fragst gar nicht | kennenlernen::
 
-> „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Eine ehrliche Bewertung bei Google hilft mir sehr.“
+Das Lob beim Abschied landet nicht von allein bei Google. Die Frage muss von dir kommen.
 
-Am Abend schickst du dann den Link. So schreibt er in Ruhe, und niemand steht daneben:
+::loesung::
 
-> „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
+Du fragst, wenn der Kunde gerade selbst etwas Positives gesagt hat: bei der Abnahme, bei der Schlüsselübergabe, wenn er sich für die schnelle Hilfe bedankt. Ein Satz reicht: „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Eine ehrliche Bewertung bei Google hilft mir sehr.“
 
-Das „und was nicht“ ist Absicht. Du bittest um eine ehrliche Meinung, keine fünf Sterne. Frag deshalb auch die Kunden, bei denen es zwischendurch gehakt hat, zum Beispiel beim Abschlussgespräch: „Wie zufrieden sind Sie am Ende? Ich freue mich über eine ehrliche Bewertung.“
+Am Abend schickst du den Link, dann schreibt er in Ruhe: „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
 
-## Was Google verbietet
+::/fehler::
 
-Um Bewertungen bitten darfst du, solange du nichts dafür anbietest und die Bewertung nicht beeinflusst.
+::fehler: Du fragst nur die Zufriedenen | lob::
 
-::karten: Aus den Google-Richtlinien für Beiträge auf Google Maps.::
+Google verbietet, gezielt um positive Bewertungen zu bitten oder negative zu verhindern ([Richtlinien](https://support.google.com/contributionpolicy/answer/7400114?hl=de)). Wer nur die Kunden fragt, bei denen alles glatt lief, kommt dem gefährlich nahe.
 
-| Verboten | Was das im Alltag heißt |
-| --- | --- |
-| Belohnungen | Rabatt, Gratis-Wartung oder Gutschein als Dankeschön für eine Bewertung |
-| Gezielt um Lob bitten | Um gute Bewertungen bitten oder negative verhindern, etwa indem du nur fragst, wo alles glatt lief |
-| Schreiben vor Ort | Den Kunden auffordern oder drängen, die Bewertung noch an Ort und Stelle zu schreiben |
-| Vorgaben | Text vorschreiben, Namen bestimmter Mitarbeiter verlangen, deinen Leuten Stückzahlen vorgeben |
+::loesung::
 
-Bewertungen, die durch Anreize entstanden sind, entfernt Google aus Google Maps. Auch die Familienrunde fällt raus: Familiäre Beziehungen und eine aktuelle oder frühere Beschäftigung nennt Google als Beispiele für einen Interessenkonflikt ([Richtlinien](https://support.google.com/contributionpolicy/answer/7400114?hl=de)). Deine Gesellen und deine Schwester schreiben also besser keine Bewertung.
+Du fragst jeden Kunden, auch nach einem holprigen Auftrag, zum Beispiel beim Abschlussgespräch: „Wie zufrieden sind Sie am Ende? Ich freue mich über eine ehrliche Bewertung.“ Das „und was nicht“ in deiner Nachricht ist Absicht: Du bittest um eine ehrliche Meinung, keine fünf Sterne.
 
-## Antworten gehört dazu
+::/fehler::
 
-Google [empfiehlt](https://support.google.com/business/answer/3474122?hl=de), auf Bewertungen zu antworten, und rät bei kritischen Bewertungen, mit Namen oder Initialen zu unterschreiben. Damit zeigst du, dass du das Feedback deiner Kunden schätzt.
+::fehler: Belohnung oder Druck | warnung::
+
+Um Bewertungen bitten darfst du, solange du nichts dafür anbietest und die Bewertung nicht beeinflusst. Bewertungen, die durch Anreize entstanden sind, entfernt Google aus Google Maps.
+
+::loesung::
+
+* Keine Gegenleistung: kein Rabatt, keine Gratis-Wartung, kein Gutschein als Dankeschön.
+* Kein Druck: Du darfst den Kunden nicht auffordern oder drängen, die Bewertung noch vor Ort zu schreiben. Fragen darfst du dort, geschrieben wird später.
+* Keine Vorgaben: kein vorgeschriebener Text, keine Namen bestimmter Mitarbeiter, keine Stückzahlen für dein Team.
+* Keine Familienrunde: Familiäre Beziehungen und eine aktuelle oder frühere Beschäftigung nennt Google als Beispiele für einen Interessenkonflikt. Deine Gesellen und deine Schwester schreiben also keine Bewertung.
+
+::/fehler::
+
+::fehler: Bewertungen bleiben unbeantwortet | bewertungen-beantworten::
+
+Wer dein Profil liest, sieht auch, ob du auf Bewertungen reagierst.
+
+::loesung::
+
+Du antwortest auf Bewertungen, wie Google es [empfiehlt](https://support.google.com/business/answer/3474122?hl=de), und unterschreibst bei kritischen mit Namen oder Initialen. Damit zeigst du, dass du das Feedback deiner Kunden schätzt.
+
+::/fehler::
 
 ## Und per E-Mail oder WhatsApp?
 

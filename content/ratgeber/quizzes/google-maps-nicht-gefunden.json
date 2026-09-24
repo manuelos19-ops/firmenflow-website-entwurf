@@ -137,38 +137,38 @@
     {
       "id": "gm_p2",
       "level": "profi",
-      "question": "Wie viele der 198 Weseler Betriebe hatten keine Website im Profil hinterlegt?",
+      "question": "Wo trägst du ein, dass du an Feiertagen anders geöffnet hast?",
       "options": [
-        "48 Betriebe, also 24 Prozent",
-        "2 Betriebe, also 1 Prozent",
-        "150 Betriebe, also 76 Prozent"
+        "In den speziellen Öffnungszeiten im Google-Profil",
+        "Nur auf einem Zettel an der Tür",
+        "In der Kategorie des Profils"
       ],
       "correctIndex": 0,
-      "explanation": "48 Betriebe, 24 Prozent, hatten keine Website im Profil."
+      "explanation": "Google nennt dafür die speziellen Öffnungszeiten."
     },
     {
       "id": "gm_p3",
       "level": "profi",
-      "question": "Bei wie vielen der 198 Betriebe fehlten die Öffnungszeiten?",
+      "question": "Was solltest du neben den Öffnungszeiten im Google-Profil prüfen?",
       "options": [
-        "Bei 26 Betrieben, 13 Prozent",
-        "Bei keinem einzigen",
-        "Bei 150 Betrieben, 76 Prozent"
+        "Ob deine Website eingetragen ist",
+        "Ob dein Lieblingsfoto das Titelbild ist",
+        "Ob Mitbewerber dich bewertet haben"
       ],
       "correctIndex": 0,
-      "explanation": "Bei 26 Betrieben, 13 Prozent, fehlten die Öffnungszeiten."
+      "explanation": "Im Profil sollte auch deine Website stehen."
     },
     {
       "id": "gm_p4",
       "level": "profi",
-      "question": "Wie hoch war der Median der Bewertungen über alle 198 Weseler Betriebe?",
+      "question": "Mit wem vergleichst du deine Hauptkategorie am besten?",
       "options": [
-        "26 Bewertungen",
-        "260 Bewertungen",
-        "2 Bewertungen"
+        "Mit den Betrieben, die in der Suche über dir stehen",
+        "Mit Betrieben aus einer anderen Stadt",
+        "Mit gar niemandem"
       ],
       "correctIndex": 0,
-      "explanation": "Der Median lag bei 26 Bewertungen, der Sterneschnitt bei 4,61."
+      "explanation": "Ein Blick auf die Betriebe über dir zeigt oft, woran es liegt."
     },
     {
       "id": "gm_p5",
@@ -353,14 +353,14 @@
     {
       "id": "gm_p20",
       "level": "profi",
-      "question": "Welchen Sterneschnitt hatten die Weseler Betriebe mit Bewertungen?",
+      "question": "Welche Fotos gehören laut Artikel ins Google-Profil?",
       "options": [
-        "4,61",
-        "2,1",
-        "3,0"
+        "Echte Bilder von Werkstatt, Team und fertigen Arbeiten",
+        "Gekaufte Bilder mit Fotomodellen",
+        "Nur das Logo"
       ],
       "correctIndex": 0,
-      "explanation": "Der Sterneschnitt lag bei 4,61, gerechnet über die 186 Betriebe, die überhaupt Bewertungen hatten."
+      "explanation": "Mit Fotos zeigst du potenziellen Kunden, was du anbietest."
     }
   ]
 }
