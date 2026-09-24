@@ -12,44 +12,63 @@ type RatgeberFehlerProps = {
   solutionList: string[];
 };
 
+function Haken({ className = "" }: { className?: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`flex shrink-0 items-center justify-center rounded-full bg-emerald-600 font-bold text-white ${className}`}
+    >
+      ✓
+    </span>
+  );
+}
+
 /**
- * Fehler-Karte im Artikel: farbiger Kopf mit Icon, Nummer und Überschrift,
- * darunter das Problem und eine Kachel „So sollte es sein“ mit der Lösung.
+ * Fehler-Karte im Artikel: Kopf im Markenverlauf mit Icon, Nummer und Überschrift,
+ * darunter „Woran es hakt“ und eine Kachel „So sollte es sein“ mit der Lösung.
  * Texte kommen als HTML aus dem Parser (escaped, mit Fett/Kursiv/Links).
  */
 export function RatgeberFehler({ id, number, title, icon, problem, solution, solutionList }: RatgeberFehlerProps) {
   const iconName = (icon in firmenflowIconPaths ? icon : "fehler") as FirmenflowIconName;
 
   return (
-    <article className="rounded-[2rem] bg-white border border-[var(--color-line)] shadow-sm overflow-hidden">
-      <header className="flex items-center gap-4 sm:gap-5 bg-gradient-to-r from-[var(--color-coral)]/15 via-[var(--color-coral)]/[0.07] to-transparent px-5 py-5 sm:px-8 sm:py-6 border-b border-[var(--color-line)]">
-        <span className="flex shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm border border-[var(--color-line)] w-16 h-16 sm:w-20 sm:h-20">
-          <FirmenflowIcon name={iconName} size={52} decorative />
+    <article className="rounded-[2rem] bg-white border border-[var(--color-line)] shadow-md overflow-hidden">
+      <header className="relative flex items-center gap-4 sm:gap-5 bg-gradient-to-br from-[var(--color-plum)] via-[var(--color-plum)] to-[var(--color-coral)] px-5 py-5 sm:px-8 sm:py-6">
+        <span className="flex shrink-0 items-center justify-center rounded-2xl bg-white shadow-lg w-16 h-16 sm:w-20 sm:h-20 rotate-[-4deg]">
+          <FirmenflowIcon name={iconName} size={56} decorative />
         </span>
-        <div className="min-w-0 space-y-1">
-          <p className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-coral)] px-3 py-0.5 text-xs font-mono font-bold uppercase tracking-wider text-white">
+        <div className="min-w-0 space-y-1.5">
+          <p className="inline-flex items-center rounded-full bg-white/20 px-3 py-0.5 text-xs font-mono font-bold uppercase tracking-wider text-white ring-1 ring-white/30">
             Fehler {number}
           </p>
           <h3
             id={id}
-            className="scroll-mt-28 text-xl sm:text-2xl font-display font-bold leading-snug text-[var(--color-ink)]"
+            className="scroll-mt-28 text-xl sm:text-2xl font-display font-bold leading-snug text-white"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>
       </header>
 
       <div className="space-y-5 px-5 py-5 sm:px-8 sm:py-7">
-        {problem.map((p, i) => (
-          <p
-            key={i}
-            className="text-base sm:text-lg leading-relaxed text-[var(--color-ink)] [&_a]:text-[var(--color-plum)]"
-            dangerouslySetInnerHTML={{ __html: p }}
-          />
-        ))}
+        <div className="space-y-2">
+          <p className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+            <span aria-hidden="true" className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-coral)] text-[0.7rem] font-bold text-white">
+              !
+            </span>
+            Woran es hakt
+          </p>
+          {problem.map((p, i) => (
+            <p
+              key={i}
+              className="text-base sm:text-lg leading-relaxed text-[var(--color-ink)]"
+              dangerouslySetInnerHTML={{ __html: p }}
+            />
+          ))}
+        </div>
 
-        <div className="rounded-2xl bg-[var(--color-plum)]/[0.06] border border-[var(--color-plum)]/20 p-5 sm:p-6 space-y-3">
-          <p className="flex items-center gap-2.5 font-display font-bold text-lg text-[var(--color-plum)]">
-            <FirmenflowIcon name="erfolg" size={26} decorative />
+        <div className="rounded-2xl bg-emerald-50 border border-emerald-600/25 p-5 sm:p-6 space-y-3">
+          <p className="flex items-center gap-2.5 font-display font-bold text-lg text-emerald-800">
+            <Haken className="h-7 w-7 text-sm" />
             So sollte es sein
           </p>
           {solution.map((p, i) => (
@@ -63,12 +82,7 @@ export function RatgeberFehler({ id, number, title, icon, problem, solution, sol
             <ul className="space-y-2.5">
               {solutionList.map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-sm sm:text-base leading-relaxed text-[var(--color-ink)]">
-                  <span
-                    aria-hidden="true"
-                    className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-plum)] text-[0.7rem] font-bold text-white"
-                  >
-                    ✓
-                  </span>
+                  <Haken className="mt-0.5 h-5 w-5 text-[0.7rem]" />
                   <span dangerouslySetInnerHTML={{ __html: item }} />
                 </li>
               ))}
