@@ -1,6 +1,6 @@
 {
   "title": "Selbst-Check: Die 5 typischen Website-Fehler",
-  "description": "Teste dein Wissen zu Ladezeiten, mobilen Anrufen und Google Maps. Finde heraus, ob deine Website Neukunden anzieht oder abschreckt.",
+  "description": "Teste dein Wissen zu Ladezeit, Anruf-Knopf, Fotos und Google-Profil. Finde heraus, ob deine Website Neukunden anzieht oder abschreckt.",
   "questions": [
     {
       "id": "w_b1",
@@ -9,7 +9,7 @@
       "options": [
         "Etwa 10 Prozent",
         "Etwa 1 Prozent",
-        "Keine, solange die Inhalte gut sind"
+        "Gar keine"
       ],
       "correctIndex": 0,
       "explanation": "Auf web.dev nennt Google einen Messwert der BBC: Für jede zusätzliche Sekunde Ladezeit verlor sie weitere 10 Prozent ihrer Nutzer."
@@ -17,26 +17,26 @@
     {
       "id": "w_b2",
       "level": "basis",
-      "question": "Was machen Neukunden laut dem Artikel meistens, wenn sie in einen Ort neu ziehen und einen Handwerker brauchen?",
+      "question": "Was machen Menschen, die neu im Ort sind und dringend einen Fachbetrieb brauchen?",
       "options": [
-        "Sie nehmen das Smartphone aus der Tasche und suchen bei Google",
-        "Sie fragen sofort den Nachbarn über den Gartenzaun",
-        "Sie warten auf Werbeflyer im Briefkasten"
+        "Sie nehmen das Smartphone und suchen",
+        "Sie warten auf einen Werbebrief",
+        "Sie rufen die Gemeindeverwaltung an"
       ],
       "correctIndex": 0,
-      "explanation": "Zugezogene und Neukunden kennen oft noch niemanden im Ort. Sie suchen bei akuten Problemen sofort mobil auf dem Handy nach einem Fachbetrieb."
+      "explanation": "Wer niemanden im Ort kennt, sucht auf dem Smartphone. Er sieht von dir zuerst deine Seite auf dem Handy."
     },
     {
       "id": "w_b3",
       "level": "basis",
-      "question": "Warum bemerkt ein Betriebsinhaber oft gar nicht, wie viele Aufträge ihm durch eine schlechte Website entgehen?",
+      "question": "Warum merkst du oft nicht, wie viele Kunden dir eine schlechte Website kostet?",
       "options": [
-        "Weil das Telefon einfach stumm bleibt und abspringende Kunden sich nicht beschweren",
-        "Weil Google eine wöchentliche E-Mail mit verpassten Kunden schickt",
-        "Weil Kunden eine Beschwerdekarte in den Briefkasten werfen"
+        "Weil abspringende Kunden sich nicht melden und das Telefon einfach still bleibt",
+        "Weil Google dir jeden verlorenen Kunden per Post meldet",
+        "Weil schlechte Websites gar keine Kunden kosten"
       ],
       "correctIndex": 0,
-      "explanation": "Wer auf deiner Seite genervt abspringt, beschwert sich nicht. Er ruft die Konkurrenz an, und dein Telefon bleibt stumm."
+      "explanation": "Wer auf deiner Seite abspringt, beschwert sich nicht. Er ruft woanders an."
     },
     {
       "id": "w_b4",
@@ -44,23 +44,23 @@
       "question": "Wie sollte die Telefonnummer auf deiner Website am Handy aussehen?",
       "options": [
         "Als gut sichtbarer Knopf, der mit einem Daumentipp anruft",
-        "Klein im Fließtext ganz unten auf der Seite",
-        "Nur im Impressum, damit die Startseite aufgeräumt bleibt"
+        "Als Bild, damit sie niemand kopieren kann",
+        "Nur im Impressum ganz unten"
       ],
       "correctIndex": 0,
-      "explanation": "Wer mit Rohrbruch oder streikendem Garagentor sucht, will nichts abtippen. Ein Knopf, der direkt anruft, nimmt ihm genau diese Hürde."
+      "explanation": "Ein Knopf, der direkt anruft, erspart dem Kunden das Abtippen."
     },
     {
       "id": "w_b5",
       "level": "basis",
-      "question": "Welche Fotos überzeugen Neukunden bei einem lokalen Handwerksbetrieb am meisten?",
+      "question": "Welche Fotos überzeugen Neukunden eines lokalen Betriebs mehr?",
       "options": [
-        "Echte Fotos von dir, deinen Mitarbeitern und deiner Arbeit vor Ort",
-        "Gekaufte Stockfotos mit amerikanischen Fotomodellen",
-        "Überhaupt keine Fotos, nur Text und Tabellen"
+        "Echte Fotos von dir, deiner Werkstatt und deiner Arbeit",
+        "Gekaufte Bilder mit Fotomodellen",
+        "Gar keine Fotos"
       ],
       "correctIndex": 0,
-      "explanation": "Gekaufte Agenturfotos wirken unpersönlich und austauschbar. Echte Bilder aus der Werkstatt oder von der Baustelle schaffen sofort Vertrauen."
+      "explanation": "Wer einen Handwerker ins Haus lässt, will sehen, wer da kommt."
     },
     {
       "id": "w_b6",
@@ -68,279 +68,39 @@
       "question": "Wie viel Prozent der Menschen zwischen 16 und 74 Jahren nutzen laut Statistischem Bundesamt das Internet?",
       "options": [
         "97 Prozent",
-        "Etwa 60 Prozent",
-        "Rund 35 Prozent"
+        "47 Prozent",
+        "17 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Destatis nutzen 97 Prozent der 16- bis 74-Jährigen das Internet. Wer heute einen Betrieb sucht, sucht ihn also fast immer online."
+      "explanation": "Laut Destatis nutzen 97 Prozent der 16- bis 74-Jährigen das Internet."
     },
     {
       "id": "w_b7",
       "level": "basis",
-      "question": "Warum hilft ein Einstieg wie „Herzlich willkommen, seit vielen Jahren stehen wir für Qualität“ dem Kunden nicht?",
+      "question": "Warum hilft „Herzlich willkommen, seit vielen Jahren stehen wir für Qualität“ dem Kunden nicht?",
       "options": [
         "Weil genau diesen Satz auch jeder Mitbewerber schreiben könnte",
-        "Weil Google Websites mit Begrüßungen im Ranking abstraft",
-        "Weil Kunden Höflichkeit auf Websites grundsätzlich stört"
+        "Weil der Satz zu kurz ist",
+        "Weil Kunden Begrüßungen grundsätzlich nicht mögen"
       ],
       "correctIndex": 0,
-      "explanation": "Wer auf deiner Seite landet, hat ein Problem und will wissen, ob du es löst. Die erste Überschrift sollte sagen, was du machst und wo, z. B. „Heizungswartung und Reparaturen in Wesel und Umgebung“."
+      "explanation": "Wer auf deiner Seite landet, will wissen, ob du sein Problem löst. Die erste Überschrift sollte das beantworten."
     },
     {
       "id": "w_b8",
       "level": "basis",
-      "question": "Wohin gehören laut Artikel Urkunden, Meisterbrief und Firmengeschichte auf deiner Website?",
+      "question": "Wohin gehören Urkunden und Firmengeschichte auf deiner Website?",
       "options": [
-        "Weiter nach unten auf der Seite als Beleg für gute Arbeit",
-        "Ganz nach oben als allererste Überschrift der Startseite",
-        "Auf eine separate, passwortgeschützte Seite"
+        "Weiter nach unten, als Beleg für gute Arbeit",
+        "Ganz nach oben, vor alles andere",
+        "Gar nicht auf die Website"
       ],
       "correctIndex": 0,
-      "explanation": "Die Firmengeschichte ist wichtig, gehört aber nach unten. Sie belegt deine Kompetenz, sobald der Kunde weiß, was du überhaupt anbietest."
+      "explanation": "Sie belegen deine Arbeit, sobald der Kunde weiß, was du anbietest."
     },
     {
       "id": "w_b9",
       "level": "basis",
-      "question": "Was passiert laut Artikel, wenn deine Website vor allem für den Computerbildschirm von damals gebaut wurde?",
-      "options": [
-        "Sie ist auf modernen Handys schwer zu bedienen und Kunden springen ab",
-        "Google zeigt sie auf Handys automatisch fehlerfrei an",
-        "Besucher werden vom Browser automatisch an den Schreibtisch verwiesen"
-      ],
-      "correctIndex": 0,
-      "explanation": "Viele alte Websites wurden für große Monitore gebaut. Auf dem Handy sind Schriften zu klein, Menüs verkantet und Nummern nicht anklickbar."
-    },
-    {
-      "id": "w_b10",
-      "level": "basis",
-      "question": "Welcher erste Schritt wird im schnellen Smartphone-Test für den eigenen Betrieb empfohlen?",
-      "options": [
-        "Die eigene Website heute Abend auf dem Handy öffnen und Ladezeit sowie Anruf-Button prüfen",
-        "Sofort eine teure Werbeagentur mit einem Redesign beauftragen",
-        "Die Website vorsichtshalber komplett offline nehmen"
-      ],
-      "correctIndex": 0,
-      "explanation": "In zwei Minuten auf dem eigenen Handy prüfen: Lädt die Seite sofort? Kann man mit einem Daumentipp anrufen? Versteht man sofort dein Angebot?"
-    },
-    {
-      "id": "w_p1",
-      "level": "profi",
-      "question": "Wie viele lokale Betriebe zeigt Google auf dem Smartphone bei lokaler Suche direkt im Kartenausschnitt an?",
-      "options": [
-        "Meist 3 Betriebe („Local 3-Pack“)",
-        "Alle Betriebe der Stadt untereinander auf einer langen Liste",
-        "Immer genau 10 Betriebe alphabetisch sortiert"
-      ],
-      "correctIndex": 0,
-      "explanation": "Google blendet im Kartenausschnitt meist drei Betriebe ein, je nach Suche und Gerät auch mal vier. Oft steht eine Anzeige mit dem Hinweis „Gesponsert“ davor. Wer hier fehlt, wird von vielen Neukunden gar nicht wahrgenommen."
-    },
-    {
-      "id": "w_p2",
-      "level": "profi",
-      "question": "Wie viel Prozent der Befragten lesen laut der zitierten BrightLocal-Konsumentenstudie vorab Online-Bewertungen?",
-      "options": [
-        "97 Prozent der Befragten",
-        "Etwa 50 Prozent der Befragten",
-        "Nur rund 20 Prozent der Befragten"
-      ],
-      "correctIndex": 0,
-      "explanation": "In der jährlichen BrightLocal-Konsumentenbefragung gaben 97 % der Kunden an, Bewertungen lokaler Betriebe vor einer Entscheidung zu lesen."
-    },
-    {
-      "id": "w_p3",
-      "level": "profi",
-      "question": "Wie viel Prozent der Kunden wählen laut BrightLocal bevorzugt Betriebe, die auch auf Bewertungen antworten?",
-      "options": [
-        "80 Prozent der Kunden",
-        "35 Prozent der Kunden",
-        "Nur 10 Prozent der Kunden"
-      ],
-      "correctIndex": 0,
-      "explanation": "80 % der Kunden entscheiden sich bevorzugt für Betriebe, die auf Bewertungen reagieren. Das belegt Zuverlässigkeit und echten Kundenservice."
-    },
-    {
-      "id": "w_p4",
-      "level": "profi",
-      "question": "Wie lautet das konkrete Praxis-Beispiel aus dem Artikel für eine klare Startseiten-Überschrift eines Heizungsbetriebs?",
-      "options": [
-        "„Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an …“",
-        "„Willkommen beim Meisterbetrieb für behagliche Wärme seit 1974.“",
-        "„Ihr kompetenter Partner für Energie, Tradition und Zukunft.“"
-      ],
-      "correctIndex": 0,
-      "explanation": "Leistung, Ort und ein klarer nächster Schritt. Die beiden anderen Sätze klingen nett, sagen dem Kunden aber nicht, ob du sein Problem löst."
-    },
-    {
-      "id": "w_p5",
-      "level": "profi",
-      "question": "Warum wirken echte Fotos aus deinem Betrieb stärker als gekaufte Bilder mit Fotomodellen?",
-      "options": [
-        "Weil sie sehen wollen, wer tatsächlich vor ihrer Haustür steht und ins Haus kommt",
-        "Weil Model-Fotos gegen Handwerkskammer-Richtlinien verstoßen",
-        "Weil Stockfotos die Ladezeit der Website immer zerstören"
-      ],
-      "correctIndex": 0,
-      "explanation": "Wer einen Handwerker ins Haus lässt, will vorher wissen, wer da kommt. Gekaufte Bilder erkennen Kunden sofort, und dann fragen sie sich, ob es den Betrieb vor Ort überhaupt gibt."
-    },
-    {
-      "id": "w_p6",
-      "level": "profi",
-      "question": "Was ist laut Artikel die Folge, wenn deine Angaben auf Google Maps nicht mit deiner Website übereinstimmen?",
-      "options": [
-        "Du verspielst das Vertrauen der Neukunden, bevor sie überhaupt deine Seite besuchen",
-        "Google löscht deine Website automatisch aus dem Suchindex",
-        "Kunden bekommen automatisch einen Rabatt angezeigt"
-      ],
-      "correctIndex": 0,
-      "explanation": "Widersprüchliche Öffnungszeiten oder abweichende Telefonnummern stiften Verwirrung und kosten sofort das Vertrauen von Neukunden."
-    },
-    {
-      "id": "w_p7",
-      "level": "profi",
-      "question": "Warum scheitern aufwendige Kontaktformulare mit vielen Feldern bei mobilen Handwerkskunden?",
-      "options": [
-        "Weil das Ausfüllen auf der Bildschirmtastatur unterwegs viel zu umständlich ist",
-        "Weil Handys keine Formulare übermitteln können",
-        "Weil Online-Formulare gesetzlich verboten sind"
-      ],
-      "correctIndex": 0,
-      "explanation": "Niemand tippt am Smartphone gerne lange Texte in winzige Formularfelder. Je weniger Hürden, desto mehr Anfragen erhält dein Betrieb."
-    },
-    {
-      "id": "w_p8",
-      "level": "profi",
-      "question": "Welche technische Auswirkung hat jede Sekunde zusätzlicher Ladezeit auf eine Firmenwebsite?",
-      "options": [
-        "Mehr Besucher springen ab, bevor sie die Seite überhaupt sehen",
-        "Die Seite wird automatisch sicherer vor Hackerangriffen",
-        "Es hat auf dem Smartphone heutzutage keinerlei Auswirkungen mehr"
-      ],
-      "correctIndex": 0,
-      "explanation": "Die Messwerte auf Googles web.dev zeigen es: Mit jeder Sekunde Wartezeit gehen mehr Besucher verloren. Bei der BBC waren es 10 Prozent pro zusätzlicher Sekunde."
-    },
-    {
-      "id": "w_p9",
-      "level": "profi",
-      "question": "Was bedeutet die Feststellung aus dem Artikel: „Die Leute fragen selten den Nachbarn über den Zaun“?",
-      "options": [
-        "Neuzugezogene und jüngere Kunden recherchieren Fachbetriebe heute selbstständig online",
-        "Nachbarn reden in Deutschland grundsätzlich nicht mehr miteinander",
-        "Mundpropaganda und Empfehlungen existieren überhaupt nicht mehr"
-      ],
-      "correctIndex": 0,
-      "explanation": "Stammkunden empfehlen weiter, aber Neukunden und Zugezogene nutzen bei akuten Problemen sofort die Google-Suche auf dem Smartphone."
-    },
-    {
-      "id": "w_p10",
-      "level": "profi",
-      "question": "Was biete ich dir am Ende des Artikels als kostenlose Einschätzung an?",
-      "options": [
-        "Ein 3 bis 5 Minuten langes Video, in dem ich deine Seite wie ein Kunde durchgehe",
-        "Einen 50-seitigen automatisch erzeugten PDF-Bericht",
-        "Ein zweistündiges Verkaufsgespräch vor Ort"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ich rufe deine Seite auf dem Handy auf und zeige dir im Video, wo Kunden abspringen und was ich an deiner Stelle zuerst ändern würde."
-    },
-    {
-      "id": "w_p11",
-      "level": "profi",
-      "question": "Welcher Vorteil entsteht für Handwerksbetriebe bei Firmenflow durch Festpreise vor Projektstart?",
-      "options": [
-        "Volle Planungssicherheit und keine unvorhergesehenen Kosten ohne Agenturtheater",
-        "Man muss die Rechnung erst nach fünf Jahren begleichen",
-        "Die Website wird dadurch automatisch billiger als ein kostenloser Baukasten"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ein klarer Festpreis vor Beginn verhindert Kostenfallen und böse Überraschungen, wie man sie von klassischen Werbeagenturen kennt."
-    },
-    {
-      "id": "w_p12",
-      "level": "profi",
-      "question": "Was ist laut Artikel der Unterschied zwischen Stammkunden und Neukunden bei der Website-Nutzung?",
-      "options": [
-        "Stammkunden kennen die Qualität bereits; Neukunden beurteilen dich rein nach dem ersten Online-Eindruck",
-        "Stammkunden nutzen nur Computer, Neukunden ausschließlich Tablets",
-        "Neukunden interessieren sich überhaupt nicht für die Erreichbarkeit"
-      ],
-      "correctIndex": 0,
-      "explanation": "Stammkunden rufen an, weil sie deine Arbeit kennen. Neukunden sehen im ersten Moment nur deinen Auftritt auf dem Handy, und der entscheidet über den Anruf."
-    },
-    {
-      "id": "w_p13",
-      "level": "profi",
-      "question": "Warum sollten Telefonnummern auf mobilen Websites zwingend als direkter Link (`tel:`) hinterlegt sein?",
-      "options": [
-        "Damit sich bei einem Fingertipp sofort die Telefon-App öffnet, ohne die Nummer abtippen zu müssen",
-        "Weil Google nur so die Vorwahl der Stadt für die Karte auslesen kann",
-        "Weil das Telefonieren über den Internet-Browser sonst gebührenpflichtig ist"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ein Daumentipp muss genügen. Muss ein Kunde die Nummer erst auf einen Zettel schreiben oder merken, brechen viele genervt ab."
-    },
-    {
-      "id": "w_p14",
-      "level": "profi",
-      "question": "Was empfiehlt der Artikel für die Textgestaltung auf der Startseite eines Meisterbetriebs?",
-      "options": [
-        "Klare, ehrliche Sprache zu Angebot und Region statt geschwollener Werbetexte",
-        "Möglichst lange Schachtelsätze mit vielen unverständlichen Fachbegriffen",
-        "Nur Bilder ohne jegliche erklärenden Texte"
-      ],
-      "correctIndex": 0,
-      "explanation": "Verständliche, ehrliche Sprache ohne Fachchinesisch überzeugt Kunden am schnellsten davon, dass du der richtige Betrieb bist."
-    },
-    {
-      "id": "w_p15",
-      "level": "profi",
-      "question": "Welche Rolle spielt die regionale Verankerung (z. B. „Wesel und Umgebung“) in der Website-Überschrift?",
-      "options": [
-        "Sie signalisiert Suchenden und Google sofort die regionale Nähe und Zuständigkeit",
-        "Sie schränkt den Kundenkreis unnötig ein und sollte immer weggelassen werden",
-        "Sie ist gesetzlich nur im Impressum der Website vorgeschrieben"
-      ],
-      "correctIndex": 0,
-      "explanation": "Lokale Kunden wollen jemanden aus ihrer Region. Die Ortsnennung gibt sofort Sicherheit und stärkt gleichzeitig die regionale Google-Auffindbarkeit."
-    },
-    {
-      "id": "w_p16",
-      "level": "profi",
-      "question": "Warum ist ein Google-Unternehmensprofil für lokale Betriebe genauso wichtig wie die eigene Website?",
-      "options": [
-        "Weil Google Maps bei lokaler Suche meist vor den regulären Website-Links auf dem Handy erscheint",
-        "Weil Google Websites ohne Maps-Profil nach 30 Tagen sperrt",
-        "Weil man nur mit einem Google-Profil Rechnungen schreiben kann"
-      ],
-      "correctIndex": 0,
-      "explanation": "Google Maps dominiert den Smartphone-Bildschirm. Website und Google-Profil gehören fest zusammen, um Kunden lückenlos abzuholen."
-    },
-    {
-      "id": "w_p17",
-      "level": "profi",
-      "question": "Was passiert mit Kundenanfragen, wenn die Öffnungszeiten im Google-Profil nicht stimmen?",
-      "options": [
-        "Kunden rufen verärgert bei einem Konkurrenten an, der verlässlich erreichbar ist",
-        "Google leitet den Anruf automatisch auf die private Handynummer um",
-        "Die Kunden hinterlassen aus Mitleid eine positive 5-Sterne-Bewertung"
-      ],
-      "correctIndex": 0,
-      "explanation": "Wer vor verschlossener Tür steht oder niemanden erreicht, wählt sofort die nächste Nummer in der Google-Liste."
-    },
-    {
-      "id": "w_p18",
-      "level": "profi",
-      "question": "Welche Aufgaben übernimmt Firmenflow laut Artikel bei der Erstellung einer neuen Website?",
-      "options": [
-        "Aufbau, verständliche Texte schreiben, technische Umsetzung und auf Wunsch Fotos vor Ort",
-        "Nur das Versenden von automatischen Mahnungen",
-        "Ausschließlich das Schalten teurer Google-Werbeanzeigen"
-      ],
-      "correctIndex": 0,
-      "explanation": "Firmenflow übernimmt den kompletten Prozess: Struktur, Texte, Technik und auf Wunsch sogar authentische Fotos direkt im Betrieb."
-    },
-    {
-      "id": "w_p19",
-      "level": "profi",
       "question": "Welche Beschriftung ist auf dem Kontaktknopf besser?",
       "options": [
         "„Reparatur anfragen“",
@@ -348,19 +108,259 @@
         "„Formular abschicken“"
       ],
       "correctIndex": 0,
-      "explanation": "Die Beschriftung sagt dem Kunden, was als Nächstes passiert. „Reparatur anfragen“ passt zu seinem Anliegen, „Senden“ könnte auf jedem Formular stehen."
+      "explanation": "Die Beschriftung sagt dem Kunden, was als Nächstes passiert, und passt zu seinem Anliegen."
+    },
+    {
+      "id": "w_b10",
+      "level": "basis",
+      "question": "Womit fängt der Smartphone-Test aus dem Artikel an?",
+      "options": [
+        "Die eigene Website auf dem Handy öffnen und prüfen, ob sie sich sofort aufbaut",
+        "Einen neuen Computer kaufen",
+        "Die Website ausdrucken"
+      ],
+      "correctIndex": 0,
+      "explanation": "Öffne deine Seite auf dem Handy: Baut sie sich sofort auf, und kannst du dich mit einem Daumentipp anrufen?"
+    },
+    {
+      "id": "w_p1",
+      "level": "profi",
+      "question": "Um wie viel Prozent steigerte Rakuten 24 laut web.dev den Umsatz pro Besucher nach Arbeit an der Ladeleistung?",
+      "options": [
+        "Um 53,37 Prozent",
+        "Um 5 Prozent",
+        "Gar nicht"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut web.dev investierte Rakuten 24 in die Core Web Vitals, Googles Messwerte für Ladezeit und Bedienbarkeit, und steigerte den Umsatz pro Besucher um 53,37 Prozent."
+    },
+    {
+      "id": "w_p2",
+      "level": "profi",
+      "question": "Welche Umsatzsteigerung nennt web.dev für Vodafone nach einer schnelleren Ladezeit?",
+      "options": [
+        "8 Prozent",
+        "80 Prozent",
+        "0 Prozent"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut web.dev verbesserte Vodafone einen Ladezeit-Messwert um 31 Prozent und steigerte den Umsatz um 8 Prozent."
+    },
+    {
+      "id": "w_p3",
+      "level": "profi",
+      "question": "Was schreibt Google über Betriebe mit vollständigen und korrekten Angaben im Profil?",
+      "options": [
+        "Sie werden mit größerer Wahrscheinlichkeit in den lokalen Suchergebnissen angezeigt",
+        "Sie müssen dafür bezahlen",
+        "Sie werden automatisch auf Platz eins gesetzt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Laut Google-Hilfe werden Betriebe mit vollständigen und korrekten Informationen mit größerer Wahrscheinlichkeit angezeigt."
+    },
+    {
+      "id": "w_p4",
+      "level": "profi",
+      "question": "Wie lautet das Beispiel aus dem Artikel für eine klare Überschrift eines Heizungsbetriebs?",
+      "options": [
+        "„Heizungswartung und Reparaturen in Wesel und Umgebung. Rufen Sie uns an …“",
+        "„Herzlich willkommen auf unserer Homepage“",
+        "„Qualität, Kompetenz und Zuverlässigkeit seit vielen Jahren“"
+      ],
+      "correctIndex": 0,
+      "explanation": "Leistung, Ort und ein klarer nächster Schritt."
+    },
+    {
+      "id": "w_p5",
+      "level": "profi",
+      "question": "Warum wirken echte Fotos stärker als gekaufte Bilder mit Fotomodellen?",
+      "options": [
+        "Weil Kunden sehen wollen, wer tatsächlich zu ihnen ins Haus kommt",
+        "Weil gekaufte Bilder verboten sind",
+        "Weil Google gekaufte Bilder automatisch löscht"
+      ],
+      "correctIndex": 0,
+      "explanation": "Katalogbilder erkennt man sofort. Ein ehrliches Foto zeigt, wer kommt."
+    },
+    {
+      "id": "w_p6",
+      "level": "profi",
+      "question": "Welche Angaben sollten auf Website und Google-Profil übereinstimmen?",
+      "options": [
+        "Name, Adresse, Telefonnummer und Öffnungszeiten",
+        "Nur das Logo",
+        "Nur die Farbe der Website"
+      ],
+      "correctIndex": 0,
+      "explanation": "Name, Adresse, Telefonnummer und Öffnungszeiten sollten im Profil genauso stehen wie auf der Website."
+    },
+    {
+      "id": "w_p7",
+      "level": "profi",
+      "question": "Warum schrecken komplizierte Kontaktformulare ab?",
+      "options": [
+        "Weil sie Details verlangen, die der Kunde noch gar nicht kennt",
+        "Weil Formulare am Handy verboten sind",
+        "Weil Kunden lieber Briefe schreiben"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer technische Angaben in Pflichtfelder eintragen soll, die er nicht kennt, gibt auf und ruft den nächsten Betrieb an."
+    },
+    {
+      "id": "w_p8",
+      "level": "profi",
+      "question": "Was zeigt der Messwert der BBC auf web.dev?",
+      "options": [
+        "Mit jeder zusätzlichen Sekunde Ladezeit gingen weitere Nutzer verloren",
+        "Langsame Seiten haben mehr Besucher",
+        "Die Ladezeit spielt keine Rolle"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die BBC verlor für jede zusätzliche Sekunde Ladezeit weitere 10 Prozent ihrer Nutzer."
+    },
+    {
+      "id": "w_p9",
+      "level": "profi",
+      "question": "Mit welchem kostenlosen Test von Google lässt sich die Ladezeit prüfen?",
+      "options": [
+        "PageSpeed Insights",
+        "Google Translate",
+        "Google Kalender"
+      ],
+      "correctIndex": 0,
+      "explanation": "Der Artikel empfiehlt, die Seite mit PageSpeed Insights prüfen zu lassen."
+    },
+    {
+      "id": "w_p10",
+      "level": "profi",
+      "question": "Wie lang ist die kostenlose Video-Einschätzung am Ende des Artikels?",
+      "options": [
+        "Drei bis fünf Minuten",
+        "Zwei Stunden",
+        "Dreißig Sekunden"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ich rufe deine Seite auf dem Handy auf und zeige dir in drei bis fünf Minuten, wo Kunden abspringen."
+    },
+    {
+      "id": "w_p11",
+      "level": "profi",
+      "question": "Was weißt du bei einem Website-Projekt mit Firmenflow vor dem Start?",
+      "options": [
+        "Umfang und Festpreis",
+        "Nur einen Stundensatz",
+        "Den Preis erst nach dem Livegang"
+      ],
+      "correctIndex": 0,
+      "explanation": "Du kennst Umfang und Festpreis vor dem ersten Handgriff."
+    },
+    {
+      "id": "w_p12",
+      "level": "profi",
+      "question": "Was unterscheidet Stammkunden von Neukunden bei der Website?",
+      "options": [
+        "Stammkunden kennen deine Arbeit, Neukunden sehen zuerst nur deine Seite",
+        "Stammkunden sehen eine andere Website",
+        "Es gibt keinen Unterschied"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stammkunden rufen an, weil sie dich kennen. Neukunden beurteilen dich zuerst nach deinem Auftritt auf dem Handy."
+    },
+    {
+      "id": "w_p13",
+      "level": "profi",
+      "question": "Was bringt es, wenn die Telefonnummer auf dem Handy als Knopf angelegt ist?",
+      "options": [
+        "Ein Tipp öffnet direkt das Telefon, niemand muss die Nummer abtippen",
+        "Die Nummer wird dadurch geheim",
+        "Der Anruf wird kostenlos"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein Daumentipp muss reichen, um dich anzurufen."
+    },
+    {
+      "id": "w_p14",
+      "level": "profi",
+      "question": "Wie sollte der erste Text auf deiner Startseite klingen?",
+      "options": [
+        "Klar zu Angebot und Ort statt allgemeiner Werbefloskeln",
+        "Möglichst lang und ausführlich",
+        "So allgemein, dass er zu jedem Betrieb passt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Schreib gleich oben, was du anbietest und wo du tätig bist."
+    },
+    {
+      "id": "w_p15",
+      "level": "profi",
+      "question": "Was gehört laut Artikel gleich oben auf die Startseite?",
+      "options": [
+        "Was du anbietest und wo du tätig bist",
+        "Die komplette Firmengeschichte",
+        "Alle Urkunden der letzten Jahre"
+      ],
+      "correctIndex": 0,
+      "explanation": "Leistung und Ort gehören nach oben, Geschichte und Urkunden weiter nach unten."
+    },
+    {
+      "id": "w_p16",
+      "level": "profi",
+      "question": "Wann geht eine neue Website bei Firmenflow online?",
+      "options": [
+        "Erst nach deiner Freigabe, nachdem ihr den Entwurf auf dem Handy geprüft habt",
+        "Sofort, ohne dass du sie vorher siehst",
+        "Erst nach einem Jahr"
+      ],
+      "correctIndex": 0,
+      "explanation": "Den Entwurf prüft ihr gemeinsam auf deinem Handy. Online geht er erst nach deiner Freigabe."
+    },
+    {
+      "id": "w_p17",
+      "level": "profi",
+      "question": "Welche Altersgruppe umfasst die Zahl des Statistischen Bundesamts zur Internetnutzung?",
+      "options": [
+        "16 bis 74 Jahre",
+        "Nur über 80 Jahre",
+        "Nur Kinder unter 10 Jahren"
+      ],
+      "correctIndex": 0,
+      "explanation": "Befragt wurden Personen im Alter von 16 bis 74 Jahren."
+    },
+    {
+      "id": "w_p18",
+      "level": "profi",
+      "question": "Was übernimmt Firmenflow beim Bau einer neuen Website?",
+      "options": [
+        "Struktur, Texte und Technik, auf Wunsch auch Fotos vor Ort",
+        "Nur das Hosting",
+        "Nur das Logo"
+      ],
+      "correctIndex": 0,
+      "explanation": "Struktur, Texte und Technik kommen von mir, Fotos auf Wunsch direkt bei dir vor Ort."
+    },
+    {
+      "id": "w_p19",
+      "level": "profi",
+      "question": "Wer hat den Wert von 10 Prozent weniger Nutzern pro Sekunde gemessen?",
+      "options": [
+        "Die BBC an ihrer eigenen Website",
+        "Das Statistische Bundesamt",
+        "Eine Handwerkskammer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Den Wert hat die BBC an der eigenen Website gemessen, Google nennt ihn auf web.dev."
     },
     {
       "id": "w_p20",
       "level": "profi",
-      "question": "Was ist das Hauptfazit des Artikels über veraltete Websites lokaler Betriebe?",
+      "question": "Wem gehört bei Firmenflow die Domain deiner Website?",
       "options": [
-        "Gute Handwerksarbeit verdient einen Auftritt, der neue Kunden anzieht statt sie wegzuschicken",
-        "Lokale Handwerker brauchen in der heutigen Zeit überhaupt keine Website mehr",
-        "Nur weltweite Großkonzerne müssen auf mobile Ladezeiten achten"
+        "Dir, sie bleibt dein Eigentum",
+        "Firmenflow",
+        "Google"
       ],
       "correctIndex": 0,
-      "explanation": "Deine Arbeit kann noch so gut sein. Neukunden sehen zuerst deine Seite auf dem Handy, und die muss ihnen in wenigen Sekunden zeigen, dass sie bei dir richtig sind."
+      "explanation": "Deine Webadresse gehört dir und bleibt dein Eigentum."
     }
   ]
 }

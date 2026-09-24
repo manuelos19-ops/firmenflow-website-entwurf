@@ -3,7 +3,7 @@ title: "Azubis und Mitarbeiter finden: Warum die Anzeige im Wochenblatt niemande
 metaTitle: "Azubis finden: Warum Zeitungsanzeigen verpuffen"
 description: "Anzeige geschaltet, kein Anruf. Wo dein nächster Azubi wirklich sucht, was er über dich findet, und wie dein Betrieb auf dem Handy für Bewerber aussieht."
 date: "2026-09-22"
-updated: "2026-09-23"
+updated: "2026-09-24"
 category: "Mitarbeiter finden"
 tags: [Azubis, Mitarbeiter, Karriereseite, Handwerk, Wesel]
 image: "/images/ratgeber/azubis-finden-handwerk-titel.webp"
@@ -11,73 +11,33 @@ imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: null Rückmeldungen au
 featured: "false"
 ---
 
-Du hast eine Anzeige im Wochenblatt geschaltet. Kosten dreistellig, Laufzeit drei Wochen, Rückmeldungen null. Am selben Wochenende sitzt der Sechzehnjährige, der perfekt in deinen Betrieb gepasst hätte, vier Stunden am Handy. Von dir hat er dort nichts gesehen.
-
-Die Zeitung erreicht zuverlässig die Leute, die sie lesen. Dein nächster Azubi gehört nicht dazu.
+Du hast eine Anzeige im Wochenblatt geschaltet. Kosten dreistellig, Laufzeit drei Wochen, Rückmeldungen null. Am selben Wochenende sitzt der Sechzehnjährige, der perfekt in deinen Betrieb gepasst hätte, stundenlang am Handy. Von dir hat er dort nichts gesehen.
 
 ## Kurz gesagt
 
-* Von den 12- bis 19-Jährigen besitzen 95 Prozent ein eigenes Smartphone und nutzen es täglich. Zeitungen spielen bei ihnen praktisch keine Rolle.
-* Der Ausbildungsmarkt hat sich gedreht: Auf 100 gemeldete Ausbildungsstellen kamen zuletzt 93 Bewerber. Du bewirbst dich mit.
-* Wer sich für deinen Betrieb interessiert, tippt vorher deinen Namen ins Handy. Was er dann findet, entscheidet über die Bewerbung.
+* 95 Prozent der 12- bis 19-Jährigen nutzen ihr Smartphone täglich. Zeitungen spielen bei ihnen kaum eine Rolle.
+* Auf 100 gemeldete Ausbildungsstellen kamen zuletzt 93 Bewerber. Du bewirbst dich also mit.
+* Bewerber und ihre Eltern tippen vorher deinen Namen ins Handy. Was sie finden, entscheidet über die Bewerbung.
 
-## Wo dein nächster Azubi tatsächlich ist
+## Der Selbsttest
 
-Der Medienpädagogische Forschungsverbund Südwest befragt jedes Jahr 1.200 Jugendliche zwischen zwölf und 19 Jahren. In der Erhebung von 2025 besitzen 95 Prozent ein eigenes Smartphone, genauso viele nutzen es täglich. Die durchschnittliche Bildschirmzeit am Handy liegt bei 231 Minuten, knapp vier Stunden am Tag. Bei den Zwölf- bis 13-Jährigen sind es 166 Minuten, bei den Volljährigen 278.
+Nimm dein Handy und geh die fünf Fragen durch, so wie es ein Bewerber tun würde. Zu jedem Nein steht darunter, was du tun kannst.
 
-Was Jugendliche an einem normalen Tag tun:
+* Findest du bei deinem Betriebsnamen plus „Ausbildung“ überhaupt etwas von dir?
+* Hat deine Website eine Seite mit offenen Stellen und dem, was man verdient?
+* Steht dort ein echtes Foto von dir und deinen Leuten?
+* Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?
+* Hast du auf kritische Google-Bewertungen geantwortet, gerade auf die von ehemaligen Mitarbeitern?
 
-::chart: JIM-Studie 2025, 1.200 Befragte zwischen 12 und 19 Jahren. Anteil mit täglicher Nutzung.::
-
-| Beschäftigung | Täglich |
-| --- | --- |
-| Smartphone nutzen | 95 |
-| Musik hören | 76 |
-| Videos im Internet | 56 |
-| Digitale Spiele | 42 |
-| Bücher lesen | 14 |
-
-Über Zeitungen schreibt die Studie einen Satz, der die Sache erledigt: Zeitungen, Zeitschriften und E-Books spielen bei der täglichen Nutzung kaum eine Rolle. Rechnet man großzügiger und zählt alles mit, was mehrmals pro Woche gelesen wird, kommt etwa ein Zehntel zusammen, gedruckt und digital zusammengenommen.
-
-An deiner Anzeige lag es also vermutlich nicht. Sie hing an einer Wand, an der die Zielgruppe nicht vorbeikommt.
-
-## Der Markt hat sich gedreht
-
-Früher hat sich der Betrieb den Azubi ausgesucht. Heute ist es andersherum, und das lässt sich beziffern.
-
-::zahlen: Bundesagentur für Arbeit, Ausbildungsmarktbilanz 2024/25 (Stichtag 30. September 2025) und Berufsbildungsbericht 2025 für den Handwerkswert (Berichtsjahr 2024).::
-
-| Wert | Bedeutung |
-| --- | --- |
-| 54.000 | Ausbildungsstellen blieben zum Stichtag unbesetzt |
-| 18 % | aller betrieblich gemeldeten Ausbildungsstellen im Handwerk fanden niemanden |
-| 93 | Bewerber kamen rechnerisch auf 100 gemeldete betriebliche Stellen |
-
-Knapp jede fünfte Lehrstelle im Handwerk blieb leer, rund 19.000 Plätze. Gleichzeitig standen 40.000 Bewerber am Ende ohne Ausbildungsplatz da. Es fehlen also junge Leute, und die, die es gibt, finden oft nicht zu den Betrieben, die sie suchen.
-
-Du konkurrierst damit um jeden Bewerber mit dem Betrieb zwei Orte weiter. Und der Vergleich findet auf dem Handy statt.
-
-## Was ein Bewerber macht, bevor er sich meldet
-
-Er tippt deinen Betriebsnamen ein. Das machen auch die Eltern, und zwar gründlicher. Was dabei herauskommt, hat meistens eine von drei Formen.
+## Was du bei einem Nein tun kannst
 
 ### Er findet nichts
 
-Kein Eintrag, keine Seite. Ein Erwachsener denkt: „Die machen wohl kein Internet.“ Ein Sechzehnjähriger denkt, dass es den Betrieb vermutlich nicht mehr gibt.
+Kein Eintrag, keine Seite. Ein Erwachsener denkt: „Die machen wohl kein Internet.“ Ein Sechzehnjähriger denkt, dass es den Betrieb vermutlich nicht mehr gibt. Fang mit dem Google-Profil an: [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden). Was eine Website auf dem Handy braucht, steht in [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe).
 
-### Er findet eine Seite von 2014
+### Es gibt keine Karriereseite
 
-Drei Schriftarten, ein Besucherzähler, als letzte Neuigkeit die Weihnachtsfeier von 2016. Die Seite sagt nichts über die Arbeit und viel über den Umgang mit Dingen, die liegen bleiben.
-
-### Er findet dein Google-Profil
-
-Darin zwei Bewertungen, davon eine von einem verärgerten Ex-Mitarbeiter, unbeantwortet seit zwei Jahren. Was dort steht, liest er als Auskunft darüber, wie es sich bei dir arbeitet. Seine Eltern auch. Eine sachliche Antwort von dir unter der Kritik ändert dieses Bild mehr als jede Stellenanzeige.
-
-Wie du prüfst, was Google über dich ausgibt, steht in [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden). Die häufigsten Schwachstellen der Website selbst stehen in [Die 5 typischen Website-Fehler lokaler Betriebe](https://www.firmenflow.de/ratgeber/website-fehler-lokale-betriebe).
-
-## Was auf eine Karriereseite gehört
-
-Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jeder Bewerber stellt und die auf vielen Betriebsseiten offenbleiben.
+Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jeder Bewerber stellt:
 
 ::karten: Vier Fragen, die vor der Bewerbung im Kopf des Bewerbers stehen.::
 
@@ -88,42 +48,38 @@ Eine Karriereseite ist kein Prospekt. Sie beantwortet vier Fragen, die sich jede
 | Was verdient man? | Eine Zahl oder eine Spanne, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, rechnet der Bewerber mit dem Schlechtesten |
 | Wie bewirbt man sich? | Ein Weg, ein Klick, eine Antwortzeit, die du auch einhältst |
 
-Der Unterschied zu „Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ ist, dass diese vier Antworten überprüfbar sind. Fotos von deiner Werkstatt, deinen Fahrzeugen und deinen Leuten machen den Rest. Ein Betrieb, den man sieht, wirkt anders als einer, der nur behauptet.
+„Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ kann jeder schreiben. Diese vier Antworten dagegen sind überprüfbar.
 
-## Die Bewerbungshürde
+### Keine echten Fotos
 
-Ein Sechzehnjähriger schreibt kein Anschreiben als PDF. Er hat keinen Drucker, keinen Briefumschlag und keine Lust, ein Formular mit vierzehn Pflichtfeldern auszufüllen.
+Fotos von deiner Werkstatt, deinen Fahrzeugen und deinen Leuten zeigen, wie es bei dir wirklich aussieht, bevor jemand zum ersten Mal vorbeikommt. Ein Betrieb, den man sieht, wirkt anders als einer, der nur behauptet.
 
-Was er schreibt, ist eine Nachricht bei WhatsApp mit seinem Namen und einem Satz dazu, warum er sich meldet. Danach rufst du zurück. Wer die Hürde hoch lässt, verliert genau die Jugendlichen, die sich spontan gemeldet hätten.
+### Die Bewerbung ist zu umständlich
 
-Dasselbe gilt für Gesellen. Wer sich mit 34 und festem Job umschaut, tut das abends auf dem Sofa am Handy. Er lädt keinen Lebenslauf hoch. Er schreibt zwei Sätze, wenn er kann.
+Ein Sechzehnjähriger schreibt kein Anschreiben als PDF und füllt kein Formular mit vierzehn Pflichtfeldern aus. Er schreibt eine WhatsApp-Nachricht mit seinem Namen und einem Satz dazu, warum er sich meldet. Danach rufst du zurück. Dasselbe gilt für Gesellen: Wer sich mit 34 und festem Job umschaut, tut das abends auf dem Sofa am Handy und schreibt zwei Sätze, wenn er kann.
 
-## Der Fünf-Minuten-Selbsttest
+### Kritik steht unbeantwortet da
 
-Nimm dein Handy und geh die Punkte durch, so wie es ein Bewerber tun würde.
+Zwei Bewertungen, davon eine von einem verärgerten Ex-Mitarbeiter, unbeantwortet seit zwei Jahren. Bewerber lesen das als Auskunft darüber, wie es sich bei dir arbeitet, ihre Eltern auch. Eine sachliche Antwort von dir ändert dieses Bild mehr als jede Stellenanzeige.
 
-* Findest du bei deinem Betriebsnamen plus „Ausbildung“ überhaupt etwas von dir?
-* Hat deine Website eine Seite, auf der offene Stellen stehen?
-* Steht dort ein echtes Foto von dir und deinen Leuten?
-* Steht dort, was man verdient?
-* Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?
-* Ist die letzte Änderung auf deiner Seite jünger als ein Jahr?
-* Hast du auf kritische Google-Bewertungen geantwortet, gerade auf die von ehemaligen Mitarbeitern?
+## Warum die Zeitungsanzeige verpufft
 
-Jedes Nein ist ein Grund, warum ein Bewerber, der dich fast gefragt hätte, es dann doch gelassen hat.
+Der Medienpädagogische Forschungsverbund Südwest befragt jedes Jahr 1.200 Jugendliche zwischen zwölf und 19 Jahren. In der [JIM-Studie 2025](https://mpfs.de/studie/jim-studie-2025/) besitzen 95 Prozent ein eigenes Smartphone, genauso viele nutzen es täglich, im Schnitt 231 Minuten am Tag. Zeitungen, Zeitschriften und E-Books spielen bei der täglichen Nutzung kaum eine Rolle, schreibt die Studie.
+
+Gleichzeitig hat sich der Ausbildungsmarkt gedreht. Laut [Bundesagentur für Arbeit](https://www.arbeitsagentur.de/presse/2025-45-ausbildungsmarktbilanz-2024-2025) kamen zuletzt 93 Bewerber auf 100 gemeldete betriebliche Ausbildungsstellen. Im Handwerk blieben laut [Berufsbildungsbericht 2025](https://www.bmbfsfj.bund.de/resource/blob/273880/f5330ba9181acb9f5bd87a69da672848/berufsbildungsbericht-2025-data.pdf) rund 19.000 Stellen unbesetzt, 18 Prozent. Du konkurrierst also mit dem Betrieb zwei Orte weiter, und der Vergleich findet auf dem Handy statt.
 
 ## Wenn du das angehen willst
 
-Eine Karriereseite kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Sie rechnet sich anders als eine Seite für Neukunden. Eine unbesetzte Stelle heißt: Aufträge schieben, Kunden vertrösten, Überstunden für den Rest vom Team. Das kostet dich jeden Monat Umsatz, auch wenn es auf keiner Rechnung steht.
+Eine Karriereseite kann gut der Anlass sein, überhaupt mit einer Website anzufangen. Eine unbesetzte Stelle heißt Aufträge schieben, Kunden vertrösten und Überstunden für den Rest vom Team.
 
-Bei Firmenflow baue ich die Seite auf, schreibe die Texte und komme auf Wunsch für die Fotos zu dir in den Betrieb. Ein Onepager startet bei 690 Euro netto, ein Fototermin liegt bei 350 Euro. Hosting und Änderungen kosten 39 Euro im Monat, monatlich kündbar.
+Bei Firmenflow baue ich die Seite auf, schreibe die Texte und komme auf Wunsch für die Fotos zu dir in den Betrieb. Ein Onepager startet bei 690 Euro netto, ein Fototermin kostet 350 Euro. Hosting und Änderungen kosten 39 Euro im Monat, monatlich kündbar.
 
-Wie viele Bewerbungen dabei herauskommen, kann dir niemand versprechen, ich auch nicht. Sichtbar zu sein ist die Bedingung dafür, dass sich überhaupt jemand melden kann. Schick mir deinen Betriebsnamen, dann sehe ich mir an, was ein Bewerber gerade über dich findet.
+Wie viele Bewerbungen dabei herauskommen, kann dir niemand versprechen, ich auch nicht. Schick mir deinen Betriebsnamen, dann sehe ich mir an, was ein Bewerber gerade über dich findet.
 
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen sind Beispiele, keine Berichte über bestimmte Kunden.*
 
 ## Geprüfte Quellen und Belege
 
-1. **Medienpädagogischer Forschungsverbund Südwest:** [JIM-Studie 2025](https://mpfs.de/studie/jim-studie-2025/) (Repräsentative Befragung von 1.200 Jugendlichen zwischen zwölf und 19 Jahren, Erhebung bis 12. Juli 2025; Werte zu Geräteausstattung, Bildschirmzeit und täglicher Mediennutzung)
-2. **Bundesagentur für Arbeit:** [Ausbildungsmarktbilanz 2024/25](https://www.arbeitsagentur.de/presse/2025-45-ausbildungsmarktbilanz-2024-2025) (Veröffentlicht am 30. Oktober 2025; 494.000 gemeldete Stellen, 54.000 unbesetzt und 40.000 unversorgte Bewerber zum Stichtag 30. September 2025)
+1. **Medienpädagogischer Forschungsverbund Südwest:** [JIM-Studie 2025](https://mpfs.de/studie/jim-studie-2025/), [Bericht als PDF](https://mpfs.de/app/uploads/2025/11/JIM_2025_PDF_barrierearm.pdf) (Repräsentative Befragung von 1.200 Jugendlichen zwischen zwölf und 19 Jahren, Erhebung bis 12. Juli 2025; Geräteausstattung, Bildschirmzeit und tägliche Mediennutzung)
+2. **Bundesagentur für Arbeit:** [Ausbildungsmarktbilanz 2024/25](https://www.arbeitsagentur.de/presse/2025-45-ausbildungsmarktbilanz-2024-2025) (Veröffentlicht am 30. Oktober 2025; 54.000 unbesetzte Stellen und 40.000 unversorgte Bewerber zum Stichtag 30. September 2025)
 3. **Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend:** [Berufsbildungsbericht 2025](https://www.bmbfsfj.bund.de/resource/blob/273880/f5330ba9181acb9f5bd87a69da672848/berufsbildungsbericht-2025-data.pdf) (Berichtsjahr 2024; im Handwerk blieben rund 19.000 und damit 18 Prozent aller betrieblich gemeldeten Ausbildungsstellen unbesetzt)

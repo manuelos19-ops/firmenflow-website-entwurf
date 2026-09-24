@@ -10,22 +10,76 @@ imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 57 von 198 Betrieben i
 featured: "false"
 ---
 
-Das Bad ist fertig, die Fugen sind sauber, und die Kundin sagt beim Abschied: „Das war wirklich top, ich empfehle Sie weiter.“ Du fährst zufrieden nach Hause. Bei Google taucht davon nie etwas auf.
+Das Bad ist fertig, und die Kundin sagt beim Abschied: „Das war wirklich top, ich empfehle Sie weiter.“ Bei Google taucht davon nie etwas auf.
 
 Zwei Straßen weiter hat ein anderer Betrieb achtzig Bewertungen, du hast neun. Vermutlich arbeitet er nicht besser als du. Er fragt nur, und zwar so, dass es dem Kunden leichtfällt.
 
 ## Kurz gesagt
 
-* Im Handwerk sind Google-Bewertungen rar. Ein Elektriker im Raum Wesel hat im Median 6, ein Fliesenleger 4.
-* Über deinen eigenen Bewertungslink kann der Kunde eine Rezension schreiben, ohne dein Profil erst suchen zu müssen. Google stellt ihn dir im Profil bereit.
-* Fragen ist erlaubt, auch direkt beim Kunden. Belohnungen, gezieltes Bitten um gute Bewertungen und die Aufforderung, die Bewertung noch vor Ort zu schreiben, verbietet Google.
-* Im Selbsttest am Ende siehst du, ob du beim Fragen etwas verschenkst.
+* Fragen ist erlaubt, auch direkt beim Kunden. Den Link zum Bewerten schickst du ihm danach.
+* Deinen eigenen Bewertungslink holst du dir in vier Schritten aus deinem Google-Profil.
+* Verboten sind Belohnungen, gezieltes Bitten um gute Bewertungen und Druck, noch vor Ort zu schreiben.
+* Im Handwerk reichen wenige: Ein Elektriker im Raum Wesel hat im Median 6 Bewertungen.
+
+## Der Selbsttest
+
+Geh die fünf Fragen einmal ehrlich durch. Zu jedem Nein steht darunter, was du tun kannst.
+
+* Hast du deinen Bewertungslink so gespeichert, dass du ihn in zehn Sekunden verschicken kannst?
+* Hast du im letzten Monat mindestens einen Kunden persönlich um eine Bewertung gebeten?
+* Fragst du alle Kunden, auch die, bei denen es zwischendurch gehakt hat?
+* Kommst du ohne Rabatte oder Geschenke für Bewertungen aus?
+* Hast du auf deine letzten Bewertungen geantwortet?
+
+## Dein eigener Bewertungslink
+
+Über diesen Link schreibt der Kunde eine Rezension, ohne dein Profil erst suchen zu müssen. So kommst du laut [Google-Hilfe](https://support.google.com/business/answer/16816815?hl=de) daran:
+
+1. Dein Unternehmensprofil aufrufen, angemeldet mit dem Google-Konto, mit dem du es verwaltest.
+2. „Rezensionen lesen“ antippen.
+3. „Mehr Rezensionen erhalten“ auswählen.
+4. „Kopieren“ wählen.
+
+Speicher den Link als Notiz oder als Textbaustein in WhatsApp Business. Den passenden QR-Code für Visitenkarte oder Übergabeprotokoll bekommst du an derselben Stelle, allerdings nur am PC, nicht am Handy.
+
+## Wann und wie du fragst
+
+Am leichtesten fällt die Frage, wenn der Kunde gerade selbst etwas Positives gesagt hat: bei der Abnahme, bei der Schlüsselübergabe, wenn er sich für die schnelle Hilfe bedankt. Ein Satz reicht:
+
+> „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Eine ehrliche Bewertung bei Google hilft mir sehr.“
+
+Am Abend schickst du dann den Link. So schreibt er in Ruhe, und niemand steht daneben:
+
+> „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
+
+Das „und was nicht“ ist Absicht. Du bittest um eine ehrliche Meinung, keine fünf Sterne.
+
+## Was Google verbietet
+
+Um Bewertungen bitten darfst du, solange du nichts dafür anbietest und die Bewertung nicht beeinflusst. Die Grenzen stehen in den [Richtlinien für Beiträge auf Google Maps](https://support.google.com/contributionpolicy/answer/7400114?hl=de):
+
+::karten: Diese Punkte nennt Google in seinen Richtlinien für Beiträge auf Google Maps.::
+
+| Verboten | Was das im Alltag heißt |
+| --- | --- |
+| Belohnungen | Kein Rabatt, keine Gratis-Wartung, kein Gutschein als Dankeschön für eine Bewertung |
+| Gezielt um Lob bitten | Nur die Kunden fragen, bei denen alles glatt lief, oder negative Bewertungen verhindern |
+| Druck vor Ort | Den Kunden drängen, die Bewertung noch an Ort und Stelle zu schreiben |
+| Vorgaben zum Inhalt | Keinen Text vorschreiben, keine bestimmten Namen verlangen, deinen Leuten keine Stückzahlen vorgeben |
+
+Bewertungen, die durch Anreize entstanden sind, entfernt Google aus Google Maps. Auch die Familienrunde fällt raus: Verwandte und frühere Mitarbeiter nennt Google als Beispiele für einen Interessenkonflikt.
+
+## Und per E-Mail oder WhatsApp?
+
+Der Bundesgerichtshof hat 2018 entschieden, dass eine Kundenzufriedenheitsbefragung per E-Mail als Werbung zählt, auch wenn mit derselben E-Mail die Rechnung kommt ([BGH, VI ZR 225/17](https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Zivilsenate/VI_ZS/2017/VI_ZR_225-17.pdf?__blob=publicationFile&v=1)). Werbung per E-Mail braucht grundsätzlich eine Einwilligung, für Bestandskunden gibt es Ausnahmen nur unter Bedingungen. Ob das für WhatsApp genauso gilt, kann ich nicht verbindlich sagen, ich bin kein Anwalt. Mein Weg: im Gespräch fragen, ob du den Link schicken darfst, und ihn nur schicken, wenn der Kunde das möchte. Im Zweifel fragst du bei deiner Handwerkskammer nach.
+
+## Antworten gehört dazu
+
+Google empfiehlt als Best Practice, auf Rezensionen zu antworten. Bei einer kritischen Bewertung unterschreibst du am besten mit Namen oder Initialen. Wer dein Profil später liest, sieht daran, dass du dich kümmerst.
 
 ## Wie viele Bewertungen in deiner Branche üblich sind
 
-Google schreibt in seiner Hilfe selbst, woran es hauptsächlich festmacht, wer in den lokalen Suchergebnissen oben steht: Relevanz, Entfernung und Bekanntheit. Zur Bekanntheit zählt Google auch die Anzahl der Rezensionen, die ein Betrieb erhalten hat. Wörtlich heißt es dort: [Je mehr Rezensionen und positive Bewertungen Ihr Unternehmen erhält, desto besser kann das Ranking in lokalen Suchergebnissen ausfallen](https://support.google.com/business/answer/7091?hl=de). Google schreibt „kann“ und verspricht damit nichts. Die Bewertungen sind trotzdem der Teil der Bekanntheit, den du am ehesten selbst in der Hand hast.
-
-Wie viele Bewertungen normal sind, hängt stark von der Branche ab. Für meinen Artikel [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden) habe ich im September 2026 die Google-Profile von 198 Betrieben aus zwölf Branchen im Raum Wesel ausgewertet. Hier sieben davon. Median heißt: Die Hälfte der Betriebe hat weniger Bewertungen, die andere Hälfte mehr.
+Laut [Google](https://support.google.com/business/answer/7091?hl=de) kann das Ranking in den lokalen Ergebnissen besser ausfallen, je mehr Rezensionen und positive Bewertungen ein Betrieb bekommt. Wie viele normal sind, hängt stark von der Branche ab. Für meinen Artikel [Warum dein Betrieb bei Google Maps nicht gefunden wird](https://www.firmenflow.de/ratgeber/google-maps-nicht-gefunden) habe ich die Google-Profile von 198 Betrieben im Raum Wesel ausgewertet. Median heißt: Die Hälfte hat weniger, die Hälfte mehr.
 
 ::chart: Eigene Erhebung, 198 Betriebe im Raum Wesel, abgefragt am 22. September 2026. Werte: Bewertungen im Median, Auswahl von sieben der zwölf Branchen.::
 
@@ -39,105 +93,17 @@ Wie viele Bewertungen normal sind, hängt stark von der Branche ab. Für meinen 
 | KFZ-Werkstatt | 50 |
 | Bäckerei | 132 |
 
-Im Handwerk sind die Zahlen also überschaubar. Über alle zwölf Branchen hinweg, Bäckereien und Friseure eingeschlossen, hatten 57 der 198 Betriebe weniger als zehn Bewertungen, 12 gar keine. Für dich ist das eine gute Nachricht: Als Elektriker oder Fliesenleger liegst du mit fünfzehn ehrlichen Bewertungen im Raum Wesel über dem Median. Eine Kampagne brauchst du dafür nicht. Es kommt darauf an, dass du über Monate jeden Kunden fragst.
-
-Zwei Einschränkungen gehören dazu. Einzelne Branchenwerte beruhen auf wenigen Betrieben, bei den Fliesenlegern auf neun. Und erfasst sind nur die Betriebe, die Google für die jeweiligen Suchbegriffe ausgibt.
-
-## Warum zufriedene Kunden nichts schreiben
-
-Aus Sicht deiner Kundin sieht es so aus: Sie müsste an dich denken, wenn der Alltag längst weiterläuft, bei Google nach deinem Betrieb suchen, das richtige Profil finden, den Knopf für Rezensionen entdecken und angemeldet sein. Google schreibt dazu selbst: Kunden müssen in einem Google-Konto angemeldet sein, um eine Rezension zu verfassen.
-
-Das sind viele Schritte für jemanden, der dir eigentlich nur einen Gefallen tun möchte, und jeder davon ist eine Gelegenheit, es auf später zu verschieben. Du kannst zwei Dinge ändern: den Weg kürzer machen und im passenden Moment fragen.
-
-## Dein eigener Bewertungslink
-
-Wenn du dein Google-Profil selbst verwaltest, stellt Google dir einen Link bereit, über den Kunden eine Rezension für dein Profil verfassen können. Der Kunde öffnet den Link, vergibt Sterne und schreibt ein paar Sätze, ohne vorher dein Profil suchen zu müssen.
-
-So kommst du an deinen Link, laut der [Google-Hilfe zum Bewertungslink](https://support.google.com/business/answer/16816815?hl=de):
-
-1. Dein Unternehmensprofil aufrufen, angemeldet mit dem Google-Konto, mit dem du es verwaltest.
-2. „Rezensionen lesen“ antippen.
-3. „Mehr Rezensionen erhalten“ auswählen.
-4. „Kopieren“ wählen. Der Link liegt jetzt in deiner Zwischenablage.
-
-Speicher den Link einmal als Notiz oder als Textbaustein in WhatsApp Business ab. Dann hast du ihn immer griffbereit.
-
-Den passenden QR-Code bekommst du über dieselbe Stelle. Eine Einschränkung nennt Google dazu ausdrücklich: QR-Codes für Rezensionen lassen sich derzeit nur in einem Computerbrowser erzeugen, nicht am Handy. Setz dich dafür also einmal an den PC.
-
-Wo der Link hingehört, zählt Google gleich mit auf: auf Belege, in Dankeschön-E-Mails (dazu unten mehr), ans Ende eines Chats, und den QR-Code ausgedruckt ins Geschäft. Für Handwerksbetriebe passen außerdem die Visitenkarte und das Übergabeprotokoll.
-
-## Der passende Moment zum Fragen
-
-Am leichtesten fällt die Frage, wenn der Kunde gerade selbst etwas Positives gesagt hat. Bei der Abnahme, bei der Übergabe der Schlüssel, wenn er sich für die schnelle Hilfe bedankt. In dem Moment musst du nichts verkaufen, du greifst nur auf, was er ohnehin gesagt hat.
-
-Ein Satz reicht, zum Beispiel so:
-
-> „Das freut mich wirklich. Darf ich Ihnen heute Abend einen Link schicken? Wenn Sie zwei Minuten Zeit haben, hilft mir eine ehrliche Bewertung bei Google sehr.“
-
-Die Frage selbst darfst du ruhig vor Ort stellen. Was Google in seinen Richtlinien untersagt, ist etwas anderes: Kunden aufzufordern oder unter Druck zu setzen, die Bewertung zu schreiben, während sie noch vor Ort sind. Du fragst also, ob der Kunde bewerten möchte, und schickst den Link später. Dann schreibt er in Ruhe, und niemand steht daneben, während er tippt.
-
-Die Nachricht dazu kann so aussehen:
-
-> „Guten Abend Frau Beispiel, danke noch mal für heute. Hier ist der Link, von dem ich erzählt habe: [dein Link]. Schreiben Sie gern, was Ihnen gefallen hat und was nicht. Viele Grüße, [dein Name]“
-
-Das „und was nicht“ ist Absicht. Du bittest um eine ehrliche Meinung. Wer um fünf Sterne bittet, versucht die Bewertung zu beeinflussen, und genau das untersagt Google.
-
-Kunden ohne Google-Konto musst du übrigens nicht aufgeben. Google weist darauf hin, dass sich ein Google-Konto auch mit einer E-Mail-Adresse einrichten lässt, die nicht zu Gmail gehört. Drängen solltest du trotzdem niemanden.
-
-## Was Google beim Fragen verbietet
-
-Um Bewertungen bitten darfst du. Google erlaubt ausdrücklich, Kunden zu Beiträgen zu ermuntern, die auf einer echten Erfahrung beruhen, solange du dafür nichts anbietest und die Bewertung nicht beeinflusst. Die Grenzen stehen in den [Richtlinien für Nutzerbeiträge auf Google Maps](https://support.google.com/contributionpolicy/answer/7400114?hl=de):
-
-::karten: Diese Punkte nennt Google in seinen Richtlinien für Beiträge auf Google Maps.::
-
-| Verboten | Was das im Alltag heißt |
-| --- | --- |
-| Belohnungen | Kein Rabatt, keine Gratis-Wartung, kein Gutschein als Dankeschön für eine Bewertung |
-| Gezielt um Lob bitten | Kunden gezielt um positive Bewertungen bitten oder negative verhindern, etwa indem du nur fragst, wo alles glatt lief |
-| Schreiben vor Ort | Den Kunden auffordern oder drängen, die Bewertung gleich an Ort und Stelle zu schreiben. Fragen darfst du, das Schreiben kommt später |
-| Vorgaben zum Inhalt | Keinen Text vorschreiben, keine bestimmten Namen verlangen, deinen Leuten keine Stückzahlen vorgeben |
-
-Bei der Belohnung ist die Versuchung am größten, weil sie so harmlos wirkt. Google nennt Anreize wie kostenlose oder vergünstigte Produkte oder Dienstleistungen als Gegenleistung für Rezensionen eine gefälschte Interaktion, die streng verboten ist. Solche Bewertungen werden laut Google aus Google Maps entfernt. Das gilt genauso, wenn du jemandem etwas anbietest, damit er eine negative Bewertung ändert oder löscht.
-
-Genauso heikel ist die Familienrunde. Google nennt familiäre Beziehungen und frühere Beschäftigung als Beispiele für einen Interessenkonflikt, und Beiträge, die auf einem Interessenkonflikt beruhen, sind laut Google nicht zulässig.
-
-## Und per E-Mail oder WhatsApp?
-
-Hier kommt zu Google noch das deutsche Recht dazu. Der Bundesgerichtshof hat 2018 entschieden, dass eine Kundenzufriedenheitsbefragung in einer E-Mail als Werbung zählt, auch wenn mit derselben E-Mail die Rechnung verschickt wird ([BGH, Urteil vom 10. Juli 2018, VI ZR 225/17](https://www.bundesgerichtshof.de/SharedDocs/Entscheidungen/DE/Zivilsenate/VI_ZS/2017/VI_ZR_225-17.pdf?__blob=publicationFile&v=1)). Im Fall ging es um einen Onlinehändler, der mit der Rechnung um eine „5-Sterne Beurteilung“ gebeten hatte. Werbung per E-Mail braucht grundsätzlich eine Einwilligung. Für Bestandskunden gibt es Ausnahmen, aber nur unter Bedingungen, zu denen unter anderem gehört, dass der Kunde der Werbung widersprechen kann.
-
-Ob das für WhatsApp oder SMS genauso gilt, kann ich dir nicht verbindlich sagen. Ich bin kein Anwalt und gebe dir dazu keine Rechtsberatung. Für den Alltag heißt das aus meiner Sicht nur: Frag im persönlichen Gespräch, ob du den Link schicken darfst, und schick ihn nur, wenn der Kunde das möchte. Eine Bitte um Bewertung, die ungefragt unter jeder Rechnungsmail hängt, lässt du besser weg. Wer seine Abläufe dazu rechtlich absichern will, fragt am besten bei seiner Handwerkskammer oder einem Anwalt nach.
-
-## Antworten gehört dazu
-
-Google empfiehlt als Best Practice, auf Rezensionen zu antworten, kurz und freundlich. Jedem öffentlich danken musst du laut Google nicht, antworte, wenn du etwas zu sagen hast. Bei kritischen Bewertungen rät Google außerdem, die Antwort mit Namen oder Initialen zu unterschreiben. Google prüft jede Antwort, in der Regel innerhalb von zehn Minuten. Danach steht sie öffentlich unter der Bewertung, und der Verfasser bekommt eine Nachricht.
-
-Wer dein Profil später liest, sieht an deinen Antworten, dass du dich kümmerst, gerade bei einer kritischen Bewertung. Google schreibt dazu selbst, dass eine Mischung aus positivem und negativem Feedback oft vertrauenswürdiger wirkt.
-
-## Der Selbsttest
-
-Geh die Fragen einmal ehrlich durch.
-
-* Weißt du, wo in deinem Profil dein Bewertungslink steht?
-* Hast du den Link so gespeichert, dass du ihn in zehn Sekunden verschicken kannst?
-* Hast du im letzten Monat mindestens einen Kunden persönlich um eine Bewertung gebeten?
-* Fragst du alle Kunden, auch die, bei denen es zwischendurch gehakt hat?
-* Kommst du ohne Rabatte oder Geschenke für Bewertungen aus?
-* Weiß dein Team, wann und wie es fragen soll?
-* Hast du auf deine letzten Bewertungen geantwortet?
-
-Jedes Nein ist eine Stelle, an der zufriedene Kunden gerade nichts schreiben.
+Als Elektriker oder Fliesenleger liegst du mit fünfzehn ehrlichen Bewertungen also schon über dem Median. Dafür brauchst du keine Kampagne, nur die Gewohnheit, über Monate jeden Kunden zu fragen. Einzelne Werte beruhen allerdings auf wenigen Betrieben, bei den Fliesenlegern auf neun.
 
 ## Wenn du das abgeben willst
 
 Das Fragen kann dir keiner abnehmen, das machst du oder dein Team beim Kunden. Den Rest kann ich übernehmen.
 
-Mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360) räume ich dein Google-Profil einmalig auf, das kostet 190 Euro. Danach übernehme ich in der Betreuung für 99 Euro im Monat die laufende Arbeit: Ich lese jede neue Bewertung, antworte in deinem Ton und halte dein Profil aktuell, ohne dass du daran denken musst.
+Mit [Lokalpräsenz 360°](https://www.firmenflow.de/lokalpraesenz-360) räume ich dein Google-Profil einmalig auf, das kostet 190 Euro. In der Betreuung für 99 Euro im Monat lese ich jede neue Bewertung, antworte in deinem Ton und halte dein Profil aktuell.
 
-Einmal im Monat bekommst du von mir eine ausführliche Auswertung. Du siehst darin, was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. So weißt du, was bei dir schon gut läuft und woran sich Kunden stören. Dazu gebe ich dir konkrete Tipps, was du im Betrieb verbessern kannst. Die kommen aus eigener Erfahrung, denn ich habe fast zehn Jahre lang Betriebe geführt, aufgebaut und vermarktet, darunter mein eigenes Fitnessstudio und meine eigene Lasertag-Arena.
+Einmal im Monat bekommst du von mir eine ausführliche Auswertung: was deine Kunden immer wieder loben, wo sich Kritik häuft und wie sich beides im Vergleich zum Vormonat entwickelt. Dazu gebe ich dir konkrete Tipps, was du im Betrieb verbessern kannst. Die kommen aus eigener Erfahrung, denn ich habe fast zehn Jahre lang Betriebe geführt, aufgebaut und vermarktet, darunter mein eigenes Fitnessstudio und meine eigene Lasertag-Arena.
 
-Die Betreuung ist monatlich kündbar. Wenn mehrere Leute bei dir Kundenkontakt haben, zeige ich deinem Team in einer kurzen Schulung für 150 Euro, wann und wie es fragt, ohne dass es sich nach Betteln anfühlt. Alle Preise sind netto.
-
-Wenn du erst einmal wissen willst, wie dein Profil gerade dasteht, schreib mir deinen Betriebsnamen und deinen Ort. Dann schaue ich es mir an.
+Die Betreuung ist monatlich kündbar. Haben mehrere Leute bei dir Kundenkontakt, zeige ich deinem Team in einer Schulung für 150 Euro, wann und wie es fragt. Alle Preise sind netto.
 
 *Autor: [Manu](https://www.firmenflow.de/ueber-manu). Die beschriebenen Situationen und Nachrichten sind Beispiele, keine Berichte über bestimmte Kunden.*
 

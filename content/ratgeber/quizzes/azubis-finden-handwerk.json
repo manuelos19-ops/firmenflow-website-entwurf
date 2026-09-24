@@ -1,6 +1,6 @@
 {
   "title": "Selbst-Check: Azubis & Mitarbeiter im Handwerk finden",
-  "description": "Finde heraus, warum Zeitungsanzeigen verpuffen, wo Jugendliche und Gesellen heute wirklich suchen und wie dein Betrieb auf dem Smartphone überzeugt.",
+  "description": "Finde heraus, wo Jugendliche und Gesellen heute suchen und wie dein Betrieb auf dem Handy für Bewerber aussieht.",
   "questions": [
     {
       "id": "az_b1",
@@ -41,14 +41,14 @@
     {
       "id": "az_b4",
       "level": "basis",
-      "question": "Wie viele Ausbildungsstellen blieben laut Bundesagentur für Arbeit zuletzt zum Stichtag unbesetzt?",
+      "question": "Welche vier Fragen sollte eine Karriereseite beantworten?",
       "options": [
-        "Rund 54.000 gemeldete Ausbildungsstellen",
-        "Knapp 500 Stellen in ganz Deutschland",
-        "Keine einzige, alle Plätze wurden besetzt"
+        "Wer ist der Chef, wie läuft der Tag ab, was verdient man und wie bewirbt man sich?",
+        "Welche Rechtsform hat die GmbH, wo sitzt das Amtsgericht, wie hoch ist das Stammkapital und wer ist Steuerberater?",
+        "Welche DIN-Normen gelten im Betrieb, wer liefert das Rohmaterial, wie groß ist das Lager und wo parkt der LKW?"
       ],
       "correctIndex": 0,
-      "explanation": "Bundesweit blieben 54.000 Lehrstellen unbesetzt. Im Handwerk fand fast jede fünfte betriebliche Ausbildungsstelle niemanden."
+      "explanation": "Diese vier Fragen stellt sich jeder Bewerber, bevor er sich meldet. Auf vielen Betriebsseiten bleiben sie offen, und wer sie beantwortet, fällt auf."
     },
     {
       "id": "az_b5",
@@ -72,7 +72,7 @@
         "Dass die Ausbildung dort besonders modern sein muss"
       ],
       "correctIndex": 0,
-      "explanation": "Wer im Netz unsichtbar ist, existiert in der Lebenswelt junger Menschen schlichtweg nicht. Sie vermuten dahinter oft eine Betriebsschließung."
+      "explanation": "Ohne Eintrag und ohne Website denkt ein Sechzehnjähriger schnell, dass es den Betrieb nicht mehr gibt."
     },
     {
       "id": "az_b7",
@@ -84,7 +84,7 @@
         "Ein Online-Formular mit mindestens 14 Pflichtfeldern zu Schulnoten"
       ],
       "correctIndex": 0,
-      "explanation": "Jugendliche haben oft weder Drucker noch Scanner. Eine unkomplizierte Nachricht senkt die Hemmschwelle drastisch und bringt den Dialog ins Rollen."
+      "explanation": "Ein Sechzehnjähriger schreibt kein Anschreiben als PDF. Eine kurze Nachricht mit Namen und einem Satz reicht, danach rufst du zurück."
     },
     {
       "id": "az_b8",
@@ -103,12 +103,12 @@
       "level": "basis",
       "question": "Wie beantwortest du auf der Karriereseite die Frage „Wer ist der Chef?“",
       "options": [
-        "Ein echtes Foto vom Chef und ein paar ehrliche Sätze auf Augenhöhe",
+        "Mit einem echten Foto von dir und drei Sätzen in deinen Worten",
         "Ein PDF-Download der Handwerksordnung von 1953",
         "Ein Standard-Foto von amerikanischen Fotomodellen mit Bauhelm"
       ],
       "correctIndex": 0,
-      "explanation": "Bewerber wollen den Menschen sehen, bei dem sie anfangen. Ein echtes Foto von dir und drei Sätze in deinen Worten sagen mehr als jedes gekaufte Bild."
+      "explanation": "Bewerber wollen den Menschen sehen, bei dem sie anfangen. Ein echtes Foto und drei Sätze in deinen Worten reichen."
     },
     {
       "id": "az_b10",
@@ -151,7 +151,7 @@
       "level": "profi",
       "question": "Wie viel Bildschirmzeit am Smartphone verbringen 12- bis 19-Jährige laut JIM-Studie im Schnitt täglich?",
       "options": [
-        "231 Minuten (knapp 4 Stunden am Tag)",
+        "231 Minuten (knapp vier Stunden am Tag)",
         "Etwa 45 Minuten pro Woche",
         "Über 8 Stunden reine Arbeitszeit"
       ],
@@ -161,26 +161,26 @@
     {
       "id": "az_p4",
       "level": "profi",
-      "question": "Was liest ein junger Bewerber aus einer Website, deren letzte Neuigkeit die Weihnachtsfeier von 2016 ist?",
+      "question": "Wie viel Zeit verbringen Zwölf- bis 13-Jährige laut JIM-Studie täglich am Smartphone?",
       "options": [
-        "Dass in diesem Betrieb wichtige Dinge liegen bleiben und Modernität fehlt",
-        "Dass der Betrieb besonders viel Tradition und Beständigkeit hat",
-        "Dass der Chef sich ganz auf die Ausbildung konzentriert"
+        "166 Minuten",
+        "16 Minuten",
+        "600 Minuten"
       ],
       "correctIndex": 0,
-      "explanation": "Die Seite sagt nichts über die Arbeit und viel über den Umgang mit Dingen, die liegen bleiben. Genau so liest sie ein Bewerber."
+      "explanation": "Zwölf- bis 13-Jährige kommen auf 166 Minuten täglich, Volljährige auf 278 Minuten."
     },
     {
       "id": "az_p5",
       "level": "profi",
-      "question": "Welche vier Fragen sollte eine Karriereseite beantworten?",
+      "question": "Wie viele Ausbildungsstellen blieben laut Bundesagentur für Arbeit zuletzt zum Stichtag unbesetzt?",
       "options": [
-        "Wer ist der Chef, wie läuft der Tag ab, was verdient man und wie bewirbt man sich?",
-        "Welche Rechtsform hat die GmbH, wo sitzt das Amtsgericht, wie hoch ist das Stammkapital und wer ist Steuerberater?",
-        "Welche DIN-Normen gelten im Betrieb, wer liefert das Rohmaterial, wie groß ist das Lager und wo parkt der LKW?"
+        "Rund 54.000 gemeldete Ausbildungsstellen",
+        "Knapp 500 Stellen in ganz Deutschland",
+        "Keine einzige, alle Plätze wurden besetzt"
       ],
       "correctIndex": 0,
-      "explanation": "Diese vier Fragen stellt sich jeder Bewerber, bevor er sich meldet. Auf vielen Betriebsseiten bleiben sie offen, und wer sie beantwortet, fällt auf."
+      "explanation": "Am 30. September 2025 waren laut Bundesagentur für Arbeit noch 54.000 Ausbildungsstellen unbesetzt."
     },
     {
       "id": "az_p6",
@@ -192,7 +192,7 @@
         "Deine Markenanmeldung beim Patentamt"
       ],
       "correctIndex": 0,
-      "explanation": "Eltern googeln mit, und zwar gründlicher. Eine unbeantwortete Kritik von einem Ex-Mitarbeiter lesen sie als Auskunft darüber, wie es sich bei dir arbeitet. Eine sachliche Antwort von dir ändert dieses Bild."
+      "explanation": "Eltern googeln mit. Eine unbeantwortete Kritik von einem Ex-Mitarbeiter lesen sie als Auskunft darüber, wie es sich bei dir arbeitet. Eine sachliche Antwort von dir ändert dieses Bild."
     },
     {
       "id": "az_p7",
@@ -223,12 +223,12 @@
       "level": "profi",
       "question": "Warum rechnet sich eine Karriereseite anders als eine Seite für Neukunden?",
       "options": [
-        "Weil eine unbesetzte Stelle jeden Monat Aufträge und Umsatz kostet",
+        "Weil eine unbesetzte Stelle Aufträge verzögert, Kunden warten lässt und das Team belastet",
         "Weil Karriereseiten steuerlich doppelt absetzbar sind",
         "Weil Google für Karriereseiten Prämien auszahlt"
       ],
       "correctIndex": 0,
-      "explanation": "Fehlt dir ein Mitarbeiter, schiebst du Aufträge, vertröstest Kunden, und dein Team macht Überstunden. Das kostet jeden Monat Geld, auch wenn es auf keiner Rechnung steht."
+      "explanation": "Eine unbesetzte Stelle heißt Aufträge schieben, Kunden vertrösten und Überstunden für den Rest vom Team."
     },
     {
       "id": "az_p10",
@@ -240,43 +240,43 @@
         "Lädt die Seite auf einem Computer mit Windows 98?"
       ],
       "correctIndex": 0,
-      "explanation": "Der Selbsttest geht die Seite so durch, wie ein Bewerber es tut: finden, Vertrauen fassen, sich melden. Jede Hürde auf diesem Weg kostet dich Bewerbungen."
+      "explanation": "Der Selbsttest geht die Seite so durch, wie ein Bewerber es tut: finden, Vertrauen fassen, sich melden. Jede Hürde auf diesem Weg kann dich Bewerbungen kosten."
     },
     {
       "id": "az_p11",
       "level": "profi",
-      "question": "Welche tägliche Beschäftigung liegt laut JIM-Studie 2025 bei Jugendlichen direkt hinter der Smartphone-Nutzung?",
+      "question": "Wie viele Bewerber kamen im Vorjahr rechnerisch auf 100 gemeldete betriebliche Ausbildungsstellen?",
       "options": [
-        "Musik hören (76 Prozent täglich)",
-        "Tageszeitung lesen (über 80 Prozent)",
-        "Briefe und Postkarten schreiben"
+        "86",
+        "150",
+        "10"
       ],
       "correctIndex": 0,
-      "explanation": "Musikhören liegt mit 76 Prozent auf Platz 2, gefolgt von Videos im Internet mit 56 Prozent. Zeitungen spielen bei der täglichen Nutzung kaum eine Rolle."
+      "explanation": "Zuletzt waren es 93 Bewerber auf 100 Stellen, im Vorjahr noch 86."
     },
     {
       "id": "az_p12",
       "level": "profi",
       "question": "Mit wem konkurriert ein lokaler Handwerksbetrieb heute laut Artikel am schärfsten um Auszubildende?",
       "options": [
-        "Mit dem Handwerksbetrieb zwei Orte weiter, der sich auf dem Smartphone moderner präsentiert",
+        "Mit dem Betrieb zwei Orte weiter",
         "Ausschließlich mit multinationalen DAX-Konzernen in Übersee",
         "Nur mit Universitäten im Ausland"
       ],
       "correctIndex": 0,
-      "explanation": "Der Wettbewerb findet regional statt. Wenn der Betrieb im Nachbarort Fotos vom Team zeigt und eine WhatsApp-Bewerbung anbietet, gewinnt er den Azubi."
+      "explanation": "Du konkurrierst um jeden Bewerber mit dem Betrieb zwei Orte weiter, und der Vergleich findet auf dem Handy statt."
     },
     {
       "id": "az_p13",
       "level": "profi",
-      "question": "Warum solltest du auf der Karriereseite sagen, wann du dich zurückmeldest?",
+      "question": "Was gehört auf der Karriereseite zur Frage „Wie bewirbt man sich?“",
       "options": [
-        "Es signalisiert Verbindlichkeit, Wertschätzung und einen verlässlichen Chef",
-        "Dass der Betrieb keine Arbeit hat und den ganzen Tag am Telefon sitzt",
-        "Dass ein automatischer Chatbot die Ausbildung leitet"
+        "Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst",
+        "Ein zwölfseitiger Fragebogen",
+        "Der Hinweis, dass nur Post angenommen wird"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Satz wie „Ich melde mich innerhalb von zwei Tagen bei dir“ nimmt dem Bewerber die Unsicherheit. Wichtig ist nur, dass du ihn auch einhältst."
+      "explanation": "Ein Weg, ein Klick, eine Antwortzeit, die du auch einhältst."
     },
     {
       "id": "az_p14",
@@ -288,7 +288,7 @@
         "Weil erfahrene Handwerker kein Smartphone besitzen"
       ],
       "correctIndex": 0,
-      "explanation": "Wer mit 34 und festem Job schaut, tut das abends auf dem Sofa. Er schreibt zwei Sätze, wenn er kann. Mehr Aufwand nimmt er selten auf sich."
+      "explanation": "Wer mit 34 und festem Job schaut, tut das abends auf dem Sofa am Handy. Er schreibt zwei Sätze, wenn er kann."
     },
     {
       "id": "az_p15",
@@ -305,26 +305,26 @@
     {
       "id": "az_p16",
       "level": "profi",
-      "question": "Was zeigen 54.000 unbesetzte Lehrstellen und gleichzeitig 40.000 Bewerber ohne Platz?",
+      "question": "Wie viel Prozent der gemeldeten Bewerber blieben laut Bundesagentur ohne Ausbildungsstelle oder anderes Angebot?",
       "options": [
-        "Dass Betriebe und Bewerber oft nicht zueinander finden",
-        "Dass Ausbildungsplätze per Losverfahren vergeben werden",
-        "Dass es für jede Stelle genug Bewerber gibt"
+        "9 Prozent",
+        "90 Prozent",
+        "0 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Es gibt junge Leute, die suchen. Wenn ein Betrieb im Netz nicht zu finden ist oder mit Formularen abschreckt, kommen die beiden Seiten nicht zusammen."
+      "explanation": "Laut Bundesagentur für Arbeit blieben 9 Prozent der gemeldeten Bewerberinnen und Bewerber ohne Ausbildungsstelle oder alternatives Angebot."
     },
     {
       "id": "az_p17",
       "level": "profi",
-      "question": "Was passiert, wenn ein Bewerber bei Google nach deinem Firmennamen plus „Ausbildung“ sucht und nichts findet?",
+      "question": "Wie viele Jugendliche befragt die JIM-Studie jedes Jahr?",
       "options": [
-        "Er bricht die Recherche ab und bewirbt sich bei einem Mitbewerber mit sichtbarer Seite",
-        "Er beauftragt einen Detektiv, um deine Werkstatt zu finden",
-        "Er ruft sofort bei der örtlichen Handwerkskammer an, um dich zu melden"
+        "1.200 Jugendliche zwischen zwölf und 19 Jahren",
+        "12 Jugendliche aus einer Schulklasse",
+        "Alle Jugendlichen in Deutschland"
       ],
       "correctIndex": 0,
-      "explanation": "Wer als Ausbildungsbetrieb online nicht auftaucht, fällt bei Bewerbern durch, bevor sie überhaupt anfragen."
+      "explanation": "Der Medienpädagogische Forschungsverbund Südwest befragt jedes Jahr 1.200 Jugendliche zwischen zwölf und 19 Jahren."
     },
     {
       "id": "az_p18",
@@ -360,7 +360,7 @@
         "Weil es im Handwerk gar keinen Mangel an Nachwuchs gibt"
       ],
       "correctIndex": 0,
-      "explanation": "Es gibt Jugendliche, die eine Lehrstelle suchen und keine finden. Wer sichtbar ist und die Hürde niedrig hält, hat bessere Chancen, dass einer davon bei ihm landet."
+      "explanation": "Es gibt Jugendliche, die eine Lehrstelle suchen und keine finden. Wer sichtbar ist und die Hürde niedrig hält, macht es ihnen leichter, zu ihm zu finden."
     }
   ]
 }

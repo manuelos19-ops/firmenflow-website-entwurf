@@ -63,8 +63,8 @@
       "explanation": "Fragen darfst du vor Ort. Google untersagt, Kunden aufzufordern oder unter Druck zu setzen, die Bewertung zu schreiben, während sie noch vor Ort sind. Deshalb kommt der Link später."
     },
     {
-      "id": "gb_b6",
-      "level": "basis",
+      "id": "gb_p21",
+      "level": "profi",
       "question": "Was braucht ein Kunde, um eine Rezension bei Google zu schreiben?",
       "options": [
         "Er muss in einem Google-Konto angemeldet sein",
@@ -327,8 +327,8 @@
       "explanation": "Bäckereien kamen im Median auf 132 Bewertungen, Fliesenleger auf 4 und Dachdecker auf 12."
     },
     {
-      "id": "gb_p18",
-      "level": "profi",
+      "id": "gb_b11",
+      "level": "basis",
       "question": "Was schlägt der Artikel vor, damit du den Link immer griffbereit hast?",
       "options": [
         "Ihn einmal als Notiz oder als Textbaustein in WhatsApp Business speichern",
