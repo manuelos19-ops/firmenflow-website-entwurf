@@ -5,11 +5,11 @@
     {
       "id": "ki_b1",
       "level": "basis",
-      "question": "Was antworten KI-Chatbots laut der NeuRank-Untersuchung auf lokale Fragen wie „Friseur Wesel“?",
+      "question": "Was antworteten ChatGPT und Perplexity in der NeuRank-Untersuchung auf lokale Fragen?",
       "options": [
-        "Sie nennen konkrete Betriebe, im Schnitt 5,2 pro Antwort",
-        "Sie verweigern grundsätzlich jede Empfehlung",
-        "Sie nennen nur bezahlte Anzeigen"
+        "Sie nannten konkrete Betriebe, im Schnitt 5,2 pro Antwort",
+        "Sie verweigerten grundsätzlich jede Empfehlung",
+        "Sie nannten nur bezahlte Anzeigen"
       ],
       "correctIndex": 0,
       "explanation": "In allen 800 Antworten standen konkrete Firmennamen, im Schnitt 5,2 pro Antwort."
@@ -17,11 +17,11 @@
     {
       "id": "ki_b2",
       "level": "basis",
-      "question": "Worauf verwies ChatGPT mit Websuche in der Untersuchung am häufigsten?",
+      "question": "Welcher Anteil der Quellenverweise bei ChatGPT waren in der Untersuchung Google-Maps-Links?",
       "options": [
-        "Auf Google-Maps-Links, rund 38 Prozent der Quellen",
-        "Auf Zeitungsartikel",
-        "Auf Bewertungsportale wie Das Örtliche"
+        "38 Prozent, also mehr als jede dritte Quelle",
+        "Alle, also 100 Prozent",
+        "Keiner"
       ],
       "correctIndex": 0,
       "explanation": "Bei ChatGPT waren 38 Prozent der Quellenverweise Google-Maps-Links. Bewertungsportale kamen nur auf 0,6 Prozent."
@@ -29,26 +29,26 @@
     {
       "id": "ki_b3",
       "level": "basis",
-      "question": "Worauf stützte sich Perplexity in der Untersuchung vor allem?",
+      "question": "Was fiel bei den Quellen von Perplexity in der Untersuchung auf?",
       "options": [
-        "Auf Bewertungsportale wie werkenntdenbesten.de, Gelbe Seiten und Das Örtliche",
-        "Ausschließlich auf Google Maps",
-        "Auf Instagram-Profile"
+        "30,5 Prozent waren Bewertungsportale, Google Maps kam gar nicht vor",
+        "Es waren nur Google-Maps-Links",
+        "Es waren nur Instagram-Profile"
       ],
       "correctIndex": 0,
-      "explanation": "Bei Perplexity kamen 30,5 Prozent der Quellen von Bewertungsportalen, Google Maps tauchte dort nicht auf."
+      "explanation": "Bei Perplexity waren 30,5 Prozent der Quellen Bewertungsportale, an der Spitze werkenntdenbesten.de, Gelbe Seiten und Das Örtliche. Google Maps kam nicht vor."
     },
     {
       "id": "ki_b4",
       "level": "basis",
-      "question": "Kann man sich laut Artikel einen Platz in einer ChatGPT-Antwort kaufen?",
+      "question": "Können Werbekunden laut OpenAI die Antworten von ChatGPT beeinflussen?",
       "options": [
-        "Nein, du kannst nur dafür sorgen, dass die Einträge stimmen, aus denen die KI liest",
-        "Ja, über ein Werbekonto bei OpenAI",
-        "Ja, mit einem Premium-Eintrag bei Google"
+        "Nein, Anzeigen sind gekennzeichnet und von der Antwort getrennt",
+        "Ja, mit genug Budget stehen sie in der Antwort",
+        "Ja, Anzeigen stehen unmarkiert in der Antwort"
       ],
       "correctIndex": 0,
-      "explanation": "Einen Platz in einer KI-Antwort kann man nicht kaufen. Du kannst dafür sorgen, dass Profil und Einträge stimmen."
+      "explanation": "Laut OpenAI sind Anzeigen immer gekennzeichnet und getrennt. Werbekunden können die Antworten weder gestalten noch in der Reihenfolge verändern."
     },
     {
       "id": "ki_b5",
@@ -65,7 +65,7 @@
     {
       "id": "ki_b6",
       "level": "basis",
-      "question": "Wie suchen die meisten Menschen in Deutschland laut Claneo-Studie nach Restaurants oder Geschäften vor Ort?",
+      "question": "Wie suchen die meisten Befragten in Deutschland laut Claneo-Studie nach Restaurants oder Geschäften?",
       "options": [
         "Über Suchmaschinen, 65 Prozent",
         "Über KI-Chatbots, 65 Prozent",
@@ -120,7 +120,7 @@
         "Ein Jahresabo abschließen"
       ],
       "correctIndex": 0,
-      "explanation": "Lautet die Antwort „Google-Profil und Einträge in Ordnung bringen“, ist das seriös. Alles andere solltest du genau prüfen."
+      "explanation": "Profil, Verzeichnisse und Website in Ordnung zu bringen, ist nachvollziehbare Arbeit. Bei allem, was darüber hinaus versprochen wird, solltest du genau nachfragen."
     },
     {
       "id": "ki_p1",
@@ -149,14 +149,14 @@
     {
       "id": "ki_p3",
       "level": "profi",
-      "question": "Welches Modell nutzte die Untersuchung für ChatGPT?",
+      "question": "Womit hat die Untersuchung ChatGPT getestet?",
       "options": [
-        "gpt-4o-mini mit Websuche über die Programmierschnittstelle, als Näherung an das normale ChatGPT",
-        "Das normale ChatGPT in der Handy-App",
-        "Gar kein Modell, nur eine Umfrage"
+        "Über einen technischen Zugang mit dem kleineren Modell gpt-4o-mini, die normale App kann anders antworten",
+        "Mit der normalen ChatGPT-App auf dem Handy",
+        "Gar nicht, es war nur eine Umfrage"
       ],
       "correctIndex": 0,
-      "explanation": "Die Studie bezeichnet gpt-4o-mini mit Websuche selbst als Näherung an das normale ChatGPT."
+      "explanation": "Getestet wurde über einen technischen Zugang für Programmierer. Die Studie schreibt selbst, dass die normale App abweichen kann."
     },
     {
       "id": "ki_p4",
@@ -199,48 +199,48 @@
       "level": "profi",
       "question": "Was schreibt OpenAI über die Websuche von ChatGPT?",
       "options": [
-        "ChatGPT greift auf Suchanbieter zurück und formuliert die Frage dafür um",
+        "ChatGPT arbeitet manchmal mit anderen Suchanbietern zusammen, etwa Microsoft, und formuliert die Frage um",
         "ChatGPT liest ausschließlich Google-Profile",
         "ChatGPT sucht nie im Internet"
       ],
       "correctIndex": 0,
-      "explanation": "Laut OpenAI-Hilfe nutzt ChatGPT Suchanbieter und formuliert die Frage in gezielte Suchen um."
+      "explanation": "Laut OpenAI-Hilfe arbeitet ChatGPT manchmal mit Suchanbietern zusammen und formuliert die Frage in gezielte Suchen um."
     },
     {
       "id": "ki_p8",
       "level": "profi",
       "question": "Was kann ChatGPT laut OpenAI für lokale Angaben wie Firmeneinträge an Drittanbieter weitergeben?",
       "options": [
-        "Deinen ungefähren Standort",
+        "Deinen Standort",
         "Deine Telefonnummer",
         "Deinen vollständigen Chatverlauf"
       ],
       "correctIndex": 0,
-      "explanation": "Für lokale Angaben kann ChatGPT den ungefähren Standort an vertrauenswürdige Drittanbieter weitergeben."
+      "explanation": "Für lokale Angaben wie Firmeneinträge kann ChatGPT den Standort an vertrauenswürdige Drittanbieter weitergeben."
     },
     {
       "id": "ki_p9",
       "level": "profi",
-      "question": "Legt OpenAI offen, wie die Auswahl der genannten Betriebe zustande kommt?",
+      "question": "Was schreibt OpenAI über die Reihenfolge der Suchergebnisse in ChatGPT?",
       "options": [
-        "Nein, welche Anbieter genau und wie ausgewählt wird, legt OpenAI nicht offen",
-        "Ja, es gibt eine offizielle Rangliste",
-        "Ja, nach Alphabet"
+        "Sie richtet sich nach mehreren Faktoren, ein Platz ist nicht garantiert",
+        "Sie ist alphabetisch",
+        "Wer zuerst bezahlt, steht oben"
       ],
       "correctIndex": 0,
-      "explanation": "Welche Anbieter das im Einzelnen sind und wie die Auswahl zustande kommt, legt OpenAI nicht offen."
+      "explanation": "ChatGPT sortiert laut OpenAI nach mehreren Faktoren, ein Platz ist nicht garantiert. Welche Faktoren das sind, legt OpenAI nicht offen."
     },
     {
       "id": "ki_p10",
       "level": "profi",
-      "question": "Wie hat sich der Anteil der KI-Chatbots bei der allgemeinen Informationssuche laut Claneo entwickelt?",
+      "question": "Was nennt OpenAI als Voraussetzung, damit eine Website in den Suchergebnissen von ChatGPT erscheinen kann?",
       "options": [
-        "Von 13 Prozent im Jahr 2024 auf 21 Prozent im Jahr 2025",
-        "Von 50 auf 90 Prozent",
-        "Er ist auf null gesunken"
+        "Der Suchroboter OAI-SearchBot muss sie lesen dürfen",
+        "Sie muss eine Anzeige bei OpenAI buchen",
+        "Sie muss auf Englisch sein"
       ],
       "correctIndex": 0,
-      "explanation": "In der Claneo-Studie stieg der Anteil der KI-Chatbots bei der Informationssuche von 13 auf 21 Prozent."
+      "explanation": "Laut OpenAI-Hilfe muss der Suchroboter OAI-SearchBot die Website lesen dürfen."
     },
     {
       "id": "ki_p11",
@@ -293,14 +293,14 @@
     {
       "id": "ki_p15",
       "level": "profi",
-      "question": "Warum lohnt sich für Perplexity ein Blick auf Gelbe Seiten und Das Örtliche?",
+      "question": "Warum lohnt sich ein Blick auf Gelbe Seiten und Das Örtliche?",
       "options": [
-        "Weil Perplexity sich in der Untersuchung vor allem auf solche Verzeichnisse stützte",
+        "Weil Perplexity in der Untersuchung auch solche Bewertungsportale zitierte",
         "Weil Perplexity diese Seiten betreibt",
         "Weil Google dort seine Daten speichert"
       ],
       "correctIndex": 0,
-      "explanation": "Perplexity zitierte vor allem Bewertungsportale und Verzeichnisse. Alte Angaben dort kann die KI weitergeben."
+      "explanation": "Perplexity zitierte zu 30,5 Prozent Bewertungsportale. Alte Angaben dort kann die KI weitergeben."
     },
     {
       "id": "ki_p16",
@@ -317,50 +317,50 @@
     {
       "id": "ki_p17",
       "level": "profi",
-      "question": "Was ist laut Artikel eine seriöse Antwort auf die Frage, was ein Anbieter für deine KI-Sichtbarkeit tut?",
+      "question": "Was ist laut Artikel nachvollziehbare Arbeit, wenn dir jemand KI-Sichtbarkeit anbietet?",
       "options": [
-        "„Dein Google-Profil und deine Einträge in Ordnung bringen“",
-        "„Wir tragen dich direkt bei OpenAI ein“",
-        "„Wir garantieren dir Platz eins in ChatGPT“"
+        "Google-Profil, Verzeichnisse und Website in Ordnung bringen",
+        "Dich direkt bei OpenAI in die Antworten eintragen",
+        "Dir Platz eins in ChatGPT garantieren"
       ],
       "correctIndex": 0,
-      "explanation": "Profil und Einträge in Ordnung bringen ist seriös. OpenAI nennt keinen Weg, sich selbst in die Antworten einzutragen."
+      "explanation": "OpenAI nennt keinen Weg, sich selbst in die Antworten einzutragen. Profil, Verzeichnisse und Website in Ordnung zu bringen, ist nachvollziehbar."
     },
     {
       "id": "ki_p18",
       "level": "profi",
-      "question": "Welche Branche nennt der Artikel als Beispiel für eine unpassende Hauptkategorie?",
+      "question": "Was hat OpenAI im August 2026 für Europa angekündigt?",
       "options": [
-        "Ein Sanitärbetrieb, der als allgemeines Bauunternehmen eingetragen ist",
-        "Eine Bäckerei, die als Bäckerei eingetragen ist",
-        "Ein Friseur, der als Friseursalon eingetragen ist"
+        "Anzeigen in ChatGPT in 31 europäischen Ländern, darunter Deutschland",
+        "Ein kostenloses Verzeichnis für Handwerker",
+        "Das Ende der Websuche in ChatGPT"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Sanitärbetrieb als allgemeines Bauunternehmen passt schlechter zur Suche nach „Bad sanieren“."
+      "explanation": "OpenAI hat angekündigt, Anzeigen in ChatGPT auf 31 europäische Länder auszuweiten, darunter Deutschland."
     },
     {
       "id": "ki_p19",
       "level": "profi",
-      "question": "Was bedeutet die Studie für Google Maps laut Artikel?",
+      "question": "Was folgt laut Artikel aus der Claneo-Studie?",
       "options": [
-        "Google Maps bleibt der wichtigste Weg, auf dem Kunden dich vor Ort finden",
-        "Google Maps spielt keine Rolle mehr",
-        "Google Maps wird durch Instagram ersetzt"
+        "Suchmaschinen bleiben bei der Suche nach Geschäften vorn, die Frage an ChatGPT kommt dazu",
+        "Suchmaschinen spielen keine Rolle mehr",
+        "Alle suchen nur noch über Instagram"
       ],
       "correctIndex": 0,
-      "explanation": "Suchmaschinen liegen bei der lokalen Suche vorn. Die Frage an ChatGPT kommt als zweiter Weg dazu."
+      "explanation": "65 Prozent der Befragten in Deutschland suchen Restaurants oder Geschäfte über Suchmaschinen. Die Frage an einen KI-Chatbot kommt als zweiter Weg dazu."
     },
     {
       "id": "ki_p20",
       "level": "profi",
-      "question": "An wie vielen Stellen wirkt ein gepflegtes Google-Profil laut Artikel?",
+      "question": "Wo hilft ein gepflegtes Google-Profil laut Artikel?",
       "options": [
-        "An zwei: in Google Maps und dort, wo eine KI auf deinen Eintrag verweist",
+        "In Google Maps selbst und dort, wo eine KI auf deinen Eintrag verlinkt",
         "Nur auf Facebook",
         "Nirgends, solange du keine Website hast"
       ],
       "correctIndex": 0,
-      "explanation": "Ein gepflegtes Profil wirkt in Google Maps selbst und überall, wo eine KI auf deinen Eintrag verweist."
+      "explanation": "Ein gepflegtes Profil hilft in Google Maps und überall, wo eine KI auf deinen Eintrag verlinkt."
     }
   ]
 }
