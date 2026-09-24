@@ -1,6 +1,6 @@
 # Firmenflow: Redaktionsleitfaden für den Ratgeber
 
-Stand: 23.09.2026 (Ablauf über die Redaktion). Grundlage: ausdrückliche Vorgaben von Manu. Gilt für alle Firmenflow-Ratgeberartikel unter `/ratgeber`. Social-Grafiken (Instagram, WhatsApp-Status) folgen eigenen Vorgaben, siehe Abschnitt „Social Media“.
+Stand: 24.09.2026 (Ablauf über die Redaktion, kürzere Artikel). Grundlage: ausdrückliche Vorgaben von Manu. Gilt für alle Firmenflow-Ratgeberartikel unter `/ratgeber`. Social-Grafiken (Instagram, WhatsApp-Status) folgen eigenen Vorgaben, siehe Abschnitt „Social Media“.
 
 ## Ziel und Zielgruppe
 
@@ -18,19 +18,30 @@ Keine Gedankenstriche (– oder —), auch nicht als Titeltrenner. Normale deuts
 
 Vor Übergabe den Text mit dem global installierten Skill `humanizer` prüfen und anschließend erneut mit den Quellen abgleichen. Skill-Pfad: `C:\Users\manue\.codex\skills\humanizer\SKILL.md`. Quelle: [blader/humanizer](https://github.com/blader/humanizer), am 19.09.2026 Version 3.0.0 installiert. Maßgeblich sind die deutschen Vorgaben des Nutzers. Der Skill ist eine Schreibhilfe, kein Nachweis menschlicher Urheberschaft und kein Faktenprüfer. Keine erfundenen persönlichen Erlebnisse oder absichtlichen Fehler hinzufügen.
 
+## Kurz und handlungsnah (Vorgabe von Manu, 24.09.2026)
+
+Leser aus der Zielgruppe haben die ersten Artikel abgebrochen: zu viele Studien und Zahlen, zu lang, Doppelungen. Ein Handwerker will auf den Punkt Hilfe. Deshalb gilt:
+
+- **Erst die Hilfe, dann der Hintergrund.** Der erste Schritt, den der Leser selbst machen kann, kommt nach etwa 150 Wörtern.
+- **Höchstens 1.100 Wörter Lesetext** ohne Quellenliste, Ziel 800 bis 1.100. Google nennt ausdrücklich keine bevorzugte Wortzahl ([Search Central: Creating helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)). Eine Mindestlänge für gute Platzierungen gibt es also nicht.
+- **Wenige Zahlen, die etwas entscheiden helfen.** Höchstens drei verschiedene Prozentwerte. Eigene Erhebungen aus der Region haben Vorrang. Eine Studie, die mehrere Einschränkungen braucht, kommt höchstens mit einem Absatz vor.
+- **Jeder Punkt steht einmal im Text.** „Kurz gesagt“ fasst zusammen, danach wird nichts doppelt erklärt.
+- **„Laut Google“ einmal pro Quelle.** Die Quellenliste steht unten.
+- **Geprüft wird genauso streng wie vorher.** Was im Artikel keinen Platz hat, darf belegt ins Quiz.
+
 ## Wiederkehrendes redaktionelles Prinzip
 
-1. Mit einer nachvollziehbaren Kundensituation und einer konkreten Frage einsteigen.
-2. Schmerzpunkte des Unternehmers greifbar machen: unbemerkte verpasste Anfragen, online unsichtbare Qualität, Zweifel trotz persönlicher Empfehlung, unnötige Rückfragen, Pflegeaufwand neben dem Tagesgeschäft.
-3. Die Sicht des potenziellen Kunden zeigen: Was bleibt unklar? Was kostet Mühe? Was schafft Zweifel?
-4. Mögliche Folgen verständlich erläutern. Keine sichere Kausalität oder erfundene Verlustzahlen behaupten.
-5. Direkt umsetzbare Verbesserungen anbieten. Der Leser soll selbst etwas prüfen oder verbessern können.
+1. Mit einer nachvollziehbaren Kundensituation und einer konkreten Frage einsteigen, kurz.
+2. In „Kurz gesagt“ die Antwort und die Schritte vorwegnehmen.
+3. Direkt umsetzbare Hilfe: Selbsttest oder Anleitung. Der Leser soll selbst etwas prüfen oder verbessern können.
+4. Zu jedem Problem sagen, was er tun kann. Schmerzpunkte und Folgen dabei verständlich machen, ohne sichere Kausalität oder erfundene Verlustzahlen.
+5. Hintergrund knapp: woher das Wissen kommt und wo seine Grenzen sind.
 6. Sinnvoll auf eine passende Firmenflow-Leistung überleiten. Umfang der Unterstützung aus dem tatsächlichen Problem ableiten; kleine Korrektur, Modernisierung und Neubau ehrlich unterscheiden.
 7. Mit einer klaren, niedrigschwelligen Handlungsaufforderung abschließen. Bestehende Angebote und Linkziele vor Nutzung prüfen.
 
 **Nicht mehr verwenden (Vorgabe von Manu, 22.09.2026):** den Aufzählungsblock am Ende mit „Kurz schreiben: Schick mir deinen Betriebsnamen …“, „Kurzer Anruf: Du erreichst mich unter …“ und „Alles unverbindlich und Persönlich mit Manu“. Der CTA-Kasten der Seite und die Autorenbox übernehmen das.
 
-Dieses Prinzip soll einheitlich bleiben, der Text aber nicht wie eine immer gleiche Schablone wirken. Nicht zwanghaft jeden Artikel auf fünf Punkte oder eine feste Wortzahl bringen.
+Dieses Prinzip soll einheitlich bleiben, der Text aber nicht wie eine immer gleiche Schablone wirken. Nicht zwanghaft jeden Artikel auf fünf Punkte bringen. Für die Länge gilt nur die Obergrenze, keine Mindestzahl.
 
 ## Quellenstandard
 
@@ -57,6 +68,7 @@ Jeder veröffentlichte Ratgeber-Artikel erhält zwingend ein passendes interakti
 - **Dynamische Zufalls-Rotation:** Bei jedem Durchgang werden die Fragen frisch durchmischt und alle Antworten auf Position 1–3 zufällig rotiert (keine feste Position 1).
 - **Lese-Tipp-Banner:** Automatischer Hinweis über dem geöffneten Artikel mit direkter Sprungmarke `#selbst-check` zum Quiz.
 - **Analytics:** Automatische Vercel Custom Events bei Start und Abschluss.
+- **Detailwissen gehört ins Quiz** (seit 24.09.2026). Fragen dürfen Belegtes abfragen, das nicht im Artikel steht. Jede Frage ist in der `belege.json` des Laufs einem Beleg zugeordnet. Basis-Fragen lassen sich mit dem Artikel beantworten, Profi-Fragen dürfen tiefer gehen.
 
 ## Aufbau und Bausteine im Markdown
 
@@ -69,7 +81,7 @@ Artikel liegen als Markdown in `content/ratgeber/<slug>.md`. Der Parser (`src/li
 | Karten | `::karten: Bildunterschrift::` vor einer Tabelle | 2 bis 4 gleichrangige Punkte |
 | Zahlenkacheln | `::zahlen: Quelle::` vor einer Tabelle mit Spalten Wert / Bedeutung | 2 bis 3 belegte Kennzahlen, zählen animiert hoch |
 | Hinweisbox | `::hinweis: Titel::` … `::/hinweis::`, darin Absätze und optional `![Alt](/pfad.webp "Bildunterschrift")` | eigene Beobachtung mit Datum und Gerät, Aktualisierungen |
-| Selbsttest | Aufzählung, deren Punkte mit „?“ enden | wird als Checkliste dargestellt. Jede Frage so stellen, dass „Nein“ das Problem ist |
+| Selbsttest | Aufzählung, deren Punkte mit „?“ enden, 4 bis 5 Fragen | wird als Checkliste dargestellt. Jede Frage so stellen, dass „Nein“ das Problem ist. Steht früh im Artikel, danach folgt, was bei einem Nein zu tun ist |
 
 **Titelbild:** 1600 × 900, drei Glaskarten mit 3D-Objekten und je einer belegten Zahl oder Kernaussage aus dem Artikel. Erzeugt über den Social-Renderer (`titelbild` in der `post.json`), als WebP unter `public/images/ratgeber/<slug>-titel.webp`. Den Artikeltitel nicht aufs Bild schreiben, er steht direkt darüber.
 
