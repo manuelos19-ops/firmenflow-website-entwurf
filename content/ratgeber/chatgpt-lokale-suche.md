@@ -2,7 +2,7 @@
 title: "Findet ChatGPT deinen Betrieb? Fünf Dinge, die du selbst prüfen kannst"
 metaTitle: "Findet ChatGPT deinen Betrieb? Das kannst du prüfen"
 description: "Wer ChatGPT nach einem Betrieb in seiner Stadt fragt, bekommt konkrete Namen. Was du an Google-Profil, Verzeichnissen und Website selbst prüfen kannst."
-date: "2026-09-25"
+date: "2026-09-24"
 category: "Lokale Sichtbarkeit"
 tags: [ChatGPT, KI-Suche, Google-Profil, Lokale Sichtbarkeit, Handwerk]
 image: "/images/ratgeber/chatgpt-lokale-suche-titel.webp"
