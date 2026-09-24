@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { track } from "@vercel/analytics";
 import { FirmenflowIcon } from "@/components/brand/FirmenflowIcon";
+import { FirmenflowUiIcon } from "@/components/brand/FirmenflowUiIcon";
 import { FirmenflowButton } from "@/components/ui/FirmenflowButton";
 import type { RatgeberPostMeta } from "@/lib/ratgeber";
 
@@ -144,20 +145,83 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
 
       {/* Hauptspalte: Suche + Artikel-Ansicht */}
       <section className="space-y-6">
-        {/* Feature-Banner: Interaktive Quizzes */}
-        <div className="rounded-3xl border border-[var(--color-line)] bg-gradient-to-r from-[var(--color-plum)]/[0.05] via-[var(--color-coral)]/[0.08] to-transparent p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
-          <div className="space-y-1.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[var(--color-line)] text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)] shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
-              Neu: Interaktive Selbst-Checks
-            </span>
-            <p className="text-sm sm:text-base font-bold text-[var(--color-ink)] leading-snug">
-              Praxiswissen zum Mitmachen: In jedem Beitrag steckt ein interaktiver Kompakt- &amp; Meister-Check mit wechselnden Fragen.
-            </p>
+        {/* Feature-Kacheln: Quiz & Audio-Zusammenfassung */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Kachel 1: Interaktives Quiz */}
+          <div className="relative overflow-hidden rounded-3xl border border-[var(--color-line)] bg-white p-6 shadow-sm hover:shadow-md hover:border-[var(--color-coral)]/40 transition-all">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-[var(--color-coral)]/10 blur-2xl"
+            />
+            <div className="relative space-y-4">
+              <div className="flex items-start justify-between gap-3">
+                <FirmenflowIcon name="faq" size={44} decorative />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-coral)]/10 border border-[var(--color-coral)]/25 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-coral)]">
+                  <span className="h-2 w-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
+                  Neu
+                </span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-display font-bold text-[var(--color-ink)] leading-snug">
+                  Interaktives Quiz in jedem Beitrag
+                </h3>
+                <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                  Kompakt- &amp; Meister-Check mit wechselnden Fragen – zum Mitmachen beim Lesen.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-plum)] bg-[var(--color-paper)] px-3 py-1.5 rounded-xl border border-[var(--color-line)]">
+                <FirmenflowUiIcon name="check" size={14} />
+                Kostenlos &amp; ohne Anmeldung
+              </span>
+            </div>
           </div>
-          <span className="shrink-0 text-xs font-mono font-bold text-[var(--color-plum)] bg-white px-3.5 py-2 rounded-xl border border-[var(--color-line)] shadow-sm">
-            Kostenlos &amp; ohne Anmeldung
-          </span>
+
+          {/* Kachel 2: Audio-Zusammenfassung */}
+          <div className="relative overflow-hidden rounded-3xl border border-[var(--color-line)] bg-white p-6 shadow-sm hover:shadow-md hover:border-[var(--color-plum)]/40 transition-all">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-[var(--color-plum)]/10 blur-2xl"
+            />
+            <div className="relative space-y-4">
+              <div className="flex items-start justify-between gap-3">
+                <span className="flex items-center gap-3" aria-hidden="true">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-plum)] to-[var(--color-coral)] text-white shadow-sm">
+                    <FirmenflowUiIcon name="play" size={16} />
+                  </span>
+                  <span className="flex items-end gap-1">
+                    {[12, 20, 28, 16, 24, 10, 22, 14, 26, 12, 18, 8].map((h, i) => (
+                      <span
+                        key={i}
+                        className="w-1.5 rounded-full"
+                        style={{
+                          height: h,
+                          backgroundColor: `color-mix(in oklab, var(--color-plum) ${Math.round(
+                            100 - (i / 11) * 100
+                          )}%, var(--color-coral))`,
+                        }}
+                      />
+                    ))}
+                  </span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-plum)]/10 border border-[var(--color-plum)]/25 text-xs font-mono font-bold uppercase tracking-wider text-[var(--color-plum)]">
+                  <span className="h-2 w-2 rounded-full bg-[var(--color-plum)] animate-pulse" />
+                  Neu
+                </span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-display font-bold text-[var(--color-ink)] leading-snug">
+                  Audio-Zusammenfassung für unterwegs
+                </h3>
+                <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                  Jeden Beitrag gibt es auch zum Hören: für zwischendurch, auf der Autofahrt oder beim Kaffee.
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[var(--color-coral)] bg-[var(--color-paper)] px-3 py-1.5 rounded-xl border border-[var(--color-line)]">
+                <FirmenflowUiIcon name="clock" size={14} />
+                Ca. 2 Minuten · KI-Stimme
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Suchleiste */}
@@ -254,12 +318,6 @@ export function RatgeberHub({ posts }: RatgeberHubProps) {
                     }}
                     className="block relative aspect-[16/9] w-full overflow-hidden bg-[var(--color-paper)]"
                   >
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-white/50 text-[var(--color-ink)] font-mono text-xs font-bold shadow-md">
-                        <span className="w-2 h-2 rounded-full bg-[var(--color-coral)] animate-pulse" />
-                        Inkl. interaktivem Quiz
-                      </span>
-                    </div>
                     <Image
                       src={post.image}
                       alt={post.imageAlt || post.title}
