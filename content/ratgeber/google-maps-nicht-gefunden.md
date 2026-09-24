@@ -1,7 +1,7 @@
 ---
-title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: die häufigsten Gründe"
+title: "Warum dein Betrieb bei Google Maps nicht gefunden wird: fünf typische Gründe"
 metaTitle: "Bei Google Maps nicht gefunden: 5 Gründe"
-description: "Jemand sucht deine Leistung in deinem Ort und findet nur deine Mitbewerber? Das sind die häufigsten Gründe dafür, plus ein Selbsttest für dein Google-Profil."
+description: "Jemand sucht deine Leistung in deinem Ort und findet nur deine Mitbewerber? Fünf typische Gründe dafür, plus ein Selbsttest für dein Google-Profil."
 date: "2026-09-21"
 updated: "2026-09-24"
 category: "Lokale Sichtbarkeit"
@@ -17,63 +17,57 @@ Mach den Test: Tipp deine Leistung und deinen Ort ein, etwa „Dachdecker Wesel�
 
 ## Kurz gesagt
 
-* Google entscheidet nach Relevanz, Entfernung und Bekanntheit, wer auf der Karte erscheint. An zwei davon kannst du selbst drehen.
-* Die häufigsten Lücken sind ein unbestätigtes Profil, falsche Öffnungszeiten, eine unpassende Kategorie, fehlende Fotos und zu wenige Bewertungen.
-* In meiner Erhebung über 198 Betriebe im Raum Wesel hat fast jeder zweite mindestens eine solche Lücke.
+* Google entscheidet vor allem nach Relevanz, Entfernung und Bekanntheit, wer auf der Karte erscheint. An der Entfernung kannst du nichts ändern, an den anderen beiden schon.
+* Typische Lücken im Profil: nicht bestätigt, Öffnungszeiten oder Website fehlen, unpassende Kategorie, keine eigenen Fotos, zu wenige Bewertungen.
+* Mit dem Selbsttest findest du heraus, was bei dir fehlt. Darunter steht, was du tun kannst.
 
 ## Der Selbsttest
 
 Nimm dein Handy und geh die fünf Fragen durch. Zu jedem Nein steht darunter, was du tun kannst.
 
 * Hast du dein Profil als Inhaber bestätigt?
-* Stimmen deine Öffnungszeiten, auch für die nächsten Feiertage?
+* Stehen deine Öffnungszeiten, auch für Feiertage, und deine Website im Profil?
 * Beschreibt deine Hauptkategorie das, womit du tatsächlich dein Geld verdienst?
-* Ist dein neuestes Foto jünger als ein Jahr?
-* Hast du mindestens so viele Bewertungen wie die Betriebe, die über dir stehen?
-
-::hinweis: Drei oder vier Einträge?::
-
-Auf meinem Samsung Galaxy S26 Ultra zeigte Google im September 2026 vier Betriebe im Kartenausschnitt, am PC bei derselben Suche drei, dazu Anzeigen. Die genaue Zahl spielt keine Rolle. Du willst in dem Kasten stehen, den der Kunde ohne weiteres Tippen sieht.
-
-![Google-Suche nach Zahnarzt Wesel auf dem Smartphone: Kartenausschnitt mit vier Zahnarztpraxen, Namen und Adressen unkenntlich gemacht](/images/ratgeber/google-maps-vier-eintraege-smartphone.webp "Suche „zahnarzt wesel“, Samsung Galaxy S26 Ultra, Chrome, 23. September 2026. Namen und Adressen habe ich unkenntlich gemacht. Google und das Google-Logo sind Marken von Google LLC.")
-
-::/hinweis::
+* Hast du eigene Fotos im Profil, die zeigen, wie es bei dir aussieht?
+* Hast du mindestens so viele Bewertungen wie die anderen Betriebe auf der Karte?
 
 ## Was du bei einem Nein tun kannst
 
-Laut [Google-Hilfe](https://support.google.com/business/answer/7091?hl=de) werden Betriebe mit vollständigen und korrekten Angaben mit größerer Wahrscheinlichkeit in den lokalen Suchergebnissen angezeigt. Genau darum geht es bei allen fünf Punkten.
+Laut [Google-Hilfe](https://support.google.com/business/answer/7091?hl=de) werden Betriebe mit vollständigen und korrekten Angaben mit größerer Wahrscheinlichkeit in den lokalen Suchergebnissen angezeigt.
 
 ### Profil nicht bestätigt
 
-Für deinen Betrieb kann es bei Google schon ein Profil geben, das du nie selbst angelegt hast. Öffne die Google Maps App, such deinen Betrieb und tipp im Profil unter „Info“ auf „Inhaberschaft für dieses Unternehmen geltend machen“. Gibt es noch gar kein Profil, legst du eins über business.google.com/add an ([Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de)). Ein bestätigter Betrieb wird laut Google mit größerer Wahrscheinlichkeit angezeigt, und erst danach kannst du die Angaben selbst pflegen.
+Öffne die Google Maps App, such deinen Betrieb und tipp im Profil auf „Info“. Steht dort „Inhaberschaft für dieses Unternehmen geltend machen“, ist das Profil noch nicht bestätigt, und du kannst es über diesen Punkt übernehmen. Gibt es noch gar kein Profil, legst du eins über business.google.com/add an. Hat schon jemand anderes das Profil bestätigt, etwa eine frühere Agentur, kannst du bei ihr die Inhaberschaft beantragen ([Google-Hilfe](https://support.google.com/business/answer/2911778?hl=de)). Ein bestätigter Betrieb wird laut Google mit größerer Wahrscheinlichkeit angezeigt, und erst danach kannst du die Angaben selbst ändern.
 
-### Öffnungszeiten veraltet
+### Öffnungszeiten oder Website fehlen
 
-Feiertage, Betriebsferien, der Samstag, den du vor zwei Jahren umgestellt hast. Google nennt ausdrücklich auch die speziellen Öffnungszeiten. Trag sie ein, sonst steht der Kunde im schlimmsten Fall vor verschlossener Tür. Und trag deine Website ein, falls sie im Profil fehlt.
+Feiertage, Betriebsferien, der Samstag, den du vor zwei Jahren umgestellt hast. Google nennt dafür eigens die „speziellen Öffnungszeiten“. Trag sie in deinem Profil ein, sonst steht der Kunde im schlimmsten Fall vor verschlossener Tür. Trag dort auch deine Website ein, falls sie fehlt.
 
 ### Kategorie passt nicht
 
 Über die Kategorie ordnet Google deinen Betrieb einer Suche zu. Ein Betrieb, der als allgemeines Bauunternehmen geführt wird, hat es bei „Bad sanieren“ schwerer als der Sanitärbetrieb, der genau dafür eingetragen ist.
 
-Deine Hauptkategorie steht auf deinem Profil direkt unter dem Betriebsnamen. Vergleich sie mit den Betrieben, die über dir stehen. Google gibt dazu eine Faustregel: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, nicht „Dieses Unternehmen HAT …“ ([Richtlinien](https://support.google.com/business/answer/3038177?hl=de)). Wähl lieber wenige, möglichst genaue Kategorien als alles, was du nebenbei anbietest.
+Deine Hauptkategorie steht auf deinem Profil unter dem Betriebsnamen. Vergleich sie mit den Betrieben, die über dir stehen. Google gibt dazu eine Faustregel: Eine Kategorie passt, wenn „Dieses Unternehmen IST …“ zutrifft, nicht „Dieses Unternehmen HAT …“ ([Richtlinien](https://support.google.com/business/answer/3038177?hl=de)). Wähl lieber wenige, möglichst genaue Kategorien als alles, was du nebenbei anbietest.
 
 ### Keine eigenen Fotos
 
-Mit Fotos zeigst du laut Google potenziellen Kunden, was du anbietest. Lädst du selbst keine hoch, besteht dein erster Eindruck aus dem, was Kunden fotografiert haben. Ein paar echte Bilder von Werkstatt, Team und fertigen Arbeiten reichen für den Anfang. Dieselben Fotos helfen übrigens auch bei der Suche nach [Azubis und Mitarbeitern](https://www.firmenflow.de/ratgeber/azubis-finden-handwerk).
+Mit Fotos zeigst du potenziellen Kunden, was du anbietest. Lädst du selbst keine hoch, gibt es entweder gar kein Bild, oder dein erster Eindruck besteht aus dem, was Kunden fotografiert haben. Ein paar echte Bilder von Werkstatt, Team und fertigen Arbeiten reichen für den Anfang, und neue Aufträge liefern laufend neue Motive.
 
 ### Zu wenige Bewertungen
 
-Zur Bekanntheit zählt Google auch die Anzahl der Rezensionen. Je mehr Rezensionen und positive Bewertungen ein Betrieb bekommt, desto besser kann das Ranking ausfallen. Wie du ehrlich zu mehr davon kommst, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen). Antworte auch auf die Bewertungen, die du hast. Damit zeigst du laut Google, dass du das Feedback deiner Kunden schätzt.
+Zur Bekanntheit zählt Google auch die Anzahl der Bewertungen: Je mehr Bewertungen ein Betrieb bekommt und je positiver sie sind, desto besser kann seine Platzierung in den Ergebnissen mit Karte ausfallen. Wie du ehrlich zu mehr davon kommst, steht in [Mehr Google-Bewertungen bekommen](https://www.firmenflow.de/ratgeber/google-bewertungen-bekommen). Antworte auch auf die Bewertungen, die du hast. Damit zeigst du, dass du das Feedback deiner Kunden schätzt.
 
 ## Wie es in Wesel tatsächlich aussieht
 
-Am 22. September 2026 habe ich über die Schnittstelle von Google Maps zwölf Branchen im Raum Wesel abgefragt und die 198 Betriebe ausgewertet, die Google dabei ausgibt.
+Am 22. September 2026 habe ich über Googles Datenzugang für Programmierer zwölf Branchen im Raum Wesel abgefragt und die 198 Betriebe ausgewertet, die Google dabei ausgibt.
 
-**97 dieser 198 Betriebe haben mindestens eine der Lücken aus diesem Artikel.** Das ist fast jeder zweite.
+**97 dieser 198 Betriebe fehlte mindestens eines: eine Website im Profil, Öffnungszeiten, zehn Bewertungen, ein Schnitt von mindestens 4,0 Sternen oder eine Telefonnummer.** Das ist fast jeder zweite.
 
 Im Einzelnen: 48 Betriebe (24 Prozent) haben keine Website im Profil hinterlegt. Bei 26 Betrieben (13 Prozent) fehlen die Öffnungszeiten. 12 Betriebe haben keine einzige Bewertung, 57 haben weniger als zehn. Der Median liegt bei 26 Bewertungen, der Sterneschnitt bei 4,61.
 
-::chart: Eigene Erhebung, 198 Betriebe im Raum Wesel, abgefragt am 22. September 2026.::
+Median heißt: Die Hälfte der Betriebe hat weniger, die andere Hälfte mehr.
+
+::chart: Eigene Erhebung, 198 Betriebe im Raum Wesel, abgefragt am 22. September 2026. Halbe Werte abgerundet.::
 
 | Branche | Betriebe | Bewertungen im Median |
 | --- | --- | --- |
@@ -90,9 +84,15 @@ Im Einzelnen: 48 Betriebe (24 Prozent) haben keine Website im Profil hinterlegt.
 | Friseur | 20 | 86 |
 | Bäckerei | 20 | 132 |
 
-Eine Bäckerei kommt im Median auf 132 Bewertungen, ein Elektriker auf 6. Im Handwerk liegst du mit zwanzig Bewertungen also schon deutlich über dem Median deiner Branche.
+Als Fliesenleger, Elektriker, Maler oder Dachdecker liegst du mit fünfzehn ehrlichen Bewertungen also schon über dem Median deiner Branche. Zwei Einschränkungen gehören dazu: Die Abfrage zeigt nur die Betriebe, die Google für diese zwölf Branchen im Raum Wesel ausgibt. Und Betriebe ganz ohne Profil fehlen darin, die echten Zahlen dürften also eher schlechter aussehen.
 
-Zwei Einschränkungen gehören dazu. Die Abfrage zeigt nur die Betriebe, die Google für diese Suchbegriffe ausgibt. Und Betriebe ganz ohne Profil fehlen darin, die echten Zahlen dürften also eher schlechter aussehen.
+::hinweis: Drei oder vier Einträge?::
+
+Auf meinem Samsung Galaxy S26 Ultra zeigte Google im September 2026 vier Betriebe im Kartenausschnitt, am PC bei derselben Suche drei, dazu Anzeigen. Für deinen Test spielt die genaue Zahl keine Rolle.
+
+![Google-Suche nach Zahnarzt Wesel auf dem Smartphone: Kartenausschnitt mit vier Zahnarztpraxen, Namen und Adressen unkenntlich gemacht](/images/ratgeber/google-maps-vier-eintraege-smartphone.webp "Suche „zahnarzt wesel“, Samsung Galaxy S26 Ultra, Chrome, 23. September 2026. Namen und Adressen habe ich unkenntlich gemacht. Google und das Google-Logo sind Marken von Google LLC.")
+
+::/hinweis::
 
 ## Ich schaue mir dein Profil an
 
@@ -108,7 +108,7 @@ Einen Platz ganz oben kann dir niemand versprechen, ich auch nicht. Ein vollstä
 
 ## Geprüfte Quellen und Belege
 
-1. **Google Unternehmensprofil-Hilfe:** [Ranking in lokalen Suchergebnissen auf Google verbessern](https://support.google.com/business/answer/7091?hl=de) (Relevanz, Entfernung und Bekanntheit, vollständige Angaben, Bestätigung, Öffnungszeiten, Fotos, Bewertungen)
+1. **Google Unternehmensprofil-Hilfe:** [Ranking in lokalen Suchergebnissen auf Google verbessern](https://support.google.com/business/answer/7091?hl=de) (Relevanz, Entfernung und Bekanntheit, vollständige Angaben, Bestätigung, spezielle Öffnungszeiten, Fotos, Bewertungen)
 2. **Google Unternehmensprofil-Hilfe:** [Richtlinien für die Präsentation Ihres Unternehmens auf Google](https://support.google.com/business/answer/3038177?hl=de) (Auswahl der Kategorien)
-3. **Google Unternehmensprofil-Hilfe:** [Ihr Unternehmensprofil hinzufügen oder Anspruch darauf erheben](https://support.google.com/business/answer/2911778?hl=de) (Profil anlegen oder übernehmen)
-4. **Eigene Erhebung:** 198 Betriebe aus zwölf Branchen im Raum Wesel, abgefragt am 22. September 2026 über die Google Places API. Ausgewertet wurden Bewertungsanzahl, Sterneschnitt, hinterlegte Website und Öffnungszeiten.
+3. **Google Unternehmensprofil-Hilfe:** [Ihr Unternehmensprofil hinzufügen oder Anspruch darauf erheben](https://support.google.com/business/answer/2911778?hl=de) (Profil anlegen, übernehmen oder Inhaberschaft beantragen)
+4. **Eigene Erhebung:** 198 Betriebe aus zwölf Branchen im Raum Wesel, abgefragt am 22. September 2026 über die Google Places API. Ausgewertet wurden Bewertungsanzahl, Sterneschnitt (über die 186 Betriebe mit Bewertungen), hinterlegte Website, Telefonnummer und Öffnungszeiten.

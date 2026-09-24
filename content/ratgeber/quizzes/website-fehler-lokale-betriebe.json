@@ -1,6 +1,6 @@
 {
   "title": "Selbst-Check: Die 5 typischen Website-Fehler",
-  "description": "Teste dein Wissen zu Ladezeit, Anruf-Knopf, Fotos und Google-Profil. Finde heraus, ob deine Website Neukunden anzieht oder abschreckt.",
+  "description": "Teste dein Wissen zu Ladezeit, Anruf-Knopf, Fotos und Google-Profil.",
   "questions": [
     {
       "id": "w_b1",
@@ -17,26 +17,26 @@
     {
       "id": "w_b2",
       "level": "basis",
-      "question": "Was machen Menschen, die neu im Ort sind und dringend einen Fachbetrieb brauchen?",
+      "question": "Was machen Menschen, die neu im Ort sind oder dringend einen Fachbetrieb brauchen, vielleicht als Erstes?",
       "options": [
         "Sie nehmen das Smartphone und suchen",
         "Sie warten auf einen Werbebrief",
         "Sie rufen die Gemeindeverwaltung an"
       ],
       "correctIndex": 0,
-      "explanation": "Wer niemanden im Ort kennt, sucht auf dem Smartphone. Er sieht von dir zuerst deine Seite auf dem Handy."
+      "explanation": "Wer niemanden im Ort kennt, sucht vielleicht am Smartphone und sieht dann nur, was er dort über dich findet."
     },
     {
       "id": "w_b3",
       "level": "basis",
-      "question": "Warum merkst du oft nicht, wie viele Kunden dir eine schlechte Website kostet?",
+      "question": "Warum merkst du oft nicht, wenn Kunden von deiner Website abspringen?",
       "options": [
-        "Weil abspringende Kunden sich nicht melden und das Telefon einfach still bleibt",
-        "Weil Google dir jeden verlorenen Kunden per Post meldet",
-        "Weil schlechte Websites gar keine Kunden kosten"
+        "Weil sie sich nicht melden und dein Telefon einfach still bleibt",
+        "Weil Google dir jeden Besucher per Post meldet",
+        "Weil niemand abspringt"
       ],
       "correctIndex": 0,
-      "explanation": "Wer auf deiner Seite abspringt, beschwert sich nicht. Er ruft woanders an."
+      "explanation": "Wer abspringt, beschwert sich nicht. Er meldet sich einfach nicht."
     },
     {
       "id": "w_b4",
@@ -65,14 +65,14 @@
     {
       "id": "w_b6",
       "level": "basis",
-      "question": "Wie viel Prozent der Menschen zwischen 16 und 74 Jahren nutzen laut Statistischem Bundesamt das Internet?",
+      "question": "Was bringt es, wenn die Telefonnummer auf dem Handy als Knopf angelegt ist?",
       "options": [
-        "97 Prozent",
-        "47 Prozent",
-        "17 Prozent"
+        "Ein Tipp öffnet direkt das Telefon, niemand muss die Nummer abtippen",
+        "Die Nummer wird dadurch geheim",
+        "Der Anruf wird kostenlos"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Destatis nutzen 97 Prozent der 16- bis 74-Jährigen das Internet."
+      "explanation": "Ein Daumentipp muss reichen, um dich anzurufen."
     },
     {
       "id": "w_b7",
@@ -125,14 +125,14 @@
     {
       "id": "w_p1",
       "level": "profi",
-      "question": "Um wie viel Prozent steigerte Rakuten 24 laut web.dev den Umsatz pro Besucher nach Arbeit an der Ladeleistung?",
+      "question": "Um wie viel Prozent steigerte Rakuten 24 laut web.dev den Umsatz pro Besucher?",
       "options": [
         "Um 53,37 Prozent",
         "Um 5 Prozent",
         "Gar nicht"
       ],
       "correctIndex": 0,
-      "explanation": "Laut web.dev investierte Rakuten 24 in die Core Web Vitals, Googles Messwerte für Ladezeit und Bedienbarkeit, und steigerte den Umsatz pro Besucher um 53,37 Prozent."
+      "explanation": "Laut web.dev investierte Rakuten 24 in die Core Web Vitals und steigerte den Umsatz pro Besucher um 53,37 Prozent."
     },
     {
       "id": "w_p2",
@@ -204,7 +204,7 @@
         "Weil Kunden lieber Briefe schreiben"
       ],
       "correctIndex": 0,
-      "explanation": "Wer technische Angaben in Pflichtfelder eintragen soll, die er nicht kennt, gibt auf und ruft den nächsten Betrieb an."
+      "explanation": "Wer Angaben machen soll, die er noch gar nicht kennt, ruft vielleicht lieber woanders an."
     },
     {
       "id": "w_p8",
@@ -240,7 +240,7 @@
         "Dreißig Sekunden"
       ],
       "correctIndex": 0,
-      "explanation": "Ich rufe deine Seite auf dem Handy auf und zeige dir in drei bis fünf Minuten, wo Kunden abspringen."
+      "explanation": "Ich rufe deine Seite auf dem Handy auf und zeige dir in drei bis fünf Minuten, wo Kunden hängen bleiben könnten."
     },
     {
       "id": "w_p11",
@@ -259,24 +259,24 @@
       "level": "profi",
       "question": "Was unterscheidet Stammkunden von Neukunden bei der Website?",
       "options": [
-        "Stammkunden kennen deine Arbeit, Neukunden sehen zuerst nur deine Seite",
+        "Stammkunden kennen deine Arbeit, Neukunden kennen sie noch nicht",
         "Stammkunden sehen eine andere Website",
         "Es gibt keinen Unterschied"
       ],
       "correctIndex": 0,
-      "explanation": "Stammkunden rufen an, weil sie dich kennen. Neukunden beurteilen dich zuerst nach deinem Auftritt auf dem Handy."
+      "explanation": "Stammkunden rufen an, weil sie dich kennen. Neukunden kennen deinen Meisterbrief noch nicht und sehen nur, was sie über dich finden."
     },
     {
       "id": "w_p13",
       "level": "profi",
-      "question": "Was bringt es, wenn die Telefonnummer auf dem Handy als Knopf angelegt ist?",
+      "question": "Was tust du mit dem Bericht von PageSpeed Insights, wenn du ihn nicht verstehst?",
       "options": [
-        "Ein Tipp öffnet direkt das Telefon, niemand muss die Nummer abtippen",
-        "Die Nummer wird dadurch geheim",
-        "Der Anruf wird kostenlos"
+        "Den Link deinem Webdesigner schicken und fragen, was er daraus macht",
+        "Den Bericht ignorieren, er ist nur für Google",
+        "Die Website sofort abschalten"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Daumentipp muss reichen, um dich anzurufen."
+      "explanation": "Den Bericht musst du nicht verstehen. Dein Webdesigner kann damit arbeiten."
     },
     {
       "id": "w_p14",
@@ -293,38 +293,38 @@
     {
       "id": "w_p15",
       "level": "profi",
-      "question": "Was gehört laut Artikel gleich oben auf die Startseite?",
+      "question": "Was solltest du tun, wenn Google-Profil und Website verschiedene Telefonnummern zeigen?",
       "options": [
-        "Was du anbietest und wo du tätig bist",
-        "Die komplette Firmengeschichte",
-        "Alle Urkunden der letzten Jahre"
+        "Die Angaben angleichen, denn eine davon ist falsch",
+        "Beide so lassen, Kunden probieren einfach beide",
+        "Die Nummer auf der Website löschen"
       ],
       "correctIndex": 0,
-      "explanation": "Leistung und Ort gehören nach oben, Geschichte und Urkunden weiter nach unten."
+      "explanation": "Weichen die Angaben ab, ist eine davon falsch. Gleich sie ab."
     },
     {
       "id": "w_p16",
       "level": "profi",
-      "question": "Wann geht eine neue Website bei Firmenflow online?",
+      "question": "Wo übernimmst du in der Google Maps App ein Profil, das noch nicht bestätigt ist?",
       "options": [
-        "Erst nach deiner Freigabe, nachdem ihr den Entwurf auf dem Handy geprüft habt",
-        "Sofort, ohne dass du sie vorher siehst",
-        "Erst nach einem Jahr"
+        "Im Profil unter „Info“ über „Inhaberschaft für dieses Unternehmen geltend machen“",
+        "In den Einstellungen deines Handys",
+        "Über die Bewertungsfunktion"
       ],
       "correctIndex": 0,
-      "explanation": "Den Entwurf prüft ihr gemeinsam auf deinem Handy. Online geht er erst nach deiner Freigabe."
+      "explanation": "In der Google Maps App tippst du im Unternehmensprofil auf „Info“ und dann auf „Inhaberschaft für dieses Unternehmen geltend machen“."
     },
     {
       "id": "w_p17",
       "level": "profi",
-      "question": "Welche Altersgruppe umfasst die Zahl des Statistischen Bundesamts zur Internetnutzung?",
+      "question": "Wie viel Prozent der Menschen zwischen 16 und 74 Jahren nutzen laut Statistischem Bundesamt das Internet?",
       "options": [
-        "16 bis 74 Jahre",
-        "Nur über 80 Jahre",
-        "Nur Kinder unter 10 Jahren"
+        "97 Prozent",
+        "47 Prozent",
+        "17 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Befragt wurden Personen im Alter von 16 bis 74 Jahren."
+      "explanation": "Laut Destatis nutzen 97 Prozent der 16- bis 74-Jährigen das Internet."
     },
     {
       "id": "w_p18",
@@ -341,26 +341,26 @@
     {
       "id": "w_p19",
       "level": "profi",
-      "question": "Wer hat den Wert von 10 Prozent weniger Nutzern pro Sekunde gemessen?",
+      "question": "Was kann laut Google passieren, wenn die Angaben in deinem Profil nicht korrekt sind?",
       "options": [
-        "Die BBC an ihrer eigenen Website",
-        "Das Statistische Bundesamt",
-        "Eine Handwerkskammer"
+        "Dein Profil wird bei passenden Suchen aus deiner Gegend möglicherweise nicht angezeigt",
+        "Google korrigiert alles automatisch",
+        "Nichts, falsche Angaben haben keine Folgen"
       ],
       "correctIndex": 0,
-      "explanation": "Den Wert hat die BBC an der eigenen Website gemessen, Google nennt ihn auf web.dev."
+      "explanation": "Laut Google wird ein Profil mit falschen Angaben möglicherweise nicht bei relevanten Suchanfragen aus der Gegend angezeigt."
     },
     {
       "id": "w_p20",
       "level": "profi",
-      "question": "Wem gehört bei Firmenflow die Domain deiner Website?",
+      "question": "Worum bittest du deinen Webdesigner, wenn sich die Nummer auf dem Handy nicht antippen lässt?",
       "options": [
-        "Dir, sie bleibt dein Eigentum",
-        "Firmenflow",
-        "Google"
+        "Sie als gut sichtbaren Knopf anzulegen, der mit einem Daumentipp anruft",
+        "Die Nummer ganz zu entfernen",
+        "Die Nummer als Bild einzufügen"
       ],
       "correctIndex": 0,
-      "explanation": "Deine Webadresse gehört dir und bleibt dein Eigentum."
+      "explanation": "Ein Knopf, der mit einem Daumentipp anruft, erspart dem Kunden das Abtippen."
     }
   ]
 }

@@ -1,102 +1,102 @@
 {
   "title": "Selbst-Check: Azubis & Mitarbeiter im Handwerk finden",
-  "description": "Finde heraus, wo Jugendliche und Gesellen heute suchen und wie dein Betrieb auf dem Handy für Bewerber aussieht.",
+  "description": "Teste dein Wissen: Was sehen Bewerber über deinen Betrieb, und was gehört auf eine Seite mit offenen Stellen?",
   "questions": [
     {
       "id": "az_b1",
       "level": "basis",
       "question": "Wie viel Prozent der 12- bis 19-Jährigen nutzen laut JIM-Studie 2025 täglich ein Smartphone?",
       "options": [
-        "95 Prozent, also fast alle",
-        "Etwa 50 Prozent, viele bevorzugen PCs",
-        "Unter 20 Prozent, Jugendliche lesen meistens Zeitung"
+        "95 Prozent",
+        "Etwa 50 Prozent",
+        "Unter 20 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Die JIM-Studie befragt jedes Jahr 1.200 Jugendliche. 95 Prozent besitzen ein eigenes Smartphone und nutzen es täglich, im Schnitt knapp vier Stunden."
+      "explanation": "Laut JIM-Studie 2025 nutzen 95 Prozent der 12- bis 19-Jährigen ihr Smartphone täglich."
     },
     {
       "id": "az_b2",
       "level": "basis",
-      "question": "Warum erreichen klassische Stellenanzeigen im lokalen Wochenblatt heute kaum noch Azubis?",
+      "question": "Welche Rolle spielen Zeitungen bei der täglichen Mediennutzung von Jugendlichen laut JIM-Studie?",
       "options": [
-        "Weil gedruckte Zeitungen bei Jugendlichen im Alltag praktisch keine Rolle mehr spielen",
-        "Weil die Schriftgröße in Zeitungen für junge Leute zu klein gedruckt ist",
-        "Weil Zeitungen Ausbildungsanzeigen gesetzlich verbieten"
+        "Kaum eine",
+        "Die größte",
+        "Sie liegen gleichauf mit dem Smartphone"
       ],
       "correctIndex": 0,
-      "explanation": "Die Anzeige war nicht schlecht, aber sie hing an einer Wand, an der die Zielgruppe schlichtweg nicht vorbeikommt. Jugendliche informieren sich digital auf dem Handy."
+      "explanation": "Zeitungen, Zeitschriften und E-Books spielen bei der täglichen Nutzung kaum eine Rolle, schreibt die Studie."
     },
     {
       "id": "az_b3",
       "level": "basis",
-      "question": "Wie hat sich das Verhältnis von Bewerbern zu gemeldeten Lehrstellen laut Arbeitsagentur entwickelt?",
+      "question": "Wie viele gemeldete Bewerber kamen 2024/25 rechnerisch auf 100 gemeldete betriebliche Ausbildungsstellen?",
       "options": [
-        "Es kamen zuletzt nur noch 93 Bewerber auf 100 gemeldete betriebliche Ausbildungsstellen",
-        "Es gibt fünfmal mehr Bewerber als offene Ausbildungsplätze",
-        "Das Verhältnis ist seit den 1980er-Jahren exakt unverändert geblieben"
+        "93",
+        "150",
+        "20"
       ],
       "correctIndex": 0,
-      "explanation": "Der Markt hat sich komplett gedreht: Rechnerisch kamen zuletzt nur 93 Bewerber auf 100 Stellen. Handwerksbetriebe müssen sich heute aktiv beim Bewerber bewerben."
+      "explanation": "Laut Bundesagentur für Arbeit waren es rechnerisch 93. Es gab also mehr gemeldete Stellen als Bewerber."
     },
     {
       "id": "az_b4",
       "level": "basis",
       "question": "Welche vier Fragen sollte eine Karriereseite beantworten?",
       "options": [
-        "Wer ist der Chef, wie läuft der Tag ab, was verdient man und wie bewirbt man sich?",
-        "Welche Rechtsform hat die GmbH, wo sitzt das Amtsgericht, wie hoch ist das Stammkapital und wer ist Steuerberater?",
-        "Welche DIN-Normen gelten im Betrieb, wer liefert das Rohmaterial, wie groß ist das Lager und wo parkt der LKW?"
+        "Wer ist der Chef, wie läuft ein Tag ab, was verdient man und wie bewirbt man sich?",
+        "Welche Rechtsform hat der Betrieb, wo sitzt das Amtsgericht, wie hoch ist das Stammkapital und wer ist Steuerberater?",
+        "Welche Normen gelten, wer liefert das Material, wie groß ist das Lager und wo parkt der LKW?"
       ],
       "correctIndex": 0,
-      "explanation": "Diese vier Fragen stellt sich jeder Bewerber, bevor er sich meldet. Auf vielen Betriebsseiten bleiben sie offen, und wer sie beantwortet, fällt auf."
+      "explanation": "Diese vier Antworten machen eine Karriereseite überprüfbar."
     },
     {
       "id": "az_b5",
       "level": "basis",
-      "question": "Was macht ein Bewerber laut Artikel, bevor er sich bei einem Betrieb meldet?",
+      "question": "Was tippst du bei Google ein, um zu sehen, was ein Bewerber über dich findet?",
       "options": [
-        "Er tippt den Betriebsnamen auf seinem Smartphone bei Google ein",
-        "Er fährt persönlich im Anzug auf den Betriebshof",
-        "Er schickt eine schriftliche Voranfrage per Einschreiben"
+        "Deinen Betriebsnamen plus „Ausbildung“",
+        "Nur „Handwerk“",
+        "Den Namen eines Mitbewerbers"
       ],
       "correctIndex": 0,
-      "explanation": "Bevor ein junger Mensch oder seine Eltern Kontakt aufnehmen, wird der Betriebsname gegoogelt. Was er dort auf dem Handy sieht, entscheidet über die Bewerbung."
+      "explanation": "So prüfst du, ob ein Bewerber überhaupt etwas zu deinem Betrieb und zur Ausbildung findet."
     },
     {
       "id": "az_b6",
       "level": "basis",
-      "question": "Was denkt ein Jugendlicher meistens, wenn er bei Google keinerlei Internetseite zu deinem Betrieb findet?",
+      "question": "Womit fängst du an, wenn ein Bewerber über deinen Betrieb gar nichts findet?",
       "options": [
-        "Dass es den Betrieb vermutlich gar nicht mehr gibt",
-        "Dass der Chef besonders exklusiv und geheim arbeitet",
-        "Dass die Ausbildung dort besonders modern sein muss"
+        "Mit dem Google-Profil",
+        "Mit einer Anzeige im Wochenblatt",
+        "Mit einem neuen Logo"
       ],
       "correctIndex": 0,
-      "explanation": "Ohne Eintrag und ohne Website denkt ein Sechzehnjähriger schnell, dass es den Betrieb nicht mehr gibt."
+      "explanation": "Findet er gar nichts, ist das Google-Profil der erste Schritt."
     },
     {
       "id": "az_b7",
       "level": "basis",
-      "question": "Welche Bewerbungsmethode funktioniert bei Jugendlichen auf dem Smartphone am besten?",
+      "question": "Welcher Weg zur Bewerbung ist für einen Sechzehnjährigen schneller erledigt?",
       "options": [
-        "Eine unkomplizierte Kurznachricht (z. B. via WhatsApp) mit Name und Anliegen",
-        "Ein 5-seitiges Anschreiben als ausgedruckte PDF-Mappe mit Beglaubigung",
-        "Ein Online-Formular mit mindestens 14 Pflichtfeldern zu Schulnoten"
+        "Eine WhatsApp-Nachricht mit Namen und einem Satz",
+        "Ein Anschreiben als PDF mit Lebenslauf",
+        "Ein Formular mit vierzehn Pflichtfeldern"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Sechzehnjähriger schreibt kein Anschreiben als PDF. Eine kurze Nachricht mit Namen und einem Satz reicht, danach rufst du zurück."
+      "explanation": "Eine WhatsApp-Nachricht ist schneller geschrieben. Danach rufst du zurück."
     },
     {
       "id": "az_b8",
       "level": "basis",
-      "question": "Warum solltest du auf der Karriereseite sagen, was man bei dir verdient?",
+      "question": "Was gehört zur Frage „Was verdient man?“ auf die Karriereseite?",
       "options": [
-        "Weil Bewerber ohne Zahl eher mit dem Schlechtesten rechnen",
-        "Weil Google Stellenangebote ohne Gehalt sperrt",
-        "Weil Löhne im Handwerk gesetzlich veröffentlicht werden müssen"
+        "Eine Zahl oder Spanne, bei Azubis die Vergütung pro Lehrjahr",
+        "Gar nichts, das klärt man später",
+        "Nur der Satz „Bezahlung nach Vereinbarung“"
       ],
       "correctIndex": 0,
-      "explanation": "Eine Zahl oder Spanne reicht, bei Azubis die Vergütung pro Lehrjahr. Fehlt sie, füllt der Bewerber die Lücke selbst, und zwar selten zu deinen Gunsten."
+      "explanation": "Fehlt die Zahl, muss der Bewerber raten."
     },
     {
       "id": "az_b9",
@@ -104,263 +104,263 @@
       "question": "Wie beantwortest du auf der Karriereseite die Frage „Wer ist der Chef?“",
       "options": [
         "Mit einem echten Foto von dir und drei Sätzen in deinen Worten",
-        "Ein PDF-Download der Handwerksordnung von 1953",
-        "Ein Standard-Foto von amerikanischen Fotomodellen mit Bauhelm"
+        "Mit einem PDF zum Herunterladen",
+        "Mit einem Link zum Handelsregister"
       ],
       "correctIndex": 0,
-      "explanation": "Bewerber wollen den Menschen sehen, bei dem sie anfangen. Ein echtes Foto und drei Sätze in deinen Worten reichen."
+      "explanation": "Ein echtes Foto und drei Sätze in deinen Worten zeigen, bei wem man anfängt."
     },
     {
       "id": "az_b10",
       "level": "basis",
-      "question": "Wann suchen wechselwillige Gesellen (z. B. mit 34 Jahren) meist nach neuen Betrieben?",
+      "question": "Was tust du, wenn eine kritische Google-Bewertung unbeantwortet ist?",
       "options": [
-        "Abends auf dem Sofa, auf dem Handy",
-        "Morgens um 7 Uhr im Pausenraum vor den Kollegen",
-        "Nur mit ausgedrucktem Lebenslauf beim Arbeitsamt"
+        "Sachlich darauf antworten",
+        "Sie ignorieren",
+        "Eine Gegenbewertung schreiben lassen"
       ],
       "correctIndex": 0,
-      "explanation": "Wer einen festen Job hat, schaut sich nebenbei um. Er meldet sich nur, wenn das ohne großen Aufwand geht, am besten mit zwei Sätzen."
+      "explanation": "Eine sachliche Antwort zeigt, dass du dich kümmerst."
     },
     {
       "id": "az_p1",
       "level": "profi",
-      "question": "Wie hoch ist laut Berufsbildungsbericht 2025 der Anteil unbesetzter Lehrstellen im Handwerk?",
+      "question": "Wie viele Ausbildungsstellen blieben 2024 im Handwerk laut Berufsbildungsbericht 2025 unbesetzt?",
       "options": [
-        "Rund 18 Prozent, fast jede fünfte betriebliche Ausbildungsstelle blieb leer",
-        "Weniger als 2 Prozent",
-        "Über 65 Prozent aller Stellen"
+        "Rund 19.000, also 18 Prozent aller betrieblich gemeldeten Stellen im Handwerk",
+        "Rund 190, also weniger als 1 Prozent",
+        "Über 190.000, also die Mehrheit"
       ],
       "correctIndex": 0,
-      "explanation": "Im Handwerk blieben 2024 rund 19.000 Ausbildungsstellen unbesetzt. Das entspricht 18 Prozent aller betrieblich gemeldeten Lehrstellen."
+      "explanation": "Im Handwerk blieben 2024 rund 19.000 und damit 18 Prozent aller betrieblich gemeldeten Ausbildungsstellen unbesetzt."
     },
     {
       "id": "az_p2",
       "level": "profi",
-      "question": "Wie viele Bewerber blieben laut Ausbildungsmarktbilanz 2025 gleichzeitig unversorgt ohne Stelle?",
+      "question": "Wie viele gemeldete Bewerber waren am Stichtag 30. September 2025 noch unversorgt?",
       "options": [
-        "Rund 40.000 Bewerber",
-        "Exakt null Bewerber",
-        "Über 300.000 Bewerber"
+        "40.000",
+        "400",
+        "4 Millionen"
       ],
       "correctIndex": 0,
-      "explanation": "Obwohl 54.000 Stellen leer blieben, fanden 40.000 junge Menschen keinen Platz. Betriebe und Bewerber finden also oft nicht zueinander."
+      "explanation": "Laut Ausbildungsmarktbilanz 2024/25 waren am Stichtag 40.000 Bewerberinnen und Bewerber noch unversorgt."
     },
     {
       "id": "az_p3",
       "level": "profi",
-      "question": "Wie viel Bildschirmzeit am Smartphone verbringen 12- bis 19-Jährige laut JIM-Studie im Schnitt täglich?",
+      "question": "Wie lang ist laut JIM-Studie die tägliche Bildschirmzeit am Smartphone bei Jugendlichen, die sie am Gerät ablesen können?",
       "options": [
-        "231 Minuten (knapp vier Stunden am Tag)",
+        "231 Minuten, knapp vier Stunden",
         "Etwa 45 Minuten pro Woche",
-        "Über 8 Stunden reine Arbeitszeit"
+        "Über acht Stunden"
       ],
       "correctIndex": 0,
-      "explanation": "Die JIM-Studie misst 231 Minuten Bildschirmzeit am Smartphone pro Tag. Bei den 18- und 19-Jährigen sind es 278 Minuten, also über viereinhalb Stunden."
+      "explanation": "Über alle einbezogenen Befragten liegt die tägliche Bildschirmzeit bei 231 Minuten."
     },
     {
       "id": "az_p4",
       "level": "profi",
-      "question": "Wie viel Zeit verbringen Zwölf- bis 13-Jährige laut JIM-Studie täglich am Smartphone?",
+      "question": "Welche tägliche Bildschirmzeit am Smartphone nennt die JIM-Studie für Zwölf- bis 13-Jährige?",
       "options": [
         "166 Minuten",
         "16 Minuten",
         "600 Minuten"
       ],
       "correctIndex": 0,
-      "explanation": "Zwölf- bis 13-Jährige kommen auf 166 Minuten täglich, Volljährige auf 278 Minuten."
+      "explanation": "Die Jüngsten in der Befragung kommen auf 166 Minuten am Tag."
     },
     {
       "id": "az_p5",
       "level": "profi",
-      "question": "Wie viele Ausbildungsstellen blieben laut Bundesagentur für Arbeit zuletzt zum Stichtag unbesetzt?",
+      "question": "Wie viele Ausbildungsstellen waren am 30. September 2025 laut Bundesagentur noch unbesetzt?",
       "options": [
-        "Rund 54.000 gemeldete Ausbildungsstellen",
-        "Knapp 500 Stellen in ganz Deutschland",
-        "Keine einzige, alle Plätze wurden besetzt"
+        "54.000",
+        "540",
+        "5,4 Millionen"
       ],
       "correctIndex": 0,
-      "explanation": "Am 30. September 2025 waren laut Bundesagentur für Arbeit noch 54.000 Ausbildungsstellen unbesetzt."
+      "explanation": "Am Stichtag waren noch 54.000 unbesetzte Ausbildungsstellen zu vermitteln."
     },
     {
       "id": "az_p6",
       "level": "profi",
-      "question": "Was sehen Eltern, wenn sie deinen Betrieb googeln, bevor ihr Kind sich bewirbt?",
-      "options": [
-        "Dein Google-Profil mit den Bewertungen und deinen Antworten darauf",
-        "Deinen Handelsregisterauszug beim Amtsgericht",
-        "Deine Markenanmeldung beim Patentamt"
-      ],
-      "correctIndex": 0,
-      "explanation": "Eltern googeln mit. Eine unbeantwortete Kritik von einem Ex-Mitarbeiter lesen sie als Auskunft darüber, wie es sich bei dir arbeitet. Eine sachliche Antwort von dir ändert dieses Bild."
-    },
-    {
-      "id": "az_p7",
-      "level": "profi",
-      "question": "Warum bringt der Satz „Wir bieten ein motiviertes Team und abwechslungsreiche Tätigkeiten“ wenig?",
-      "options": [
-        "Weil er auf jeder Firmenseite stehen könnte und nichts davon überprüfbar ist",
-        "Weil Jugendliche keine Abwechslung wollen",
-        "Weil das Wort „Team“ im Handwerk unüblich ist"
-      ],
-      "correctIndex": 0,
-      "explanation": "Überprüfbar sind konkrete Angaben: wann der Tag anfängt, wie viele im Team sind, was man verdient, dazu echte Fotos von Werkstatt, Fahrzeugen und Leuten."
-    },
-    {
-      "id": "az_p8",
-      "level": "profi",
-      "question": "Was passiert, wenn die Bewerbung bei dir ein Anschreiben und ein langes Formular verlangt?",
-      "options": [
-        "Du verlierst die Jugendlichen, die sich spontan gemeldet hätten",
-        "Du bekommst nur noch die besten Schüler der Region",
-        "Die Handwerkskammer belohnt den Betrieb mit einem Förderbonus"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ein Sechzehnjähriger hat keinen Drucker und keine Lust auf vierzehn Pflichtfelder. Eine kurze Nachricht mit Namen und einem Satz reicht, danach rufst du zurück."
-    },
-    {
-      "id": "az_p9",
-      "level": "profi",
-      "question": "Warum rechnet sich eine Karriereseite anders als eine Seite für Neukunden?",
-      "options": [
-        "Weil eine unbesetzte Stelle Aufträge verzögert, Kunden warten lässt und das Team belastet",
-        "Weil Karriereseiten steuerlich doppelt absetzbar sind",
-        "Weil Google für Karriereseiten Prämien auszahlt"
-      ],
-      "correctIndex": 0,
-      "explanation": "Eine unbesetzte Stelle heißt Aufträge schieben, Kunden vertrösten und Überstunden für den Rest vom Team."
-    },
-    {
-      "id": "az_p10",
-      "level": "profi",
-      "question": "Welche Frage gehört in den Fünf-Minuten-Selbsttest aus dem Artikel?",
-      "options": [
-        "Kann sich jemand in unter zwei Minuten bei dir melden, ohne Anschreiben?",
-        "Ist das Impressum in Times New Roman gesetzt?",
-        "Lädt die Seite auf einem Computer mit Windows 98?"
-      ],
-      "correctIndex": 0,
-      "explanation": "Der Selbsttest geht die Seite so durch, wie ein Bewerber es tut: finden, Vertrauen fassen, sich melden. Jede Hürde auf diesem Weg kann dich Bewerbungen kosten."
-    },
-    {
-      "id": "az_p11",
-      "level": "profi",
-      "question": "Wie viele Bewerber kamen im Vorjahr rechnerisch auf 100 gemeldete betriebliche Ausbildungsstellen?",
+      "question": "Wie viele Bewerber kamen im Vorjahr der Bilanz 2024/25 rechnerisch auf 100 betriebliche Stellen?",
       "options": [
         "86",
         "150",
         "10"
       ],
       "correctIndex": 0,
-      "explanation": "Zuletzt waren es 93 Bewerber auf 100 Stellen, im Vorjahr noch 86."
+      "explanation": "Im Vorjahr waren es rechnerisch 86 Bewerber auf 100 Stellen."
     },
     {
-      "id": "az_p12",
+      "id": "az_p7",
       "level": "profi",
-      "question": "Mit wem konkurriert ein lokaler Handwerksbetrieb heute laut Artikel am schärfsten um Auszubildende?",
-      "options": [
-        "Mit dem Betrieb zwei Orte weiter",
-        "Ausschließlich mit multinationalen DAX-Konzernen in Übersee",
-        "Nur mit Universitäten im Ausland"
-      ],
-      "correctIndex": 0,
-      "explanation": "Du konkurrierst um jeden Bewerber mit dem Betrieb zwei Orte weiter, und der Vergleich findet auf dem Handy statt."
-    },
-    {
-      "id": "az_p13",
-      "level": "profi",
-      "question": "Was gehört auf der Karriereseite zur Frage „Wie bewirbt man sich?“",
-      "options": [
-        "Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst",
-        "Ein zwölfseitiger Fragebogen",
-        "Der Hinweis, dass nur Post angenommen wird"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ein Weg, ein Klick, eine Antwortzeit, die du auch einhältst."
-    },
-    {
-      "id": "az_p14",
-      "level": "profi",
-      "question": "Warum melden sich erfahrene Gesellen mit festem Job selten über lange Bewerbungsformulare?",
-      "options": [
-        "Weil sie abends am Handy suchen und keinen Lebenslauf hochladen wollen",
-        "Weil Gesellen im Handwerk nie den Betrieb wechseln",
-        "Weil erfahrene Handwerker kein Smartphone besitzen"
-      ],
-      "correctIndex": 0,
-      "explanation": "Wer mit 34 und festem Job schaut, tut das abends auf dem Sofa am Handy. Er schreibt zwei Sätze, wenn er kann."
-    },
-    {
-      "id": "az_p15",
-      "level": "profi",
-      "question": "Welche Angabe zum Arbeitstag ist laut Artikel für Bewerber besonders wertvoll?",
-      "options": [
-        "Wann der Arbeitstag beginnt, womit man anfängt und wie viele im Team sind",
-        "Ein Text über die Geschichte der Handwerkszunft im Mittelalter",
-        "Die genaue Größe des Firmenparkplatzes"
-      ],
-      "correctIndex": 0,
-      "explanation": "Wann geht es morgens los? Wie läuft der Tag ab? Was heißt Feierabend? Das sind die Fragen, die sich Berufseinsteiger stellen."
-    },
-    {
-      "id": "az_p16",
-      "level": "profi",
-      "question": "Wie viel Prozent der gemeldeten Bewerber blieben laut Bundesagentur ohne Ausbildungsstelle oder anderes Angebot?",
+      "question": "Wie viel Prozent der gemeldeten Bewerber blieben laut Bilanz 2024/25 ohne Ausbildungsstelle oder alternatives Angebot?",
       "options": [
         "9 Prozent",
         "90 Prozent",
         "0 Prozent"
       ],
       "correctIndex": 0,
-      "explanation": "Laut Bundesagentur für Arbeit blieben 9 Prozent der gemeldeten Bewerberinnen und Bewerber ohne Ausbildungsstelle oder alternatives Angebot."
+      "explanation": "Laut Bundesagentur blieben 9 Prozent der gemeldeten Bewerberinnen und Bewerber ohne Stelle oder Alternative."
     },
     {
-      "id": "az_p17",
+      "id": "az_p8",
       "level": "profi",
-      "question": "Wie viele Jugendliche befragt die JIM-Studie jedes Jahr?",
+      "question": "Wie viele Jugendliche wurden für die JIM-Studie 2025 befragt?",
       "options": [
         "1.200 Jugendliche zwischen zwölf und 19 Jahren",
         "12 Jugendliche aus einer Schulklasse",
         "Alle Jugendlichen in Deutschland"
       ],
       "correctIndex": 0,
-      "explanation": "Der Medienpädagogische Forschungsverbund Südwest befragt jedes Jahr 1.200 Jugendliche zwischen zwölf und 19 Jahren."
+      "explanation": "Befragt wurden 1.200 Jugendliche im Alter von zwölf bis 19 Jahren."
+    },
+    {
+      "id": "az_p9",
+      "level": "profi",
+      "question": "In welchem Zeitraum wurde die JIM-Studie 2025 erhoben?",
+      "options": [
+        "Vom 2. Juni bis 12. Juli 2025",
+        "Im Dezember 2024",
+        "Über zehn Jahre verteilt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Die Befragung lief vom 2. Juni bis 12. Juli 2025."
+    },
+    {
+      "id": "az_p10",
+      "level": "profi",
+      "question": "Welche tägliche Bildschirmzeit am Smartphone nennt die JIM-Studie für volljährige Jugendliche?",
+      "options": [
+        "278 Minuten, über viereinhalb Stunden",
+        "27 Minuten",
+        "Genauso viel wie die Jüngsten"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mit dem Alter steigt die Bildschirmzeit, bei den Volljährigen auf 278 Minuten."
+    },
+    {
+      "id": "az_p11",
+      "level": "profi",
+      "question": "Wie viel Prozent der 12- bis 19-Jährigen besitzen laut JIM-Studie ein eigenes Smartphone?",
+      "options": [
+        "95 Prozent",
+        "45 Prozent",
+        "15 Prozent"
+      ],
+      "correctIndex": 0,
+      "explanation": "95 Prozent besitzen ein eigenes Gerät."
+    },
+    {
+      "id": "az_p12",
+      "level": "profi",
+      "question": "Was zeigt eine sachliche Antwort auf eine kritische Bewertung?",
+      "options": [
+        "Dass du dich kümmerst",
+        "Dass die Bewertung gelöscht wird",
+        "Dass du recht hast"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wer die Bewertung liest, sieht an deiner Antwort, dass du dich kümmerst."
+    },
+    {
+      "id": "az_p13",
+      "level": "profi",
+      "question": "Warum sind die vier Antworten einer Karriereseite mehr wert als „Wir bieten ein motiviertes Team“?",
+      "options": [
+        "Weil sie überprüfbar sind",
+        "Weil sie länger sind",
+        "Weil Google sie vorschreibt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Den Satz vom motivierten Team kann jeder schreiben. Die vier Antworten lassen sich überprüfen."
+    },
+    {
+      "id": "az_p14",
+      "level": "profi",
+      "question": "Was gehört zur Frage „Wie läuft ein Tag ab?“",
+      "options": [
+        "Arbeitsbeginn, womit angefangen wird, wie viele im Team sind und was Feierabend heißt",
+        "Die Geschichte der Handwerkszunft",
+        "Die Größe des Firmenparkplatzes"
+      ],
+      "correctIndex": 0,
+      "explanation": "So kann sich ein Bewerber vorstellen, wie sein Tag bei dir aussieht."
+    },
+    {
+      "id": "az_p15",
+      "level": "profi",
+      "question": "Was gehört zur Frage „Wie bewirbt man sich?“",
+      "options": [
+        "Ein Weg, ein Klick und eine Antwortzeit, die du auch einhältst",
+        "Ein zwölfseitiger Fragebogen",
+        "Der Hinweis, dass nur Post angenommen wird"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein einfacher Weg und eine verlässliche Antwortzeit."
+    },
+    {
+      "id": "az_p16",
+      "level": "profi",
+      "question": "Ab welchem Preis startet ein Onepager bei Firmenflow?",
+      "options": [
+        "690 Euro netto",
+        "69 Euro netto",
+        "6.900 Euro netto"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein Onepager startet bei 690 Euro netto, ein Auftritt mit mehreren Seiten liegt darüber."
+    },
+    {
+      "id": "az_p17",
+      "level": "profi",
+      "question": "Was ist ein Onepager?",
+      "options": [
+        "Eine Website, die aus einer einzigen Seite besteht",
+        "Ein gedruckter Flyer",
+        "Ein Eintrag im Branchenbuch"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ein Onepager ist eine Website auf einer einzigen Seite."
     },
     {
       "id": "az_p18",
       "level": "profi",
-      "question": "Was bewirken echte Fotos von Werkstatt, Fahrzeugen und Team bei Bewerbern?",
+      "question": "Was schreibst du auf die Karriereseite, damit sich jemand ohne Anschreiben meldet?",
       "options": [
-        "Sie zeigen, wie es bei dir wirklich aussieht, bevor jemand zum ersten Mal vorbeikommt",
-        "Sie schrecken ab, weil Werkstattbilder unmodern wirken",
-        "Sie führen automatisch zu Abmahnungen durch Bildagenturen"
+        "Deine WhatsApp-Nummer und einen Satz, was er schicken soll",
+        "Nur deine Postanschrift",
+        "Den Hinweis, dass nur vollständige Mappen gelesen werden"
       ],
       "correctIndex": 0,
-      "explanation": "Ein Betrieb, den man vorher sieht, ist kein unbekanntes Risiko mehr. Bewerber können sich vorstellen, dort anzufangen."
+      "explanation": "Zum Beispiel: „Schick mir deinen Namen und warum du dich meldest, ich rufe zurück.“"
     },
     {
       "id": "az_p19",
       "level": "profi",
-      "question": "Wie lange nutzen 18- und 19-Jährige laut JIM-Studie täglich ihr Smartphone?",
+      "question": "Was zeigen Fotos von Werkstatt, Fahrzeugen und Team?",
       "options": [
-        "Durchschnittlich 278 Minuten, also über viereinhalb Stunden",
-        "Etwa 30 Minuten",
-        "Unter 10 Minuten"
+        "Wie es bei dir wirklich aussieht, bevor jemand vorbeikommt",
+        "Dass du teure Fahrzeuge hast",
+        "Nichts, Bewerber schauen keine Fotos an"
       ],
       "correctIndex": 0,
-      "explanation": "Mit dem Alter steigt die Nutzung: Bei den 12- und 13-Jährigen sind es 166 Minuten, bei den Volljährigen 278."
+      "explanation": "Echte Fotos zeigen, wie es bei dir aussieht."
     },
     {
       "id": "az_p20",
       "level": "profi",
-      "question": "Warum greift der Satz „Die Jugend will heute nicht mehr arbeiten“ laut den Zahlen im Artikel zu kurz?",
+      "question": "Warum greift „Die Jugend will nicht mehr arbeiten“ zu kurz?",
       "options": [
-        "Weil 40.000 Bewerber keinen Platz gefunden haben, obwohl 54.000 Stellen frei blieben",
-        "Weil Jugendliche laut Statistik 60 Stunden pro Woche ehrenamtlich arbeiten",
-        "Weil es im Handwerk gar keinen Mangel an Nachwuchs gibt"
+        "Weil zugleich 40.000 Bewerber ohne Platz blieben und 54.000 Stellen unbesetzt waren",
+        "Weil es keine unbesetzten Stellen gab",
+        "Weil alle Bewerber sofort einen Platz fanden"
       ],
       "correctIndex": 0,
-      "explanation": "Es gibt Jugendliche, die eine Lehrstelle suchen und keine finden. Wer sichtbar ist und die Hürde niedrig hält, macht es ihnen leichter, zu ihm zu finden."
+      "explanation": "Laut Bundesagentur passen Angebot und Nachfrage oft regional, beruflich oder bei der Qualifikation nicht zusammen."
     }
   ]
 }

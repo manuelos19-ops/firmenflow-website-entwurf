@@ -48,7 +48,7 @@
         "Ein Jahr nach dem Auftrag, wenn die Rechnung längst bezahlt ist"
       ],
       "correctIndex": 0,
-      "explanation": "Hat der Kunde gerade selbst gelobt, greifst du nur auf, was er ohnehin gesagt hat. Du musst nichts verkaufen."
+      "explanation": "Hat der Kunde gerade selbst gelobt, greifst du nur auf, was er ohnehin gesagt hat. Frag trotzdem auch die Kunden, bei denen es gehakt hat."
     },
     {
       "id": "gb_b5",
@@ -103,12 +103,12 @@
       "level": "basis",
       "question": "Solltest du auf Bewertungen antworten?",
       "options": [
-        "Ja, Google empfiehlt es als Best Practice, am besten kurz und freundlich",
+        "Ja, Google empfiehlt es als Best Practice",
         "Nein, Antworten sind bei Google nicht erlaubt",
         "Nur auf Bewertungen mit fünf Sternen"
       ],
       "correctIndex": 0,
-      "explanation": "Google empfiehlt als Best Practice, auf Rezensionen zu antworten, kurz und freundlich. Jedem öffentlich danken musst du laut Google aber nicht."
+      "explanation": "Google empfiehlt, auf Rezensionen zu antworten. Jedem öffentlich danken musst du laut Google aber nicht."
     },
     {
       "id": "gb_b10",
@@ -168,7 +168,7 @@
         "Fremde Google-Profile von Mitbewerbern"
       ],
       "correctIndex": 0,
-      "explanation": "Die Google-Hilfe nennt Belege, Dankeschön-E-Mails, das Ende einer Chatinteraktion und den ausgedruckten QR-Code im Geschäft."
+      "explanation": "Die Google-Hilfe nennt Belege, Dankeschön-E-Mails, das Ende einer Chatinteraktion und den ausgedruckten QR-Code im Geschäft. Bei E-Mails gilt der Hinweis zum BGH-Urteil im Artikel."
     },
     {
       "id": "gb_p5",
@@ -211,12 +211,12 @@
       "level": "profi",
       "question": "Deine Schwester will dir eine Bewertung schreiben. Was sagt Google dazu?",
       "options": [
-        "Google nennt familiäre Beziehungen als Beispiel für einen Interessenkonflikt, und solche Beiträge sind nicht zulässig",
+        "Google nennt familiäre Beziehungen als Beispiel für einen Interessenkonflikt, solche Beiträge sind nicht zulässig",
         "Erlaubt, solange sie mit vollem Namen schreibt",
         "Erlaubt, wenn sie mindestens vier Sterne vergibt"
       ],
       "correctIndex": 0,
-      "explanation": "Google nennt familiäre Beziehungen und frühere Beschäftigung als Beispiele für einen Interessenkonflikt. Solche Inhalte sind nicht zulässig."
+      "explanation": "Google nennt familiäre Beziehungen und eine aktuelle oder frühere Beschäftigung als Beispiele für einen Interessenkonflikt. Solche Inhalte sind nicht zulässig."
     },
     {
       "id": "gb_p9",
@@ -252,7 +252,7 @@
         "Alle Kontakte aus dem Handy per Massennachricht anschreiben"
       ],
       "correctIndex": 0,
-      "explanation": "Persönlich fragen, den Link nur auf Wunsch schicken. Eine ungefragte Bitte unter jeder Rechnungsmail lässt du besser weg."
+      "explanation": "Persönlich fragen, den Link nur auf Wunsch schicken. So bleibst du auch beim BGH-Urteil zu Bewertungsbitten per E-Mail auf der sicheren Seite."
     },
     {
       "id": "gb_p12",
@@ -276,7 +276,7 @@
         "Deine Antwort ist nur für dich sichtbar"
       ],
       "correctIndex": 0,
-      "explanation": "Google prüft jede Antwort, in der Regel innerhalb von zehn Minuten. Danach steht sie öffentlich unter der Bewertung, und der Verfasser wird benachrichtigt."
+      "explanation": "Google prüft jede Antwort, meist innerhalb von zehn Minuten. Wird sie genehmigt, steht sie öffentlich unter der Bewertung, und der Verfasser wird benachrichtigt."
     },
     {
       "id": "gb_p14",

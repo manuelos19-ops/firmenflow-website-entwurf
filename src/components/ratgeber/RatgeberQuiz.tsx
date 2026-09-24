@@ -354,17 +354,17 @@ export function RatgeberQuiz({ quiz }: RatgeberQuizProps) {
             <div className="rounded-3xl bg-white border border-[var(--color-line)] p-6 sm:p-8 space-y-3 shadow-sm text-left">
               <h3 className="text-lg sm:text-xl font-display font-bold text-[var(--color-ink)] text-center">
                 {scorePercent >= 80
-                  ? "🏆 Hervorragend: Digitaler Meisterbetrieb!"
+                  ? "🏆 Hervorragend: Du kennst dich aus"
                   : scorePercent >= 50
-                  ? "📈 Solide Basis mit spürbarem Neukunden-Potenzial"
-                  : "💡 Hier liegt bares Geld auf der Straße"}
+                  ? "📈 Solide Basis"
+                  : "💡 Da geht noch was"}
               </h3>
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed text-center">
                 {scorePercent >= 80
-                  ? "Du kennst die Hebel für Neukunden und Google ganz genau. Lass uns dafür sorgen, dass dein eigener digitaler Auftritt diesen Spitzenstandard auch technisch und optisch widerspiegelt."
+                  ? "Du kennst die wichtigen Punkte. Ob dein eigener Auftritt sie auch erfüllt, zeigt dir der Selbsttest im Artikel, oder ich schaue es mir für dich an."
                   : scorePercent >= 50
-                  ? "Du hast ein gutes Gespür für Kundenbedürfnisse. Bei einigen Feinheiten verliert dein Betrieb aktuell aber noch wertvolle Kundenanfragen an die Konkurrenz."
-                  : "Neukunden suchen heute spontan auf dem Smartphone und entscheiden in wenigen Sekunden. Mit einer schnellen, modernen Seite und sauberem Google-Profil setzt du dich sofort von deinen Mitbewerbern ab."}
+                  ? "Du kennst schon vieles. Was du nicht wusstest, steht im Artikel noch einmal erklärt, und der Selbsttest dort zeigt dir, wo dein Betrieb steht."
+                  : "Kein Problem, dafür ist der Ratgeber da. Lies die Abschnitte noch einmal nach und geh den Selbsttest im Artikel mit deinem eigenen Betrieb durch."}
               </p>
             </div>
 

@@ -56,21 +56,21 @@ export function RatgeberTeaserSection() {
               </h3>
 
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-                Deine Stammkunden kennen deine Qualität. Doch Neukunden wischen in zwei Sekunden weiter, wenn die Seite langsam lädt oder die Telefonnummer versteckt ist.
+                Deine Stammkunden kennen deine Qualität, Neukunden noch nicht. Fünf Stellen an deiner Website, die du in zwei Minuten am Handy selbst prüfen kannst.
               </p>
 
               <ul className="space-y-2.5 pt-2 text-sm text-[var(--color-ink)]">
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>3-Sekunden-Ladezeit-Schwelle (Destatis &amp; Google)</span>
+                  <span>Jede Sekunde Ladezeit zählt (Messung der BBC)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>Klick-zum-Anrufen mit einem Daumentipp</span>
+                  <span>Anrufen mit einem Daumentipp</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>Echte Werkstattfotos statt US-Stockbilder</span>
+                  <span>Echte Werkstattfotos statt Katalogbilder</span>
                 </li>
               </ul>
             </div>
@@ -111,21 +111,21 @@ export function RatgeberTeaserSection() {
               </h3>
 
               <p className="text-sm sm:text-base text-[var(--color-muted)] leading-relaxed">
-                Ein Kunde steht 400 Meter entfernt und sucht deine Leistung, bekommt aber 3 andere Betriebe angezeigt? Finde heraus, warum du fehlst und was Google entscheidet.
+                Ein Kunde steht 400 Meter entfernt und sucht deine Leistung, bekommt aber andere Betriebe angezeigt? Finde heraus, warum du fehlst und was du selbst ändern kannst.
               </p>
 
               <ul className="space-y-2.5 pt-2 text-sm text-[var(--color-ink)]">
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>Die 3 Ranking-Faktoren von Google Maps</span>
+                  <span>Die drei Faktoren, nach denen Google vor allem entscheidet</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>Feiertags-Öffnungszeiten &amp; Stolperfallen</span>
+                  <span>Selbsttest mit fünf Fragen zu deinem Google-Profil</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <FirmenflowIcon name="erfolg" size={20} decorative />
-                  <span>Bewertungen: Schnitt 28 &amp; 4,52 Sterne im Handwerk</span>
+                  <span>Eigene Erhebung: 198 Betriebe im Raum Wesel</span>
                 </li>
               </ul>
             </div>

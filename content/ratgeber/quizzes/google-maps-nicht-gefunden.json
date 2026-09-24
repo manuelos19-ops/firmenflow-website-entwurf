@@ -1,6 +1,6 @@
 {
   "title": "Selbst-Check: Warum wird dein Betrieb bei Google Maps nicht gefunden?",
-  "description": "Finde heraus, warum Mitbewerber auf der Karte über dir stehen und was du an deinem Google-Profil selbst ändern kannst.",
+  "description": "Teste dein Wissen: Wovon hängt es ab, wer auf der Karte oben steht, und was kannst du an deinem Google-Profil selbst ändern?",
   "questions": [
     {
       "id": "gm_b1",
@@ -24,7 +24,7 @@
         "An der Bekanntheit"
       ],
       "correctIndex": 0,
-      "explanation": "Die Entfernung ist fix, deine Werkstatt steht, wo sie steht. Relevanz und Bekanntheit hängen an deinem Profil und an Bewertungen."
+      "explanation": "Wo dein Betrieb steht, kannst du nicht ändern. Relevanz und Bekanntheit hängen an deinem Profil und an Bewertungen."
     },
     {
       "id": "gm_b3",
@@ -48,7 +48,7 @@
         "Gar keine, Öffnungszeiten sind freiwillig und egal"
       ],
       "correctIndex": 0,
-      "explanation": "Google nennt die Öffnungszeiten einschließlich spezieller Öffnungszeiten."
+      "explanation": "Google nennt die Öffnungszeiten einschließlich spezieller Öffnungszeiten. Im Artikel steht, dass dazu Feiertage und Betriebsferien gehören."
     },
     {
       "id": "gm_b5",
@@ -60,7 +60,7 @@
         "Die Kategorie mit den meisten Suchanfragen wählen, auch wenn sie nicht passt"
       ],
       "correctIndex": 0,
-      "explanation": "Google empfiehlt Kategorien, auf die „Dieses Unternehmen IST …“ zutrifft, und möglichst spezifische."
+      "explanation": "Google empfiehlt Kategorien, auf die „Dieses Unternehmen IST …“ zutrifft."
     },
     {
       "id": "gm_b6",
@@ -96,24 +96,24 @@
         "198, also alle"
       ],
       "correctIndex": 0,
-      "explanation": "97 der 198 Betriebe hatten mindestens eine der Lücken aus dem Artikel."
+      "explanation": "97 der 198 Betriebe fehlte mindestens eines: Website im Profil, Öffnungszeiten, zehn Bewertungen, ein Schnitt von mindestens 4,0 Sternen oder eine Telefonnummer."
     },
     {
       "id": "gm_b9",
       "level": "basis",
-      "question": "Was passiert, wenn ein Kunde in deiner Nähe einen Notdienst sucht und du nicht auf der Karte stehst?",
+      "question": "Was bedeutet es, wenn im Profil in der Google Maps App unter „Info“ der Punkt „Inhaberschaft für dieses Unternehmen geltend machen“ steht?",
       "options": [
-        "Er ruft einen der angezeigten Betriebe an, und du erfährst nichts davon",
-        "Google leitet den Anruf automatisch an dich weiter",
-        "Der Kunde bekommt eine Nachricht mit deiner Nummer"
+        "Das Profil ist noch nicht bestätigt, und du kannst es übernehmen",
+        "Der Punkt ist nur Werbung",
+        "Das Profil wurde gelöscht"
       ],
       "correctIndex": 0,
-      "explanation": "Der Auftrag landet woanders, und du merkst es nicht, weil dein Telefon einfach still bleibt."
+      "explanation": "Steht dort dieser Punkt, ist das Profil noch nicht bestätigt, und du kannst es übernehmen."
     },
     {
       "id": "gm_b10",
       "level": "basis",
-      "question": "Womit fängt der Test aus dem Artikel an?",
+      "question": "Womit fängt der Suchtest am Anfang des Artikels an?",
       "options": [
         "Deine Leistung und deinen Ort ins Handy tippen, etwa „Dachdecker Wesel“",
         "Einen Brief an Google schreiben",
@@ -185,7 +185,7 @@
     {
       "id": "gm_p6",
       "level": "profi",
-      "question": "Warum hat ein als allgemeines Bauunternehmen eingetragener Betrieb bei „Bad sanieren“ oft das Nachsehen?",
+      "question": "Warum hat ein als allgemeines Bauunternehmen eingetragener Betrieb bei „Bad sanieren“ das Nachsehen?",
       "options": [
         "Weil ein genau dafür eingetragener Sanitärbetrieb besser zur Suche passt",
         "Weil Bauunternehmen bei Google verboten sind",
@@ -209,14 +209,14 @@
     {
       "id": "gm_p8",
       "level": "profi",
-      "question": "Wie alt sollte dein neuestes Foto laut Selbsttest höchstens sein?",
+      "question": "Was kannst du tun, wenn schon jemand anderes dein Profil bestätigt hat, etwa eine frühere Agentur?",
       "options": [
-        "Jünger als ein Jahr",
-        "Älter als zehn Jahre",
-        "Das Alter spielt gar keine Rolle"
+        "Bei der aktuellen Inhaberin oder dem Inhaber die Inhaberschaft beantragen",
+        "Das Profil bei Google als geschlossen melden",
+        "Nichts, das Profil ist für immer verloren"
       ],
       "correctIndex": 0,
-      "explanation": "Der Selbsttest fragt, ob dein neuestes Foto jünger als ein Jahr ist."
+      "explanation": "Laut Google-Hilfe kannst du bei der aktuellen Profilinhaberin oder dem Profilinhaber die Inhaberschaft beantragen, wenn du zur Verwaltung berechtigt bist."
     },
     {
       "id": "gm_p9",
@@ -353,14 +353,14 @@
     {
       "id": "gm_p20",
       "level": "profi",
-      "question": "Welchen Sterneschnitt hatten die 198 Weseler Betriebe insgesamt?",
+      "question": "Welchen Sterneschnitt hatten die Weseler Betriebe mit Bewertungen?",
       "options": [
         "4,61",
         "2,1",
         "3,0"
       ],
       "correctIndex": 0,
-      "explanation": "Der Sterneschnitt über alle 198 Betriebe lag bei 4,61."
+      "explanation": "Der Sterneschnitt lag bei 4,61, gerechnet über die 186 Betriebe, die überhaupt Bewertungen hatten."
     }
   ]
 }
