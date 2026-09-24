@@ -440,6 +440,20 @@ h3 {
   from { opacity: 0; transform: scale(0) rotate(-30deg); }
 }
 
+/* ---- Ratgeber-Audio-Player ---------------------------------------------
+   wave-pulse: sanftes Pulsieren der Wellenform waehrend der Wiedergabe,
+   player-in: einmaliges Einschweben des Players beim Laden der Seite.
+   Nur transform und opacity, kein Layout-Trigger.
+--------------------------------------------------------------------------- */
+@keyframes ratgeber-wave-pulse {
+  0%, 100% { transform: scaleY(0.66); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes ratgeber-player-in {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
 .hero-title-line,
 .hero-accent,
 .hero-body,
