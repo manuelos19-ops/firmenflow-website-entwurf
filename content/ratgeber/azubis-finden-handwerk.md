@@ -9,6 +9,7 @@ tags: [Azubis, Mitarbeiter, Karriereseite, Handwerk, Wesel]
 image: "/images/ratgeber/azubis-finden-handwerk-titel.webp"
 imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 93 Bewerber auf 100 betriebliche Ausbildungsstellen 2024/25, 95 Prozent der 12- bis 19-Jährigen täglich am Smartphone, was findet ein Bewerber über dich"
 featured: "false"
+audio: "/media/audio/ratgeber/azubis-finden-handwerk.mp3"
 ---
 
 Du hast eine Anzeige im Wochenblatt geschaltet und keine einzige Rückmeldung bekommen. Am selben Wochenende sitzt ein Sechzehnjähriger, der gut zu dir gepasst hätte, am Handy. Von dir hat er dort nichts gesehen.

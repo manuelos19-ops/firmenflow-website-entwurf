@@ -8,6 +8,7 @@ tags: [Google-Bewertungen, Google-Profil, Lokale Sichtbarkeit, Handwerk]
 image: "/images/ratgeber/google-bewertungen-bekommen-titel.webp"
 imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 57 von 198 Betrieben im Raum Wesel mit weniger als zehn Bewertungen, ein Link direkt ins Bewertungsfeld, keine Belohnung für Bewertungen"
 featured: "false"
+audio: "/media/audio/ratgeber/google-bewertungen-bekommen.mp3"
 ---
 
 Das Bad ist fertig, und die Kundin sagt beim Abschied: „Das war wirklich top, ich empfehle Sie weiter.“ Bei Google taucht davon nie etwas auf.

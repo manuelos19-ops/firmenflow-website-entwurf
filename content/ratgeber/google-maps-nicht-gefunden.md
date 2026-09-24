@@ -9,6 +9,7 @@ tags: [Google-Profil, Google Maps, Lokale Sichtbarkeit, Handwerk, Bewertungen]
 image: "/images/ratgeber/google-maps-nicht-gefunden-titel.webp"
 imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 3 Faktoren entscheiden laut Google, 97 von 198 Betrieben im Raum Wesel haben eine Lücke im Google-Profil, 26 Bewertungen im Median"
 featured: "false"
+audio: "/media/audio/ratgeber/google-maps-nicht-gefunden.mp3"
 ---
 
 Ein Kunde steht vierhundert Meter von deiner Werkstatt entfernt, tippt „Heizung Notdienst Wesel“ in sein Handy und bekommt andere Betriebe angezeigt. Der Auftrag war da. Er ist nur woanders gelandet, und du erfährst davon nie etwas.

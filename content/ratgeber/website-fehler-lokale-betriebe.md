@@ -9,6 +9,7 @@ tags: [Website, Google-Profil, Handwerk, Wesel, Ladezeit]
 image: "/images/ratgeber/website-fehler-lokale-betriebe-titel.webp"
 imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 10 Prozent weniger Nutzer pro Sekunde Ladezeit (Messung der BBC), ein Daumentipp muss zum Anrufen reichen, echte Fotos statt Katalogbildern"
 featured: "true"
+audio: "/media/audio/ratgeber/website-fehler-lokale-betriebe.mp3"
 ---
 
 Deine Stammkunden wissen, was sie an dir haben. Sie rufen an und fragen vorher nicht nach einer Website.

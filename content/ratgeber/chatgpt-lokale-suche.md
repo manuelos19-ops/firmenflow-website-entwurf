@@ -8,6 +8,7 @@ tags: [ChatGPT, KI-Suche, Google-Profil, Lokale Sichtbarkeit, Handwerk]
 image: "/images/ratgeber/chatgpt-lokale-suche-titel.webp"
 imageAlt: "Titelbild mit drei Glaskarten und 3D-Symbolen: 38 Prozent der ChatGPT-Quellen waren im Test eines KI-Beraters Google-Maps-Links, auf Google Maps finden Kunden dich über dein Google-Profil, Anzeigen erscheinen getrennt unter der Antwort"
 featured: "false"
+audio: "/media/audio/ratgeber/chatgpt-lokale-suche.mp3"
 ---
 
 Jemand fragt abends ChatGPT nach einem Elektriker in Wesel. Er bekommt ein paar Namen und ruft einen davon an. Ist dein Betrieb nicht dabei, erfährst du davon nichts.

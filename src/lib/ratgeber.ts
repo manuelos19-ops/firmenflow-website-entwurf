@@ -14,6 +14,7 @@ export type RatgeberPostMeta = {
   imageAlt: string;
   readingMinutes: number;
   featured?: boolean;
+  audio?: string;
 };
 
 export type RatgeberQuizQuestion = {
@@ -491,6 +492,7 @@ function readPostFile(file: string): RatgeberPost {
     imageAlt: data.imageAlt ?? data.title ?? slug,
     readingMinutes: Math.max(2, Math.round(words / 200)),
     featured: data.featured === "true",
+    audio: data.audio,
     html,
     headings,
     sections,

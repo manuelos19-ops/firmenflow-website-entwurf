@@ -14,6 +14,7 @@ import { RatgeberHinweis } from "@/components/ratgeber/RatgeberHinweis";
 import { RatgeberFehler } from "@/components/ratgeber/RatgeberFehler";
 import { RatgeberShareButton } from "@/components/ratgeber/RatgeberShareButton";
 import { RatgeberViewTracker } from "@/components/ratgeber/RatgeberViewTracker";
+import { RatgeberAudio } from "@/components/ratgeber/RatgeberAudio";
 import { getAllRatgeberPosts, getRatgeberPost } from "@/lib/ratgeber";
 import type { RatgeberSection } from "@/lib/ratgeber";
 import { getSiteUrl } from "@/lib/site-url";
@@ -242,6 +243,8 @@ export default async function RatgeberPostPage({ params }: { params: Promise<{ s
             />
           </div>
         )}
+
+        {post.audio && <RatgeberAudio src={post.audio} title={post.title} />}
 
         {post.quiz && (
           <div className="rounded-2xl bg-[var(--color-paper)] border border-[var(--color-line)] p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm shadow-sm">
